@@ -26,7 +26,7 @@ def generate_characters_v1(outline, max_characters=20):
     "role":"",
     "traits":"",
     "background":"",
-    "background":"",
+    "motivation":"",
     }},
     ...
 ]

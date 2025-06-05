@@ -61,12 +61,14 @@ def generate_dialogue_for_insertion(sentence_context, candidate_characters, full
 当前已有对话历史：
 {character_memory}
 
+只能从以下角色中选择发言：{candidate_characters}
 请判断下一位发言人是谁？如果不需要继续对话，返回"NONE"。
 格式：{{"next_speaker": "角色"}}"""
         }]
         next_res = generate_response(speaker_prompt)
         next_speaker = convert_json(next_res).get("next_speaker", "NONE")
-        if next_speaker == "NONE":
+        if next_speaker == "NONE" or next_speaker not in character_memory:
+            print(f"非法角色名: {next_speaker}, 已跳过。")
             break
 
         # 发言内容
@@ -124,3 +126,40 @@ def run_dialogue_insertion(plot_list, character_json):
         final_result.append(dialogue_block)
 
     return final_result
+
+def apply_structure_to_generate_dialogue(structure_marks, plot_list, characters):
+    final_result = []
+    for item in structure_marks:
+        dialogue_block = {
+            "sentence": item["sentence"],
+            "need_to_action": item["need_to_action"],
+            "actor_list": item["actor_list"],
+            "dialogue": []
+        }
+        if item["need_to_action"] == 1:
+            dialogue = generate_dialogue_for_insertion(
+                sentence_context=item["sentence"],
+                candidate_characters=item["actor_list"],
+                full_plot=plot_list,
+                character_personality=characters
+            )
+            dialogue_block["dialogue"] = dialogue
+        final_result.append(dialogue_block)
+    return final_result
+
+
+
+def pretty_print_dialogue(dialogue_result):
+    """
+    美观打印完整对话插入结构，适合人类调试或写入 Markdown 文件
+    """
+    for i, block in enumerate(dialogue_result):
+        print(f"\n🔹 第 {i+1} 句剧情：{block['sentence'][:80]}...")
+        if block["need_to_action"] == 0:
+            print("无需插入对话。")
+        else:
+            print(f"插入角色：{', '.join(block['actor_list'])}")
+            dialogue = block.get("dialogue", {})
+            for role, lines in dialogue.items():
+                for line in lines:
+                    print(f"  {line}")
