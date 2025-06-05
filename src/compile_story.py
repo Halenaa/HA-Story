@@ -43,4 +43,4 @@ if __name__ == "__main__":
     with open(os.path.join(base_dir, "novel_story.md"), "w", encoding="utf-8") as f:
         f.write(novel)
 
-    print(f"故事小说已生成：{base_dir}/novel_story.md")
+    print(f"故事小说已生成：{base_dir}/original_novel_story.md")
