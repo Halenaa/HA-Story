@@ -16,13 +16,6 @@ def generate_response(msg,model="gpt-4o"):
     return response.choices[0].message.content
 
 
-# def convert_json(content):
-#     content = content.replace("，",",")
-#     if "```json" in content:
-#         return eval(
-#             content.split("```json")[1].split("```")[0])
-#     else:
-#         return eval(content)
 
 def convert_json(content):
     """
