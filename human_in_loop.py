@@ -3,7 +3,7 @@ import json
 import yaml
 from langchain_openai import ChatOpenAI
 from src.constant import output_dir
-from src.utils import convert_json
+from src.utils.utils import convert_json
 version = "test"
 
 with open(r"D:\WorkSpace\PycharmFile\rewrite_story_refactor\data\prompt\prompt.yaml", "r", encoding="utf-8") as file:
@@ -99,19 +99,19 @@ def handler_each_plot_manual(story):
         scriptwriter_history.append(sentence)
 
         while True:
-            print("\n📌 当前对话上下文：")
+            print("\n 当前对话上下文：")
             print("\n".join(scriptwriter_history))
 
             # 👇 人工输入替代 select_next_character
-            need_to_talk = int(input("📝 是否需要说话?（1=需要, 0=跳过）: "))
+            need_to_talk = int(input("是否需要说话?（1=需要, 0=跳过）: "))
             if need_to_talk == 0:
                 scriptwriter_output = {"need_to_talk": 0}
                 run_history.append({"scene": sentence})
                 run_history.append({"scriptwriter_output": scriptwriter_output})
                 break
 
-            actor = input("🎭 选择发言角色名: ")
-            mode = input("🎙️ 选择发言模式（dialogue 或 monologue）: ")
+            actor = input("选择发言角色名: ")
+            mode = input("选择发言模式（dialogue 或 monologue）: ")
             scriptwriter_output = {
                 "need_to_talk": 1,
                 "actor": actor,

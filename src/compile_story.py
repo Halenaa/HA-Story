@@ -1,6 +1,6 @@
 # src/compile_story.py
 import os
-from src.utils import load_json, save_json
+from src.utils.utils import load_json, save_json
 from src.constant import output_dir
 
 def compile_full_story_by_chapter(story_json, dialogue_json):
@@ -8,24 +8,22 @@ def compile_full_story_by_chapter(story_json, dialogue_json):
 
     for idx, chapter in enumerate(story_json):
         title = f"# 第 {idx+1} 章：{chapter.get('scene', f'场景{idx+1}')}"
-        plot = chapter["plot"]
+        plot = chapter.get("plot", "").strip()
 
-        # 找对应 dialogue（根据 sentence 精确匹配）
-        matched = next((d for d in dialogue_json if d["sentence"].strip() == plot.strip()), None)
+        # 找对应 dialogue（根据 sentence 匹配）
+        matched = next((d for d in dialogue_json if d.get("sentence", "").strip() == plot), None)
 
-        story_text = plot.strip()
+        story_text = plot
 
-        if matched and matched["need_to_action"] == 1 and matched["dialogue"]:
-            # 拼入自然语言对话
-            for speaker, lines in matched["dialogue"].items():
-                for line in lines:
-                    if ":" in line:
-                        role, content = line.split(":", 1)
-                        story_text += f"\n\n“{content.strip()}” {role.strip()}说。"
-                    else:
-                        story_text += f"\n\n{line.strip()}"
+        if matched and matched.get("dialogue"):
+            if isinstance(matched["dialogue"], dict):
+                for speaker, lines in matched["dialogue"].items():
+                    for line in lines:
+                        story_text += f"\n\n“{line.strip()}” {speaker.strip()}说。"
+            elif isinstance(matched["dialogue"], list):
+                for line in matched["dialogue"]:
+                    story_text += f"\n\n“{line['line'].strip()}” {line['speaker'].strip()}说。"
 
-        # 拼成章节段落
         full_story += f"{title}\n\n{story_text}\n\n{'-'*50}\n\n"
 
     return full_story

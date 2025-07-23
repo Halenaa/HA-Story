@@ -3,7 +3,7 @@ import random
 import json
 import os
 
-from src.utils import save_json
+from src.utils.utils import save_json
 from src.constant import output_dir
 
 def reorder_chapters(chapter_list, mode="sequential"):

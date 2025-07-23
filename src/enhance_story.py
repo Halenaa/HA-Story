@@ -1,7 +1,7 @@
 import os
 import re
 import json
-from src.utils import generate_response
+from src.utils.utils import generate_response
 from src.constant import output_dir
 
 # 拆分 markdown 文件为章节
@@ -53,41 +53,49 @@ def generate_ending(last_title, last_content):
     return generate_response(messages).strip()
 
 # 主函数：拼接增强版故事
-def enhance_story_with_transitions(task_name="test"):
+def enhance_story_with_transitions(task_name="test", input_story_file=None):
     base_dir = os.path.join(output_dir, task_name)
-    md_path = os.path.join(base_dir, "novel_story.md")
     outline_path = os.path.join(base_dir, "test_outline.json")
 
-    # 读取章节内容和提纲信息
-    chapters = split_novel_by_chapter(md_path)
+    # ✅ 新增逻辑：使用 story_updated.json 提供正文
+    if input_story_file:
+        # 使用更新后的 story.json（含 plot 字段）
+        story_path = os.path.join(base_dir, input_story_file)
+        with open(story_path, 'r', encoding='utf-8') as f:
+            story_data = json.load(f)
+        chapters = [{"title": ch["title"], "content": ch["plot"]} for ch in story_data]
+        suffix = "_updated"
+    else:
+        # 默认方式：从 novel_story.md 拆章节
+        md_path = os.path.join(base_dir, "novel_story.md")
+        chapters = split_novel_by_chapter(md_path)
+        suffix = ""
+
+    # 读取章节概要
     with open(outline_path, 'r', encoding='utf-8') as f:
         outline = json.load(f)
 
+    # 拼接正文 + 过渡句
     enhanced_text = ""
-
     for i, chap in enumerate(chapters):
         title = outline[i]["title"]
         summary = outline[i]["summary"]
         chapter_id = outline[i]["chapter_id"]
 
-        # 添加章节标题
         enhanced_text += f"# {chapter_id}：{title}\n\n"
         enhanced_text += chap["content"].strip() + "\n\n"
 
-        # 若不是最后一章，添加过渡句
         if i < len(chapters) - 1:
             next_title = outline[i + 1]["title"]
             transition = generate_transition(title, next_title, summary, chap["content"])
             enhanced_text += f"{transition}\n\n"
 
-    # 添加最后一章结尾句
-    final_chapter = chapters[-1]
-    final_outline = outline[-1]
-    ending = generate_ending(final_outline["title"], final_chapter["content"])
+    # 添加最终结尾
+    ending = generate_ending(outline[-1]["title"], chapters[-1]["content"])
     enhanced_text += f"{ending}\n"
 
-    # 保存结果
-    output_path = os.path.join(base_dir, "enhanced_story.md")
+    # 保存为 enhanced_story[_updated].md
+    output_path = os.path.join(base_dir, f"enhanced_story{suffix}.md")
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(enhanced_text)
 
@@ -127,20 +135,34 @@ def build_polish_prompt(speaker, original_dialogue, character_info):
     ]
 
 # 主函数：润色对话
-def polish_dialogues_in_story(task_name="test"):
+def polish_dialogues_in_story(task_name="test", input_dialogue_file=None):
     base_dir = os.path.join(output_dir, task_name)
     md_path = os.path.join(base_dir, "enhanced_story.md")
     char_path = os.path.join(base_dir, "characters.json")
-    output_path = os.path.join(base_dir, "enhanced_story_dialogue.md")
 
-    # 加载角色信息
+    # 新增：判断是否传入更新后对话文件
+    if input_dialogue_file:
+        dialogue_path = os.path.join(base_dir, input_dialogue_file)
+        dialogue_data = json.load(open(dialogue_path, "r", encoding="utf-8"))
+        paragraphs = []
+        for d in dialogue_data:
+            for line in d.get("dialogue", []):
+                if isinstance(line, dict) and "speaker" in line and "line" in line:
+                    paragraphs.append(f"{line['speaker']}：“{line['line']}”")
+                elif isinstance(line, str):
+                    paragraphs.append(line)
+                else:
+                    print(f"⚠️ 无法解析的对白格式：{line}")
+
+                # paragraphs.append(f"{line['speaker']}：“{line['line']}”")
+        content = "\n\n".join(paragraphs)
+    else:
+        with open(md_path, "r", encoding="utf-8") as f:
+            content = f.read()
+
     char_dict = load_character_info(char_path)
     character_names = list(char_dict.keys())
 
-    with open(md_path, "r", encoding="utf-8") as f:
-        content = f.read()
-
-    # 找到所有 “……” 形式的对话
     pattern = r"“([^”]{1,100}?)”([^。\n]*)?"
     matches = re.findall(pattern, content)
 
@@ -156,11 +178,12 @@ def polish_dialogues_in_story(task_name="test"):
             polished = generate_response(prompt).strip()
             replacements.append((full_text, polished))
 
-    # 替换内容
     for old, new in replacements:
         content = content.replace(old, new)
 
-    # 保存结果
+    suffix = "_updated" if input_dialogue_file else ""
+    output_path = os.path.join(base_dir, f"enhanced_story_dialogue{suffix}.md")
+
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(content)
 
@@ -169,3 +192,14 @@ def polish_dialogues_in_story(task_name="test"):
 if __name__ == "__main__":
     enhance_story_with_transitions()
     polish_dialogues_in_story()
+
+
+
+
+# # 默认生成版
+# enhance_story_with_transitions(task_name="test")
+# polish_dialogues_in_story(task_name="test")
+
+# # 更新后联动版
+# enhance_story_with_transitions(task_name="test", input_story_file="story_updated.json")
+# polish_dialogues_in_story(task_name="test", input_dialogue_file="dialogue_updated.json")

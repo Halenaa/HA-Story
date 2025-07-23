@@ -1,6 +1,6 @@
 import json
 
-from src.utils import generate_response,convert_json
+from src.utils.utils import generate_response,convert_json
 
 
 def generate_characters_v1(outline, max_characters=20):

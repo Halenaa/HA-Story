@@ -1,5 +1,5 @@
 import json
-from src.utils import generate_response, convert_json
+from src.utils.utils import generate_response, convert_json
 
 def analyze_dialogue_insertions(plot_list, character_list_json):
     """
@@ -8,21 +8,23 @@ def analyze_dialogue_insertions(plot_list, character_list_json):
     msg = [{
         "role": "system",
         "content": f"""
-你是一个编剧，负责为故事插入合适的对话。请你判断以下每一句plot之后是否需要插入对话，并指定角色。
+你的角色是一个编剧，需要控制在剧情中哪个节点加入对话情节，并选择对应的演员进行演绎。你需要对以下我给你的 plot 每一句进行分析：
+
+如果在某个句子后需要插入对话，你则返回 1，并选择对应的演员；否则返回 0，演员列表为空。
 
 #Output Format：
 [
 {{
   "sentence": "...",
   "need_to_action": 0 or 1,
-  "actor_list": ["角色A", "角色B"]
+  "actor_list": ["演员A", "演员B"]
 }},
 ...
 ]
 
 以下是 plot 列表：{plot_list}
 
-以下是角色列表：{character_list_json}
+这是演员表：{character_list_json}
         """
     }]
     response = generate_response(msg)
@@ -154,7 +156,7 @@ def pretty_print_dialogue(dialogue_result):
     美观打印完整对话插入结构，适合人类调试或写入 Markdown 文件
     """
     for i, block in enumerate(dialogue_result):
-        print(f"\n🔹 第 {i+1} 句剧情：{block['sentence'][:80]}...")
+        print(f"\n第 {i+1} 句剧情：{block['sentence'][:80]}...")
         if block["need_to_action"] == 0:
             print("无需插入对话。")
         else:
@@ -163,3 +165,23 @@ def pretty_print_dialogue(dialogue_result):
             for role, lines in dialogue.items():
                 for line in lines:
                     print(f"  {line}")
+
+
+
+def generate_dialogue_for_plot(instruction, characters):
+    from src.utils.utils import generate_response, convert_json
+    character_list = ", ".join([c["name"] for c in characters])
+    prompt = f"""
+剧情内容如下：
+{instruction}
+
+角色有：{character_list}
+
+请为该场景生成5-6轮简洁自然的对话，展现角色风格与互动张力，格式如下：
+[
+  {{"speaker": "角色A", "line": "说的话"}},
+  ...
+]
+"""
+    response = generate_response([{"role": "user", "content": prompt}])
+    return convert_json(response)
