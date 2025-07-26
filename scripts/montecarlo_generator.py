@@ -51,11 +51,11 @@ def run_montecarlo_generation_v2(
         # 调用主流程
         run_story_pipeline(
             version=version,
-            reorder_mode="random",
+            reorder_mode="linear",
             use_cache=False,
             topic=topic,
             style=style,
-            behavior_model="gpt-4o"
+            behavior_model="claude-sonnet-4-20250514"
         )
 
         # 提取锚点与状态信息

@@ -23,10 +23,10 @@ class DialogueAgent:
             scene=scene
         )
         self.model = model or ChatOpenAI(
-            temperature=0.9,
-            model="gpt-4o",
-            api_key=os.getenv("OPENAI_KEY"),
-            base_url="https://api.chatanywhere.com.cn/v1"
+            temperature=0.7,
+            model="claude-sonnet-4-20250514",
+            api_key=os.getenv("CLAUDE_KEY"),
+            base_url="CLAUDE_API_BASE"
         )
         self.reset()
 

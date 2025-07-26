@@ -80,7 +80,7 @@ for character_name in test_story['characters']:
                                                       plot=test_story['plot'],
                                                       scene=test_story['scene'],
                                                       ),
-            model=ChatOpenAI(temperature=0.9, model="gpt-4o",api_key="sk-CacjJcrne1O3wM8CXosEy14IpvwJYXlJsZd3703M9ybfn5x5", base_url="https://api.chatanywhere.com.cn/v1",),
+            model=ChatOpenAI(temperature=0.7, model="claude-sonnet-4-20250514",api_key="sk-CacjJcrne1O3wM8CXosEy14IpvwJYXlJsZd3703M9ybfn5x5", base_url="https://api.chatanywhere.com.cn/v1",),
         )
     )
 

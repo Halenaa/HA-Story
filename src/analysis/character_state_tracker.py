@@ -39,7 +39,7 @@ def run_character_state_tracker(
     主函数：加载 dialogue，提取角色状态，保存为 role_state.json
     """
     if model is None:
-        model = os.getenv("OPENAI_MODEL", "gpt-4o")
+        model = os.getenv("OPENAI_MODEL", "gpt-4.1")
 
     print(f"开始提取角色状态：版本={version}, 模型={model}")
     base_dir = os.path.join(output_dir, version)

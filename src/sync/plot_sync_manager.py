@@ -3,7 +3,7 @@
 from src.sync.update_plot_from_dialogue import update_plot_from_dialogue
 from src.sync.regenerate_dialogue_from_plot import regenerate_dialogue_from_plot
 
-def sync_plot_and_dialogue_from_behavior(story, dialogue_result, characters, model="gpt-4o"):
+def sync_plot_and_dialogue_from_behavior(story, dialogue_result, characters, model="claude-sonnet-4-20250514"):
     """
     联动更新模块：根据 dialogue 中行为 → 更新 plot → 重生成 dialogue。
 
@@ -16,8 +16,8 @@ def sync_plot_and_dialogue_from_behavior(story, dialogue_result, characters, mod
     updated_story = story.copy()
     updated_dialogue = dialogue_result.copy()
 
-    for idx, ch in enumerate(updated_story):
-        dlg_entry = updated_dialogue[idx]
+    for idx, (ch, dlg_entry) in enumerate(zip(updated_story, updated_dialogue)):
+
         if not dlg_entry.get("dialogue"):
             revision_log.append({
                 "chapter_id": ch["chapter_id"],

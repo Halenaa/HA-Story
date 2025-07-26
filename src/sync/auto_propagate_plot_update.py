@@ -8,7 +8,7 @@ def auto_propagate_plot_update(
     dialogue_result: List[Dict],
     characters: List[Dict],
     changed_idx: int,
-    model: str = "gpt-4o",
+    model: str = "claude-sonnet-4-20250514",
     behavior_hint: str = ""
 ) -> Tuple[List[Dict], List[Dict], List[Dict]]:
     """

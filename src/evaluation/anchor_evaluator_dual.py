@@ -4,7 +4,7 @@ import argparse
 from tqdm import tqdm
 from src.utils.utils import load_json, generate_response, convert_json_safe as convert_json
 
-def is_similar(a: str, b: str, model="gpt-4o") -> bool:
+def is_similar(a: str, b: str, model="claude-sonnet-4-20250514") -> bool:
     prompt = f"""
 你是一个叙事结构专家，请判断以下两个内容是否表达相同的结构功能：
 
@@ -38,7 +38,7 @@ def load_anchor_list(path, field="surface"):
             return [{"value": d.get(field)} for d in data]
     raise ValueError("不支持的 anchor 文件结构")
 
-def match_items(ref_list, gen_list, field="surface", use_llm=False, model="gpt-4o"):
+def match_items(ref_list, gen_list, field="surface", use_llm=False, model="claude-sonnet-4-20250514"):
     matched = []
     missed = []
     for ref in ref_list:
@@ -82,7 +82,7 @@ if __name__ == "__main__":
     parser.add_argument("--gen", required=True, help="生成锚点文件路径")
     parser.add_argument("--field", choices=["surface", "type", "description"], default="surface", help="使用哪个字段进行比对")
     parser.add_argument("--llm", action="store_true", help="是否使用 LLM 模糊匹配")
-    parser.add_argument("--model", default="gpt-4o", help="LLM 模型名称")
+    parser.add_argument("--model", default="claude-sonnet-4-20250514", help="LLM 模型名称")
 
     args = parser.parse_args()
 

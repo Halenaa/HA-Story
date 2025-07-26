@@ -23,7 +23,7 @@ def extract_chapter_texts_from_md(md_path):
         chapters.append({"chapter_id": title_line, "content": body})
     return chapters
 
-def llm_extract_anchors(text, mode="fine", model="gpt-4o"):
+def llm_extract_anchors(text, mode="fine", model="claude-sonnet-4-20250514"):
     if mode == "fine":
         prompt = f"""
 你是一个叙事结构分析助手，请阅读以下文本，提取出其中的所有重要结构锚点。每条锚点需包含：
@@ -76,7 +76,7 @@ def llm_extract_anchors(text, mode="fine", model="gpt-4o"):
         print("⚠️ 无法解析 LLM 返回格式，内容如下：\n", resp[:300])
         return []
 
-def extract_anchors(input_path, output_filename, model="gpt-4o", mode="both"):
+def extract_anchors(input_path, output_filename, model="claude-sonnet-4-20250514", mode="both"):
     print(f"\n🔍 正在提取锚点：{input_path}")
     if input_path.endswith(".json"):
         story = load_json(input_path)
@@ -120,7 +120,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", type=str, required=True, help="输入文件路径：story.json 或 enhanced_story_dialogue.md")
     parser.add_argument("--output", type=str, default="generated_anchors.json", help="输出 JSON 文件路径")
-    parser.add_argument("--model", type=str, default="gpt-4o", help="使用的模型名称")
+    parser.add_argument("--model", type=str, default="claude-sonnet-4-20250514", help="使用的模型名称")
     parser.add_argument("--mode", type=str, default="both", choices=["fine", "coarse", "both"], help="提取粒度：fine（细致）/ coarse（关键）/ both（双层）")
 
     args = parser.parse_args()

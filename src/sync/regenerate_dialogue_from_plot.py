@@ -1,6 +1,6 @@
 from src.utils.utils import generate_response, convert_json_safe
 
-def regenerate_dialogue_from_plot(chapter_id, plot, character_info, style_hint=None, model="gpt-4o"):
+def regenerate_dialogue_from_plot(chapter_id, plot, character_info, style_hint=None, model="claude-sonnet-4-20250514"):
     """
     根据 plot 与角色设定，生成角色之间的自然对话。
     返回：List[Dict]

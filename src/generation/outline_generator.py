@@ -11,11 +11,12 @@ def generate_outline(topic="小红帽", style="科幻改写", custom_instruction
 - summary：该章内容的简要介绍（1~2句话）
 
 故事风格为：{style}
+不要加入冒号、解释或其他多余格式，只返回 JSON 格式的内容。
 """
 
     # 如果用户提供了自定义指令，就加入进来
     if custom_instruction:
-        base_prompt += f"\n请特别注意以下风格或内容提示：{custom_instruction}"
+        base_prompt = f"\n请特别注意以下风格或内容提示：{custom_instruction}"
 
     base_prompt += "\n只返回标准 JSON 列表，不需要返回其他多余解释。"
 
