@@ -70,7 +70,7 @@ def llm_extract_dual_anchor_outputs(text, model="glm-4-air"):
         return {"functional": [], "surface": []}
 
 
-def extract_anchors(input_path, output_path, model="claude-sonnet-4-20250514"):
+def extract_anchors(input_path, output_path, model="gpt-4.1"):
     print(f"\n🔍 正在提取锚点：{input_path}")
     if input_path.endswith(".json"):
         story = load_json(input_path)
@@ -106,7 +106,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", type=str, required=True, help="输入文件路径：.json 或 .md")
     parser.add_argument("--output", type=str, default="generated_anchors_dual.json", help="输出 JSON 文件路径前缀")
-    parser.add_argument("--model", type=str, default="claude-sonnet-4-20250514", help="使用的 LLM 模型名称")
+    parser.add_argument("--model", type=str, default="gpt-4.1", help="使用的 LLM 模型名称")
 
     args = parser.parse_args()
     extract_anchors(args.input, args.output, model=args.model)

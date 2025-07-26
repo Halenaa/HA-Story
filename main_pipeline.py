@@ -176,7 +176,7 @@ def step_file(version, filename):
     return os.path.join(output_dir, version, filename)
 
 
-def main(version="test", reorder_mode="random", use_cache=True, topic="小红帽", style="科幻改写", behavior_model="claude-sonnet-4-20250514"):
+def main(version="test", reorder_mode="random", use_cache=True, topic="小红帽", style="科幻改写", behavior_model="gpt-4.1"):
     print(f"\n开始运行 main_pipeline")
     print(f"版本: {version}，顺序模式: {reorder_mode}，使用缓存: {use_cache}")
     print(f"题材: {topic}，风格: {style}\n")
@@ -512,7 +512,7 @@ if __name__ == "__main__":
     parser.add_argument("--no-cache", action="store_true", help="是否忽略已有结果，强制全部重新生成")
     parser.add_argument("--topic", type=str, default="小红帽", help="故事题材")
     parser.add_argument("--style", type=str, default="科幻改写", help="故事风格")
-    parser.add_argument("--behavior-model", type=str, default="claude-sonnet-4-20250514", help="行为识别使用的模型")
+    parser.add_argument("--behavior-model", type=str, default="gpt-4.1", help="行为识别使用的模型")
 
     args = parser.parse_args()
     main(

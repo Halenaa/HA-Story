@@ -1,7 +1,7 @@
 import os
 from src.utils.utils import generate_response, convert_json
 
-def update_plot_from_dialogue(chapter_id, original_plot, dialogue, character_info, model="claude-sonnet-4-20250514"):
+def update_plot_from_dialogue(chapter_id, original_plot, dialogue, character_info, model="gpt-4.1"):
     """
     根据对话和角色信息，自动更新当前章节的 plot。
     返回：dict，含 updated_plot / change_summary / changed

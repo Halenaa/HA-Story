@@ -3,7 +3,7 @@
 from src.sync.update_plot_from_dialogue import update_plot_from_dialogue
 from src.sync.regenerate_dialogue_from_plot import regenerate_dialogue_from_plot
 
-def sync_plot_and_dialogue_from_behavior(story, dialogue_result, characters, model="claude-sonnet-4-20250514"):
+def sync_plot_and_dialogue_from_behavior(story, dialogue_result, characters, model="gpt-4.1"):
     """
     联动更新模块：根据 dialogue 中行为 → 更新 plot → 重生成 dialogue。
 

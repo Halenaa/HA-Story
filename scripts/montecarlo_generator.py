@@ -55,7 +55,7 @@ def run_montecarlo_generation_v2(
             use_cache=False,
             topic=topic,
             style=style,
-            behavior_model="claude-sonnet-4-20250514"
+            behavior_model="gpt-4.1"
         )
 
         # 提取锚点与状态信息

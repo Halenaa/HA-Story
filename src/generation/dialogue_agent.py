@@ -24,7 +24,7 @@ class DialogueAgent:
         )
         self.model = model or ChatOpenAI(
             temperature=0.7,
-            model="claude-sonnet-4-20250514",
+            model="gpt-4.1",
             api_key=os.getenv("CLAUDE_KEY"),
             base_url="CLAUDE_API_BASE"
         )

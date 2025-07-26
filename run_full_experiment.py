@@ -37,7 +37,7 @@ for topic in topics:
                         use_cache=False,
                         topic=topic,
                         style="科幻改写",
-                        behavior_model="claude-sonnet-4-20250514",
+                        behavior_model="gpt-4.1",
                         temperature=temp,
                         seed=seed
                     )

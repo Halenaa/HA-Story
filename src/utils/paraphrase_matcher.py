@@ -6,7 +6,7 @@ import os
 from src.utils.utils import generate_response
 
 
-def is_paraphrase_llm(a: str, b: str, model: str = "claude-sonnet-4-20250514", verbose: bool = False) -> bool:
+def is_paraphrase_llm(a: str, b: str, model: str = "gpt-4.1", verbose: bool = False) -> bool:
     prompt = f"""
 你是一个叙事结构专家，请判断以下两个锚点是否表达相同的结构功能：
 
@@ -33,7 +33,7 @@ B: 「{b}」
         return False
 
 
-def match_lists(ref_list, gen_list, model="claude-sonnet-4-20250514", verbose=True):
+def match_lists(ref_list, gen_list, model="gpt-4.1", verbose=True):
     matched = []
     missed = []
     for ref in ref_list:
@@ -127,7 +127,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--ref", required=True, help="参考锚点文件路径（支持 anchors json）")
     parser.add_argument("--gen", required=True, help="生成锚点来源（.json/.md/story.json）")
-    parser.add_argument("--model", default="claude-sonnet-4-20250514", help="调用的模型")
+    parser.add_argument("--model", default="gpt-4.1", help="调用的模型")
     parser.add_argument("--verbose", action="store_true", help="是否打印详细匹配过程")
 
     args = parser.parse_args()
@@ -150,4 +150,4 @@ if __name__ == "__main__":
 
 # alias 统一接口供 evaluator 使用
 def is_similar(a: str, b: str, threshold=0.85):
-    return is_paraphrase_llm(a, b, model="claude-sonnet-4-20250514")
+    return is_paraphrase_llm(a, b, model="gpt-4.1")

@@ -16,9 +16,9 @@ client = OpenAI(api_key=os.getenv("OPENAI_KEY"), base_url=os.getenv("OPENAI_API_
 
 
 
-def generate_response(msg,model="claude-sonnet-4-20250514"):
+def generate_response(msg,model="gpt-4.1"):
     response = client.chat.completions.create(model=model,
-                                messages=msg,temperature=0.7,)
+                                messages=msg,temperature=0.1,)
     return response.choices[0].message.content
 
 def convert_dialogue_dict_to_list(dialogue_dict):
@@ -35,7 +35,7 @@ def convert_dialogue_dict_to_list(dialogue_dict):
             result.append({"speaker": speaker, "dialogue": line})  # ✅ 使用 "dialogue" 字段
     return result
 
-def extract_behavior_llm(dialogue_block, model="claude-sonnet-4-20250514", confirm=False):
+def extract_behavior_llm(dialogue_block, model="gpt-4.1", confirm=False):
     from src.utils.utils import generate_response
 
     # 整理对话为字符串（无论是 list 还是 dict）

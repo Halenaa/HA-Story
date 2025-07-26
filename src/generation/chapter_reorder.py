@@ -32,7 +32,7 @@ def build_prompt_from_ordered_chapters(ordered_chapters):
     """
 
 
-def reorder_chapters(chapter_list, mode="linear", model="claude-sonnet-4-20250514"):
+def reorder_chapters(chapter_list, mode="linear", model="gpt-4.1"):
     if mode == "linear":
         return chapter_list
 

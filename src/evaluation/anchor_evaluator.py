@@ -7,7 +7,7 @@ from src.utils.utils import convert_json_safe as convert_json
 
 
 # 👇 LLM 模型判断两锚点是否同义（支持 markdown 包裹）
-def is_similar(a: str, b: str, threshold=0.85, model="claude-sonnet-4-20250514") -> bool:
+def is_similar(a: str, b: str, threshold=0.85, model="gpt-4.1") -> bool:
     prompt = f"""
 你是一个叙事结构专家，请判断以下两个锚点是否表达相同的结构功能：
 

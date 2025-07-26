@@ -32,7 +32,7 @@ def main(
     use_cache=True,
     topic="小红帽",
     style="科幻改写",
-    behavior_model="claude-sonnet-4-20250514",
+    behavior_model="gpt-4.1",
     temperature=0.7,
     seed=1
 ):
@@ -261,7 +261,7 @@ if __name__ == "__main__":
     parser.add_argument("--no-cache", action="store_true", help="是否忽略已有结果")
     parser.add_argument("--topic", type=str, default="小红帽", help="故事题材")
     parser.add_argument("--style", type=str, default="科幻改写", help="故事风格")
-    parser.add_argument("--behavior-model", type=str, default="claude-sonnet-4-20250514", help="行为识别模型")
+    parser.add_argument("--behavior-model", type=str, default="gpt-4.1", help="行为识别模型")
     parser.add_argument("--temperature", type=float, default=0.7, help="LLM temperature")
     parser.add_argument("--seed", type=int, default=42, help="生成随机种子")
 
