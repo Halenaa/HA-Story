@@ -6,9 +6,9 @@ from src.generation.outline_generator import generate_outline
 from src.generation.chapter_reorder import reorder_chapters
 from src.generation.generate_characters import generate_characters_v1
 from src.generation.expand_story import expand_story_v1
-from src.compile_story import compile_full_story_by_chapter
+from src.compile_story import compile_full_story_by_sentence
 from src.enhance_story import enhance_story_with_transitions, polish_dialogues_in_story
-from src.generation.dialogue_inserter import analyze_dialogue_insertions, run_dialogue_insertion
+from src.generation.dialogue_inserter import analyze_dialogue_insertions, run_dialogue_insertion, analyze_dialogue_insertions_v2
 from src.utils.utils import extract_behavior_llm, convert_dialogue_dict_to_list
 from src.sync.plot_sync_manager import sync_plot_and_dialogue_from_behavior
 from src.sync.auto_propagate_plot_update import auto_propagate_plot_update
@@ -29,7 +29,7 @@ def step_file(version, filename):
 def main( 
     version="test",
     reorder_mode="linear",
-    use_cache=True,
+    use_cache=False,
     topic="小红帽",
     style="科幻改写",
     behavior_model="gpt-4.1",
@@ -182,23 +182,24 @@ def main(
         save_json(story, version, "story.json")
         print("故事内容生成完成")
 
-    # Step 5: Dialogue Structure Marks
-    plot_list = extract_plot_list(story)
-    save_json(plot_list, version, "plot_list.json")
-    print("🧪 提取的 plot_list 数量：", len(plot_list))
-    print("🧪 plot_list 示例：", plot_list[0][:100] if plot_list else "空")
-    structure_marks = analyze_dialogue_insertions(plot_list, characters)
-    save_json(structure_marks, version, "structure_marks.json")
-    print("对话插入结构分析完成")
+    # Step 5 & 6: 新版对话生成（句子级分析 + 章节级兼容）
+    chapter_results, sentence_results, behavior_timeline = analyze_dialogue_insertions_v2(story, characters)
 
-    # Step 6: Dialogue Generation
-    dialogue_result = run_dialogue_insertion(plot_list, characters)
-    save_json(dialogue_result, version, "dialogue_marks.json")
-    # ✅ 放这里，运行对白生成后立即检查长度是否匹配
-    if len(story) != len(dialogue_result):
-        print(f"⚠️ 警告：story 有 {len(story)} 章，但 dialogue_result 只有 {len(dialogue_result)} 条对白，可能有章节对白生成失败。")
-    
-    for ch, dlg in zip(story, dialogue_result):
+    # 保存三种格式的数据
+    save_json(chapter_results, version, "dialogue_marks.json")        # 兼容格式
+    save_json(sentence_results, version, "sentence_dialogues.json")    # 句子级详细分析
+    save_json(behavior_timeline, version, "behavior_timeline_raw.json")  # 原始behavior数据
+
+    # 如果需要sync，用章节级
+    if len(story) == len(chapter_results):
+        story, chapter_results_updated, revision_log = sync_plot_and_dialogue_from_behavior(
+            story, chapter_results, characters, model=behavior_model)
+    else:
+        chapter_results_updated = chapter_results  # 🔴 添加这行
+        revision_log = []
+
+    # 记录日志（用章节级保持兼容）
+    for ch, dlg in zip(story, chapter_results_updated):  # 🔴 使用 chapter_results_updated
         log = build_log_record(
             module="dialogue_inserter", step="dialogue",
             task_name=version, chapter_id=ch["chapter_id"],
@@ -208,44 +209,102 @@ def main(
             temperature=temperature, seed=seed
         )
         append_log(dialogue_log_path, log)
-    # Step 6.5: LLM行为提取
-    behavior_signals, recommendations = [], []
-    for idx, d in enumerate(dialogue_result):
-        dlg = d.get("dialogue")
-        if isinstance(dlg, dict):
-            dlg = convert_dialogue_dict_to_list(dlg)
-            d["dialogue"] = dlg
-        if isinstance(dlg, list):
-            try:
-                result = extract_behavior_llm(dlg, model=behavior_model, confirm=False)
-                for role, states in result.items():
-                    role_state.setdefault(role, []).extend([s for s in states if s not in role_state[role]])
-                    behavior_signals.extend([f"{role}：{s}" for s in states])
-            except Exception as e:
-                print(f"⚠️ 第 {idx+1} 章行为提取失败：{e}")
+    # # 🎯 compile_story 使用句子级数据
+    # compiled_story = compile_full_story_by_sentence(story, sentence_results)
+    # save_md(compiled_story, os.path.join(folder, "novel_story.md"))
+    # # 设置dialogue_result为chapter_results以保持后续流程兼容
+    # dialogue_result = chapter_results
+    # print("新版对话生成完成（句子级分析 + 章节级兼容）")
 
-    save_json({"behaviors": behavior_signals, "recommendations": recommendations}, version, "behavior_trace.json")
-    print("对话内容生成完成")
+    # # ✅ 放这里，运行对白生成后立即检查长度是否匹配
+    # if len(story) != len(dialogue_result):
+    #     print(f"⚠️ 警告：story 有 {len(story)} 章，但 dialogue_result 只有 {len(dialogue_result)} 条对白，可能有章节对白生成失败。")
+    
+    # for ch, dlg in zip(story, dialogue_result):
+    #     log = build_log_record(
+    #         module="dialogue_inserter", step="dialogue",
+    #         task_name=version, chapter_id=ch["chapter_id"],
+    #         model=behavior_model,
+    #         input_data={"plot": ch["plot"]},
+    #         output_data={"dialogue": dlg["dialogue"]},
+    #         temperature=temperature, seed=seed
+    #     )
+    #     append_log(dialogue_log_path, log)
 
-    # Step 6.7: 联动机制
-    story, dialogue_result, revision_log = sync_plot_and_dialogue_from_behavior(
-        story, dialogue_result, characters, model=behavior_model)
+    # 替换为：
+    # Step 6.5: 新版behavior保存（已在v2中提取）
+    # 组织角色弧线
+    character_arcs = {}
+    for item in behavior_timeline:
+        char = item["character"]
+        if char not in character_arcs:
+            character_arcs[char] = []
+        character_arcs[char].append({
+            "chapter": item["chapter_id"],
+            "sentence": item["sentence_index"],
+            "behavior": item["behavior"],
+            "scene": item["scene_context"][:30] + "..." if len(item["scene_context"]) > 30 else item["scene_context"]
+        })
+
+    # 生成完整的behavior_trace
+    behavior_trace = {
+        "timeline": behavior_timeline,
+        "character_arcs": character_arcs,
+        "statistics": {
+            "total_dialogue_moments": len(behavior_timeline),
+            "characters_behavior_count": {char: len(arcs) for char, arcs in character_arcs.items()}
+        },
+        "legacy_behaviors": [f"{item['character']}：{item['behavior']}" for item in behavior_timeline]
+    }
+
+    save_json(behavior_trace, version, "behavior_trace.json")
+
+    # 兼容role_state
+    role_state = {}
+    for item in behavior_timeline:
+        role = item["character"]
+        behavior = item["behavior"]
+        role_state.setdefault(role, [])
+        if behavior not in role_state[role]:
+            role_state[role].append(behavior)
+
+    print("新版behavior trace生成完成")
+
+    # # Step 6.5: LLM行为提取
+    # behavior_signals, recommendations = [], []
+    # for idx, d in enumerate(dialogue_result):
+    #     dlg = d.get("dialogue")
+    #     if isinstance(dlg, dict):
+    #         dlg = convert_dialogue_dict_to_list(dlg)
+    #         d["dialogue"] = dlg
+    #     if isinstance(dlg, list):
+    #         try:
+    #             result = extract_behavior_llm(dlg, model=behavior_model, confirm=False)
+    #             for role, states in result.items():
+    #                 role_state.setdefault(role, []).extend([s for s in states if s not in role_state[role]])
+    #                 behavior_signals.extend([f"{role}：{s}" for s in states])
+    #         except Exception as e:
+    #             print(f"⚠️ 第 {idx+1} 章行为提取失败：{e}")
+
+    # save_json({"behaviors": behavior_signals, "recommendations": recommendations}, version, "behavior_trace.json")
+    # print("对话内容生成完成")
+
 
     # Step 7: 保存输出
     save_json(role_state, version, "role_state.json")
     save_json(story, version, "story_updated.json")
-    save_json(dialogue_result, version, "dialogue_updated.json")
+    save_json(sentence_results, version, "dialogue_updated.json") 
     save_json(revision_log, version, "revision_log.json")
 
     # ✅ 保存最初的 novel_story.md（plot + dialogue 原始合并版）
-    from src.compile_story import compile_full_story_by_chapter
-    compiled_story = compile_full_story_by_chapter(story, dialogue_result)
-    save_md(compiled_story, os.path.join(folder, "novel_story.md"))
-    print("novel_story.md 已生成（原始合成版）")
+    # from src.compile_story import compile_full_story_by_chapter
+    # compiled_story = compile_full_story_by_chapter(story, dialogue_result)
+    # save_md(compiled_story, os.path.join(folder, "novel_story.md"))
+    # print("novel_story.md 已生成（原始合成版）")
 
-    compiled_updated = compile_full_story_by_chapter(story, dialogue_result)
-    save_md(compiled_updated, os.path.join(folder, "novel_story_updated.md"))
-    print("novel_story_updated.md 已生成")
+    compiled_updated = compile_full_story_by_sentence(story, sentence_results)
+    save_md(compiled_updated, os.path.join(folder, "novel_story.md")) 
+    print("novel_story.md 已生成")
 
     enhance_story_with_transitions(task_name=version, input_story_file="story_updated.json")
     polish_dialogues_in_story(task_name=version, input_dialogue_file="dialogue_updated.json")

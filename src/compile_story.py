@@ -3,6 +3,9 @@ from src.utils.utils import load_json, save_json
 from src.constant import output_dir
 
 def compile_full_story_by_chapter(story_json, dialogue_json):
+    """
+    章节级编译（兼容旧格式，但修正字段检查）
+    """
     full_story = ""
 
     for idx, chapter in enumerate(story_json):
@@ -17,8 +20,11 @@ def compile_full_story_by_chapter(story_json, dialogue_json):
         if idx < len(dialogue_json):
             dlg_block = dialogue_json[idx].get("dialogue", [])
             for line in dlg_block:
-                if isinstance(line, dict) and "speaker" in line and "line" in line:
-                    full_story += f'“{line["line"].strip()}” ——{line["speaker"].strip()}\n\n'
+                if isinstance(line, dict) and "speaker" in line:
+                    # 🔧 兼容不同的对话字段名
+                    dialogue_text = line.get("dialogue", line.get("line", ""))
+                    if dialogue_text:
+                        full_story += f'"{dialogue_text.strip()}" ——{line["speaker"].strip()}\n\n'
                 elif isinstance(line, str):
                     full_story += line.strip() + "\n\n"
                 else:
@@ -28,15 +34,92 @@ def compile_full_story_by_chapter(story_json, dialogue_json):
 
     return full_story
 
+def compile_full_story_by_sentence(story_json, sentence_dialogues):
+    """
+    句子级编译：按句子精确插入对话
+    """
+    from src.utils.utils import split_plot_into_sentences
+    
+    # 组织句子级对话数据
+    dialogue_map = {}
+    for item in sentence_dialogues:
+        if item.get("need_to_action") == 1 and item.get("dialogue"):
+            chapter_id = item["chapter_id"]
+            sentence_idx = item["sentence_index"]
+            
+            if chapter_id not in dialogue_map:
+                dialogue_map[chapter_id] = {}
+            dialogue_map[chapter_id][sentence_idx] = item["dialogue"]
+    
+    full_story = ""
+    
+    for chapter in story_json:
+        chapter_id = chapter.get("chapter_id", f"Unknown")
+        title = chapter.get("title", f"Unknown")
+        plot = chapter.get("plot", "").strip()
+        
+        full_story += f"# {chapter_id}：{title}\n\n"
+        
+        # 🎯 按句子分割并插入对话
+        sentences = split_plot_into_sentences(plot)
+        
+        for sent_idx, sentence in enumerate(sentences):
+            # 添加叙述句子
+            full_story += sentence + "\n\n"
+            
+            # 检查是否需要插入对话
+            if (chapter_id in dialogue_map and 
+                sent_idx in dialogue_map[chapter_id]):
+                
+                dialogues = dialogue_map[chapter_id][sent_idx]
+                
+                if dialogues:
+                    for line in dialogues:
+                        if isinstance(line, dict):
+                            speaker = line.get("speaker", "")
+                            # 🔧 兼容不同的对话字段名
+                            dialogue_text = line.get("dialogue", line.get("line", ""))
+                            action = line.get("action", "")  # 🎯 获取action字段
+                            
+                            if speaker and dialogue_text:
+                                # 🎯 根据是否有action选择不同的格式
+                                if action and action.strip():
+                                    # 方案1：将action融入对话（更自然）
+                                    # full_story += f'{speaker}{action}说道："{dialogue_text.strip()}"\n\n'
+                                    full_story += f'{speaker}{action}，'  # 注意是逗号
+                                    full_story += f'"{dialogue_text.strip()}" ——{speaker}\n\n'
+                                    # 方案2：保持原格式，但在对话前加上动作描述
+                                    # full_story += f'{speaker}{action}。\n\n'
+                                    # full_story += f'"{dialogue_text.strip()}" ——{speaker}\n\n'
+                                else:
+                                    # 无action时保持原格式
+                                    full_story += f'"{dialogue_text.strip()}" ——{speaker}\n\n'
+                        elif isinstance(line, str):
+                            full_story += line.strip() + "\n\n"
+                        else:
+                            print(f"⚠️ 无法识别的对话格式：{line}")
+        
+        full_story += "-" * 40 + "\n\n"
+    
+    return full_story
 
 if __name__ == "__main__":
     version = "test"
     base_dir = os.path.join(output_dir, version)
 
     story_json = load_json(os.path.join(base_dir, "story.json"))
-    dialogue_json = load_json(os.path.join(base_dir, "dialogue_marks.json"))
-
-    novel = compile_full_story_by_chapter(story_json, dialogue_json)
+    
+    # 🎯 优先使用句子级数据
+    sentence_dialogues_path = os.path.join(base_dir, "sentence_dialogues.json")
+    if os.path.exists(sentence_dialogues_path):
+        sentence_dialogues = load_json(sentence_dialogues_path)
+        novel = compile_full_story_by_sentence(story_json, sentence_dialogues)
+        print("使用句子级数据编译小说")
+    else:
+        # 回退到章节级
+        dialogue_json = load_json(os.path.join(base_dir, "dialogue_marks.json"))
+        novel = compile_full_story_by_chapter(story_json, dialogue_json)
+        print("⚠️ 回退使用章节级数据编译小说")
 
     with open(os.path.join(base_dir, "novel_story.md"), "w", encoding="utf-8") as f:
         f.write(novel)

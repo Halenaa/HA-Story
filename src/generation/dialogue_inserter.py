@@ -1,5 +1,5 @@
 import json
-from src.utils.utils import generate_response, convert_json
+from src.utils.utils import generate_response, convert_json, split_plot_into_sentences, extract_behavior_llm
 
 def analyze_dialogue_insertions(plot_list, character_list_json):
     """
@@ -29,10 +29,100 @@ def analyze_dialogue_insertions(plot_list, character_list_json):
         """
     }]
     response = generate_response(msg)
-    print("\n🧾 analyze_dialogue_insertions 原始返回内容：\n", response, "\n")  # ✅ 添加这一行
+    print("\n analyze_dialogue_insertions 原始返回内容：\n", response, "\n")  # ✅ 添加这一行
 
     return convert_json(response)
 
+def analyze_dialogue_insertions_v2(story, characters):
+    """
+    增强版：确保sentence_results包含完整对话数据
+    """
+    from src.utils.utils import split_plot_into_sentences, generate_response, convert_json, extract_behavior_llm
+    from src.generation.dialogue_inserter import generate_dialogue_for_insertion
+    
+    chapter_results = []
+    behavior_timeline = []
+    sentence_results = []
+    
+    for chapter in story:
+        chapter_id = chapter.get("chapter_id", "Unknown")
+        scene = chapter.get("scene", "")
+        plot = chapter.get("plot", "")
+        
+        sentences = split_plot_into_sentences(plot)
+        print(f"章节{chapter_id}分割为{len(sentences)}个句子")
+        
+        # LLM分析句子
+        msg = [{
+            "role": "system", 
+            "content": f"""对每句剧情判断是否需要插入对话：
+句子列表：{sentences}
+演员表：{characters}
+格式：[{{"sentence":"...", "need_to_action":0 or 1, "actor_list":["演员A"]}}]
+只返回JSON。"""
+        }]
+        response = generate_response(msg)
+        sentence_analysis = convert_json(response)
+        
+        chapter_dialogues = []
+        all_actors = set()
+        
+        for sent_idx, result in enumerate(sentence_analysis):
+            # 🎯 为每个句子生成独立的对话
+            sentence_dialogue = []
+            
+            if result.get("need_to_action") == 1:
+                # 生成这个句子的对话
+                dialogue = generate_dialogue_for_insertion(
+                    result["sentence"], 
+                    result["actor_list"],
+                    [plot],
+                    characters
+                )
+                sentence_dialogue = dialogue
+                chapter_dialogues.extend(dialogue)
+                all_actors.update(result["actor_list"])
+                
+                # behavior提取
+                if dialogue:
+                    try:
+                        behavior = extract_behavior_llm(dialogue)
+                        for character, behaviors in behavior.items():
+                            for behavior_state in behaviors:
+                                behavior_timeline.append({
+                                    "chapter_id": chapter_id,
+                                    "sentence_index": sent_idx,
+                                    "sentence": result["sentence"][:50] + "..." if len(result["sentence"]) > 50 else result["sentence"],
+                                    "character": character,
+                                    "behavior": behavior_state,
+                                    "scene_context": scene,
+                                    "dialogue_trigger": True
+                                })
+                    except Exception as e:
+                        print(f"⚠️ Behavior提取失败: {e}")
+            
+            # 🎯 关键：sentence_results包含dialogue字段
+            sentence_result = {
+                "chapter_id": chapter_id,
+                "sentence_index": sent_idx,
+                "sentence": result.get("sentence", ""),
+                "need_to_action": result.get("need_to_action", 0),
+                "actor_list": result.get("actor_list", []),
+                "dialogue": sentence_dialogue,  # 🎯 每个句子的独立对话
+                "scene_context": scene
+            }
+            sentence_results.append(sentence_result)
+        
+        # 章节级结果（兼容后续模块）
+        chapter_result = {
+            "sentence": plot,
+            "need_to_action": 1 if chapter_dialogues else 0,
+            "actor_list": list(all_actors),
+            "dialogue": chapter_dialogues
+        }
+        chapter_results.append(chapter_result)
+    
+    return chapter_results, sentence_results, behavior_timeline
 
 def generate_dialogue_for_insertion(sentence_context, candidate_characters, full_plot, character_personality):
     """
@@ -40,7 +130,8 @@ def generate_dialogue_for_insertion(sentence_context, candidate_characters, full
     """
     print(f"\n🔍 开始生成对话，候选角色: {candidate_characters}")
     
-    character_memory = {char: [] for char in candidate_characters}
+    # 改用列表直接存储完整对话数据
+    dialogue_list = []
     history = ""
 
     # 第一个发言人
@@ -61,30 +152,38 @@ def generate_dialogue_for_insertion(sentence_context, candidate_characters, full
     parsed = convert_json(response)
     print(f"  🔍 解析后的类型: {type(parsed)}, 内容: {parsed}")
     
-    # ✅ 检查parsed的类型
+    # 处理第一个回复
     if not isinstance(parsed, dict):
         print(f"  ⚠️ parsed不是字典，而是{type(parsed)}")
+        # 如果返回的是列表，处理每个元素
         for each in parsed:
-            spoken_line = each.get("dialogue", "")
-            if spoken_line not in [l.split(":", 1)[-1].strip() for l in character_memory[speaker]]:
-                character_memory[speaker].append(f"{speaker}: {spoken_line}")
-
-            history += f"{speaker}: {spoken_line}\n"
-        #return []
+            if isinstance(each, dict):
+                spoken_line = each.get("dialogue", "")
+                action = each.get("action", "")
+                if spoken_line:
+                    dialogue_list.append({
+                        "speaker": speaker,
+                        "dialogue": spoken_line,
+                        "action": action or ""  # 保存action
+                    })
+                    history += f"{speaker}: {spoken_line}\n"
     else:
-    # ✅ 使用get方法安全获取
+        # 处理字典格式
         spoken_line = parsed.get("dialogue", "")
-        if not spoken_line:
+        action = parsed.get("action", "")
+        if spoken_line:
+            dialogue_list.append({
+                "speaker": speaker,
+                "dialogue": spoken_line,
+                "action": action or ""  # 保存action
+            })
+            history += f"{speaker}: {spoken_line}\n"
+        else:
             print(f"  ⚠️ 没有获取到dialogue字段")
-            #return []
-            
-        if spoken_line not in [l.split(":", 1)[-1].strip() for l in character_memory[speaker]]:
-            character_memory[speaker].append(f"{speaker}: {spoken_line}")
 
-        history += f"{speaker}: {spoken_line}\n"
-
+    # 多轮对话循环
     state = 1
-    MAX_ROUNDS = 10  # 先设置小一点便于调试
+    MAX_ROUNDS = 10
     round_count = 0
     
     while state != 0 and round_count < MAX_ROUNDS:
@@ -115,10 +214,10 @@ def generate_dialogue_for_insertion(sentence_context, candidate_characters, full
         next_speaker = next_data.get("next_speaker", "NONE")
         
         if next_speaker == "NONE" or next_speaker not in candidate_characters:
-            print(f"    ⏹️ 结束对话，next_speaker={next_speaker}")
+            print(f"结束对话，next_speaker={next_speaker}")
             break
 
-        # 发言内容
+        # 生成发言内容
         prompt_reply = [{
             "role": "system",
             "content": f"""你是 {next_speaker}，你要基于剧情：
@@ -133,28 +232,20 @@ def generate_dialogue_for_insertion(sentence_context, candidate_characters, full
         parsed = convert_json(response)
         
         if isinstance(parsed, dict) and "dialogue" in parsed:
-            character_memory[next_speaker].append(f"{next_speaker}: {parsed['dialogue']}")
-            history += f"{next_speaker}: {parsed['dialogue']}\n"
+            spoken_line = parsed.get("dialogue", "")
+            action = parsed.get("action", "")
+            
+            dialogue_list.append({
+                "speaker": next_speaker,
+                "dialogue": spoken_line,
+                "action": action or ""  # 保存action
+            })
+            history += f"{next_speaker}: {spoken_line}\n"
         else:
             print(f"    ⚠️ 无法解析{next_speaker}的回复")
-
-    # 构建返回的对话列表
-    dialogue_list = []
-    for speaker, lines in character_memory.items():
-        for line in lines:
-            if line.startswith(speaker + ":"):
-                content = line[len(speaker)+1:].strip()
-            else:
-                content = line
-            dialogue_list.append({
-                "speaker": speaker,
-                "dialogue": content,
-                "action": ""
-            })
     
     print(f"  ✅ 生成了{len(dialogue_list)}条对话")
     return dialogue_list
-
 
 def run_dialogue_insertion(plot_list, character_json):
     """

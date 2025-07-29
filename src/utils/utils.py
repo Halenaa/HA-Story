@@ -252,6 +252,50 @@ def save_json_absolute(obj, full_path):
 def extract_plot_list(chapter_json_list):
     return [ch.get("plot", "") for ch in chapter_json_list]
 
+def split_plot_into_sentences(plot_text, min_length=2):
+    """
+    最佳实践版本：结合各种方法的优点
+    """
+    if not plot_text: 
+        return []
+    
+    text = plot_text.strip()
+    
+    # 替换省略号
+    text = text.replace("...", "〈ELLIPSIS〉")
+    text = text.replace("……", "〈ELLIPSIS_CN〉")
+    
+    # 使用正则表达式找到所有句子
+    # 贪婪匹配到标点符号为止
+    pattern = r'.+?[.。!！?？;；]+'
+    
+    # 找到所有匹配的句子
+    sentences = re.findall(pattern, text)
+    
+    # 检查是否有剩余的文本（没有标点结尾的）
+    last_pos = 0
+    for match in re.finditer(pattern, text):
+        last_pos = match.end()
+    
+    if last_pos < len(text):
+        remaining = text[last_pos:].strip()
+        if remaining:
+            sentences.append(remaining)
+    
+    # 处理结果
+    result = []
+    for sentence in sentences:
+        # 还原省略号
+        sentence = sentence.replace("〈ELLIPSIS〉", "...")
+        sentence = sentence.replace("〈ELLIPSIS_CN〉", "……")
+        sentence = sentence.strip()
+        
+        # 只过滤真正太短的（比如单个字符）
+        if sentence and len(sentence) >= min_length:
+            result.append(sentence)
+    
+    return result
+
 def load_json(path):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
