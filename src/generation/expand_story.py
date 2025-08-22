@@ -7,12 +7,33 @@ def expand_story_v1(chapters, characters, custom_instruction=None):
     story = []
 
     for ch in chapters:
+#         msg_content = f"""
+# 根据以下内容，生成具体的场景、选择出场的人物名称和详细描述：
+# 章节编号：{ch["chapter_id"]}
+# 标题：{ch["title"]}
+# 人物设定：{character_json}
+# """
+# 检查是否有叙述指导
+        narrative_role = ch.get("narrative_role", None)
+        narrative_instruction = ch.get("narrative_instruction", None)
+        
         msg_content = f"""
 根据以下内容，生成具体的场景、选择出场的人物名称和详细描述：
 章节编号：{ch["chapter_id"]}
 标题：{ch["title"]}
 人物设定：{character_json}
 """
+        
+        # 如果有叙述指导，添加到prompt中
+        if narrative_role and narrative_instruction:
+            msg_content += f"""
+【叙述指导】
+叙述角色：{narrative_role}
+具体指导：{narrative_instruction}
+
+请严格按照叙述指导来组织内容，确保体现相应的叙述技巧和风格。
+"""
+
         if custom_instruction:
             msg_content += f"\n【特别要求】：{custom_instruction}"
 

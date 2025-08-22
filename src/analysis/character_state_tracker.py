@@ -16,7 +16,15 @@ def extract_character_state_timeline(
     state_log = {}
 
     for idx, item in enumerate(dialogue_data):
-        chapter_key = f"Chapter {idx + 1}"
+        # ✅ 修复：从数据中读取真实的 chapter_id
+        if isinstance(item, list) and len(item) > 0:
+            # sentence_results 格式：每个item是句子级数据
+            chapter_id = item[0].get("chapter_id", f"Chapter {idx + 1}")
+        else:
+            # chapter_results 格式：每个item是章节级数据
+            chapter_id = item.get("chapter_id", f"Chapter {idx + 1}")
+        
+        chapter_key = chapter_id  # ✅ 直接使用真实ID
         dialogue_block = item.get("dialogue", [])
         if not dialogue_block:
             continue
@@ -29,6 +37,7 @@ def extract_character_state_timeline(
             state_log[chapter_key] = {}
 
     return state_log
+
 
 def run_character_state_tracker(
     version: str = "test",

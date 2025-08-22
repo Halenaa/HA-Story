@@ -1,0 +1,161 @@
+{
+  "metadata": {
+    "total_chapters": 7,
+    "primary_method": "RoBERTa",
+    "validation_method": "LabMT-en-v1",
+    "analysis_timestamp": "2025-08-13T13:22:38.194545"
+  },
+  "chapter_analysis": [
+    {
+      "chapter_num": 1,
+      "title": "The Beginning of the Interstellar Mission",
+      "roberta_score": 0.0997,
+      "labmt_score": 0.2641,
+      "content_length": 6565
+    },
+    {
+      "chapter_num": 2,
+      "title": "Space Traversal",
+      "roberta_score": 0.0301,
+      "labmt_score": 0.2848,
+      "content_length": 12154
+    },
+    {
+      "chapter_num": 3,
+      "title": "Encounter with Mechanical Wolves",
+      "roberta_score": -0.1188,
+      "labmt_score": 0.2001,
+      "content_length": 21547
+    },
+    {
+      "chapter_num": 4,
+      "title": "Grandmother Under Hacker Attack",
+      "roberta_score": 0.0866,
+      "labmt_score": 0.299,
+      "content_length": 53874
+    },
+    {
+      "chapter_num": 5,
+      "title": "Intelligent Assistance Counterattack",
+      "roberta_score": -0.0306,
+      "labmt_score": 0.253,
+      "content_length": 47045
+    },
+    {
+      "chapter_num": 6,
+      "title": "Safe Chip Delivery",
+      "roberta_score": 0.3194,
+      "labmt_score": 0.3066,
+      "content_length": 50601
+    },
+    {
+      "chapter_num": 7,
+      "title": "Dawn of New Hope",
+      "roberta_score": 0.3529,
+      "labmt_score": 0.2893,
+      "content_length": 44036
+    }
+  ],
+  "primary_analysis": {
+    "method": "RoBERTa",
+    "scores": [
+      0.09974308808644612,
+      0.030127910772959392,
+      -0.11875303983688354,
+      0.08660483360290527,
+      -0.03063515822092692,
+      0.31939326922098793,
+      0.35292007128397623
+    ],
+    "reagan_classification": {
+      "method": "RoBERTa",
+      "best_match": "Rags to riches",
+      "confidence": 0.7596,
+      "all_similarities": {
+        "Rags to riches": 0.7596,
+        "Tragedy": 0,
+        "Man in a hole": 0.5371,
+        "Icarus": 0,
+        "Cinderella": 0,
+        "Oedipus": 0.6036
+      },
+      "reagan_category": "RR"
+    }
+  },
+  "validation_analysis": {
+    "method": "LabMT",
+    "scores": [
+      0.264103773584905,
+      0.28481117824773294,
+      0.2000909810126532,
+      0.29900291828793857,
+      0.2529763585038822,
+      0.3066261892839208,
+      0.2893154583583011
+    ],
+    "reagan_classification": {
+      "method": "LabMT",
+      "best_match": "Rags to riches",
+      "confidence": 0.6973,
+      "all_similarities": {
+        "Rags to riches": 0.6973,
+        "Tragedy": 0.6304,
+        "Man in a hole": 0.0488,
+        "Icarus": 0,
+        "Cinderella": 0,
+        "Oedipus": 0.2239
+      },
+      "reagan_category": "RR"
+    }
+  },
+  "correlation_analysis": {
+    "pearson_correlation": {
+      "r": 0.7606,
+      "p_value": 0.0471,
+      "significance": "Significant"
+    },
+    "spearman_correlation": {
+      "r": 0.75,
+      "p_value": 0.0522
+    },
+    "direction_consistency": 0.6667,
+    "consistency_level": "High",
+    "interpretation": "RoBERTa与LabMT相关系数为0.761，属于强相关"
+  },
+  "comparison_analysis": {
+    "disagreement_points": [
+      {
+        "chapter": 3,
+        "roberta_score": -0.11875303983688354,
+        "labmt_score": 0.2000909810126532,
+        "difference": 0.3188
+      }
+    ],
+    "method_advantages": {
+      "RoBERTa": {
+        "strengths": [
+          "深度学习模型，对上下文理解更好",
+          "适合现代文本和对话",
+          "对科幻、技术类文本敏感度高"
+        ],
+        "classification": "Rags to riches",
+        "confidence": 0.7596
+      },
+      "LabMT": {
+        "strengths": [
+          "与Reagan原文方法完全一致",
+          "基于大规模人工标注",
+          "适合传统文学分析"
+        ],
+        "classification": "Rags to riches",
+        "confidence": 0.6973
+      }
+    },
+    "consistency_assessment": {
+      "classification_agreement": true,
+      "major_disagreements": 1,
+      "recommendation": "两种方法都识别为Rags to riches，结果高度一致，建议以RoBERTa为主要分析结果"
+    }
+  },
+  "final_conclusion": "📊 RoBERTa + LabMT 双方法分析结论：\n\n📈 相关性分析：\n- Pearson相关系数: r = 0.761 (High)\n- 一致性水平: RoBERTa与LabMT相关系数为0.761，属于强相关\n\n🎯 分类结果：\n- RoBERTa (主要): Rags to riches\n- LabMT (验证): Rags to riches\n\n📝 方法学说明：\n本研究采用RoBERTa作为主要分析方法（现代深度学习模型），\n使用LabMT进行交叉验证（与Reagan et al. 2016保持一致）。\n相关系数为0.761，两种方法high一致。\n\n建议：以RoBERTa结果为主，LabMT作为学术基准验证。"
+}

@@ -15,7 +15,7 @@ from src.sync.auto_propagate_plot_update import auto_propagate_plot_update
 from src.analysis.character_state_tracker import run_character_state_tracker
 from src.utils.logger import append_log, build_log_record, build_simple_log, init_log_path
 from src.version_namer import build_version_name 
-
+from src.generation.narrative_analyzer import analyze_narrative_structure, enhance_summaries_with_narrative
 
 
 def ensure_output_dir(version):
@@ -95,6 +95,18 @@ def main(
         save_json(outline, version, "test_outline.json")
         print("✅ 使用 linear 顺序（直接来自 outline）")
 
+    # elif reorder_mode == "nonlinear":
+    #     save_json(outline, version, "test_outline_linear.json")
+    #     reorder_path = os.path.join(output_dir, "reference_reorder", f"{topic}_{style}_T{temperature}_s{seed}_nonlinear.json")
+    #     os.makedirs(os.path.dirname(reorder_path), exist_ok=True)
+
+    #     if os.path.exists(reorder_path):
+    #         reorder_outline_raw = load_json(reorder_path)
+    #         print(f"✅ 已加载 cached nonlinear 顺序：{reorder_path}")
+    #     else:
+    #         # Step 2.1: 章节重排
+    #         reorder_outline_raw = reorder_chapters(outline, mode="nonlinear")
+
     elif reorder_mode == "nonlinear":
         save_json(outline, version, "test_outline_linear.json")
         reorder_path = os.path.join(output_dir, "reference_reorder", f"{topic}_{style}_T{temperature}_s{seed}_nonlinear.json")
@@ -104,31 +116,43 @@ def main(
             reorder_outline_raw = load_json(reorder_path)
             print(f"✅ 已加载 cached nonlinear 顺序：{reorder_path}")
         else:
+            # Step 2.1: 章节重排
             reorder_outline_raw = reorder_chapters(outline, mode="nonlinear")
-
-            # ✅ 添加日志记录
-            reorder_log_path = init_log_path(folder, "reorder")
-            reorder_log = build_simple_log(
-                module="chapter_reorder",
-                task_name=version,
-                input_data={"outline": outline},
-                output_data={"reorder_result": reorder_outline_raw}
-            )
-            append_log(reorder_log_path, reorder_log)
-
-            # ✅ 检查是否真的生成了 new_order 字段
+            
+            # ✅ 检查重排是否成功
             if not any("new_order" in ch for ch in reorder_outline_raw):
                 print("⚠️ LLM 重排失败：未检测到任何 new_order 字段，回退为原始顺序")
+                reorder_mode = "linear"  # 回退到线性模式
+                reorder_outline_raw = outline
             else:
                 print("✅ reorder_chapters 成功生成非线性顺序")
+                
+                # Step 2.2: 叙述结构分析
+                print("🔍 开始叙述结构分析...")
+                reorder_outline_raw = analyze_narrative_structure(
+                    reorder_outline_raw, outline, topic=topic, style=style
+                )
+                
+                # 显示分析结果
+                print("📖 叙述结构分析结果：")
+                for ch in reorder_outline_raw:
+                    role = ch.get('narrative_role', '未分析')
+                    print(f"  {ch['chapter_id']}: {role}")
 
             save_json(reorder_outline_raw, "reference_reorder", f"{topic}_{style}_T{temperature}_s{seed}_nonlinear.json")
             print(f"✅ 生成 nonlinear 顺序并缓存：{reorder_path}")
 
-    else:
-        raise ValueError("order_mode 必须为 'linear' 或 'nonlinear'")
+        # ✅ 添加日志记录
+        reorder_log_path = init_log_path(folder, "reorder")
+        reorder_log = build_simple_log(
+            module="chapter_reorder_with_narrative",
+            task_name=version,
+            input_data={"outline": outline, "reorder_mode": reorder_mode},
+            output_data={"reorder_result": reorder_outline_raw, "narrative_mode": reorder_mode}
+        )
+        append_log(reorder_log_path, reorder_log)
 
-    # ✅ 统一结构：补全 summary 字段
+    # ✅ 统一结构：补全 summary 字段，保留叙述分析字段
     reorder_outline = []
     for reordered_ch in reorder_outline_raw:
         match = next((x for x in outline if x["chapter_id"] == reordered_ch["chapter_id"]), None)
@@ -138,12 +162,76 @@ def main(
                 "title": reordered_ch["title"],
                 "summary": match.get("summary", "")
             }
-            if "new_order" in reordered_ch:
-                merged["new_order"] = reordered_ch["new_order"]
+            
+            # 保留重排和叙述分析相关字段
+            narrative_fields = ["new_order", "narrative_role", "narrative_instruction", "transition_hint"]
+            for field in narrative_fields:
+                if field in reordered_ch:
+                    merged[field] = reordered_ch[field]
+            
             reorder_outline.append(merged)
 
     save_json(reorder_outline, version, "test_reorder_outline.json")
-    print("✅ 章节顺序处理完成（已保留 summary）")
+
+    # 显示最终结构
+    if reorder_mode == "nonlinear":
+        print("✅ 章节顺序处理完成（已保留 summary 和叙述指导）")
+        print("🎭 最终章节结构：")
+        for idx, ch in enumerate(reorder_outline):
+            role = ch.get('narrative_role', '线性叙述')
+            orig_pos = next((i+1 for i, x in enumerate(outline) if x["chapter_id"] == ch["chapter_id"]), "?")
+            print(f"  {idx+1}. {ch['chapter_id']} (原第{orig_pos}章) - {role}")
+    else:
+        print("✅ 章节顺序处理完成（已保留 summary）")
+    # elif reorder_mode == "nonlinear":
+    #     save_json(outline, version, "test_outline_linear.json")
+    #     reorder_path = os.path.join(output_dir, "reference_reorder", f"{topic}_{style}_T{temperature}_s{seed}_nonlinear.json")
+    #     os.makedirs(os.path.dirname(reorder_path), exist_ok=True)
+
+    #     if os.path.exists(reorder_path):
+    #         reorder_outline_raw = load_json(reorder_path)
+    #         print(f"✅ 已加载 cached nonlinear 顺序：{reorder_path}")
+    #     else:
+    #         reorder_outline_raw = reorder_chapters(outline, mode="nonlinear")
+
+    #         # ✅ 添加日志记录
+    #         reorder_log_path = init_log_path(folder, "reorder")
+    #         reorder_log = build_simple_log(
+    #             module="chapter_reorder",
+    #             task_name=version,
+    #             input_data={"outline": outline},
+    #             output_data={"reorder_result": reorder_outline_raw}
+    #         )
+    #         append_log(reorder_log_path, reorder_log)
+
+    #         # ✅ 检查是否真的生成了 new_order 字段
+    #         if not any("new_order" in ch for ch in reorder_outline_raw):
+    #             print("⚠️ LLM 重排失败：未检测到任何 new_order 字段，回退为原始顺序")
+    #         else:
+    #             print("✅ reorder_chapters 成功生成非线性顺序")
+
+    #         save_json(reorder_outline_raw, "reference_reorder", f"{topic}_{style}_T{temperature}_s{seed}_nonlinear.json")
+    #         print(f"✅ 生成 nonlinear 顺序并缓存：{reorder_path}")
+
+    # else:
+    #     raise ValueError("order_mode 必须为 'linear' 或 'nonlinear'")
+
+    # # ✅ 统一结构：补全 summary 字段
+    # reorder_outline = []
+    # for reordered_ch in reorder_outline_raw:
+    #     match = next((x for x in outline if x["chapter_id"] == reordered_ch["chapter_id"]), None)
+    #     if match:
+    #         merged = {
+    #             "chapter_id": reordered_ch["chapter_id"],
+    #             "title": reordered_ch["title"],
+    #             "summary": match.get("summary", "")
+    #         }
+    #         if "new_order" in reordered_ch:
+    #             merged["new_order"] = reordered_ch["new_order"]
+    #         reorder_outline.append(merged)
+
+    # save_json(reorder_outline, version, "test_reorder_outline.json")
+    # print("✅ 章节顺序处理完成（已保留 summary）")
 
 
 
@@ -291,7 +379,7 @@ def main(
 
 
     # Step 7: 保存输出
-    save_json(role_state, version, "role_state.json")
+    # save_json(role_state, version, "role_state.json")
     save_json(story, version, "story_updated.json")
     save_json(sentence_results, version, "dialogue_updated.json") 
     save_json(revision_log, version, "revision_log.json")
@@ -310,7 +398,33 @@ def main(
     polish_dialogues_in_story(task_name=version, input_dialogue_file="dialogue_updated.json")
     print("增强版本已完成")
 
-    run_character_state_tracker(version=version, dialogue_file="dialogue_updated.json", model=behavior_model)
+    def generate_role_state_from_behavior_trace(behavior_trace_data):
+        """从behavior_trace直接生成role_state，避免重复LLM调用和错误映射"""
+        from collections import defaultdict
+        
+        timeline = behavior_trace_data.get("timeline", [])
+        role_state_by_chapter = defaultdict(lambda: defaultdict(set))
+        
+        for item in timeline:
+            chapter_id = item["chapter_id"]
+            character = item["character"]
+            behavior = item["behavior"]
+            role_state_by_chapter[chapter_id][character].add(behavior)
+        
+        # 转换为最终格式
+        result = {}
+        for chapter_id in sorted(role_state_by_chapter.keys()):
+            result[chapter_id] = {}
+            for character, behaviors in role_state_by_chapter[chapter_id].items():
+                result[chapter_id][character] = sorted(list(behaviors))
+        
+        return result
+
+    # 从已有的正确数据生成 role_state
+    correct_role_state = generate_role_state_from_behavior_trace(behavior_trace)
+    save_json(correct_role_state, version, "role_state.json")
+    print(f"✅ 从 behavior_trace 生成正确的 role_state.json ({len(correct_role_state)} 个章节)")
+    # run_character_state_tracker(version=version, dialogue_file="dialogue_updated.json", model=behavior_model)
     print(f"\n全部流程执行完毕！结果保存在：{folder}\n")
 
 if __name__ == "__main__":

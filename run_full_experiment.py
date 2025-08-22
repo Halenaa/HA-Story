@@ -3,9 +3,9 @@ import json
 from main_pipeline_glm import main as run_pipeline
 
 topics = ["小红帽"]
-reorder_modes = ["linear"]
-temperatures = [0.7]
-seeds = [1]
+reorder_modes = ["nonlinear"]
+temperatures = [0.3]
+seeds = [3]
 
 log_file = "run_loop_status.json"
 finished = set()

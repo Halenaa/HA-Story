@@ -1,6 +1,24 @@
 import os
+import re
 from src.utils.utils import load_json, save_json
 from src.constant import output_dir
+
+def clean_punctuation(text):
+    """清理标点符号问题"""
+    if not text:
+        return text
+    
+    # 统一中英文标点符号
+    text = text.replace(',', '，').replace('.', '。')
+    text = text.replace('!', '！').replace('?', '？')
+    
+    # 修复错误的标点组合
+    text = re.sub(r'。，+', '，', text)  # 句号+逗号 -> 逗号
+    text = re.sub(r'，。+', '。', text)  # 逗号+句号 -> 句号
+    text = re.sub(r'，{2,}', '，', text)  # 多个逗号 -> 单个
+    text = re.sub(r'。{2,}', '。', text)  # 多个句号 -> 单个
+    
+    return text.strip()
 
 def compile_full_story_by_chapter(story_json, dialogue_json):
     """
@@ -65,8 +83,9 @@ def compile_full_story_by_sentence(story_json, sentence_dialogues):
         
         for sent_idx, sentence in enumerate(sentences):
             # 添加叙述句子
-            full_story += sentence + "\n\n"
-            
+            clean_sentence = clean_punctuation(sentence)
+            full_story += clean_sentence + "\n\n"
+
             # 检查是否需要插入对话
             if (chapter_id in dialogue_map and 
                 sent_idx in dialogue_map[chapter_id]):
@@ -78,16 +97,30 @@ def compile_full_story_by_sentence(story_json, sentence_dialogues):
                         if isinstance(line, dict):
                             speaker = line.get("speaker", "")
                             # 🔧 兼容不同的对话字段名
-                            dialogue_text = line.get("dialogue", line.get("line", ""))
+                            dialogue_text = clean_punctuation(line.get("dialogue", line.get("line", "")))
                             action = line.get("action", "")  # 🎯 获取action字段
                             
                             if speaker and dialogue_text:
                                 # 🎯 根据是否有action选择不同的格式
                                 if action and action.strip():
-                                    # 方案1：将action融入对话（更自然）
+                                    action_clean = action.strip()
+                                    # 检查action是否已经包含角色名
+                                    if action_clean.startswith(speaker):
+                                        # 如果包含，直接使用（不重复添加）
+                                        formatted_action = clean_punctuation(action_clean) 
+                                    else:
+                                        formatted_action = clean_punctuation(f'{speaker}{action_clean}')
+                                    
+                                    if formatted_action.endswith(('。', '！', '？')):
+                                        # action已经有结尾标点，直接加空格
+                                        full_story += f'{formatted_action} "{dialogue_text.strip()}" ——{speaker}\n\n'
+                                    else:
+                                        # action没有结尾标点，加句号和空格
+                                        full_story += f'{formatted_action}。 "{dialogue_text.strip()}" ——{speaker}\n\n'
+                                                                        # 方案1：将action融入对话（更自然）
                                     # full_story += f'{speaker}{action}说道："{dialogue_text.strip()}"\n\n'
-                                    full_story += f'{speaker}{action}，'  # 注意是逗号
-                                    full_story += f'"{dialogue_text.strip()}" ——{speaker}\n\n'
+                                    # full_story += f'{speaker}{action}，'  # 注意是逗号
+                                    # full_story += f'"{dialogue_text.strip()}" ——{speaker}\n\n'
                                     # 方案2：保持原格式，但在对话前加上动作描述
                                     # full_story += f'{speaker}{action}。\n\n'
                                     # full_story += f'"{dialogue_text.strip()}" ——{speaker}\n\n'

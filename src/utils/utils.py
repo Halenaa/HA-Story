@@ -16,9 +16,12 @@ client = OpenAI(api_key=os.getenv("OPENAI_KEY"), base_url=os.getenv("OPENAI_API_
 
 
 
-def generate_response(msg,model="gpt-4.1"):
-    response = client.chat.completions.create(model=model,
-                                messages=msg,temperature=0.1,)
+def generate_response(msg, model="gpt-4.1", temperature=0.7):     
+    response = client.chat.completions.create(
+        model=model,                                 
+        messages=msg,
+        temperature=temperature,  # 现在是参数
+    )     
     return response.choices[0].message.content
 
 def convert_dialogue_dict_to_list(dialogue_dict):
@@ -110,7 +113,7 @@ def fix_plot_illegal_quotes(content):
     return content
 
 def convert_json(content):
-    print(f"yuanshi content: {content}...")  # 打印前100个字符以便调试
+    print(f"原始 content: {content}...")  # 打印前100个字符以便调试
     content = content.replace("，", ",").replace("。", ".")
 
     try:
