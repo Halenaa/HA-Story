@@ -22,4 +22,5 @@ def generate_outline(topic="小红帽", style="科幻改写", custom_instruction
 
     msg = [{"role": "user", "content": base_prompt}]
     raw = generate_response(msg)
+    print(raw)
     return convert_json(raw)
