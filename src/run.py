@@ -50,7 +50,7 @@
 
 
 import json
-from src.utils import save_json, load_json
+from src.utils.utils import save_json, load_json
 from src.constant import output_dir
 from src.generation.dialogue_inserter import apply_structure_to_generate_dialogue
 from src.generation.dialogue_inserter import pretty_print_dialogue

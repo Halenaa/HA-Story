@@ -1,0 +1,145 @@
+{
+  "pipeline_analysis": [
+    {
+      "step": "Step 1: Outline Generation",
+      "description": "生成故事大纲和章节结构",
+      "auto_quality": "中等",
+      "user_impact": "高",
+      "need_hitl": "是",
+      "reason": "大纲是整个故事的基础，用户可能有特定的情节要求",
+      "hitl_type": "结构性交互",
+      "hitl_options": [
+        "重新生成整体",
+        "修改单个章节",
+        "调整章节顺序",
+        "添加/删除章节"
+      ]
+    },
+    {
+      "step": "Step 2: Chapter Reordering",
+      "description": "调整章节顺序（linear/nonlinear）",
+      "auto_quality": "高",
+      "user_impact": "中等",
+      "need_hitl": "可选",
+      "reason": "用户可能对叙述结构有特定偏好",
+      "hitl_type": "确认性交互",
+      "hitl_options": [
+        "确认顺序",
+        "手动调整",
+        "回退到线性"
+      ]
+    },
+    {
+      "step": "Step 3: Character Generation",
+      "description": "生成角色设定和性格",
+      "auto_quality": "中等",
+      "user_impact": "高",
+      "need_hitl": "是",
+      "reason": "角色性格影响整个故事的对话和行为",
+      "hitl_type": "内容性交互",
+      "hitl_options": [
+        "修改角色性格",
+        "添加角色",
+        "调整角色关系"
+      ]
+    },
+    {
+      "step": "Step 4: Story Expansion",
+      "description": "将大纲扩展为详细剧情",
+      "auto_quality": "中等",
+      "user_impact": "高",
+      "need_hitl": "是",
+      "reason": "具体剧情是用户最关心的内容",
+      "hitl_type": "内容性交互",
+      "hitl_options": [
+        "重写整章",
+        "修改部分情节",
+        "调整剧情走向"
+      ]
+    },
+    {
+      "step": "Step 5-6: Dialogue Generation",
+      "description": "生成对话内容",
+      "auto_quality": "低",
+      "user_impact": "高",
+      "need_hitl": "是",
+      "reason": "对话最能体现角色个性，用户通常有强烈偏好",
+      "hitl_type": "内容性交互",
+      "hitl_options": [
+        "重写对话",
+        "调整语调",
+        "增删对话"
+      ]
+    },
+    {
+      "step": "Step 6.5: Behavior Analysis",
+      "description": "分析角色行为变化",
+      "auto_quality": "低",
+      "user_impact": "中等",
+      "need_hitl": "可选",
+      "reason": "LLM分析可能不准确，用户可以纠正",
+      "hitl_type": "确认性交互",
+      "hitl_options": [
+        "确认行为分析",
+        "手动修正",
+        "忽略建议"
+      ]
+    },
+    {
+      "step": "Step 7: Story Sync & Enhancement",
+      "description": "同步和增强故事内容",
+      "auto_quality": "高",
+      "user_impact": "低",
+      "need_hitl": "否",
+      "reason": "主要是技术性处理，用户无需干预",
+      "hitl_type": "无",
+      "hitl_options": []
+    }
+  ],
+  "interaction_modes": {
+    "auto": {
+      "description": "完全自动化，无人工干预",
+      "enabled_steps": []
+    },
+    "minimal": {
+      "description": "仅在关键节点交互",
+      "enabled_steps": [
+        "Step 1: Outline Generation",
+        "Step 4: Story Expansion"
+      ]
+    },
+    "standard": {
+      "description": "标准交互模式",
+      "enabled_steps": [
+        "Step 1: Outline Generation",
+        "Step 3: Character Generation",
+        "Step 4: Story Expansion",
+        "Step 5-6: Dialogue Generation"
+      ]
+    },
+    "full": {
+      "description": "完全交互模式，所有可能点都交互",
+      "enabled_steps": [
+        "Step 1: Outline Generation",
+        "Step 2: Chapter Reordering",
+        "Step 3: Character Generation",
+        "Step 4: Story Expansion",
+        "Step 5-6: Dialogue Generation",
+        "Step 6.5: Behavior Analysis"
+      ]
+    }
+  },
+  "recommendations": {
+    "essential_steps": [
+      "Step 1: Outline Generation",
+      "Step 3: Character Generation",
+      "Step 4: Story Expansion",
+      "Step 5-6: Dialogue Generation"
+    ],
+    "optional_steps": [
+      "Step 2: Chapter Reordering",
+      "Step 6.5: Behavior Analysis"
+    ],
+    "suggested_default": "standard"
+  }
+}
