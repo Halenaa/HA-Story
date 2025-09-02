@@ -29,6 +29,7 @@ def setup_dialogue_logger():
     
     return logger
 
+
 def analyze_dialogue_insertions(plot_list, character_list_json):
     """
     判断每句话是否需要插入对话，返回结构建议
@@ -299,8 +300,8 @@ def generate_dialogue_for_insertion(sentence_context, candidate_characters, full
 可用角色：{candidate_characters}
 
 请分析：这段剧情最需要通过对话表达什么？预期几轮对话比较合适？
-
-⚠️ 重要：expected_rounds必须是单个整数（如2、3、4），不能是范围（如3-5）
+需要根据实际剧情分配预期的对话轮数（expected_rounds），如果剧情复杂可以适当增加对话轮数.
+⚠️ 重要：expected_rounds必须是单个整数，不能是范围.
 
 格式：{{"goal": "对话目标描述", "expected_rounds": 整数}}"""
     }]
@@ -308,7 +309,8 @@ def generate_dialogue_for_insertion(sentence_context, candidate_characters, full
     try:
         goal_response = generate_response(goal_prompt)
         goal_data = convert_json(goal_response)
-        
+        print(f"  🎯 目标分析返回: {goal_data.get('expected_rounds')}")
+
         # 强化防错处理
         if isinstance(goal_data, dict):
             dialogue_goal = goal_data.get("goal", "推进剧情")
@@ -371,25 +373,29 @@ def generate_dialogue_for_insertion(sentence_context, candidate_characters, full
     while round_count < SAFETY_LIMIT:
         round_count += 1
         
+        # rounds_guidance = ""
+        # if round_count > expected_rounds * 1.5:
+        #     rounds_guidance = f"\n⚠️ 当前已{round_count}轮，预期为{expected_rounds}轮，请考虑是否应该结束。"
+
         # 保持原有判断格式，LLM已经习惯了
         judge_prompt = [{
             "role": "system",
-            "content": f"""你是故事编剧。请分析当前对话状态：
+            "content": f"""你是故事编剧。分析当前对话是否到了自然的停止点：
 
 【剧情背景】：{sentence_context}
 【对话目标】：{dialogue_goal}
-【预期轮数】：{expected_rounds}
 【当前轮数】：{round_count}
 【对话历史】：
 {history}
 
-请回答两个问题：
-1. 对话目标是否已经达成？(0-10分评分)
-2. 如果未充分达成，下一个发言人是谁？
+请判断：这段对话是否已经自然结束？考虑因素包括：
+- 对话是否有了相对完整的交流
+- 是否避免了明显的重复或拖沓
+- 角色间的互动是否达到了合理的程度
 
 可选角色：{candidate_characters}
 
-格式：{{"goal_achieved": 分数, "should_continue": true/false, "next_speaker": "角色名或NONE", "reason": "判断理由"}}"""
+格式：{{"should_continue": true/false, "next_speaker": "角色名或NONE", "reason": "判断理由"}}"""
         }]
         
         try:
@@ -403,14 +409,14 @@ def generate_dialogue_for_insertion(sentence_context, candidate_characters, full
                 logger.warning(f"JUDGE_FAILED | session_id={session_id} | round={round_count} | type={type(judge_data)}")
                 break
                 
-            goal_achieved = judge_data.get("goal_achieved", 5)
+            # goal_achieved = judge_data.get("goal_achieved", 5)
             should_continue = judge_data.get("should_continue", False)
             next_speaker = judge_data.get("next_speaker", "NONE")
             reason = judge_data.get("reason", "")
             
-            print(f"    📊 LLM判断: goal_achieved={goal_achieved}, should_continue={should_continue}, next_speaker={next_speaker}")
-            # 🆕 记录LLM判断详情
-            logger.info(f"LLM_JUDGE | session_id={session_id} | round={round_count} | goal_achieved={goal_achieved} | should_continue={should_continue} | next_speaker={next_speaker} | reason={reason[:50]}...")
+            # print(f"    📊 LLM判断: goal_achieved={goal_achieved}, should_continue={should_continue}, next_speaker={next_speaker}")
+            # # 🆕 记录LLM判断详情
+            # logger.info(f"LLM_JUDGE | session_id={session_id} | round={round_count} | goal_achieved={goal_achieved} | should_continue={should_continue} | next_speaker={next_speaker} | reason={reason[:50]}...")
                 
         except Exception as e:
             print(f"⚠️ 对话判断失败: {e}，结束对话")
@@ -474,6 +480,26 @@ def generate_dialogue_for_insertion(sentence_context, candidate_characters, full
     logger.info(f"SESSION_END | session_id={session_id} | final_rounds={final_rounds} | expected={expected_rounds} | characters_used={[d['speaker'] for d in dialogue_list]}")
     
     print(f"  ✅ 生成了{final_rounds}条对话")
+
+    rounds_data = {
+        "session_id": session_id,
+        "expected_rounds": expected_rounds,
+        "actual_rounds": final_rounds,
+        "deviation": final_rounds - expected_rounds,
+        "sentence_context": sentence_context[:100],
+        "characters": candidate_characters,
+        "timestamp": datetime.now().isoformat()
+    }
+
+    # 保存到统计文件
+    try:
+        stats_dir = "data/output/logs"
+        os.makedirs(stats_dir, exist_ok=True)
+        stats_file = f"{stats_dir}/rounds_statistics.jsonl"
+        with open(stats_file, "a", encoding='utf-8') as f:
+            f.write(json.dumps(rounds_data, ensure_ascii=False) + "\n")
+    except:
+        pass    
     return dialogue_list
 
 

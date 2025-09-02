@@ -16,7 +16,7 @@ def generate_outline(topic="小红帽", style="科幻改写", custom_instruction
 
     # 如果用户提供了自定义指令，就加入进来
     if custom_instruction:
-        base_prompt = f"\n请特别注意以下风格或内容提示：{custom_instruction}"
+        base_prompt += f"\n请特别注意以下风格或内容提示：{custom_instruction}"
 
     base_prompt += "\n只返回标准 JSON 列表，不需要返回其他多余解释。"
 
