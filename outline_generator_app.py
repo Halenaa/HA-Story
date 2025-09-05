@@ -19,105 +19,105 @@ print("🔄 开始导入真实后端模块...")
 try:
     print("  📁 导入基础配置模块...")
     from src.constant import output_dir
-    print("    ✅ src.constant.output_dir 导入成功")
+    print("    src.constant.output_dir 导入成功")
     
-    print("  🛠️ 导入工具函数...")
+    print("  导入工具函数...")
     from src.utils.utils import save_json, load_json
-    print("    ✅ src.utils.utils.save_json 导入成功")
-    print("    ✅ src.utils.utils.load_json 导入成功")
+    print("    src.utils.utils.save_json 导入成功")
+    print("    src.utils.utils.load_json 导入成功")
     
     print("  📝 导入版本命名模块...")
     from src.version_namer import build_version_name
-    print("    ✅ src.version_namer.build_version_name 导入成功")
+    print("    src.version_namer.build_version_name 导入成功")
     
-    print("  📊 导入日志模块...")
+    print("  导入日志模块...")
     from src.utils.logger import init_log_path, append_log, build_simple_log
-    print("    ✅ src.utils.logger.init_log_path 导入成功")
-    print("    ✅ src.utils.logger.append_log 导入成功")
-    print("    ✅ src.utils.logger.build_simple_log 导入成功")
+    print("    src.utils.logger.init_log_path 导入成功")
+    print("    src.utils.logger.append_log 导入成功")
+    print("    src.utils.logger.build_simple_log 导入成功")
     
 except ImportError as e:
-    st.error(f"❌ 基础模块导入失败: {e}")
+    st.error(f" 基础模块导入失败: {e}")
     st.stop()
 
 # 大纲生成相关模块导入
 try:
     print("  📚 导入大纲生成模块...")
     from src.generation.outline_generator import generate_outline
-    print("    ✅ src.generation.outline_generator.generate_outline 导入成功")
+    print("     src.generation.outline_generator.generate_outline 导入成功")
     
     print("  🔄 导入章节重排模块...")
     from src.generation.chapter_reorder import reorder_chapters
-    print("    ✅ src.generation.chapter_reorder.reorder_chapters 导入成功")
+    print("     src.generation.chapter_reorder.reorder_chapters 导入成功")
     
-    print("  🎭 导入叙述分析模块...")
+    print("   导入叙述分析模块...")
     from src.generation.narrative_analyzer import analyze_narrative_structure
-    print("    ✅ src.generation.narrative_analyzer.analyze_narrative_structure 导入成功")
+    print("     src.generation.narrative_analyzer.analyze_narrative_structure 导入成功")
     
 except ImportError as e:
-    st.error(f"❌ 大纲相关模块导入失败: {e}")
+    st.error(f" 大纲相关模块导入失败: {e}")
     st.stop()
 
 # 角色生成相关模块导入 (可选功能)
 try:
     print("  👥 导入角色生成模块...")
     from src.generation.generate_characters import generate_characters_v1
-    print("    ✅ src.generation.generate_characters.generate_characters_v1 导入成功")
+    print("     src.generation.generate_characters.generate_characters_v1 导入成功")
     
     print("  📖 导入故事扩展模块...")
     from src.generation.expand_story import expand_story_v1
-    print("    ✅ src.generation.expand_story.expand_story_v1 导入成功")
+    print("     src.generation.expand_story.expand_story_v1 导入成功")
     
     character_generation_available = True
     
 except ImportError as e:
-    print(f"⚠️ 角色生成相关模块导入失败: {e}")
-    print("⚠️ 角色生成功能将不可用，但不影响大纲生成功能")
+    print(f" 角色生成相关模块导入失败: {e}")
+    print(" 角色生成功能将不可用，但不影响大纲生成功能")
     character_generation_available = False
 
 # 对话生成相关模块导入 (可选功能)
 try:
     print("  💬 导入对话生成模块...")
     from src.generation.dialogue_inserter import analyze_dialogue_insertions_v2, run_dialogue_insertion
-    print("    ✅ src.generation.dialogue_inserter.analyze_dialogue_insertions_v2 导入成功")
-    print("    ✅ src.generation.dialogue_inserter.run_dialogue_insertion 导入成功")
+    print("     src.generation.dialogue_inserter.analyze_dialogue_insertions_v2 导入成功")
+    print("     src.generation.dialogue_inserter.run_dialogue_insertion 导入成功")
     
     print("  🔄 导入对话同步模块...")
     from src.sync.plot_sync_manager import sync_plot_and_dialogue_from_behavior
-    print("    ✅ src.sync.plot_sync_manager.sync_plot_and_dialogue_from_behavior 导入成功")
+    print("     src.sync.plot_sync_manager.sync_plot_and_dialogue_from_behavior 导入成功")
     
     print("  📝 导入故事编译模块...")
     from src.compile_story import compile_full_story_by_sentence
-    print("    ✅ src.compile_story.compile_full_story_by_sentence 导入成功")
+    print("     src.compile_story.compile_full_story_by_sentence 导入成功")
     
     dialogue_generation_available = True
     
 except ImportError as e:
-    print(f"⚠️ 对话生成相关模块导入失败: {e}")
-    print("⚠️ 对话生成功能将不可用，但不影响其他功能")
+    print(f" 对话生成相关模块导入失败: {e}")
+    print(" 对话生成功能将不可用，但不影响其他功能")
     dialogue_generation_available = False
 
 # 故事增强相关模块导入 (可选功能)
 try:
     print("  ✨ 导入故事增强模块...")
     from src.enhance_story import enhance_story_with_transitions, polish_dialogues_in_story
-    print("    ✅ src.enhance_story.enhance_story_with_transitions 导入成功")
-    print("    ✅ src.enhance_story.polish_dialogues_in_story 导入成功")
+    print("     src.enhance_story.enhance_story_with_transitions 导入成功")
+    print("     src.enhance_story.polish_dialogues_in_story 导入成功")
     
     print("  📝 导入故事编译模块...")
     # compile_story 已经在对话生成中导入过了，这里不需要重复导入
-    print("    ✅ src.compile_story 已在对话生成模块中导入")
+    print("     src.compile_story 已在对话生成模块中导入")
     
     story_enhancement_available = True
     
 except ImportError as e:
-    print(f"⚠️ 故事增强相关模块导入失败: {e}")
-    print("⚠️ 故事增强功能将不可用，但不影响其他功能")
+    print(f" 故事增强相关模块导入失败: {e}")
+    print(" 故事增强功能将不可用，但不影响其他功能")
     story_enhancement_available = False
 
 
 
-print("🎉 所有真实后端模块导入完成！")
+print(" 所有真实后端模块导入完成！")
 
 # 设置日志记录
 @st.cache_resource
@@ -162,7 +162,7 @@ st.set_page_config(
 def show_execution_log(log_entries):
     """显示执行日志"""
     if log_entries:
-        with st.expander("📋 执行日志", expanded=True):
+        with st.expander(" 执行日志", expanded=True):
             for entry in log_entries:
                 timestamp = entry.get('timestamp', 'Unknown')
                 level = entry.get('level', 'INFO')
@@ -235,8 +235,49 @@ def get_current_version():
         return "default_version"
         
     except Exception as e:
-        print(f"⚠️ [版本获取] 获取当前版本失败: {e}")
+        print(f" [版本获取] 获取当前版本失败: {e}")
         return "default_version"
+
+def get_current_topic_and_style():
+    """动态获取当前的题材和风格"""
+    try:
+        # 检查是否有保存的参数
+        if hasattr(st.session_state, 'current_topic') and hasattr(st.session_state, 'current_style'):
+            topic = st.session_state.current_topic
+            style = st.session_state.current_style
+            
+            # 如果是自定义描述模式，需要根据实际情况调整
+            if hasattr(st.session_state, 'current_generation_mode') and st.session_state.current_generation_mode == "description_based":
+                # 对于自定义描述模式，可以从用户描述中推断或使用通用描述
+                if hasattr(st.session_state, 'current_user_description') and st.session_state.current_user_description:
+                    user_desc = st.session_state.current_user_description
+                    # 简单推断：如果描述中包含特定关键词，就使用更具体的描述
+                    if "科幻" in user_desc:
+                        style = "科幻故事"
+                    elif "爱情" in user_desc:
+                        style = "爱情故事"  
+                    elif "悬疑" in user_desc:
+                        style = "悬疑故事"
+                    elif "历史" in user_desc:
+                        style = "历史故事"
+                    elif "奇幻" in user_desc:
+                        style = "奇幻故事"
+                    elif "职场" in user_desc:
+                        style = "职场故事"
+                    else:
+                        style = "自定义故事"
+                    
+                    # 题材可以从描述中提取关键信息
+                    topic = "用户自定义题材"
+            
+            return topic, style
+        
+        # 如果没有保存的参数，返回默认值
+        return "未知题材", "未知风格"
+    except Exception as e:
+        print(f" [题材风格获取] 获取失败: {e}")
+        # 出错时返回默认值
+        return "未知题材", "未知风格"
 
 # 历史记录管理功能
 def save_to_history(action_name, old_data=None):
@@ -306,10 +347,10 @@ def undo_characters_action():
         previous_state = st.session_state.characters_history[st.session_state.characters_history_index]
         st.session_state.characters_data = copy.deepcopy(previous_state['characters_data'])
         st.session_state.character_chapter_mapping = copy.deepcopy(previous_state['character_chapter_mapping'])
-        st.success(f"✅ 已撤销角色操作: {previous_state['action']}")
+        st.success(f" 已撤销角色操作: {previous_state['action']}")
         return True
     else:
-        st.warning("⚠️ 没有可撤销的角色操作")
+        st.warning(" 没有可撤销的角色操作")
         return False
 
 def redo_characters_action():
@@ -319,10 +360,10 @@ def redo_characters_action():
         next_state = st.session_state.characters_history[st.session_state.characters_history_index]
         st.session_state.characters_data = copy.deepcopy(next_state['characters_data'])
         st.session_state.character_chapter_mapping = copy.deepcopy(next_state['character_chapter_mapping'])
-        st.success(f"✅ 已重做角色操作: {next_state['action']}")
+        st.success(f" 已重做角色操作: {next_state['action']}")
         return True
     else:
-        st.warning("⚠️ 没有可重做的角色操作")
+        st.warning(" 没有可重做的角色操作")
         return False
 
 def save_story_to_history(action_name, old_story_data=None):
@@ -360,10 +401,10 @@ def undo_story_action():
         st.session_state.story_history_index -= 1
         previous_state = st.session_state.story_history[st.session_state.story_history_index]
         st.session_state.story_data = copy.deepcopy(previous_state['story_data'])
-        st.success(f"✅ 已撤销故事操作: {previous_state['action']}")
+        st.success(f" 已撤销故事操作: {previous_state['action']}")
         return True
     else:
-        st.warning("⚠️ 没有可撤销的故事操作")
+        st.warning(" 没有可撤销的故事操作")
         return False
 
 def redo_story_action():
@@ -372,10 +413,10 @@ def redo_story_action():
         st.session_state.story_history_index += 1
         next_state = st.session_state.story_history[st.session_state.story_history_index]
         st.session_state.story_data = copy.deepcopy(next_state['story_data'])
-        st.success(f"✅ 已重做故事操作: {next_state['action']}")
+        st.success(f" 已重做故事操作: {next_state['action']}")
         return True
     else:
-        st.warning("⚠️ 没有可重做的故事操作")
+        st.warning(" 没有可重做的故事操作")
         return False
 
 def undo_last_action():
@@ -385,10 +426,10 @@ def undo_last_action():
         previous_state = st.session_state.outline_history[st.session_state.history_index]
         st.session_state.outline_data = copy.deepcopy(previous_state['data'])
         st.session_state.current_version = previous_state['version']
-        st.success(f"✅ 已撤销操作: {previous_state['action']}")
+        st.success(f" 已撤销操作: {previous_state['action']}")
         return True
     else:
-        st.warning("⚠️ 没有可撤销的操作")
+        st.warning(" 没有可撤销的操作")
         return False
 
 def redo_last_action():
@@ -398,10 +439,10 @@ def redo_last_action():
         next_state = st.session_state.outline_history[st.session_state.history_index]
         st.session_state.outline_data = copy.deepcopy(next_state['data'])
         st.session_state.current_version = next_state['version']
-        st.success(f"✅ 已重做操作: {next_state['action']}")
+        st.success(f" 已重做操作: {next_state['action']}")
         return True
     else:
-        st.warning("⚠️ 没有可重做的操作")
+        st.warning(" 没有可重做的操作")
         return False
 
 def show_history_panel():
@@ -410,7 +451,7 @@ def show_history_panel():
         st.info("📝 暂无历史记录")
         return
     
-    st.subheader("📋 操作历史")
+    st.subheader(" 操作历史")
     
     # 撤销/重做按钮
     col1, col2, col3 = st.columns(3)
@@ -426,10 +467,10 @@ def show_history_panel():
                 st.rerun()
     
     with col3:
-        if st.button("🗑️ 清空历史", use_container_width=True):
+        if st.button(" 清空历史", use_container_width=True):
             st.session_state.outline_history = []
             st.session_state.history_index = -1
-            st.success("✅ 历史记录已清空")
+            st.success(" 历史记录已清空")
             st.rerun()
     
     st.markdown("---")
@@ -446,7 +487,7 @@ def show_history_panel():
             col1, col2, col3 = st.columns([1, 3, 1])
             
             with col1:
-                status = "🔵" if is_current else "⚪"
+                status = "" if is_current else ""
                 st.markdown(f"{status} `{entry['timestamp']}`")
             
             with col2:
@@ -459,7 +500,7 @@ def show_history_panel():
                     st.session_state.history_index = real_index
                     st.session_state.outline_data = copy.deepcopy(entry['data'])
                     st.session_state.current_version = entry['version']
-                    st.success(f"✅ 已跳转到: {entry['action']}")
+                    st.success(f" 已跳转到: {entry['action']}")
                     st.rerun()
         
         if i < len(st.session_state.outline_history) - 1:
@@ -534,18 +575,109 @@ def main():
     
     # 侧边栏配置
     with st.sidebar:
-        st.header("⚙️ 配置参数")
+        st.header(" 配置参数")
         
-        topic = st.text_input("故事题材", value="小红帽", help="故事的主要题材")
-        style = st.text_input("故事风格", value="科幻改写", help="故事的风格类型")
+        # 生成模式选择
+        generation_mode = st.radio(
+            "📝 生成模式", 
+            ["传统模式", "自定义描述模式"],
+            help="传统模式：基于题材和风格生成；自定义描述模式：基于用户描述和可选文件生成"
+        )
+        
+        st.markdown("---")
+        
+        if generation_mode == "传统模式":
+            # 传统模式的参数
+            topic = st.text_input("故事题材", value="小红帽", help="故事的主要题材")
+            style = st.text_input("故事风格", value="科幻改写", help="故事的风格类型")
+            user_description = None
+            file_content = None
+            
+        else:
+            # 自定义描述模式的参数
+            # 使用提示
+            with st.expander(" 使用说明"):
+                st.markdown("""
+                **自定义描述模式支持以下创作方式：**
+                
+                🆕 **原创故事**：
+                - "我想写一个关于时间旅行的科幻故事..."
+                - "创作一个现代都市的爱情喜剧..."
+                
+ **续写故事**：
+                - "请续写这个故事..." + 上传原故事文件
+                - "基于现有内容继续创作后续情节..."
+                
+                🔄 **改写故事**：
+                - "将这个古典童话改写成现代科幻故事..." + 上传原故事
+                - "把这个故事改成悬疑风格..."
+                
+                💭 **联想创作**：
+                - "受这个故事启发，创作一个新的故事..." + 上传参考文件
+                - "借鉴这个故事的设定，创作不同的情节..."
+                """)
+            
+            user_description = st.text_area(
+                "📖 故事描述", 
+                placeholder="请描述您想要创作的故事，例如：\n- 我想写一个科幻故事，讲述...\n- 请续写这个故事...\n- 请将这个故事改写成...\n- 受这个故事启发，创作一个新故事...",
+                height=100,
+                help="详细描述您想要的故事内容、风格或创作意图"
+            )
+            
+            # 文件上传
+            uploaded_file = st.file_uploader(
+                "📎 上传参考文件（可选）",
+                type=['txt', 'md'],
+                help="上传文本文件作为参考，可以是现有故事、大纲或其他相关内容"
+            )
+            
+            # 处理文件内容
+            file_content = None
+            if uploaded_file is not None:
+                try:
+                    file_content = str(uploaded_file.read(), "utf-8")
+                    st.success(f" 文件已上传：{uploaded_file.name} ({len(file_content)} 字符)")
+                    
+                    # 显示文件预览
+                    with st.expander("📖 文件预览"):
+                        st.text_area(
+                            "文件内容预览",
+                            value=file_content[:500] + ("..." if len(file_content) > 500 else ""),
+                            height=100,
+                            disabled=True
+                        )
+                except Exception as e:
+                    st.error(f" 文件读取失败：{e}")
+                    file_content = None
+            
+            # 传统参数保持默认值（用于版本命名等）
+            topic = "自定义故事"
+            style = "用户描述"
+        
+        # 通用参数
         temperature = st.slider("创造性", min_value=0.1, max_value=1.0, value=0.7, step=0.1)
         seed = st.number_input("随机种子", min_value=1, value=42, step=1)
         reorder_mode = st.selectbox("章节顺序", ["linear", "nonlinear"], help="linear=线性顺序, nonlinear=非线性重排")
         
         st.markdown("---")
         
-        if st.button("🔄 生成新大纲", type="primary", use_container_width=True):
-            generate_new_outline(topic, style, temperature, seed, reorder_mode)
+        # 生成按钮 - 根据模式调用不同函数
+        if generation_mode == "传统模式":
+            if st.button("🔄 生成新大纲", type="primary", use_container_width=True):
+                generate_new_outline(topic, style, temperature, seed, reorder_mode, "traditional")
+        else:
+            # 验证自定义模式的输入
+            can_generate = bool(user_description and user_description.strip())
+            if not can_generate:
+                st.warning(" 请填写故事描述")
+            
+            if st.button(
+                " 生成自定义大纲", 
+                type="primary", 
+                use_container_width=True,
+                disabled=not can_generate
+            ):
+                generate_new_outline(topic, style, temperature, seed, reorder_mode, "description_based", user_description, file_content)
         
         if st.button("📁 加载已有大纲", use_container_width=True):
             st.session_state.show_outline_loader = True
@@ -554,18 +686,43 @@ def main():
         st.markdown("---")
         st.markdown("**当前状态:**")
         if st.session_state.outline_data:
-            st.success(f"✅ 已加载大纲 ({len(st.session_state.outline_data)} 章)")
+            st.success(f" 已加载大纲 ({len(st.session_state.outline_data)} 章)")
         else:
             st.info("📝 未加载大纲")
         
         if st.session_state.characters_data:
-            st.success(f"✅ 已生成角色 ({len(st.session_state.characters_data)} 个)")
+            st.success(f" 已生成角色 ({len(st.session_state.characters_data)} 个)")
         else:
             st.info("👥 未生成角色")
         
+        # 性能分析
+        st.markdown("---")
+        st.markdown("###  性能分析")
+        
+        if st.button("📈 查看性能报告", use_container_width=True):
+            st.session_state.show_performance_analysis = True
+            st.rerun()
+        
+        # 显示性能分析文件统计
+        try:
+            import os
+            # 检查输出目录中的性能报告文件
+            output_dir = "data/output"
+            if os.path.exists(output_dir):
+                performance_files = []
+                for root, dirs, files in os.walk(output_dir):
+                    for file in files:
+                        if file.startswith("performance_analysis_") and file.endswith(".json"):
+                            performance_files.append(file)
+                st.info(f" 已生成 {len(performance_files)} 个性能报告")
+            else:
+                st.info(" 暂无性能报告")
+        except:
+            pass
+
         # 建议管理
         st.markdown("---")
-        st.markdown("### 💡 智能建议")
+        st.markdown("###  智能建议")
         
         if st.button("📂 管理保存的建议", use_container_width=True):
             st.session_state.show_suggestions_manager = True
@@ -577,9 +734,9 @@ def main():
             suggestions_dir = "data/saved_suggestions"
             if os.path.exists(suggestions_dir):
                 suggestion_files = [f for f in os.listdir(suggestions_dir) if f.endswith('.json')]
-                st.info(f"📊 已保存 {len(suggestion_files)} 个建议")
+                st.info(f" 已保存 {len(suggestion_files)} 个建议")
             else:
-                st.info("📊 暂无已保存建议")
+                st.info(" 暂无已保存建议")
         except:
             pass
     
@@ -588,6 +745,10 @@ def main():
         show_execution_log(st.session_state.execution_logs)
     
     # 检查特殊界面显示
+    if st.session_state.get('show_performance_analysis', False):
+        show_performance_analysis_interface()
+        return
+    
     if st.session_state.get('show_suggestions_manager', False):
         show_suggestions_manager()
         return
@@ -610,19 +771,19 @@ def main():
 
 def show_creation_progress():
     """显示创作流程进度"""
-    st.markdown("### 🎯 创作流程")
+    st.markdown("###  创作流程")
     
     # 确定当前步骤状态
-    outline_status = "✅" if st.session_state.outline_data else "⏳"
-    character_status = "✅" if st.session_state.characters_data else ("⏳" if st.session_state.outline_data else "⏸️")
-    story_status = "⏸️"  # 未来扩展
+    outline_status = "" if st.session_state.outline_data else ""
+    character_status = "" if st.session_state.characters_data else ("" if st.session_state.outline_data else "")
+    story_status = ""  # 未来扩展
     
     # 创建流程指示器 - 扩展为5步
     col1, col2, col3, col4, col5, col6, col7, col8, col9 = st.columns([1.5, 0.3, 1.5, 0.3, 1.5, 0.3, 1.5, 0.3, 1.5])
     
     with col1:
-        outline_color = "success" if outline_status == "✅" else ("warning" if outline_status == "⏳" else "secondary")
-        if st.button(f"{outline_status} **步骤1: 大纲生成**", type="secondary" if outline_status != "⏳" else "primary", use_container_width=True):
+        outline_color = "success" if outline_status == "" else ("warning" if outline_status == "" else "secondary")
+        if st.button(f"{outline_status} **步骤1: 大纲生成**", type="secondary" if outline_status != "" else "primary", use_container_width=True):
             st.session_state.current_interface = "outline"
             st.rerun()
     
@@ -631,7 +792,7 @@ def show_creation_progress():
     
     with col3:
         character_disabled = not st.session_state.outline_data
-        character_type = "secondary" if character_status == "✅" else ("primary" if character_status == "⏳" else "secondary")
+        character_type = "secondary" if character_status == "" else ("primary" if character_status == "" else "secondary")
         if st.button(f"{character_status} **步骤2: 角色生成**", type=character_type, disabled=character_disabled, use_container_width=True):
             st.session_state.current_interface = "characters"
             st.rerun()
@@ -641,8 +802,8 @@ def show_creation_progress():
     
     with col5:
         story_disabled = not (st.session_state.outline_data and st.session_state.characters_data)
-        story_status = "✅" if st.session_state.get('story_data') else ("⏳" if (st.session_state.outline_data and st.session_state.characters_data) else "⏸️")
-        story_type = "secondary" if story_status == "✅" else ("primary" if story_status == "⏳" else "secondary")
+        story_status = "" if st.session_state.get('story_data') else ("" if (st.session_state.outline_data and st.session_state.characters_data) else "")
+        story_type = "secondary" if story_status == "" else ("primary" if story_status == "" else "secondary")
         if st.button(f"{story_status} **步骤3: 故事生成**", type=story_type, disabled=story_disabled, use_container_width=True):
             st.session_state.current_interface = "story"
             st.rerun()
@@ -652,8 +813,8 @@ def show_creation_progress():
     
     with col7:
         dialogue_disabled = not (st.session_state.outline_data and st.session_state.characters_data and st.session_state.get('story_data'))
-        dialogue_status = "✅" if st.session_state.get('dialogue_data') else ("⏳" if (st.session_state.outline_data and st.session_state.characters_data and st.session_state.get('story_data')) else "⏸️")
-        dialogue_type = "secondary" if dialogue_status == "✅" else ("primary" if dialogue_status == "⏳" else "secondary")
+        dialogue_status = "" if st.session_state.get('dialogue_data') else ("" if (st.session_state.outline_data and st.session_state.characters_data and st.session_state.get('story_data')) else "")
+        dialogue_type = "secondary" if dialogue_status == "" else ("primary" if dialogue_status == "" else "secondary")
         if st.button(f"{dialogue_status} **步骤4: 对话生成**", type=dialogue_type, disabled=dialogue_disabled, use_container_width=True):
             st.session_state.current_interface = "dialogue"
             st.rerun()
@@ -663,8 +824,8 @@ def show_creation_progress():
     
     with col9:
         enhance_disabled = not (st.session_state.outline_data and st.session_state.characters_data and st.session_state.get('story_data') and st.session_state.get('dialogue_data'))
-        enhance_status = "✅" if st.session_state.get('enhanced_story_data') else ("⏳" if (st.session_state.outline_data and st.session_state.characters_data and st.session_state.get('story_data') and st.session_state.get('dialogue_data')) else "⏸️")
-        enhance_type = "secondary" if enhance_status == "✅" else ("primary" if enhance_status == "⏳" else "secondary")
+        enhance_status = "" if st.session_state.get('enhanced_story_data') else ("" if (st.session_state.outline_data and st.session_state.characters_data and st.session_state.get('story_data') and st.session_state.get('dialogue_data')) else "")
+        enhance_type = "secondary" if enhance_status == "" else ("primary" if enhance_status == "" else "secondary")
         if st.button(f"{enhance_status} **步骤5: 故事增强**", type=enhance_type, disabled=enhance_disabled, use_container_width=True):
             st.session_state.current_interface = "enhance"
             st.rerun()
@@ -672,7 +833,7 @@ def show_creation_progress():
     # 显示当前步骤说明
     current_step = determine_current_step()
     if current_step == "welcome":
-        st.info("🚀 **开始创作**：请先配置参数并生成故事大纲")
+        st.info(" **开始创作**：请先配置参数并生成故事大纲")
     elif current_step == "outline":
         st.info("📝 **大纲阶段**：编辑和完善你的故事大纲")
     elif current_step == "characters":
@@ -719,12 +880,12 @@ def show_character_generation_interface():
     
     # 检查前置条件
     if not st.session_state.outline_data:
-        st.error("❌ 请先完成步骤1: 生成故事大纲")
+        st.error(" 请先完成步骤1: 生成故事大纲")
         return
     
     # 检查角色生成功能是否可用
     if not character_generation_available:
-        st.error("❌ 角色生成功能不可用，请检查后端模块导入")
+        st.error(" 角色生成功能不可用，请检查后端模块导入")
         return
     
     # 显示基于大纲的角色生成界面
@@ -738,50 +899,50 @@ def show_welcome_screen():
         return
     
     st.markdown("""
-    ## 🎯 欢迎使用故事创作系统！
+    ##  欢迎使用故事创作系统！
     
     这是一个完整的故事创作工具，按照后端流程设计，包含以下主要步骤：
     """)
     
     # 显示完整的创作流程
-    st.markdown("### 📋 完整创作流程")
+    st.markdown("###  完整创作流程")
     
     col1, col2, col3 = st.columns(3)
     
     with col1:
         st.markdown("""
         **📚 步骤1: 大纲生成**
-        - 🚀 快速生成故事大纲
-        - ✏️ 交互式编辑章节内容
+        -  快速生成故事大纲
+        -  交互式编辑章节内容
         - 🔄 重新排列章节顺序
-        - 📊 分析叙述结构
-        - 💾 保存和导出结果
+        -  分析叙述结构
+        -  保存和导出结果
         """)
     
     with col2:
         st.markdown("""
         **👥 步骤2: 角色生成**
-        - 🎭 基于大纲生成角色
+        -  基于大纲生成角色
         - 📝 管理角色设定
         - 🔗 分析角色与章节关联
-        - 💾 保存角色数据
-        - ✏️ 编辑角色信息
+        -  保存角色数据
+        -  编辑角色信息
         """)
     
     with col3:
         st.markdown("""
         **📖 步骤3: 故事生成**
         - 📄 基于大纲扩展详细故事内容
-        - 📋 章节摘要和逻辑连贯性检查
-        - ✏️ 选择关键章节进行重写
-        - 🎨 风格统一性确认和调整
-        - 💾 保存和导出完整故事
+        -  章节摘要和逻辑连贯性检查
+        -  选择关键章节进行重写
+        -  风格统一性确认和调整
+        -  保存和导出完整故事
         """)
     
     st.markdown("---")
     
     st.markdown("""
-    **🚀 开始使用：**
+    ** 开始使用：**
     1. 在左侧配置故事参数（题材、风格等）
     2. 点击"生成新大纲"按钮开始创作
     3. 或者点击"加载已有大纲"按钮上传现有文件
@@ -789,7 +950,7 @@ def show_welcome_screen():
     """)
     
     # 快速开始按钮
-    st.markdown("### 🚀 快速开始")
+    st.markdown("###  快速开始")
     col1, col2 = st.columns(2)
     
     with col1:
@@ -798,7 +959,7 @@ def show_welcome_screen():
             st.rerun()
     
     with col2:
-        if st.button("🎭 查看示例格式", use_container_width=True):
+        if st.button(" 查看示例格式", use_container_width=True):
             st.session_state.show_example_formats = True
             st.rerun()
     
@@ -824,16 +985,16 @@ def show_welcome_screen():
     # 功能特色
     with st.expander("✨ 系统特色"):
         st.markdown("""
-        **🎯 完整的创作流程：**
+        ** 完整的创作流程：**
         - 📚 **智能大纲生成**：基于主题和风格自动生成结构化大纲
         - 🔄 **章节重排优化**：支持线性和非线性章节顺序
         - 👥 **角色智能生成**：基于大纲自动生成符合故事的角色设定
-        - ✏️ **全面编辑功能**：支持大纲和角色的手动编辑、重新生成
-        - 📊 **历史记录管理**：完整的撤销/重做/回滚功能
-        - 💾 **数据持久化**：自动保存到项目目录，支持多格式导出
+        -  **全面编辑功能**：支持大纲和角色的手动编辑、重新生成
+        -  **历史记录管理**：完整的撤销/重做/回滚功能
+        -  **数据持久化**：自动保存到项目目录，支持多格式导出
         """)
         
-        st.info("💡 所有功能都基于真实的后端模块，确保生成质量和数据一致性")
+        st.info(" 所有功能都基于真实的后端模块，确保生成质量和数据一致性")
 
 def show_example_formats():
     """显示示例文件格式"""
@@ -870,12 +1031,12 @@ def show_example_formats():
         ]
         st.code(json.dumps(character_example, ensure_ascii=False, indent=2), language="json")
     
-    if st.button("❌ 关闭示例", key="close_examples"):
+    if st.button(" 关闭示例", key="close_examples"):
         st.session_state.show_example_formats = False
         st.rerun()
 
-def generate_new_outline(topic, style, temperature, seed, reorder_mode):
-    """生成新大纲 - 完全按照main_pipeline_glm.py的逻辑"""
+def generate_new_outline(topic, style, temperature, seed, reorder_mode, generation_mode="traditional", user_description=None, file_content=None):
+    """生成新大纲 - 支持传统模式和自定义描述模式"""
     
     # 清空之前的日志
     if 'execution_logs' not in st.session_state:
@@ -883,69 +1044,120 @@ def generate_new_outline(topic, style, temperature, seed, reorder_mode):
     else:
         st.session_state.execution_logs.clear()
     
-    with st.spinner("🔄 正在生成故事大纲..."):
+    spinner_text = "🔄 正在生成故事大纲..." if generation_mode == "traditional" else " 正在根据您的描述生成大纲..."
+    
+    with st.spinner(spinner_text):
         try:
             # Step 1: 构建版本名称 (按照main_pipeline_glm.py的逻辑)
             start_time = time.time()
-            version = build_version_name(
-                topic=topic,
-                style=style,
-                temperature=temperature,
-                seed=seed,
-                order_mode=reorder_mode
-            )
+            
+            if generation_mode == "traditional":
+                version = build_version_name(
+                    topic=topic,
+                    style=style,
+                    temperature=temperature,
+                    seed=seed,
+                    order_mode=reorder_mode
+                )
+            else:  # description_based 模式
+                import hashlib
+                import datetime
+                # 基于用户描述生成简短标识
+                desc_hash = hashlib.md5(user_description.encode('utf-8')).hexdigest()[:8] if user_description else "nodesc"
+                timestamp = datetime.datetime.now().strftime("%m%d_%H%M")
+                version = f"custom_{desc_hash}_{reorder_mode}_T{temperature}_s{seed}_{timestamp}"
+            
             end_time = time.time()
             
             log_backend_operation(
                 "构建版本名称", 
-                {"topic": topic, "style": style, "temperature": temperature, "seed": seed, "order_mode": reorder_mode},
+                {
+                    "generation_mode": generation_mode,
+                    "topic": topic, 
+                    "style": style, 
+                    "temperature": temperature, 
+                    "seed": seed, 
+                    "order_mode": reorder_mode,
+                    "user_description": user_description[:50] + "..." if user_description and len(user_description) > 50 else user_description,
+                    "has_file": bool(file_content)
+                },
                 start_time, end_time, version
             )
             
             st.info(f"📝 生成版本名称: {version}")
             
-            # Step 2: Outline Generation (按照main_pipeline_glm.py第58-70行的逻辑)
-            outline_base_path = os.path.join(output_dir, "reference_outline", f"{topic}_{style}_T{temperature}_s{seed}outline.json")
-            os.makedirs(os.path.dirname(outline_base_path), exist_ok=True)
-            
+            # Step 2: Outline Generation 根据模式调用不同的生成逻辑
             start_time = time.time()
-            if os.path.exists(outline_base_path):
-                outline = load_json(outline_base_path)
-                end_time = time.time()
-                log_backend_operation(
-                    "加载共享outline", 
-                    {"path": outline_base_path},
-                    start_time, end_time, outline
-                )
-                st.info(f"📖 已加载共享outline: {outline_base_path}")
-            else:
-                outline = generate_outline(topic=topic, style=style, custom_instruction="")
-                end_time = time.time()
-                log_backend_operation(
-                    "生成新outline", 
-                    {"topic": topic, "style": style, "custom_instruction": ""},
-                    start_time, end_time, outline
-                )
-                
-                # 保存outline
-                save_start = time.time()
-                save_json(outline, "reference_outline", f"{topic}_{style}_T{temperature}_s{seed}_outline.json")
-                save_end = time.time()
-                log_backend_operation(
-                    "保存outline到共享目录", 
-                    {"path": outline_base_path},
-                    save_start, save_end, True
-                )
-                st.success(f"💾 生成并保存共享outline: {outline_base_path}")
             
-            st.info(f"✅ Outline生成完成，共 {len(outline)} 章节")
+            if generation_mode == "traditional":
+                # 传统模式：使用共享缓存
+                outline_base_path = os.path.join(output_dir, "reference_outline", f"{topic}_{style}_T{temperature}_s{seed}_outline.json")
+                os.makedirs(os.path.dirname(outline_base_path), exist_ok=True)
+                
+                if os.path.exists(outline_base_path):
+                    outline = load_json(outline_base_path)
+                    end_time = time.time()
+                    log_backend_operation(
+                        "加载共享outline", 
+                        {"path": outline_base_path},
+                        start_time, end_time, outline
+                    )
+                    st.info(f"📖 已加载共享outline: {outline_base_path}")
+                else:
+                    outline = generate_outline(
+                        topic=topic, 
+                        style=style, 
+                        custom_instruction="",
+                        generation_mode="traditional"
+                    )
+                    end_time = time.time()
+                    log_backend_operation(
+                        "生成新outline", 
+                        {"topic": topic, "style": style, "custom_instruction": "", "generation_mode": "traditional"},
+                        start_time, end_time, outline
+                    )
+                    
+                    # 保存outline
+                    save_start = time.time()
+                    save_json(outline, "reference_outline", f"{topic}_{style}_T{temperature}_s{seed}_outline.json")
+                    save_end = time.time()
+                    log_backend_operation(
+                        "保存outline到共享目录", 
+                        {"path": outline_base_path},
+                        save_start, save_end, True
+                    )
+                    st.success(f" 生成并保存共享outline: {outline_base_path}")
+            
+            else:
+                # 自定义描述模式：不使用共享缓存
+                outline = generate_outline(
+                    topic=topic,  # 这里是"自定义故事"
+                    style=style,  # 这里是"用户描述"
+                    custom_instruction="",
+                    generation_mode="description_based",
+                    user_description=user_description,
+                    file_content=file_content
+                )
+                end_time = time.time()
+                log_backend_operation(
+                    "生成自定义outline", 
+                    {
+                        "generation_mode": "description_based",
+                        "user_description": user_description[:100] + "..." if user_description and len(user_description) > 100 else user_description,
+                        "file_content_length": len(file_content) if file_content else 0
+                    },
+                    start_time, end_time, outline
+                )
+                st.success(f" 根据您的描述生成自定义outline完成")
+            
+            st.info(f" Outline生成完成，共 {len(outline)} 章节")
             
             # Step 3: 章节重排处理 (按照main_pipeline_glm.py第92-185行的逻辑)
             reorder_outline_raw = None
             
             if reorder_mode == "linear":
                 reorder_outline_raw = outline
-                st.info("✅ 使用linear顺序（直接来自outline）")
+                st.info(" 使用linear顺序（直接来自outline）")
                 
             elif reorder_mode == "nonlinear":
                 st.info("🔄 开始非线性重排处理...")
@@ -973,7 +1185,7 @@ def generate_new_outline(topic, style, temperature, seed, reorder_mode):
                         {"path": reorder_path},
                         start_time, end_time, reorder_outline_raw
                     )
-                    st.success(f"✅ 已加载cached非线性顺序: {reorder_path}")
+                    st.success(f" 已加载cached非线性顺序: {reorder_path}")
                 else:
                     # Step 3.1: 章节重排
                     st.info("🔄 执行章节重排...")
@@ -987,7 +1199,7 @@ def generate_new_outline(topic, style, temperature, seed, reorder_mode):
                     
                     # 检查重排是否成功 (按照main_pipeline_glm.py第122-141行)
                     if not any("new_order" in ch for ch in reorder_outline_raw):
-                        st.warning("⚠️ LLM重排失败：未检测到任何new_order字段，回退为原始顺序")
+                        st.warning(" LLM重排失败：未检测到任何new_order字段，回退为原始顺序")
                         reorder_mode = "linear"
                         reorder_outline_raw = outline
                         log_backend_operation(
@@ -996,7 +1208,7 @@ def generate_new_outline(topic, style, temperature, seed, reorder_mode):
                             time.time(), time.time(), reorder_outline_raw
                         )
                     else:
-                        st.success("✅ reorder_chapters成功生成非线性顺序")
+                        st.success(" reorder_chapters成功生成非线性顺序")
                         
                         # Step 3.2: 叙述结构分析
                         st.info("🔍 开始叙述结构分析...")
@@ -1026,7 +1238,7 @@ def generate_new_outline(topic, style, temperature, seed, reorder_mode):
                         {"path": reorder_path},
                         save_start, save_end, True
                     )
-                    st.success(f"✅ 生成nonlinear顺序并缓存: {reorder_path}")
+                    st.success(f" 生成nonlinear顺序并缓存: {reorder_path}")
             
             # Step 4: 统一结构处理 (按照main_pipeline_glm.py第155-185行)
             st.info("🔧 统一结构：补全summary字段，保留叙述分析字段...")
@@ -1072,14 +1284,14 @@ def generate_new_outline(topic, style, temperature, seed, reorder_mode):
             
             # 显示最终结构
             if reorder_mode == "nonlinear":
-                st.success("✅ 章节顺序处理完成（已保留summary和叙述指导）")
-                st.info("🎭 最终章节结构:")
+                st.success(" 章节顺序处理完成（已保留summary和叙述指导）")
+                st.info(" 最终章节结构:")
                 for idx, ch in enumerate(final_outline):
                     role = ch.get('narrative_role', '线性叙述')
                     orig_pos = ch.get('original_position', '?')
                     st.text(f"  {idx+1}. {ch['chapter_id']} (原第{orig_pos}章) - {role}")
             else:
-                st.success("✅ 章节顺序处理完成（已保留summary）")
+                st.success(" 章节顺序处理完成（已保留summary）")
             
             # 更新会话状态
             st.session_state.outline_data = final_outline
@@ -1090,11 +1302,16 @@ def generate_new_outline(topic, style, temperature, seed, reorder_mode):
             st.session_state.current_temperature = temperature
             st.session_state.current_seed = seed
             st.session_state.current_reorder_mode = reorder_mode
+            st.session_state.current_generation_mode = generation_mode
+            # 保存自定义描述模式的额外参数
+            if generation_mode == "description_based":
+                st.session_state.current_user_description = user_description
+                st.session_state.current_file_content = file_content
             
             # 保存初始状态到历史记录
             save_to_history("生成大纲")
             
-            st.success(f"🎉 大纲生成完成！共 {len(final_outline)} 章")
+            st.success(f" 大纲生成完成！共 {len(final_outline)} 章")
             st.rerun()
             
         except Exception as e:
@@ -1104,7 +1321,7 @@ def generate_new_outline(topic, style, temperature, seed, reorder_mode):
                 {"topic": topic, "style": style, "reorder_mode": reorder_mode},
                 error_time, error_time, None, e
             )
-            st.error(f"❌ 大纲生成失败: {str(e)}")
+            st.error(f" 大纲生成失败: {str(e)}")
             app_logger.error(f"Outline generation failed: {str(e)}")
 
 def load_existing_outline():
@@ -1116,7 +1333,7 @@ def load_existing_outline():
         try:
             # 显示文件信息
             st.info(f"📄 文件名: {uploaded_file.name}")
-            st.info(f"📊 文件大小: {uploaded_file.size} bytes")
+            st.info(f" 文件大小: {uploaded_file.size} bytes")
             
             # 重置文件指针到开始位置
             uploaded_file.seek(0)
@@ -1133,23 +1350,23 @@ def load_existing_outline():
             
             # 详细验证数据格式
             if not isinstance(outline_data, list):
-                st.error("❌ 文件格式不正确：应为JSON数组格式")
+                st.error(" 文件格式不正确：应为JSON数组格式")
                 return
             
             if len(outline_data) == 0:
-                st.error("❌ 文件内容为空：没有找到章节数据")
+                st.error(" 文件内容为空：没有找到章节数据")
                 return
             
             # 验证章节数据格式
             required_fields = ['chapter_id', 'title']
             for i, chapter in enumerate(outline_data):
                 if not isinstance(chapter, dict):
-                    st.error(f"❌ 第{i+1}个章节格式不正确：应为对象格式")
+                    st.error(f" 第{i+1}个章节格式不正确：应为对象格式")
                     return
                 
                 missing_fields = [field for field in required_fields if field not in chapter]
                 if missing_fields:
-                    st.error(f"❌ 第{i+1}个章节缺少必要字段: {', '.join(missing_fields)}")
+                    st.error(f" 第{i+1}个章节缺少必要字段: {', '.join(missing_fields)}")
                     return
             
             # 保存加载前的状态到历史记录（如果有的话）
@@ -1163,7 +1380,7 @@ def load_existing_outline():
             # 保存加载后的状态到历史记录
             save_to_history("加载大纲")
             
-            st.success(f"✅ 大纲加载成功！共 {len(outline_data)} 章")
+            st.success(f" 大纲加载成功！共 {len(outline_data)} 章")
             st.info("🔄 页面将自动刷新...")
             
             # 显示加载的章节预览
@@ -1179,16 +1396,16 @@ def load_existing_outline():
             st.rerun()
             
         except json.JSONDecodeError as e:
-            st.error(f"❌ JSON格式错误: {str(e)}")
-            st.error("💡 请确保文件是有效的JSON格式")
+            st.error(f" JSON格式错误: {str(e)}")
+            st.error(" 请确保文件是有效的JSON格式")
         except UnicodeDecodeError as e:
-            st.error(f"❌ 文件编码错误: {str(e)}")
-            st.error("💡 请确保文件是UTF-8编码")
+            st.error(f" 文件编码错误: {str(e)}")
+            st.error(" 请确保文件是UTF-8编码")
         except Exception as e:
-            st.error(f"❌ 文件加载失败: {str(e)}")
-            print(f"❌ [大纲加载] 加载失败: {str(e)}")
+            st.error(f" 文件加载失败: {str(e)}")
+            print(f" [大纲加载] 加载失败: {str(e)}")
     else:
-        st.info("💡 请选择一个JSON格式的大纲文件")
+        st.info(" 请选择一个JSON格式的大纲文件")
 
 def show_outline_editor():
     """大纲编辑器界面"""
@@ -1202,7 +1419,7 @@ def show_outline_editor():
             st.rerun()
     
     with col2:
-        if st.button("✏️ 编辑模式", use_container_width=True):
+        if st.button(" 编辑模式", use_container_width=True):
             st.session_state.edit_mode = "edit"
             st.rerun()
     
@@ -1212,12 +1429,12 @@ def show_outline_editor():
             st.rerun()
     
     with col4:
-        if st.button("📋 历史记录", use_container_width=True):
+        if st.button(" 历史记录", use_container_width=True):
             st.session_state.edit_mode = "history"
             st.rerun()
     
     with col5:
-        if st.button("💾 保存导出", use_container_width=True):
+        if st.button(" 保存导出", use_container_width=True):
             st.session_state.edit_mode = "export"
             st.rerun()
     
@@ -1237,11 +1454,11 @@ def show_outline_editor():
     
     # 在大纲编辑器底部显示进入下一步的提示
     st.markdown("---")
-    st.markdown("### ✅ 大纲编辑完成")
+    st.markdown("###  大纲编辑完成")
     
     col1, col2 = st.columns([2, 1])
     with col1:
-        st.info("💡 大纲编辑完成后，可以进入下一步：角色生成")
+        st.info(" 大纲编辑完成后，可以进入下一步：角色生成")
     
     with col2:
         if st.button("👥 进入角色生成", type="primary", use_container_width=True):
@@ -1265,10 +1482,10 @@ def show_preview_mode():
                     st.info(f"📍 原位置: 第{chapter['original_position']}章")
                 
                 if 'narrative_role' in chapter:
-                    st.success(f"🎭 叙述角色: {chapter['narrative_role']}")
+                    st.success(f" 叙述角色: {chapter['narrative_role']}")
                 
                 if 'narrative_instruction' in chapter:
-                    st.warning(f"💡 叙述指导: {chapter['narrative_instruction']}")
+                    st.warning(f" 叙述指导: {chapter['narrative_instruction']}")
                 
                 if 'transition_hint' in chapter:
                     st.info(f"🔗 过渡提示: {chapter['transition_hint']}")
@@ -1280,7 +1497,7 @@ def show_preview_mode():
 
 def show_edit_mode():
     """编辑模式"""
-    st.subheader("✏️ 章节编辑")
+    st.subheader(" 章节编辑")
     
     # 批量选择
     st.markdown("**选择要编辑的章节:**")
@@ -1331,16 +1548,16 @@ def show_edit_mode():
                     regenerate_chapter(chapter_idx, chapter)
             
             with col2:
-                if st.button("🗑️ 删除章节", key=f"delete_{chapter_idx}"):
+                if st.button(" 删除章节", key=f"delete_{chapter_idx}"):
                     # 保存删除前的状态到历史记录
                     save_to_history(f"删除第{chapter_idx + 1}章", st.session_state.outline_data.copy())
                     # 执行删除
                     deleted_chapter = st.session_state.outline_data.pop(chapter_idx)
-                    st.success(f"✅ 已删除第 {chapter_idx + 1} 章: {deleted_chapter.get('title', '未知标题')}")
+                    st.success(f" 已删除第 {chapter_idx + 1} 章: {deleted_chapter.get('title', '未知标题')}")
                     st.rerun()
             
             with col3:
-                if st.button("✅ 保存修改", key=f"save_{chapter_idx}"):
+                if st.button(" 保存修改", key=f"save_{chapter_idx}"):
                     save_chapter_edit(chapter_idx, new_title, new_chapter_id, new_summary)
             
             st.markdown("---")
@@ -1392,7 +1609,7 @@ def show_reorder_mode():
         if st.button("🔄 非线性重排", use_container_width=True):
             perform_automatic_reorder()
         
-        if st.button("📊 叙述结构分析", use_container_width=True):
+        if st.button(" 叙述结构分析", use_container_width=True):
             perform_narrative_analysis()
     
     with col2:
@@ -1404,7 +1621,7 @@ def show_reorder_mode():
             help="例如: 1,3,2,4,5"
         )
         
-        if st.button("✅ 应用新顺序", use_container_width=True):
+        if st.button(" 应用新顺序", use_container_width=True):
             apply_manual_reorder(new_order_input)
 
 def show_character_generation_mode():
@@ -1418,16 +1635,16 @@ def show_character_generation_mode():
     
     # 检查是否有大纲数据
     if not st.session_state.outline_data:
-        st.warning("⚠️ 请先生成故事大纲，然后再生成角色")
+        st.warning(" 请先生成故事大纲，然后再生成角色")
         return
     
     # 检查角色生成功能是否可用
     if not character_generation_available:
-        st.error("❌ 角色生成功能不可用，请检查后端模块导入")
+        st.error(" 角色生成功能不可用，请检查后端模块导入")
         return
     
     # 角色生成配置
-    st.markdown("### ⚙️ 角色生成配置")
+    st.markdown("###  角色生成配置")
     col1, col2 = st.columns(2)
     
     with col1:
@@ -1444,7 +1661,7 @@ def show_character_generation_mode():
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        if st.button("🎭 生成角色", type="primary", use_container_width=True):
+        if st.button(" 生成角色", type="primary", use_container_width=True):
             generate_characters_from_outline(max_characters, use_cache, auto_save)
     
     with col2:
@@ -1468,22 +1685,22 @@ def show_character_generation_mode():
         st.info(f"🔍 调试: 当前角色数据状态 - {type(st.session_state.get('characters_data', None))}, 长度: {len(st.session_state.get('characters_data', []))}")
         
         # 提示用户开始生成角色
-        st.info("💡 点击上方'生成角色'按钮开始基于大纲生成角色")
+        st.info(" 点击上方'生成角色'按钮开始基于大纲生成角色")
 
 def generate_characters_from_outline(max_characters=8, use_cache=True, auto_save=True):
     """从大纲生成角色 - 集成版本"""
     try:
         # 检查缓存
         if use_cache and st.session_state.characters_data:
-            st.success("✅ 使用缓存的角色数据")
+            st.success(" 使用缓存的角色数据")
             return
         
-        with st.spinner("🎭 正在生成角色..."):
+        with st.spinner(" 正在生成角色..."):
             # 记录开始时间
             start_time = time.time()
             
             # 在终端显示后端调用信息
-            print(f"📊 [大纲生成器集成] 调用后端模块: src.generation.generate_characters.generate_characters_v1")
+            print(f" [大纲生成器集成] 调用后端模块: src.generation.generate_characters.generate_characters_v1")
             print(f"📝 [大纲生成器集成] 输入参数: 大纲章节数={len(st.session_state.outline_data)}, 最大角色数={max_characters}")
             
             # 调用真实后端函数
@@ -1494,12 +1711,12 @@ def generate_characters_from_outline(max_characters=8, use_cache=True, auto_save
             
             # 在终端显示结果
             print(f"⏱️ [大纲生成器集成] 生成耗时: {end_time - start_time:.3f}秒")
-            print(f"🎉 [大纲生成器集成] 角色生成完成！共生成 {len(characters) if characters else 0} 个角色")
+            print(f" [大纲生成器集成] 角色生成完成！共生成 {len(characters) if characters else 0} 个角色")
             
             # 验证生成结果
             if not characters or not isinstance(characters, list):
-                st.error("❌ 角色生成失败：后端返回数据格式不正确")
-                print(f"❌ [大纲生成器集成] 后端返回数据格式错误: {type(characters)} - {str(characters)[:200]}...")
+                st.error(" 角色生成失败：后端返回数据格式不正确")
+                print(f" [大纲生成器集成] 后端返回数据格式错误: {type(characters)} - {str(characters)[:200]}...")
                 return
             
             # 保存到会话状态
@@ -1518,7 +1735,7 @@ def generate_characters_from_outline(max_characters=8, use_cache=True, auto_save
             auto_relink_characters_to_outline()
             
             # 显示成功信息
-            st.success(f"🎉 角色生成完成！共生成 {len(characters)} 个角色")
+            st.success(f" 角色生成完成！共生成 {len(characters)} 个角色")
             st.info(f"⏱️ 生成耗时: {end_time - start_time:.3f}秒")
             
             # 显示角色名单
@@ -1527,8 +1744,8 @@ def generate_characters_from_outline(max_characters=8, use_cache=True, auto_save
             st.rerun()
             
     except Exception as e:
-        st.error(f"❌ 角色生成失败: {str(e)}")
-        print(f"❌ [大纲生成器集成] 角色生成失败: {str(e)}")
+        st.error(f" 角色生成失败: {str(e)}")
+        print(f" [大纲生成器集成] 角色生成失败: {str(e)}")
 
 def load_existing_characters():
     """加载已有角色文件 - 集成版本"""
@@ -1547,7 +1764,7 @@ def load_existing_characters():
         try:
             # 显示文件信息
             st.info(f"📄 文件名: {uploaded_file.name}")
-            st.info(f"📊 文件大小: {uploaded_file.size} bytes")
+            st.info(f" 文件大小: {uploaded_file.size} bytes")
             
             # 重置文件指针到开始位置
             uploaded_file.seek(0)
@@ -1564,23 +1781,23 @@ def load_existing_characters():
             
             # 详细验证数据格式
             if not isinstance(characters_data, list):
-                st.error("❌ 文件格式不正确：应为JSON数组格式")
+                st.error(" 文件格式不正确：应为JSON数组格式")
                 return
             
             if len(characters_data) == 0:
-                st.error("❌ 文件内容为空：没有找到角色数据")
+                st.error(" 文件内容为空：没有找到角色数据")
                 return
             
             # 验证角色数据格式
             required_fields = ['name', 'role', 'traits', 'background', 'motivation']
             for i, character in enumerate(characters_data):
                 if not isinstance(character, dict):
-                    st.error(f"❌ 第{i+1}个角色格式不正确：应为对象格式")
+                    st.error(f" 第{i+1}个角色格式不正确：应为对象格式")
                     return
                 
                 missing_fields = [field for field in required_fields if field not in character]
                 if missing_fields:
-                    st.error(f"❌ 第{i+1}个角色缺少必要字段: {', '.join(missing_fields)}")
+                    st.error(f" 第{i+1}个角色缺少必要字段: {', '.join(missing_fields)}")
                     return
             
             # 保存加载前的状态到历史记录（如果有的话）
@@ -1593,7 +1810,7 @@ def load_existing_characters():
             # 保存加载后的状态到历史记录
             save_characters_to_history("加载角色")
             
-            st.success(f"✅ 角色数据加载成功！共 {len(characters_data)} 个角色")
+            st.success(f" 角色数据加载成功！共 {len(characters_data)} 个角色")
             st.info("🔄 页面将自动刷新...")
             
             # 显示加载的角色预览
@@ -1618,16 +1835,16 @@ def load_existing_characters():
             st.rerun()
             
         except json.JSONDecodeError as e:
-            st.error(f"❌ JSON格式错误: {str(e)}")
-            st.error("💡 请确保文件是有效的JSON格式")
+            st.error(f" JSON格式错误: {str(e)}")
+            st.error(" 请确保文件是有效的JSON格式")
         except UnicodeDecodeError as e:
-            st.error(f"❌ 文件编码错误: {str(e)}")
-            st.error("💡 请确保文件是UTF-8编码")
+            st.error(f" 文件编码错误: {str(e)}")
+            st.error(" 请确保文件是UTF-8编码")
         except Exception as e:
-            st.error(f"❌ 文件加载失败: {str(e)}")
-            print(f"❌ [角色管理] 加载失败: {str(e)}")
+            st.error(f" 文件加载失败: {str(e)}")
+            print(f" [角色管理] 加载失败: {str(e)}")
     else:
-        st.info("💡 请选择一个JSON格式的角色文件")
+        st.info(" 请选择一个JSON格式的角色文件")
 
 def show_characters_display(show_details=True):
     """显示角色信息 - 集成版本"""
@@ -1673,8 +1890,8 @@ def show_characters_display(show_details=True):
                 
                 with col1:
                     st.markdown(f"**👤 姓名:** {character.get('name', '未知')}")
-                    st.markdown(f"**🎭 角色:** {character.get('role', '未知')}")
-                    st.markdown(f"**💡 动机:** {character.get('motivation', '未知')}")
+                    st.markdown(f"** 角色:** {character.get('role', '未知')}")
+                    st.markdown(f"** 动机:** {character.get('motivation', '未知')}")
                 
                 with col2:
                     st.markdown(f"**✨ 特征:**")
@@ -1694,7 +1911,7 @@ def show_characters_display(show_details=True):
     col1, col2, col3, col4, col5 = st.columns(5)
     
     with col1:
-        if st.button("💾 保存角色", use_container_width=True):
+        if st.button(" 保存角色", use_container_width=True):
             save_characters_to_project()
     
     with col2:
@@ -1707,18 +1924,18 @@ def show_characters_display(show_details=True):
             link_characters_to_outline()
     
     with col4:
-        if st.button("📋 角色历史", use_container_width=True):
+        if st.button(" 角色历史", use_container_width=True):
             st.session_state.show_character_history = True
             st.rerun()
     
     with col5:
-        if st.button("🗑️ 清空角色", use_container_width=True):
-            if st.button("⚠️ 确认清空", key="confirm_clear_characters"):
+        if st.button(" 清空角色", use_container_width=True):
+            if st.button(" 确认清空", key="confirm_clear_characters"):
                 save_characters_to_history("清空角色", st.session_state.characters_data.copy())
                 st.session_state.characters_data = []
                 st.session_state.character_chapter_mapping = {}
-                st.success("✅ 角色数据已清空")
-                print("🗑️ [角色管理] 清空角色数据")
+                st.success(" 角色数据已清空")
+                print(" [角色管理] 清空角色数据")
                 st.rerun()
     
     # 第二行按钮 - 新增功能
@@ -1726,7 +1943,7 @@ def show_characters_display(show_details=True):
     col1, col2, col3 = st.columns([1, 1, 1])
     
     with col1:
-        if st.button("🎯 一致性检查", use_container_width=True, help="检查角色设定与故事大纲的一致性"):
+        if st.button(" 一致性检查", use_container_width=True, help="检查角色设定与故事大纲的一致性"):
             st.session_state.show_consistency_check = True
             st.rerun()
     
@@ -1747,7 +1964,7 @@ def save_characters_to_project():
     """保存角色到项目目录 - 集成版本"""
     try:
         if not st.session_state.characters_data:
-            st.warning("⚠️ 没有角色数据可保存")
+            st.warning(" 没有角色数据可保存")
             return
         
         start_time = time.time()
@@ -1755,17 +1972,17 @@ def save_characters_to_project():
         save_json(st.session_state.characters_data, st.session_state.current_version, "characters.json")
         end_time = time.time()
         
-        st.success(f"✅ 角色已保存到项目目录: {st.session_state.current_version}/characters.json")
-        print(f"💾 [大纲生成器集成] 保存角色到项目: {st.session_state.current_version}/characters.json ({len(st.session_state.characters_data)} 个角色)")
+        st.success(f" 角色已保存到项目目录: {st.session_state.current_version}/characters.json")
+        print(f" [大纲生成器集成] 保存角色到项目: {st.session_state.current_version}/characters.json ({len(st.session_state.characters_data)} 个角色)")
         
     except Exception as e:
-        st.error(f"❌ 保存失败: {str(e)}")
-        print(f"❌ [大纲生成器集成] 保存角色失败: {str(e)}")
+        st.error(f" 保存失败: {str(e)}")
+        print(f" [大纲生成器集成] 保存角色失败: {str(e)}")
 
 def auto_relink_characters_to_outline():
     """自动重新关联角色到大纲章节 - 使用后端智能分析"""
     if not st.session_state.characters_data or not st.session_state.outline_data:
-        print("⚠️ [角色关联] 缺少角色或大纲数据，跳过自动关联")
+        print(" [角色关联] 缺少角色或大纲数据，跳过自动关联")
         return False
     
     print("🔗 [角色管理] 开始智能分析角色-章节关联")
@@ -1817,7 +2034,7 @@ def auto_relink_characters_to_outline():
         
         # 调用后端分析
         start_time = time.time()
-        print(f"📊 [角色关联] 调用后端智能分析...")
+        print(f" [角色关联] 调用后端智能分析...")
         
         msg = [{"role": "user", "content": analysis_prompt}]
         response = generate_response(msg)
@@ -1827,7 +2044,7 @@ def auto_relink_characters_to_outline():
         print(f"⏱️ [角色关联] 智能分析耗时: {end_time - start_time:.3f}秒")
         
         if not analysis_result or not isinstance(analysis_result, dict):
-            print("⚠️ [角色关联] 智能分析结果格式不正确，使用简单匹配")
+            print(" [角色关联] 智能分析结果格式不正确，使用简单匹配")
             return simple_character_matching()
         
         # 更新关联映射
@@ -1847,11 +2064,11 @@ def auto_relink_characters_to_outline():
                 st.session_state.character_chapter_mapping[chapter_id] = valid_characters
                 total_links += len(valid_characters)
         
-        print(f"🎉 [角色关联] 智能分析完成: {total_links} 个关联")
+        print(f" [角色关联] 智能分析完成: {total_links} 个关联")
         return True
         
     except Exception as e:
-        print(f"❌ [角色关联] 智能分析失败: {str(e)}")
+        print(f" [角色关联] 智能分析失败: {str(e)}")
         print("🔄 [角色关联] 回退到简单匹配方案")
         return simple_character_matching()
 
@@ -1879,7 +2096,7 @@ def simple_character_matching():
         st.session_state.character_chapter_mapping[chapter_id] = related_characters
         total_links += len(related_characters)
     
-    print(f"✅ [角色关联] 简单匹配完成: {total_links} 个关联")
+    print(f" [角色关联] 简单匹配完成: {total_links} 个关联")
     return True
 
 def link_characters_to_outline():
@@ -1887,11 +2104,11 @@ def link_characters_to_outline():
     st.markdown("### 🔗 角色-章节关联管理")
     
     if not st.session_state.characters_data:
-        st.warning("⚠️ 请先生成角色")
+        st.warning(" 请先生成角色")
         return
     
     if not st.session_state.outline_data:
-        st.warning("⚠️ 请先生成大纲")
+        st.warning(" 请先生成大纲")
         return
     
     # 调试信息
@@ -1911,35 +2128,35 @@ def link_characters_to_outline():
                     total_links = sum(len(chars) for chars in st.session_state.character_chapter_mapping.values())
                     
                     if success and total_links > 0:
-                        st.success(f"✅ 智能分析完成！共建立 {total_links} 个角色-章节关联")
+                        st.success(f" 智能分析完成！共建立 {total_links} 个角色-章节关联")
                         
                         # 显示分析结果预览
-                        with st.expander("📊 查看分析结果", expanded=True):
+                        with st.expander(" 查看分析结果", expanded=True):
                             for chapter_id, characters in st.session_state.character_chapter_mapping.items():
                                 if characters:
                                     chapter_title = next((ch['title'] for ch in st.session_state.outline_data if ch['chapter_id'] == chapter_id), chapter_id)
                                     st.info(f"**{chapter_title}**: {', '.join(characters)}")
                     elif success and total_links == 0:
-                        st.warning("⚠️ 智能分析完成，但未找到明显的角色-章节关联，建议手动设置")
+                        st.warning(" 智能分析完成，但未找到明显的角色-章节关联，建议手动设置")
                     else:
-                        st.error("❌ 智能分析失败，请检查角色和大纲数据")
+                        st.error(" 智能分析失败，请检查角色和大纲数据")
                         
                 except Exception as e:
-                    st.error(f"❌ 分析过程出错: {str(e)}")
-                    print(f"❌ [角色关联] 按钮处理出错: {str(e)}")
+                    st.error(f" 分析过程出错: {str(e)}")
+                    print(f" [角色关联] 按钮处理出错: {str(e)}")
             
             st.rerun()
     
     with col2:
-        if st.button("🗑️ 清空所有关联", use_container_width=True):
+        if st.button(" 清空所有关联", use_container_width=True):
             # 统计当前关联数量
             current_links = sum(len(chars) for chars in st.session_state.character_chapter_mapping.values())
             
             st.session_state.character_chapter_mapping = {}
             
             if current_links > 0:
-                st.success(f"✅ 已清空 {current_links} 个角色-章节关联")
-                print(f"🗑️ [角色管理] 清空所有关联: {current_links} 个")
+                st.success(f" 已清空 {current_links} 个角色-章节关联")
+                print(f" [角色管理] 清空所有关联: {current_links} 个")
             else:
                 st.info("ℹ️ 当前没有角色-章节关联需要清空")
             
@@ -1973,17 +2190,17 @@ def link_characters_to_outline():
             # 更新关联
             if selected_characters != current_characters:
                 st.session_state.character_chapter_mapping[chapter_id] = selected_characters
-                st.info(f"✅ 第{i+1}章角色关联已更新")
+                st.info(f" 第{i+1}章角色关联已更新")
             
             # 显示当前关联状态
             if selected_characters:
-                st.success(f"📋 关联角色: {', '.join(selected_characters)}")
+                st.success(f" 关联角色: {', '.join(selected_characters)}")
             else:
-                st.info("📋 暂无关联角色")
+                st.info(" 暂无关联角色")
     
     # 显示关联统计
     st.markdown("---")
-    st.markdown("### 📊 关联统计")
+    st.markdown("###  关联统计")
     
     # 统计每个角色出现在多少章节中
     character_chapter_count = {}
@@ -2011,10 +2228,10 @@ def link_characters_to_outline():
 def show_character_history_panel():
     """显示角色历史记录面板"""
     st.markdown("---")
-    st.markdown("### 📋 角色操作历史")
+    st.markdown("###  角色操作历史")
     
     # 关闭历史面板按钮
-    if st.button("❌ 关闭历史面板"):
+    if st.button(" 关闭历史面板"):
         st.session_state.show_character_history = False
         st.rerun()
     
@@ -2036,10 +2253,10 @@ def show_character_history_panel():
                 st.rerun()
     
     with col3:
-        if st.button("🗑️ 清空角色历史", use_container_width=True):
+        if st.button(" 清空角色历史", use_container_width=True):
             st.session_state.characters_history = []
             st.session_state.characters_history_index = -1
-            st.success("✅ 角色历史记录已清空")
+            st.success(" 角色历史记录已清空")
             st.rerun()
     
     st.markdown("---")
@@ -2056,7 +2273,7 @@ def show_character_history_panel():
             col1, col2, col3 = st.columns([1, 3, 1])
             
             with col1:
-                status = "🔵" if is_current else "⚪"
+                status = "" if is_current else ""
                 st.markdown(f"{status} `{entry['timestamp']}`")
             
             with col2:
@@ -2069,7 +2286,7 @@ def show_character_history_panel():
                     st.session_state.characters_history_index = real_index
                     st.session_state.characters_data = copy.deepcopy(entry['characters_data'])
                     st.session_state.character_chapter_mapping = copy.deepcopy(entry['character_chapter_mapping'])
-                    st.success(f"✅ 已跳转到: {entry['action']}")
+                    st.success(f" 已跳转到: {entry['action']}")
                     st.rerun()
         
         if i < len(st.session_state.characters_history) - 1:
@@ -2078,10 +2295,10 @@ def show_character_history_panel():
 def show_story_history_panel():
     """显示故事历史记录面板"""
     st.markdown("---")
-    st.markdown("### 📋 故事操作历史")
+    st.markdown("###  故事操作历史")
     
     # 关闭历史面板按钮
-    if st.button("❌ 关闭历史面板"):
+    if st.button(" 关闭历史面板"):
         st.session_state.show_story_history = False
         st.rerun()
     
@@ -2103,10 +2320,10 @@ def show_story_history_panel():
                 st.rerun()
     
     with col3:
-        if st.button("🗑️ 清空故事历史", use_container_width=True):
+        if st.button(" 清空故事历史", use_container_width=True):
             st.session_state.story_history = []
             st.session_state.story_history_index = -1
-            st.success("✅ 故事历史记录已清空")
+            st.success(" 故事历史记录已清空")
             st.rerun()
     
     st.markdown("---")
@@ -2123,7 +2340,7 @@ def show_story_history_panel():
             col1, col2, col3 = st.columns([1, 3, 1])
             
             with col1:
-                status = "🔵" if is_current else "⚪"
+                status = "" if is_current else ""
                 st.markdown(f"{status} `{entry['timestamp']}`")
             
             with col2:
@@ -2136,7 +2353,7 @@ def show_story_history_panel():
                 if st.button("📍", key=f"goto_story_{real_index}", help="跳转到此状态"):
                     st.session_state.story_history_index = real_index
                     st.session_state.story_data = copy.deepcopy(entry['story_data'])
-                    st.success(f"✅ 已跳转到: {entry['action']}")
+                    st.success(f" 已跳转到: {entry['action']}")
                     st.rerun()
         
         if i < len(st.session_state.story_history) - 1:
@@ -2144,7 +2361,7 @@ def show_story_history_panel():
 
 def show_character_edit_mode():
     """角色编辑模式 - 参考大纲编辑的方式"""
-    st.markdown("### ✏️ 角色编辑模式")
+    st.markdown("###  角色编辑模式")
     
     # 退出编辑模式按钮
     if st.button("← 返回角色列表"):
@@ -2222,12 +2439,12 @@ def show_character_edit_mode():
                     regenerate_single_character(character_idx)
             
             with col2:
-                if st.button("🗑️ 删除角色", key=f"delete_char_{character_idx}"):
+                if st.button(" 删除角色", key=f"delete_char_{character_idx}"):
                     # 保存删除前的状态到历史记录
                     save_characters_to_history(f"删除角色: {character.get('name', f'角色{character_idx+1}')}", st.session_state.characters_data.copy())
                     # 执行删除
                     deleted_character = st.session_state.characters_data.pop(character_idx)
-                    st.success(f"✅ 已删除角色: {deleted_character.get('name', '未知角色')}")
+                    st.success(f" 已删除角色: {deleted_character.get('name', '未知角色')}")
                     
                     # 删除后自动重新关联大纲
                     auto_relink_characters_to_outline()
@@ -2235,7 +2452,7 @@ def show_character_edit_mode():
                     st.rerun()
             
             with col3:
-                if st.button("✅ 保存修改", key=f"save_char_{character_idx}"):
+                if st.button(" 保存修改", key=f"save_char_{character_idx}"):
                     save_character_edit(character_idx, new_name, new_role, new_traits, new_background, new_motivation)
             
             st.markdown("---")
@@ -2270,7 +2487,7 @@ def regenerate_single_character(character_idx):
             start_time = time.time()
             
             # 在终端显示后端调用信息
-            print(f"📊 [角色编辑] 调用后端模块: src.generation.generate_characters.generate_characters_v1")
+            print(f" [角色编辑] 调用后端模块: src.generation.generate_characters.generate_characters_v1")
             print(f"📝 [角色编辑] 重新生成单个角色: {character.get('name', '未知角色')}")
             
             # 构建针对当前角色的重新生成指令
@@ -2298,7 +2515,7 @@ def regenerate_single_character(character_idx):
             
             # 验证生成结果
             if not new_characters or not isinstance(new_characters, list) or len(new_characters) <= character_idx:
-                st.error("❌ 角色重新生成失败：后端返回数据不足")
+                st.error(" 角色重新生成失败：后端返回数据不足")
                 return
             
             # 保存重新生成前的状态到历史记录
@@ -2311,9 +2528,9 @@ def regenerate_single_character(character_idx):
             # 在终端显示结果
             new_name = new_characters[character_idx].get('name', '未知角色')
             print(f"⏱️ [角色编辑] 生成耗时: {end_time - start_time:.3f}秒")
-            print(f"🎉 [角色编辑] 角色重新生成完成: {current_name} → {new_name}")
+            print(f" [角色编辑] 角色重新生成完成: {current_name} → {new_name}")
             
-            st.success(f"✅ 角色重新生成完成: {current_name} → {new_name}")
+            st.success(f" 角色重新生成完成: {current_name} → {new_name}")
             st.info(f"⏱️ 生成耗时: {end_time - start_time:.3f}秒")
             
             # 重新生成后自动关联大纲
@@ -2322,8 +2539,8 @@ def regenerate_single_character(character_idx):
             st.rerun()
             
     except Exception as e:
-        st.error(f"❌ 角色重新生成失败: {str(e)}")
-        print(f"❌ [角色编辑] 角色重新生成失败: {str(e)}")
+        st.error(f" 角色重新生成失败: {str(e)}")
+        print(f" [角色编辑] 角色重新生成失败: {str(e)}")
 
 def save_character_edit(character_idx, new_name, new_role, new_traits, new_background, new_motivation):
     """保存角色编辑"""
@@ -2338,8 +2555,8 @@ def save_character_edit(character_idx, new_name, new_role, new_traits, new_backg
     st.session_state.characters_data[character_idx]['background'] = new_background
     st.session_state.characters_data[character_idx]['motivation'] = new_motivation
     
-    st.success(f"✅ 角色 {new_name} 修改已保存")
-    print(f"💾 [角色编辑] 保存角色修改: {new_name}")
+    st.success(f" 角色 {new_name} 修改已保存")
+    print(f" [角色编辑] 保存角色修改: {new_name}")
     
     # 自动重新关联大纲
     auto_relink_characters_to_outline()
@@ -2363,11 +2580,11 @@ def add_new_character(name, role, traits, background, motivation):
         # 添加到角色列表
         st.session_state.characters_data.append(new_character)
         
-        st.success(f"✅ 新角色已添加: {name}")
+        st.success(f" 新角色已添加: {name}")
         print(f"➕ [角色编辑] 添加新角色: {name}")
         
         # 显示角色列表预览
-        st.info("📋 当前角色列表:")
+        st.info(" 当前角色列表:")
         for i, char in enumerate(st.session_state.characters_data):
             marker = "🆕" if i == len(st.session_state.characters_data) - 1 else "👤"
             st.text(f"  {marker} {i+1}. {char.get('name', '未知角色')}")
@@ -2376,12 +2593,12 @@ def add_new_character(name, role, traits, background, motivation):
         auto_relink_characters_to_outline()
         
     except Exception as e:
-        st.error(f"❌ 添加角色失败: {str(e)}")
-        print(f"❌ [角色编辑] 添加角色失败: {str(e)}")
+        st.error(f" 添加角色失败: {str(e)}")
+        print(f" [角色编辑] 添加角色失败: {str(e)}")
 
 def show_character_consistency_check():
     """显示角色一致性检查界面"""
-    st.markdown("### 🎯 角色一致性检查")
+    st.markdown("###  角色一致性检查")
     
     # 返回按钮
     if st.button("← 返回角色列表"):
@@ -2391,11 +2608,11 @@ def show_character_consistency_check():
     st.markdown("---")
     
     if not st.session_state.characters_data or not st.session_state.outline_data:
-        st.warning("⚠️ 需要同时有角色数据和大纲数据才能进行一致性检查")
+        st.warning(" 需要同时有角色数据和大纲数据才能进行一致性检查")
         return
     
     # 一致性检查配置
-    st.markdown("### ⚙️ 检查配置")
+    st.markdown("###  检查配置")
     col1, col2 = st.columns(2)
     
     with col1:
@@ -2430,7 +2647,7 @@ def perform_consistency_check(check_scope, check_level, show_suggestions, auto_f
             # 记录开始时间
             start_time = time.time()
             
-            print(f"🎯 [一致性检查] 开始执行 - 范围: {check_scope}, 级别: {check_level}")
+            print(f" [一致性检查] 开始执行 - 范围: {check_scope}, 级别: {check_level}")
             
             # 构建检查提示
             characters_info = []
@@ -2533,20 +2750,20 @@ def perform_consistency_check(check_scope, check_level, show_suggestions, auto_f
             print(f"⏱️ [一致性检查] 分析耗时: {end_time - start_time:.3f}秒")
             
             if not analysis_result or not isinstance(analysis_result, dict):
-                st.error("❌ 一致性检查失败：后端返回数据格式不正确")
+                st.error(" 一致性检查失败：后端返回数据格式不正确")
                 return
             
             # 显示检查结果
             display_consistency_results(analysis_result, show_suggestions, auto_fix)
             
     except Exception as e:
-        st.error(f"❌ 一致性检查失败: {str(e)}")
-        print(f"❌ [一致性检查] 检查失败: {str(e)}")
+        st.error(f" 一致性检查失败: {str(e)}")
+        print(f" [一致性检查] 检查失败: {str(e)}")
 
 def display_consistency_results(analysis_result, show_suggestions, auto_fix):
     """显示一致性检查结果"""
     st.markdown("---")
-    st.markdown("## 📊 一致性检查报告")
+    st.markdown("##  一致性检查报告")
     
     # 整体评分
     overall_score = analysis_result.get('overall_consistency', 'N/A')
@@ -2568,7 +2785,7 @@ def display_consistency_results(analysis_result, show_suggestions, auto_fix):
                 score_color = "🔴"
                 score_level = "需改进"
         except:
-            score_color = "⚪"
+            score_color = ""
             score_level = "未知"
         
         st.metric("整体一致性评分", f"{score_color} {overall_score}/10", delta=score_level)
@@ -2595,13 +2812,13 @@ def display_consistency_results(analysis_result, show_suggestions, auto_fix):
                 
                 # 显示优点
                 if strengths:
-                    st.markdown("**✅ 优点:**")
+                    st.markdown("** 优点:**")
                     for strength in strengths:
                         st.success(f"• {strength}")
                 
                 # 显示问题
                 if issues:
-                    st.markdown("**⚠️ 发现的问题:**")
+                    st.markdown("** 发现的问题:**")
                     
                     for issue in issues:
                         issue_type = issue.get('type', '未知问题')
@@ -2615,16 +2832,16 @@ def display_consistency_results(analysis_result, show_suggestions, auto_fix):
                         elif severity == '中':
                             st.warning(f"🟡 **{issue_type}** (中等)")
                         else:
-                            st.info(f"🔵 **{issue_type}** (轻微)")
+                            st.info(f" **{issue_type}** (轻微)")
                         
                         st.markdown(f"   描述: {description}")
                         
                         if show_suggestions and suggestion:
-                            st.markdown(f"   💡 建议: {suggestion}")
+                            st.markdown(f"    建议: {suggestion}")
                         
                         st.markdown("---")
                 else:
-                    st.success("✅ 未发现明显问题")
+                    st.success(" 未发现明显问题")
     
     # 角色间冲突分析
     cross_character_issues = analysis_result.get('cross_character_issues', [])
@@ -2649,14 +2866,14 @@ def display_consistency_results(analysis_result, show_suggestions, auto_fix):
     recommendations = analysis_result.get('recommendations', [])
     
     if recommendations and show_suggestions:
-        st.markdown("### 💡 优化建议")
+        st.markdown("###  优化建议")
         
         for i, rec in enumerate(recommendations):
             st.info(f"{i+1}. {rec}")
     
     # 保存报告
     st.markdown("---")
-    if st.button("💾 保存检查报告", use_container_width=True):
+    if st.button(" 保存检查报告", use_container_width=True):
         save_consistency_report(analysis_result)
 
 def save_consistency_report(analysis_result):
@@ -2666,12 +2883,12 @@ def save_consistency_report(analysis_result):
         report_filename = f"consistency_report_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
         save_json(analysis_result, st.session_state.current_version, report_filename)
         
-        st.success(f"✅ 检查报告已保存: {st.session_state.current_version}/{report_filename}")
-        print(f"💾 [一致性检查] 保存报告: {report_filename}")
+        st.success(f" 检查报告已保存: {st.session_state.current_version}/{report_filename}")
+        print(f" [一致性检查] 保存报告: {report_filename}")
         
     except Exception as e:
-        st.error(f"❌ 保存报告失败: {str(e)}")
-        print(f"❌ [一致性检查] 保存报告失败: {str(e)}")
+        st.error(f" 保存报告失败: {str(e)}")
+        print(f" [一致性检查] 保存报告失败: {str(e)}")
 
 def show_character_relationships():
     """显示角色关系网络界面"""
@@ -2685,11 +2902,11 @@ def show_character_relationships():
     st.markdown("---")
     
     if not st.session_state.characters_data:
-        st.warning("⚠️ 需要有角色数据才能分析关系网络")
+        st.warning(" 需要有角色数据才能分析关系网络")
         return
     
     # 关系分析配置
-    st.markdown("### ⚙️ 分析配置")
+    st.markdown("###  分析配置")
     col1, col2 = st.columns(2)
     
     with col1:
@@ -2823,15 +3040,15 @@ def perform_relationship_analysis(analysis_depth, include_outline, relationship_
             print(f"⏱️ [关系分析] 分析耗时: {end_time - start_time:.3f}秒")
             
             if not analysis_result or not isinstance(analysis_result, dict):
-                st.error("❌ 关系分析失败：后端返回数据格式不正确")
+                st.error(" 关系分析失败：后端返回数据格式不正确")
                 return
             
             # 显示分析结果
             display_relationship_results(analysis_result, show_network_graph)
             
     except Exception as e:
-        st.error(f"❌ 关系分析失败: {str(e)}")
-        print(f"❌ [关系分析] 分析失败: {str(e)}")
+        st.error(f" 关系分析失败: {str(e)}")
+        print(f" [关系分析] 分析失败: {str(e)}")
 
 def display_relationship_results(analysis_result, show_network_graph):
     """显示角色关系分析结果"""
@@ -2840,7 +3057,7 @@ def display_relationship_results(analysis_result, show_network_graph):
     
     # 网络总览
     relationship_summary = analysis_result.get('relationship_summary', '无总结')
-    st.markdown("### 📊 网络总览")
+    st.markdown("###  网络总览")
     st.info(relationship_summary)
     
     st.markdown("---")
@@ -2865,7 +3082,7 @@ def display_relationship_results(analysis_result, show_network_graph):
         with col3:
             st.metric("负面关系", negative_relationships, delta="🔴")
         with col4:
-            st.metric("中性关系", neutral_relationships, delta="⚪")
+            st.metric("中性关系", neutral_relationships, delta="")
         
         st.markdown("---")
         
@@ -2886,7 +3103,7 @@ def display_relationship_results(analysis_result, show_network_graph):
             elif rel_nature == '负面':
                 nature_color = "🔴"
             else:
-                nature_color = "⚪"
+                nature_color = ""
             
             with st.expander(f"{nature_color} **{char_a} ↔ {char_b}** ({rel_type}) - 强度: {rel_strength}/10"):
                 
@@ -2910,7 +3127,7 @@ def display_relationship_results(analysis_result, show_network_graph):
     
     if centrality_data:
         st.markdown("---")
-        st.markdown("### 🎯 角色中心度分析")
+        st.markdown("###  角色中心度分析")
         
         # 按中心度排序
         centrality_data.sort(key=lambda x: float(x.get('centrality_score', 0)), reverse=True)
@@ -2929,9 +3146,9 @@ def display_relationship_results(analysis_result, show_network_graph):
                 elif score_value >= 6:
                     score_color = "🟡"
                 else:
-                    score_color = "🔵"
+                    score_color = ""
             except:
-                score_color = "⚪"
+                score_color = ""
             
             with st.expander(f"{score_color} **{character}** - 中心度: {centrality_score}/10"):
                 st.markdown(f"**网络作用:** {role_in_network}")
@@ -2962,7 +3179,7 @@ def display_relationship_results(analysis_result, show_network_graph):
     
     if insights:
         st.markdown("---")
-        st.markdown("### 💡 网络洞察")
+        st.markdown("###  网络洞察")
         
         for i, insight in enumerate(insights):
             st.info(f"{i+1}. {insight}")
@@ -2976,12 +3193,12 @@ def display_relationship_results(analysis_result, show_network_graph):
             # 创建网络图
             create_relationship_network_graph(relationships, centrality_data)
         except Exception as e:
-            st.warning(f"⚠️ 网络图生成失败: {str(e)}")
-            st.info("💡 可以尝试安装 networkx 和 matplotlib 库以支持网络图可视化")
+            st.warning(f" 网络图生成失败: {str(e)}")
+            st.info(" 可以尝试安装 networkx 和 matplotlib 库以支持网络图可视化")
     
     # 保存分析结果
     st.markdown("---")
-    if st.button("💾 保存关系分析", use_container_width=True):
+    if st.button(" 保存关系分析", use_container_width=True):
         save_relationship_analysis(analysis_result)
 
 def create_relationship_network_graph(relationships, centrality_data):
@@ -3033,11 +3250,11 @@ def create_relationship_network_graph(relationships, centrality_data):
                 
                 # 根据关系性质选择边的样式
                 if rel_nature == '正面':
-                    edge_style = f"A{a_idx} -.->|\"✅ {rel_type}\"| A{b_idx}"
+                    edge_style = f"A{a_idx} -.->|\" {rel_type}\"| A{b_idx}"
                 elif rel_nature == '负面':
-                    edge_style = f"A{a_idx} -.->|\"❌ {rel_type}\"| A{b_idx}"
+                    edge_style = f"A{a_idx} -.->|\" {rel_type}\"| A{b_idx}"
                 else:
-                    edge_style = f"A{a_idx} -.->|\"⚪ {rel_type}\"| A{b_idx}"
+                    edge_style = f"A{a_idx} -.->|\" {rel_type}\"| A{b_idx}"
                 
                 mermaid_code += f"    {edge_style}\n"
         
@@ -3048,9 +3265,9 @@ def create_relationship_network_graph(relationships, centrality_data):
         create_relationship_table(relationships, centrality_data)
         
         # 显示Mermaid代码供用户使用
-        with st.expander("📊 查看Mermaid图表代码", expanded=False):
+        with st.expander(" 查看Mermaid图表代码", expanded=False):
             st.code(mermaid_code, language="text")
-            st.info("💡 可以复制上面的代码到 [Mermaid在线编辑器](https://mermaid.live/) 中查看可视化图表")
+            st.info(" 可以复制上面的代码到 [Mermaid在线编辑器](https://mermaid.live/) 中查看可视化图表")
             
             # 提供直接链接
             import urllib.parse
@@ -3062,12 +3279,12 @@ def create_relationship_network_graph(relationships, centrality_data):
         create_simple_network_html(characters, relationships)
         
     except Exception as e:
-        st.error(f"❌ 生成网络图失败: {str(e)}")
-        print(f"❌ [关系网络] 图表生成失败: {str(e)}")
+        st.error(f" 生成网络图失败: {str(e)}")
+        print(f" [关系网络] 图表生成失败: {str(e)}")
 
 def create_relationship_table(relationships, centrality_data):
     """创建关系网络表格显示"""
-    st.markdown("#### 📊 关系网络表格")
+    st.markdown("####  关系网络表格")
     
     # 创建关系数据表格
     if relationships:
@@ -3089,7 +3306,7 @@ def create_relationship_table(relationships, centrality_data):
     
     # 显示中心度排名
     if centrality_data:
-        st.markdown("#### 🎯 角色重要性排名")
+        st.markdown("####  角色重要性排名")
         
         # 按中心度排序
         sorted_centrality = sorted(centrality_data, key=lambda x: float(x.get('centrality_score', 0)), reverse=True)
@@ -3213,12 +3430,12 @@ def save_relationship_analysis(analysis_result):
         report_filename = f"relationship_analysis_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
         save_json(analysis_result, st.session_state.current_version, report_filename)
         
-        st.success(f"✅ 关系分析已保存: {st.session_state.current_version}/{report_filename}")
-        print(f"💾 [关系分析] 保存分析: {report_filename}")
+        st.success(f" 关系分析已保存: {st.session_state.current_version}/{report_filename}")
+        print(f" [关系分析] 保存分析: {report_filename}")
         
     except Exception as e:
-        st.error(f"❌ 保存分析失败: {str(e)}")
-        print(f"❌ [关系分析] 保存分析失败: {str(e)}")
+        st.error(f" 保存分析失败: {str(e)}")
+        print(f" [关系分析] 保存分析失败: {str(e)}")
 
 def show_story_generation_interface():
     """显示故事生成界面 - 作为主流程步骤"""
@@ -3226,11 +3443,11 @@ def show_story_generation_interface():
     
     # 检查前置条件
     if not st.session_state.outline_data:
-        st.error("❌ 请先完成步骤1: 生成故事大纲")
+        st.error(" 请先完成步骤1: 生成故事大纲")
         return
     
     if not st.session_state.characters_data:
-        st.error("❌ 请先完成步骤2: 生成角色设定")
+        st.error(" 请先完成步骤2: 生成角色设定")
         return
     
     # 显示基于大纲和角色的故事生成界面
@@ -3241,7 +3458,7 @@ def show_story_generation_mode():
     st.subheader("📖 故事内容生成与管理")
     
     # 故事生成配置
-    st.markdown("### ⚙️ 故事生成配置")
+    st.markdown("###  故事生成配置")
     col1, col2 = st.columns(2)
     
     with col1:
@@ -3287,14 +3504,14 @@ def show_story_generation_mode():
         st.info(f"🔍 调试: 当前故事数据状态 - {type(st.session_state.get('story_data', None))}, 长度: {len(st.session_state.get('story_data', []))}")
         
         # 提示用户开始生成故事
-        st.info("💡 点击上方'生成故事'按钮开始基于大纲和角色生成详细故事")
+        st.info(" 点击上方'生成故事'按钮开始基于大纲和角色生成详细故事")
 
 def expand_story_from_outline(use_narrative_guidance=True, custom_instruction="", use_cache=True, auto_save=True):
     """从大纲和角色扩展故事 - 集成版本"""
     try:
         # 检查缓存
         if use_cache and st.session_state.story_data:
-            st.success("✅ 使用缓存的故事数据")
+            st.success(" 使用缓存的故事数据")
             return
         
         with st.spinner("📖 正在生成详细故事内容..."):
@@ -3302,7 +3519,7 @@ def expand_story_from_outline(use_narrative_guidance=True, custom_instruction=""
             start_time = time.time()
             
             # 在终端显示后端调用信息
-            print(f"📊 [故事生成器集成] 调用后端模块: src.generation.expand_story.expand_story_v1")
+            print(f" [故事生成器集成] 调用后端模块: src.generation.expand_story.expand_story_v1")
             print(f"📝 [故事生成器集成] 输入参数: 大纲章节数={len(st.session_state.outline_data)}, 角色数={len(st.session_state.characters_data)}")
             
             # 准备自定义指导
@@ -3325,12 +3542,12 @@ def expand_story_from_outline(use_narrative_guidance=True, custom_instruction=""
             
             # 在终端显示结果
             print(f"⏱️ [故事生成器集成] 生成耗时: {end_time - start_time:.3f}秒")
-            print(f"🎉 [故事生成器集成] 故事生成完成！共生成 {len(story) if story else 0} 个章节")
+            print(f" [故事生成器集成] 故事生成完成！共生成 {len(story) if story else 0} 个章节")
             
             # 验证生成结果
             if not story or not isinstance(story, list):
-                st.error("❌ 故事生成失败：后端返回数据格式不正确")
-                print(f"❌ [故事生成器集成] 后端返回数据格式错误: {type(story)} - {str(story)[:200]}...")
+                st.error(" 故事生成失败：后端返回数据格式不正确")
+                print(f" [故事生成器集成] 后端返回数据格式错误: {type(story)} - {str(story)[:200]}...")
                 return
             
             # 补充章节ID和标题
@@ -3354,7 +3571,7 @@ def expand_story_from_outline(use_narrative_guidance=True, custom_instruction=""
                 save_story_to_project()
             
             # 显示成功信息
-            st.success(f"🎉 故事生成完成！共生成 {len(story)} 个章节")
+            st.success(f" 故事生成完成！共生成 {len(story)} 个章节")
             st.info(f"⏱️ 生成耗时: {end_time - start_time:.3f}秒")
             
             # 显示章节简要信息
@@ -3363,14 +3580,14 @@ def expand_story_from_outline(use_narrative_guidance=True, custom_instruction=""
             st.rerun()
             
     except Exception as e:
-        st.error(f"❌ 故事生成失败: {str(e)}")
-        print(f"❌ [故事生成器集成] 故事生成失败: {str(e)}")
+        st.error(f" 故事生成失败: {str(e)}")
+        print(f" [故事生成器集成] 故事生成失败: {str(e)}")
 
 def save_story_to_project():
     """保存故事到项目目录"""
     try:
         if not st.session_state.story_data:
-            st.warning("⚠️ 没有故事数据可保存")
+            st.warning(" 没有故事数据可保存")
             return
         
         start_time = time.time()
@@ -3378,12 +3595,12 @@ def save_story_to_project():
         save_json(st.session_state.story_data, st.session_state.current_version, "story.json")
         end_time = time.time()
         
-        st.success(f"✅ 故事已保存到项目目录: {st.session_state.current_version}/story.json")
-        print(f"💾 [故事生成器集成] 保存故事到项目: {st.session_state.current_version}/story.json ({len(st.session_state.story_data)} 个章节)")
+        st.success(f" 故事已保存到项目目录: {st.session_state.current_version}/story.json")
+        print(f" [故事生成器集成] 保存故事到项目: {st.session_state.current_version}/story.json ({len(st.session_state.story_data)} 个章节)")
         
     except Exception as e:
-        st.error(f"❌ 保存失败: {str(e)}")
-        print(f"❌ [故事生成器集成] 保存故事失败: {str(e)}")
+        st.error(f" 保存失败: {str(e)}")
+        print(f" [故事生成器集成] 保存故事失败: {str(e)}")
 
 def load_existing_story():
     """加载已有故事文件"""
@@ -3402,7 +3619,7 @@ def load_existing_story():
         try:
             # 显示文件信息
             st.info(f"📄 文件名: {uploaded_file.name}")
-            st.info(f"📊 文件大小: {uploaded_file.size} bytes")
+            st.info(f" 文件大小: {uploaded_file.size} bytes")
             
             # 重置文件指针到开始位置
             uploaded_file.seek(0)
@@ -3419,23 +3636,23 @@ def load_existing_story():
             
             # 详细验证数据格式
             if not isinstance(story_data, list):
-                st.error("❌ 文件格式不正确：应为JSON数组格式")
+                st.error(" 文件格式不正确：应为JSON数组格式")
                 return
             
             if len(story_data) == 0:
-                st.error("❌ 文件内容为空：没有找到故事数据")
+                st.error(" 文件内容为空：没有找到故事数据")
                 return
             
             # 验证故事数据格式
             required_fields = ['plot']
             for i, chapter in enumerate(story_data):
                 if not isinstance(chapter, dict):
-                    st.error(f"❌ 第{i+1}个章节格式不正确：应为对象格式")
+                    st.error(f" 第{i+1}个章节格式不正确：应为对象格式")
                     return
                 
                 missing_fields = [field for field in required_fields if field not in chapter]
                 if missing_fields:
-                    st.error(f"❌ 第{i+1}个章节缺少必要字段: {', '.join(missing_fields)}")
+                    st.error(f" 第{i+1}个章节缺少必要字段: {', '.join(missing_fields)}")
                     return
             
             # 加载数据
@@ -3444,7 +3661,7 @@ def load_existing_story():
             # 保存到历史记录
             save_story_to_history("加载故事")
             
-            st.success(f"✅ 故事数据加载成功！共 {len(story_data)} 个章节")
+            st.success(f" 故事数据加载成功！共 {len(story_data)} 个章节")
             st.info("🔄 页面将自动刷新...")
             
             # 显示加载的故事预览
@@ -3465,16 +3682,16 @@ def load_existing_story():
             st.rerun()
             
         except json.JSONDecodeError as e:
-            st.error(f"❌ JSON格式错误: {str(e)}")
-            st.error("💡 请确保文件是有效的JSON格式")
+            st.error(f" JSON格式错误: {str(e)}")
+            st.error(" 请确保文件是有效的JSON格式")
         except UnicodeDecodeError as e:
-            st.error(f"❌ 文件编码错误: {str(e)}")
-            st.error("💡 请确保文件是UTF-8编码")
+            st.error(f" 文件编码错误: {str(e)}")
+            st.error(" 请确保文件是UTF-8编码")
         except Exception as e:
-            st.error(f"❌ 文件加载失败: {str(e)}")
-            print(f"❌ [故事管理] 加载失败: {str(e)}")
+            st.error(f" 文件加载失败: {str(e)}")
+            print(f" [故事管理] 加载失败: {str(e)}")
     else:
-        st.info("💡 请选择一个JSON格式的故事文件")
+        st.info(" 请选择一个JSON格式的故事文件")
 
 def show_story_display():
     """显示故事信息和管理界面"""
@@ -3500,11 +3717,11 @@ def show_story_display():
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        if st.button("💾 保存故事", use_container_width=True):
+        if st.button(" 保存故事", use_container_width=True):
             save_story_to_project()
     
     with col2:
-        if st.button("📋 故事历史", use_container_width=True):
+        if st.button(" 故事历史", use_container_width=True):
             st.session_state.show_story_history = True
             st.rerun()
     
@@ -3514,12 +3731,12 @@ def show_story_display():
             expand_story_from_outline(use_cache=False, auto_save=True)
     
     with col4:
-        if st.button("🗑️ 清空故事", use_container_width=True):
-            if st.button("⚠️ 确认清空", key="confirm_clear_story"):
+        if st.button(" 清空故事", use_container_width=True):
+            if st.button(" 确认清空", key="confirm_clear_story"):
                 save_story_to_history("清空故事", st.session_state.story_data.copy())
                 st.session_state.story_data = []
-                st.success("✅ 故事数据已清空")
-                print("🗑️ [故事管理] 清空故事数据")
+                st.success(" 故事数据已清空")
+                print(" [故事管理] 清空故事数据")
                 st.rerun()
     
     # 显示故事历史记录面板
@@ -3529,7 +3746,7 @@ def show_story_display():
     st.markdown("---")
     
     # 功能选项卡
-    tab1, tab2, tab3, tab4 = st.tabs(["📋 章节摘要", "🔗 连贯性检查", "✏️ 重点调整", "🎨 风格统一性"])
+    tab1, tab2, tab3, tab4 = st.tabs([" 章节摘要", "🔗 连贯性检查", " 重点调整", " 风格统一性"])
     
     with tab1:
         show_story_summary()
@@ -3545,7 +3762,7 @@ def show_story_display():
 
 def show_story_summary():
     """显示章节摘要概览"""
-    st.markdown("#### 📋 所有章节概览")
+    st.markdown("####  所有章节概览")
     
     story = st.session_state.story_data
     
@@ -3654,7 +3871,7 @@ def show_coherence_check():
 
 def show_story_editing():
     """显示故事编辑界面"""
-    st.markdown("#### ✏️ 章节重点调整")
+    st.markdown("####  章节重点调整")
     
     story = st.session_state.story_data
     
@@ -3683,7 +3900,7 @@ def show_story_editing():
                         regenerate_single_story_chapter(chapter_idx)
                 
                 with col2:
-                    if st.button(f"✏️ 手动编辑第{chapter_idx+1}章", key=f"edit_{chapter_idx}"):
+                    if st.button(f" 手动编辑第{chapter_idx+1}章", key=f"edit_{chapter_idx}"):
                         st.session_state[f'edit_story_{chapter_idx}'] = True
                         st.rerun()
                 
@@ -3709,7 +3926,7 @@ def show_story_editing():
                     )
                     
                     if uploaded_suggestions is not None:
-                        if st.button(f"🚀 根据建议文件执行更新", key=f"execute_uploaded_{chapter_idx}", type="primary"):
+                        if st.button(f" 根据建议文件执行更新", key=f"execute_uploaded_{chapter_idx}", type="primary"):
                             execute_uploaded_suggestions(chapter_idx, uploaded_suggestions, new_plot)
                             return
                     
@@ -3745,7 +3962,7 @@ def show_story_editing():
                     
                     col1, col2, col3 = st.columns(3)
                     with col1:
-                        if st.button(f"✅ 智能保存", key=f"smart_save_{chapter_idx}", type="primary"):
+                        if st.button(f" 智能保存", key=f"smart_save_{chapter_idx}", type="primary"):
                             smart_save_story_chapter_edit(
                                 chapter_idx, 
                                 new_plot, 
@@ -3755,17 +3972,17 @@ def show_story_editing():
                             )
                     
                     with col2:
-                        if st.button(f"💾 直接保存", key=f"direct_save_{chapter_idx}"):
+                        if st.button(f" 直接保存", key=f"direct_save_{chapter_idx}"):
                             save_story_chapter_edit(chapter_idx, new_plot)
                     
                     with col3:
-                        if st.button(f"❌ 取消编辑", key=f"cancel_{chapter_idx}"):
+                        if st.button(f" 取消编辑", key=f"cancel_{chapter_idx}"):
                             st.session_state[f'edit_story_{chapter_idx}'] = False
                             st.rerun()
 
 def show_style_consistency():
     """显示风格统一性检查"""
-    st.markdown("#### 🎨 风格统一性确认")
+    st.markdown("####  风格统一性确认")
     
     # 风格检查配置
     col1, col2 = st.columns(2)
@@ -3782,7 +3999,7 @@ def show_style_consistency():
     with col2:
         target_style = st.text_input("目标风格", value=st.session_state.get('current_style', '科幻改写'))
     
-    if st.button("🎨 开始风格检查", type="primary", use_container_width=True):
+    if st.button(" 开始风格检查", type="primary", use_container_width=True):
         perform_style_consistency_check(check_aspects, target_style)
 
 def perform_coherence_analysis():
@@ -3855,16 +4072,16 @@ def perform_coherence_analysis():
             if analysis_result and isinstance(analysis_result, dict):
                 display_coherence_results(analysis_result)
             else:
-                st.error("❌ 连贯性分析失败：后端返回数据格式不正确")
+                st.error(" 连贯性分析失败：后端返回数据格式不正确")
                 
     except Exception as e:
-        st.error(f"❌ 连贯性分析失败: {str(e)}")
-        print(f"❌ [连贯性检查] 分析失败: {str(e)}")
+        st.error(f" 连贯性分析失败: {str(e)}")
+        print(f" [连贯性检查] 分析失败: {str(e)}")
 
 def display_coherence_results(analysis_result):
     """显示连贯性分析结果"""
     st.markdown("---")
-    st.markdown("## 📊 连贯性分析报告")
+    st.markdown("##  连贯性分析报告")
     
     # 整体评分
     overall_score = analysis_result.get('overall_coherence', 'N/A')
@@ -3885,7 +4102,7 @@ def display_coherence_results(analysis_result):
                 score_color = "🔴"
                 score_level = "需改进"
         except:
-            score_color = "⚪"
+            score_color = ""
             score_level = "未知"
         
         st.metric("整体连贯性评分", f"{score_color} {overall_score}/10", delta=score_level)
@@ -3907,12 +4124,12 @@ def display_coherence_results(analysis_result):
             
             with st.expander(f"**{chapter}** - 连贯性: {score}/10"):
                 if issues:
-                    st.markdown("**⚠️ 发现的问题:**")
+                    st.markdown("** 发现的问题:**")
                     for issue in issues:
                         st.warning(f"• {issue}")
                 
                 if suggestions:
-                    st.markdown("**💡 改进建议:**")
+                    st.markdown("** 改进建议:**")
                     for suggestion in suggestions:
                         st.info(f"• {suggestion}")
     
@@ -3937,14 +4154,14 @@ def display_coherence_results(analysis_result):
     # 整体建议
     recommendations = analysis_result.get('recommendations', [])
     if recommendations:
-        st.markdown("### 💡 整体改进建议")
+        st.markdown("###  整体改进建议")
         for rec in recommendations:
             st.info(f"• {rec}")
 
 def perform_style_consistency_check(check_aspects, target_style):
     """执行风格一致性检查"""
     try:
-        with st.spinner("🎨 正在检查风格一致性..."):
+        with st.spinner(" 正在检查风格一致性..."):
             from src.utils.utils import generate_response, convert_json
             
             # 构建检查数据
@@ -4001,16 +4218,16 @@ def perform_style_consistency_check(check_aspects, target_style):
             if analysis_result and isinstance(analysis_result, dict):
                 display_style_consistency_results(analysis_result)
             else:
-                st.error("❌ 风格检查失败：后端返回数据格式不正确")
+                st.error(" 风格检查失败：后端返回数据格式不正确")
                 
     except Exception as e:
-        st.error(f"❌ 风格检查失败: {str(e)}")
-        print(f"❌ [风格检查] 检查失败: {str(e)}")
+        st.error(f" 风格检查失败: {str(e)}")
+        print(f" [风格检查] 检查失败: {str(e)}")
 
 def display_style_consistency_results(analysis_result):
     """显示风格一致性检查结果"""
     st.markdown("---")
-    st.markdown("## 🎨 风格一致性检查报告")
+    st.markdown("##  风格一致性检查报告")
     
     # 整体评分
     overall_score = analysis_result.get('overall_consistency', 'N/A')
@@ -4031,19 +4248,19 @@ def display_style_consistency_results(analysis_result):
                 score_color = "🔴"
                 score_level = "需改进"
         except:
-            score_color = "⚪"
+            score_color = ""
             score_level = "未知"
         
         st.metric("整体一致性评分", f"{score_color} {overall_score}/10", delta=score_level)
     
     with col2:
-        st.markdown("**🎨 风格评价:**")
+        st.markdown("** 风格评价:**")
         st.info(consistency_summary)
     
     # 各方面分析
     aspect_analysis = analysis_result.get('aspect_analysis', {})
     if aspect_analysis:
-        st.markdown("### 📋 各方面分析")
+        st.markdown("###  各方面分析")
         
         for aspect, data in aspect_analysis.items():
             score = data.get('score', 'N/A')
@@ -4052,12 +4269,12 @@ def display_style_consistency_results(analysis_result):
             
             with st.expander(f"**{aspect}** - 评分: {score}/10"):
                 if issues:
-                    st.markdown("**⚠️ 发现的问题:**")
+                    st.markdown("** 发现的问题:**")
                     for issue in issues:
                         st.warning(f"• {issue}")
                 
                 if suggestions:
-                    st.markdown("**💡 改进建议:**")
+                    st.markdown("** 改进建议:**")
                     for suggestion in suggestions:
                         st.info(f"• {suggestion}")
     
@@ -4074,12 +4291,12 @@ def display_style_consistency_results(analysis_result):
             
             with st.expander(f"**{chapter}** - 风格一致性: {score}/10"):
                 if issues:
-                    st.markdown("**🎨 风格问题:**")
+                    st.markdown("** 风格问题:**")
                     for issue in issues:
                         st.warning(f"• {issue}")
                 
                 if suggestions:
-                    st.markdown("**💡 改进建议:**")
+                    st.markdown("** 改进建议:**")
                     for suggestion in suggestions:
                         st.info(f"• {suggestion}")
 
@@ -4090,13 +4307,13 @@ def regenerate_single_story_chapter(chapter_idx):
         outline_chapter = st.session_state.outline_data[chapter_idx] if chapter_idx < len(st.session_state.outline_data) else None
         
         if not outline_chapter:
-            st.error("❌ 找不到对应的大纲章节")
+            st.error(" 找不到对应的大纲章节")
             return
         
         with st.spinner(f"🔄 正在重新生成第{chapter_idx+1}章..."):
             start_time = time.time()
             
-            print(f"📊 [故事编辑] 重新生成第{chapter_idx+1}章: {outline_chapter.get('title', '未知标题')}")
+            print(f" [故事编辑] 重新生成第{chapter_idx+1}章: {outline_chapter.get('title', '未知标题')}")
             
             # 保存重新生成前的状态到历史记录
             old_story_data = st.session_state.story_data.copy()
@@ -4122,17 +4339,17 @@ def regenerate_single_story_chapter(chapter_idx):
                 
                 st.session_state.story_data[chapter_idx] = new_chapter
                 
-                st.success(f"✅ 第{chapter_idx+1}章重新生成完成")
+                st.success(f" 第{chapter_idx+1}章重新生成完成")
                 st.info(f"⏱️ 生成耗时: {end_time - start_time:.3f}秒")
                 
-                print(f"🎉 [故事编辑] 第{chapter_idx+1}章重新生成完成")
+                print(f" [故事编辑] 第{chapter_idx+1}章重新生成完成")
                 st.rerun()
             else:
-                st.error("❌ 重新生成失败：后端返回数据无效")
+                st.error(" 重新生成失败：后端返回数据无效")
                 
     except Exception as e:
-        st.error(f"❌ 重新生成第{chapter_idx+1}章失败: {str(e)}")
-        print(f"❌ [故事编辑] 重新生成失败: {str(e)}")
+        st.error(f" 重新生成第{chapter_idx+1}章失败: {str(e)}")
+        print(f" [故事编辑] 重新生成失败: {str(e)}")
 
 def save_story_chapter_edit(chapter_idx, new_plot):
     """保存章节编辑"""
@@ -4147,14 +4364,14 @@ def save_story_chapter_edit(chapter_idx, new_plot):
         # 清除编辑状态
         st.session_state[f'edit_story_{chapter_idx}'] = False
         
-        st.success(f"✅ 第{chapter_idx+1}章修改已保存")
-        print(f"💾 [故事编辑] 保存第{chapter_idx+1}章修改: {len(new_plot)} 字")
+        st.success(f" 第{chapter_idx+1}章修改已保存")
+        print(f" [故事编辑] 保存第{chapter_idx+1}章修改: {len(new_plot)} 字")
         
         st.rerun()
         
     except Exception as e:
-        st.error(f"❌ 保存修改失败: {str(e)}")
-        print(f"❌ [故事编辑] 保存修改失败: {str(e)}")
+        st.error(f" 保存修改失败: {str(e)}")
+        print(f" [故事编辑] 保存修改失败: {str(e)}")
 
 def smart_save_story_chapter_edit(chapter_idx, new_plot, enable_conflict_detection, auto_suggest_updates, custom_instruction=""):
     """智能保存章节编辑 - 包含冲突检测和级联更新建议"""
@@ -4195,7 +4412,7 @@ def smart_save_story_chapter_edit(chapter_idx, new_plot, enable_conflict_detecti
             
             # 显示冲突处理界面
             if (conflicts_detected and auto_suggest_updates) or has_smart_state:
-                print(f"✅ [智能保存] 进入冲突处理分支")
+                print(f" [智能保存] 进入冲突处理分支")
                 
                 # 使用保存的状态数据或当前数据
                 display_suggestions = smart_state.get('update_suggestions', update_suggestions)
@@ -4211,13 +4428,13 @@ def smart_save_story_chapter_edit(chapter_idx, new_plot, enable_conflict_detecti
                 
                 # 显示检测到的冲突
                 if display_suggestions.get('conflicts'):
-                    st.markdown("### ⚠️ 检测到的冲突:")
+                    st.markdown("###  检测到的冲突:")
                     for conflict in display_suggestions['conflicts']:
                         st.warning(f"• {conflict}")
                 
                 # 显示更新建议
                 if display_suggestions.get('suggestions'):
-                    st.markdown("### 💡 建议的更新:")
+                    st.markdown("###  建议的更新:")
                     
                     # 大纲更新建议
                     if display_suggestions['suggestions'].get('outline_updates'):
@@ -4248,7 +4465,7 @@ def smart_save_story_chapter_edit(chapter_idx, new_plot, enable_conflict_detecti
                 col1, col2, col3 = st.columns(3)
                 
                 with col1:
-                    if st.button("🚀 执行智能更新", type="primary", key=f"execute_smart_update_{chapter_idx}"):
+                    if st.button(" 执行智能更新", type="primary", key=f"execute_smart_update_{chapter_idx}"):
                         print(f"🔴🔴🔴 [按钮点击] 执行智能更新按钮被点击！章节: {chapter_idx}")
                         print(f"🔴 [按钮点击] 更新建议类型: {type(display_suggestions)}")
                         print(f"🔴 [按钮点击] 更新建议内容: {display_suggestions}")
@@ -4260,12 +4477,12 @@ def smart_save_story_chapter_edit(chapter_idx, new_plot, enable_conflict_detecti
                         # 清除智能状态
                         if smart_state_key in st.session_state:
                             del st.session_state[smart_state_key]
-                            print(f"🗑️ [按钮点击] 已清除智能状态: {smart_state_key}")
+                            print(f" [按钮点击] 已清除智能状态: {smart_state_key}")
                         
                         return
                 
                 with col2:
-                    if st.button("💾 仅保存当前章节", key=f"save_current_only_{chapter_idx}"):
+                    if st.button(" 仅保存当前章节", key=f"save_current_only_{chapter_idx}"):
                         save_story_to_history(f"编辑第{chapter_idx+1}章(忽略冲突)", display_old_story_data)
                         st.session_state.story_data[chapter_idx]['plot'] = display_new_plot
                         st.session_state[f'edit_story_{chapter_idx}'] = False
@@ -4274,11 +4491,11 @@ def smart_save_story_chapter_edit(chapter_idx, new_plot, enable_conflict_detecti
                         if smart_state_key in st.session_state:
                             del st.session_state[smart_state_key]
                         
-                        st.success(f"✅ 第{chapter_idx+1}章已保存（未处理冲突）")
+                        st.success(f" 第{chapter_idx+1}章已保存（未处理冲突）")
                         st.rerun()
                 
                 with col3:
-                    if st.button("❌ 取消修改", key=f"cancel_smart_save_{chapter_idx}"):
+                    if st.button(" 取消修改", key=f"cancel_smart_save_{chapter_idx}"):
                         st.session_state[f'edit_story_{chapter_idx}'] = False
                         
                         # 清除智能状态
@@ -4291,25 +4508,25 @@ def smart_save_story_chapter_edit(chapter_idx, new_plot, enable_conflict_detecti
             
             # 建议管理功能（始终显示）
             st.markdown("---")
-            st.markdown("### 💾 建议管理")
+            st.markdown("###  建议管理")
             
             col_save1, col_save2, col_save3, col_save4 = st.columns(4)
             
             # with col_save1:
-            #     if st.button("💾 保存分析建议", key=f"save_suggestions_{chapter_idx}"):
+            #     if st.button(" 保存分析建议", key=f"save_suggestions_{chapter_idx}"):
             #         print(f"🔘 [UI] 用户点击保存建议按钮，章节{chapter_idx+1}")
             #         save_conflict_suggestions(chapter_idx, update_suggestions, new_plot, custom_instruction)
             with col_save1:
-                if st.button("💾 保存分析建议", key=f"save_suggestions_{chapter_idx}"):
+                if st.button(" 保存分析建议", key=f"save_suggestions_{chapter_idx}"):
                     print(f"🔘 [UI] 用户点击保存建议按钮，章节{chapter_idx+1}")
                     
                     # 显示保存过程
-                    with st.spinner("💾 正在保存建议..."):
+                    with st.spinner(" 正在保存建议..."):
                         success = save_conflict_suggestions(chapter_idx, update_suggestions, new_plot, custom_instruction)
                     
                     if success:
                         # 保存成功后的处理
-                        st.success("🎉 建议保存完成！")
+                        st.success(" 建议保存完成！")
                         st.balloons()  # 添加一个庆祝效果
                         
                         # 可选：短暂延迟后刷新页面让用户看到结果
@@ -4317,8 +4534,8 @@ def smart_save_story_chapter_edit(chapter_idx, new_plot, enable_conflict_detecti
                         time.sleep(1)
                         st.rerun()
                     else:
-                        st.error("❌ 建议保存失败，请查看错误信息")
-                        st.info("💡 提示：请检查文件权限和存储空间")            
+                        st.error(" 建议保存失败，请查看错误信息")
+                        st.info(" 提示：请检查文件权限和存储空间")            
             with col_save2:
                 if st.button("📥 导出建议文件", key=f"export_suggestions_{chapter_idx}"):
                     print(f"🔘 [UI] 用户点击导出建议按钮，章节{chapter_idx+1}")
@@ -4330,7 +4547,7 @@ def smart_save_story_chapter_edit(chapter_idx, new_plot, enable_conflict_detecti
                     st.rerun()
             
             with col_save4:
-                if st.button("📋 查看建议历史", key=f"show_suggestions_history_{chapter_idx}"):
+                if st.button(" 查看建议历史", key=f"show_suggestions_history_{chapter_idx}"):
                     st.session_state[f'show_suggestions_history_{chapter_idx}'] = True
                     st.rerun()
             
@@ -4350,28 +4567,28 @@ def smart_save_story_chapter_edit(chapter_idx, new_plot, enable_conflict_detecti
                 col1, col2 = st.columns(2)
                 
                 with col1:
-                    if st.button("💾 保存当前章节", type="primary", key=f"save_final_{chapter_idx}"):
+                    if st.button(" 保存当前章节", type="primary", key=f"save_final_{chapter_idx}"):
                         save_story_to_history(f"智能编辑第{chapter_idx+1}章", old_story_data)
                         st.session_state.story_data[chapter_idx]['plot'] = new_plot
                         st.session_state[f'edit_story_{chapter_idx}'] = False
                         
                         if not conflicts_detected:
-                            st.success(f"✅ 第{chapter_idx+1}章修改已保存（未检测到冲突）")
+                            st.success(f" 第{chapter_idx+1}章修改已保存（未检测到冲突）")
                         else:
-                            st.success(f"✅ 第{chapter_idx+1}章修改已保存")
+                            st.success(f" 第{chapter_idx+1}章修改已保存")
                         
-                        print(f"💾 [智能故事编辑] 保存第{chapter_idx+1}章修改: {len(new_plot)} 字")
+                        print(f" [智能故事编辑] 保存第{chapter_idx+1}章修改: {len(new_plot)} 字")
                         st.rerun()
                 
                 with col2:
-                    if st.button("❌ 取消修改", key=f"cancel_final_{chapter_idx}"):
+                    if st.button(" 取消修改", key=f"cancel_final_{chapter_idx}"):
                         st.session_state[f'edit_story_{chapter_idx}'] = False
                         st.info("已取消修改")
                         st.rerun()
                 
     except Exception as e:
-        st.error(f"❌ 智能保存失败: {str(e)}")
-        print(f"❌ [智能故事编辑] 智能保存失败: {str(e)}")
+        st.error(f" 智能保存失败: {str(e)}")
+        print(f" [智能故事编辑] 智能保存失败: {str(e)}")
 
 def detect_plot_conflicts_and_suggest_updates(chapter_idx, old_plot, new_plot, custom_instruction=""):
     """增强版冲突检测 - 整合专业分析工具"""
@@ -4399,7 +4616,7 @@ def detect_plot_conflicts_and_suggest_updates(chapter_idx, old_plot, new_plot, c
             emotional_conflicts, character_state_conflicts
         )
         
-        print(f"✅ [增强冲突检测] 多维度分析完成")
+        print(f" [增强冲突检测] 多维度分析完成")
         
         has_conflicts = integrated_result.get('has_conflicts', False)
         print(f"🔍 [增强冲突检测] 最终结果: has_conflicts={has_conflicts}")
@@ -4407,7 +4624,7 @@ def detect_plot_conflicts_and_suggest_updates(chapter_idx, old_plot, new_plot, c
         return has_conflicts, integrated_result
             
     except Exception as e:
-        print(f"❌ [增强冲突检测] 检测失败: {str(e)}")
+        print(f" [增强冲突检测] 检测失败: {str(e)}")
         # 回退到基础检测
         return detect_basic_semantic_conflicts(chapter_idx, old_plot, new_plot, custom_instruction)
 
@@ -4492,13 +4709,13 @@ def detect_basic_semantic_conflicts(chapter_idx, old_plot, new_plot, custom_inst
             return False, {}
             
     except Exception as e:
-        print(f"❌ [基础检测] 语义分析失败: {str(e)}")
+        print(f" [基础检测] 语义分析失败: {str(e)}")
         return False, {}
 
 def detect_event_consistency_conflicts(chapter_idx, old_plot, new_plot):
     """事件一致性冲突检测 - 使用story_evaluator"""
     try:
-        print(f"  📊 [事件检测] 事件一致性分析")
+        print(f"   [事件检测] 事件一致性分析")
         
         # 创建临时故事数据进行事件提取
         temp_story_old = st.session_state.story_data.copy()
@@ -4518,7 +4735,7 @@ def detect_event_consistency_conflicts(chapter_idx, old_plot, new_plot):
         return event_conflicts
         
     except Exception as e:
-        print(f"❌ [事件检测] 事件分析失败: {str(e)}")
+        print(f" [事件检测] 事件分析失败: {str(e)}")
         return {"has_conflicts": False, "analysis_type": "event_consistency", "error": str(e)}
 
 def detect_coherence_conflicts(chapter_idx, old_plot, new_plot):
@@ -4546,7 +4763,7 @@ def detect_coherence_conflicts(chapter_idx, old_plot, new_plot):
         return coherence_conflicts
         
     except Exception as e:
-        print(f"❌ [连贯性检测] 连贯性分析失败: {str(e)}")
+        print(f" [连贯性检测] 连贯性分析失败: {str(e)}")
         return {"has_conflicts": False, "analysis_type": "coherence", "error": str(e)}
 
 def detect_emotional_arc_conflicts(chapter_idx, old_plot, new_plot):
@@ -4585,7 +4802,7 @@ def detect_emotional_arc_conflicts(chapter_idx, old_plot, new_plot):
         return emotional_conflicts
         
     except Exception as e:
-        print(f"❌ [情感检测] 情感分析失败: {str(e)}")
+        print(f" [情感检测] 情感分析失败: {str(e)}")
         return {"has_conflicts": False, "analysis_type": "emotional_arc", "error": str(e)}
 
 def detect_character_state_conflicts(chapter_idx, old_plot, new_plot):
@@ -4606,7 +4823,7 @@ def detect_character_state_conflicts(chapter_idx, old_plot, new_plot):
         return character_conflicts
         
     except Exception as e:
-        print(f"❌ [角色状态检测] 角色状态分析失败: {str(e)}")
+        print(f" [角色状态检测] 角色状态分析失败: {str(e)}")
         return {"has_conflicts": False, "analysis_type": "character_state", "error": str(e)}
 
 def analyze_event_changes(events_old, events_new, chapter_idx):
@@ -4721,7 +4938,7 @@ def analyze_emotional_changes(emotions_old, emotions_new, chapter_idx):
         return {"has_conflicts": False, "analysis_type": "emotional_arc"}
         
     except Exception as e:
-        print(f"❌ [情感分析] 分析情感变化失败: {str(e)}")
+        print(f" [情感分析] 分析情感变化失败: {str(e)}")
         return {"has_conflicts": False, "analysis_type": "emotional_arc", "error": str(e)}
 
 def analyze_character_state_changes(chapter_idx, old_plot, new_plot):
@@ -4831,7 +5048,7 @@ def integrate_conflict_analysis_results(basic_conflicts, event_conflicts, cohere
         }
         
     except Exception as e:
-        print(f"❌ [结果整合] 整合分析结果失败: {str(e)}")
+        print(f" [结果整合] 整合分析结果失败: {str(e)}")
         # 回退到基础结果
         if isinstance(basic_conflicts, tuple):
             return basic_conflicts[1]
@@ -4840,13 +5057,13 @@ def integrate_conflict_analysis_results(basic_conflicts, event_conflicts, cohere
 
 def execute_cascade_updates(chapter_idx, new_plot, update_suggestions, custom_instruction=""):
     """执行级联更新"""
-    print(f"🚀🚀🚀 [级联更新] 函数被调用！章节: {chapter_idx}, 指令: {custom_instruction[:50] if custom_instruction else 'None'}")
-    print(f"📊 [级联更新] 接收到的更新建议: {type(update_suggestions)} - {update_suggestions}")
+    print(f" [级联更新] 函数被调用！章节: {chapter_idx}, 指令: {custom_instruction[:50] if custom_instruction else 'None'}")
+    print(f" [级联更新] 接收到的更新建议: {type(update_suggestions)} - {update_suggestions}")
     
     try:
-        with st.spinner("🚀 正在执行智能更新..."):
-            print(f"🚀 [级联更新] 开始执行智能更新")
-            print(f"📊 [级联更新] 更新建议数据结构: {update_suggestions}")
+        with st.spinner(" 正在执行智能更新..."):
+            print(f" [级联更新] 开始执行智能更新")
+            print(f" [级联更新] 更新建议数据结构: {update_suggestions}")
             
             # 保存更新前的完整状态
             old_story_data = st.session_state.story_data.copy()
@@ -4873,7 +5090,7 @@ def execute_cascade_updates(chapter_idx, new_plot, update_suggestions, custom_in
             
             if other_chapter_updates:
                 st.info(f"🔄 正在更新相关章节...（共{len(other_chapter_updates)}个章节）")
-                print(f"📋 [级联更新] 需要更新的章节: {other_chapter_updates}")
+                print(f" [级联更新] 需要更新的章节: {other_chapter_updates}")
                 
                 for i, chapter_update in enumerate(other_chapter_updates):
                     try:
@@ -4887,14 +5104,14 @@ def execute_cascade_updates(chapter_idx, new_plot, update_suggestions, custom_in
                         if chapter_match:
                             target_chapter = int(chapter_match.group()) - 1
                         else:
-                            print(f"⚠️ [级联更新] 无法解析章节编号: {chapter_str}")
+                            print(f" [级联更新] 无法解析章节编号: {chapter_str}")
                             continue
                         
                         print(f"📍 [级联更新] 目标章节: {target_chapter+1} (索引{target_chapter})")
                         
                         if 0 <= target_chapter < len(st.session_state.story_data) and target_chapter != chapter_idx:
                             suggestion = chapter_update.get('suggestion', '')
-                            print(f"💡 [级联更新] 更新建议: {suggestion[:100]}...")
+                            print(f" [级联更新] 更新建议: {suggestion[:100]}...")
                             
                             # 显示更新进度
                             with st.spinner(f"🔄 正在重新生成第{target_chapter+1}章..."):
@@ -4906,19 +5123,19 @@ def execute_cascade_updates(chapter_idx, new_plot, update_suggestions, custom_in
                                 if updated_chapter:
                                     st.session_state.story_data[target_chapter] = updated_chapter
                                     update_results['other_chapters_updated'].append(target_chapter + 1)
-                                    print(f"✅ [级联更新] 第{target_chapter+1}章更新成功")
-                                    st.success(f"✅ 第{target_chapter+1}章已重新生成")
+                                    print(f" [级联更新] 第{target_chapter+1}章更新成功")
+                                    st.success(f" 第{target_chapter+1}章已重新生成")
                                 else:
-                                    print(f"❌ [级联更新] 第{target_chapter+1}章更新失败：未返回有效内容")
-                                    st.warning(f"⚠️ 第{target_chapter+1}章更新失败")
+                                    print(f" [级联更新] 第{target_chapter+1}章更新失败：未返回有效内容")
+                                    st.warning(f" 第{target_chapter+1}章更新失败")
                         else:
-                            print(f"⚠️ [级联更新] 跳过无效章节: {target_chapter+1}")
+                            print(f" [级联更新] 跳过无效章节: {target_chapter+1}")
                                 
                     except Exception as e:
-                        print(f"❌ [级联更新] 更新章节失败: {str(e)}")
-                        st.error(f"❌ 更新章节时出错: {str(e)}")
+                        print(f" [级联更新] 更新章节失败: {str(e)}")
+                        st.error(f" 更新章节时出错: {str(e)}")
                 
-                print(f"📊 [级联更新] 章节更新完成，成功更新: {update_results['other_chapters_updated']}")
+                print(f" [级联更新] 章节更新完成，成功更新: {update_results['other_chapters_updated']}")
             
             # 3. 更新角色设定（如果有建议）
             character_updates = update_suggestions.get('character_updates', [])
@@ -4953,26 +5170,26 @@ def execute_cascade_updates(chapter_idx, new_plot, update_suggestions, custom_in
             
             # 显示更新结果
             st.markdown("---")
-            st.markdown("## ✅ 智能更新完成")
+            st.markdown("##  智能更新完成")
             
-            st.success(f"✅ 第{chapter_idx+1}章已更新")
+            st.success(f" 第{chapter_idx+1}章已更新")
             
             if update_results['other_chapters_updated']:
                 updated_chapters_str = ', '.join([f"第{ch}章" for ch in update_results['other_chapters_updated']])
-                st.success(f"✅ 相关章节已更新: {updated_chapters_str}")
+                st.success(f" 相关章节已更新: {updated_chapters_str}")
             
             if update_results['characters_updated']:
-                st.success("✅ 角色设定已更新")
+                st.success(" 角色设定已更新")
             
             if update_results['outline_updated']:
-                st.success("✅ 大纲已更新")
+                st.success(" 大纲已更新")
             
-            print(f"🎉 [级联更新] 智能更新完成: {update_results}")
+            print(f" [级联更新] 智能更新完成: {update_results}")
             st.rerun()
             
     except Exception as e:
-        st.error(f"❌ 执行智能更新失败: {str(e)}")
-        print(f"❌ [级联更新] 执行失败: {str(e)}")
+        st.error(f" 执行智能更新失败: {str(e)}")
+        print(f" [级联更新] 执行失败: {str(e)}")
 
 def update_single_chapter_with_context(chapter_idx, suggestion, reference_plot, custom_instruction=""):
     """基于上下文更新单个章节"""
@@ -5016,7 +5233,7 @@ def update_single_chapter_with_context(chapter_idx, suggestion, reference_plot, 
 """
         
         # 调用后端重新生成
-        print(f"🚀 [章节更新] 开始调用expand_story_v1")
+        print(f" [章节更新] 开始调用expand_story_v1")
         print(f"📝 [章节更新] 更新指令长度: {len(update_instruction)} 字符")
         
         result = expand_story_v1(
@@ -5025,7 +5242,7 @@ def update_single_chapter_with_context(chapter_idx, suggestion, reference_plot, 
             custom_instruction=update_instruction
         )
         
-        print(f"📊 [章节更新] expand_story_v1返回: {type(result)}")
+        print(f" [章节更新] expand_story_v1返回: {type(result)}")
         
         if result and len(result) > 0:
             updated_chapter = result[0]
@@ -5034,17 +5251,17 @@ def update_single_chapter_with_context(chapter_idx, suggestion, reference_plot, 
             
             # 验证生成的内容
             new_plot = updated_chapter.get('plot', '')
-            print(f"✅ [章节更新] 章节{chapter_idx+1}重新生成成功")
+            print(f" [章节更新] 章节{chapter_idx+1}重新生成成功")
             print(f"📝 [章节更新] 新plot长度: {len(new_plot)} 字符")
             print(f"📖 [章节更新] 新plot预览: {new_plot[:200]}...")
             
             return updated_chapter
         
-        print(f"❌ [章节更新] expand_story_v1未返回有效结果")
+        print(f" [章节更新] expand_story_v1未返回有效结果")
         return None
         
     except Exception as e:
-        print(f"❌ [章节更新] 更新第{chapter_idx+1}章失败: {str(e)}")
+        print(f" [章节更新] 更新第{chapter_idx+1}章失败: {str(e)}")
         return None
 
 def update_characters_with_context(character_updates, reference_plot, custom_instruction=""):
@@ -5091,7 +5308,7 @@ def update_characters_with_context(character_updates, reference_plot, custom_ins
         return None
         
     except Exception as e:
-        print(f"❌ [角色更新] 更新失败: {str(e)}")
+        print(f" [角色更新] 更新失败: {str(e)}")
         return None
 
 def update_outline_with_context(outline_updates, reference_plot, custom_instruction=""):
@@ -5138,7 +5355,7 @@ def update_outline_with_context(outline_updates, reference_plot, custom_instruct
         return None
         
     except Exception as e:
-        print(f"❌ [大纲更新] 更新失败: {str(e)}")
+        print(f" [大纲更新] 更新失败: {str(e)}")
         return None
 
 def save_conflict_suggestions(chapter_idx, update_suggestions, new_plot, custom_instruction=""):
@@ -5148,15 +5365,15 @@ def save_conflict_suggestions(chapter_idx, update_suggestions, new_plot, custom_
         import os
         from datetime import datetime
         
-        print(f"💾💾💾 [建议保存] ===== 开始保存第{chapter_idx+1}章的建议 =====")
-        print(f"💾 [建议保存] 建议数据类型: {type(update_suggestions)}")
-        print(f"💾 [建议保存] 建议数据内容: {str(update_suggestions)[:200]}...")
-        print(f"💾 [建议保存] 新plot长度: {len(new_plot)}")
-        print(f"💾 [建议保存] 自定义指令: {custom_instruction}")
+        print(f" [建议保存] ===== 开始保存第{chapter_idx+1}章的建议 =====")
+        print(f" [建议保存] 建议数据类型: {type(update_suggestions)}")
+        print(f" [建议保存] 建议数据内容: {str(update_suggestions)[:200]}...")
+        print(f" [建议保存] 新plot长度: {len(new_plot)}")
+        print(f" [建议保存] 自定义指令: {custom_instruction}")
         
         # 获取当前工作目录的绝对路径
         current_dir = os.getcwd()
-        print(f"💾 [建议保存] 当前工作目录: {current_dir}")
+        print(f" [建议保存] 当前工作目录: {current_dir}")
         
         # 使用当前故事版本目录 - 改为绝对路径
         current_version = st.session_state.get('current_version', 'unknown')
@@ -5166,13 +5383,13 @@ def save_conflict_suggestions(chapter_idx, update_suggestions, new_plot, custom_
             suggestions_dir = os.path.join(current_dir, "data", "saved_suggestions")
         
         # 创建目录并显示详细信息
-        print(f"💾 [建议保存] 目标目录: {suggestions_dir}")
+        print(f" [建议保存] 目标目录: {suggestions_dir}")
         os.makedirs(suggestions_dir, exist_ok=True)
-        print(f"💾 [建议保存] 目录创建成功")
+        print(f" [建议保存] 目录创建成功")
         
         # 确保update_suggestions不为空
         if not update_suggestions:
-            print("⚠️ [建议保存] update_suggestions为空，使用默认数据")
+            print(" [建议保存] update_suggestions为空，使用默认数据")
             update_suggestions = {
                 "message": "无冲突检测数据", 
                 "conflicts": [], 
@@ -5209,13 +5426,13 @@ def save_conflict_suggestions(chapter_idx, update_suggestions, new_plot, custom_
         filename = f"suggestions_ch{chapter_idx+1}_{timestamp}.json"
         filepath = os.path.join(suggestions_dir, filename)
         
-        print(f"💾 [建议保存] 完整文件路径: {filepath}")
+        print(f" [建议保存] 完整文件路径: {filepath}")
         
         # 检查目录权限
         if not os.access(suggestions_dir, os.W_OK):
             error_msg = f"无法写入目录: {suggestions_dir}"
-            print(f"❌ [建议保存] {error_msg}")
-            st.error(f"❌ 保存失败: {error_msg}")
+            print(f" [建议保存] {error_msg}")
+            st.error(f" 保存失败: {error_msg}")
             return False
         
         # 保存文件
@@ -5225,12 +5442,12 @@ def save_conflict_suggestions(chapter_idx, update_suggestions, new_plot, custom_
         # 验证文件是否成功创建
         if os.path.exists(filepath):
             file_size = os.path.getsize(filepath)
-            print(f"💾 [建议保存] 文件已成功写入: {filepath}")
-            print(f"💾 [建议保存] 文件大小: {file_size} 字节")
+            print(f" [建议保存] 文件已成功写入: {filepath}")
+            print(f" [建议保存] 文件大小: {file_size} 字节")
             
-            st.success(f"✅ 分析建议已保存成功!")
+            st.success(f" 分析建议已保存成功!")
             st.info(f"📁 保存位置: {filepath}")
-            st.info(f"📊 文件大小: {file_size} 字节")
+            st.info(f" 文件大小: {file_size} 字节")
             
             # 显示保存详情
             with st.expander("📄 保存详情", expanded=True):
@@ -5248,23 +5465,23 @@ def save_conflict_suggestions(chapter_idx, update_suggestions, new_plot, custom_
                         "文件路径": filepath
                     })
             
-            print(f"💾💾💾 [建议保存] ===== 保存成功 ===== : {filepath}")
+            print(f" [建议保存] ===== 保存成功 ===== : {filepath}")
             return True
         else:
             error_msg = f"文件创建失败: {filepath}"
-            print(f"❌ [建议保存] {error_msg}")
-            st.error(f"❌ 保存失败: {error_msg}")
+            print(f" [建议保存] {error_msg}")
+            st.error(f" 保存失败: {error_msg}")
             return False
         
     except Exception as e:
         error_msg = f"保存建议失败: {str(e)}"
-        print(f"❌ [建议保存] {error_msg}")
-        st.error(f"❌ {error_msg}")
+        print(f" [建议保存] {error_msg}")
+        st.error(f" {error_msg}")
         
         # 显示详细错误信息
         import traceback
         error_details = traceback.format_exc()
-        print(f"❌ [建议保存] 详细错误: {error_details}")
+        print(f" [建议保存] 详细错误: {error_details}")
         
         with st.expander("🔍 错误详情", expanded=False):
             st.code(error_details, language="python")
@@ -5326,7 +5543,7 @@ def export_suggestions_file(chapter_idx, update_suggestions, new_plot, custom_in
             key=f"download_suggestions_{chapter_idx}"
         )
         
-        st.success(f"✅ 建议文件已准备下载: {filename}")
+        st.success(f" 建议文件已准备下载: {filename}")
         
         # 显示导出信息
         with st.expander("📄 导出详情", expanded=False):
@@ -5339,8 +5556,8 @@ def export_suggestions_file(chapter_idx, update_suggestions, new_plot, custom_in
             })
         
     except Exception as e:
-        st.error(f"❌ 导出建议文件失败: {str(e)}")
-        print(f"❌ [建议导出] 导出失败: {str(e)}")
+        st.error(f" 导出建议文件失败: {str(e)}")
+        print(f" [建议导出] 导出失败: {str(e)}")
 
 def execute_uploaded_suggestions(chapter_idx, uploaded_file, current_plot):
     """执行上传的建议文件"""
@@ -5360,12 +5577,12 @@ def execute_uploaded_suggestions(chapter_idx, uploaded_file, current_plot):
         
         # 验证文件格式
         if not validate_suggestions_file(suggestions_data):
-            st.error("❌ 无效的建议文件格式")
+            st.error(" 无效的建议文件格式")
             return
         
         # 显示建议文件信息
         st.markdown("---")
-        st.markdown("### 📋 建议文件信息")
+        st.markdown("###  建议文件信息")
         
         export_info = suggestions_data.get('export_info', {})
         chapter_data = suggestions_data.get('chapter_data', {})
@@ -5388,7 +5605,7 @@ def execute_uploaded_suggestions(chapter_idx, uploaded_file, current_plot):
         
         # 显示主要冲突
         if analysis_results.get('conflicts'):
-            st.markdown("**⚠️ 主要冲突:**")
+            st.markdown("** 主要冲突:**")
             for conflict in analysis_results['conflicts'][:3]:
                 st.warning(f"• {conflict}")
         
@@ -5402,12 +5619,12 @@ def execute_uploaded_suggestions(chapter_idx, uploaded_file, current_plot):
         
         # 执行选项
         st.markdown("---")
-        st.markdown("### 🚀 执行选项")
+        st.markdown("###  执行选项")
         
         col1, col2, col3 = st.columns(3)
         
         with col1:
-            if st.button("🚀 使用文件中的内容", type="primary", key=f"execute_file_content_{chapter_idx}"):
+            if st.button(" 使用文件中的内容", type="primary", key=f"execute_file_content_{chapter_idx}"):
                 # 使用文件中保存的plot和指令
                 file_plot = chapter_data.get('new_plot', current_plot)
                 file_instruction = chapter_data.get('custom_instruction', '')
@@ -5424,16 +5641,16 @@ def execute_uploaded_suggestions(chapter_idx, uploaded_file, current_plot):
                 st.rerun()
         
         with col3:
-            if st.button("📋 查看详细建议", key=f"view_details_{chapter_idx}"):
+            if st.button(" 查看详细建议", key=f"view_details_{chapter_idx}"):
                 st.json(analysis_results)
         
     except json.JSONDecodeError as e:
-        st.error(f"❌ JSON文件格式错误: {str(e)}")
+        st.error(f" JSON文件格式错误: {str(e)}")
     except UnicodeDecodeError as e:
-        st.error(f"❌ 文件编码错误: {str(e)}")
+        st.error(f" 文件编码错误: {str(e)}")
     except Exception as e:
-        st.error(f"❌ 处理建议文件失败: {str(e)}")
-        print(f"❌ [建议文件处理] 失败: {str(e)}")
+        st.error(f" 处理建议文件失败: {str(e)}")
+        print(f" [建议文件处理] 失败: {str(e)}")
 
 def validate_suggestions_file(data):
     """验证建议文件格式"""
@@ -5509,7 +5726,7 @@ def show_suggestions_loader(chapter_idx, current_new_plot, current_custom_instru
                 saved_data = json.load(f)
             
             # 显示建议预览
-            st.markdown("#### 📋 建议预览")
+            st.markdown("####  建议预览")
             
             col1, col2 = st.columns(2)
             
@@ -5528,7 +5745,7 @@ def show_suggestions_loader(chapter_idx, current_new_plot, current_custom_instru
             update_suggestions = saved_data.get('update_suggestions', {})
             
             if update_suggestions.get('conflicts'):
-                st.markdown("**⚠️ 检测到的冲突:**")
+                st.markdown("** 检测到的冲突:**")
                 for conflict in update_suggestions['conflicts'][:3]:  # 显示前3个
                     st.warning(f"• {conflict}")
                 if len(update_suggestions['conflicts']) > 3:
@@ -5543,12 +5760,12 @@ def show_suggestions_loader(chapter_idx, current_new_plot, current_custom_instru
             
             # 执行选项
             st.markdown("---")
-            st.markdown("#### 🚀 执行选项")
+            st.markdown("####  执行选项")
             
             col1, col2, col3 = st.columns(3)
             
             with col1:
-                if st.button("🚀 使用原始内容执行", type="primary", key=f"execute_original_{chapter_idx}"):
+                if st.button(" 使用原始内容执行", type="primary", key=f"execute_original_{chapter_idx}"):
                     # 使用保存的原始内容执行
                     saved_plot = saved_data.get('new_plot', current_new_plot)
                     saved_instruction = saved_data.get('custom_instruction', current_custom_instruction)
@@ -5569,22 +5786,22 @@ def show_suggestions_loader(chapter_idx, current_new_plot, current_custom_instru
                     st.rerun()
             
             with col3:
-                if st.button("🗑️ 删除此建议", key=f"delete_suggestion_{chapter_idx}"):
+                if st.button(" 删除此建议", key=f"delete_suggestion_{chapter_idx}"):
                     try:
                         os.remove(filepath)
-                        st.success(f"✅ 已删除建议文件: {selected_file}")
+                        st.success(f" 已删除建议文件: {selected_file}")
                         st.rerun()
                     except Exception as e:
-                        st.error(f"❌ 删除失败: {str(e)}")
+                        st.error(f" 删除失败: {str(e)}")
         
     except Exception as e:
-        st.error(f"❌ 加载建议失败: {str(e)}")
-        print(f"❌ [建议加载] 加载失败: {str(e)}")
+        st.error(f" 加载建议失败: {str(e)}")
+        print(f" [建议加载] 加载失败: {str(e)}")
 
 def show_suggestions_history_for_chapter(chapter_idx, current_new_plot, current_custom_instruction=""):
     """显示特定章节的建议历史"""
     st.markdown("---")
-    st.markdown(f"## 📋 第{chapter_idx+1}章建议历史")
+    st.markdown(f"##  第{chapter_idx+1}章建议历史")
     
     # 返回按钮
     if st.button("← 返回编辑", key=f"back_from_history_{chapter_idx}"):
@@ -5658,14 +5875,14 @@ def show_suggestions_history_for_chapter(chapter_idx, current_new_plot, current_
                 
                 # 显示自定义指令
                 if saved_data.get('custom_instruction'):
-                    st.markdown("**🎯 自定义指令:**")
+                    st.markdown("** 自定义指令:**")
                     st.info(saved_data['custom_instruction'])
                 
                 # 显示分析结果
                 update_suggestions = saved_data.get('update_suggestions', {})
                 
                 if update_suggestions.get('conflicts'):
-                    st.markdown("**⚠️ 检测到的冲突:**")
+                    st.markdown("** 检测到的冲突:**")
                     for conflict in update_suggestions['conflicts'][:3]:  # 只显示前3个
                         st.warning(f"• {conflict}")
                     if len(update_suggestions['conflicts']) > 3:
@@ -5682,7 +5899,7 @@ def show_suggestions_history_for_chapter(chapter_idx, current_new_plot, current_
                 col1, col2, col3 = st.columns(3)
                 
                 with col1:
-                    if st.button("🚀 重新执行", key=f"rerun_suggestion_{chapter_idx}_{i}"):
+                    if st.button(" 重新执行", key=f"rerun_suggestion_{chapter_idx}_{i}"):
                         # 使用历史建议重新执行
                         st.session_state[f'show_suggestions_history_{chapter_idx}'] = False
                         execute_cascade_updates(chapter_idx, current_new_plot, update_suggestions, saved_data.get('custom_instruction', ''))
@@ -5705,23 +5922,23 @@ def show_suggestions_history_for_chapter(chapter_idx, current_new_plot, current_
                         )
                 
                 with col3:
-                    if st.button("🗑️ 删除记录", key=f"delete_history_{chapter_idx}_{i}"):
+                    if st.button(" 删除记录", key=f"delete_history_{chapter_idx}_{i}"):
                         try:
                             filepath = os.path.join(suggestions_dir, filename)
                             os.remove(filepath)
-                            st.success("✅ 记录已删除")
+                            st.success(" 记录已删除")
                             st.rerun()
                         except Exception as e:
-                            st.error(f"❌ 删除失败: {str(e)}")
+                            st.error(f" 删除失败: {str(e)}")
         
     except Exception as e:
-        st.error(f"❌ 加载建议历史失败: {str(e)}")
-        print(f"❌ [建议历史] 加载失败: {str(e)}")
+        st.error(f" 加载建议历史失败: {str(e)}")
+        print(f" [建议历史] 加载失败: {str(e)}")
 
 def show_suggestions_manager():
     """显示建议管理器"""
     st.markdown("---")
-    st.markdown("## 💡 智能建议管理器")
+    st.markdown("##  智能建议管理器")
     
     # 返回按钮
     if st.button("← 返回"):
@@ -5759,14 +5976,14 @@ def show_suggestions_manager():
         # 批量操作
         col1, col2 = st.columns(2)
         with col1:
-            if st.button("🗑️ 清空所有建议", type="secondary"):
+            if st.button(" 清空所有建议", type="secondary"):
                 try:
                     for file in suggestion_files:
                         os.remove(os.path.join(suggestions_dir, file))
-                    st.success("✅ 已清空所有建议")
+                    st.success(" 已清空所有建议")
                     st.rerun()
                 except Exception as e:
-                    st.error(f"❌ 清空失败: {str(e)}")
+                    st.error(f" 清空失败: {str(e)}")
         
         # 显示建议列表
         for i, filename in enumerate(suggestion_files):
@@ -5796,7 +6013,7 @@ def show_suggestions_manager():
                     # 显示部分建议内容
                     update_suggestions = saved_data.get('update_suggestions', {})
                     if update_suggestions.get('conflicts'):
-                        st.markdown("**⚠️ 主要冲突:**")
+                        st.markdown("** 主要冲突:**")
                         for conflict in update_suggestions['conflicts'][:2]:
                             st.warning(f"• {conflict}")
                     
@@ -5804,7 +6021,7 @@ def show_suggestions_manager():
                     col1, col2, col3 = st.columns(3)
                     
                     with col1:
-                        if st.button("🚀 立即执行", key=f"execute_suggestion_{i}"):
+                        if st.button(" 立即执行", key=f"execute_suggestion_{i}"):
                             # 加载并执行建议
                             chapter_idx = saved_data.get('chapter_idx', 0)
                             new_plot = saved_data.get('new_plot', '')
@@ -5816,28 +6033,28 @@ def show_suggestions_manager():
                                 execute_cascade_updates(chapter_idx, new_plot, update_suggestions, custom_instruction)
                                 st.rerun()
                             else:
-                                st.error("❌ 当前故事数据与建议不匹配")
+                                st.error(" 当前故事数据与建议不匹配")
                     
                     with col2:
-                        if st.button("📋 复制到剪贴板", key=f"copy_suggestion_{i}"):
+                        if st.button(" 复制到剪贴板", key=f"copy_suggestion_{i}"):
                             # 这里可以显示JSON内容供复制
                             st.json(saved_data)
                     
                     with col3:
-                        if st.button("🗑️ 删除", key=f"delete_suggestion_{i}"):
+                        if st.button(" 删除", key=f"delete_suggestion_{i}"):
                             try:
                                 os.remove(filepath)
-                                st.success(f"✅ 已删除: {filename}")
+                                st.success(f" 已删除: {filename}")
                                 st.rerun()
                             except Exception as e:
-                                st.error(f"❌ 删除失败: {str(e)}")
+                                st.error(f" 删除失败: {str(e)}")
             
             except Exception as e:
-                st.error(f"❌ 读取文件失败 {filename}: {str(e)}")
+                st.error(f" 读取文件失败 {filename}: {str(e)}")
     
     except Exception as e:
-        st.error(f"❌ 管理器加载失败: {str(e)}")
-        print(f"❌ [建议管理器] 加载失败: {str(e)}")
+        st.error(f" 管理器加载失败: {str(e)}")
+        print(f" [建议管理器] 加载失败: {str(e)}")
 
 def generate_story_summary_text():
     """生成故事摘要文本"""
@@ -5867,7 +6084,7 @@ def show_chapter_order_comparison():
     
     if has_reorder_info:
         # 显示重排对比
-        st.markdown("### 📋 章节顺序对比")
+        st.markdown("###  章节顺序对比")
         
         # 构建原始顺序映射
         original_chapters = {}
@@ -5892,7 +6109,7 @@ def show_chapter_order_comparison():
         st.markdown(" → ".join(current_order_display))
         
         # 显示详细对比表格
-        st.markdown("**📊 详细对比:**")
+        st.markdown("** 详细对比:**")
         
         # 创建对比表格数据
         comparison_data = []
@@ -5940,7 +6157,7 @@ def show_chapter_order_comparison():
     
     else:
         # 显示线性顺序
-        st.markdown("### 📋 当前章节顺序 (线性)")
+        st.markdown("###  当前章节顺序 (线性)")
         
         current_order = []
         for i, chapter in enumerate(st.session_state.outline_data):
@@ -5949,11 +6166,11 @@ def show_chapter_order_comparison():
         st.markdown(" → ".join(current_order))
         
         # 显示简单统计
-        st.info(f"📊 当前共有 {len(st.session_state.outline_data)} 个章节，按线性顺序排列")
+        st.info(f" 当前共有 {len(st.session_state.outline_data)} 个章节，按线性顺序排列")
 
 def show_export_mode():
     """导出模式"""
-    st.subheader("💾 保存和导出")
+    st.subheader(" 保存和导出")
     
     # 保存到文件
     col1, col2 = st.columns(2)
@@ -5974,7 +6191,7 @@ def show_export_mode():
         )
         
         # 保存到输出目录
-        if st.button("💾 保存到项目目录", use_container_width=True):
+        if st.button(" 保存到项目目录", use_container_width=True):
             save_to_project_directory()
     
     with col2:
@@ -6001,7 +6218,7 @@ def show_export_mode():
     st.markdown("---")
     
     # 最终确认
-    st.markdown("### ✅ 最终确认")
+    st.markdown("###  最终确认")
     
     # 显示最终结构
     st.markdown("**最终章节结构:**")
@@ -6012,10 +6229,10 @@ def show_export_mode():
     
     # 统计信息
     total_chapters = len(st.session_state.outline_data)
-    st.success(f"✅ 大纲编辑完成！共 {total_chapters} 章")
+    st.success(f" 大纲编辑完成！共 {total_chapters} 章")
     
-    if st.button("🚀 继续下一步", type="primary", use_container_width=True):
-        st.info("🎉 大纲已准备就绪！可以继续生成角色设定和故事内容。")
+    if st.button(" 继续下一步", type="primary", use_container_width=True):
+        st.info(" 大纲已准备就绪！可以继续生成角色设定和故事内容。")
 
 # 辅助函数
 def regenerate_chapter(chapter_idx, chapter):
@@ -6061,12 +6278,12 @@ def regenerate_chapter(chapter_idx, chapter):
         
         # 检查生成结果
         if not new_outline or not isinstance(new_outline, list):
-            st.error("❌ 后端返回的数据格式不正确")
+            st.error(" 后端返回的数据格式不正确")
             st.error(f"实际返回: {type(new_outline)} - {str(new_outline)[:200]}...")
             return
             
         if len(new_outline) <= chapter_idx:
-            st.warning(f"⚠️ 生成的章节数({len(new_outline)})不够，无法替换第 {chapter_idx + 1} 章")
+            st.warning(f" 生成的章节数({len(new_outline)})不够，无法替换第 {chapter_idx + 1} 章")
             return
         
         # 获取新生成的章节
@@ -6074,7 +6291,7 @@ def regenerate_chapter(chapter_idx, chapter):
         
         # 验证新章节的格式
         if not isinstance(new_chapter, dict):
-            st.error("❌ 新生成的章节格式不正确")
+            st.error(" 新生成的章节格式不正确")
             st.error(f"章节类型: {type(new_chapter)}, 内容: {str(new_chapter)}")
             return
         
@@ -6126,7 +6343,7 @@ def regenerate_chapter(chapter_idx, chapter):
         # 更新章节数据
         st.session_state.outline_data[chapter_idx] = updated_chapter
         
-        st.success(f"✅ 第 {chapter_idx + 1} 章重新生成完成")
+        st.success(f" 第 {chapter_idx + 1} 章重新生成完成")
         st.info(f"📝 新标题: {updated_chapter['title']}")
         st.info(f"📄 新摘要: {updated_chapter['summary'][:100]}...")
         
@@ -6138,7 +6355,7 @@ def regenerate_chapter(chapter_idx, chapter):
             {"chapter_idx": chapter_idx, "error": str(e)},
             time.time(), time.time(), None, e
         )
-        st.error(f"❌ 重新生成失败: {str(e)}")
+        st.error(f" 重新生成失败: {str(e)}")
         app_logger.error(f"Chapter regeneration failed for chapter {chapter_idx + 1}: {str(e)}")
 
 # delete_chapter 函数已移除，删除逻辑直接在编辑界面中处理
@@ -6153,7 +6370,7 @@ def save_chapter_edit(chapter_idx, new_title, new_chapter_id, new_summary):
     st.session_state.outline_data[chapter_idx]['title'] = new_title
     st.session_state.outline_data[chapter_idx]['chapter_id'] = new_chapter_id
     st.session_state.outline_data[chapter_idx]['summary'] = new_summary
-    st.success(f"✅ 第 {chapter_idx + 1} 章修改已保存")
+    st.success(f" 第 {chapter_idx + 1} 章修改已保存")
 
 def add_new_chapter(title, summary, insert_idx=None, enable_conflict_check=True):
     """添加新章节到指定位置"""
@@ -6170,7 +6387,7 @@ def add_new_chapter(title, summary, insert_idx=None, enable_conflict_check=True)
         if enable_conflict_check:
             conflicts = detect_content_conflicts(title, summary, st.session_state.outline_data)
             if conflicts:
-                st.warning("⚠️ 检测到潜在的内容冲突:")
+                st.warning(" 检测到潜在的内容冲突:")
                 for conflict in conflicts:
                     st.warning(f"  • {conflict}")
                 
@@ -6182,7 +6399,7 @@ def add_new_chapter(title, summary, insert_idx=None, enable_conflict_check=True)
                         pass  # 继续执行添加逻辑
                     else:
                         with col2:
-                            if st.button("❌ 取消添加", key="cancel_add"):
+                            if st.button(" 取消添加", key="cancel_add"):
                                 st.info("已取消添加章节")
                                 return
                         
@@ -6217,16 +6434,16 @@ def add_new_chapter(title, summary, insert_idx=None, enable_conflict_check=True)
         
         # 显示成功信息
         position_text = "末尾" if insert_idx == len(st.session_state.outline_data) - 1 else f"第{insert_idx + 1}位置"
-        st.success(f"✅ 新章节已添加到{position_text}: {title}")
+        st.success(f" 新章节已添加到{position_text}: {title}")
         
         # 显示章节列表预览
-        st.info("📋 当前章节顺序:")
+        st.info(" 当前章节顺序:")
         for i, ch in enumerate(st.session_state.outline_data):
             marker = "🆕" if i == insert_idx else "📄"
             st.text(f"  {marker} {i+1}. {ch['title']}")
         
     except Exception as e:
-        st.error(f"❌ 添加章节失败: {str(e)}")
+        st.error(f" 添加章节失败: {str(e)}")
         app_logger.error(f"Add chapter failed: {str(e)}")
 
 def update_chapter_ids_after_insert(insert_idx):
@@ -6320,18 +6537,20 @@ def perform_automatic_reorder():
         
         # Step 2: 叙述结构分析
         analysis_start = time.time()
-        reordered = analyze_narrative_structure(reordered, st.session_state.outline_data, "小红帽", "科幻改写")
+        # 动态获取当前的题材和风格
+        topic, style = get_current_topic_and_style()
+        reordered = analyze_narrative_structure(reordered, st.session_state.outline_data, topic, style)
         analysis_end = time.time()
         
         log_backend_operation(
             "自动重排-叙述结构分析", 
-            {"topic": "小红帽", "style": "科幻改写"},
+            {"topic": topic, "style": style},
             analysis_start, analysis_end, reordered
         )
         
         # 更新大纲数据
         st.session_state.outline_data = reordered
-        st.success("✅ 非线性重排完成！")
+        st.success(" 非线性重排完成！")
         st.rerun()
     except Exception as e:
         log_backend_operation(
@@ -6339,28 +6558,31 @@ def perform_automatic_reorder():
             {"chapters": len(st.session_state.outline_data) if st.session_state.outline_data else 0},
             time.time(), time.time(), None, e
         )
-        st.error(f"❌ 自动重排失败: {str(e)}")
+        st.error(f" 自动重排失败: {str(e)}")
 
 def perform_narrative_analysis():
     """执行叙述结构分析"""
     try:
+        # 动态获取当前的题材和风格
+        topic, style = get_current_topic_and_style()
+        
         start_time = time.time()
         analyzed = analyze_narrative_structure(
             st.session_state.outline_data, 
             st.session_state.outline_data, 
-            "小红帽", 
-            "科幻改写"
+            topic, 
+            style
         )
         end_time = time.time()
         
         log_backend_operation(
             "叙述结构分析", 
-            {"topic": "小红帽", "style": "科幻改写", "chapters": len(st.session_state.outline_data)},
+            {"topic": topic, "style": style, "chapters": len(st.session_state.outline_data)},
             start_time, end_time, analyzed
         )
         
         st.session_state.outline_data = analyzed
-        st.success("✅ 叙述结构分析完成！")
+        st.success(" 叙述结构分析完成！")
         st.rerun()
     except Exception as e:
         log_backend_operation(
@@ -6368,23 +6590,23 @@ def perform_narrative_analysis():
             {"chapters": len(st.session_state.outline_data) if st.session_state.outline_data else 0},
             time.time(), time.time(), None, e
         )
-        st.error(f"❌ 叙述结构分析失败: {str(e)}")
+        st.error(f" 叙述结构分析失败: {str(e)}")
 
 def apply_manual_reorder(order_input):
     """应用手动重排"""
     try:
         new_order = [int(x.strip()) - 1 for x in order_input.split(',')]
         if len(new_order) != len(st.session_state.outline_data):
-            st.error("❌ 顺序数量与章节数量不匹配")
+            st.error(" 顺序数量与章节数量不匹配")
             return
         
         # 检查输入是否有效
         if not all(0 <= idx < len(st.session_state.outline_data) for idx in new_order):
-            st.error("❌ 顺序索引超出范围")
+            st.error(" 顺序索引超出范围")
             return
         
         if len(set(new_order)) != len(new_order):
-            st.error("❌ 顺序中有重复的章节")
+            st.error(" 顺序中有重复的章节")
             return
         
         # 保存重排前的状态到历史记录
@@ -6407,10 +6629,10 @@ def apply_manual_reorder(order_input):
         
         st.session_state.outline_data = reordered_outline
         
-        st.success("✅ 手动重排完成！")
+        st.success(" 手动重排完成！")
         
         # 显示重排结果预览
-        st.info("📋 重排结果预览:")
+        st.info(" 重排结果预览:")
         for i, ch in enumerate(reordered_outline):
             orig_pos = ch.get('original_position', '?')
             st.text(f"  {i+1}. {ch['title']} (原第{orig_pos}章)")
@@ -6418,9 +6640,9 @@ def apply_manual_reorder(order_input):
         st.rerun()
         
     except ValueError:
-        st.error("❌ 请输入有效的数字序列，用逗号分隔")
+        st.error(" 请输入有效的数字序列，用逗号分隔")
     except Exception as e:
-        st.error(f"❌ 手动重排失败: {str(e)}")
+        st.error(f" 手动重排失败: {str(e)}")
 
 def save_to_project_directory():
     """保存到项目目录"""
@@ -6436,14 +6658,14 @@ def save_to_project_directory():
             start_time, end_time, True
         )
         
-        st.success(f"✅ 大纲已保存到项目目录: {st.session_state.current_version}/outline.json")
+        st.success(f" 大纲已保存到项目目录: {st.session_state.current_version}/outline.json")
     except Exception as e:
         log_backend_operation(
             "保存到项目目录失败", 
             {"version": st.session_state.current_version},
             time.time(), time.time(), None, e
         )
-        st.error(f"❌ 保存失败: {str(e)}")
+        st.error(f" 保存失败: {str(e)}")
 
 def generate_markdown_outline():
     """生成Markdown格式的大纲"""
@@ -6518,10 +6740,10 @@ def save_dialogue_to_history(action_name, old_dialogue_data=None):
             st.session_state.dialogue_history = st.session_state.dialogue_history[-max_history:]
             st.session_state.dialogue_history_index = len(st.session_state.dialogue_history) - 1
         
-        print(f"💾 [对话历史] 保存操作: {action_name}, 当前索引: {st.session_state.dialogue_history_index}")
+        print(f" [对话历史] 保存操作: {action_name}, 当前索引: {st.session_state.dialogue_history_index}")
         
     except Exception as e:
-        print(f"❌ [对话历史] 保存失败: {str(e)}")
+        print(f" [对话历史] 保存失败: {str(e)}")
 
 def undo_dialogue_action():
     """撤销对话操作"""
@@ -6532,7 +6754,7 @@ def undo_dialogue_action():
         st.success(f"↩️ 已撤销操作: {history_entry['action']}")
         st.rerun()
     else:
-        st.warning("⚠️ 没有可撤销的操作")
+        st.warning(" 没有可撤销的操作")
 
 def redo_dialogue_action():
     """重做对话操作"""
@@ -6543,7 +6765,7 @@ def redo_dialogue_action():
         st.success(f"↪️ 已重做操作: {history_entry['action']}")
         st.rerun()
     else:
-        st.warning("⚠️ 没有可重做的操作")
+        st.warning(" 没有可重做的操作")
 
 def show_dialogue_generation_interface():
     """显示对话生成界面 - 作为主流程步骤"""
@@ -6551,20 +6773,20 @@ def show_dialogue_generation_interface():
     
     # 检查前置条件
     if not st.session_state.outline_data:
-        st.error("❌ 请先完成步骤1: 生成故事大纲")
+        st.error(" 请先完成步骤1: 生成故事大纲")
         return
     
     if not st.session_state.characters_data:
-        st.error("❌ 请先完成步骤2: 生成角色")
+        st.error(" 请先完成步骤2: 生成角色")
         return
     
     if not st.session_state.get('story_data'):
-        st.error("❌ 请先完成步骤3: 生成故事内容")
+        st.error(" 请先完成步骤3: 生成故事内容")
         return
     
     # 检查对话生成功能是否可用
     if not dialogue_generation_available:
-        st.error("❌ 对话生成功能不可用，请检查后端模块导入")
+        st.error(" 对话生成功能不可用，请检查后端模块导入")
         return
     
     # 显示基于故事的对话生成界面
@@ -6575,7 +6797,7 @@ def show_dialogue_generation_mode():
     st.markdown("### 💬 对话生成选项")
     
     # 创建选项卡
-    tab1, tab2, tab3, tab4 = st.tabs(["🚀 生成对话", "📋 对话预览", "✏️ 编辑对话", "📁 文件管理"])
+    tab1, tab2, tab3, tab4 = st.tabs([" 生成对话", " 对话预览", " 编辑对话", "📁 文件管理"])
     
     with tab1:
         show_dialogue_generation_options()
@@ -6591,7 +6813,7 @@ def show_dialogue_generation_mode():
 
 def show_dialogue_generation_options():
     """对话生成选项"""
-    st.markdown("#### 🎯 生成新对话")
+    st.markdown("####  生成新对话")
     
     # 生成参数配置
     col1, col2 = st.columns(2)
@@ -6614,7 +6836,7 @@ def show_dialogue_generation_options():
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        if st.button("🎭 生成章节对话", type="primary", use_container_width=True):
+        if st.button(" 生成章节对话", type="primary", use_container_width=True):
             generate_dialogues_from_story(use_cache=use_cache, auto_save=auto_save, behavior_model=behavior_model)
     
     with col2:
@@ -6633,17 +6855,17 @@ def show_dialogue_generation_options():
 def generate_dialogues_from_story(use_cache=True, auto_save=True, behavior_model="gpt-4.1"):
     """基于故事内容生成对话"""
     try:
-        print(f"🎭🎭🎭 [对话生成] ===== 开始生成对话 =====")
-        print(f"🎭 [对话生成] 故事章节数: {len(st.session_state.story_data)}")
-        print(f"🎭 [对话生成] 角色数量: {len(st.session_state.characters_data)}")
-        print(f"🎭 [对话生成] 使用缓存: {use_cache}")
-        print(f"🎭 [对话生成] 自动保存: {auto_save}")
-        print(f"🎭 [对话生成] 行为模型: {behavior_model}")
+        print(f" [对话生成] ===== 开始生成对话 =====")
+        print(f" [对话生成] 故事章节数: {len(st.session_state.story_data)}")
+        print(f" [对话生成] 角色数量: {len(st.session_state.characters_data)}")
+        print(f" [对话生成] 使用缓存: {use_cache}")
+        print(f" [对话生成] 自动保存: {auto_save}")
+        print(f" [对话生成] 行为模型: {behavior_model}")
         
         # 保存当前状态到历史
         save_dialogue_to_history("生成对话前")
         
-        with st.spinner("🎭 正在分析故事并生成对话..."):
+        with st.spinner(" 正在分析故事并生成对话..."):
             start_time = time.time()
             
             # 调用后端对话生成功能
@@ -6696,15 +6918,15 @@ def generate_dialogues_from_story(use_cache=True, auto_save=True, behavior_model
                 }
             )
             
-            print(f"🎭 [对话生成] 章节对话数: {len(chapter_results_updated)}")
-            print(f"🎭 [对话生成] 句子对话数: {len(sentence_results)}")
-            print(f"🎭 [对话生成] 行为时间线: {len(behavior_timeline)}")
-            print(f"🎭🎭🎭 [对话生成] ===== 生成完成 =====")
+            print(f" [对话生成] 章节对话数: {len(chapter_results_updated)}")
+            print(f" [对话生成] 句子对话数: {len(sentence_results)}")
+            print(f" [对话生成] 行为时间线: {len(behavior_timeline)}")
+            print(f" [对话生成] ===== 生成完成 =====")
             
-            st.success(f"✅ 对话生成完成！生成了 {len(chapter_results_updated)} 个章节的对话内容")
+            st.success(f" 对话生成完成！生成了 {len(chapter_results_updated)} 个章节的对话内容")
             
             # 显示生成统计
-            with st.expander("📊 生成统计", expanded=True):
+            with st.expander(" 生成统计", expanded=True):
                 col1, col2, col3 = st.columns(3)
                 with col1:
                     st.metric("章节对话", len(chapter_results_updated))
@@ -6722,8 +6944,8 @@ def generate_dialogues_from_story(use_cache=True, auto_save=True, behavior_model
             
     except Exception as e:
         error_msg = f"对话生成失败: {str(e)}"
-        print(f"❌ [对话生成] {error_msg}")
-        st.error(f"❌ {error_msg}")
+        print(f" [对话生成] {error_msg}")
+        st.error(f" {error_msg}")
         
         # 记录错误日志
         log_backend_operation(
@@ -6743,7 +6965,7 @@ def show_dialogue_display():
     dialogue_data = st.session_state.dialogue_data
     
     # 创建子选项卡
-    subtab1, subtab2, subtab3 = st.tabs(["📖 章节对话", "📝 句子对话", "🎭 行为时间线"])
+    subtab1, subtab2, subtab3 = st.tabs(["📖 章节对话", "📝 句子对话", " 行为时间线"])
     
     with subtab1:
         show_chapter_dialogues(dialogue_data.get("chapter_dialogues", []))
@@ -6814,7 +7036,7 @@ def show_chapter_summary_dialogues(chapter_dialogues):
                 character_cols = st.columns(min(len(chapter_data['characters']), 4))
                 for i, char in enumerate(chapter_data['characters']):
                     with character_cols[i % len(character_cols)]:
-                        st.markdown(f"🎭 **{char}**")
+                        st.markdown(f" **{char}**")
             
             st.markdown("---")
             
@@ -6833,14 +7055,14 @@ def show_chapter_summary_dialogues(chapter_dialogues):
                         col1, col2 = st.columns([1, 4])
                         
                         with col1:
-                            st.markdown(f"**🎭 {speaker}**")
+                            st.markdown(f"** {speaker}**")
                         
                         with col2:
                             st.markdown(f"💬 {dialogue_text}")
                             if action:
-                                st.markdown(f"*🎭 {action}*")
+                                st.markdown(f"* {action}*")
                             if sentence_context:
-                                with st.expander("📋 场景上下文", expanded=False):
+                                with st.expander(" 场景上下文", expanded=False):
                                     st.caption(sentence_context)
                         
                         # 添加分隔线（除了最后一个对话）
@@ -6939,7 +7161,7 @@ def show_chapter_sentence_dialogues(chapter_dialogues):
                                     st.markdown(f"     *{action}*")
                     
                     with col2:
-                        st.markdown(f"**🎭 需要对话**: {'是' if sentence_data.get('need_to_action') else '否'}")
+                        st.markdown(f"** 需要对话**: {'是' if sentence_data.get('need_to_action') else '否'}")
                         actors = sentence_data.get('actor_list', [])
                         if actors:
                             st.markdown(f"**👥 参与角色**: {', '.join(actors)}")
@@ -6989,7 +7211,7 @@ def show_sentence_dialogues(sentence_dialogues):
                             st.markdown(f"     *{action}*")
             
             with col2:
-                st.markdown(f"**🎭 需要对话**: {'是' if sentence_dialogue.get('need_to_action') else '否'}")
+                st.markdown(f"** 需要对话**: {'是' if sentence_dialogue.get('need_to_action') else '否'}")
                 actors = sentence_dialogue.get('actor_list', [])
                 if actors:
                     st.markdown(f"**👥 参与角色**: {', '.join(actors)}")
@@ -7000,7 +7222,7 @@ def show_behavior_timeline(behavior_timeline):
         st.info("📝 暂无行为时间线数据")
         return
     
-    st.markdown("##### 🎭 角色行为时间线")
+    st.markdown("#####  角色行为时间线")
     
     # 统计信息
     characters = set(item.get("character", "") for item in behavior_timeline)
@@ -7031,7 +7253,7 @@ def show_behavior_timeline(behavior_timeline):
 
 def show_character_development_arcs(behavior_timeline, characters):
     """显示角色发展轨迹"""
-    st.markdown("#### 🎭 角色发展轨迹")
+    st.markdown("####  角色发展轨迹")
     
     # 按角色组织数据
     character_arcs = {}
@@ -7058,7 +7280,7 @@ def show_character_development_arcs(behavior_timeline, characters):
     
     for char in selected_chars:
         if char in character_arcs:
-            with st.expander(f"🎭 {char} 的发展轨迹", expanded=True):
+            with st.expander(f" {char} 的发展轨迹", expanded=True):
                 arc_data = character_arcs[char]
                 
                 # 显示角色统计
@@ -7091,14 +7313,14 @@ def show_character_development_arcs(behavior_timeline, characters):
                     with col2:
                         st.markdown(f"**💭 {behavior}**")
                         if scene_context:
-                            st.caption(f"📋 {scene_context[:100]}{'...' if len(scene_context) > 100 else ''}")
+                            st.caption(f" {scene_context[:100]}{'...' if len(scene_context) > 100 else ''}")
                     
                     # 添加连接线（除了最后一个）
                     if i < len(arc_data) - 1:
                         st.markdown("&nbsp;&nbsp;&nbsp;&nbsp;↓")
                 
                 # 显示行为总结
-                st.markdown("**📊 行为总结：**")
+                st.markdown("** 行为总结：**")
                 behavior_summary = {}
                 for item in arc_data:
                     behavior = item.get("behavior", "")
@@ -7152,7 +7374,7 @@ def show_timeline_list(behavior_timeline, characters, chapters):
         col1, col2, col3, col4 = st.columns([2, 1, 1, 3])
         
         with col1:
-            st.markdown(f"**🎭 {item.get('character', '未知')}**")
+            st.markdown(f"** {item.get('character', '未知')}**")
         
         with col2:
             st.markdown(f"📖 {item.get('chapter_id', '')}")
@@ -7165,7 +7387,7 @@ def show_timeline_list(behavior_timeline, characters, chapters):
         
         # 显示场景上下文
         if item.get('scene_context'):
-            with st.expander(f"📋 场景上下文 {i+1}", expanded=False):
+            with st.expander(f" 场景上下文 {i+1}", expanded=False):
                 st.text(item.get('scene_context', ''))
         
         if i < end_idx - 1:
@@ -7202,7 +7424,7 @@ def show_chapter_grouped_behavior(behavior_timeline, chapters):
                 col1, col2, col3 = st.columns([2, 1, 3])
                 
                 with col1:
-                    st.markdown(f"**🎭 {item.get('character', '未知')}**")
+                    st.markdown(f"** {item.get('character', '未知')}**")
                 
                 with col2:
                     st.markdown(f"📝 句子 {item.get('sentence_index', 0)}")
@@ -7219,7 +7441,7 @@ def show_dialogue_edit_mode():
         st.info("📝 暂无对话数据，请先生成对话")
         return
     
-    st.markdown("#### ✏️ 编辑对话内容")
+    st.markdown("####  编辑对话内容")
     
     # 历史操作面板
     col1, col2, col3 = st.columns(3)
@@ -7230,7 +7452,7 @@ def show_dialogue_edit_mode():
         if st.button("↪️ 重做", use_container_width=True):
             redo_dialogue_action()
     with col3:
-        if st.button("📋 历史记录", use_container_width=True):
+        if st.button(" 历史记录", use_container_width=True):
             st.session_state.show_dialogue_history = not st.session_state.get('show_dialogue_history', False)
     
     # 显示历史记录面板
@@ -7240,7 +7462,7 @@ def show_dialogue_edit_mode():
     st.markdown("---")
     
     # 编辑选项
-    edit_tab1, edit_tab2 = st.tabs(["🔄 重新生成", "✏️ 手动编辑"])
+    edit_tab1, edit_tab2 = st.tabs(["🔄 重新生成", " 手动编辑"])
     
     with edit_tab1:
         show_dialogue_regeneration_options()
@@ -7250,7 +7472,7 @@ def show_dialogue_edit_mode():
 
 def show_dialogue_history_panel():
     """显示对话历史记录面板"""
-    st.markdown("##### 📋 对话操作历史")
+    st.markdown("#####  对话操作历史")
     
     if not st.session_state.dialogue_history:
         st.info("📝 暂无历史记录")
@@ -7267,7 +7489,7 @@ def show_dialogue_history_panel():
         is_current = actual_idx == current_idx
         
         with st.expander(
-            f"{'🔵' if is_current else '⚪'} {entry['action']} - {entry['timestamp'][:19]}",
+            f"{'' if is_current else ''} {entry['action']} - {entry['timestamp'][:19]}",
             expanded=is_current
         ):
             col1, col2, col3 = st.columns(3)
@@ -7283,7 +7505,7 @@ def show_dialogue_history_panel():
                 if st.button(f"🔄 恢复到此状态", key=f"restore_dialogue_{actual_idx}"):
                     st.session_state.dialogue_history_index = actual_idx
                     st.session_state.dialogue_data = copy.deepcopy(entry["dialogue_data"])
-                    st.success(f"✅ 已恢复到: {entry['action']}")
+                    st.success(f" 已恢复到: {entry['action']}")
                     st.rerun()
         
         if i < len(st.session_state.dialogue_history) - 1:
@@ -7309,7 +7531,7 @@ def show_dialogue_regeneration_options():
             regenerate_single_chapter_dialogue(chapter_idx)
     
     elif regen_scope == "全部章节":
-        st.warning("⚠️ 这将重新生成所有章节的对话，可能需要较长时间")
+        st.warning(" 这将重新生成所有章节的对话，可能需要较长时间")
         
         if st.button("🔄 重新生成全部对话", type="primary"):
             regenerate_all_dialogues()
@@ -7332,7 +7554,7 @@ def regenerate_single_chapter_dialogue(chapter_idx):
         with st.spinner(f"🔄 正在重新生成第{chapter_idx+1}章对话..."):
             # 获取该章节的故事内容
             if chapter_idx >= len(st.session_state.story_data):
-                st.error(f"❌ 章节索引超出范围: {chapter_idx}")
+                st.error(f" 章节索引超出范围: {chapter_idx}")
                 return
             
             chapter_story = [st.session_state.story_data[chapter_idx]]
@@ -7375,15 +7597,15 @@ def regenerate_single_chapter_dialogue(chapter_idx):
                     st.session_state.dialogue_data["behavior_timeline"] = new_timeline
             
             print(f"🔄 [对话重生成] 第{chapter_idx+1}章对话重新生成完成")
-            st.success(f"✅ 第{chapter_idx+1}章对话重新生成完成！")
+            st.success(f" 第{chapter_idx+1}章对话重新生成完成！")
             
             # 保存操作到历史
             save_dialogue_to_history(f"重新生成第{chapter_idx+1}章对话完成")
             
     except Exception as e:
         error_msg = f"重新生成第{chapter_idx+1}章对话失败: {str(e)}"
-        print(f"❌ [对话重生成] {error_msg}")
-        st.error(f"❌ {error_msg}")
+        print(f" [对话重生成] {error_msg}")
+        st.error(f" {error_msg}")
 
 def regenerate_all_dialogues(behavior_model="gpt-4.1"):
     """重新生成全部对话"""
@@ -7400,8 +7622,8 @@ def regenerate_all_dialogues(behavior_model="gpt-4.1"):
         
     except Exception as e:
         error_msg = f"重新生成全部对话失败: {str(e)}"
-        print(f"❌ [对话重生成] {error_msg}")
-        st.error(f"❌ {error_msg}")
+        print(f" [对话重生成] {error_msg}")
+        st.error(f" {error_msg}")
 
 def regenerate_character_dialogues(character_name):
     """重新生成特定角色的对话"""
@@ -7414,19 +7636,19 @@ def regenerate_character_dialogues(character_name):
         with st.spinner(f"🔄 正在重新生成角色 {character_name} 的对话..."):
             # 这里需要实现角色特定的对话重新生成逻辑
             # 由于后端API限制，这里暂时使用全量重新生成
-            st.warning("⚠️ 当前版本暂不支持单独重新生成特定角色对话，将重新生成全部对话")
+            st.warning(" 当前版本暂不支持单独重新生成特定角色对话，将重新生成全部对话")
             regenerate_all_dialogues()
         
         print(f"🔄 [对话重生成] 角色 {character_name} 对话重新生成完成")
         
     except Exception as e:
         error_msg = f"重新生成角色 {character_name} 对话失败: {str(e)}"
-        print(f"❌ [对话重生成] {error_msg}")
-        st.error(f"❌ {error_msg}")
+        print(f" [对话重生成] {error_msg}")
+        st.error(f" {error_msg}")
 
 def show_dialogue_manual_edit():
     """手动编辑对话"""
-    st.markdown("##### ✏️ 手动编辑对话内容")
+    st.markdown("#####  手动编辑对话内容")
     
     if not st.session_state.get('dialogue_data', {}).get('chapter_dialogues'):
         st.info("📝 暂无章节对话数据可编辑")
@@ -7490,10 +7712,10 @@ def edit_chapter_dialogue(chapter_idx):
             
             with col2:
                 # 操作按钮
-                if st.button("💾 保存修改", key=f"save_dialogue_{chapter_idx}_{i}"):
+                if st.button(" 保存修改", key=f"save_dialogue_{chapter_idx}_{i}"):
                     save_dialogue_edit(chapter_idx, i, new_speaker, new_dialogue, new_action)
                 
-                if st.button("🗑️ 删除对话", key=f"delete_dialogue_{chapter_idx}_{i}"):
+                if st.button(" 删除对话", key=f"delete_dialogue_{chapter_idx}_{i}"):
                     delete_dialogue_from_chapter(chapter_idx, i)
     
     # 添加新对话
@@ -7504,7 +7726,7 @@ def edit_chapter_dialogue(chapter_idx):
 def save_dialogue_edit(chapter_idx, dialogue_idx, new_speaker, new_dialogue, new_action):
     """保存对话编辑"""
     try:
-        print(f"💾 [对话编辑] 保存第{chapter_idx+1}章第{dialogue_idx+1}个对话的修改")
+        print(f" [对话编辑] 保存第{chapter_idx+1}章第{dialogue_idx+1}个对话的修改")
         
         # 保存当前状态
         save_dialogue_to_history(f"编辑第{chapter_idx+1}章对话{dialogue_idx+1}前")
@@ -7519,18 +7741,18 @@ def save_dialogue_edit(chapter_idx, dialogue_idx, new_speaker, new_dialogue, new
         # 保存操作到历史
         save_dialogue_to_history(f"编辑第{chapter_idx+1}章对话{dialogue_idx+1}完成")
         
-        st.success(f"✅ 第{chapter_idx+1}章对话 {dialogue_idx+1} 修改已保存")
+        st.success(f" 第{chapter_idx+1}章对话 {dialogue_idx+1} 修改已保存")
         st.rerun()
         
     except Exception as e:
         error_msg = f"保存对话编辑失败: {str(e)}"
-        print(f"❌ [对话编辑] {error_msg}")
-        st.error(f"❌ {error_msg}")
+        print(f" [对话编辑] {error_msg}")
+        st.error(f" {error_msg}")
 
 def delete_dialogue_from_chapter(chapter_idx, dialogue_idx):
     """从章节中删除对话"""
     try:
-        print(f"🗑️ [对话删除] 删除第{chapter_idx+1}章第{dialogue_idx+1}个对话")
+        print(f" [对话删除] 删除第{chapter_idx+1}章第{dialogue_idx+1}个对话")
         
         # 保存当前状态
         save_dialogue_to_history(f"删除第{chapter_idx+1}章对话{dialogue_idx+1}前")
@@ -7543,13 +7765,13 @@ def delete_dialogue_from_chapter(chapter_idx, dialogue_idx):
         # 保存操作到历史
         save_dialogue_to_history(f"删除第{chapter_idx+1}章对话{dialogue_idx+1}完成")
         
-        st.success(f"✅ 第{chapter_idx+1}章对话 {dialogue_idx+1} 已删除")
+        st.success(f" 第{chapter_idx+1}章对话 {dialogue_idx+1} 已删除")
         st.rerun()
         
     except Exception as e:
         error_msg = f"删除对话失败: {str(e)}"
-        print(f"❌ [对话删除] {error_msg}")
-        st.error(f"❌ {error_msg}")
+        print(f" [对话删除] {error_msg}")
+        st.error(f" {error_msg}")
 
 def add_new_dialogue_to_chapter(chapter_idx):
     """向章节添加新对话"""
@@ -7593,15 +7815,15 @@ def add_new_dialogue_to_chapter(chapter_idx):
                     # 保存操作到历史
                     save_dialogue_to_history(f"添加第{chapter_idx+1}章新对话完成")
                     
-                    st.success(f"✅ 新对话已添加到第{chapter_idx+1}章")
+                    st.success(f" 新对话已添加到第{chapter_idx+1}章")
                     st.rerun()
                     
                 except Exception as e:
                     error_msg = f"添加新对话失败: {str(e)}"
-                    print(f"❌ [对话添加] {error_msg}")
-                    st.error(f"❌ {error_msg}")
+                    print(f" [对话添加] {error_msg}")
+                    st.error(f" {error_msg}")
             else:
-                st.error("❌ 请填写角色名称和对话内容")
+                st.error(" 请填写角色名称和对话内容")
 
 def show_dialogue_file_management():
     """对话文件管理"""
@@ -7611,7 +7833,7 @@ def show_dialogue_file_management():
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        if st.button("💾 保存到项目", type="primary", use_container_width=True):
+        if st.button(" 保存到项目", type="primary", use_container_width=True):
             save_dialogue_to_project()
     
     with col2:
@@ -7630,7 +7852,7 @@ def show_dialogue_file_management():
     # 显示当前对话文件信息
     if st.session_state.get('dialogue_data'):
         st.markdown("---")
-        st.markdown("##### 📊 当前对话数据信息")
+        st.markdown("#####  当前对话数据信息")
         
         dialogue_data = st.session_state.dialogue_data
         
@@ -7657,10 +7879,10 @@ def save_dialogue_to_project():
     """保存对话到项目目录"""
     try:
         if not st.session_state.get('dialogue_data'):
-            st.warning("⚠️ 暂无对话数据可保存")
+            st.warning(" 暂无对话数据可保存")
             return
         
-        print(f"💾💾💾 [对话保存] ===== 开始保存对话到项目 =====")
+        print(f" [对话保存] ===== 开始保存对话到项目 =====")
         
         start_time = time.time()
         
@@ -7693,12 +7915,12 @@ def save_dialogue_to_project():
             }
         )
         
-        print(f"💾 [对话保存] 章节对话: {len(chapter_dialogues)} 项")
-        print(f"💾 [对话保存] 句子对话: {len(sentence_dialogues)} 项")
-        print(f"💾 [对话保存] 行为时间线: {len(behavior_timeline)} 项")
-        print(f"💾💾💾 [对话保存] ===== 保存完成 =====")
+        print(f" [对话保存] 章节对话: {len(chapter_dialogues)} 项")
+        print(f" [对话保存] 句子对话: {len(sentence_dialogues)} 项")
+        print(f" [对话保存] 行为时间线: {len(behavior_timeline)} 项")
+        print(f" [对话保存] ===== 保存完成 =====")
         
-        st.success(f"✅ 对话数据已保存到项目目录: {st.session_state.current_version}/")
+        st.success(f" 对话数据已保存到项目目录: {st.session_state.current_version}/")
         
         # 显示保存详情
         with st.expander("📄 保存详情", expanded=True):
@@ -7718,8 +7940,8 @@ def save_dialogue_to_project():
         
     except Exception as e:
         error_msg = f"保存对话到项目失败: {str(e)}"
-        print(f"❌ [对话保存] {error_msg}")
-        st.error(f"❌ {error_msg}")
+        print(f" [对话保存] {error_msg}")
+        st.error(f" {error_msg}")
 
 def load_existing_dialogue(context="default"):
     """加载已有对话文件"""
@@ -7793,7 +8015,7 @@ def process_single_dialogue_file(uploaded_file, context):
         # 验证文件格式
         if validate_dialogue_file(dialogue_data, uploaded_file.name):
             # 显示预览
-            with st.expander("📋 文件预览", expanded=True):
+            with st.expander(" 文件预览", expanded=True):
                 if isinstance(dialogue_data, dict):
                     # 完整对话数据格式
                     col1, col2, col3 = st.columns(3)
@@ -7814,17 +8036,17 @@ def process_single_dialogue_file(uploaded_file, context):
             col1, col2 = st.columns(2)
             
             with col1:
-                if st.button("✅ 确认加载", type="primary", use_container_width=True, key=f"confirm_load_{context}"):
+                if st.button(" 确认加载", type="primary", use_container_width=True, key=f"confirm_load_{context}"):
                     load_dialogue_data(dialogue_data, uploaded_file.name, context)
             
             with col2:
-                if st.button("❌ 取消", use_container_width=True, key=f"cancel_load_{context}"):
+                if st.button(" 取消", use_container_width=True, key=f"cancel_load_{context}"):
                     close_dialogue_loader(context)
         
     except json.JSONDecodeError as e:
-        st.error(f"❌ JSON 解析失败: {str(e)}")
+        st.error(f" JSON 解析失败: {str(e)}")
     except Exception as e:
-        st.error(f"❌ 文件加载失败: {str(e)}")
+        st.error(f" 文件加载失败: {str(e)}")
 
 def process_multiple_dialogue_files(chapter_file, sentence_file, behavior_file, context):
     """处理多个对话文件"""
@@ -7851,7 +8073,7 @@ def process_multiple_dialogue_files(chapter_file, sentence_file, behavior_file, 
                 files_loaded.append(f"章节对话: {chapter_file.name}")
                 print(f"📁 [多文件加载] 章节对话文件加载成功: {len(dialogue_data['chapter_dialogues'])} 项")
             except Exception as e:
-                st.error(f"❌ 章节对话文件加载失败: {str(e)}")
+                st.error(f" 章节对话文件加载失败: {str(e)}")
         
         # 加载句子对话文件
         if sentence_file is not None:
@@ -7863,7 +8085,7 @@ def process_multiple_dialogue_files(chapter_file, sentence_file, behavior_file, 
                 files_loaded.append(f"句子对话: {sentence_file.name}")
                 print(f"📁 [多文件加载] 句子对话文件加载成功: {len(dialogue_data['sentence_dialogues'])} 项")
             except Exception as e:
-                st.error(f"❌ 句子对话文件加载失败: {str(e)}")
+                st.error(f" 句子对话文件加载失败: {str(e)}")
         
         # 加载行为时间线文件
         if behavior_file is not None:
@@ -7875,13 +8097,13 @@ def process_multiple_dialogue_files(chapter_file, sentence_file, behavior_file, 
                 files_loaded.append(f"行为时间线: {behavior_file.name}")
                 print(f"📁 [多文件加载] 行为时间线文件加载成功: {len(dialogue_data['behavior_timeline'])} 项")
             except Exception as e:
-                st.error(f"❌ 行为时间线文件加载失败: {str(e)}")
+                st.error(f" 行为时间线文件加载失败: {str(e)}")
         
         if files_loaded:
             # 显示加载的文件信息
-            with st.expander("📋 已加载文件", expanded=True):
+            with st.expander(" 已加载文件", expanded=True):
                 for file_info in files_loaded:
-                    st.success(f"✅ {file_info}")
+                    st.success(f" {file_info}")
                 
                 # 显示统计信息
                 col1, col2, col3 = st.columns(3)
@@ -7896,17 +8118,17 @@ def process_multiple_dialogue_files(chapter_file, sentence_file, behavior_file, 
             col1, col2 = st.columns(2)
             
             with col1:
-                if st.button("✅ 确认加载", type="primary", use_container_width=True, key=f"confirm_multi_load_{context}"):
+                if st.button(" 确认加载", type="primary", use_container_width=True, key=f"confirm_multi_load_{context}"):
                     load_dialogue_data(dialogue_data, "多文件组合", context)
             
             with col2:
-                if st.button("❌ 取消", use_container_width=True, key=f"cancel_multi_load_{context}"):
+                if st.button(" 取消", use_container_width=True, key=f"cancel_multi_load_{context}"):
                     close_dialogue_loader(context)
         else:
-            st.warning("⚠️ 请至少上传一个对话文件")
+            st.warning(" 请至少上传一个对话文件")
     
     except Exception as e:
-        st.error(f"❌ 多文件加载失败: {str(e)}")
+        st.error(f" 多文件加载失败: {str(e)}")
 
 def load_dialogue_data(dialogue_data, source_name, context):
     """加载对话数据到session state"""
@@ -7932,12 +8154,12 @@ def load_dialogue_data(dialogue_data, source_name, context):
         # 保存操作到历史
         save_dialogue_to_history(f"加载对话文件: {source_name}")
         
-        st.success(f"✅ 对话数据 {source_name} 加载成功！")
+        st.success(f" 对话数据 {source_name} 加载成功！")
         close_dialogue_loader(context)
         st.rerun()
         
     except Exception as e:
-        st.error(f"❌ 加载对话数据失败: {str(e)}")
+        st.error(f" 加载对话数据失败: {str(e)}")
 
 def close_dialogue_loader(context):
     """关闭对话加载器"""
@@ -7955,46 +8177,46 @@ def validate_dialogue_file(data, filename):
             missing_keys = [key for key in required_keys if key not in data]
             
             if missing_keys:
-                st.warning(f"⚠️ 文件缺少字段: {', '.join(missing_keys)}，将尝试兼容加载")
+                st.warning(f" 文件缺少字段: {', '.join(missing_keys)}，将尝试兼容加载")
             
             return True
             
         elif isinstance(data, list):
             # 单一数据格式验证
             if not data:
-                st.warning("⚠️ 文件为空列表")
+                st.warning(" 文件为空列表")
                 return True
             
             # 检查是否为章节对话格式
             if all(isinstance(item, dict) and "dialogue" in item for item in data):
-                st.info("📋 检测到章节对话格式")
+                st.info(" 检测到章节对话格式")
                 return True
             
             # 检查是否为句子对话格式
             if all(isinstance(item, dict) and "sentence" in item for item in data):
-                st.info("📋 检测到句子对话格式")
+                st.info(" 检测到句子对话格式")
                 return True
             
             # 检查是否为行为时间线格式
             if all(isinstance(item, dict) and "behavior" in item for item in data):
-                st.info("📋 检测到行为时间线格式")
+                st.info(" 检测到行为时间线格式")
                 return True
             
-            st.warning("⚠️ 无法识别的数据格式，将尝试通用加载")
+            st.warning(" 无法识别的数据格式，将尝试通用加载")
             return True
         
         else:
-            st.error("❌ 不支持的数据格式，请上传 JSON 格式的对话文件")
+            st.error(" 不支持的数据格式，请上传 JSON 格式的对话文件")
             return False
     
     except Exception as e:
-        st.error(f"❌ 文件验证失败: {str(e)}")
+        st.error(f" 文件验证失败: {str(e)}")
         return False
 
 def export_dialogue_files():
     """导出对话文件"""
     if not st.session_state.get('dialogue_data'):
-        st.warning("⚠️ 暂无对话数据可导出")
+        st.warning(" 暂无对话数据可导出")
         return
     
     st.markdown("##### 📤 导出对话文件")
@@ -8045,14 +8267,14 @@ def export_dialogue_files():
         )
         
         # 显示预览
-        with st.expander("📋 导出预览", expanded=False):
+        with st.expander(" 导出预览", expanded=False):
             if export_format.endswith("(JSON)"):
                 st.json(export_data)
             else:
                 st.text(download_content[:1000] + "..." if len(download_content) > 1000 else download_content)
         
     except Exception as e:
-        st.error(f"❌ 导出失败: {str(e)}")
+        st.error(f" 导出失败: {str(e)}")
 
 def generate_dialogue_text_format(dialogue_data):
     """生成可读的文本格式对话"""
@@ -8137,10 +8359,10 @@ def save_enhancement_to_history(action_name, old_enhancement_data=None):
             st.session_state.enhancement_history = st.session_state.enhancement_history[-max_history:]
             st.session_state.enhancement_history_index = len(st.session_state.enhancement_history) - 1
         
-        print(f"💾 [增强历史] 保存操作: {action_name}, 当前索引: {st.session_state.enhancement_history_index}")
+        print(f" [增强历史] 保存操作: {action_name}, 当前索引: {st.session_state.enhancement_history_index}")
         
     except Exception as e:
-        print(f"❌ [增强历史] 保存失败: {str(e)}")
+        print(f" [增强历史] 保存失败: {str(e)}")
 
 def undo_enhancement_action():
     """撤销故事增强操作"""
@@ -8151,7 +8373,7 @@ def undo_enhancement_action():
         st.success(f"↩️ 已撤销操作: {history_entry['action']}")
         st.rerun()
     else:
-        st.warning("⚠️ 没有可撤销的操作")
+        st.warning(" 没有可撤销的操作")
 
 def redo_enhancement_action():
     """重做故事增强操作"""
@@ -8162,7 +8384,7 @@ def redo_enhancement_action():
         st.success(f"↪️ 已重做操作: {history_entry['action']}")
         st.rerun()
     else:
-        st.warning("⚠️ 没有可重做的操作")
+        st.warning(" 没有可重做的操作")
 
 def show_story_enhancement_interface():
     """显示故事增强界面 - 作为主流程步骤"""
@@ -8170,24 +8392,24 @@ def show_story_enhancement_interface():
     
     # 检查前置条件
     if not st.session_state.outline_data:
-        st.error("❌ 请先完成步骤1: 生成故事大纲")
+        st.error(" 请先完成步骤1: 生成故事大纲")
         return
     
     if not st.session_state.characters_data:
-        st.error("❌ 请先完成步骤2: 生成角色")
+        st.error(" 请先完成步骤2: 生成角色")
         return
     
     if not st.session_state.get('story_data'):
-        st.error("❌ 请先完成步骤3: 生成故事内容")
+        st.error(" 请先完成步骤3: 生成故事内容")
         return
     
     if not st.session_state.get('dialogue_data'):
-        st.error("❌ 请先完成步骤4: 生成对话内容")
+        st.error(" 请先完成步骤4: 生成对话内容")
         return
     
     # 检查故事增强功能是否可用
     if not story_enhancement_available:
-        st.error("❌ 故事增强功能不可用，请检查后端模块导入")
+        st.error(" 故事增强功能不可用，请检查后端模块导入")
         return
     
     # 显示基于对话的故事增强界面
@@ -8198,7 +8420,7 @@ def show_story_enhancement_mode():
     st.markdown("### ✨ 故事增强选项")
     
     # 创建选项卡
-    tab1, tab2, tab3, tab4 = st.tabs(["🚀 生成增强版", "📋 增强预览", "✏️ 编辑增强", "📁 文件管理"])
+    tab1, tab2, tab3, tab4 = st.tabs([" 生成增强版", " 增强预览", " 编辑增强", "📁 文件管理"])
     
     with tab1:
         show_enhancement_generation_options()
@@ -8214,7 +8436,7 @@ def show_story_enhancement_mode():
 
 def show_enhancement_generation_options():
     """故事增强生成选项"""
-    st.markdown("#### 🎯 生成增强版故事")
+    st.markdown("####  生成增强版故事")
     
     # 增强参数配置
     col1, col2 = st.columns(2)
@@ -8226,7 +8448,7 @@ def show_enhancement_generation_options():
         auto_save = st.checkbox("自动保存", value=True, help="生成完成后自动保存到项目目录", key="gen_auto_save_checkbox")
     
     with col2:
-        st.markdown("##### ⚙️ 生成参数")
+        st.markdown("#####  生成参数")
         use_cache = st.checkbox("使用缓存", value=True, help="如果已有增强数据，是否使用缓存", key="gen_use_cache_checkbox")
         
         # 显示当前状态
@@ -8314,9 +8536,9 @@ def generate_enhanced_story(enable_transitions=True, enable_polish=True, use_cac
                 if os.path.exists(enhanced_path):
                     with open(enhanced_path, 'r', encoding='utf-8') as f:
                         enhanced_content = f.read()
-                    print("✅ [故事增强] 章节过渡添加完成")
+                    print(" [故事增强] 章节过渡添加完成")
                 else:
-                    st.warning("⚠️ 章节过渡生成失败，将使用原始内容")
+                    st.warning(" 章节过渡生成失败，将使用原始内容")
                     enhanced_content = compile_enhanced_story_manually()
             else:
                 enhanced_content = compile_enhanced_story_manually()
@@ -8336,9 +8558,9 @@ def generate_enhanced_story(enable_transitions=True, enable_polish=True, use_cac
                 if os.path.exists(polished_path):
                     with open(polished_path, 'r', encoding='utf-8') as f:
                         polished_content = f.read()
-                    print("✅ [故事增强] 对话润色完成")
+                    print(" [故事增强] 对话润色完成")
                 else:
-                    st.warning("⚠️ 对话润色失败，将使用过渡版本")
+                    st.warning(" 对话润色失败，将使用过渡版本")
                     polished_content = enhanced_content
             else:
                 polished_content = enhanced_content
@@ -8363,9 +8585,9 @@ def generate_enhanced_story(enable_transitions=True, enable_polish=True, use_cac
             try:
                 import shutil
                 shutil.rmtree(temp_dir)
-                print(f"🗑️ [故事增强] 清理临时目录: {temp_dir}")
+                print(f" [故事增强] 清理临时目录: {temp_dir}")
             except Exception as e:
-                print(f"⚠️ [故事增强] 临时目录清理失败: {e}")
+                print(f" [故事增强] 临时目录清理失败: {e}")
             
             # 记录操作日志
             log_backend_operation(
@@ -8388,10 +8610,10 @@ def generate_enhanced_story(enable_transitions=True, enable_polish=True, use_cac
             print(f"✨ [故事增强] 润色内容长度: {len(polished_content)}")
             print(f"✨✨✨ [故事增强] ===== 增强完成 =====")
             
-            st.success(f"✅ 故事增强完成！生成了 {len(polished_content or enhanced_content)} 字符的增强版故事")
+            st.success(f" 故事增强完成！生成了 {len(polished_content or enhanced_content)} 字符的增强版故事")
             
             # 显示增强统计
-            with st.expander("📊 增强统计", expanded=True):
+            with st.expander(" 增强统计", expanded=True):
                 col1, col2, col3 = st.columns(3)
                 with col1:
                     st.metric("处理时间", f"{end_time - start_time:.1f}秒")
@@ -8414,8 +8636,8 @@ def generate_enhanced_story(enable_transitions=True, enable_polish=True, use_cac
             
     except Exception as e:
         error_msg = f"故事增强失败: {str(e)}"
-        print(f"❌ [故事增强] {error_msg}")
-        st.error(f"❌ {error_msg}")
+        print(f" [故事增强] {error_msg}")
+        st.error(f" {error_msg}")
         
         # 记录错误日志
         log_backend_operation(
@@ -8440,7 +8662,7 @@ def compile_enhanced_story_manually():
         return compiled_content
         
     except Exception as e:
-        print(f"❌ [故事增强] 手动编译失败: {e}")
+        print(f" [故事增强] 手动编译失败: {e}")
         return "手动编译失败，请检查数据格式"
 
 def regenerate_enhanced_story(enable_transitions=True, enable_polish=True):
@@ -8463,7 +8685,7 @@ def show_enhancement_display():
         st.info("📝 暂无增强版故事，请先生成")
         return
     
-    st.markdown("#### 📋 增强版故事预览")
+    st.markdown("####  增强版故事预览")
     
     enhanced_data = st.session_state.enhanced_story_data
     
@@ -8488,15 +8710,15 @@ def show_enhancement_display():
     if params.get('enable_transitions'):
         enhancement_features.append("✨ 章节过渡")
     if params.get('enable_polish'):
-        enhancement_features.append("🎨 对话润色")
+        enhancement_features.append(" 对话润色")
     
     if enhancement_features:
-        st.success(f"🎯 已启用功能: {' + '.join(enhancement_features)}")
+        st.success(f" 已启用功能: {' + '.join(enhancement_features)}")
     
     st.markdown("---")
     
     # 创建显示选项卡
-    tab1, tab2, tab3 = st.tabs(["📖 最终版本", "✨ 章节过渡版", "🎨 对话润色版"])
+    tab1, tab2, tab3 = st.tabs(["📖 最终版本", "✨ 章节过渡版", " 对话润色版"])
     
     with tab1:
         st.markdown("##### 📖 最终增强版本")
@@ -8512,7 +8734,7 @@ def show_enhancement_display():
                 mime="text/markdown",
                 use_container_width=True
             ):
-                st.success("✅ 文件下载开始")
+                st.success(" 文件下载开始")
         else:
             st.info("📝 暂无最终版本内容")
     
@@ -8529,12 +8751,12 @@ def show_enhancement_display():
                 mime="text/markdown",
                 use_container_width=True
             ):
-                st.success("✅ 文件下载开始")
+                st.success(" 文件下载开始")
         else:
             st.info("📝 暂无章节过渡版本内容")
     
     with tab3:
-        st.markdown("##### 🎨 对话润色版本")
+        st.markdown("#####  对话润色版本")
         polished_content = enhanced_data.get('polished_content', '')
         if polished_content:
             st.text_area("对话润色内容", polished_content, height=600, key="polished_enhanced_content")
@@ -8546,7 +8768,7 @@ def show_enhancement_display():
                 mime="text/markdown",
                 use_container_width=True
             ):
-                st.success("✅ 文件下载开始")
+                st.success(" 文件下载开始")
         else:
             st.info("📝 暂无对话润色版本内容")
 
@@ -8556,10 +8778,10 @@ def show_enhancement_edit_mode():
         st.info("📝 暂无增强版故事，请先生成")
         return
     
-    st.markdown("#### ✏️ 编辑增强版故事")
+    st.markdown("####  编辑增强版故事")
     
     # 创建编辑选项卡
-    tab1, tab2, tab3 = st.tabs(["🔄 重新生成", "✏️ 手动编辑", "📊 历史记录"])
+    tab1, tab2, tab3 = st.tabs(["🔄 重新生成", " 手动编辑", " 历史记录"])
     
     with tab1:
         show_enhancement_regeneration_options()
@@ -8578,7 +8800,7 @@ def show_enhancement_regeneration_options():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("**🎯 重新生成范围**")
+        st.markdown("** 重新生成范围**")
         regen_scope = st.radio(
             "选择重新生成范围",
             ["完整重新生成", "仅章节过渡", "仅对话润色"],
@@ -8586,7 +8808,7 @@ def show_enhancement_regeneration_options():
         )
     
     with col2:
-        st.markdown("**⚙️ 生成参数**")
+        st.markdown("** 生成参数**")
         enable_transitions = st.checkbox("添加章节过渡", value=True, key="regen_transitions")
         enable_polish = st.checkbox("润色对话", value=True, key="regen_polish")
     
@@ -8604,12 +8826,12 @@ def show_enhancement_regeneration_options():
             regenerate_enhanced_story(True, False)
     
     with col3:
-        if st.button("🎨 仅重新润色对话", use_container_width=True):
+        if st.button(" 仅重新润色对话", use_container_width=True):
             regenerate_enhanced_story(False, True)
 
 def show_enhancement_manual_edit():
     """手动编辑增强版内容"""
-    st.markdown("##### ✏️ 手动编辑增强内容")
+    st.markdown("#####  手动编辑增强内容")
     
     enhanced_data = st.session_state.enhanced_story_data
     current_content = enhanced_data.get('final_content', '')
@@ -8627,7 +8849,7 @@ def show_enhancement_manual_edit():
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        if st.button("💾 保存编辑", type="primary", use_container_width=True):
+        if st.button(" 保存编辑", type="primary", use_container_width=True):
             save_manual_enhancement_edit(edited_content)
     
     with col2:
@@ -8636,7 +8858,7 @@ def show_enhancement_manual_edit():
             st.rerun()
     
     with col3:
-        if st.button("📋 预览变化", use_container_width=True):
+        if st.button(" 预览变化", use_container_width=True):
             show_enhancement_edit_preview(current_content, edited_content)
 
 def save_manual_enhancement_edit(edited_content):
@@ -8653,19 +8875,19 @@ def save_manual_enhancement_edit(edited_content):
         # 保存编辑后的状态到历史
         save_enhancement_to_history("手动编辑完成")
         
-        st.success("✅ 增强版内容已保存")
+        st.success(" 增强版内容已保存")
         
         # 记录操作日志
-        print(f"✏️ [故事增强] 手动编辑保存完成，内容长度: {len(edited_content)}")
+        print(f" [故事增强] 手动编辑保存完成，内容长度: {len(edited_content)}")
         
     except Exception as e:
         error_msg = f"保存编辑失败: {str(e)}"
-        print(f"❌ [故事增强] {error_msg}")
-        st.error(f"❌ {error_msg}")
+        print(f" [故事增强] {error_msg}")
+        st.error(f" {error_msg}")
 
 def show_enhancement_edit_preview(original_content, edited_content):
     """显示编辑预览对比"""
-    st.markdown("##### 📋 编辑变化预览")
+    st.markdown("#####  编辑变化预览")
     
     col1, col2 = st.columns(2)
     
@@ -8686,11 +8908,11 @@ def show_enhancement_edit_preview(original_content, edited_content):
     elif length_change < 0:
         st.warning(f"📉 内容减少了 {abs(length_change):,} 字符")
     else:
-        st.info("📊 内容长度未变化")
+        st.info(" 内容长度未变化")
 
 def show_enhancement_history_panel():
     """显示增强版历史记录面板"""
-    st.markdown("##### 📊 增强版历史记录")
+    st.markdown("#####  增强版历史记录")
     
     if not st.session_state.enhancement_history:
         st.info("📝 暂无历史记录")
@@ -8715,14 +8937,14 @@ def show_enhancement_history_panel():
     st.markdown("---")
     
     # 历史记录列表
-    st.markdown("**📋 历史操作记录**")
+    st.markdown("** 历史操作记录**")
     
     for i, entry in enumerate(reversed(st.session_state.enhancement_history)):
         actual_index = len(st.session_state.enhancement_history) - 1 - i
         is_current = actual_index == st.session_state.enhancement_history_index
         
         with st.expander(
-            f"{'🔸' if is_current else '⚪'} {entry['action']} - {entry['timestamp'][:19].replace('T', ' ')}",
+            f"{'🔸' if is_current else ''} {entry['action']} - {entry['timestamp'][:19].replace('T', ' ')}",
             expanded=is_current
         ):
             col1, col2 = st.columns(2)
@@ -8738,7 +8960,7 @@ def show_enhancement_history_panel():
                     if actual_index < len(st.session_state.enhancement_history):
                         history_entry = st.session_state.enhancement_history[actual_index]
                         st.session_state.enhanced_story_data = copy.deepcopy(history_entry["enhancement_data"])
-                        st.success(f"✅ 已跳转到: {history_entry['action']}")
+                        st.success(f" 已跳转到: {history_entry['action']}")
                         st.rerun()
 
 def show_enhancement_file_management():
@@ -8746,7 +8968,7 @@ def show_enhancement_file_management():
     st.markdown("#### 📁 增强版文件管理")
     
     # 文件操作选项卡
-    tab1, tab2, tab3 = st.tabs(["💾 保存文件", "📁 加载文件", "📤 导出文件"])
+    tab1, tab2, tab3 = st.tabs([" 保存文件", "📁 加载文件", "📤 导出文件"])
     
     with tab1:
         save_enhancement_to_project("file_management")
@@ -8763,13 +8985,13 @@ def save_enhancement_to_project(context="default"):
         st.info("📝 暂无增强版数据可保存")
         return
     
-    st.markdown("##### 💾 保存增强版到项目")
+    st.markdown("#####  保存增强版到项目")
     
     try:
         # 获取当前版本信息
         current_version = get_current_version()
         if not current_version:
-            st.error("❌ 无法确定当前项目版本")
+            st.error(" 无法确定当前项目版本")
             return
         
         enhanced_data = st.session_state.enhanced_story_data
@@ -8785,7 +9007,7 @@ def save_enhancement_to_project(context="default"):
             save_polished = st.checkbox("保存对话润色版", value=False, key=f"save_polished_checkbox_{context}")
             save_metadata = st.checkbox("保存元数据", value=True, key=f"save_metadata_checkbox_{context}")
         
-        if st.button("💾 执行保存", type="primary", use_container_width=True, key=f"save_execute_btn_{context}"):
+        if st.button(" 执行保存", type="primary", use_container_width=True, key=f"save_execute_btn_{context}"):
             saved_files = []
             
             # 保存最终版本
@@ -8826,16 +9048,16 @@ def save_enhancement_to_project(context="default"):
                 save_json(metadata, current_version, "enhanced_story_metadata.json")
                 saved_files.append("enhanced_story_metadata.json")
             
-            st.success(f"✅ 已保存 {len(saved_files)} 个文件到 data/output/{current_version}/")
+            st.success(f" 已保存 {len(saved_files)} 个文件到 data/output/{current_version}/")
             for file in saved_files:
                 st.info(f"📄 {file}")
             
-            print(f"💾 [故事增强] 保存文件到项目: {saved_files}")
+            print(f" [故事增强] 保存文件到项目: {saved_files}")
     
     except Exception as e:
         error_msg = f"保存文件失败: {str(e)}"
-        print(f"❌ [故事增强] {error_msg}")
-        st.error(f"❌ {error_msg}")
+        print(f" [故事增强] {error_msg}")
+        st.error(f" {error_msg}")
 
 def load_existing_enhancement():
     """加载已有的增强版文件"""
@@ -8872,7 +9094,7 @@ def load_existing_enhancement():
                     }
                 }
                 
-                st.success(f"✅ 已加载增强版文件: {uploaded_file.name}")
+                st.success(f" 已加载增强版文件: {uploaded_file.name}")
                 st.info(f"📄 内容长度: {len(content):,} 字符")
                 
             elif uploaded_file.name.endswith('.json'):
@@ -8883,9 +9105,9 @@ def load_existing_enhancement():
                 if 'final_content' in data or 'enhanced_content' in data:
                     save_enhancement_to_history("加载JSON文件前")
                     st.session_state.enhanced_story_data = data
-                    st.success(f"✅ 已加载增强版数据: {uploaded_file.name}")
+                    st.success(f" 已加载增强版数据: {uploaded_file.name}")
                 else:
-                    st.error("❌ JSON 文件格式不正确，缺少必要的内容字段")
+                    st.error(" JSON 文件格式不正确，缺少必要的内容字段")
             
             # 保存加载后状态
             save_enhancement_to_history("文件加载完成")
@@ -8895,8 +9117,8 @@ def load_existing_enhancement():
             
         except Exception as e:
             error_msg = f"加载文件失败: {str(e)}"
-            print(f"❌ [故事增强] {error_msg}")
-            st.error(f"❌ {error_msg}")
+            print(f" [故事增强] {error_msg}")
+            st.error(f" {error_msg}")
 
 def export_enhancement_files():
     """导出增强版文件"""
@@ -8935,7 +9157,7 @@ def export_enhancement_files():
             )
     
     with col2:
-        st.markdown("**📊 数据导出**")
+        st.markdown("** 数据导出**")
         
         # 完整数据导出
         import json
@@ -8966,6 +9188,725 @@ def export_enhancement_files():
             mime="application/json",
             use_container_width=True
         )
+
+# ================================
+#  性能分析界面
+# ================================
+
+def show_performance_analysis_interface():
+    """显示性能分析界面"""
+    st.header(" 性能分析中心")
+    st.markdown("---")
+    
+    # 顶部操作栏
+    col1, col2, col3 = st.columns([2, 1, 1])
+    
+    with col1:
+        st.markdown("###  计算复杂度分析与性能监控")
+    
+    with col2:
+        if st.button("🔄 刷新数据", use_container_width=True):
+            st.rerun()
+    
+    with col3:
+        if st.button(" 返回主界面", use_container_width=True):
+            st.session_state.show_performance_analysis = False
+            st.rerun()
+    
+    # 选项卡界面
+    tab1, tab2, tab3, tab4 = st.tabs(["📈 单次分析", " 对比分析", "⚡ 实时监控", " 历史报告"])
+    
+    with tab1:
+        show_single_performance_analysis()
+    
+    with tab2:
+        show_comparative_performance_analysis()
+    
+    with tab3:
+        show_real_time_performance_monitor()
+        
+    with tab4:
+        show_performance_history()
+
+
+def show_single_performance_analysis():
+    """显示单次性能分析"""
+    st.markdown("#### 🔍 单次执行性能分析")
+    
+    # 加载性能报告
+    performance_reports = load_available_performance_reports()
+    
+    if not performance_reports:
+        st.warning("📝 暂无性能分析报告。请先运行故事生成流程以收集性能数据。")
+        
+        # 提供快速生成示例的选项
+        with st.expander(" 快速开始"):
+            st.markdown("""
+            **如何生成性能数据：**
+            1. 返回主界面，创建或加载一个故事大纲
+            2. 完成角色生成、故事扩展等步骤
+            3. 运行完整流程后，系统会自动生成性能分析报告
+            4. 返回此界面查看详细的性能分析
+            """)
+        return
+    
+    # 选择要分析的报告
+    report_options = {f"{report['metadata']['task_name']} ({report['metadata']['analysis_timestamp'][:19]})": report 
+                     for report in performance_reports}
+    selected_report_name = st.selectbox(
+        "📂 选择要分析的报告",
+        options=list(report_options.keys()),
+        help="选择一个性能报告进行详细分析"
+    )
+    
+    if selected_report_name:
+        selected_report = report_options[selected_report_name]
+        
+        # 显示基本信息
+        display_performance_basic_info(selected_report)
+        
+        st.markdown("---")
+        
+        # 分析详情
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            display_stage_performance_breakdown(selected_report)
+            
+        with col2:
+            display_complexity_analysis_results(selected_report)
+        
+        st.markdown("---")
+        
+        # 文本特征分析
+        display_text_features_analysis(selected_report)
+        
+        st.markdown("---")
+        
+        # 内存和API成本详细分析
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            display_memory_analysis(selected_report)
+            
+        with col2:
+            display_api_cost_analysis(selected_report)
+
+
+def show_comparative_performance_analysis():
+    """显示对比性能分析"""
+    st.markdown("####  多次执行对比分析")
+    
+    performance_reports = load_available_performance_reports()
+    
+    if len(performance_reports) < 2:
+        st.warning("📝 需要至少2个性能报告才能进行对比分析。")
+        return
+    
+    # 选择要对比的报告
+    report_options = {f"{report['metadata']['task_name']} ({report['metadata']['analysis_timestamp'][:19]})": report 
+                     for report in performance_reports}
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        selected_reports_1 = st.multiselect(
+            "📂 选择要对比的报告（基准组）",
+            options=list(report_options.keys()),
+            max_selections=5,
+            help="选择作为基准的性能报告"
+        )
+    
+    with col2:
+        selected_reports_2 = st.multiselect(
+            "📂 选择要对比的报告（对比组）",
+            options=list(report_options.keys()),
+            max_selections=5,
+            help="选择要与基准对比的性能报告"
+        )
+    
+    if selected_reports_1 and selected_reports_2:
+        reports_1 = [report_options[name] for name in selected_reports_1]
+        reports_2 = [report_options[name] for name in selected_reports_2]
+        
+        # 进行对比分析
+        comparison_result = perform_comparative_analysis(reports_1, reports_2)
+        display_comparison_results(comparison_result)
+
+
+def show_real_time_performance_monitor():
+    """显示实时性能监控"""
+    st.markdown("#### ⚡ 实时性能监控")
+    
+    st.info(" 此功能将在运行故事生成时提供实时性能监控")
+    
+    # 如果有正在运行的任务，显示实时监控
+    if st.session_state.get('running_task'):
+        display_real_time_monitor()
+    else:
+        st.markdown("""
+        **实时监控功能：**
+        - 🕐 各阶段执行时间实时显示
+        - 📈 文本生成速度曲线
+        -  复杂度指标实时计算
+        -  性能异常预警
+        
+        **使用方法：**
+        1. 从主界面启动故事生成流程
+        2. 生成过程中切换到此标签页
+        3. 查看实时性能数据
+        """)
+
+
+def show_performance_history():
+    """显示性能历史"""
+    st.markdown("####  历史性能报告")
+    
+    performance_reports = load_available_performance_reports()
+    
+    if not performance_reports:
+        st.info("📝 暂无历史性能报告")
+        return
+    
+    # 按时间排序
+    sorted_reports = sorted(performance_reports, 
+                           key=lambda x: x['metadata']['analysis_timestamp'], 
+                           reverse=True)
+    
+    # 显示历史报告列表
+    for i, report in enumerate(sorted_reports[:20]):  # 只显示最近20个
+        with st.expander(f" {report['metadata']['task_name']} - {report['metadata']['analysis_timestamp'][:19]}"):
+            col1, col2, col3, col4 = st.columns(4)
+            
+            with col1:
+                st.metric("总时间", f"{report['metadata']['total_execution_time']:.2f}秒")
+            
+            with col2:
+                text_features = report.get('text_features', {})
+                st.metric("生成字数", f"{text_features.get('total_word_count', 0)} 字")
+            
+            with col3:
+                complexity = report.get('complexity_analysis', {})
+                efficiency = complexity.get('efficiency_metrics', {})
+                st.metric("生成效率", f"{efficiency.get('words_per_second', 0):.2f} 字/秒")
+            
+            with col4:
+                summary = report.get('performance_summary', {})
+                st.metric("效率评级", summary.get('efficiency_rating', '未知'))
+            
+            # 详细按钮
+            if st.button(f"查看详情 #{i+1}", key=f"detail_{i}"):
+                st.session_state.selected_detail_report = report
+                st.rerun()
+
+
+def load_available_performance_reports():
+    """加载可用的性能分析报告"""
+    import os
+    import json
+    
+    reports = []
+    output_dir = "data/output"
+    
+    if not os.path.exists(output_dir):
+        return reports
+    
+    try:
+        # 遍历所有子目录寻找性能报告
+        for root, dirs, files in os.walk(output_dir):
+            for file in files:
+                if file.startswith("performance_analysis_") and file.endswith(".json"):
+                    filepath = os.path.join(root, file)
+                    try:
+                        with open(filepath, 'r', encoding='utf-8') as f:
+                            report = json.load(f)
+                        reports.append(report)
+                    except Exception as e:
+                        st.warning(f"无法加载报告 {file}: {e}")
+    except Exception as e:
+        st.error(f"加载报告时出错: {e}")
+    
+    return reports
+
+
+def display_performance_basic_info(report):
+    """显示性能报告基本信息"""
+    metadata = report.get('metadata', {})
+    summary = report.get('performance_summary', {})
+    
+    # 第一行：时间、字数、效率、评级
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        st.metric(
+            "总执行时间",
+            summary.get('total_time_formatted', f"{metadata.get('total_execution_time', 0):.2f}秒"),
+            help="完整故事生成流程的总耗时"
+        )
+    
+    with col2:
+        text_features = report.get('text_features', {})
+        st.metric(
+            "生成字数",
+            f"{text_features.get('total_word_count', 0)} 字",
+            help="生成的中文字符总数"
+        )
+    
+    with col3:
+        complexity = report.get('complexity_analysis', {})
+        efficiency = complexity.get('efficiency_metrics', {})
+        st.metric(
+            "生成效率",
+            f"{efficiency.get('words_per_second', 0):.2f} 字/秒",
+            help="平均每秒生成的字数"
+        )
+    
+    with col4:
+        st.metric(
+            "效率评级",
+            summary.get('efficiency_rating', '未知'),
+            help="根据生成效率给出的综合评级"
+        )
+    
+    # 第二行：内存、API成本、Token、角色
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        peak_memory = metadata.get('peak_memory_usage_mb', 0)
+        st.metric(
+            "峰值内存",
+            f"{peak_memory:.2f} MB",
+            help="生成过程中的峰值内存使用量"
+        )
+    
+    with col2:
+        total_cost = metadata.get('total_api_cost', 0)
+        st.metric(
+            "API成本",
+            f"${total_cost:.4f}",
+            help="总API调用成本（美元）"
+        )
+    
+    with col3:
+        total_tokens = metadata.get('total_tokens', 0)
+        st.metric(
+            "Token消耗",
+            f"{total_tokens:,}",
+            help="总Token消耗量"
+        )
+    
+    with col4:
+        # 显示角色相关信息
+        character_features = text_features.get('character_features', {})
+        character_count = character_features.get('character_count', 0)
+        memory_per_char = peak_memory / character_count if character_count > 0 else 0
+        st.metric(
+            "内存/角色",
+            f"{memory_per_char:.2f} MB",
+            help="平均每个角色的内存开销"
+        )
+
+
+def display_stage_performance_breakdown(report):
+    """显示各阶段性能分解"""
+    st.markdown("##### ⏱️ 各阶段耗时分解")
+    
+    stage_performance = report.get('stage_performance', {})
+    stage_times = stage_performance.get('stage_times', {})
+    stage_percentages = stage_performance.get('stage_breakdown_percentage', {})
+    
+    if not stage_times:
+        st.info("暂无阶段性能数据")
+        return
+    
+    # 创建阶段性能表格
+    import pandas as pd
+    
+    stage_data = []
+    stage_name_mapping = {
+        'outline_generation': ' 大纲生成',
+        'chapter_reorder': '🔄 章节重排',
+        'character_generation': '👥 角色生成', 
+        'story_expansion': '📝 故事扩展',
+        'dialogue_generation': '💬 对话生成',
+        'story_enhancement': '✨故事增强'
+    }
+    
+    for stage, duration in stage_times.items():
+        stage_data.append({
+            '阶段': stage_name_mapping.get(stage, stage),
+            '耗时(秒)': f"{duration:.3f}",
+            '占比(%)': f"{stage_percentages.get(stage, 0):.1f}%"
+        })
+    
+    df = pd.DataFrame(stage_data)
+    st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    # 最耗时阶段提示
+    if stage_times:
+        slowest_stage = max(stage_times.items(), key=lambda x: x[1])
+        slowest_name = stage_name_mapping.get(slowest_stage[0], slowest_stage[0])
+        st.info(f"🐌 最耗时阶段: {slowest_name} ({slowest_stage[1]:.3f}秒)")
+
+
+def display_complexity_analysis_results(report):
+    """显示复杂度分析结果"""
+    st.markdown("##### 🧮 复杂度分析")
+    
+    complexity = report.get('complexity_analysis', {})
+    complexity_indicators = complexity.get('complexity_indicators', {})
+    
+    if not complexity_indicators:
+        st.info("暂无复杂度分析数据")
+        return
+    
+    # 显示复杂度指标
+    with st.container():
+        st.markdown("**时间复杂度指标:**")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            if 'linear_indicator' in complexity_indicators:
+                st.metric(
+                    "线性指标 T(n)/n", 
+                    f"{complexity_indicators['linear_indicator']:.6f}",
+                    help="如果接近常数，说明时间复杂度接近线性"
+                )
+        
+        with col2:
+            if 'sqrt_n_indicator' in complexity_indicators:
+                st.metric(
+                    "平方根指标 T(n)/√n", 
+                    f"{complexity_indicators['sqrt_n_indicator']:.6f}",
+                    help="用于分析是否为平方根复杂度"
+                )
+        
+        # 复杂度估算
+        summary = report.get('performance_summary', {})
+        estimated_class = summary.get('estimated_complexity_class', '需要更多数据分析')
+        
+        st.markdown(f"**📈 估算复杂度类别:** {estimated_class}")
+
+
+def display_text_features_analysis(report):
+    """显示文本特征分析"""
+    st.markdown("#####  文本特征分析")
+    
+    text_features = report.get('text_features', {})
+    
+    if not text_features:
+        st.info("暂无文本特征数据")
+        return
+    
+    # 基本统计
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        st.metric("章节数", text_features.get('chapter_count', 0))
+    
+    with col2:
+        st.metric("总句子数", text_features.get('total_sentence_count', 0))
+    
+    with col3:
+        st.metric("平均章节长度", f"{text_features.get('avg_chapter_length', 0):.0f} 字")
+    
+    with col4:
+        st.metric("平均句子长度", f"{text_features.get('avg_sentence_length', 0):.1f} 字")
+    
+    # 对话特征（如果有）
+    dialogue_features = text_features.get('dialogue_features', {})
+    if dialogue_features and dialogue_features.get('total_dialogue_count', 0) > 0:
+        st.markdown("**💬 对话特征:**")
+        
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("对话数量", dialogue_features.get('total_dialogue_count', 0))
+        with col2:
+            st.metric("角色数量", dialogue_features.get('unique_speakers', 0))
+        with col3:
+            st.metric("平均对话长度", f"{dialogue_features.get('avg_dialogue_length', 0):.1f} 字")
+
+
+def display_memory_analysis(report):
+    """显示内存分析"""
+    st.markdown("#####  内存使用分析")
+    
+    memory_data = report.get('memory_complexity_data', {})
+    
+    if not memory_data or memory_data.get('peak_memory_usage_mb', 0) == 0:
+        st.info("暂无内存监控数据")
+        return
+    
+    # 基本内存指标
+    peak_memory = memory_data.get('peak_memory_usage_mb', 0)
+    memory_per_character = memory_data.get('memory_per_character', 0)
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.metric("峰值内存", f"{peak_memory:.2f} MB")
+    
+    with col2:
+        st.metric("内存/角色", f"{memory_per_character:.2f} MB")
+    
+    # 各阶段内存增长
+    stage_memory = memory_data.get('stage_memory_usage', {})
+    if stage_memory:
+        st.markdown("**各阶段内存增长:**")
+        
+        # 创建内存增长表格
+        import pandas as pd
+        
+        memory_increases = []
+        stage_name_mapping = {
+            'character_generation_increase': '👥 角色生成',
+            'story_expansion_increase': '📝 故事扩展',
+            'dialogue_generation_increase': '💬 对话生成',
+            'story_enhancement_increase': '✨ 故事增强'
+        }
+        
+        for stage, increase in stage_memory.items():
+            if stage.endswith('_increase') and increase > 0:
+                stage_name = stage_name_mapping.get(stage, stage.replace('_increase', ''))
+                memory_increases.append({
+                    '阶段': stage_name,
+                    '内存增长(MB)': f"{increase:.2f}",
+                    '增长占比': f"{(increase/peak_memory*100):.1f}%" if peak_memory > 0 else "0%"
+                })
+        
+        if memory_increases:
+            df = pd.DataFrame(memory_increases)
+            st.dataframe(df, use_container_width=True, hide_index=True)
+        
+        # 内存时间线图表（如果有数据）
+        memory_timeline = memory_data.get('memory_timeline', [])
+        if memory_timeline and len(memory_timeline) > 5:
+            try:
+                import matplotlib.pyplot as plt
+                import numpy as np
+                
+                # 准备数据
+                timestamps = [point['timestamp'] for point in memory_timeline]
+                memory_values = [point['memory_mb'] for point in memory_timeline]
+                
+                # 创建图表
+                fig, ax = plt.subplots(figsize=(10, 4))
+                ax.plot(timestamps, memory_values, linewidth=2, color='#1f77b4')
+                ax.set_xlabel('时间 (秒)')
+                ax.set_ylabel('内存使用 (MB)')
+                ax.set_title('内存使用时间线')
+                ax.grid(True, alpha=0.3)
+                
+                st.pyplot(fig)
+                plt.close(fig)
+            except Exception as e:
+                st.warning(f"内存时间线图生成失败: {e}")
+    
+    # 角色复杂度vs内存
+    story_features = memory_data.get('story_features', {})
+    if story_features:
+        st.markdown("**角色复杂度分析:**")
+        
+        col1, col2 = st.columns(2)
+        with col1:
+            st.metric("角色数量", story_features.get('character_count', 0))
+        with col2:
+            complexity_score = story_features.get('character_complexity_score', 0)
+            st.metric("复杂度评分", f"{complexity_score:.1f}")
+
+
+def display_api_cost_analysis(report):
+    """显示API成本分析"""
+    st.markdown("##### 💰 API成本分析")
+    
+    api_breakdown = report.get('api_cost_breakdown', {})
+    
+    if not api_breakdown or api_breakdown.get('total_cost', 0) == 0:
+        st.info("暂无API成本数据")
+        return
+    
+    # 总体成本指标
+    total_cost = api_breakdown.get('total_cost', 0)
+    total_tokens = api_breakdown.get('total_tokens', 0)
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.metric("总成本", f"${total_cost:.6f}")
+    
+    with col2:
+        st.metric("总Tokens", f"{total_tokens:,}")
+    
+    # 各阶段成本分解
+    cost_per_stage = api_breakdown.get('cost_per_stage', {})
+    if cost_per_stage:
+        st.markdown("**各阶段成本分解:**")
+        
+        import pandas as pd
+        
+        cost_data = []
+        stage_name_mapping = {
+            'outline_generation': ' 大纲生成',
+            'character_generation': '👥 角色生成',
+            'story_expansion': '📝 故事扩展', 
+            'dialogue_generation': '💬 对话生成',
+            'story_enhancement': '✨ 故事增强'
+        }
+        
+        for stage, tokens_info in cost_per_stage.items():
+            stage_name = stage_name_mapping.get(stage, stage)
+            cost = tokens_info.get('total_cost', 0)
+            tokens = tokens_info.get('total_tokens', 0)
+            api_calls = tokens_info.get('api_calls', 0)
+            
+            cost_data.append({
+                '阶段': stage_name,
+                '成本($)': f"{cost:.6f}",
+                'Tokens': f"{tokens:,}",
+                'API调用': api_calls,
+                '成本占比': f"{(cost/total_cost*100):.1f}%" if total_cost > 0 else "0%"
+            })
+        
+        df = pd.DataFrame(cost_data)
+        st.dataframe(df, use_container_width=True, hide_index=True)
+        
+        # 成本分布饼图
+        if len(cost_data) > 1:
+            try:
+                import matplotlib.pyplot as plt
+                
+                # 准备数据
+                stages = [item['阶段'] for item in cost_data]
+                costs = [float(item['成本($)']) for item in cost_data]
+                
+                # 创建饼图
+                fig, ax = plt.subplots(figsize=(8, 6))
+                ax.pie(costs, labels=stages, autopct='%1.1f%%', startangle=90)
+                ax.set_title('各阶段API成本分布')
+                
+                st.pyplot(fig)
+                plt.close(fig)
+            except Exception as e:
+                st.warning(f"成本分布图生成失败: {e}")
+    
+    # 效率指标
+    if total_tokens > 0 and total_cost > 0:
+        st.markdown("**成本效率指标:**")
+        
+        text_features = report.get('text_features', {})
+        total_words = text_features.get('total_word_count', 0)
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            cost_per_token = total_cost / total_tokens if total_tokens > 0 else 0
+            st.metric("成本/Token", f"${cost_per_token:.6f}")
+        
+        with col2:
+            cost_per_word = total_cost / total_words if total_words > 0 else 0
+            st.metric("成本/字", f"${cost_per_word:.6f}")
+
+
+def perform_comparative_analysis(reports_1, reports_2):
+    """执行对比分析"""
+    # 这里实现对比分析逻辑
+    # 提取关键指标进行对比
+    
+    def extract_metrics(reports):
+        total_times = [r['metadata']['total_execution_time'] for r in reports]
+        word_counts = [r.get('text_features', {}).get('total_word_count', 0) for r in reports]
+        efficiencies = [r.get('complexity_analysis', {}).get('efficiency_metrics', {}).get('words_per_second', 0) for r in reports]
+        
+        return {
+            'avg_time': sum(total_times) / len(total_times),
+            'avg_words': sum(word_counts) / len(word_counts), 
+            'avg_efficiency': sum(efficiencies) / len(efficiencies),
+            'count': len(reports)
+        }
+    
+    metrics_1 = extract_metrics(reports_1)
+    metrics_2 = extract_metrics(reports_2)
+    
+    return {
+        'group_1': metrics_1,
+        'group_2': metrics_2,
+        'comparison': {
+            'time_diff': metrics_2['avg_time'] - metrics_1['avg_time'],
+            'efficiency_diff': metrics_2['avg_efficiency'] - metrics_1['avg_efficiency'],
+            'time_improvement': ((metrics_1['avg_time'] - metrics_2['avg_time']) / metrics_1['avg_time'] * 100) if metrics_1['avg_time'] > 0 else 0
+        }
+    }
+
+
+def display_comparison_results(comparison):
+    """显示对比结果"""
+    st.markdown("####  对比分析结果")
+    
+    col1, col2, col3 = st.columns(3)
+    
+    group_1 = comparison['group_1']
+    group_2 = comparison['group_2']
+    comp = comparison['comparison']
+    
+    with col1:
+        st.metric(
+            f"基准组平均时间 (n={group_1['count']})",
+            f"{group_1['avg_time']:.2f}秒"
+        )
+        st.metric(
+            f"对比组平均时间 (n={group_2['count']})",
+            f"{group_2['avg_time']:.2f}秒",
+            delta=f"{comp['time_diff']:+.2f}秒"
+        )
+    
+    with col2:
+        st.metric(
+            "基准组平均效率",
+            f"{group_1['avg_efficiency']:.2f} 字/秒"
+        )
+        st.metric(
+            "对比组平均效率", 
+            f"{group_2['avg_efficiency']:.2f} 字/秒",
+            delta=f"{comp['efficiency_diff']:+.2f} 字/秒"
+        )
+    
+    with col3:
+        st.metric(
+            "时间改善",
+            f"{comp['time_improvement']:+.1f}%",
+            help="负值表示时间增加，正值表示时间减少"
+        )
+
+
+def display_real_time_monitor():
+    """显示实时监控界面"""
+    st.markdown("#### ⚡ 实时性能监控")
+    
+    # 创建占位符用于实时更新
+    time_placeholder = st.empty()
+    progress_placeholder = st.empty()
+    stage_placeholder = st.empty()
+    
+    # 这里可以实现真正的实时监控逻辑
+    # 现在先显示模拟数据
+    
+    with time_placeholder.container():
+        st.metric("当前执行时间", "127.5秒")
+    
+    with progress_placeholder.container():
+        st.progress(0.75)
+        st.text("当前阶段: 对话生成 (75%)")
+    
+    with stage_placeholder.container():
+        st.json({
+            "大纲生成": " 15.3秒",
+            "角色生成": " 23.1秒", 
+            "故事扩展": " 89.1秒",
+            "对话生成": "🔄 正在进行...",
+            "故事增强": " 等待中"
+        })
+
 
 if __name__ == "__main__":
     main()

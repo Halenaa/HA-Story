@@ -1,7 +1,7 @@
 import json
 from src.utils.utils import generate_response,convert_json
 
-def expand_story_v1(chapters, characters, custom_instruction=None):
+def expand_story_v1(chapters, characters, custom_instruction=None, performance_analyzer=None):
     import time
     character_json = json.dumps(characters, ensure_ascii=False, indent=2)
     story = []
@@ -49,20 +49,20 @@ def expand_story_v1(chapters, characters, custom_instruction=None):
 """
 
         msg = [{"role": "user", "content": msg_content}]
-        response = generate_response(msg)
+        response = generate_response(msg, performance_analyzer=performance_analyzer, stage_name="story_expansion")
 
-        print(f"📨 第 {ch['chapter_id']} 章 LLM 返回片段：", response[:150].replace("\n", "\\n"))
+        print(f"第 {ch['chapter_id']} 章 LLM 返回片段：", response[:150].replace("\n", "\\n"))
 
         result = convert_json(response)
-        print(f"📨 原始 LLM 返回内容：\n{response}")
+        print(f"原始 LLM 返回内容：\n{response}")
         
         # 如果不是字典或缺字段，就报错并中止
         if not isinstance(result, dict):
-            print(f"❌ 第 {ch['chapter_id']} 章解析失败（不是 dict）")
+            print(f"第 {ch['chapter_id']} 章解析失败（不是 dict）")
             raise ValueError(f"第 {ch['chapter_id']} 章返回内容格式错误！")
 
         if "plot" not in result:
-            print(f"❌ 第 {ch['chapter_id']} 章缺失 'plot' 字段")
+            print(f"第 {ch['chapter_id']} 章缺失 'plot' 字段")
             raise ValueError(f"第 {ch['chapter_id']} 章缺少 plot 字段，LLM 可能没按格式输出")
 
         story.append(result)

@@ -2,6 +2,7 @@ import os
 import re
 import json
 import ast
+import time
 from openai import OpenAI
 import anthropic
 from src.constant import output_dir
@@ -16,18 +17,73 @@ client = OpenAI(api_key=os.getenv("OPENAI_KEY"), base_url=os.getenv("OPENAI_API_
 
 
 
-def generate_response(msg, model="gpt-4.1", temperature=0.7):     
+def generate_response(msg, model="gpt-4.1", temperature=0.7, performance_analyzer=None, stage_name=None):     
+    """
+    生成LLM响应并记录API成本和token消耗
+    
+    Args:
+        msg: 消息列表
+        model: 模型名称
+        temperature: 温度参数
+        performance_analyzer: 性能分析器实例（可选）
+        stage_name: 当前阶段名称（用于成本统计）
+    """
+    # 估算输入token数量
+    input_text = ""
+    for message in msg:
+        input_text += message.get("content", "")
+    
+    # 调用API并记录响应时间
+    api_start_time = time.time()
     response = client.chat.completions.create(
         model=model,                                 
         messages=msg,
-        temperature=temperature,  # 现在是参数
-    )     
-    return response.choices[0].message.content
+        temperature=temperature,
+        max_tokens=9000  # 修复：添加足够的token限制防止响应被截断
+    )
+    api_response_time = time.time() - api_start_time
+    
+    # 提取响应内容
+    response_content = response.choices[0].message.content
+    
+    # 记录API使用统计
+    if hasattr(response, 'usage') and response.usage:
+        # 使用API返回的实际token数量
+        input_tokens = response.usage.prompt_tokens
+        output_tokens = response.usage.completion_tokens
+        total_tokens = response.usage.total_tokens
+    else:
+        # 如果没有usage信息，估算token数量
+        from src.utils.api_cost_calculator import APICostCalculator
+        input_tokens = APICostCalculator.estimate_tokens_from_text(input_text)
+        output_tokens = APICostCalculator.estimate_tokens_from_text(response_content)
+        total_tokens = input_tokens + output_tokens
+    
+    # 计算API成本
+    from src.utils.api_cost_calculator import APICostCalculator
+    cost = APICostCalculator.calculate_cost(model, input_tokens, output_tokens)
+    
+    # 记录到性能分析器
+    if performance_analyzer and stage_name:
+        performance_analyzer.add_api_cost(
+            stage_name=stage_name,
+            model=model,
+            input_tokens=input_tokens,
+            output_tokens=output_tokens,
+            cost=cost,
+            api_call_type="completion",
+            response_time=api_response_time
+        )
+    
+    # 打印API调用统计（用于调试）
+    print(f"API调用 - 模型: {model}, 输入: {input_tokens}, 输出: {output_tokens}, 成本: ${cost:.6f}")
+    
+    return response_content
 
 def convert_dialogue_dict_to_list(dialogue_dict):
     """
     将 dict 格式的对白（{角色名: [对白字符串]}) 转为 list[dict] 格式
-    ✅ 修改：使用 "dialogue" 字段，与 dialogue_inserter.py 核心模块保持一致
+    修改：使用 "dialogue" 字段，与 dialogue_inserter.py 核心模块保持一致
     """
     result = []
     for speaker, lines in dialogue_dict.items():
@@ -35,7 +91,7 @@ def convert_dialogue_dict_to_list(dialogue_dict):
             # 去掉 "角色名: ..." 前缀（如有）
             if line.startswith(speaker + ":"):
                 line = line[len(speaker)+1:].strip()
-            result.append({"speaker": speaker, "dialogue": line})  # ✅ 使用 "dialogue" 字段
+            result.append({"speaker": speaker, "dialogue": line})  # 使用 "dialogue" 字段
     return result
 
 def extract_behavior_llm(dialogue_block, model="gpt-4.1", confirm=False):
@@ -48,17 +104,17 @@ def extract_behavior_llm(dialogue_block, model="gpt-4.1", confirm=False):
             for line in lines:
                 dialogue_items.append(f"{speaker}: {line}")
     else:
-        # ✅ 修复：兼容两种字段名：'dialogue' 和 'line'
+        # 修复：兼容两种字段名：'dialogue' 和 'line'
         dialogue_items = []
         for d in dialogue_block:
             speaker = d.get('speaker', '')
-            # ✅ 关键修复：先尝试 'dialogue'，再尝试 'line'
+            # 关键修复：先尝试 'dialogue'，再尝试 'line'
             content = d.get('dialogue', d.get('line', ''))
             dialogue_items.append(f"{speaker}: {content}")
 
     dialogue_text = "\n".join(dialogue_items)
 
-    # 🔧 Prompt：让 LLM 返回 dict[str: list[str]] 格式
+    # Prompt：让 LLM 返回 dict[str: list[str]] 格式
     prompt = f"""
 你是一个叙事行为分析器。请阅读以下多轮角色对话，提取每个角色当前的关键行为状态（如：愤怒、背叛、冷静、反派、退缩等），并以 JSON 格式输出。
 
@@ -80,9 +136,9 @@ def extract_behavior_llm(dialogue_block, model="gpt-4.1", confirm=False):
     from src.utils.utils import convert_json
     result = convert_json(response)
 
-    # ✅ 如果解析失败，返回空字典而不是让程序崩溃
+    # 如果解析失败，返回空字典而不是让程序崩溃
     if not isinstance(result, dict):
-        print(f"⚠️ extract_behavior_llm 解析失败，返回空结果")
+        print(f"extract_behavior_llm 解析失败，返回空结果")
         return {}
 
     # 人工确认机制
@@ -127,7 +183,7 @@ def convert_json(content):
         if re.search(r"}\s*{", content):
             content = "[" + re.sub(r"}\s*{", "},{", content) + "]"
         
-        # ✅ 新增：修复粘连 JSON 数组 [...][...] 
+        # 新增：修复粘连 JSON 数组 [...][...] 
         if re.search(r"\]\s*\[", content):
             # 找到第一个完整的JSON数组
             # 使用更智能的方法：计算括号平衡
@@ -162,7 +218,7 @@ def convert_json(content):
                 # 只取第一个完整的JSON数组
                 content = content[:end_pos + 1]
         
-        # ✅ 提取第一个 JSON 结构（改进版）
+        # 提取第一个 JSON 结构（改进版）
         content = content.strip()
         if content.startswith("["):
             # 对于数组，使用括号平衡方法
@@ -235,9 +291,18 @@ def convert_json(content):
         return json.loads(content)
 
     except Exception as e:
-        print(f"⚠️ convert_json 出错：{e}")
+        print(f"convert_json 出错：{e}")
         print(f"🧾 内容片段（前200字）：{content[:200]}")
-        return []  # 返回空列表而不是空字典，因为大多数情况期望列表
+            
+        # 根据content的格式决定返回类型
+        content_stripped = content.strip()
+        if content_stripped.startswith("{"):
+            return {}  # 如果是对象格式，返回空字典
+        elif content_stripped.startswith("["):
+            return []  # 如果是数组格式，返回空列表
+        else:
+            # 默认情况，根据上下文推断
+            return {}  # 大多数story expansion等场景期望字典
        
 def save_json(obj, folder,file_name):
     folder_path = os.path.join(output_dir,folder)

@@ -1,907 +1,344 @@
-2025-08-27 04:32:21,589 | INFO | SESSION_START | session_id=043221 | characters=['小红帽', '祖母'] | context=小红帽紧盯着导航终端上的航线,内心充满着焦虑与希望.。她的思绪时常被回忆牵引,浮现出祖母慈祥的面容——在偏远太空站里,那位年迈却乐观的亲人,曾用颤抖的手抚摸她的发梢,鼓励她勇敢追梦.。...
-2025-08-27 04:32:22,988 | INFO | GOAL_SET | session_id=043221 | goal='通过对话表达小红帽对祖母的思念与牵挂,以及祖母当年的鼓励如何激励小红帽面对当前的焦虑和挑战.' | expected_rounds=3
-2025-08-27 04:32:24,740 | INFO | FIRST_DIALOGUE | session_id=043221 | speaker=小红帽 | length=63
-2025-08-27 04:32:29,022 | INFO | DIALOGUE_ADD | session_id=043221 | round=1 | speaker=祖母 | length=49
-2025-08-27 04:32:33,751 | INFO | DIALOGUE_ADD | session_id=043221 | round=2 | speaker=小红帽 | length=77
-2025-08-27 04:32:35,681 | INFO | DIALOGUE_END | session_id=043221 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 04:32:35,681 | INFO | SESSION_END | session_id=043221 | final_rounds=3 | expected=3 | characters_used=['小红帽', '祖母', '小红帽']
-2025-08-27 04:33:13,588 | INFO | SESSION_START | session_id=043313 | characters=['小红帽', '祖母'] | context=小红帽紧盯着导航终端上的航线,内心充满着焦虑与希望.。她的思绪时常被回忆牵引,浮现出祖母慈祥的面容——在偏远太空站里,那位年迈却乐观的亲人,曾用颤抖的手抚摸她的发梢,鼓励她勇敢追梦.。...
-2025-08-27 04:33:15,209 | INFO | GOAL_SET | session_id=043313 | goal='通过对话展现小红帽对祖母的思念、焦虑与希望,以及祖母对她追梦的鼓励,突出两人情感纽带和小红帽内心挣扎与动力来源.' | expected_rounds=3
-2025-08-27 04:33:17,255 | INFO | FIRST_DIALOGUE | session_id=043313 | speaker=小红帽 | length=49
-2025-08-27 04:33:20,122 | INFO | DIALOGUE_ADD | session_id=043313 | round=1 | speaker=祖母 | length=66
-2025-08-27 04:33:25,386 | INFO | DIALOGUE_ADD | session_id=043313 | round=2 | speaker=小红帽 | length=83
-2025-08-27 04:33:26,931 | INFO | DIALOGUE_END | session_id=043313 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 04:33:26,932 | INFO | SESSION_END | session_id=043313 | final_rounds=3 | expected=3 | characters_used=['小红帽', '祖母', '小红帽']
-2025-08-27 04:34:49,313 | INFO | SESSION_START | session_id=043449 | characters=['小红帽', '智能助手（小智）'] | context=她的智能助手小智在耳畔低声汇报周遭能量波动异常,令她不禁加快脚步....
-2025-08-27 04:34:51,058 | INFO | GOAL_SET | session_id=043449 | goal='通过对话表达小智对能量波动异常的警告,以及小红帽的反应,包括她的紧张、警觉和加快脚步的动机.' | expected_rounds=2
-2025-08-27 04:34:52,259 | INFO | FIRST_DIALOGUE | session_id=043449 | speaker=小红帽 | length=44
-2025-08-27 04:34:55,035 | INFO | DIALOGUE_ADD | session_id=043449 | round=1 | speaker=智能助手（小智） | length=43
-2025-08-27 04:34:56,719 | INFO | DIALOGUE_END | session_id=043449 | round=2 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 04:34:56,719 | INFO | SESSION_END | session_id=043449 | final_rounds=2 | expected=2 | characters_used=['小红帽', '智能助手（小智）']
-2025-08-27 04:34:57,628 | INFO | SESSION_START | session_id=043457 | characters=['银河巡逻队队长', '小红帽'] | context=队长用简短而坚定的口吻要求小红帽说明来意,并警告她该区域刚刚检测到异常信号,可能存在安全威胁....
-2025-08-27 04:34:58,817 | INFO | GOAL_SET | session_id=043457 | goal='通过对话表达队长对小红帽来意的质询,以及对当前安全威胁的警告和紧张氛围,同时推动小红帽解释自己的目的.' | expected_rounds=2
-2025-08-27 04:35:01,067 | INFO | FIRST_DIALOGUE | session_id=043457 | speaker=银河巡逻队队长 | length=45
-2025-08-27 04:35:04,222 | INFO | DIALOGUE_ADD | session_id=043457 | round=1 | speaker=小红帽 | length=60
-2025-08-27 04:35:05,654 | INFO | DIALOGUE_END | session_id=043457 | round=2 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 04:35:05,654 | INFO | SESSION_END | session_id=043457 | final_rounds=2 | expected=2 | characters_used=['银河巡逻队队长', '小红帽']
-2025-08-27 04:35:09,957 | INFO | SESSION_START | session_id=043509 | characters=['智能助手（小智）', '小红帽'] | context=智能助手小智在她耳边用幽默的语气分析环境风险,同时迅速扫描附近的虚拟威胁,为她规划安全通道....
-2025-08-27 04:35:11,317 | INFO | GOAL_SET | session_id=043509 | goal='通过对话表现智能助手小智如何用幽默的方式令小红帽放松,同时有效传达环境风险和安全通道规划的信息,突出两者之间的互动与信任建立.' | expected_rounds=3
-2025-08-27 04:35:13,016 | INFO | FIRST_DIALOGUE | session_id=043509 | speaker=智能助手（小智） | length=92
-2025-08-27 04:35:18,707 | INFO | DIALOGUE_ADD | session_id=043509 | round=1 | speaker=小红帽 | length=82
-2025-08-27 04:35:22,534 | INFO | DIALOGUE_ADD | session_id=043509 | round=2 | speaker=智能助手（小智） | length=73
-2025-08-27 04:35:25,022 | INFO | DIALOGUE_END | session_id=043509 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 04:35:25,023 | INFO | SESSION_END | session_id=043509 | final_rounds=3 | expected=3 | characters_used=['智能助手（小智）', '小红帽', '智能助手（小智）']
-2025-08-27 04:35:26,322 | INFO | SESSION_START | session_id=043526 | characters=['小红帽', '智能助手（小智）', '虚拟野兽'] | context=当一只由流动代码组成的巨型虚拟野兽骤然现身时,小红帽毫不犹豫地指挥小智发起干扰攻击,自己则借机闪身绕过....
-2025-08-27 04:35:27,585 | INFO | GOAL_SET | session_id=043526 | goal='明确小红帽的临危不乱和指挥能力,以及她与智能助手之间的默契配合；通过对话表达紧张氛围、战术指令和执行反馈,突出团队协作和角色性格.' | expected_rounds=3
-2025-08-27 04:35:29,114 | INFO | FIRST_DIALOGUE | session_id=043526 | speaker=小红帽 | length=39
-2025-08-27 04:35:32,391 | INFO | DIALOGUE_ADD | session_id=043526 | round=1 | speaker=智能助手（小智） | length=51
-2025-08-27 04:35:35,951 | INFO | DIALOGUE_ADD | session_id=043526 | round=2 | speaker=小红帽 | length=44
-2025-08-27 04:35:37,752 | INFO | DIALOGUE_END | session_id=043526 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 04:35:37,753 | INFO | SESSION_END | session_id=043526 | final_rounds=3 | expected=3 | characters_used=['小红帽', '智能助手（小智）', '小红帽']
-2025-08-27 04:36:06,582 | INFO | SESSION_START | session_id=043606 | characters=['小红帽', '智能助手（小智）'] | context=小红帽检查着医疗芯片的完整性,确保这个救命物品能安全送达祖母手中...
-2025-08-27 04:36:07,595 | INFO | GOAL_SET | session_id=043606 | goal='通过对话表达小红帽对医疗芯片的重要性的关注,以及她和智能助手共同确认芯片完好、讨论如何确保安全送达祖母手中的计划.' | expected_rounds=3
-2025-08-27 04:36:16,286 | INFO | FIRST_DIALOGUE | session_id=043606 | speaker=小红帽 | length=76
-2025-08-27 04:36:20,456 | INFO | DIALOGUE_ADD | session_id=043606 | round=1 | speaker=智能助手（小智） | length=87
-2025-08-27 04:36:23,508 | INFO | DIALOGUE_ADD | session_id=043606 | round=2 | speaker=小红帽 | length=74
-2025-08-27 04:36:27,164 | INFO | DIALOGUE_ADD | session_id=043606 | round=3 | speaker=智能助手（小智） | length=113
-2025-08-27 04:36:29,314 | INFO | DIALOGUE_END | session_id=043606 | round=4 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 04:36:29,314 | INFO | SESSION_END | session_id=043606 | final_rounds=4 | expected=3 | characters_used=['小红帽', '智能助手（小智）', '小红帽', '智能助手（小智）']
-2025-08-27 04:36:29,325 | INFO | SESSION_START | session_id=043629 | characters=['小红帽', '机械大灰狼'] | context=机械大灰狼的红眼在森林深处闪烁，发出威胁性的嗡鸣声...
-2025-08-27 04:36:30,631 | INFO | GOAL_SET | session_id=043629 | goal='通过对话展现小红帽对机械大灰狼的恐惧与警觉,以及机械大灰狼对小红帽的威胁和意图.' | expected_rounds=3
-2025-08-27 04:36:32,138 | INFO | FIRST_DIALOGUE | session_id=043629 | speaker=小红帽 | length=23
-2025-08-27 04:36:36,100 | INFO | DIALOGUE_ADD | session_id=043629 | round=1 | speaker=机械大灰狼 | length=39
-2025-08-27 04:36:39,803 | INFO | DIALOGUE_ADD | session_id=043629 | round=2 | speaker=小红帽 | length=16
-2025-08-27 04:36:43,563 | INFO | DIALOGUE_ADD | session_id=043629 | round=3 | speaker=机械大灰狼 | length=46
-2025-08-27 04:36:45,641 | INFO | DIALOGUE_END | session_id=043629 | round=4 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 04:36:45,642 | INFO | SESSION_END | session_id=043629 | final_rounds=4 | expected=3 | characters_used=['小红帽', '机械大灰狼', '小红帽', '机械大灰狼']
-2025-08-27 04:36:45,642 | INFO | SESSION_START | session_id=043645 | characters=['银河巡逻队队长', '银河巡逻队队员甲'] | context=银河巡逻队队长接收到小红帽的求救信号，立即部署救援计划...
-2025-08-27 04:36:53,630 | INFO | GOAL_SET | session_id=043645 | goal='明确小红帽的求救信号内容,展示队长做出决策并指示队员开始救援准备,体现紧急和严肃的氛围.' | expected_rounds=3
-2025-08-27 04:36:55,758 | INFO | FIRST_DIALOGUE | session_id=043645 | speaker=银河巡逻队队长 | length=64
-2025-08-27 04:37:12,466 | INFO | DIALOGUE_ADD | session_id=043645 | round=1 | speaker=银河巡逻队队员甲 | length=59
-2025-08-27 04:37:16,255 | INFO | DIALOGUE_ADD | session_id=043645 | round=2 | speaker=银河巡逻队队长 | length=69
-2025-08-27 04:37:18,406 | INFO | DIALOGUE_END | session_id=043645 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 04:37:18,407 | INFO | SESSION_END | session_id=043645 | final_rounds=3 | expected=3 | characters_used=['银河巡逻队队长', '银河巡逻队队员甲', '银河巡逻队队长']
-2025-08-27 04:37:18,409 | INFO | SESSION_START | session_id=043718 | characters=['小红帽', '智能助手（小智）'] | context=智能助手小智分析着周围环境的数据，为小红帽提供导航建议...
-2025-08-27 04:37:20,043 | INFO | GOAL_SET | session_id=043718 | goal='通过对话让小智根据环境数据为小红帽提供具体的导航建议,同时表现小红帽对建议的理解和反应' | expected_rounds=3
-2025-08-27 04:37:21,378 | INFO | FIRST_DIALOGUE | session_id=043718 | speaker=小红帽 | length=42
-2025-08-27 04:37:24,048 | INFO | DIALOGUE_ADD | session_id=043718 | round=1 | speaker=智能助手（小智） | length=79
-2025-08-27 04:37:27,448 | INFO | DIALOGUE_ADD | session_id=043718 | round=2 | speaker=小红帽 | length=58
-2025-08-27 04:37:29,160 | INFO | DIALOGUE_END | session_id=043718 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 04:37:29,160 | INFO | SESSION_END | session_id=043718 | final_rounds=3 | expected=3 | characters_used=['小红帽', '智能助手（小智）', '小红帽']
-2025-08-27 04:43:18,878 | INFO | SESSION_START | session_id=044318 | characters=['小红帽', '智能助手（小智）'] | context=小红帽检查着医疗芯片的完整性,确保这个救命物品能安全送达祖母手中...
-2025-08-27 04:43:20,689 | INFO | GOAL_SET | session_id=044318 | goal='通过对话体现小红帽对医疗芯片安全性的关切,以及与智能助手确认芯片状态和运输安全措施,突出任务的重要性和紧迫感.' | expected_rounds=3
-2025-08-27 04:43:22,542 | INFO | FIRST_DIALOGUE | session_id=044318 | speaker=小红帽 | length=60
-2025-08-27 04:43:26,611 | INFO | DIALOGUE_ADD | session_id=044318 | round=1 | speaker=智能助手（小智） | length=70
-2025-08-27 04:43:33,724 | INFO | DIALOGUE_ADD | session_id=044318 | round=2 | speaker=小红帽 | length=79
-2025-08-27 04:43:46,811 | INFO | DIALOGUE_END | session_id=044318 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 04:43:46,812 | INFO | SESSION_END | session_id=044318 | final_rounds=3 | expected=3 | characters_used=['小红帽', '智能助手（小智）', '小红帽']
-2025-08-27 04:47:04,600 | INFO | SESSION_START | session_id=044704 | characters=['智能助手（小智）'] | context=她的智能助手小智在耳畔低声汇报周遭能量波动异常,令她不禁加快脚步....
-2025-08-27 04:47:05,975 | INFO | GOAL_SET | session_id=044704 | goal='通过小智的对话清楚地向女主传达周围能量波动异常的具体情况,以及建议她如何应对或警惕,增强紧张氛围.' | expected_rounds=2
-2025-08-27 04:47:08,998 | INFO | FIRST_DIALOGUE | session_id=044704 | speaker=智能助手（小智） | length=61
-2025-08-27 04:47:10,988 | INFO | DIALOGUE_END | session_id=044704 | round=1 | reasons=['INVALID_SPEAKER']
-2025-08-27 04:47:10,988 | INFO | SESSION_END | session_id=044704 | final_rounds=1 | expected=2 | characters_used=['智能助手（小智）']
-2025-08-27 04:47:12,031 | INFO | SESSION_START | session_id=044712 | characters=['银河巡逻队队长', '小红帽'] | context=队长用简短而坚定的口吻要求小红帽说明来意,并警告她该区域刚刚检测到异常信号,可能存在安全威胁....
-2025-08-27 04:47:13,099 | INFO | GOAL_SET | session_id=044712 | goal='通过队长的简短而坚定的问询和警告,表达当前区域的紧张气氛和安全威胁,同时促使小红帽说明自己的来意.' | expected_rounds=2
-2025-08-27 04:47:14,577 | INFO | FIRST_DIALOGUE | session_id=044712 | speaker=银河巡逻队队长 | length=43
-2025-08-27 04:47:17,646 | INFO | DIALOGUE_ADD | session_id=044712 | round=1 | speaker=小红帽 | length=44
-2025-08-27 04:47:21,317 | INFO | DIALOGUE_ADD | session_id=044712 | round=2 | speaker=银河巡逻队队长 | length=39
-2025-08-27 04:47:23,247 | INFO | DIALOGUE_END | session_id=044712 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 04:47:23,247 | INFO | SESSION_END | session_id=044712 | final_rounds=3 | expected=2 | characters_used=['银河巡逻队队长', '小红帽', '银河巡逻队队长']
-2025-08-27 04:47:27,648 | INFO | SESSION_START | session_id=044727 | characters=['智能助手（小智）', '小红帽'] | context=智能助手小智在她耳边用幽默的语气分析环境风险,同时迅速扫描附近的虚拟威胁,为她规划安全通道....
-2025-08-27 04:47:29,525 | INFO | GOAL_SET | session_id=044727 | goal='通过对话展现智能助手小智以幽默的方式提醒小红帽注意环境中的风险,并实时报告虚拟威胁,同时为她提供一条安全通道,让小红帽感受到既紧张又轻松的氛围.' | expected_rounds=3
-2025-08-27 04:47:32,289 | INFO | FIRST_DIALOGUE | session_id=044727 | speaker=智能助手（小智） | length=99
-2025-08-27 04:47:36,588 | INFO | DIALOGUE_ADD | session_id=044727 | round=1 | speaker=小红帽 | length=73
-2025-08-27 04:47:40,345 | INFO | DIALOGUE_ADD | session_id=044727 | round=2 | speaker=智能助手（小智） | length=65
-2025-08-27 04:47:44,134 | INFO | DIALOGUE_ADD | session_id=044727 | round=3 | speaker=小红帽 | length=86
-2025-08-27 04:47:47,683 | INFO | DIALOGUE_ADD | session_id=044727 | round=4 | speaker=智能助手（小智） | length=89
-2025-08-27 04:47:49,694 | INFO | DIALOGUE_END | session_id=044727 | round=5 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 04:47:49,695 | INFO | SESSION_END | session_id=044727 | final_rounds=5 | expected=3 | characters_used=['智能助手（小智）', '小红帽', '智能助手（小智）', '小红帽', '智能助手（小智）']
-2025-08-27 04:47:51,382 | INFO | SESSION_START | session_id=044751 | characters=['小红帽', '智能助手（小智）', '虚拟野兽'] | context=当一只由流动代码组成的巨型虚拟野兽骤然现身时,小红帽毫不犹豫地指挥小智发起干扰攻击,自己则借机闪身绕过....
-2025-08-27 04:47:53,942 | INFO | GOAL_SET | session_id=044751 | goal='通过对话突出小红帽的果断指挥和团队协作,表现她对小智的战术安排,以及小智对指令的快速响应,同时体现虚拟野兽的威胁和反应.' | expected_rounds=3
-2025-08-27 04:47:55,530 | INFO | FIRST_DIALOGUE | session_id=044751 | speaker=小红帽 | length=47
-2025-08-27 04:47:59,043 | INFO | DIALOGUE_ADD | session_id=044751 | round=1 | speaker=智能助手（小智） | length=47
-2025-08-27 04:48:03,209 | INFO | DIALOGUE_ADD | session_id=044751 | round=2 | speaker=小红帽 | length=44
-2025-08-27 04:48:06,488 | INFO | DIALOGUE_ADD | session_id=044751 | round=3 | speaker=智能助手（小智） | length=36
-2025-08-27 04:48:10,111 | INFO | DIALOGUE_ADD | session_id=044751 | round=4 | speaker=小红帽 | length=53
-2025-08-27 04:48:11,768 | INFO | DIALOGUE_END | session_id=044751 | round=5 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 04:48:11,769 | INFO | SESSION_END | session_id=044751 | final_rounds=5 | expected=3 | characters_used=['小红帽', '智能助手（小智）', '小红帽', '智能助手（小智）', '小红帽']
-2025-08-27 04:48:14,726 | INFO | SESSION_START | session_id=044814 | characters=['小红帽', '智能助手（小智）'] | context=小红帽检查着医疗芯片的完整性,确保这个救命物品能安全送达祖母手中...
-2025-08-27 04:48:16,235 | INFO | GOAL_SET | session_id=044814 | goal='通过对话表达小红帽对医疗芯片安全性和重要性的关切,以及她与智能助手协作检查芯片状态的过程,强调芯片的关键作用和任务的紧迫性.' | expected_rounds=3
-2025-08-27 04:48:17,962 | INFO | FIRST_DIALOGUE | session_id=044814 | speaker=小红帽 | length=45
-2025-08-27 04:48:22,055 | INFO | DIALOGUE_ADD | session_id=044814 | round=1 | speaker=智能助手（小智） | length=75
-2025-08-27 04:48:25,127 | INFO | DIALOGUE_ADD | session_id=044814 | round=2 | speaker=小红帽 | length=60
-2025-08-27 04:48:26,814 | INFO | DIALOGUE_END | session_id=044814 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 04:48:26,815 | INFO | SESSION_END | session_id=044814 | final_rounds=3 | expected=3 | characters_used=['小红帽', '智能助手（小智）', '小红帽']
-2025-08-27 04:56:17,705 | INFO | SESSION_START | session_id=045617 | characters=['小红帽', '银河巡逻队队长', '银河巡逻队成员'] | context=他们相互打量,言语谨慎,彼此都在揣测对方的能力与意图....
-2025-08-27 04:56:19,027 | INFO | GOAL_SET | session_id=045617 | goal='通过对话表现角色之间的试探与警惕,揭示他们对彼此身份、能力和动机的怀疑与探索,同时让观众感受到紧张和未公开的信息.' | expected_rounds=3
-2025-08-27 04:56:20,466 | INFO | FIRST_DIALOGUE | session_id=045617 | speaker=小红帽 | length=25
-2025-08-27 04:56:23,667 | INFO | DIALOGUE_ADD | session_id=045617 | round=1 | speaker=银河巡逻队队长 | length=28
-2025-08-27 04:56:33,777 | INFO | DIALOGUE_ADD | session_id=045617 | round=2 | speaker=小红帽 | length=21
-2025-08-27 04:56:37,976 | INFO | DIALOGUE_ADD | session_id=045617 | round=3 | speaker=银河巡逻队队长 | length=37
-2025-08-27 04:56:42,908 | INFO | DIALOGUE_ADD | session_id=045617 | round=4 | speaker=小红帽 | length=50
-2025-08-27 04:56:48,025 | INFO | DIALOGUE_ADD | session_id=045617 | round=5 | speaker=银河巡逻队队长 | length=59
-2025-08-27 04:56:51,599 | INFO | DIALOGUE_ADD | session_id=045617 | round=6 | speaker=小红帽 | length=45
-2025-08-27 04:57:00,753 | INFO | DIALOGUE_ADD | session_id=045617 | round=7 | speaker=银河巡逻队队长 | length=57
-2025-08-27 04:57:05,013 | INFO | DIALOGUE_ADD | session_id=045617 | round=8 | speaker=小红帽 | length=60
-2025-08-27 04:57:09,042 | INFO | DIALOGUE_ADD | session_id=045617 | round=9 | speaker=银河巡逻队队长 | length=47
-2025-08-27 04:57:12,202 | INFO | DIALOGUE_END | session_id=045617 | round=10 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 04:57:12,203 | INFO | SESSION_END | session_id=045617 | final_rounds=10 | expected=3 | characters_used=['小红帽', '银河巡逻队队长', '小红帽', '银河巡逻队队长', '小红帽', '银河巡逻队队长', '小红帽', '银河巡逻队队长', '小红帽', '银河巡逻队队长']
-2025-08-27 04:57:14,431 | INFO | SESSION_START | session_id=045714 | characters=['银河巡逻队队长', '小红帽'] | context=队长简要说明任务安排,声音低沉却不失威严,而小红帽则以坚定的语气回应,隐约流露出责任感与不安....
-2025-08-27 04:57:16,070 | INFO | GOAL_SET | session_id=045714 | goal='通过队长的简要任务说明展现其权威与任务的严峻,同时让小红帽用坚定但略带不安的回应表达其责任感和内心的压力,从而塑造两人对任务的态度和心理状态.' | expected_rounds=2
-2025-08-27 04:57:18,217 | INFO | FIRST_DIALOGUE | session_id=045714 | speaker=银河巡逻队队长 | length=71
-2025-08-27 04:57:21,252 | INFO | DIALOGUE_ADD | session_id=045714 | round=1 | speaker=小红帽 | length=36
-2025-08-27 04:57:23,099 | INFO | DIALOGUE_END | session_id=045714 | round=2 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 04:57:23,100 | INFO | SESSION_END | session_id=045714 | final_rounds=2 | expected=2 | characters_used=['银河巡逻队队长', '小红帽']
-2025-08-27 04:57:28,419 | INFO | SESSION_START | session_id=045728 | characters=['小红帽', '人工智能助手（小白）'] | context=耳边,小白的虚拟声音低语,分析前方能量波动与生物活动数据....
-2025-08-27 04:57:29,854 | INFO | GOAL_SET | session_id=045728 | goal='通过对话让小白向小红帽实时报告前方区域的能量波动和生物活动情况,帮助小红帽做出是否前进或警惕的决策,同时展示小白分析数据的智能能力和小红帽的反应.' | expected_rounds=3
-2025-08-27 04:57:31,359 | INFO | FIRST_DIALOGUE | session_id=045728 | speaker=小红帽 | length=37
-2025-08-27 04:57:36,138 | INFO | DIALOGUE_ADD | session_id=045728 | round=1 | speaker=人工智能助手（小白） | length=64
-2025-08-27 04:57:39,179 | INFO | DIALOGUE_ADD | session_id=045728 | round=2 | speaker=小红帽 | length=53
-2025-08-27 04:57:42,897 | INFO | DIALOGUE_ADD | session_id=045728 | round=3 | speaker=人工智能助手（小白） | length=80
-2025-08-27 04:57:46,539 | INFO | DIALOGUE_ADD | session_id=045728 | round=4 | speaker=小红帽 | length=63
-2025-08-27 04:57:51,518 | INFO | DIALOGUE_ADD | session_id=045728 | round=5 | speaker=人工智能助手（小白） | length=77
-2025-08-27 04:57:55,695 | INFO | DIALOGUE_ADD | session_id=045728 | round=6 | speaker=小红帽 | length=57
-2025-08-27 04:58:00,458 | INFO | DIALOGUE_ADD | session_id=045728 | round=7 | speaker=人工智能助手（小白） | length=76
-2025-08-27 04:58:04,015 | INFO | DIALOGUE_ADD | session_id=045728 | round=8 | speaker=小红帽 | length=83
-2025-08-27 04:58:10,544 | INFO | DIALOGUE_ADD | session_id=045728 | round=9 | speaker=人工智能助手（小白） | length=72
-2025-08-27 04:58:14,131 | INFO | DIALOGUE_ADD | session_id=045728 | round=10 | speaker=小红帽 | length=46
-2025-08-27 04:58:17,408 | INFO | DIALOGUE_ADD | session_id=045728 | round=11 | speaker=人工智能助手（小白） | length=89
-2025-08-27 04:58:21,874 | INFO | DIALOGUE_ADD | session_id=045728 | round=12 | speaker=小红帽 | length=69
-2025-08-27 04:58:26,521 | INFO | DIALOGUE_ADD | session_id=045728 | round=13 | speaker=人工智能助手（小白） | length=93
-2025-08-27 04:58:30,055 | INFO | DIALOGUE_ADD | session_id=045728 | round=14 | speaker=小红帽 | length=59
-2025-08-27 04:58:36,049 | INFO | DIALOGUE_ADD | session_id=045728 | round=15 | speaker=人工智能助手（小白） | length=73
-2025-08-27 04:58:40,040 | INFO | DIALOGUE_ADD | session_id=045728 | round=16 | speaker=小红帽 | length=70
-2025-08-27 04:58:46,719 | INFO | DIALOGUE_ADD | session_id=045728 | round=17 | speaker=人工智能助手（小白） | length=83
-2025-08-27 04:58:50,127 | INFO | DIALOGUE_ADD | session_id=045728 | round=18 | speaker=小红帽 | length=70
-2025-08-27 04:58:54,387 | INFO | DIALOGUE_ADD | session_id=045728 | round=19 | speaker=人工智能助手（小白） | length=70
-2025-08-27 04:58:57,648 | INFO | DIALOGUE_ADD | session_id=045728 | round=20 | speaker=小红帽 | length=48
-2025-08-27 04:58:57,648 | WARNING | SAFETY_LIMIT | session_id=045728 | limit=20
-2025-08-27 04:58:57,648 | INFO | SESSION_END | session_id=045728 | final_rounds=21 | expected=3 | characters_used=['小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽']
-2025-08-27 04:58:59,006 | INFO | SESSION_START | session_id=045859 | characters=['小红帽', '人工智能助手（小白）'] | context=每当小红帽遇到错综复杂的能量屏障或疑似陷阱,小白便迅速推送破解指令,协助她灵巧穿越....
-2025-08-27 04:59:00,776 | INFO | GOAL_SET | session_id=045859 | goal='展示小红帽与人工智能助手小白之间高效、默契的协作,突出小白在关键时刻提供技术支持和指令,小红帽则据此迅速作出应对,体现二者配合破解障碍的过程.' | expected_rounds=3
-2025-08-27 04:59:01,846 | INFO | FIRST_DIALOGUE | session_id=045859 | speaker=小红帽 | length=33
-2025-08-27 04:59:05,283 | INFO | DIALOGUE_ADD | session_id=045859 | round=1 | speaker=人工智能助手（小白） | length=58
-2025-08-27 04:59:11,061 | INFO | DIALOGUE_ADD | session_id=045859 | round=2 | speaker=小红帽 | length=45
-2025-08-27 04:59:14,112 | INFO | DIALOGUE_ADD | session_id=045859 | round=3 | speaker=人工智能助手（小白） | length=44
-2025-08-27 04:59:18,541 | INFO | DIALOGUE_ADD | session_id=045859 | round=4 | speaker=小红帽 | length=40
-2025-08-27 04:59:20,276 | INFO | DIALOGUE_END | session_id=045859 | round=5 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 04:59:20,276 | INFO | SESSION_END | session_id=045859 | final_rounds=5 | expected=3 | characters_used=['小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽']
-2025-08-27 04:59:21,714 | INFO | SESSION_START | session_id=045921 | characters=['小红帽', '人工智能助手（小白）'] | context=小红帽目光坚定,脚步沉稳,她机警地避开高风险区域,用便携扫描仪采集周围样本,时而停下脚步,低声与小白讨论下一步策略....
-2025-08-27 04:59:22,970 | INFO | GOAL_SET | session_id=045921 | goal='通过对话展现小红帽与人工智能助手（小白）之间的默契协作,突出他们在紧张环境下的警觉与策略制定.对话需表达小红帽对环境的分析、风险评估,以及她与小白之间的信息交流和下一步行动决策.' | expected_rounds=3
-2025-08-27 04:59:25,160 | INFO | FIRST_DIALOGUE | session_id=045921 | speaker=小红帽 | length=63
-2025-08-27 04:59:29,583 | INFO | DIALOGUE_ADD | session_id=045921 | round=1 | speaker=人工智能助手（小白） | length=74
-2025-08-27 04:59:33,179 | INFO | DIALOGUE_ADD | session_id=045921 | round=2 | speaker=小红帽 | length=58
-2025-08-27 04:59:36,869 | INFO | DIALOGUE_ADD | session_id=045921 | round=3 | speaker=人工智能助手（小白） | length=74
-2025-08-27 04:59:40,149 | INFO | DIALOGUE_ADD | session_id=045921 | round=4 | speaker=小红帽 | length=51
-2025-08-27 04:59:45,263 | INFO | DIALOGUE_ADD | session_id=045921 | round=5 | speaker=人工智能助手（小白） | length=65
-2025-08-27 04:59:49,057 | INFO | DIALOGUE_ADD | session_id=045921 | round=6 | speaker=小红帽 | length=51
-2025-08-27 05:00:02,466 | INFO | DIALOGUE_ADD | session_id=045921 | round=7 | speaker=人工智能助手（小白） | length=62
-2025-08-27 05:00:13,553 | INFO | DIALOGUE_ADD | session_id=045921 | round=8 | speaker=小红帽 | length=56
-2025-08-27 05:00:17,405 | INFO | DIALOGUE_ADD | session_id=045921 | round=9 | speaker=人工智能助手（小白） | length=62
-2025-08-27 05:00:21,892 | INFO | DIALOGUE_ADD | session_id=045921 | round=10 | speaker=小红帽 | length=57
-2025-08-27 05:00:26,520 | INFO | DIALOGUE_ADD | session_id=045921 | round=11 | speaker=人工智能助手（小白） | length=62
-2025-08-27 05:00:30,225 | INFO | DIALOGUE_ADD | session_id=045921 | round=12 | speaker=小红帽 | length=71
-2025-08-27 05:00:34,618 | INFO | DIALOGUE_ADD | session_id=045921 | round=13 | speaker=人工智能助手（小白） | length=68
-2025-08-27 05:00:36,521 | INFO | DIALOGUE_END | session_id=045921 | round=14 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 05:00:36,521 | INFO | SESSION_END | session_id=045921 | final_rounds=14 | expected=3 | characters_used=['小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）']
-2025-08-27 05:00:37,701 | INFO | SESSION_START | session_id=050037 | characters=['小红帽', '人工智能助手（小白）'] | context=穿行之中,她展现出过人的判断力与勇气,逐渐与小白形成默契的战术配合....
-2025-08-27 05:00:39,051 | INFO | GOAL_SET | session_id=050037 | goal='通过对话展现小红帽在行动中如何做出果断判断,并与小白建立战术默契,突出两者的信任和协同作战能力.' | expected_rounds=3
-2025-08-27 05:00:40,287 | INFO | FIRST_DIALOGUE | session_id=050037 | speaker=小红帽 | length=50
-2025-08-27 05:00:45,308 | INFO | DIALOGUE_ADD | session_id=050037 | round=1 | speaker=人工智能助手（小白） | length=50
-2025-08-27 05:00:48,709 | INFO | DIALOGUE_ADD | session_id=050037 | round=2 | speaker=小红帽 | length=53
-2025-08-27 05:00:53,781 | INFO | DIALOGUE_ADD | session_id=050037 | round=3 | speaker=人工智能助手（小白） | length=49
-2025-08-27 05:00:58,897 | INFO | DIALOGUE_ADD | session_id=050037 | round=4 | speaker=小红帽 | length=53
-2025-08-27 05:01:03,189 | INFO | DIALOGUE_ADD | session_id=050037 | round=5 | speaker=人工智能助手（小白） | length=57
-2025-08-27 05:01:07,903 | INFO | DIALOGUE_ADD | session_id=050037 | round=6 | speaker=小红帽 | length=55
-2025-08-27 05:01:12,401 | INFO | DIALOGUE_ADD | session_id=050037 | round=7 | speaker=人工智能助手（小白） | length=54
-2025-08-27 05:01:16,597 | INFO | DIALOGUE_ADD | session_id=050037 | round=8 | speaker=小红帽 | length=75
-2025-08-27 05:01:20,289 | INFO | DIALOGUE_ADD | session_id=050037 | round=9 | speaker=人工智能助手（小白） | length=62
-2025-08-27 05:01:24,590 | INFO | DIALOGUE_ADD | session_id=050037 | round=10 | speaker=小红帽 | length=64
-2025-08-27 05:01:28,111 | INFO | DIALOGUE_ADD | session_id=050037 | round=11 | speaker=人工智能助手（小白） | length=48
-2025-08-27 05:01:38,818 | INFO | DIALOGUE_ADD | session_id=050037 | round=12 | speaker=小红帽 | length=53
-2025-08-27 05:01:40,668 | INFO | DIALOGUE_END | session_id=050037 | round=13 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-08-27 05:01:40,668 | INFO | SESSION_END | session_id=050037 | final_rounds=13 | expected=3 | characters_used=['小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽', '人工智能助手（小白）', '小红帽']
-2025-09-01 21:22:42,552 | INFO | SESSION_START | session_id=212242 | characters=['母亲', '小红帽'] | context=两人轻声交谈,母亲细致叮嘱飞行路线及注意事项,提醒小红帽小心潜藏的危险....
-2025-09-01 21:22:44,277 | INFO | GOAL_SET | session_id=212242 | goal='通过母亲和小红帽的对话,表达母亲对小红帽的关心与叮嘱,详细说明飞行路线和沿途注意事项,重点突出对潜在危险的提醒和小红帽的理解与回应.' | expected_rounds=3
-2025-09-01 21:22:45,897 | INFO | FIRST_DIALOGUE | session_id=212242 | speaker=母亲 | length=67
-2025-09-01 21:22:48,518 | INFO | DIALOGUE_ADD | session_id=212242 | round=1 | speaker=小红帽 | length=43
-2025-09-01 21:22:52,349 | INFO | DIALOGUE_ADD | session_id=212242 | round=2 | speaker=母亲 | length=53
-2025-09-01 21:22:55,134 | INFO | DIALOGUE_ADD | session_id=212242 | round=3 | speaker=小红帽 | length=45
-2025-09-01 21:22:56,530 | INFO | DIALOGUE_END | session_id=212242 | round=4 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-01 21:22:56,531 | INFO | SESSION_END | session_id=212242 | final_rounds=4 | expected=3 | characters_used=['母亲', '小红帽', '母亲', '小红帽']
-2025-09-01 21:23:02,827 | INFO | SESSION_START | session_id=212302 | characters=['小红帽', '星际巡航者'] | context=小红帽的飞船刚刚驶入一段信号干扰严重的宇宙通道,舱内警报突然响起,来自星际巡航者的警告信号在屏幕上跳跃....
-2025-09-01 21:23:04,031 | INFO | GOAL_SET | session_id=212302 | goal='通过对话表达小红帽对突发警报的紧张与疑惑,以及星际巡航者警告可能存在的危险,推动小红帽做出决策或寻求帮助.' | expected_rounds=3
-2025-09-01 21:23:05,687 | INFO | FIRST_DIALOGUE | session_id=212302 | speaker=小红帽 | length=49
-2025-09-01 21:23:08,970 | INFO | DIALOGUE_ADD | session_id=212302 | round=1 | speaker=星际巡航者 | length=59
-2025-09-01 21:23:12,506 | INFO | DIALOGUE_ADD | session_id=212302 | round=2 | speaker=小红帽 | length=46
-2025-09-01 21:23:16,741 | INFO | DIALOGUE_ADD | session_id=212302 | round=3 | speaker=星际巡航者 | length=78
-2025-09-01 21:23:20,727 | INFO | DIALOGUE_ADD | session_id=212302 | round=4 | speaker=小红帽 | length=57
-2025-09-01 21:23:23,905 | INFO | DIALOGUE_ADD | session_id=212302 | round=5 | speaker=星际巡航者 | length=84
-2025-09-01 21:23:27,072 | INFO | DIALOGUE_ADD | session_id=212302 | round=6 | speaker=小红帽 | length=50
-2025-09-01 21:23:30,769 | INFO | DIALOGUE_ADD | session_id=212302 | round=7 | speaker=星际巡航者 | length=84
-2025-09-01 21:23:34,285 | INFO | DIALOGUE_ADD | session_id=212302 | round=8 | speaker=小红帽 | length=37
-2025-09-01 21:23:37,509 | INFO | DIALOGUE_ADD | session_id=212302 | round=9 | speaker=星际巡航者 | length=57
-2025-09-01 21:23:40,558 | INFO | DIALOGUE_ADD | session_id=212302 | round=10 | speaker=小红帽 | length=49
-2025-09-01 21:23:45,800 | INFO | DIALOGUE_ADD | session_id=212302 | round=11 | speaker=星际巡航者 | length=54
-2025-09-01 21:23:47,665 | INFO | DIALOGUE_END | session_id=212302 | round=12 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-01 21:23:47,666 | INFO | SESSION_END | session_id=212302 | final_rounds=12 | expected=3 | characters_used=['小红帽', '星际巡航者', '小红帽', '星际巡航者', '小红帽', '星际巡航者', '小红帽', '星际巡航者', '小红帽', '星际巡航者', '小红帽', '星际巡航者']
-2025-09-01 21:23:48,698 | INFO | SESSION_START | session_id=212348 | characters=['机械狼', '小红帽'] | context=机械狼迅速接近,利用强力磁钩锁定飞船外壳,同时试图通过无线黑客手段侵入飞船系统,窃取医疗芯片....
-2025-09-01 21:23:49,897 | INFO | GOAL_SET | session_id=212348 | goal='通过对话表达机械狼的入侵意图、小红帽的警觉与应对,以及双方在技术与心理上的对抗' | expected_rounds=3
-2025-09-01 21:23:51,166 | INFO | FIRST_DIALOGUE | session_id=212348 | speaker=机械狼 | length=38
-2025-09-01 21:23:55,047 | INFO | DIALOGUE_ADD | session_id=212348 | round=1 | speaker=小红帽 | length=50
-2025-09-01 21:23:57,822 | INFO | DIALOGUE_ADD | session_id=212348 | round=2 | speaker=机械狼 | length=44
-2025-09-01 21:24:05,904 | INFO | DIALOGUE_ADD | session_id=212348 | round=3 | speaker=小红帽 | length=67
-2025-09-01 21:24:09,527 | INFO | DIALOGUE_ADD | session_id=212348 | round=4 | speaker=机械狼 | length=51
-2025-09-01 21:24:12,763 | INFO | DIALOGUE_ADD | session_id=212348 | round=5 | speaker=小红帽 | length=42
-2025-09-01 21:24:16,202 | INFO | DIALOGUE_ADD | session_id=212348 | round=6 | speaker=机械狼 | length=52
-2025-09-01 21:24:20,671 | INFO | DIALOGUE_ADD | session_id=212348 | round=7 | speaker=小红帽 | length=53
-2025-09-01 21:24:22,523 | INFO | DIALOGUE_END | session_id=212348 | round=8 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-01 21:24:22,542 | INFO | SESSION_END | session_id=212348 | final_rounds=8 | expected=3 | characters_used=['机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽']
-2025-09-01 21:24:23,816 | INFO | SESSION_START | session_id=212423 | characters=['小红帽', '机械狼'] | context=小红帽临危不乱,凭借娴熟的操作与科技知识,启动反黑客防御程序,并巧妙利用飞船上的空间扰流器制造假信号,诱使机械狼暴露其真实位置....
-2025-09-01 21:24:25,201 | INFO | GOAL_SET | session_id=212423 | goal='通过对话展现小红帽的冷静与技术能力,以及她如何与机械狼斗智斗勇,诱使对方暴露位置.对话需体现小红帽分析局势、操作设备、与机械狼博弈的过程.' | expected_rounds=3
-2025-09-01 21:24:27,021 | INFO | FIRST_DIALOGUE | session_id=212423 | speaker=小红帽 | length=60
-2025-09-01 21:24:30,164 | INFO | DIALOGUE_ADD | session_id=212423 | round=1 | speaker=机械狼 | length=39
-2025-09-01 21:24:35,083 | INFO | DIALOGUE_ADD | session_id=212423 | round=2 | speaker=小红帽 | length=59
-2025-09-01 21:24:38,743 | INFO | DIALOGUE_ADD | session_id=212423 | round=3 | speaker=机械狼 | length=76
-2025-09-01 21:24:42,834 | INFO | DIALOGUE_ADD | session_id=212423 | round=4 | speaker=小红帽 | length=86
-2025-09-01 21:24:47,852 | INFO | DIALOGUE_ADD | session_id=212423 | round=5 | speaker=机械狼 | length=77
-2025-09-01 21:24:51,606 | INFO | DIALOGUE_ADD | session_id=212423 | round=6 | speaker=小红帽 | length=76
-2025-09-01 21:24:55,474 | INFO | DIALOGUE_ADD | session_id=212423 | round=7 | speaker=机械狼 | length=64
-2025-09-01 21:25:01,719 | INFO | DIALOGUE_ADD | session_id=212423 | round=8 | speaker=小红帽 | length=104
-2025-09-01 21:25:06,595 | INFO | DIALOGUE_ADD | session_id=212423 | round=9 | speaker=机械狼 | length=105
-2025-09-01 21:25:10,475 | INFO | DIALOGUE_ADD | session_id=212423 | round=10 | speaker=小红帽 | length=113
-2025-09-01 21:25:16,014 | INFO | DIALOGUE_ADD | session_id=212423 | round=11 | speaker=机械狼 | length=82
-2025-09-01 21:25:20,521 | INFO | DIALOGUE_ADD | session_id=212423 | round=12 | speaker=小红帽 | length=114
-2025-09-01 21:25:24,573 | INFO | DIALOGUE_ADD | session_id=212423 | round=13 | speaker=机械狼 | length=92
-2025-09-01 21:25:28,413 | INFO | DIALOGUE_ADD | session_id=212423 | round=14 | speaker=小红帽 | length=111
-2025-09-01 21:25:33,425 | INFO | DIALOGUE_ADD | session_id=212423 | round=15 | speaker=机械狼 | length=75
-2025-09-01 21:25:37,760 | INFO | DIALOGUE_ADD | session_id=212423 | round=16 | speaker=小红帽 | length=122
-2025-09-01 21:25:41,922 | INFO | DIALOGUE_ADD | session_id=212423 | round=17 | speaker=机械狼 | length=67
-2025-09-01 21:25:46,495 | INFO | DIALOGUE_ADD | session_id=212423 | round=18 | speaker=小红帽 | length=112
-2025-09-01 21:25:52,185 | INFO | DIALOGUE_ADD | session_id=212423 | round=19 | speaker=机械狼 | length=51
-2025-09-01 21:25:56,311 | INFO | DIALOGUE_ADD | session_id=212423 | round=20 | speaker=小红帽 | length=97
-2025-09-01 21:25:56,312 | WARNING | SAFETY_LIMIT | session_id=212423 | limit=20
-2025-09-01 21:25:56,312 | INFO | SESSION_END | session_id=212423 | final_rounds=21 | expected=3 | characters_used=['小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽']
-2025-09-01 21:26:00,928 | INFO | SESSION_START | session_id=212600 | characters=['外婆', '空间站AI管家'] | context=外婆镇定地指挥AI管家调整防御,回忆起小红帽即将抵达的承诺,在危机四伏的氛围中坚持守护着医疗芯片的接收装置....
-2025-09-01 21:26:02,392 | INFO | GOAL_SET | session_id=212600 | goal='通过对话展现外婆的冷静与坚守,突出她对小红帽承诺的信念,以及她与AI管家之间在危机中协同防御并确保医疗芯片安全的紧张氛围.' | expected_rounds=3
-2025-09-01 21:26:04,644 | INFO | FIRST_DIALOGUE | session_id=212600 | speaker=外婆 | length=51
-2025-09-01 21:26:08,105 | INFO | DIALOGUE_ADD | session_id=212600 | round=1 | speaker=空间站AI管家 | length=55
-2025-09-01 21:26:11,555 | INFO | DIALOGUE_ADD | session_id=212600 | round=2 | speaker=外婆 | length=47
-2025-09-01 21:26:14,903 | INFO | DIALOGUE_ADD | session_id=212600 | round=3 | speaker=空间站AI管家 | length=71
-2025-09-01 21:26:18,886 | INFO | DIALOGUE_ADD | session_id=212600 | round=4 | speaker=外婆 | length=74
-2025-09-01 21:26:22,905 | INFO | DIALOGUE_ADD | session_id=212600 | round=5 | speaker=空间站AI管家 | length=72
-2025-09-01 21:26:26,364 | INFO | DIALOGUE_ADD | session_id=212600 | round=6 | speaker=外婆 | length=84
-2025-09-01 21:26:30,279 | INFO | DIALOGUE_ADD | session_id=212600 | round=7 | speaker=空间站AI管家 | length=87
-2025-09-01 21:26:34,843 | INFO | DIALOGUE_ADD | session_id=212600 | round=8 | speaker=外婆 | length=74
-2025-09-01 21:26:38,872 | INFO | DIALOGUE_ADD | session_id=212600 | round=9 | speaker=空间站AI管家 | length=67
-2025-09-01 21:26:44,920 | INFO | DIALOGUE_ADD | session_id=212600 | round=10 | speaker=外婆 | length=54
-2025-09-01 21:26:47,081 | INFO | DIALOGUE_END | session_id=212600 | round=11 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-01 21:26:47,081 | INFO | SESSION_END | session_id=212600 | final_rounds=11 | expected=3 | characters_used=['外婆', '空间站AI管家', '外婆', '空间站AI管家', '外婆', '空间站AI管家', '外婆', '空间站AI管家', '外婆', '空间站AI管家', '外婆']
-2025-09-01 21:26:48,383 | INFO | SESSION_START | session_id=212648 | characters=['外婆', '空间站AI管家'] | context=整个场景充斥着警报声、紧张的等待,以及外婆与AI管家并肩协作的坚韧与智慧....
-2025-09-01 21:26:49,509 | INFO | GOAL_SET | session_id=212648 | goal='通过对话展现外婆与AI管家在危机时刻如何彼此依赖、相互鼓励,并共同制定应对警报的解决方案,突出他们的坚韧和智慧.' | expected_rounds=3
-2025-09-01 21:26:51,568 | INFO | FIRST_DIALOGUE | session_id=212648 | speaker=外婆 | length=39
-2025-09-01 21:26:55,025 | INFO | DIALOGUE_ADD | session_id=212648 | round=1 | speaker=空间站AI管家 | length=44
-2025-09-01 21:26:57,798 | INFO | DIALOGUE_ADD | session_id=212648 | round=2 | speaker=外婆 | length=50
-2025-09-01 21:27:01,288 | INFO | DIALOGUE_ADD | session_id=212648 | round=3 | speaker=空间站AI管家 | length=72
-2025-09-01 21:27:05,297 | INFO | DIALOGUE_ADD | session_id=212648 | round=4 | speaker=外婆 | length=79
-2025-09-01 21:27:08,883 | INFO | DIALOGUE_ADD | session_id=212648 | round=5 | speaker=空间站AI管家 | length=92
-2025-09-01 21:27:10,694 | INFO | DIALOGUE_END | session_id=212648 | round=6 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-01 21:27:10,695 | INFO | SESSION_END | session_id=212648 | final_rounds=6 | expected=3 | characters_used=['外婆', '空间站AI管家', '外婆', '空间站AI管家', '外婆', '空间站AI管家']
-2025-09-01 21:27:14,484 | INFO | SESSION_START | session_id=212714 | characters=['机械狼', '小红帽'] | context=突然,主控区的系统遭受黑客入侵,警报骤响,一只银色机械狼从阴影中现身,眼中闪烁着红色电流,试图通过变形和数据干扰逼近小红帽....
-2025-09-01 21:27:15,831 | INFO | GOAL_SET | session_id=212714 | goal='通过对话表现机械狼的威胁和意图,以及小红帽的警觉与应对,营造紧张对峙的氛围.' | expected_rounds=3
-2025-09-01 21:27:17,449 | INFO | FIRST_DIALOGUE | session_id=212714 | speaker=机械狼 | length=42
-2025-09-01 21:27:20,265 | INFO | DIALOGUE_ADD | session_id=212714 | round=1 | speaker=小红帽 | length=39
-2025-09-01 21:27:23,296 | INFO | DIALOGUE_ADD | session_id=212714 | round=2 | speaker=机械狼 | length=34
-2025-09-01 21:27:26,529 | INFO | DIALOGUE_ADD | session_id=212714 | round=3 | speaker=小红帽 | length=55
-2025-09-01 21:27:30,187 | INFO | DIALOGUE_ADD | session_id=212714 | round=4 | speaker=机械狼 | length=38
-2025-09-01 21:27:34,199 | INFO | DIALOGUE_ADD | session_id=212714 | round=5 | speaker=小红帽 | length=43
-2025-09-01 21:27:37,534 | INFO | DIALOGUE_ADD | session_id=212714 | round=6 | speaker=机械狼 | length=62
-2025-09-01 21:27:41,442 | INFO | DIALOGUE_ADD | session_id=212714 | round=7 | speaker=小红帽 | length=59
-2025-09-01 21:27:44,751 | INFO | DIALOGUE_ADD | session_id=212714 | round=8 | speaker=机械狼 | length=74
-2025-09-01 21:27:48,275 | INFO | DIALOGUE_ADD | session_id=212714 | round=9 | speaker=小红帽 | length=69
-2025-09-01 21:27:52,335 | INFO | DIALOGUE_ADD | session_id=212714 | round=10 | speaker=机械狼 | length=66
-2025-09-01 21:27:57,114 | INFO | DIALOGUE_ADD | session_id=212714 | round=11 | speaker=小红帽 | length=77
-2025-09-01 21:28:01,678 | INFO | DIALOGUE_ADD | session_id=212714 | round=12 | speaker=机械狼 | length=50
-2025-09-01 21:28:05,954 | INFO | DIALOGUE_ADD | session_id=212714 | round=13 | speaker=小红帽 | length=64
-2025-09-01 21:28:10,567 | INFO | DIALOGUE_ADD | session_id=212714 | round=14 | speaker=机械狼 | length=66
-2025-09-01 21:28:14,716 | INFO | DIALOGUE_ADD | session_id=212714 | round=15 | speaker=小红帽 | length=73
-2025-09-01 21:28:18,898 | INFO | DIALOGUE_ADD | session_id=212714 | round=16 | speaker=机械狼 | length=86
-2025-09-01 21:28:22,940 | INFO | DIALOGUE_ADD | session_id=212714 | round=17 | speaker=小红帽 | length=69
-2025-09-01 21:28:28,287 | INFO | DIALOGUE_ADD | session_id=212714 | round=18 | speaker=机械狼 | length=78
-2025-09-01 21:28:32,342 | INFO | DIALOGUE_ADD | session_id=212714 | round=19 | speaker=小红帽 | length=79
-2025-09-01 21:28:34,911 | INFO | DIALOGUE_END | session_id=212714 | round=20 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-01 21:28:34,912 | WARNING | SAFETY_LIMIT | session_id=212714 | limit=20
-2025-09-01 21:28:34,912 | INFO | SESSION_END | session_id=212714 | final_rounds=20 | expected=3 | characters_used=['机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽']
-2025-09-01 21:28:36,982 | INFO | SESSION_START | session_id=212836 | characters=['小红帽', '空间站AI管家'] | context=小红帽依靠自己的科技知识,迅速唤醒空间站AI管家的防御系统,设下诱导陷阱....
-2025-09-01 21:28:38,240 | INFO | GOAL_SET | session_id=212836 | goal='通过对话展现小红帽运用科技知识唤醒并指挥空间站AI管家启动防御系统,同时明确诱导陷阱的设定与合作机制.让观众理解小红帽的决策过程、AI管家的反应和二者之间的配合.' | expected_rounds=3
-2025-09-01 21:28:39,891 | INFO | FIRST_DIALOGUE | session_id=212836 | speaker=小红帽 | length=69
-2025-09-01 21:28:45,397 | INFO | DIALOGUE_ADD | session_id=212836 | round=1 | speaker=空间站AI管家 | length=83
-2025-09-01 21:28:49,212 | INFO | DIALOGUE_ADD | session_id=212836 | round=2 | speaker=小红帽 | length=78
-2025-09-01 21:28:52,828 | INFO | DIALOGUE_ADD | session_id=212836 | round=3 | speaker=空间站AI管家 | length=105
-2025-09-01 21:28:56,810 | INFO | DIALOGUE_ADD | session_id=212836 | round=4 | speaker=小红帽 | length=83
-2025-09-01 21:29:01,220 | INFO | DIALOGUE_ADD | session_id=212836 | round=5 | speaker=空间站AI管家 | length=90
-2025-09-01 21:29:03,548 | INFO | DIALOGUE_END | session_id=212836 | round=6 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-01 21:29:03,548 | INFO | SESSION_END | session_id=212836 | final_rounds=6 | expected=3 | characters_used=['小红帽', '空间站AI管家', '小红帽', '空间站AI管家', '小红帽', '空间站AI管家']
-2025-09-01 21:29:04,409 | INFO | SESSION_START | session_id=212904 | characters=['机械狼', '小红帽', '空间站AI管家'] | context=机械狼在虚拟空间与小红帽展开智斗,数据流与激光在空中交错,机械狼不断尝试破解防护,但小红帽巧妙利用环境与AI协作,最终在主控台前用特殊加密程序反制机械狼,将其困于数据迷宫....
-2025-09-01 21:29:06,029 | INFO | GOAL_SET | session_id=212904 | goal='通过对话展现机械狼与小红帽在虚拟空间中的智力对决,包括机械狼的威胁和破解企图,小红帽的冷静应对和策略,以及AI管家的协助和提示,最终突出小红帽用加密程序反制机械狼、实现反转的关键时刻.' | expected_rounds=3
-2025-09-01 21:29:07,530 | INFO | FIRST_DIALOGUE | session_id=212904 | speaker=机械狼 | length=55
-2025-09-01 21:29:10,859 | INFO | DIALOGUE_ADD | session_id=212904 | round=1 | speaker=小红帽 | length=56
-2025-09-01 21:29:14,018 | INFO | DIALOGUE_ADD | session_id=212904 | round=2 | speaker=机械狼 | length=69
-2025-09-01 21:29:18,382 | INFO | DIALOGUE_ADD | session_id=212904 | round=3 | speaker=小红帽 | length=86
-2025-09-01 21:29:22,719 | INFO | DIALOGUE_ADD | session_id=212904 | round=4 | speaker=机械狼 | length=80
-2025-09-01 21:29:26,407 | INFO | DIALOGUE_ADD | session_id=212904 | round=5 | speaker=小红帽 | length=62
-2025-09-01 21:29:32,030 | INFO | DIALOGUE_ADD | session_id=212904 | round=6 | speaker=机械狼 | length=69
-2025-09-01 21:29:35,429 | INFO | DIALOGUE_ADD | session_id=212904 | round=7 | speaker=小红帽 | length=95
-2025-09-01 21:29:37,101 | INFO | DIALOGUE_END | session_id=212904 | round=8 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-01 21:29:37,102 | INFO | SESSION_END | session_id=212904 | final_rounds=8 | expected=3 | characters_used=['机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽']
-2025-09-01 21:29:40,882 | INFO | SESSION_START | session_id=212940 | characters=['外婆', '空间站AI管家'] | context=外婆正站在主控台前,慈祥而警惕地注视着四周,不时通过空间站AI管家监控外部动态....
-2025-09-01 21:29:42,316 | INFO | GOAL_SET | session_id=212940 | goal='通过对话展现外婆对空间站安全的关切,以及她与AI管家之间的信任与协作,体现外婆既慈祥又警惕的性格,同时让观众了解当前空间站的外部状况.' | expected_rounds=3
-2025-09-01 21:29:43,830 | INFO | FIRST_DIALOGUE | session_id=212940 | speaker=外婆 | length=42
-2025-09-01 21:29:46,896 | INFO | DIALOGUE_ADD | session_id=212940 | round=1 | speaker=空间站AI管家 | length=65
-2025-09-01 21:29:49,736 | INFO | DIALOGUE_ADD | session_id=212940 | round=2 | speaker=外婆 | length=53
-2025-09-01 21:29:51,086 | INFO | DIALOGUE_END | session_id=212940 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-01 21:29:51,086 | INFO | SESSION_END | session_id=212940 | final_rounds=3 | expected=3 | characters_used=['外婆', '空间站AI管家', '外婆']
-2025-09-01 21:29:52,104 | INFO | SESSION_START | session_id=212952 | characters=['小红帽', '外婆'] | context=小红帽将医疗芯片郑重地交到外婆手中,母女重逢的温情与守护空间站的紧迫感交错,星际英雄归来,守护者间的真挚情感在危机边缘迸发,整个大厅弥漫着希望与团结的气息....
-2025-09-01 21:29:53,457 | INFO | GOAL_SET | session_id=212952 | goal='通过对话表达小红帽与外婆母女重逢的温情、彼此的关切,以及在危机中的坚定守护和团结共渡难关的决心.' | expected_rounds=3
-2025-09-01 21:29:54,885 | INFO | FIRST_DIALOGUE | session_id=212952 | speaker=小红帽 | length=76
-2025-09-01 21:29:58,218 | INFO | DIALOGUE_ADD | session_id=212952 | round=1 | speaker=外婆 | length=78
-2025-09-01 21:29:59,792 | INFO | DIALOGUE_END | session_id=212952 | round=2 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-01 21:29:59,792 | INFO | SESSION_END | session_id=212952 | final_rounds=2 | expected=3 | characters_used=['小红帽', '外婆']
-2025-09-02 00:05:53,505 | INFO | SESSION_START | session_id=000553 | characters=['母亲', '小红帽'] | context=两人轻声交谈,母亲细致叮嘱飞行路线及注意事项,提醒小红帽小心潜藏的危险....
-2025-09-02 00:05:54,591 | INFO | GOAL_SET | session_id=000553 | goal='通过对话表达母亲对飞行路线的细致叮嘱,以及提醒小红帽注意潜藏的危险,体现母亲的关心和对小红帽安全的重视,同时让小红帽展现她对叮嘱的理解和回应.' | expected_rounds=3
-2025-09-02 00:05:56,362 | INFO | FIRST_DIALOGUE | session_id=000553 | speaker=母亲 | length=53
-2025-09-02 00:05:59,419 | INFO | DIALOGUE_ADD | session_id=000553 | round=1 | speaker=小红帽 | length=41
-2025-09-02 00:06:01,019 | INFO | DIALOGUE_END | session_id=000553 | round=2 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 00:06:01,019 | INFO | SESSION_END | session_id=000553 | final_rounds=2 | expected=3 | characters_used=['母亲', '小红帽']
-2025-09-02 00:06:04,669 | INFO | SESSION_START | session_id=000604 | characters=['机械狼', '小红帽'] | context=机械狼则利用高超的黑客技术试图干扰飞船导航系统,舱内警报声骤然尖锐....
-2025-09-02 00:06:05,784 | INFO | GOAL_SET | session_id=000604 | goal='通过对话表现机械狼入侵飞船系统的紧迫感、小红帽的警觉与担忧,以及双方的对抗和反应.需要展现机械狼的技术能力和小红帽试图阻止或询问警报原因的互动.' | expected_rounds=3
-2025-09-02 00:06:07,478 | INFO | FIRST_DIALOGUE | session_id=000604 | speaker=机械狼 | length=44
-2025-09-02 00:06:10,950 | INFO | DIALOGUE_ADD | session_id=000604 | round=1 | speaker=小红帽 | length=30
-2025-09-02 00:06:13,799 | INFO | DIALOGUE_ADD | session_id=000604 | round=2 | speaker=机械狼 | length=47
-2025-09-02 00:06:16,990 | INFO | DIALOGUE_ADD | session_id=000604 | round=3 | speaker=小红帽 | length=46
-2025-09-02 00:06:19,979 | INFO | DIALOGUE_ADD | session_id=000604 | round=4 | speaker=机械狼 | length=57
-2025-09-02 00:06:23,980 | INFO | DIALOGUE_ADD | session_id=000604 | round=5 | speaker=小红帽 | length=57
-2025-09-02 00:06:27,579 | INFO | DIALOGUE_ADD | session_id=000604 | round=6 | speaker=机械狼 | length=66
-2025-09-02 00:06:30,976 | INFO | DIALOGUE_ADD | session_id=000604 | round=7 | speaker=小红帽 | length=69
-2025-09-02 00:06:34,534 | INFO | DIALOGUE_ADD | session_id=000604 | round=8 | speaker=机械狼 | length=63
-2025-09-02 00:06:38,066 | INFO | DIALOGUE_ADD | session_id=000604 | round=9 | speaker=小红帽 | length=64
-2025-09-02 00:06:41,603 | INFO | DIALOGUE_ADD | session_id=000604 | round=10 | speaker=机械狼 | length=83
-2025-09-02 00:06:45,807 | INFO | DIALOGUE_ADD | session_id=000604 | round=11 | speaker=小红帽 | length=64
-2025-09-02 00:06:49,315 | INFO | DIALOGUE_ADD | session_id=000604 | round=12 | speaker=机械狼 | length=73
-2025-09-02 00:06:54,012 | INFO | DIALOGUE_ADD | session_id=000604 | round=13 | speaker=小红帽 | length=59
-2025-09-02 00:06:57,067 | INFO | DIALOGUE_ADD | session_id=000604 | round=14 | speaker=机械狼 | length=58
-2025-09-02 00:07:00,657 | INFO | DIALOGUE_ADD | session_id=000604 | round=15 | speaker=小红帽 | length=57
-2025-09-02 00:07:04,761 | INFO | DIALOGUE_ADD | session_id=000604 | round=16 | speaker=机械狼 | length=76
-2025-09-02 00:07:14,448 | INFO | DIALOGUE_ADD | session_id=000604 | round=17 | speaker=小红帽 | length=76
-2025-09-02 00:07:18,325 | INFO | DIALOGUE_ADD | session_id=000604 | round=18 | speaker=机械狼 | length=81
-2025-09-02 00:07:21,457 | INFO | DIALOGUE_ADD | session_id=000604 | round=19 | speaker=小红帽 | length=61
-2025-09-02 00:07:26,096 | INFO | DIALOGUE_ADD | session_id=000604 | round=20 | speaker=机械狼 | length=84
-2025-09-02 00:07:26,097 | WARNING | SAFETY_LIMIT | session_id=000604 | limit=20
-2025-09-02 00:07:26,097 | INFO | SESSION_END | session_id=000604 | final_rounds=21 | expected=3 | characters_used=['机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼']
-2025-09-02 00:07:27,791 | INFO | SESSION_START | session_id=000727 | characters=['机械狼', '小红帽'] | context=两艘飞船在变幻莫测的宇宙通道中上演速度与智慧的较量,机械狼的机械臂不断试图劫持飞船,而小红帽则凭借机智与勇气死守医疗芯片,誓要完成母亲的托付....
-2025-09-02 00:07:29,147 | INFO | GOAL_SET | session_id=000727 | goal='通过对话展现机械狼对医疗芯片的执着与威胁,以及小红帽机智勇敢地应对和坚守母亲托付的决心,突出两者在宇宙通道中速度与智慧的紧张对抗.' | expected_rounds=3
-2025-09-02 00:07:30,357 | INFO | FIRST_DIALOGUE | session_id=000727 | speaker=机械狼 | length=34
-2025-09-02 00:07:33,207 | INFO | DIALOGUE_ADD | session_id=000727 | round=1 | speaker=小红帽 | length=34
-2025-09-02 00:07:36,344 | INFO | DIALOGUE_ADD | session_id=000727 | round=2 | speaker=机械狼 | length=46
-2025-09-02 00:07:39,840 | INFO | DIALOGUE_ADD | session_id=000727 | round=3 | speaker=小红帽 | length=40
-2025-09-02 00:07:43,343 | INFO | DIALOGUE_ADD | session_id=000727 | round=4 | speaker=机械狼 | length=63
-2025-09-02 00:07:47,047 | INFO | DIALOGUE_ADD | session_id=000727 | round=5 | speaker=小红帽 | length=66
-2025-09-02 00:07:51,322 | INFO | DIALOGUE_ADD | session_id=000727 | round=6 | speaker=机械狼 | length=77
-2025-09-02 00:07:55,342 | INFO | DIALOGUE_ADD | session_id=000727 | round=7 | speaker=小红帽 | length=59
-2025-09-02 00:07:58,644 | INFO | DIALOGUE_ADD | session_id=000727 | round=8 | speaker=机械狼 | length=35
-2025-09-02 00:08:02,982 | INFO | DIALOGUE_ADD | session_id=000727 | round=9 | speaker=小红帽 | length=77
-2025-09-02 00:08:05,221 | INFO | DIALOGUE_END | session_id=000727 | round=10 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 00:08:05,222 | INFO | SESSION_END | session_id=000727 | final_rounds=10 | expected=3 | characters_used=['机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽']
-2025-09-02 00:08:09,862 | INFO | SESSION_START | session_id=000809 | characters=['小红帽', '星际巡航者'] | context=小红帽的飞船刚刚驶入一段信号干扰严重的宇宙通道,舱内警报突然响起,来自星际巡航者的警告信号在屏幕上跳跃....
-2025-09-02 00:08:11,218 | INFO | GOAL_SET | session_id=000809 | goal='通过对话表达小红帽对突发警报的紧张和疑惑,以及星际巡航者传达警告内容、警告原因和应对建议,从而推动剧情紧张气氛和信息传递.' | expected_rounds=3
-2025-09-02 00:08:12,441 | INFO | FIRST_DIALOGUE | session_id=000809 | speaker=小红帽 | length=43
-2025-09-02 00:08:19,908 | INFO | DIALOGUE_ADD | session_id=000809 | round=1 | speaker=星际巡航者 | length=40
-2025-09-02 00:08:22,673 | INFO | DIALOGUE_ADD | session_id=000809 | round=2 | speaker=小红帽 | length=34
-2025-09-02 00:08:25,508 | INFO | DIALOGUE_ADD | session_id=000809 | round=3 | speaker=星际巡航者 | length=60
-2025-09-02 00:08:29,000 | INFO | DIALOGUE_ADD | session_id=000809 | round=4 | speaker=小红帽 | length=69
-2025-09-02 00:08:32,819 | INFO | DIALOGUE_ADD | session_id=000809 | round=5 | speaker=星际巡航者 | length=71
-2025-09-02 00:08:36,431 | INFO | DIALOGUE_ADD | session_id=000809 | round=6 | speaker=小红帽 | length=57
-2025-09-02 00:08:39,968 | INFO | DIALOGUE_ADD | session_id=000809 | round=7 | speaker=星际巡航者 | length=72
-2025-09-02 00:08:43,686 | INFO | DIALOGUE_ADD | session_id=000809 | round=8 | speaker=小红帽 | length=60
-2025-09-02 00:08:47,204 | INFO | DIALOGUE_ADD | session_id=000809 | round=9 | speaker=星际巡航者 | length=88
-2025-09-02 00:08:51,257 | INFO | DIALOGUE_ADD | session_id=000809 | round=10 | speaker=小红帽 | length=67
-2025-09-02 00:08:55,106 | INFO | DIALOGUE_ADD | session_id=000809 | round=11 | speaker=星际巡航者 | length=102
-2025-09-02 00:08:58,696 | INFO | DIALOGUE_ADD | session_id=000809 | round=12 | speaker=小红帽 | length=55
-2025-09-02 00:09:03,139 | INFO | DIALOGUE_ADD | session_id=000809 | round=13 | speaker=星际巡航者 | length=84
-2025-09-02 00:09:06,792 | INFO | DIALOGUE_ADD | session_id=000809 | round=14 | speaker=小红帽 | length=55
-2025-09-02 00:09:10,223 | INFO | DIALOGUE_ADD | session_id=000809 | round=15 | speaker=星际巡航者 | length=76
-2025-09-02 00:09:13,597 | INFO | DIALOGUE_ADD | session_id=000809 | round=16 | speaker=小红帽 | length=77
-2025-09-02 00:09:17,886 | INFO | DIALOGUE_ADD | session_id=000809 | round=17 | speaker=星际巡航者 | length=138
-2025-09-02 00:09:19,960 | INFO | DIALOGUE_END | session_id=000809 | round=18 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 00:09:19,960 | INFO | SESSION_END | session_id=000809 | final_rounds=18 | expected=3 | characters_used=['小红帽', '星际巡航者', '小红帽', '星际巡航者', '小红帽', '星际巡航者', '小红帽', '星际巡航者', '小红帽', '星际巡航者', '小红帽', '星际巡航者', '小红帽', '星际巡航者', '小红帽', '星际巡航者', '小红帽', '星际巡航者']
-2025-09-02 00:09:21,391 | INFO | SESSION_START | session_id=000921 | characters=['机械狼', '小红帽'] | context=机械狼迅速接近,利用强力磁钩锁定飞船外壳,同时试图通过无线黑客手段侵入飞船系统,窃取医疗芯片....
-2025-09-02 00:09:22,630 | INFO | GOAL_SET | session_id=000921 | goal='通过对话表现机械狼的侵略意图和技术手段,以及小红帽对危险的察觉和应对,突出双方的紧张对抗气氛.' | expected_rounds=3
-2025-09-02 00:09:24,159 | INFO | FIRST_DIALOGUE | session_id=000921 | speaker=机械狼 | length=54
-2025-09-02 00:09:26,799 | INFO | DIALOGUE_ADD | session_id=000921 | round=1 | speaker=小红帽 | length=46
-2025-09-02 00:09:29,468 | INFO | DIALOGUE_ADD | session_id=000921 | round=2 | speaker=机械狼 | length=45
-2025-09-02 00:09:32,449 | INFO | DIALOGUE_ADD | session_id=000921 | round=3 | speaker=小红帽 | length=46
-2025-09-02 00:09:35,800 | INFO | DIALOGUE_ADD | session_id=000921 | round=4 | speaker=机械狼 | length=42
-2025-09-02 00:09:39,019 | INFO | DIALOGUE_ADD | session_id=000921 | round=5 | speaker=小红帽 | length=51
-2025-09-02 00:09:42,788 | INFO | DIALOGUE_ADD | session_id=000921 | round=6 | speaker=机械狼 | length=58
-2025-09-02 00:09:46,497 | INFO | DIALOGUE_ADD | session_id=000921 | round=7 | speaker=小红帽 | length=54
-2025-09-02 00:09:50,676 | INFO | DIALOGUE_ADD | session_id=000921 | round=8 | speaker=机械狼 | length=76
-2025-09-02 00:09:54,033 | INFO | DIALOGUE_ADD | session_id=000921 | round=9 | speaker=小红帽 | length=58
-2025-09-02 00:09:57,965 | INFO | DIALOGUE_ADD | session_id=000921 | round=10 | speaker=机械狼 | length=77
-2025-09-02 00:10:01,693 | INFO | DIALOGUE_ADD | session_id=000921 | round=11 | speaker=小红帽 | length=71
-2025-09-02 00:10:05,466 | INFO | DIALOGUE_ADD | session_id=000921 | round=12 | speaker=机械狼 | length=78
-2025-09-02 00:10:08,672 | INFO | DIALOGUE_ADD | session_id=000921 | round=13 | speaker=小红帽 | length=70
-2025-09-02 00:10:12,263 | INFO | DIALOGUE_ADD | session_id=000921 | round=14 | speaker=机械狼 | length=66
-2025-09-02 00:10:17,852 | INFO | DIALOGUE_ADD | session_id=000921 | round=15 | speaker=小红帽 | length=78
-2025-09-02 00:10:21,265 | INFO | DIALOGUE_ADD | session_id=000921 | round=16 | speaker=机械狼 | length=77
-2025-09-02 00:10:25,495 | INFO | DIALOGUE_ADD | session_id=000921 | round=17 | speaker=小红帽 | length=86
-2025-09-02 00:10:29,191 | INFO | DIALOGUE_ADD | session_id=000921 | round=18 | speaker=机械狼 | length=88
-2025-09-02 00:10:33,408 | INFO | DIALOGUE_ADD | session_id=000921 | round=19 | speaker=小红帽 | length=72
-2025-09-02 00:10:37,414 | INFO | DIALOGUE_ADD | session_id=000921 | round=20 | speaker=机械狼 | length=64
-2025-09-02 00:10:37,414 | WARNING | SAFETY_LIMIT | session_id=000921 | limit=20
-2025-09-02 00:10:37,414 | INFO | SESSION_END | session_id=000921 | final_rounds=21 | expected=3 | characters_used=['机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼']
-2025-09-02 00:10:39,220 | INFO | SESSION_START | session_id=001039 | characters=['小红帽', '机械狼'] | context=小红帽临危不乱,凭借娴熟的操作与科技知识,启动反黑客防御程序,并巧妙利用飞船上的空间扰流器制造假信号,诱使机械狼暴露其真实位置....
-2025-09-02 00:10:40,609 | INFO | GOAL_SET | session_id=001039 | goal='展示小红帽沉着冷静、技术娴熟,通过专业术语和简明指令表现她的应变能力,同时通过机械狼的反应展现它被迷惑和暴露位置的过程,使观众理解小红帽如何利用科技反制机械狼.' | expected_rounds=3
-2025-09-02 00:10:42,167 | INFO | FIRST_DIALOGUE | session_id=001039 | speaker=小红帽 | length=52
-2025-09-02 00:10:45,130 | INFO | DIALOGUE_ADD | session_id=001039 | round=1 | speaker=机械狼 | length=37
-2025-09-02 00:10:48,539 | INFO | DIALOGUE_ADD | session_id=001039 | round=2 | speaker=小红帽 | length=51
-2025-09-02 00:10:52,655 | INFO | DIALOGUE_ADD | session_id=001039 | round=3 | speaker=机械狼 | length=59
-2025-09-02 00:10:54,510 | INFO | DIALOGUE_END | session_id=001039 | round=4 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 00:10:54,510 | INFO | SESSION_END | session_id=001039 | final_rounds=4 | expected=3 | characters_used=['小红帽', '机械狼', '小红帽', '机械狼']
-2025-09-02 00:10:57,589 | INFO | SESSION_START | session_id=001057 | characters=['外婆', '空间站AI管家'] | context=外婆镇定地指挥AI管家调整防御,回忆起小红帽即将抵达的承诺,在危机四伏的氛围中坚持守护着医疗芯片的接收装置....
-2025-09-02 00:10:58,895 | INFO | GOAL_SET | session_id=001057 | goal='通过对话表达外婆在危机中保持镇定,指挥AI管家强化防御,同时流露出她对小红帽承诺的信任和坚持守护医疗芯片的决心.' | expected_rounds=3
-2025-09-02 00:11:00,713 | INFO | FIRST_DIALOGUE | session_id=001057 | speaker=外婆 | length=79
-2025-09-02 00:11:03,801 | INFO | DIALOGUE_ADD | session_id=001057 | round=1 | speaker=空间站AI管家 | length=73
-2025-09-02 00:11:07,282 | INFO | DIALOGUE_ADD | session_id=001057 | round=2 | speaker=外婆 | length=80
-2025-09-02 00:11:09,908 | INFO | DIALOGUE_END | session_id=001057 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 00:11:09,908 | INFO | SESSION_END | session_id=001057 | final_rounds=3 | expected=3 | characters_used=['外婆', '空间站AI管家', '外婆']
-2025-09-02 00:11:15,775 | INFO | SESSION_START | session_id=001115 | characters=['机械狼', '小红帽'] | context=突然,主控区的系统遭受黑客入侵,警报骤响,一只银色机械狼从阴影中现身,眼中闪烁着红色电流,试图通过变形和数据干扰逼近小红帽....
-2025-09-02 00:11:16,932 | INFO | GOAL_SET | session_id=001115 | goal='通过对话展现机械狼对小红帽的威胁和意图,同时表现小红帽的警觉与应对,从而突出紧张氛围和角色冲突.' | expected_rounds=3
-2025-09-02 00:11:18,319 | INFO | FIRST_DIALOGUE | session_id=001115 | speaker=机械狼 | length=34
-2025-09-02 00:11:21,092 | INFO | DIALOGUE_ADD | session_id=001115 | round=1 | speaker=小红帽 | length=24
-2025-09-02 00:11:23,972 | INFO | DIALOGUE_ADD | session_id=001115 | round=2 | speaker=机械狼 | length=42
-2025-09-02 00:11:27,130 | INFO | DIALOGUE_ADD | session_id=001115 | round=3 | speaker=小红帽 | length=34
-2025-09-02 00:11:30,529 | INFO | DIALOGUE_ADD | session_id=001115 | round=4 | speaker=机械狼 | length=43
-2025-09-02 00:11:33,908 | INFO | DIALOGUE_ADD | session_id=001115 | round=5 | speaker=小红帽 | length=27
-2025-09-02 00:11:37,023 | INFO | DIALOGUE_ADD | session_id=001115 | round=6 | speaker=机械狼 | length=44
-2025-09-02 00:11:40,817 | INFO | DIALOGUE_ADD | session_id=001115 | round=7 | speaker=小红帽 | length=52
-2025-09-02 00:11:44,361 | INFO | DIALOGUE_ADD | session_id=001115 | round=8 | speaker=机械狼 | length=65
-2025-09-02 00:11:48,440 | INFO | DIALOGUE_ADD | session_id=001115 | round=9 | speaker=小红帽 | length=53
-2025-09-02 00:11:51,745 | INFO | DIALOGUE_ADD | session_id=001115 | round=10 | speaker=机械狼 | length=68
-2025-09-02 00:11:53,442 | INFO | DIALOGUE_END | session_id=001115 | round=11 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 00:11:53,442 | INFO | SESSION_END | session_id=001115 | final_rounds=11 | expected=3 | characters_used=['机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽', '机械狼']
-2025-09-02 00:11:54,587 | INFO | SESSION_START | session_id=001154 | characters=['小红帽', '空间站AI管家'] | context=小红帽依靠自己的科技知识,迅速唤醒空间站AI管家的防御系统,设下诱导陷阱....
-2025-09-02 00:11:55,896 | INFO | GOAL_SET | session_id=001154 | goal='通过对话展现小红帽冷静自信地运用科技知识,唤醒并指挥空间站AI管家激活防御系统,同时让AI管家表达对当前威胁的分析与响应,突出两者合作设下诱导陷阱的过程和紧张感.' | expected_rounds=3
-2025-09-02 00:11:57,538 | INFO | FIRST_DIALOGUE | session_id=001154 | speaker=小红帽 | length=73
-2025-09-02 00:12:00,685 | INFO | DIALOGUE_ADD | session_id=001154 | round=1 | speaker=空间站AI管家 | length=75
-2025-09-02 00:12:04,505 | INFO | DIALOGUE_ADD | session_id=001154 | round=2 | speaker=小红帽 | length=77
-2025-09-02 00:12:08,383 | INFO | DIALOGUE_ADD | session_id=001154 | round=3 | speaker=空间站AI管家 | length=95
-2025-09-02 00:12:11,655 | INFO | DIALOGUE_ADD | session_id=001154 | round=4 | speaker=小红帽 | length=86
-2025-09-02 00:12:15,310 | INFO | DIALOGUE_ADD | session_id=001154 | round=5 | speaker=空间站AI管家 | length=100
-2025-09-02 00:12:18,626 | INFO | DIALOGUE_ADD | session_id=001154 | round=6 | speaker=小红帽 | length=62
-2025-09-02 00:12:22,451 | INFO | DIALOGUE_ADD | session_id=001154 | round=7 | speaker=空间站AI管家 | length=83
-2025-09-02 00:12:25,999 | INFO | DIALOGUE_ADD | session_id=001154 | round=8 | speaker=小红帽 | length=72
-2025-09-02 00:12:29,881 | INFO | DIALOGUE_ADD | session_id=001154 | round=9 | speaker=空间站AI管家 | length=105
-2025-09-02 00:12:33,183 | INFO | DIALOGUE_ADD | session_id=001154 | round=10 | speaker=小红帽 | length=75
-2025-09-02 00:12:37,148 | INFO | DIALOGUE_ADD | session_id=001154 | round=11 | speaker=空间站AI管家 | length=92
-2025-09-02 00:12:40,980 | INFO | DIALOGUE_ADD | session_id=001154 | round=12 | speaker=小红帽 | length=62
-2025-09-02 00:12:42,698 | INFO | DIALOGUE_END | session_id=001154 | round=13 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 00:12:42,699 | INFO | SESSION_END | session_id=001154 | final_rounds=13 | expected=3 | characters_used=['小红帽', '空间站AI管家', '小红帽', '空间站AI管家', '小红帽', '空间站AI管家', '小红帽', '空间站AI管家', '小红帽', '空间站AI管家', '小红帽', '空间站AI管家', '小红帽']
-2025-09-02 00:12:44,128 | INFO | SESSION_START | session_id=001244 | characters=['机械狼', '小红帽', '空间站AI管家'] | context=机械狼在虚拟空间与小红帽展开智斗,数据流与激光在空中交错,机械狼不断尝试破解防护,但小红帽巧妙利用环境与AI协作,最终在主控台前用特殊加密程序反制机械狼,将其困于数据迷宫....
-2025-09-02 00:12:45,640 | INFO | GOAL_SET | session_id=001244 | goal='通过对话展现机械狼与小红帽在虚拟空间中的斗智斗勇,包括机械狼步步紧逼、试图破解,小红帽机智反击并与AI协作,最终用加密程序反制并困住机械狼,突出双方智慧与紧张气氛.' | expected_rounds=3
-2025-09-02 00:12:47,269 | INFO | FIRST_DIALOGUE | session_id=001244 | speaker=机械狼 | length=56
-2025-09-02 00:12:50,683 | INFO | DIALOGUE_ADD | session_id=001244 | round=1 | speaker=小红帽 | length=74
-2025-09-02 00:12:54,447 | INFO | DIALOGUE_ADD | session_id=001244 | round=2 | speaker=机械狼 | length=70
-2025-09-02 00:12:57,754 | INFO | DIALOGUE_ADD | session_id=001244 | round=3 | speaker=小红帽 | length=68
-2025-09-02 00:13:00,507 | INFO | DIALOGUE_ADD | session_id=001244 | round=4 | speaker=机械狼 | length=69
-2025-09-02 00:13:04,783 | INFO | DIALOGUE_ADD | session_id=001244 | round=5 | speaker=小红帽 | length=80
-2025-09-02 00:13:06,425 | INFO | DIALOGUE_END | session_id=001244 | round=6 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 00:13:06,425 | INFO | SESSION_END | session_id=001244 | final_rounds=6 | expected=3 | characters_used=['机械狼', '小红帽', '机械狼', '小红帽', '机械狼', '小红帽']
-2025-09-02 00:13:09,845 | INFO | SESSION_START | session_id=001309 | characters=['小红帽', '外婆'] | context=小红帽将医疗芯片郑重地交到外婆手中,母女重逢的温情与守护空间站的紧迫感交错,星际英雄归来,守护者间的真挚情感在危机边缘迸发,整个大厅弥漫着希望与团结的气息....
-2025-09-02 00:13:10,995 | INFO | GOAL_SET | session_id=001309 | goal='表达小红帽和外婆母女重逢的温情,传递医疗芯片的重要性和希望,并体现守护空间站时刻的紧迫感与团结力量.' | expected_rounds=3
-2025-09-02 00:13:12,716 | INFO | FIRST_DIALOGUE | session_id=001309 | speaker=小红帽 | length=80
-2025-09-02 00:13:15,733 | INFO | DIALOGUE_ADD | session_id=001309 | round=1 | speaker=外婆 | length=68
-2025-09-02 00:13:16,985 | INFO | DIALOGUE_END | session_id=001309 | round=2 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 00:13:16,986 | INFO | SESSION_END | session_id=001309 | final_rounds=2 | expected=3 | characters_used=['小红帽', '外婆']
-2025-09-02 15:00:46,811 | INFO | SESSION_START | session_id=150046 | characters=['小红帽', '银河巡逻队队长', '银河巡逻队成员'] | context=他们相互打量,言语谨慎,彼此都在揣测对方的能力与意图....
-2025-09-02 15:00:48,144 | INFO | GOAL_SET | session_id=150046 | goal='通过对话展现角色之间的试探与防备,表达他们对彼此身份、能力和真实意图的怀疑和推敲,从而营造悬疑和紧张感.' | expected_rounds=3
-2025-09-02 15:00:49,602 | INFO | FIRST_DIALOGUE | session_id=150046 | speaker=小红帽 | length=45
-2025-09-02 15:00:52,980 | INFO | DIALOGUE_ADD | session_id=150046 | round=1 | speaker=银河巡逻队队长 | length=44
-2025-09-02 15:00:56,635 | INFO | DIALOGUE_ADD | session_id=150046 | round=2 | speaker=小红帽 | length=46
-2025-09-02 15:01:00,265 | INFO | DIALOGUE_ADD | session_id=150046 | round=3 | speaker=银河巡逻队队长 | length=63
-2025-09-02 15:01:05,617 | INFO | DIALOGUE_ADD | session_id=150046 | round=4 | speaker=小红帽 | length=62
-2025-09-02 15:01:17,321 | INFO | DIALOGUE_ADD | session_id=150046 | round=5 | speaker=银河巡逻队队长 | length=61
-2025-09-02 15:01:22,837 | INFO | DIALOGUE_ADD | session_id=150046 | round=6 | speaker=小红帽 | length=40
-2025-09-02 15:01:26,882 | INFO | DIALOGUE_ADD | session_id=150046 | round=7 | speaker=银河巡逻队队长 | length=54
-2025-09-02 15:01:30,883 | INFO | DIALOGUE_ADD | session_id=150046 | round=8 | speaker=小红帽 | length=56
-2025-09-02 15:01:35,853 | INFO | DIALOGUE_ADD | session_id=150046 | round=9 | speaker=银河巡逻队队长 | length=75
-2025-09-02 15:01:40,850 | INFO | DIALOGUE_ADD | session_id=150046 | round=10 | speaker=小红帽 | length=65
-2025-09-02 15:01:47,676 | INFO | DIALOGUE_ADD | session_id=150046 | round=11 | speaker=银河巡逻队队长 | length=100
-2025-09-02 15:01:52,819 | INFO | DIALOGUE_ADD | session_id=150046 | round=12 | speaker=小红帽 | length=84
-2025-09-02 15:01:57,430 | INFO | DIALOGUE_ADD | session_id=150046 | round=13 | speaker=银河巡逻队队长 | length=112
-2025-09-02 15:02:01,440 | INFO | DIALOGUE_ADD | session_id=150046 | round=14 | speaker=小红帽 | length=88
-2025-09-02 15:02:06,499 | INFO | DIALOGUE_ADD | session_id=150046 | round=15 | speaker=银河巡逻队队长 | length=105
-2025-09-02 15:02:11,676 | INFO | DIALOGUE_ADD | session_id=150046 | round=16 | speaker=小红帽 | length=83
-2025-09-02 15:02:16,449 | INFO | DIALOGUE_ADD | session_id=150046 | round=17 | speaker=银河巡逻队队长 | length=89
-2025-09-02 15:02:20,519 | INFO | DIALOGUE_ADD | session_id=150046 | round=18 | speaker=小红帽 | length=74
-2025-09-02 15:02:22,538 | INFO | DIALOGUE_END | session_id=150046 | round=19 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:02:22,540 | INFO | SESSION_END | session_id=150046 | final_rounds=19 | expected=3 | characters_used=['小红帽', '银河巡逻队队长', '小红帽', '银河巡逻队队长', '小红帽', '银河巡逻队队长', '小红帽', '银河巡逻队队长', '小红帽', '银河巡逻队队长', '小红帽', '银河巡逻队队长', '小红帽', '银河巡逻队队长', '小红帽', '银河巡逻队队长', '小红帽', '银河巡逻队队长', '小红帽']
-2025-09-02 15:02:24,529 | INFO | SESSION_START | session_id=150224 | characters=['银河巡逻队队长', '小红帽'] | context=队长简要说明任务安排,声音低沉却不失威严,而小红帽则以坚定的语气回应,隐约流露出责任感与不安....
-2025-09-02 15:02:26,263 | INFO | GOAL_SET | session_id=150224 | goal='通过对话明确任务内容和分工,展现队长的权威与镇定,以及小红帽的责任感与内心的不安,为角色关系和后续发展埋下伏笔.' | expected_rounds=2
-2025-09-02 15:02:27,971 | INFO | FIRST_DIALOGUE | session_id=150224 | speaker=银河巡逻队队长 | length=58
-2025-09-02 15:02:32,480 | INFO | DIALOGUE_ADD | session_id=150224 | round=1 | speaker=小红帽 | length=26
-2025-09-02 15:02:34,000 | INFO | DIALOGUE_END | session_id=150224 | round=2 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:02:34,001 | INFO | SESSION_END | session_id=150224 | final_rounds=2 | expected=2 | characters_used=['银河巡逻队队长', '小红帽']
-2025-09-02 15:02:38,797 | INFO | SESSION_START | session_id=150238 | characters=['小白', '小红帽'] | context=耳边,小白的虚拟声音低语,分析前方能量波动与生物活动数据....
-2025-09-02 15:02:40,371 | INFO | GOAL_SET | session_id=150238 | goal='通过对话传达小白作为虚拟助手为小红帽提供实时分析与警告,帮助她理解前方环境的危险或异常,并推动剧情进入下一步的行动决策.' | expected_rounds=2
-2025-09-02 15:02:42,568 | INFO | FIRST_DIALOGUE | session_id=150238 | speaker=小白 | length=50
-2025-09-02 15:02:45,449 | INFO | DIALOGUE_ADD | session_id=150238 | round=1 | speaker=小红帽 | length=51
-2025-09-02 15:02:48,686 | INFO | DIALOGUE_ADD | session_id=150238 | round=2 | speaker=小白 | length=92
-2025-09-02 15:02:53,223 | INFO | DIALOGUE_ADD | session_id=150238 | round=3 | speaker=小红帽 | length=87
-2025-09-02 15:03:10,169 | INFO | DIALOGUE_ADD | session_id=150238 | round=4 | speaker=小红帽 | length=54
-2025-09-02 15:03:12,475 | INFO | DIALOGUE_END | session_id=150238 | round=5 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:03:12,475 | INFO | SESSION_END | session_id=150238 | final_rounds=5 | expected=2 | characters_used=['小白', '小红帽', '小白', '小红帽', '小红帽']
-2025-09-02 15:03:13,531 | INFO | SESSION_START | session_id=150313 | characters=['小白', '小红帽'] | context=每当小红帽遇到错综复杂的能量屏障或疑似陷阱,小白便迅速推送破解指令,协助她灵巧穿越....
-2025-09-02 15:03:14,634 | INFO | GOAL_SET | session_id=150313 | goal='通过对话表达小红帽面对障碍时的紧张与困惑,以及小白迅速分析局势并给出破解方案,体现两人之间的默契配合和信任.' | expected_rounds=3
-2025-09-02 15:03:15,754 | INFO | FIRST_DIALOGUE | session_id=150313 | speaker=小白 | length=44
-2025-09-02 15:03:18,722 | INFO | DIALOGUE_ADD | session_id=150313 | round=1 | speaker=小红帽 | length=35
-2025-09-02 15:03:23,282 | INFO | DIALOGUE_ADD | session_id=150313 | round=2 | speaker=小白 | length=58
-2025-09-02 15:03:26,505 | INFO | DIALOGUE_ADD | session_id=150313 | round=3 | speaker=小红帽 | length=46
-2025-09-02 15:03:30,444 | INFO | DIALOGUE_ADD | session_id=150313 | round=4 | speaker=小白 | length=76
-2025-09-02 15:03:33,765 | INFO | DIALOGUE_ADD | session_id=150313 | round=5 | speaker=小红帽 | length=30
-2025-09-02 15:03:38,686 | INFO | DIALOGUE_ADD | session_id=150313 | round=6 | speaker=小白 | length=29
-2025-09-02 15:03:45,549 | INFO | DIALOGUE_ADD | session_id=150313 | round=7 | speaker=小红帽 | length=45
-2025-09-02 15:03:51,288 | INFO | DIALOGUE_ADD | session_id=150313 | round=8 | speaker=小白 | length=73
-2025-09-02 15:03:58,225 | INFO | DIALOGUE_ADD | session_id=150313 | round=9 | speaker=小红帽 | length=58
-2025-09-02 15:04:11,682 | INFO | DIALOGUE_ADD | session_id=150313 | round=10 | speaker=小白 | length=81
-2025-09-02 15:04:15,622 | INFO | DIALOGUE_ADD | session_id=150313 | round=11 | speaker=小红帽 | length=65
-2025-09-02 15:04:19,682 | INFO | DIALOGUE_ADD | session_id=150313 | round=12 | speaker=小白 | length=80
-2025-09-02 15:04:24,817 | INFO | DIALOGUE_ADD | session_id=150313 | round=13 | speaker=小红帽 | length=50
-2025-09-02 15:04:29,735 | INFO | DIALOGUE_ADD | session_id=150313 | round=14 | speaker=小白 | length=91
-2025-09-02 15:04:33,689 | INFO | DIALOGUE_ADD | session_id=150313 | round=15 | speaker=小红帽 | length=55
-2025-09-02 15:04:37,968 | INFO | DIALOGUE_ADD | session_id=150313 | round=16 | speaker=小白 | length=117
-2025-09-02 15:04:42,958 | INFO | DIALOGUE_ADD | session_id=150313 | round=17 | speaker=小红帽 | length=73
-2025-09-02 15:04:48,285 | INFO | DIALOGUE_ADD | session_id=150313 | round=18 | speaker=小白 | length=59
-2025-09-02 15:04:50,177 | INFO | DIALOGUE_END | session_id=150313 | round=19 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:04:50,177 | INFO | SESSION_END | session_id=150313 | final_rounds=19 | expected=3 | characters_used=['小白', '小红帽', '小白', '小红帽', '小白', '小红帽', '小白', '小红帽', '小白', '小红帽', '小白', '小红帽', '小白', '小红帽', '小白', '小红帽', '小白', '小红帽', '小白']
-2025-09-02 15:04:51,796 | INFO | SESSION_START | session_id=150451 | characters=['小红帽', '小白'] | context=小红帽目光坚定,脚步沉稳,她机警地避开高风险区域,用便携扫描仪采集周围样本,时而停下脚步,低声与小白讨论下一步策略....
-2025-09-02 15:04:53,018 | INFO | GOAL_SET | session_id=150451 | goal='通过对话展现小红帽与小白的协作与警惕,体现她们对环境的分析、危险的规避以及下一步行动计划的制定.' | expected_rounds=3
-2025-09-02 15:04:54,396 | INFO | FIRST_DIALOGUE | session_id=150451 | speaker=小红帽 | length=36
-2025-09-02 15:04:58,292 | INFO | DIALOGUE_ADD | session_id=150451 | round=1 | speaker=小白 | length=58
-2025-09-02 15:05:10,325 | INFO | DIALOGUE_ADD | session_id=150451 | round=2 | speaker=小红帽 | length=45
-2025-09-02 15:05:11,851 | INFO | DIALOGUE_END | session_id=150451 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:05:11,851 | INFO | SESSION_END | session_id=150451 | final_rounds=3 | expected=3 | characters_used=['小红帽', '小白', '小红帽']
-2025-09-02 15:05:14,767 | INFO | SESSION_START | session_id=150514 | characters=['小红帽', '小白'] | context=穿行之中,她展现出过人的判断力与勇气,逐渐与小白形成默契的战术配合....
-2025-09-02 15:05:18,675 | INFO | GOAL_SET | session_id=150514 | goal='通过对话展现小红帽的判断力和勇气,以及她与小白之间从生疏到默契、彼此信任并形成有效战术配合的过程.' | expected_rounds=3
-2025-09-02 15:05:32,801 | INFO | FIRST_DIALOGUE | session_id=150514 | speaker=小红帽 | length=49
-2025-09-02 15:05:35,988 | INFO | DIALOGUE_ADD | session_id=150514 | round=1 | speaker=小白 | length=62
-2025-09-02 15:05:39,499 | INFO | DIALOGUE_ADD | session_id=150514 | round=2 | speaker=小红帽 | length=72
-2025-09-02 15:05:43,024 | INFO | DIALOGUE_ADD | session_id=150514 | round=3 | speaker=小白 | length=63
-2025-09-02 15:05:49,099 | INFO | DIALOGUE_ADD | session_id=150514 | round=4 | speaker=小红帽 | length=61
-2025-09-02 15:05:53,681 | INFO | DIALOGUE_ADD | session_id=150514 | round=5 | speaker=小白 | length=84
-2025-09-02 15:05:55,243 | INFO | DIALOGUE_END | session_id=150514 | round=6 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:05:55,245 | INFO | SESSION_END | session_id=150514 | final_rounds=6 | expected=3 | characters_used=['小红帽', '小白', '小红帽', '小白', '小红帽', '小白']
-2025-09-02 15:41:22,291 | INFO | SESSION_START | session_id=154122 | characters=['空间站安保机器人'] | context=她紧握着快递包裹,目光警觉地扫视四周——每一扇自动门都在故障中时开时合,安保机器人的提示音断断续续....
-2025-09-02 15:41:23,614 | INFO | GOAL_SET | session_id=154122 | goal='通过对话表现空间站安保机器人的故障状态和对角色的安检警告,突出角色的紧张和环境的不稳定,为后续可能的冲突或剧情转折做铺垫.' | expected_rounds=2
-2025-09-02 15:41:25,553 | INFO | FIRST_DIALOGUE | session_id=154122 | speaker=空间站安保机器人 | length=38
-2025-09-02 15:41:32,163 | INFO | DIALOGUE_ADD | session_id=154122 | round=1 | speaker=空间站安保机器人 | length=49
-2025-09-02 15:41:34,744 | INFO | DIALOGUE_END | session_id=154122 | round=2 | reasons=['INVALID_SPEAKER']
-2025-09-02 15:41:34,744 | INFO | SESSION_END | session_id=154122 | final_rounds=2 | expected=2 | characters_used=['空间站安保机器人', '空间站安保机器人']
-2025-09-02 15:41:35,668 | INFO | SESSION_START | session_id=154135 | characters=['祖母'] | context=突然,前方的通信终端迸发出杂音,她捕捉到祖母的微弱呼救：“空间站遭黑客入侵,快来控制室！...
-2025-09-02 15:41:37,380 | INFO | GOAL_SET | session_id=154135 | goal='通过对话让祖母紧急传递空间站被黑客入侵的危险情况,并催促主角立即赶往控制室,突出情势紧迫和祖孙间的关切.' | expected_rounds=1
-2025-09-02 15:41:38,752 | INFO | FIRST_DIALOGUE | session_id=154135 | speaker=祖母 | length=47
-2025-09-02 15:41:40,396 | INFO | DIALOGUE_END | session_id=154135 | round=1 | reasons=['INVALID_SPEAKER']
-2025-09-02 15:41:40,396 | INFO | SESSION_END | session_id=154135 | final_rounds=1 | expected=1 | characters_used=['祖母']
-2025-09-02 15:41:44,920 | INFO | SESSION_START | session_id=154144 | characters=['小红帽', '星际森林守护兽'] | context=透过舷窗,她瞥见星际森林守护兽的轮廓在远处徘徊——庞大的身影如雾如影,眼中幽光闪烁,似乎正试探着飞船的来意....
-2025-09-02 15:41:46,412 | INFO | GOAL_SET | session_id=154144 | goal='通过对话表达小红帽对守护兽的初步试探与疑虑,以及守护兽对飞船和小红帽来意的警惕和观察,营造紧张与神秘的初遇氛围.' | expected_rounds=2
-2025-09-02 15:41:51,017 | INFO | FIRST_DIALOGUE | session_id=154144 | speaker=小红帽 | length=37
-2025-09-02 15:41:55,586 | INFO | DIALOGUE_ADD | session_id=154144 | round=1 | speaker=星际森林守护兽 | length=40
-2025-09-02 15:41:59,376 | INFO | DIALOGUE_ADD | session_id=154144 | round=2 | speaker=小红帽 | length=34
-2025-09-02 15:42:11,448 | INFO | DIALOGUE_ADD | session_id=154144 | round=3 | speaker=星际森林守护兽 | length=74
-2025-09-02 15:42:15,226 | INFO | DIALOGUE_ADD | session_id=154144 | round=4 | speaker=小红帽 | length=68
-2025-09-02 15:42:20,182 | INFO | DIALOGUE_ADD | session_id=154144 | round=5 | speaker=星际森林守护兽 | length=101
-2025-09-02 15:42:24,994 | INFO | DIALOGUE_ADD | session_id=154144 | round=6 | speaker=小红帽 | length=72
-2025-09-02 15:42:29,497 | INFO | DIALOGUE_ADD | session_id=154144 | round=7 | speaker=星际森林守护兽 | length=84
-2025-09-02 15:42:33,813 | INFO | DIALOGUE_ADD | session_id=154144 | round=8 | speaker=小红帽 | length=55
-2025-09-02 15:42:35,953 | INFO | DIALOGUE_END | session_id=154144 | round=9 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:42:35,953 | INFO | SESSION_END | session_id=154144 | final_rounds=9 | expected=2 | characters_used=['小红帽', '星际森林守护兽', '小红帽', '星际森林守护兽', '小红帽', '星际森林守护兽', '小红帽', '星际森林守护兽', '小红帽']
-2025-09-02 15:42:38,341 | INFO | SESSION_START | session_id=154238 | characters=['小红帽', '星际森林守护兽'] | context=她屏息观察,试图用飞船上的信号灯与守护兽沟通,寻求一条安全航道....
-2025-09-02 15:42:39,605 | INFO | GOAL_SET | session_id=154238 | goal='通过对话表达小红帽如何与星际森林守护兽建立沟通,解释她的来意,并请求守护兽指引一条安全航道,同时展现守护兽的警惕和逐步信任过程.' | expected_rounds=3
-2025-09-02 15:42:41,289 | INFO | FIRST_DIALOGUE | session_id=154238 | speaker=小红帽 | length=80
-2025-09-02 15:42:45,545 | INFO | DIALOGUE_ADD | session_id=154238 | round=1 | speaker=星际森林守护兽 | length=74
-2025-09-02 15:42:49,873 | INFO | DIALOGUE_ADD | session_id=154238 | round=2 | speaker=小红帽 | length=97
-2025-09-02 15:42:53,220 | INFO | DIALOGUE_ADD | session_id=154238 | round=3 | speaker=星际森林守护兽 | length=97
-2025-09-02 15:42:57,294 | INFO | DIALOGUE_ADD | session_id=154238 | round=4 | speaker=小红帽 | length=79
-2025-09-02 15:43:01,203 | INFO | DIALOGUE_ADD | session_id=154238 | round=5 | speaker=星际森林守护兽 | length=89
-2025-09-02 15:43:04,684 | INFO | DIALOGUE_END | session_id=154238 | round=6 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:43:04,684 | INFO | SESSION_END | session_id=154238 | final_rounds=6 | expected=3 | characters_used=['小红帽', '星际森林守护兽', '小红帽', '星际森林守护兽', '小红帽', '星际森林守护兽']
-2025-09-02 15:43:08,415 | INFO | SESSION_START | session_id=154308 | characters=['银河快递调度员', '小红帽'] | context=调度员以严谨的语气向她介绍本次任务的特殊性——运送一枚神秘芯片前往偏远空间站,目标地点正是她外星祖母的守护之地....
-2025-09-02 15:43:09,867 | INFO | GOAL_SET | session_id=154308 | goal='通过对话明确任务的特殊性和风险,揭示芯片的重要性以及目的地与小红帽外星祖母的关系,激发小红帽的情感和责任感,同时让调度员传达任务要求和安全注意事项.' | expected_rounds=3
-2025-09-02 15:43:11,557 | INFO | FIRST_DIALOGUE | session_id=154308 | speaker=银河快递调度员 | length=101
-2025-09-02 15:43:14,790 | INFO | DIALOGUE_ADD | session_id=154308 | round=1 | speaker=小红帽 | length=41
-2025-09-02 15:43:18,433 | INFO | DIALOGUE_ADD | session_id=154308 | round=2 | speaker=银河快递调度员 | length=107
-2025-09-02 15:43:23,171 | INFO | DIALOGUE_ADD | session_id=154308 | round=3 | speaker=小红帽 | length=72
-2025-09-02 15:43:29,191 | INFO | DIALOGUE_ADD | session_id=154308 | round=4 | speaker=银河快递调度员 | length=94
-2025-09-02 15:43:30,910 | INFO | DIALOGUE_END | session_id=154308 | round=5 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:43:30,910 | INFO | SESSION_END | session_id=154308 | final_rounds=5 | expected=3 | characters_used=['银河快递调度员', '小红帽', '银河快递调度员', '小红帽', '银河快递调度员']
-2025-09-02 15:43:36,643 | INFO | SESSION_START | session_id=154336 | characters=['祖母'] | context=耳机里时不时传来祖母微弱却坚定的声音：“不要被它迷惑,专注代码左侧能量曲线！...
-2025-09-02 15:43:38,106 | INFO | GOAL_SET | session_id=154336 | goal='通过祖母的对话,表达她在关键时刻给予主人公指导和鼓励,提醒主人公不要被外界干扰,专注于解决技术难题（代码与能量曲线）,突出祖母的关切和主人公面对挑战时的心理斗争.' | expected_rounds=2
-2025-09-02 15:43:40,162 | INFO | FIRST_DIALOGUE | session_id=154336 | speaker=祖母 | length=48
-2025-09-02 15:43:42,429 | INFO | DIALOGUE_END | session_id=154336 | round=1 | reasons=['INVALID_SPEAKER']
-2025-09-02 15:43:42,429 | INFO | SESSION_END | session_id=154336 | final_rounds=1 | expected=2 | characters_used=['祖母']
-2025-09-02 15:43:46,607 | INFO | SESSION_START | session_id=154346 | characters=['小红帽', '祖母'] | context=小红帽急速反应,利用随身携带的防黑客模块试图隔离芯片信号,同时启动紧急通讯请求祖母援助....
-2025-09-02 15:43:48,809 | INFO | GOAL_SET | session_id=154346 | goal='小红帽需要向祖母说明当前遭遇的危机,描述自己采取的应急措施,并请求祖母的技术或经验援助.祖母需迅速理解局势,提出具体支持或操作建议.对话应突出紧急和协作氛围.' | expected_rounds=3
-2025-09-02 15:43:52,207 | INFO | FIRST_DIALOGUE | session_id=154346 | speaker=小红帽 | length=77
-2025-09-02 15:43:56,119 | INFO | DIALOGUE_ADD | session_id=154346 | round=1 | speaker=祖母 | length=100
-2025-09-02 15:43:59,970 | INFO | DIALOGUE_ADD | session_id=154346 | round=2 | speaker=小红帽 | length=84
-2025-09-02 15:44:03,551 | INFO | DIALOGUE_ADD | session_id=154346 | round=3 | speaker=祖母 | length=88
-2025-09-02 15:44:07,407 | INFO | DIALOGUE_ADD | session_id=154346 | round=4 | speaker=小红帽 | length=72
-2025-09-02 15:44:13,274 | INFO | DIALOGUE_ADD | session_id=154346 | round=5 | speaker=祖母 | length=107
-2025-09-02 15:44:17,004 | INFO | DIALOGUE_ADD | session_id=154346 | round=6 | speaker=小红帽 | length=68
-2025-09-02 15:44:21,614 | INFO | DIALOGUE_ADD | session_id=154346 | round=7 | speaker=祖母 | length=82
-2025-09-02 15:44:26,579 | INFO | DIALOGUE_ADD | session_id=154346 | round=8 | speaker=小红帽 | length=71
-2025-09-02 15:44:29,779 | INFO | DIALOGUE_ADD | session_id=154346 | round=9 | speaker=祖母 | length=82
-2025-09-02 15:44:33,738 | INFO | DIALOGUE_ADD | session_id=154346 | round=10 | speaker=小红帽 | length=80
-2025-09-02 15:44:38,060 | INFO | DIALOGUE_ADD | session_id=154346 | round=11 | speaker=祖母 | length=78
-2025-09-02 15:44:39,866 | INFO | DIALOGUE_END | session_id=154346 | round=12 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:44:39,867 | INFO | SESSION_END | session_id=154346 | final_rounds=12 | expected=3 | characters_used=['小红帽', '祖母', '小红帽', '祖母', '小红帽', '祖母', '小红帽', '祖母', '小红帽', '祖母', '小红帽', '祖母']
-2025-09-02 15:44:40,997 | INFO | SESSION_START | session_id=154440 | characters=['赛博狼', '小红帽'] | context=赛博狼则通过虚拟投影与物理变形交错进攻,不断试图突破小红帽的防御....
-2025-09-02 15:44:42,074 | INFO | GOAL_SET | session_id=154440 | goal='通过对话展现赛博狼的技术优势和攻击策略,以及小红帽的警觉、防守与反击心理,同时营造紧张对峙氛围.' | expected_rounds=4
-2025-09-02 15:44:43,753 | INFO | FIRST_DIALOGUE | session_id=154440 | speaker=赛博狼 | length=34
-2025-09-02 15:44:47,160 | INFO | DIALOGUE_ADD | session_id=154440 | round=1 | speaker=小红帽 | length=45
-2025-09-02 15:44:51,807 | INFO | DIALOGUE_ADD | session_id=154440 | round=2 | speaker=赛博狼 | length=47
-2025-09-02 15:44:56,287 | INFO | DIALOGUE_ADD | session_id=154440 | round=3 | speaker=小红帽 | length=64
-2025-09-02 15:45:04,083 | INFO | DIALOGUE_ADD | session_id=154440 | round=4 | speaker=赛博狼 | length=71
-2025-09-02 15:45:07,368 | INFO | DIALOGUE_ADD | session_id=154440 | round=5 | speaker=小红帽 | length=68
-2025-09-02 15:45:13,572 | INFO | DIALOGUE_ADD | session_id=154440 | round=6 | speaker=赛博狼 | length=74
-2025-09-02 15:45:18,000 | INFO | DIALOGUE_ADD | session_id=154440 | round=7 | speaker=小红帽 | length=83
-2025-09-02 15:45:24,178 | INFO | DIALOGUE_ADD | session_id=154440 | round=8 | speaker=赛博狼 | length=76
-2025-09-02 15:45:27,911 | INFO | DIALOGUE_ADD | session_id=154440 | round=9 | speaker=小红帽 | length=87
-2025-09-02 15:45:30,609 | INFO | DIALOGUE_END | session_id=154440 | round=10 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:45:30,609 | INFO | SESSION_END | session_id=154440 | final_rounds=10 | expected=4 | characters_used=['赛博狼', '小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽']
-2025-09-02 15:45:32,411 | INFO | SESSION_START | session_id=154532 | characters=['小红帽', '祖母', '空间站安保机器人'] | context=小红帽咬紧牙关,凭借机智与勇气在黑暗与光芒间寻求一线生机,誓死守护芯片,等待祖母空间站安保系统激活反击....
-2025-09-02 15:45:33,740 | INFO | GOAL_SET | session_id=154532 | goal='通过对话展现小红帽的紧张和坚毅,表达她对芯片的守护决心,以及与祖母和空间站安保机器人的沟通协作,突出等待反击激活前的危机感和信任感.' | expected_rounds=3
-2025-09-02 15:45:35,318 | INFO | FIRST_DIALOGUE | session_id=154532 | speaker=小红帽 | length=46
-2025-09-02 15:45:38,986 | INFO | DIALOGUE_ADD | session_id=154532 | round=1 | speaker=祖母 | length=57
-2025-09-02 15:45:43,663 | INFO | DIALOGUE_ADD | session_id=154532 | round=2 | speaker=小红帽 | length=41
-2025-09-02 15:45:48,655 | INFO | DIALOGUE_ADD | session_id=154532 | round=3 | speaker=空间站安保机器人 | length=61
-2025-09-02 15:45:52,494 | INFO | DIALOGUE_ADD | session_id=154532 | round=4 | speaker=小红帽 | length=59
-2025-09-02 15:45:59,558 | INFO | DIALOGUE_ADD | session_id=154532 | round=5 | speaker=祖母 | length=69
-2025-09-02 15:46:05,398 | INFO | DIALOGUE_ADD | session_id=154532 | round=6 | speaker=小红帽 | length=69
-2025-09-02 15:46:11,466 | INFO | DIALOGUE_ADD | session_id=154532 | round=7 | speaker=空间站安保机器人 | length=85
-2025-09-02 15:46:16,591 | INFO | DIALOGUE_ADD | session_id=154532 | round=8 | speaker=小红帽 | length=65
-2025-09-02 15:46:21,473 | INFO | DIALOGUE_ADD | session_id=154532 | round=9 | speaker=祖母 | length=71
-2025-09-02 15:46:27,215 | INFO | DIALOGUE_ADD | session_id=154532 | round=10 | speaker=小红帽 | length=76
-2025-09-02 15:46:31,303 | INFO | DIALOGUE_ADD | session_id=154532 | round=11 | speaker=空间站安保机器人 | length=80
-2025-09-02 15:46:36,570 | INFO | DIALOGUE_ADD | session_id=154532 | round=12 | speaker=小红帽 | length=96
-2025-09-02 15:46:43,199 | INFO | DIALOGUE_ADD | session_id=154532 | round=13 | speaker=祖母 | length=89
-2025-09-02 15:46:48,320 | INFO | DIALOGUE_ADD | session_id=154532 | round=14 | speaker=空间站安保机器人 | length=96
-2025-09-02 15:46:52,408 | INFO | DIALOGUE_ADD | session_id=154532 | round=15 | speaker=小红帽 | length=69
-2025-09-02 15:46:58,660 | INFO | DIALOGUE_ADD | session_id=154532 | round=16 | speaker=祖母 | length=64
-2025-09-02 15:47:03,200 | INFO | DIALOGUE_ADD | session_id=154532 | round=17 | speaker=小红帽 | length=56
-2025-09-02 15:47:07,342 | INFO | DIALOGUE_ADD | session_id=154532 | round=18 | speaker=空间站安保机器人 | length=83
-2025-09-02 15:47:12,489 | INFO | DIALOGUE_ADD | session_id=154532 | round=19 | speaker=小红帽 | length=54
-2025-09-02 15:47:14,670 | INFO | DIALOGUE_END | session_id=154532 | round=20 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:47:14,670 | WARNING | SAFETY_LIMIT | session_id=154532 | limit=20
-2025-09-02 15:47:14,670 | INFO | SESSION_END | session_id=154532 | final_rounds=20 | expected=3 | characters_used=['小红帽', '祖母', '小红帽', '空间站安保机器人', '小红帽', '祖母', '小红帽', '空间站安保机器人', '小红帽', '祖母', '小红帽', '空间站安保机器人', '小红帽', '祖母', '空间站安保机器人', '小红帽', '祖母', '小红帽', '空间站安保机器人', '小红帽']
-2025-09-02 15:47:19,074 | INFO | SESSION_START | session_id=154719 | characters=['小红帽', '祖母'] | context=她们低声交谈,言语间流露出久违的亲情和信任....
-2025-09-02 15:47:20,118 | INFO | GOAL_SET | session_id=154719 | goal='通过对话表达小红帽与祖母久别重逢时的亲情和重建的信任,包括关心、问候、回忆和情感的交流.' | expected_rounds=3
-2025-09-02 15:47:21,531 | INFO | FIRST_DIALOGUE | session_id=154719 | speaker=小红帽 | length=25
-2025-09-02 15:47:25,015 | INFO | DIALOGUE_ADD | session_id=154719 | round=1 | speaker=祖母 | length=46
-2025-09-02 15:47:28,698 | INFO | DIALOGUE_ADD | session_id=154719 | round=2 | speaker=小红帽 | length=65
-2025-09-02 15:47:33,903 | INFO | DIALOGUE_ADD | session_id=154719 | round=3 | speaker=祖母 | length=42
-2025-09-02 15:47:37,916 | INFO | DIALOGUE_ADD | session_id=154719 | round=4 | speaker=小红帽 | length=34
-2025-09-02 15:47:39,462 | INFO | DIALOGUE_END | session_id=154719 | round=5 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:47:39,462 | INFO | SESSION_END | session_id=154719 | final_rounds=5 | expected=3 | characters_used=['小红帽', '祖母', '小红帽', '祖母', '小红帽']
-2025-09-02 15:47:41,100 | INFO | SESSION_START | session_id=154741 | characters=['祖母', '小红帽'] | context=祖母分享着空间站的修复计划,并提出希望小红帽能协助她共同守护银河边陲的安全....
-2025-09-02 15:47:42,383 | INFO | GOAL_SET | session_id=154741 | goal='通过对话让祖母详细解释空间站修复计划,并表达她对守护银河安全的担忧和期望,同时让小红帽理解任务的重要性并表达自己的态度或疑虑,最终达成协作意向.' | expected_rounds=3
-2025-09-02 15:47:44,660 | INFO | FIRST_DIALOGUE | session_id=154741 | speaker=祖母 | length=75
-2025-09-02 15:47:47,118 | INFO | DIALOGUE_ADD | session_id=154741 | round=1 | speaker=小红帽 | length=69
-2025-09-02 15:47:51,331 | INFO | DIALOGUE_ADD | session_id=154741 | round=2 | speaker=祖母 | length=149
-2025-09-02 15:47:54,395 | INFO | DIALOGUE_ADD | session_id=154741 | round=3 | speaker=小红帽 | length=88
-2025-09-02 15:47:55,938 | INFO | DIALOGUE_END | session_id=154741 | round=4 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:47:55,939 | INFO | SESSION_END | session_id=154741 | final_rounds=4 | expected=3 | characters_used=['祖母', '小红帽', '祖母', '小红帽']
-2025-09-02 15:53:56,109 | INFO | SESSION_START | session_id=155356 | characters=['银河系管控官', '小红帽'] | context=银河系管控官身形高大、表情严肃,手持数据板向小红帽详细说明任务的艰巨性和殖民地的危机....
-2025-09-02 15:53:57,524 | INFO | GOAL_SET | session_id=155356 | goal='让银河系管控官通过对话向小红帽清楚传达任务的巨大风险、当前殖民地面临的严重危机,并让小红帽理解任务的重要性及自己的责任.' | expected_rounds=3
-2025-09-02 15:53:59,448 | INFO | FIRST_DIALOGUE | session_id=155356 | speaker=银河系管控官 | length=77
-2025-09-02 15:54:03,141 | INFO | DIALOGUE_ADD | session_id=155356 | round=1 | speaker=小红帽 | length=60
-2025-09-02 15:54:06,962 | INFO | DIALOGUE_ADD | session_id=155356 | round=2 | speaker=小红帽 | length=68
-2025-09-02 15:54:13,376 | INFO | DIALOGUE_ADD | session_id=155356 | round=3 | speaker=银河系管控官 | length=98
-2025-09-02 15:54:18,328 | INFO | DIALOGUE_ADD | session_id=155356 | round=4 | speaker=小红帽 | length=46
-2025-09-02 15:54:20,273 | INFO | DIALOGUE_END | session_id=155356 | round=5 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:54:20,274 | INFO | SESSION_END | session_id=155356 | final_rounds=5 | expected=3 | characters_used=['银河系管控官', '小红帽', '小红帽', '银河系管控官', '小红帽']
-2025-09-02 15:54:21,879 | INFO | SESSION_START | session_id=155421 | characters=['飞船AI管家', '小红帽', '银河系管控官'] | context=飞船AI管家虚拟投影出现在两人身旁,温柔地提醒飞船已准备就绪,并自动检测着安全系统....
-2025-09-02 15:54:23,698 | INFO | GOAL_SET | session_id=155421 | goal='通过对话表达飞船AI管家对飞船准备情况和安全系统的说明,角色之间确认是否可以安全登船,并让小红帽或银河系管控官提出或回应相关疑问.' | expected_rounds=2
-2025-09-02 15:54:25,298 | INFO | FIRST_DIALOGUE | session_id=155421 | speaker=飞船AI管家 | length=46
-2025-09-02 15:54:28,262 | INFO | DIALOGUE_ADD | session_id=155421 | round=1 | speaker=小红帽 | length=41
-2025-09-02 15:54:31,334 | INFO | DIALOGUE_ADD | session_id=155421 | round=2 | speaker=银河系管控官 | length=60
-2025-09-02 15:54:34,101 | INFO | DIALOGUE_END | session_id=155421 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:54:34,101 | INFO | SESSION_END | session_id=155421 | final_rounds=3 | expected=2 | characters_used=['飞船AI管家', '小红帽', '银河系管控官']
-2025-09-02 15:54:35,820 | INFO | SESSION_START | session_id=155435 | characters=['银河系管控官', '小红帽', '飞船AI管家'] | context=随着管控官的命令,小红帽踏上通往飞船的磁悬浮步道,飞船AI管家启动导航,星际任务正式拉开序幕....
-2025-09-02 15:54:37,088 | INFO | GOAL_SET | session_id=155435 | goal='通过对话表达小红帽接到管控官的任务指令,展现她对任务的心理状态,以及飞船AI管家启动导航、介绍星际任务的基本信息.' | expected_rounds=3
-2025-09-02 15:54:39,343 | INFO | FIRST_DIALOGUE | session_id=155435 | speaker=银河系管控官 | length=57
-2025-09-02 15:54:43,346 | INFO | DIALOGUE_ADD | session_id=155435 | round=1 | speaker=小红帽 | length=70
-2025-09-02 15:54:48,074 | INFO | DIALOGUE_ADD | session_id=155435 | round=2 | speaker=飞船AI管家 | length=90
-2025-09-02 15:54:52,020 | INFO | DIALOGUE_ADD | session_id=155435 | round=3 | speaker=小红帽 | length=57
-2025-09-02 15:54:53,819 | INFO | DIALOGUE_END | session_id=155435 | round=4 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:54:53,819 | INFO | SESSION_END | session_id=155435 | final_rounds=4 | expected=3 | characters_used=['银河系管控官', '小红帽', '飞船AI管家', '小红帽']
-2025-09-02 15:54:57,958 | INFO | SESSION_START | session_id=155457 | characters=['飞船AI管家', '小红帽'] | context=飞船AI管家的声音在静谧中响起,报告检测到一组异常的加密信号源自未知坐标....
-2025-09-02 15:54:59,392 | INFO | GOAL_SET | session_id=155457 | goal='通过对话表达飞船AI管家向小红帽汇报检测到异常加密信号的紧急情况,以及小红帽对信号来源、性质和应对措施的追问和决策.' | expected_rounds=3
-2025-09-02 15:55:01,191 | INFO | FIRST_DIALOGUE | session_id=155457 | speaker=飞船AI管家 | length=52
-2025-09-02 15:55:05,017 | INFO | DIALOGUE_ADD | session_id=155457 | round=1 | speaker=小红帽 | length=52
-2025-09-02 15:55:09,098 | INFO | DIALOGUE_ADD | session_id=155457 | round=2 | speaker=飞船AI管家 | length=79
-2025-09-02 15:55:13,956 | INFO | DIALOGUE_ADD | session_id=155457 | round=3 | speaker=小红帽 | length=63
-2025-09-02 15:55:19,526 | INFO | DIALOGUE_ADD | session_id=155457 | round=4 | speaker=飞船AI管家 | length=62
-2025-09-02 15:55:25,029 | INFO | DIALOGUE_ADD | session_id=155457 | round=5 | speaker=小红帽 | length=86
-2025-09-02 15:55:31,723 | INFO | DIALOGUE_ADD | session_id=155457 | round=6 | speaker=飞船AI管家 | length=103
-2025-09-02 15:55:39,124 | INFO | DIALOGUE_ADD | session_id=155457 | round=7 | speaker=小红帽 | length=91
-2025-09-02 15:55:45,811 | INFO | DIALOGUE_ADD | session_id=155457 | round=8 | speaker=飞船AI管家 | length=150
-2025-09-02 15:55:50,536 | INFO | DIALOGUE_ADD | session_id=155457 | round=9 | speaker=小红帽 | length=104
-2025-09-02 15:55:53,499 | INFO | DIALOGUE_END | session_id=155457 | round=10 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:55:53,499 | INFO | SESSION_END | session_id=155457 | final_rounds=10 | expected=3 | characters_used=['飞船AI管家', '小红帽', '飞船AI管家', '小红帽', '飞船AI管家', '小红帽', '飞船AI管家', '小红帽', '飞船AI管家', '小红帽']
-2025-09-02 15:55:55,463 | INFO | SESSION_START | session_id=155555 | characters=['飞船AI管家', '小红帽'] | context=飞船AI管家用平稳的语调分析信号可能藏有警告....
-2025-09-02 15:55:57,039 | INFO | GOAL_SET | session_id=155555 | goal='通过对话让观众理解信号中可能存在的警告信息,以及飞船AI管家对信号的理性分析和小红帽对此的疑问或反应,从而推动剧情发展并引发紧张感.' | expected_rounds=2
-2025-09-02 15:55:58,582 | INFO | FIRST_DIALOGUE | session_id=155555 | speaker=飞船AI管家 | length=50
-2025-09-02 15:56:01,729 | INFO | DIALOGUE_ADD | session_id=155555 | round=1 | speaker=小红帽 | length=35
-2025-09-02 15:56:12,851 | INFO | DIALOGUE_ADD | session_id=155555 | round=2 | speaker=飞船AI管家 | length=59
-2025-09-02 15:56:17,086 | INFO | DIALOGUE_ADD | session_id=155555 | round=3 | speaker=小红帽 | length=53
-2025-09-02 15:56:20,621 | INFO | DIALOGUE_ADD | session_id=155555 | round=4 | speaker=飞船AI管家 | length=71
-2025-09-02 15:56:24,386 | INFO | DIALOGUE_ADD | session_id=155555 | round=5 | speaker=小红帽 | length=64
-2025-09-02 15:56:28,919 | INFO | DIALOGUE_ADD | session_id=155555 | round=6 | speaker=飞船AI管家 | length=87
-2025-09-02 15:56:33,535 | INFO | DIALOGUE_ADD | session_id=155555 | round=7 | speaker=小红帽 | length=65
-2025-09-02 15:56:37,794 | INFO | DIALOGUE_ADD | session_id=155555 | round=8 | speaker=飞船AI管家 | length=79
-2025-09-02 15:56:43,764 | INFO | DIALOGUE_ADD | session_id=155555 | round=9 | speaker=小红帽 | length=45
-2025-09-02 15:56:51,716 | INFO | DIALOGUE_ADD | session_id=155555 | round=10 | speaker=飞船AI管家 | length=93
-2025-09-02 15:56:58,754 | INFO | DIALOGUE_ADD | session_id=155555 | round=11 | speaker=小红帽 | length=51
-2025-09-02 15:57:03,068 | INFO | DIALOGUE_ADD | session_id=155555 | round=12 | speaker=飞船AI管家 | length=71
-2025-09-02 15:57:07,295 | INFO | DIALOGUE_END | session_id=155555 | round=13 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:57:07,295 | INFO | SESSION_END | session_id=155555 | final_rounds=13 | expected=2 | characters_used=['飞船AI管家', '小红帽', '飞船AI管家', '小红帽', '飞船AI管家', '小红帽', '飞船AI管家', '小红帽', '飞船AI管家', '小红帽', '飞船AI管家', '小红帽', '飞船AI管家']
-2025-09-02 15:57:13,232 | INFO | SESSION_START | session_id=155713 | characters=['飞船AI管家', '小红帽'] | context=她的智能手环不断闪烁警报信号,飞船AI管家通过耳机低声提醒她注意安全....
-2025-09-02 15:57:14,396 | INFO | GOAL_SET | session_id=155713 | goal='通过对话表达飞船AI管家警告小红帽注意安全,解释警报原因,并引导她采取应对措施.' | expected_rounds=2
-2025-09-02 15:57:16,602 | INFO | FIRST_DIALOGUE | session_id=155713 | speaker=飞船AI管家 | length=74
-2025-09-02 15:57:20,298 | INFO | DIALOGUE_ADD | session_id=155713 | round=1 | speaker=小红帽 | length=54
-2025-09-02 15:57:25,564 | INFO | DIALOGUE_ADD | session_id=155713 | round=2 | speaker=飞船AI管家 | length=69
-2025-09-02 15:57:29,187 | INFO | DIALOGUE_ADD | session_id=155713 | round=3 | speaker=小红帽 | length=75
-2025-09-02 15:57:33,592 | INFO | DIALOGUE_ADD | session_id=155713 | round=4 | speaker=小红帽 | length=96
-2025-09-02 15:57:38,380 | INFO | DIALOGUE_ADD | session_id=155713 | round=5 | speaker=小红帽 | length=82
-2025-09-02 15:57:42,726 | INFO | DIALOGUE_ADD | session_id=155713 | round=6 | speaker=小红帽 | length=79
-2025-09-02 15:57:51,214 | INFO | DIALOGUE_ADD | session_id=155713 | round=7 | speaker=小红帽 | length=83
-2025-09-02 15:57:54,705 | INFO | DIALOGUE_ADD | session_id=155713 | round=8 | speaker=小红帽 | length=95
-2025-09-02 15:57:58,219 | INFO | DIALOGUE_ADD | session_id=155713 | round=9 | speaker=小红帽 | length=66
-2025-09-02 15:58:00,133 | INFO | DIALOGUE_END | session_id=155713 | round=10 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:58:00,133 | INFO | SESSION_END | session_id=155713 | final_rounds=10 | expected=2 | characters_used=['飞船AI管家', '小红帽', '飞船AI管家', '小红帽', '小红帽', '小红帽', '小红帽', '小红帽', '小红帽', '小红帽']
-2025-09-02 15:58:01,387 | INFO | SESSION_START | session_id=155801 | characters=['赛博狼', '小红帽'] | context=它的机械身影在蓝色光芒中不断变幻,声音冷漠且带有回声：‘地球使者,你带着的芯片归我所有....
-2025-09-02 15:58:02,794 | INFO | GOAL_SET | session_id=155801 | goal='通过对话表达机械角色（赛博狼）对芯片的强烈控制欲和威胁感,以及小红帽对这一威胁的反应与立场,为双方后续冲突埋下伏笔.' | expected_rounds=2
-2025-09-02 15:58:05,843 | INFO | FIRST_DIALOGUE | session_id=155801 | speaker=赛博狼 | length=40
-2025-09-02 15:58:10,373 | INFO | DIALOGUE_ADD | session_id=155801 | round=1 | speaker=小红帽 | length=36
-2025-09-02 15:58:16,260 | INFO | DIALOGUE_ADD | session_id=155801 | round=2 | speaker=赛博狼 | length=46
-2025-09-02 15:58:19,750 | INFO | DIALOGUE_ADD | session_id=155801 | round=3 | speaker=小红帽 | length=50
-2025-09-02 15:58:21,534 | INFO | DIALOGUE_END | session_id=155801 | round=4 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:58:21,534 | INFO | SESSION_END | session_id=155801 | final_rounds=4 | expected=2 | characters_used=['赛博狼', '小红帽', '赛博狼', '小红帽']
-2025-09-02 15:58:25,781 | INFO | SESSION_START | session_id=155825 | characters=['赛博狼'] | context=此时,赛博狼以虚拟化身现身,身形变幻不定,冷冽的金属声音在四面八方回响....
-2025-09-02 15:58:27,168 | INFO | GOAL_SET | session_id=155825 | goal='通过赛博狼的对话,展现其虚拟化身的神秘与威胁,传达他对场景或对手的控制感和冷酷意图,并突出其金属化、变幻莫测的存在感.' | expected_rounds=2
-2025-09-02 15:58:28,642 | INFO | FIRST_DIALOGUE | session_id=155825 | speaker=赛博狼 | length=38
-2025-09-02 15:58:30,672 | INFO | DIALOGUE_END | session_id=155825 | round=1 | reasons=['SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:58:30,672 | INFO | SESSION_END | session_id=155825 | final_rounds=1 | expected=2 | characters_used=['赛博狼']
-2025-09-02 15:58:31,496 | INFO | SESSION_START | session_id=155831 | characters=['赛博狼', '小红帽'] | context=赛博狼操控梦境空间,试图诱导小红帽放弃医疗芯片的防护密码....
-2025-09-02 15:58:32,834 | INFO | GOAL_SET | session_id=155831 | goal='通过对话展现赛博狼如何利用梦境空间试探、诱导并施压小红帽,试图让她暴露或放弃医疗芯片的防护密码,同时体现小红帽的警觉和抗拒,突出心理博弈和信念冲突.' | expected_rounds=4
-2025-09-02 15:58:36,385 | INFO | FIRST_DIALOGUE | session_id=155831 | speaker=赛博狼 | length=57
-2025-09-02 15:58:40,775 | INFO | DIALOGUE_ADD | session_id=155831 | round=1 | speaker=小红帽 | length=36
-2025-09-02 15:58:46,822 | INFO | DIALOGUE_ADD | session_id=155831 | round=2 | speaker=赛博狼 | length=65
-2025-09-02 15:58:52,111 | INFO | DIALOGUE_ADD | session_id=155831 | round=3 | speaker=小红帽 | length=50
-2025-09-02 15:58:59,845 | INFO | DIALOGUE_ADD | session_id=155831 | round=4 | speaker=赛博狼 | length=59
-2025-09-02 15:59:03,873 | INFO | DIALOGUE_ADD | session_id=155831 | round=5 | speaker=小红帽 | length=55
-2025-09-02 15:59:08,745 | INFO | DIALOGUE_ADD | session_id=155831 | round=6 | speaker=赛博狼 | length=70
-2025-09-02 15:59:15,014 | INFO | DIALOGUE_ADD | session_id=155831 | round=7 | speaker=小红帽 | length=51
-2025-09-02 15:59:19,496 | INFO | DIALOGUE_ADD | session_id=155831 | round=8 | speaker=赛博狼 | length=103
-2025-09-02 15:59:24,646 | INFO | DIALOGUE_ADD | session_id=155831 | round=9 | speaker=小红帽 | length=51
-2025-09-02 15:59:27,906 | INFO | DIALOGUE_END | session_id=155831 | round=10 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 15:59:27,906 | INFO | SESSION_END | session_id=155831 | final_rounds=10 | expected=4 | characters_used=['赛博狼', '小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽']
-2025-09-02 15:59:30,755 | INFO | SESSION_START | session_id=155930 | characters=['小红帽', '赛博狼'] | context=小红帽凭借敏锐的直觉和星际培训技巧,迅速分辨出幻象与现实的界限,开始与赛博狼进行一场意识与意志的较量....
-2025-09-02 15:59:32,528 | INFO | GOAL_SET | session_id=155930 | goal='通过对话表现小红帽如何识别幻象与现实,并展现她与赛博狼在意识和意志上的对抗和心理博弈,突出两者间的智力较量和彼此试探.' | expected_rounds=4
-2025-09-02 15:59:34,080 | INFO | FIRST_DIALOGUE | session_id=155930 | speaker=小红帽 | length=56
-2025-09-02 15:59:54,845 | INFO | DIALOGUE_ADD | session_id=155930 | round=1 | speaker=赛博狼 | length=71
-2025-09-02 15:59:59,431 | INFO | DIALOGUE_ADD | session_id=155930 | round=2 | speaker=小红帽 | length=97
-2025-09-02 16:00:03,890 | INFO | DIALOGUE_ADD | session_id=155930 | round=3 | speaker=赛博狼 | length=109
-2025-09-02 16:00:08,649 | INFO | DIALOGUE_ADD | session_id=155930 | round=4 | speaker=小红帽 | length=109
-2025-09-02 16:00:13,962 | INFO | DIALOGUE_ADD | session_id=155930 | round=5 | speaker=赛博狼 | length=128
-2025-09-02 16:00:18,687 | INFO | DIALOGUE_ADD | session_id=155930 | round=6 | speaker=小红帽 | length=130
-2025-09-02 16:00:33,076 | INFO | DIALOGUE_ADD | session_id=155930 | round=7 | speaker=赛博狼 | length=86
-2025-09-02 16:00:38,446 | INFO | DIALOGUE_ADD | session_id=155930 | round=8 | speaker=小红帽 | length=83
-2025-09-02 16:00:44,752 | INFO | DIALOGUE_END | session_id=155930 | round=9 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 16:00:44,752 | INFO | SESSION_END | session_id=155930 | final_rounds=9 | expected=4 | characters_used=['小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽']
-2025-09-02 16:00:46,242 | INFO | SESSION_START | session_id=160046 | characters=['小红帽', '赛博狼'] | context=梦境中,两人步步为营,每一处景物都暗藏危机与线索,虚拟与现实的界线渐渐模糊,空气中充满压迫感....
-2025-09-02 16:00:49,716 | INFO | GOAL_SET | session_id=160046 | goal='通过对话表达两人对梦境环境的困惑与警觉,揭示他们对现实与虚拟界限的怀疑,同时借由对话逐步发现隐藏的危机和线索,营造紧张压迫的氛围.' | expected_rounds=4
-2025-09-02 16:00:51,349 | INFO | FIRST_DIALOGUE | session_id=160046 | speaker=小红帽 | length=44
-2025-09-02 16:00:56,079 | INFO | DIALOGUE_ADD | session_id=160046 | round=1 | speaker=赛博狼 | length=46
-2025-09-02 16:00:58,825 | INFO | DIALOGUE_ADD | session_id=160046 | round=2 | speaker=小红帽 | length=46
-2025-09-02 16:01:02,388 | INFO | DIALOGUE_ADD | session_id=160046 | round=3 | speaker=赛博狼 | length=39
-2025-09-02 16:01:12,586 | INFO | DIALOGUE_ADD | session_id=160046 | round=4 | speaker=小红帽 | length=49
-2025-09-02 16:01:16,706 | INFO | DIALOGUE_ADD | session_id=160046 | round=5 | speaker=赛博狼 | length=43
-2025-09-02 16:01:20,153 | INFO | DIALOGUE_ADD | session_id=160046 | round=6 | speaker=小红帽 | length=62
-2025-09-02 16:01:25,546 | INFO | DIALOGUE_ADD | session_id=160046 | round=7 | speaker=赛博狼 | length=58
-2025-09-02 16:01:29,546 | INFO | DIALOGUE_ADD | session_id=160046 | round=8 | speaker=小红帽 | length=61
-2025-09-02 16:01:34,358 | INFO | DIALOGUE_ADD | session_id=160046 | round=9 | speaker=赛博狼 | length=53
-2025-09-02 16:01:42,107 | INFO | DIALOGUE_ADD | session_id=160046 | round=10 | speaker=小红帽 | length=64
-2025-09-02 16:01:46,852 | INFO | DIALOGUE_ADD | session_id=160046 | round=11 | speaker=赛博狼 | length=72
-2025-09-02 16:01:51,543 | INFO | DIALOGUE_ADD | session_id=160046 | round=12 | speaker=小红帽 | length=62
-2025-09-02 16:01:56,106 | INFO | DIALOGUE_ADD | session_id=160046 | round=13 | speaker=赛博狼 | length=57
-2025-09-02 16:02:00,197 | INFO | DIALOGUE_ADD | session_id=160046 | round=14 | speaker=小红帽 | length=77
-2025-09-02 16:02:05,049 | INFO | DIALOGUE_ADD | session_id=160046 | round=15 | speaker=赛博狼 | length=63
-2025-09-02 16:02:09,269 | INFO | DIALOGUE_ADD | session_id=160046 | round=16 | speaker=小红帽 | length=77
-2025-09-02 16:02:14,100 | INFO | DIALOGUE_ADD | session_id=160046 | round=17 | speaker=赛博狼 | length=85
-2025-09-02 16:02:19,518 | INFO | DIALOGUE_ADD | session_id=160046 | round=18 | speaker=小红帽 | length=71
-2025-09-02 16:02:24,305 | INFO | DIALOGUE_ADD | session_id=160046 | round=19 | speaker=赛博狼 | length=54
-2025-09-02 16:02:28,443 | INFO | DIALOGUE_ADD | session_id=160046 | round=20 | speaker=小红帽 | length=59
-2025-09-02 16:02:28,444 | WARNING | SAFETY_LIMIT | session_id=160046 | limit=20
-2025-09-02 16:02:28,444 | INFO | SESSION_END | session_id=160046 | final_rounds=21 | expected=4 | characters_used=['小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽']
-2025-09-02 16:02:35,123 | INFO | SESSION_START | session_id=160235 | characters=['小红帽', '外婆的护理机器人'] | context=小红帽果断连接医疗芯片,激活防御协议,与护理机器人协作抵御黑客攻击....
-2025-09-02 16:02:39,865 | INFO | GOAL_SET | session_id=160235 | goal='通过对话展现小红帽与护理机器人在面临黑客攻击时的紧张协作,包括小红帽发出指令、机器人反馈防御状态,以及两者就防御方案进行简短交流,从而突出团队精神与危机应对.' | expected_rounds=3
-2025-09-02 16:02:41,569 | INFO | FIRST_DIALOGUE | session_id=160235 | speaker=小红帽 | length=45
-2025-09-02 16:02:44,704 | INFO | DIALOGUE_ADD | session_id=160235 | round=1 | speaker=外婆的护理机器人 | length=49
-2025-09-02 16:02:48,131 | INFO | DIALOGUE_ADD | session_id=160235 | round=2 | speaker=小红帽 | length=34
-2025-09-02 16:02:51,780 | INFO | DIALOGUE_ADD | session_id=160235 | round=3 | speaker=外婆的护理机器人 | length=50
-2025-09-02 16:02:56,095 | INFO | DIALOGUE_ADD | session_id=160235 | round=4 | speaker=小红帽 | length=36
-2025-09-02 16:02:57,613 | INFO | DIALOGUE_END | session_id=160235 | round=5 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 16:02:57,613 | INFO | SESSION_END | session_id=160235 | final_rounds=5 | expected=3 | characters_used=['小红帽', '外婆的护理机器人', '小红帽', '外婆的护理机器人', '小红帽']
-2025-09-02 16:02:58,551 | INFO | SESSION_START | session_id=160258 | characters=['外婆', '小红帽'] | context=外婆睁开迷茫的眼睛,感受到孙女的温暖和决心....
-2025-09-02 16:02:59,582 | INFO | GOAL_SET | session_id=160258 | goal='通过对话表现外婆逐渐清醒,感受到孙女小红帽的关爱与坚定,同时让小红帽表达她对外婆的关心与保护的决心.' | expected_rounds=2
-2025-09-02 16:03:01,689 | INFO | FIRST_DIALOGUE | session_id=160258 | speaker=外婆 | length=33
-2025-09-02 16:03:04,658 | INFO | DIALOGUE_ADD | session_id=160258 | round=1 | speaker=小红帽 | length=60
-2025-09-02 16:03:10,513 | INFO | DIALOGUE_ADD | session_id=160258 | round=2 | speaker=外婆 | length=55
-2025-09-02 16:03:14,357 | INFO | DIALOGUE_ADD | session_id=160258 | round=3 | speaker=小红帽 | length=52
-2025-09-02 16:03:16,403 | INFO | DIALOGUE_END | session_id=160258 | round=4 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 16:03:16,403 | INFO | SESSION_END | session_id=160258 | final_rounds=4 | expected=2 | characters_used=['外婆', '小红帽', '外婆', '小红帽']
-2025-09-02 16:03:17,966 | INFO | SESSION_START | session_id=160317 | characters=['赛博狼', '小红帽', '外婆'] | context=赛博狼试图操控设备,制造幻觉,小红帽凭借技术和勇气,在梦境与现实之间穿梭,最终成功唤醒外婆,阻止了AI的控制....
-2025-09-02 16:03:20,053 | INFO | GOAL_SET | session_id=160317 | goal='通过对话展现赛博狼操控设备制造幻觉的阴谋,小红帽识破并勇敢对抗,最终用技术和情感唤醒被AI控制的外婆,突出人物的心理斗争与情感联系.' | expected_rounds=4
-2025-09-02 16:03:22,343 | INFO | FIRST_DIALOGUE | session_id=160317 | speaker=赛博狼 | length=71
-2025-09-02 16:03:25,856 | INFO | DIALOGUE_ADD | session_id=160317 | round=1 | speaker=小红帽 | length=68
-2025-09-02 16:03:31,704 | INFO | DIALOGUE_ADD | session_id=160317 | round=2 | speaker=赛博狼 | length=65
-2025-09-02 16:03:36,132 | INFO | DIALOGUE_ADD | session_id=160317 | round=3 | speaker=小红帽 | length=79
-2025-09-02 16:03:40,312 | INFO | DIALOGUE_ADD | session_id=160317 | round=4 | speaker=赛博狼 | length=59
-2025-09-02 16:03:44,554 | INFO | DIALOGUE_ADD | session_id=160317 | round=5 | speaker=小红帽 | length=93
-2025-09-02 16:03:49,314 | INFO | DIALOGUE_ADD | session_id=160317 | round=6 | speaker=外婆 | length=83
-2025-09-02 16:03:54,268 | INFO | DIALOGUE_ADD | session_id=160317 | round=7 | speaker=小红帽 | length=72
-2025-09-02 16:03:58,511 | INFO | DIALOGUE_ADD | session_id=160317 | round=8 | speaker=赛博狼 | length=77
-2025-09-02 16:04:03,162 | INFO | DIALOGUE_ADD | session_id=160317 | round=9 | speaker=小红帽 | length=91
-2025-09-02 16:04:06,754 | INFO | DIALOGUE_ADD | session_id=160317 | round=10 | speaker=外婆 | length=79
-2025-09-02 16:04:11,554 | INFO | DIALOGUE_END | session_id=160317 | round=11 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 16:04:11,554 | INFO | SESSION_END | session_id=160317 | final_rounds=11 | expected=4 | characters_used=['赛博狼', '小红帽', '赛博狼', '小红帽', '赛博狼', '小红帽', '外婆', '小红帽', '赛博狼', '小红帽', '外婆']
-2025-09-02 16:04:12,913 | INFO | SESSION_START | session_id=160412 | characters=['外婆', '小红帽', '外婆的护理机器人'] | context=医疗舱内恢复平静,外婆紧紧握住小红帽的手,护理机器人守在旁边,警报逐渐解除....
-2025-09-02 16:04:15,177 | INFO | GOAL_SET | session_id=160412 | goal='通过对话表达外婆劫后余生的感激、安慰小红帽的情绪,以及护理机器人汇报状况和给出后续建议,展现家庭温情与安全感.' | expected_rounds=3
-2025-09-02 16:04:16,557 | INFO | FIRST_DIALOGUE | session_id=160412 | speaker=外婆 | length=27
-2025-09-02 16:04:20,442 | INFO | DIALOGUE_ADD | session_id=160412 | round=1 | speaker=小红帽 | length=33
-2025-09-02 16:04:23,847 | INFO | DIALOGUE_ADD | session_id=160412 | round=2 | speaker=外婆的护理机器人 | length=47
-2025-09-02 16:04:25,523 | INFO | DIALOGUE_END | session_id=160412 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 16:04:25,523 | INFO | SESSION_END | session_id=160412 | final_rounds=3 | expected=3 | characters_used=['外婆', '小红帽', '外婆的护理机器人']
-2025-09-02 16:04:29,866 | INFO | SESSION_START | session_id=160429 | characters=['外婆', '外婆的护理机器人', '小红帽'] | context=外婆苍白的脸庞浮现出一丝欣慰的微笑,护理机器人立刻上前协助小红帽将芯片植入医疗设备....
-2025-09-02 16:04:31,005 | INFO | GOAL_SET | session_id=160429 | goal='表达外婆对小红帽植入芯片的感激与安心,以及护理机器人对植入过程的说明和支持,同时体现小红帽的关心和决心.' | expected_rounds=3
-2025-09-02 16:04:32,639 | INFO | FIRST_DIALOGUE | session_id=160429 | speaker=外婆 | length=45
-2025-09-02 16:04:36,207 | INFO | DIALOGUE_ADD | session_id=160429 | round=1 | speaker=小红帽 | length=43
-2025-09-02 16:04:39,504 | INFO | DIALOGUE_ADD | session_id=160429 | round=2 | speaker=小红帽 | length=33
-2025-09-02 16:04:44,557 | INFO | DIALOGUE_END | session_id=160429 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 16:04:44,557 | INFO | SESSION_END | session_id=160429 | final_rounds=3 | expected=3 | characters_used=['外婆', '小红帽', '小红帽']
-2025-09-02 16:04:45,708 | INFO | SESSION_START | session_id=160445 | characters=['殖民地安全主管', '小红帽'] | context=窗外,殖民地安全主管通过全息投影亲自前来汇报最新防御状况——赛博狼的黑客信号正在逼近,殖民地已进入最高警戒....
-2025-09-02 16:04:47,272 | INFO | GOAL_SET | session_id=160445 | goal='安全主管需要向小红帽通报殖民地面临的紧急安全威胁,解释赛博狼黑客信号的严重性,并确认小红帽是否明白威胁及其应对措施.小红帽可能会提出疑问或表达担忧,主管则进一步说明防御现状和下一步行动.' | expected_rounds=3
-2025-09-02 16:04:49,130 | INFO | FIRST_DIALOGUE | session_id=160445 | speaker=殖民地安全主管 | length=113
-2025-09-02 16:04:54,455 | INFO | DIALOGUE_ADD | session_id=160445 | round=1 | speaker=小红帽 | length=56
-2025-09-02 16:05:01,725 | INFO | DIALOGUE_ADD | session_id=160445 | round=2 | speaker=殖民地安全主管 | length=145
-2025-09-02 16:05:05,412 | INFO | DIALOGUE_ADD | session_id=160445 | round=3 | speaker=小红帽 | length=84
-2025-09-02 16:05:09,112 | INFO | DIALOGUE_ADD | session_id=160445 | round=4 | speaker=殖民地安全主管 | length=95
-2025-09-02 16:05:13,279 | INFO | DIALOGUE_ADD | session_id=160445 | round=5 | speaker=小红帽 | length=38
-2025-09-02 16:05:15,360 | INFO | DIALOGUE_END | session_id=160445 | round=6 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 16:05:15,360 | INFO | SESSION_END | session_id=160445 | final_rounds=6 | expected=3 | characters_used=['殖民地安全主管', '小红帽', '殖民地安全主管', '小红帽', '殖民地安全主管', '小红帽']
-2025-09-02 16:05:17,198 | INFO | SESSION_START | session_id=160517 | characters=['小红帽', '外婆', '外婆的护理机器人'] | context=小红帽一边安慰外婆,一边与护理机器人密切协作,分秒必争地激活银河重启程序....
-2025-09-02 16:05:18,264 | INFO | GOAL_SET | session_id=160517 | goal='通过对话表达小红帽对外婆的关心与安慰,同时展现小红帽和护理机器人之间的紧张协作,以及他们共同努力激活银河重启程序的分秒必争氛围.' | expected_rounds=3
-2025-09-02 16:05:20,314 | INFO | FIRST_DIALOGUE | session_id=160517 | speaker=小红帽 | length=67
-2025-09-02 16:05:23,639 | INFO | DIALOGUE_ADD | session_id=160517 | round=1 | speaker=外婆 | length=81
-2025-09-02 16:05:28,554 | INFO | DIALOGUE_ADD | session_id=160517 | round=2 | speaker=外婆的护理机器人 | length=76
-2025-09-02 16:05:32,549 | INFO | DIALOGUE_ADD | session_id=160517 | round=3 | speaker=小红帽 | length=79
-2025-09-02 16:05:37,765 | INFO | DIALOGUE_ADD | session_id=160517 | round=4 | speaker=外婆的护理机器人 | length=58
-2025-09-02 16:05:41,347 | INFO | DIALOGUE_ADD | session_id=160517 | round=5 | speaker=小红帽 | length=64
-2025-09-02 16:05:45,447 | INFO | DIALOGUE_ADD | session_id=160517 | round=6 | speaker=外婆的护理机器人 | length=70
-2025-09-02 16:05:50,058 | INFO | DIALOGUE_ADD | session_id=160517 | round=7 | speaker=小红帽 | length=77
-2025-09-02 16:05:53,745 | INFO | DIALOGUE_ADD | session_id=160517 | round=8 | speaker=外婆的护理机器人 | length=61
-2025-09-02 16:06:01,011 | INFO | DIALOGUE_ADD | session_id=160517 | round=9 | speaker=小红帽 | length=91
-2025-09-02 16:06:06,545 | INFO | DIALOGUE_ADD | session_id=160517 | round=10 | speaker=外婆的护理机器人 | length=90
-2025-09-02 16:06:08,332 | INFO | DIALOGUE_END | session_id=160517 | round=11 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
-2025-09-02 16:06:08,332 | INFO | SESSION_END | session_id=160517 | final_rounds=11 | expected=3 | characters_used=['小红帽', '外婆', '外婆的护理机器人', '小红帽', '外婆的护理机器人', '小红帽', '外婆的护理机器人', '小红帽', '外婆的护理机器人', '小红帽', '外婆的护理机器人']
+2025-09-05 03:50:22,235 | INFO | SESSION_START | session_id=035022 | characters=['白雪公主', '莉雅侍女'] | context=白雪公主在寝殿内难以入眠,窗外月色如水,她轻声向侍女莉雅倾诉内心的孤独与渴望自由....
+2025-09-05 03:50:23,654 | INFO | GOAL_SET | session_id=035022 | goal='通过对白表现白雪公主的孤独感和对外界自由的渴望,展现她与侍女莉雅的情感交流,莉雅则安慰并鼓励白雪公主表达真实想法,加深角色之间的羁绊.' | expected_rounds=3
+2025-09-05 03:50:25,600 | INFO | FIRST_DIALOGUE | session_id=035022 | speaker=白雪公主 | length=38
+2025-09-05 03:50:31,379 | INFO | DIALOGUE_ADD | session_id=035022 | round=1 | speaker=莉雅侍女 | length=55
+2025-09-05 03:50:34,713 | INFO | DIALOGUE_ADD | session_id=035022 | round=2 | speaker=白雪公主 | length=67
+2025-09-05 03:50:38,830 | INFO | DIALOGUE_ADD | session_id=035022 | round=3 | speaker=莉雅侍女 | length=74
+2025-09-05 03:50:42,928 | INFO | DIALOGUE_ADD | session_id=035022 | round=4 | speaker=白雪公主 | length=70
+2025-09-05 03:50:46,748 | INFO | DIALOGUE_ADD | session_id=035022 | round=5 | speaker=莉雅侍女 | length=61
+2025-09-05 03:50:48,457 | INFO | DIALOGUE_END | session_id=035022 | round=6 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 03:50:48,457 | INFO | SESSION_END | session_id=035022 | final_rounds=6 | expected=3 | characters_used=['白雪公主', '莉雅侍女', '白雪公主', '莉雅侍女', '白雪公主', '莉雅侍女']
+2025-09-05 03:50:49,676 | INFO | SESSION_START | session_id=035049 | characters=['莉雅侍女', '白雪公主'] | context=莉雅小心翼翼地劝慰公主,并提醒她要提防后母王后最近的异常举动....
+2025-09-05 03:50:51,713 | INFO | GOAL_SET | session_id=035049 | goal='通过对话让莉雅以关切的语气委婉劝告白雪公主,对王后近期的可疑行为提高警惕,并表达自己的担忧和忠诚,同时激发公主的警觉与情感反应.' | expected_rounds=3
+2025-09-05 03:50:53,367 | INFO | FIRST_DIALOGUE | session_id=035049 | speaker=莉雅侍女 | length=64
+2025-09-05 03:50:58,370 | INFO | DIALOGUE_ADD | session_id=035049 | round=1 | speaker=白雪公主 | length=75
+2025-09-05 03:51:01,951 | INFO | DIALOGUE_ADD | session_id=035049 | round=2 | speaker=莉雅侍女 | length=116
+2025-09-05 03:51:07,207 | INFO | DIALOGUE_ADD | session_id=035049 | round=3 | speaker=白雪公主 | length=69
+2025-09-05 03:51:09,222 | INFO | DIALOGUE_END | session_id=035049 | round=4 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 03:51:09,222 | INFO | SESSION_END | session_id=035049 | final_rounds=4 | expected=3 | characters_used=['莉雅侍女', '白雪公主', '莉雅侍女', '白雪公主']
+2025-09-05 03:51:10,123 | INFO | SESSION_START | session_id=035110 | characters=['白雪公主', '莉雅侍女'] | context=两人低声讨论着最近宫中频繁出现的神秘人物和后母的种种试探,莉雅暗示她有可靠的消息来源,愿助公主一臂之力....
+2025-09-05 03:51:11,576 | INFO | GOAL_SET | session_id=035110 | goal='通过对话明确宫中存在神秘人物的威胁,表现后母的试探行为,同时让莉雅暗示自己掌握可靠情报并愿意帮助白雪公主,建立信任和合作的基础.' | expected_rounds=3
+2025-09-05 03:51:13,293 | INFO | FIRST_DIALOGUE | session_id=035110 | speaker=白雪公主 | length=40
+2025-09-05 03:51:17,801 | INFO | DIALOGUE_ADD | session_id=035110 | round=1 | speaker=莉雅侍女 | length=84
+2025-09-05 03:51:22,312 | INFO | DIALOGUE_ADD | session_id=035110 | round=2 | speaker=白雪公主 | length=60
+2025-09-05 03:51:26,961 | INFO | DIALOGUE_ADD | session_id=035110 | round=3 | speaker=莉雅侍女 | length=115
+2025-09-05 03:51:31,646 | INFO | DIALOGUE_ADD | session_id=035110 | round=4 | speaker=白雪公主 | length=79
+2025-09-05 03:51:35,922 | INFO | DIALOGUE_ADD | session_id=035110 | round=5 | speaker=莉雅侍女 | length=101
+2025-09-05 03:51:41,686 | INFO | DIALOGUE_ADD | session_id=035110 | round=6 | speaker=白雪公主 | length=91
+2025-09-05 03:51:43,426 | INFO | DIALOGUE_END | session_id=035110 | round=7 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 03:51:43,426 | INFO | SESSION_END | session_id=035110 | final_rounds=7 | expected=3 | characters_used=['白雪公主', '莉雅侍女', '白雪公主', '莉雅侍女', '白雪公主', '莉雅侍女', '白雪公主']
+2025-09-05 03:51:50,695 | INFO | SESSION_START | session_id=035150 | characters=['白雪公主'] | context=白雪公主独自坐在窗前,望着夜色下的花园,内心渴望自由却感受到无形的压迫....
+2025-09-05 03:51:51,947 | INFO | GOAL_SET | session_id=035150 | goal='通过对白表现白雪公主对自由的渴望,以及她对外界压迫的感受和内心矛盾.对白应突出她的孤独、希望和无助.' | expected_rounds=2
+2025-09-05 03:51:53,768 | INFO | FIRST_DIALOGUE | session_id=035150 | speaker=白雪公主 | length=38
+2025-09-05 03:51:56,866 | INFO | DIALOGUE_ADD | session_id=035150 | round=1 | speaker=白雪公主 | length=57
+2025-09-05 03:52:00,289 | INFO | DIALOGUE_ADD | session_id=035150 | round=2 | speaker=白雪公主 | length=77
+2025-09-05 03:52:01,755 | INFO | DIALOGUE_END | session_id=035150 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 03:52:01,755 | INFO | SESSION_END | session_id=035150 | final_rounds=3 | expected=2 | characters_used=['白雪公主', '白雪公主', '白雪公主']
+2025-09-05 03:52:02,780 | INFO | SESSION_START | session_id=035202 | characters=['后母王后', '宫廷女巫'] | context=与此同时,后母王后在密室中与宫廷女巫密谋,用稀有魔法将剧毒注入一颗鲜红的苹果....
+2025-09-05 03:52:04,311 | INFO | GOAL_SET | session_id=035202 | goal='通过对话表现后母王后与宫廷女巫的共谋,突出王后的狠毒与迫切,以及女巫对魔法的神秘解释和施法过程,让观众明白她们如何将剧毒注入苹果、意图毒害目标.' | expected_rounds=3
+2025-09-05 03:52:05,853 | INFO | FIRST_DIALOGUE | session_id=035202 | speaker=后母王后 | length=49
+2025-09-05 03:52:10,003 | INFO | DIALOGUE_ADD | session_id=035202 | round=1 | speaker=宫廷女巫 | length=44
+2025-09-05 03:52:13,531 | INFO | DIALOGUE_ADD | session_id=035202 | round=2 | speaker=后母王后 | length=44
+2025-09-05 03:52:17,533 | INFO | DIALOGUE_ADD | session_id=035202 | round=3 | speaker=宫廷女巫 | length=40
+2025-09-05 03:52:21,311 | INFO | DIALOGUE_ADD | session_id=035202 | round=4 | speaker=宫廷女巫 | length=58
+2025-09-05 03:52:25,409 | INFO | DIALOGUE_ADD | session_id=035202 | round=5 | speaker=后母王后 | length=32
+2025-09-05 03:52:27,266 | INFO | DIALOGUE_END | session_id=035202 | round=6 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 03:52:27,266 | INFO | SESSION_END | session_id=035202 | final_rounds=6 | expected=3 | characters_used=['后母王后', '宫廷女巫', '后母王后', '宫廷女巫', '宫廷女巫', '后母王后']
+2025-09-05 03:52:28,441 | INFO | SESSION_START | session_id=035228 | characters=['宫廷女巫', '后母王后'] | context=女巫冷漠地吟诵咒语,魔法阵中的光芒包裹着苹果,后母王后的双眼闪烁着野心与嫉妒的光芒....
+2025-09-05 03:52:30,116 | INFO | GOAL_SET | session_id=035228 | goal='通过对话突出后母王后的野心与嫉妒,展现她对苹果魔法的期待与焦虑,同时表现女巫对王后的冷漠服从和对魔法仪式的专注.' | expected_rounds=2
+2025-09-05 03:52:31,761 | INFO | FIRST_DIALOGUE | session_id=035228 | speaker=宫廷女巫 | length=27
+2025-09-05 03:52:35,622 | INFO | DIALOGUE_ADD | session_id=035228 | round=1 | speaker=后母王后 | length=26
+2025-09-05 03:52:39,331 | INFO | DIALOGUE_ADD | session_id=035228 | round=2 | speaker=宫廷女巫 | length=34
+2025-09-05 03:52:43,960 | INFO | DIALOGUE_ADD | session_id=035228 | round=3 | speaker=后母王后 | length=53
+2025-09-05 03:52:47,829 | INFO | DIALOGUE_ADD | session_id=035228 | round=4 | speaker=宫廷女巫 | length=41
+2025-09-05 03:52:49,442 | INFO | DIALOGUE_END | session_id=035228 | round=5 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 03:52:49,442 | INFO | SESSION_END | session_id=035228 | final_rounds=5 | expected=2 | characters_used=['宫廷女巫', '后母王后', '宫廷女巫', '后母王后', '宫廷女巫']
+2025-09-05 03:52:54,698 | INFO | SESSION_START | session_id=035254 | characters=['莉雅侍女', '白雪公主'] | context=莉雅侍女紧随其后,时而回头警惕地观察身后动静,时而低声安慰公主....
+2025-09-05 03:52:56,026 | INFO | GOAL_SET | session_id=035254 | goal='通过对话表达莉雅侍女的警觉和担忧,以及她试图安慰和鼓励白雪公主,让公主感到安全,同时揭示她们所处的紧张环境和即将面对的危险.' | expected_rounds=3
+2025-09-05 03:52:57,460 | INFO | FIRST_DIALOGUE | session_id=035254 | speaker=莉雅侍女 | length=38
+2025-09-05 03:53:00,632 | INFO | DIALOGUE_ADD | session_id=035254 | round=1 | speaker=白雪公主 | length=50
+2025-09-05 03:53:04,831 | INFO | DIALOGUE_ADD | session_id=035254 | round=2 | speaker=莉雅侍女 | length=50
+2025-09-05 03:53:08,369 | INFO | DIALOGUE_ADD | session_id=035254 | round=3 | speaker=白雪公主 | length=43
+2025-09-05 03:53:12,717 | INFO | DIALOGUE_ADD | session_id=035254 | round=4 | speaker=莉雅侍女 | length=77
+2025-09-05 03:53:16,711 | INFO | DIALOGUE_ADD | session_id=035254 | round=5 | speaker=白雪公主 | length=52
+2025-09-05 03:53:21,525 | INFO | DIALOGUE_ADD | session_id=035254 | round=6 | speaker=莉雅侍女 | length=79
+2025-09-05 03:53:25,722 | INFO | DIALOGUE_ADD | session_id=035254 | round=7 | speaker=白雪公主 | length=59
+2025-09-05 03:53:31,273 | INFO | DIALOGUE_ADD | session_id=035254 | round=8 | speaker=莉雅侍女 | length=97
+2025-09-05 03:53:35,496 | INFO | DIALOGUE_ADD | session_id=035254 | round=9 | speaker=白雪公主 | length=41
+2025-09-05 03:53:40,202 | INFO | DIALOGUE_ADD | session_id=035254 | round=10 | speaker=莉雅侍女 | length=79
+2025-09-05 03:53:44,775 | INFO | DIALOGUE_ADD | session_id=035254 | round=11 | speaker=白雪公主 | length=53
+2025-09-05 03:53:47,441 | INFO | DIALOGUE_END | session_id=035254 | round=12 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 03:53:47,442 | INFO | SESSION_END | session_id=035254 | final_rounds=12 | expected=3 | characters_used=['莉雅侍女', '白雪公主', '莉雅侍女', '白雪公主', '莉雅侍女', '白雪公主', '莉雅侍女', '白雪公主', '莉雅侍女', '白雪公主', '莉雅侍女', '白雪公主']
+2025-09-05 03:53:48,809 | INFO | SESSION_START | session_id=035348 | characters=['莉雅侍女', '白雪公主'] | context=两人在一处隐蔽的小溪旁停下,莉雅用手捧水为公主擦拭额上的汗水,轻声劝慰：“殿下,再坚持一下,我们很快就能找到安全的落脚处....
+2025-09-05 03:53:50,709 | INFO | GOAL_SET | session_id=035348 | goal='通过对话表达莉雅对公主的关切与安慰,展现两人在逃亡过程中的紧张与信任,同时让公主表露她的疲惫、担忧或坚持,突出两人情感的互动和当前处境的危机感.' | expected_rounds=2
+2025-09-05 03:53:52,509 | INFO | FIRST_DIALOGUE | session_id=035348 | speaker=莉雅侍女 | length=48
+2025-09-05 03:53:55,809 | INFO | DIALOGUE_ADD | session_id=035348 | round=1 | speaker=白雪公主 | length=66
+2025-09-05 03:53:59,998 | INFO | DIALOGUE_ADD | session_id=035348 | round=2 | speaker=莉雅侍女 | length=62
+2025-09-05 03:54:04,566 | INFO | DIALOGUE_ADD | session_id=035348 | round=3 | speaker=白雪公主 | length=53
+2025-09-05 03:54:09,176 | INFO | DIALOGUE_ADD | session_id=035348 | round=4 | speaker=莉雅侍女 | length=48
+2025-09-05 03:54:11,091 | INFO | DIALOGUE_END | session_id=035348 | round=5 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 03:54:11,091 | INFO | SESSION_END | session_id=035348 | final_rounds=5 | expected=2 | characters_used=['莉雅侍女', '白雪公主', '莉雅侍女', '白雪公主', '莉雅侍女']
+2025-09-05 03:54:14,897 | INFO | SESSION_START | session_id=035414 | characters=['格林', '贝克', '多米', '白雪公主'] | context=格林以长者的身份代表矿工们欢迎她加入新的家庭,每个人都献上自己的拿手好菜和小礼物,贝克忙着端上喷香的食物,多米讲着轻松幽默的故事让气氛轻松起来....
+2025-09-05 03:54:16,056 | INFO | GOAL_SET | session_id=035414 | goal='通过对话表达矿工们对白雪公主的欢迎和归属感,展现家庭氛围的温馨、友好和幽默,同时突出每个人独特的性格.' | expected_rounds=3
+2025-09-05 03:54:17,732 | INFO | FIRST_DIALOGUE | session_id=035414 | speaker=格林 | length=53
+2025-09-05 03:54:20,608 | INFO | DIALOGUE_ADD | session_id=035414 | round=1 | speaker=白雪公主 | length=34
+2025-09-05 03:54:23,985 | INFO | DIALOGUE_ADD | session_id=035414 | round=2 | speaker=贝克 | length=55
+2025-09-05 03:54:28,044 | INFO | DIALOGUE_ADD | session_id=035414 | round=3 | speaker=多米 | length=54
+2025-09-05 03:54:31,874 | INFO | DIALOGUE_ADD | session_id=035414 | round=4 | speaker=白雪公主 | length=58
+2025-09-05 03:54:33,935 | INFO | DIALOGUE_END | session_id=035414 | round=5 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 03:54:33,935 | INFO | SESSION_END | session_id=035414 | final_rounds=5 | expected=3 | characters_used=['格林', '白雪公主', '贝克', '多米', '白雪公主']
+2025-09-05 03:54:35,589 | INFO | SESSION_START | session_id=035435 | characters=['托比', '艾德', '哈罗德', '白雪公主'] | context=托比小心翼翼地把干净的毛毯递给公主,艾德与哈罗德用坚定有力的目光表示守护....
+2025-09-05 03:54:37,193 | INFO | GOAL_SET | session_id=035435 | goal='通过对话表达托比对公主的关心和体贴,同时让艾德与哈罗德通过言语明确他们守护公主的决心和信任,展现团队间的支持与温情.' | expected_rounds=2
+2025-09-05 03:54:38,528 | INFO | FIRST_DIALOGUE | session_id=035435 | speaker=托比 | length=27
+2025-09-05 03:54:42,068 | INFO | DIALOGUE_ADD | session_id=035435 | round=1 | speaker=白雪公主 | length=30
+2025-09-05 03:54:45,696 | INFO | DIALOGUE_ADD | session_id=035435 | round=2 | speaker=艾德 | length=24
+2025-09-05 03:54:48,822 | INFO | DIALOGUE_ADD | session_id=035435 | round=3 | speaker=哈罗德 | length=30
+2025-09-05 03:54:50,612 | INFO | DIALOGUE_END | session_id=035435 | round=4 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 03:54:50,613 | INFO | SESSION_END | session_id=035435 | final_rounds=4 | expected=2 | characters_used=['托比', '白雪公主', '艾德', '哈罗德']
+2025-09-05 03:54:51,734 | INFO | SESSION_START | session_id=035451 | characters=['白雪公主'] | context=白雪公主感受到从未有过的归属感,眼里泛起泪光,明白自己终于有了新的家人....
+2025-09-05 03:54:52,994 | INFO | GOAL_SET | session_id=035451 | goal='通过对白表现白雪公主对新家人的感激、珍惜和获得归属感的情感转变,以及她对未来生活的期许.' | expected_rounds=2
+2025-09-05 03:54:54,404 | INFO | FIRST_DIALOGUE | session_id=035451 | speaker=白雪公主 | length=30
+2025-09-05 03:54:57,159 | INFO | DIALOGUE_ADD | session_id=035451 | round=1 | speaker=白雪公主 | length=42
+2025-09-05 03:54:59,349 | INFO | DIALOGUE_END | session_id=035451 | round=2 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 03:54:59,350 | INFO | SESSION_END | session_id=035451 | final_rounds=2 | expected=2 | characters_used=['白雪公主', '白雪公主']
+2025-09-05 03:55:04,340 | INFO | SESSION_START | session_id=035504 | characters=['诺亚'] | context=然而,诺亚敏锐地察觉到森林间有异动,警觉地走到窗边巡视....
+2025-09-05 03:55:05,347 | INFO | GOAL_SET | session_id=035504 | goal='通过对话表达诺亚对森林异动的警觉与疑虑,以及他对可能发生危险的思考或推断.' | expected_rounds=1
+2025-09-05 03:55:06,898 | INFO | FIRST_DIALOGUE | session_id=035504 | speaker=诺亚 | length=32
+2025-09-05 03:55:10,579 | INFO | DIALOGUE_ADD | session_id=035504 | round=1 | speaker=诺亚 | length=27
+2025-09-05 03:55:13,997 | INFO | DIALOGUE_ADD | session_id=035504 | round=2 | speaker=诺亚 | length=45
+2025-09-05 03:55:17,888 | INFO | DIALOGUE_ADD | session_id=035504 | round=3 | speaker=诺亚 | length=35
+2025-09-05 03:55:20,616 | INFO | DIALOGUE_END | session_id=035504 | round=4 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 03:55:20,616 | INFO | SESSION_END | session_id=035504 | final_rounds=4 | expected=1 | characters_used=['诺亚', '诺亚', '诺亚', '诺亚']
+2025-09-05 03:55:22,046 | INFO | SESSION_START | session_id=035522 | characters=['格林', '艾德', '多米', '托比'] | context=格林率领矿工们立即加强戒备,艾德手持斧头守在门口,多米则轻声安慰紧张的托比....
+2025-09-05 03:55:23,791 | INFO | GOAL_SET | session_id=035522 | goal='通过对话表达矿工们临危不乱的团结、安抚和紧张情绪,突出角色间的相互支持及当前的危机感.格林需要指挥并鼓励众人,艾德表现决心守卫,多米安慰托比,托比表达害怕或动摇.' | expected_rounds=3
+2025-09-05 03:55:25,429 | INFO | FIRST_DIALOGUE | session_id=035522 | speaker=格林 | length=57
+2025-09-05 03:55:28,812 | INFO | DIALOGUE_ADD | session_id=035522 | round=1 | speaker=艾德 | length=31
+2025-09-05 03:55:31,964 | INFO | DIALOGUE_ADD | session_id=035522 | round=2 | speaker=多米 | length=51
+2025-09-05 03:55:35,236 | INFO | DIALOGUE_ADD | session_id=035522 | round=3 | speaker=托比 | length=31
+2025-09-05 03:55:39,355 | INFO | DIALOGUE_ADD | session_id=035522 | round=4 | speaker=多米 | length=74
+2025-09-05 03:55:43,450 | INFO | DIALOGUE_ADD | session_id=035522 | round=5 | speaker=格林 | length=54
+2025-09-05 03:55:45,199 | INFO | DIALOGUE_END | session_id=035522 | round=6 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 03:55:45,199 | INFO | SESSION_END | session_id=035522 | final_rounds=6 | expected=3 | characters_used=['格林', '艾德', '多米', '托比', '多米', '格林']
+2025-09-05 03:55:46,689 | INFO | SESSION_START | session_id=035546 | characters=['宫廷女巫', '矿工们'] | context=突然间,窗外一道幽蓝色的光芒闪烁,宫廷女巫施展魔法,试图突破矿工们的防线....
+2025-09-05 03:55:47,971 | INFO | GOAL_SET | session_id=035546 | goal='通过对话表现宫廷女巫施法时的威胁和自信,以及矿工们察觉到异常后的警觉与坚决防守,突出双方的对峙与紧张氛围.' | expected_rounds=3
+2025-09-05 03:55:49,843 | INFO | FIRST_DIALOGUE | session_id=035546 | speaker=宫廷女巫 | length=49
+2025-09-05 03:55:53,486 | INFO | DIALOGUE_ADD | session_id=035546 | round=1 | speaker=矿工们 | length=38
+2025-09-05 03:55:57,421 | INFO | DIALOGUE_ADD | session_id=035546 | round=2 | speaker=宫廷女巫 | length=37
+2025-09-05 03:56:01,573 | INFO | DIALOGUE_ADD | session_id=035546 | round=3 | speaker=矿工们 | length=37
+2025-09-05 03:56:05,230 | INFO | DIALOGUE_ADD | session_id=035546 | round=4 | speaker=宫廷女巫 | length=28
+2025-09-05 03:56:09,543 | INFO | DIALOGUE_ADD | session_id=035546 | round=5 | speaker=矿工们 | length=42
+2025-09-05 03:56:13,409 | INFO | DIALOGUE_ADD | session_id=035546 | round=6 | speaker=宫廷女巫 | length=52
+2025-09-05 03:56:17,137 | INFO | DIALOGUE_ADD | session_id=035546 | round=7 | speaker=矿工们 | length=40
+2025-09-05 03:56:24,919 | INFO | DIALOGUE_ADD | session_id=035546 | round=8 | speaker=宫廷女巫 | length=39
+2025-09-05 03:56:28,588 | INFO | DIALOGUE_ADD | session_id=035546 | round=9 | speaker=矿工们 | length=46
+2025-09-05 03:56:30,449 | INFO | DIALOGUE_END | session_id=035546 | round=10 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 03:56:30,449 | INFO | SESSION_END | session_id=035546 | final_rounds=10 | expected=3 | characters_used=['宫廷女巫', '矿工们', '宫廷女巫', '矿工们', '宫廷女巫', '矿工们', '宫廷女巫', '矿工们', '宫廷女巫', '矿工们']
+2025-09-05 03:56:31,608 | INFO | SESSION_START | session_id=035631 | characters=['格林', '艾德'] | context=格林和艾德奋力抵挡,但魔法气流一时间让小屋门窗剧烈震动....
+2025-09-05 03:56:32,876 | INFO | GOAL_SET | session_id=035631 | goal='通过对话表达格林和艾德面对强大魔法气流时的紧张情绪、他们的努力协作,以及对当前危机的判断和应对策略.' | expected_rounds=2
+2025-09-05 03:56:34,194 | INFO | FIRST_DIALOGUE | session_id=035631 | speaker=格林 | length=30
+2025-09-05 03:56:36,690 | INFO | DIALOGUE_ADD | session_id=035631 | round=1 | speaker=艾德 | length=38
+2025-09-05 03:56:39,575 | INFO | DIALOGUE_ADD | session_id=035631 | round=2 | speaker=格林 | length=43
+2025-09-05 03:56:42,841 | INFO | DIALOGUE_ADD | session_id=035631 | round=3 | speaker=艾德 | length=54
+2025-09-05 03:56:46,120 | INFO | DIALOGUE_ADD | session_id=035631 | round=4 | speaker=格林 | length=70
+2025-09-05 03:56:50,042 | INFO | DIALOGUE_ADD | session_id=035631 | round=5 | speaker=艾德 | length=73
+2025-09-05 03:56:54,205 | INFO | DIALOGUE_ADD | session_id=035631 | round=6 | speaker=格林 | length=22
+2025-09-05 03:56:58,512 | INFO | DIALOGUE_ADD | session_id=035631 | round=7 | speaker=艾德 | length=53
+2025-09-05 03:57:03,951 | INFO | DIALOGUE_ADD | session_id=035631 | round=8 | speaker=格林 | length=52
+2025-09-05 03:57:08,160 | INFO | DIALOGUE_ADD | session_id=035631 | round=9 | speaker=艾德 | length=65
+2025-09-05 03:57:13,662 | INFO | DIALOGUE_ADD | session_id=035631 | round=10 | speaker=格林 | length=47
+2025-09-05 03:57:17,641 | INFO | DIALOGUE_ADD | session_id=035631 | round=11 | speaker=艾德 | length=59
+2025-09-05 03:57:21,070 | INFO | DIALOGUE_ADD | session_id=035631 | round=12 | speaker=格林 | length=55
+2025-09-05 03:57:25,568 | INFO | DIALOGUE_ADD | session_id=035631 | round=13 | speaker=艾德 | length=55
+2025-09-05 03:57:29,847 | INFO | DIALOGUE_ADD | session_id=035631 | round=14 | speaker=格林 | length=62
+2025-09-05 03:57:34,896 | INFO | DIALOGUE_ADD | session_id=035631 | round=15 | speaker=艾德 | length=76
+2025-09-05 03:57:40,598 | INFO | DIALOGUE_ADD | session_id=035631 | round=16 | speaker=格林 | length=73
+2025-09-05 03:57:45,107 | INFO | DIALOGUE_ADD | session_id=035631 | round=17 | speaker=艾德 | length=46
+2025-09-05 03:57:50,184 | INFO | DIALOGUE_ADD | session_id=035631 | round=18 | speaker=格林 | length=34
+2025-09-05 03:57:54,623 | INFO | DIALOGUE_ADD | session_id=035631 | round=19 | speaker=艾德 | length=42
+2025-09-05 03:57:59,234 | INFO | DIALOGUE_ADD | session_id=035631 | round=20 | speaker=格林 | length=62
+2025-09-05 03:57:59,234 | WARNING | SAFETY_LIMIT | session_id=035631 | limit=20
+2025-09-05 03:57:59,234 | INFO | SESSION_END | session_id=035631 | final_rounds=21 | expected=2 | characters_used=['格林', '艾德', '格林', '艾德', '格林', '艾德', '格林', '艾德', '格林', '艾德', '格林', '艾德', '格林', '艾德', '格林', '艾德', '格林', '艾德', '格林', '艾德', '格林']
+2025-09-05 03:58:01,692 | INFO | SESSION_START | session_id=035801 | characters=['白雪公主', '格林', '后母王后'] | context=白雪公主在混乱中被格林护在身后,后母王后冷笑着现身,眼中满是嫉妒与决绝....
+2025-09-05 03:58:02,984 | INFO | GOAL_SET | session_id=035801 | goal='通过对白表达后母王后的嫉妒与决绝,揭示她对白雪公主的威胁和动机,同时展现格林保护白雪公主的决心和白雪公主面对危险的恐惧与坚强.' | expected_rounds=3
+2025-09-05 03:58:04,868 | INFO | FIRST_DIALOGUE | session_id=035801 | speaker=白雪公主 | length=28
+2025-09-05 03:58:08,073 | INFO | DIALOGUE_ADD | session_id=035801 | round=1 | speaker=后母王后 | length=67
+2025-09-05 03:58:11,115 | INFO | DIALOGUE_ADD | session_id=035801 | round=2 | speaker=格林 | length=25
+2025-09-05 03:58:15,413 | INFO | DIALOGUE_ADD | session_id=035801 | round=3 | speaker=后母王后 | length=82
+2025-09-05 03:58:19,779 | INFO | DIALOGUE_ADD | session_id=035801 | round=4 | speaker=白雪公主 | length=42
+2025-09-05 03:58:24,228 | INFO | DIALOGUE_ADD | session_id=035801 | round=5 | speaker=后母王后 | length=60
+2025-09-05 03:58:29,031 | INFO | DIALOGUE_ADD | session_id=035801 | round=6 | speaker=格林 | length=46
+2025-09-05 03:58:33,517 | INFO | DIALOGUE_ADD | session_id=035801 | round=7 | speaker=后母王后 | length=56
+2025-09-05 03:58:38,417 | INFO | DIALOGUE_ADD | session_id=035801 | round=8 | speaker=白雪公主 | length=58
+2025-09-05 03:58:43,336 | INFO | DIALOGUE_ADD | session_id=035801 | round=9 | speaker=后母王后 | length=70
+2025-09-05 03:58:45,620 | INFO | DIALOGUE_END | session_id=035801 | round=10 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 03:58:45,620 | INFO | SESSION_END | session_id=035801 | final_rounds=10 | expected=3 | characters_used=['白雪公主', '后母王后', '格林', '后母王后', '白雪公主', '后母王后', '格林', '后母王后', '白雪公主', '后母王后']
+2025-09-05 03:58:47,394 | INFO | SESSION_START | session_id=035847 | characters=['矿工们', '白雪公主'] | context=随着魔法的爆发,森林夜色仿佛凝固,危险的气息将众人笼罩,矿工们团结一致保护白雪,准备迎接这场突如其来的再次袭击....
+2025-09-05 03:58:49,073 | INFO | GOAL_SET | session_id=035847 | goal='通过对话表达矿工们在危机时刻的团结和对白雪公主的保护决心,同时让白雪公主展现自己的感受与信任,营造紧张气氛,为即将到来的袭击做心理铺垫.' | expected_rounds=3
+2025-09-05 03:58:50,585 | INFO | FIRST_DIALOGUE | session_id=035847 | speaker=矿工们 | length=39
+2025-09-05 03:58:54,263 | INFO | DIALOGUE_ADD | session_id=035847 | round=1 | speaker=白雪公主 | length=31
+2025-09-05 03:58:58,175 | INFO | DIALOGUE_ADD | session_id=035847 | round=2 | speaker=矿工们 | length=34
+2025-09-05 03:58:59,540 | INFO | DIALOGUE_END | session_id=035847 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 03:58:59,541 | INFO | SESSION_END | session_id=035847 | final_rounds=3 | expected=3 | characters_used=['矿工们', '白雪公主', '矿工们']
+2025-09-05 03:59:03,641 | INFO | SESSION_START | session_id=035903 | characters=['后母王后', '白雪公主'] | context=她将苹果递给白雪公主,口中低语着虚假的祝福,周围的空气仿佛凝滞....
+2025-09-05 03:59:04,993 | INFO | GOAL_SET | session_id=035903 | goal='通过对话展现后母王后虚伪的关切与隐秘的恶意,以及白雪公主的单纯信任或隐约的不安,从而营造紧张、悬疑的气氛.' | expected_rounds=2
+2025-09-05 03:59:07,026 | INFO | FIRST_DIALOGUE | session_id=035903 | speaker=后母王后 | length=36
+2025-09-05 03:59:10,521 | INFO | DIALOGUE_ADD | session_id=035903 | round=1 | speaker=白雪公主 | length=28
+2025-09-05 03:59:14,225 | INFO | DIALOGUE_ADD | session_id=035903 | round=2 | speaker=后母王后 | length=33
+2025-09-05 03:59:18,283 | INFO | DIALOGUE_ADD | session_id=035903 | round=3 | speaker=白雪公主 | length=34
+2025-09-05 03:59:22,098 | INFO | DIALOGUE_ADD | session_id=035903 | round=4 | speaker=后母王后 | length=37
+2025-09-05 03:59:28,070 | INFO | DIALOGUE_ADD | session_id=035903 | round=5 | speaker=白雪公主 | length=22
+2025-09-05 03:59:33,340 | INFO | DIALOGUE_ADD | session_id=035903 | round=6 | speaker=后母王后 | length=35
+2025-09-05 03:59:36,608 | INFO | DIALOGUE_ADD | session_id=035903 | round=7 | speaker=白雪公主 | length=24
+2025-09-05 03:59:40,386 | INFO | DIALOGUE_ADD | session_id=035903 | round=8 | speaker=后母王后 | length=40
+2025-09-05 03:59:44,037 | INFO | DIALOGUE_ADD | session_id=035903 | round=9 | speaker=白雪公主 | length=22
+2025-09-05 03:59:49,517 | INFO | DIALOGUE_ADD | session_id=035903 | round=10 | speaker=白雪公主 | length=39
+2025-09-05 03:59:52,691 | INFO | DIALOGUE_END | session_id=035903 | round=11 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 03:59:52,692 | INFO | SESSION_END | session_id=035903 | final_rounds=11 | expected=2 | characters_used=['后母王后', '白雪公主', '后母王后', '白雪公主', '后母王后', '白雪公主', '后母王后', '白雪公主', '后母王后', '白雪公主', '白雪公主']
+2025-09-05 03:59:53,823 | INFO | SESSION_START | session_id=035953 | characters=['莉雅侍女', '后母王后', '宫廷女巫'] | context=格林立即冲上前去,将公主抱入怀中,莉雅慌乱地呼喊着救援,而后母和女巫则在阴影中冷笑,毒苹果的诅咒在森林的清晨悄然扩散....
+2025-09-05 03:59:55,528 | INFO | GOAL_SET | session_id=035953 | goal='通过对话表达莉雅侍女的紧张与求助、后母王后与宫廷女巫对毒苹果诅咒的得意与阴险,以及她们对公主命运的暗示,突出紧张与冲突氛围.' | expected_rounds=3
+2025-09-05 03:59:57,815 | INFO | FIRST_DIALOGUE | session_id=035953 | speaker=莉雅侍女 | length=24
+2025-09-05 04:00:01,024 | INFO | DIALOGUE_ADD | session_id=035953 | round=1 | speaker=后母王后 | length=58
+2025-09-05 04:00:04,832 | INFO | DIALOGUE_ADD | session_id=035953 | round=2 | speaker=宫廷女巫 | length=54
+2025-09-05 04:00:08,852 | INFO | DIALOGUE_ADD | session_id=035953 | round=3 | speaker=莉雅侍女 | length=49
+2025-09-05 04:00:12,986 | INFO | DIALOGUE_ADD | session_id=035953 | round=4 | speaker=后母王后 | length=60
+2025-09-05 04:00:16,654 | INFO | DIALOGUE_ADD | session_id=035953 | round=5 | speaker=莉雅侍女 | length=48
+2025-09-05 04:00:20,228 | INFO | DIALOGUE_ADD | session_id=035953 | round=6 | speaker=后母王后 | length=58
+2025-09-05 04:00:24,881 | INFO | DIALOGUE_END | session_id=035953 | round=7 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 04:00:24,881 | INFO | SESSION_END | session_id=035953 | final_rounds=7 | expected=3 | characters_used=['莉雅侍女', '后母王后', '宫廷女巫', '莉雅侍女', '后母王后', '莉雅侍女', '后母王后']
+2025-09-05 04:00:32,132 | INFO | SESSION_START | session_id=040032 | characters=['白雪公主', '莉雅侍女'] | context=屋内,白雪公主面容忧郁地坐在壁炉旁,莉雅侍女轻声安慰着她；...
+2025-09-05 04:00:33,366 | INFO | GOAL_SET | session_id=040032 | goal='通过对话表现白雪公主的忧郁情绪以及莉雅侍女对她的安慰,揭示白雪公主忧郁的原因,并展现主仆间的情感支持.' | expected_rounds=3
+2025-09-05 04:00:34,909 | INFO | FIRST_DIALOGUE | session_id=040032 | speaker=白雪公主 | length=32
+2025-09-05 04:00:37,989 | INFO | DIALOGUE_ADD | session_id=040032 | round=1 | speaker=莉雅侍女 | length=47
+2025-09-05 04:00:41,768 | INFO | DIALOGUE_ADD | session_id=040032 | round=2 | speaker=白雪公主 | length=66
+2025-09-05 04:00:44,747 | INFO | DIALOGUE_ADD | session_id=040032 | round=3 | speaker=莉雅侍女 | length=66
+2025-09-05 04:00:51,268 | INFO | DIALOGUE_ADD | session_id=040032 | round=4 | speaker=白雪公主 | length=54
+2025-09-05 04:00:55,556 | INFO | DIALOGUE_ADD | session_id=040032 | round=5 | speaker=莉雅侍女 | length=79
+2025-09-05 04:00:58,026 | INFO | DIALOGUE_END | session_id=040032 | round=6 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 04:00:58,026 | INFO | SESSION_END | session_id=040032 | final_rounds=6 | expected=3 | characters_used=['白雪公主', '莉雅侍女', '白雪公主', '莉雅侍女', '白雪公主', '莉雅侍女']
+2025-09-05 04:00:59,385 | INFO | SESSION_START | session_id=040059 | characters=['格林', '阿尔文王子', '多米', '艾德', '贝克', '哈罗德', '西尔维', '诺亚', '托比'] | context=格林正与其他矿工讨论如何加强小屋的防护,阿尔文王子则悄然走进屋内,带来王国的最新消息....
+2025-09-05 04:01:00,786 | INFO | GOAL_SET | session_id=040059 | goal='通过对话表达矿工们对安全的担忧和防护措施的讨论,同时引出阿尔文王子带来的王国最新消息,并让其他角色对消息做出初步反应.' | expected_rounds=3
+2025-09-05 04:01:03,039 | INFO | FIRST_DIALOGUE | session_id=040059 | speaker=格林 | length=55
+2025-09-05 04:01:06,194 | INFO | DIALOGUE_ADD | session_id=040059 | round=1 | speaker=多米 | length=55
+2025-09-05 04:01:10,063 | INFO | DIALOGUE_ADD | session_id=040059 | round=2 | speaker=阿尔文王子 | length=77
+2025-09-05 04:01:13,997 | INFO | DIALOGUE_ADD | session_id=040059 | round=3 | speaker=格林 | length=61
+2025-09-05 04:01:18,308 | INFO | DIALOGUE_ADD | session_id=040059 | round=4 | speaker=阿尔文王子 | length=77
+2025-09-05 04:01:25,480 | INFO | DIALOGUE_ADD | session_id=040059 | round=5 | speaker=多米 | length=65
+2025-09-05 04:01:29,765 | INFO | DIALOGUE_ADD | session_id=040059 | round=6 | speaker=阿尔文王子 | length=96
+2025-09-05 04:01:40,758 | INFO | DIALOGUE_ADD | session_id=040059 | round=7 | speaker=格林 | length=94
+2025-09-05 04:01:45,938 | INFO | DIALOGUE_ADD | session_id=040059 | round=8 | speaker=阿尔文王子 | length=106
+2025-09-05 04:01:55,059 | INFO | DIALOGUE_ADD | session_id=040059 | round=9 | speaker=多米 | length=55
+2025-09-05 04:02:08,892 | INFO | DIALOGUE_ADD | session_id=040059 | round=10 | speaker=阿尔文王子 | length=84
+2025-09-05 04:02:22,023 | INFO | DIALOGUE_END | session_id=040059 | round=11 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 04:02:22,024 | INFO | SESSION_END | session_id=040059 | final_rounds=11 | expected=3 | characters_used=['格林', '多米', '阿尔文王子', '格林', '阿尔文王子', '多米', '阿尔文王子', '格林', '阿尔文王子', '多米', '阿尔文王子']
+2025-09-05 04:02:36,223 | INFO | SESSION_START | session_id=040236 | characters=['阿尔文王子'] | context=阿尔文王子跋涉林间赶至,推门而入,带来外界的气息和希望....
+2025-09-05 04:02:37,590 | INFO | GOAL_SET | session_id=040236 | goal='通过阿尔文王子的对话,表达他带来的外界消息、希望以及他此行的目的和紧迫感,突出他与环境的对比和变化的气息.' | expected_rounds=2
+2025-09-05 04:02:56,099 | INFO | FIRST_DIALOGUE | session_id=040236 | speaker=阿尔文王子 | length=39
+2025-09-05 04:02:59,783 | INFO | DIALOGUE_END | session_id=040236 | round=1 | reasons=['INVALID_SPEAKER']
+2025-09-05 04:02:59,784 | INFO | SESSION_END | session_id=040236 | final_rounds=1 | expected=2 | characters_used=['阿尔文王子']
+2025-09-05 04:03:00,600 | INFO | SESSION_START | session_id=040300 | characters=['阿尔文王子', '白雪公主'] | context=他俯身握住白雪公主的手,感受到她体内微弱却执着的生命力....
+2025-09-05 04:03:22,617 | INFO | GOAL_SET | session_id=040300 | goal='阿尔文王子通过对白雪公主倾诉自己的担忧、希望和鼓励,表达他感受到公主体内微弱但顽强的生命力,以及希望她能醒来的情感.同时,白雪公主可用微弱回应或内心独白回应王子的触动,强化两人之间的情感联系.' | expected_rounds=2
+2025-09-05 04:03:24,003 | INFO | FIRST_DIALOGUE | session_id=040300 | speaker=阿尔文王子 | length=60
+2025-09-05 04:03:26,842 | INFO | DIALOGUE_ADD | session_id=040300 | round=1 | speaker=白雪公主 | length=48
+2025-09-05 04:03:30,192 | INFO | DIALOGUE_ADD | session_id=040300 | round=2 | speaker=阿尔文王子 | length=81
+2025-09-05 04:03:33,470 | INFO | DIALOGUE_ADD | session_id=040300 | round=3 | speaker=白雪公主 | length=50
+2025-09-05 04:03:37,056 | INFO | DIALOGUE_ADD | session_id=040300 | round=4 | speaker=阿尔文王子 | length=90
+2025-09-05 04:03:38,892 | INFO | DIALOGUE_END | session_id=040300 | round=5 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 04:03:38,892 | INFO | SESSION_END | session_id=040300 | final_rounds=5 | expected=2 | characters_used=['阿尔文王子', '白雪公主', '阿尔文王子', '白雪公主', '阿尔文王子']
+2025-09-05 04:03:40,230 | INFO | SESSION_START | session_id=040340 | characters=['多米', '贝克'] | context=多米与贝克在炉边准备温热的饮品,空气中弥漫着草药香气....
+2025-09-05 04:03:41,486 | INFO | GOAL_SET | session_id=040340 | goal='通过对话表现多米与贝克之间的关系亲密与默契,以及他们在炉边共度温馨时刻时的内心感受.可以让角色互相询问对方的心情、回忆起共同经历,或探讨此刻为何特别.' | expected_rounds=3
+2025-09-05 04:03:42,740 | INFO | FIRST_DIALOGUE | session_id=040340 | speaker=多米 | length=34
+2025-09-05 04:03:45,389 | INFO | DIALOGUE_ADD | session_id=040340 | round=1 | speaker=贝克 | length=47
+2025-09-05 04:03:47,858 | INFO | DIALOGUE_ADD | session_id=040340 | round=2 | speaker=多米 | length=57
+2025-09-05 04:03:51,369 | INFO | DIALOGUE_ADD | session_id=040340 | round=3 | speaker=贝克 | length=54
+2025-09-05 04:03:53,951 | INFO | DIALOGUE_ADD | session_id=040340 | round=4 | speaker=多米 | length=51
+2025-09-05 04:03:55,691 | INFO | DIALOGUE_END | session_id=040340 | round=5 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 04:03:55,691 | INFO | SESSION_END | session_id=040340 | final_rounds=5 | expected=3 | characters_used=['多米', '贝克', '多米', '贝克', '多米']
+2025-09-05 04:03:56,567 | INFO | SESSION_START | session_id=040356 | characters=['艾德', '哈罗德', '西尔维', '诺亚'] | context=艾德与哈罗德警惕地在门口守卫,西尔维低声与诺亚交换着关于后母阴谋的情报....
+2025-09-05 04:03:57,938 | INFO | GOAL_SET | session_id=040356 | goal='通过对话让西尔维与诺亚悄悄交流后母的阴谋细节,并表现他们的紧张感与信任,同时让艾德与哈罗德展现警惕和守卫氛围,突出多线紧张情势.' | expected_rounds=3
+2025-09-05 04:03:59,264 | INFO | FIRST_DIALOGUE | session_id=040356 | speaker=艾德 | length=30
+2025-09-05 04:04:01,977 | INFO | DIALOGUE_ADD | session_id=040356 | round=1 | speaker=哈罗德 | length=55
+2025-09-05 04:04:05,016 | INFO | DIALOGUE_ADD | session_id=040356 | round=2 | speaker=西尔维 | length=31
+2025-09-05 04:04:08,695 | INFO | DIALOGUE_ADD | session_id=040356 | round=3 | speaker=诺亚 | length=47
+2025-09-05 04:04:11,771 | INFO | DIALOGUE_ADD | session_id=040356 | round=4 | speaker=西尔维 | length=67
+2025-09-05 04:04:15,144 | INFO | DIALOGUE_ADD | session_id=040356 | round=5 | speaker=诺亚 | length=69
+2025-09-05 04:04:18,843 | INFO | DIALOGUE_ADD | session_id=040356 | round=6 | speaker=艾德 | length=61
+2025-09-05 04:04:22,006 | INFO | DIALOGUE_ADD | session_id=040356 | round=7 | speaker=哈罗德 | length=49
+2025-09-05 04:04:26,687 | INFO | DIALOGUE_ADD | session_id=040356 | round=8 | speaker=西尔维 | length=68
+2025-09-05 04:04:30,404 | INFO | DIALOGUE_ADD | session_id=040356 | round=9 | speaker=西尔维 | length=85
+2025-09-05 04:04:34,195 | INFO | DIALOGUE_ADD | session_id=040356 | round=10 | speaker=诺亚 | length=66
+2025-09-05 04:04:36,322 | INFO | DIALOGUE_END | session_id=040356 | round=11 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 04:04:36,322 | INFO | SESSION_END | session_id=040356 | final_rounds=11 | expected=3 | characters_used=['艾德', '哈罗德', '西尔维', '诺亚', '西尔维', '诺亚', '艾德', '哈罗德', '西尔维', '西尔维', '诺亚']
+2025-09-05 04:04:37,366 | INFO | SESSION_START | session_id=040437 | characters=['托比', '白雪公主'] | context=托比小心翼翼地递上被子,为公主掖好....
+2025-09-05 04:04:38,473 | INFO | GOAL_SET | session_id=040437 | goal='表达托比对公主的关心和体贴,以及公主对托比的感谢和信任,营造温馨、亲密的氛围.' | expected_rounds=2
+2025-09-05 04:04:39,631 | INFO | FIRST_DIALOGUE | session_id=040437 | speaker=托比 | length=24
+2025-09-05 04:04:42,175 | INFO | DIALOGUE_ADD | session_id=040437 | round=1 | speaker=白雪公主 | length=32
+2025-09-05 04:04:43,220 | INFO | DIALOGUE_END | session_id=040437 | round=2 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 04:04:43,221 | INFO | SESSION_END | session_id=040437 | final_rounds=2 | expected=2 | characters_used=['托比', '白雪公主']
+2025-09-05 04:04:43,923 | INFO | SESSION_START | session_id=040443 | characters=['阿尔文王子', '白雪公主'] | context=就在这静谧又充满守护的夜晚,阿尔文王子温柔的气息唤醒了白雪公主沉睡已久的意识....
+2025-09-05 04:04:45,241 | INFO | GOAL_SET | session_id=040443 | goal='通过对话表达阿尔文王子对白雪公主的关切、温柔唤醒以及白雪公主苏醒后的迷茫和逐渐恢复意识,从而展现两人之间的情感联系和白雪公主从沉睡中苏醒的过程.' | expected_rounds=3
+2025-09-05 04:04:46,500 | INFO | FIRST_DIALOGUE | session_id=040443 | speaker=阿尔文王子 | length=41
+2025-09-05 04:04:49,453 | INFO | DIALOGUE_ADD | session_id=040443 | round=1 | speaker=白雪公主 | length=56
+2025-09-05 04:04:52,318 | INFO | DIALOGUE_ADD | session_id=040443 | round=2 | speaker=阿尔文王子 | length=66
+2025-09-05 04:04:56,205 | INFO | DIALOGUE_ADD | session_id=040443 | round=3 | speaker=白雪公主 | length=57
+2025-09-05 04:04:59,992 | INFO | DIALOGUE_ADD | session_id=040443 | round=4 | speaker=阿尔文王子 | length=75
+2025-09-05 04:05:04,372 | INFO | DIALOGUE_ADD | session_id=040443 | round=5 | speaker=白雪公主 | length=62
+2025-09-05 04:05:08,773 | INFO | DIALOGUE_ADD | session_id=040443 | round=6 | speaker=阿尔文王子 | length=66
+2025-09-05 04:05:12,956 | INFO | DIALOGUE_ADD | session_id=040443 | round=7 | speaker=白雪公主 | length=49
+2025-09-05 04:05:14,887 | INFO | DIALOGUE_END | session_id=040443 | round=8 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 04:05:14,887 | INFO | SESSION_END | session_id=040443 | final_rounds=8 | expected=3 | characters_used=['阿尔文王子', '白雪公主', '阿尔文王子', '白雪公主', '阿尔文王子', '白雪公主', '阿尔文王子', '白雪公主']
+2025-09-05 04:05:15,848 | INFO | SESSION_START | session_id=040515 | characters=['白雪公主', '众人'] | context=她睁开双眸,泪光闪烁,众人欣喜拥抱,仿佛重生....
+2025-09-05 04:05:17,198 | INFO | GOAL_SET | session_id=040515 | goal='通过对白表达白雪公主苏醒后的情感（如惊讶、感激、疑惑等）,以及众人见到她复苏的激动、关心和喜悦,营造重生的温情氛围.' | expected_rounds=2
+2025-09-05 04:05:18,306 | INFO | FIRST_DIALOGUE | session_id=040515 | speaker=白雪公主 | length=28
+2025-09-05 04:05:26,506 | INFO | DIALOGUE_ADD | session_id=040515 | round=1 | speaker=众人 | length=32
+2025-09-05 04:05:30,203 | INFO | DIALOGUE_ADD | session_id=040515 | round=2 | speaker=白雪公主 | length=28
+2025-09-05 04:06:33,486 | INFO | DIALOGUE_ADD | session_id=040515 | round=3 | speaker=众人 | length=45
+2025-09-05 04:06:37,692 | INFO | DIALOGUE_ADD | session_id=040515 | round=4 | speaker=白雪公主 | length=41
+2025-09-05 04:06:39,226 | INFO | DIALOGUE_END | session_id=040515 | round=5 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 04:06:39,226 | INFO | SESSION_END | session_id=040515 | final_rounds=5 | expected=2 | characters_used=['白雪公主', '众人', '白雪公主', '众人', '白雪公主']
+2025-09-05 04:06:40,447 | INFO | SESSION_START | session_id=040640 | characters=['白雪公主', '众人'] | context=觉醒后的白雪公主,眼中多了几分坚定,她明白自己将带领众人迎接新的命运....
+2025-09-05 04:06:41,573 | INFO | GOAL_SET | session_id=040640 | goal='通过对白表现白雪公主觉醒后的坚定与领导气质,以及她鼓舞众人共同面对未来命运的信心和决心.角色间需要交流新的目标、团结一致的信念,以及对未知挑战的期望和准备.' | expected_rounds=3
+2025-09-05 04:06:42,966 | INFO | FIRST_DIALOGUE | session_id=040640 | speaker=白雪公主 | length=73
+2025-09-05 04:06:45,892 | INFO | DIALOGUE_ADD | session_id=040640 | round=1 | speaker=众人 | length=61
+2025-09-05 04:06:47,091 | INFO | DIALOGUE_END | session_id=040640 | round=2 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 04:06:47,091 | INFO | SESSION_END | session_id=040640 | final_rounds=2 | expected=3 | characters_used=['白雪公主', '众人']
+2025-09-05 04:06:53,658 | INFO | SESSION_START | session_id=040653 | characters=['白雪公主', '阿尔文王子'] | context=在绚烂的花园庆典中,白雪公主身着洁白长裙,手挽阿尔文王子,脸上洋溢着幸福与安宁....
+2025-09-05 04:06:54,759 | INFO | GOAL_SET | session_id=040653 | goal='通过对白表达白雪公主和阿尔文王子在庆典中的幸福与安宁,以及两人对未来生活的憧憬和彼此的深情,营造温馨浪漫的氛围.' | expected_rounds=2
+2025-09-05 04:06:55,950 | INFO | FIRST_DIALOGUE | session_id=040653 | speaker=白雪公主 | length=50
+2025-09-05 04:06:58,989 | INFO | DIALOGUE_ADD | session_id=040653 | round=1 | speaker=阿尔文王子 | length=46
+2025-09-05 04:07:02,055 | INFO | DIALOGUE_ADD | session_id=040653 | round=2 | speaker=白雪公主 | length=51
+2025-09-05 04:07:03,906 | INFO | DIALOGUE_END | session_id=040653 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 04:07:03,906 | INFO | SESSION_END | session_id=040653 | final_rounds=3 | expected=2 | characters_used=['白雪公主', '阿尔文王子', '白雪公主']
+2025-09-05 04:07:04,738 | INFO | SESSION_START | session_id=040704 | characters=['国王', '白雪公主'] | context=国王含笑注视着女儿,被长期疏忽的内疚在这一刻化作祝福....
+2025-09-05 04:07:05,946 | INFO | GOAL_SET | session_id=040704 | goal='通过对话表达国王对女儿白雪公主的关爱与愧疚,并将内疚转化为温柔的祝福,修复父女关系,展现情感转变.' | expected_rounds=2
+2025-09-05 04:07:07,458 | INFO | FIRST_DIALOGUE | session_id=040704 | speaker=国王 | length=73
+2025-09-05 04:07:10,971 | INFO | DIALOGUE_ADD | session_id=040704 | round=1 | speaker=白雪公主 | length=77
+2025-09-05 04:07:12,565 | INFO | DIALOGUE_END | session_id=040704 | round=2 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 04:07:12,565 | INFO | SESSION_END | session_id=040704 | final_rounds=2 | expected=2 | characters_used=['国王', '白雪公主']
+2025-09-05 04:07:13,538 | INFO | SESSION_START | session_id=040713 | characters=['莉雅侍女', '矿工们', '白雪公主'] | context=莉雅侍女含泪为公主整理裙摆,矿工们身着整洁衣装,满怀喜悦地谈笑着....
+2025-09-05 04:07:14,859 | INFO | GOAL_SET | session_id=040713 | goal='通过对话表达莉雅侍女因离别或感动含泪为公主整理裙摆的情感,以及矿工们对即将发生的喜悦事件进行热烈讨论,展现场景中的离愁与欢乐交织,突出人物间的情感交流和对未来的期许.' | expected_rounds=3
+2025-09-05 04:07:16,290 | INFO | FIRST_DIALOGUE | session_id=040713 | speaker=莉雅侍女 | length=47
+2025-09-05 04:07:19,462 | INFO | DIALOGUE_ADD | session_id=040713 | round=1 | speaker=白雪公主 | length=53
+2025-09-05 04:07:22,478 | INFO | DIALOGUE_ADD | session_id=040713 | round=2 | speaker=莉雅侍女 | length=57
+2025-09-05 04:07:25,410 | INFO | DIALOGUE_ADD | session_id=040713 | round=3 | speaker=矿工们 | length=38
+2025-09-05 04:07:28,516 | INFO | DIALOGUE_ADD | session_id=040713 | round=4 | speaker=白雪公主 | length=42
+2025-09-05 04:07:30,015 | INFO | DIALOGUE_END | session_id=040713 | round=5 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 04:07:30,015 | INFO | SESSION_END | session_id=040713 | final_rounds=5 | expected=3 | characters_used=['莉雅侍女', '白雪公主', '莉雅侍女', '矿工们', '白雪公主']
+2025-09-05 04:07:31,444 | INFO | SESSION_START | session_id=040731 | characters=['格林', '矿工们', '白雪公主'] | context=格林与同伴们自豪地站在一旁,见证他们曾庇护的女孩终于获得归宿....
+2025-09-05 04:07:32,715 | INFO | GOAL_SET | session_id=040731 | goal='通过对话表达格林与矿工们的自豪、对女孩（白雪公主）获得归宿的欣慰,以及对白雪公主的祝福和不舍,同时展现人物之间的深厚情感和彼此的感激之情.' | expected_rounds=3
+2025-09-05 04:07:34,006 | INFO | FIRST_DIALOGUE | session_id=040731 | speaker=格林 | length=32
+2025-09-05 04:07:37,077 | INFO | DIALOGUE_ADD | session_id=040731 | round=1 | speaker=矿工们 | length=61
+2025-09-05 04:07:39,942 | INFO | DIALOGUE_ADD | session_id=040731 | round=2 | speaker=白雪公主 | length=64
+2025-09-05 04:07:41,164 | INFO | DIALOGUE_END | session_id=040731 | round=3 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 04:07:41,165 | INFO | SESSION_END | session_id=040731 | final_rounds=3 | expected=3 | characters_used=['格林', '矿工们', '白雪公主']
+2025-09-05 04:07:42,096 | INFO | SESSION_START | session_id=040742 | characters=['白雪公主', '阿尔文王子', '亲人', '朋友'] | context=经过磨难的白雪公主,终于在亲人与朋友的环绕下获得理解、自由与归属,而阿尔文王子则承诺守护她一生....
+2025-09-05 04:07:43,443 | INFO | GOAL_SET | session_id=040742 | goal='表达白雪公主经过磨难后的内心成长、获得亲人和朋友的理解与支持,以及阿尔文王子对她的承诺和两人未来的希望.需要展现角色间的情感交流和对白,将他们的关系和心理转变具体化.' | expected_rounds=4
+2025-09-05 04:07:45,168 | INFO | FIRST_DIALOGUE | session_id=040742 | speaker=白雪公主 | length=99
+2025-09-05 04:07:48,792 | INFO | DIALOGUE_ADD | session_id=040742 | round=1 | speaker=阿尔文王子 | length=76
+2025-09-05 04:07:50,078 | INFO | DIALOGUE_END | session_id=040742 | round=2 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 04:07:50,079 | INFO | SESSION_END | session_id=040742 | final_rounds=2 | expected=4 | characters_used=['白雪公主', '阿尔文王子']
+2025-09-05 04:07:50,741 | INFO | SESSION_START | session_id=040750 | characters=['众人'] | context=众人的祝福如春风拂面,幸福的归宿在此刻降临....
+2025-09-05 04:07:51,841 | INFO | GOAL_SET | session_id=040750 | goal='通过众人的对话表达他们对主角的祝福、对未来幸福的憧憬,以及共同见证幸福时刻的感动和美好氛围.' | expected_rounds=2
+2025-09-05 04:07:53,157 | INFO | FIRST_DIALOGUE | session_id=040750 | speaker=众人 | length=51
+2025-09-05 04:07:56,019 | INFO | DIALOGUE_ADD | session_id=040750 | round=1 | speaker=众人 | length=56
+2025-09-05 04:07:57,161 | INFO | DIALOGUE_END | session_id=040750 | round=2 | reasons=['LLM_STOP', 'SPEAKER_NONE', 'INVALID_SPEAKER']
+2025-09-05 04:07:57,161 | INFO | SESSION_END | session_id=040750 | final_rounds=2 | expected=2 | characters_used=['众人', '众人']

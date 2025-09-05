@@ -72,7 +72,7 @@ from src.constant import output_dir
 #         analysis_result = convert_json(response)
         
 #         if not isinstance(analysis_result, list):
-#             print("⚠️ LLM分析格式错误，使用基础模式")
+#             print("LLM分析格式错误，使用基础模式")
 #             return add_basic_analysis(reordered_chapters, original_chapters)
         
 #         # 验证结果完整性
@@ -80,17 +80,17 @@ from src.constant import output_dir
 #         analysis_ids = [item.get("chapter_id") for item in analysis_result]
         
 #         if set(chapter_ids) != set(analysis_ids):
-#             print("⚠️ LLM分析不完整，使用基础模式")
+#             print("LLM分析不完整，使用基础模式")
 #             return add_basic_analysis(reordered_chapters, original_chapters)
         
-#         print("✅ LLM叙述分析成功")
+#         print("LLM叙述分析成功")
 #         return merge_analysis_with_chapters(reordered_chapters, analysis_result)
         
 #     except Exception as e:
-#         print(f"⚠️ LLM分析失败: {e}，使用基础模式")
+#         print(f"LLM分析失败: {e}，使用基础模式")
 #         return add_basic_analysis(reordered_chapters, original_chapters)
 
-def analyze_narrative_structure(reordered_chapters, original_chapters, topic="未知", style="未知"):
+def analyze_narrative_structure(reordered_chapters, original_chapters, topic="未知", style="未知", performance_analyzer=None):
     """
     改进版：分析重排后章节的叙述结构，为每个章节添加叙述指导
     
@@ -182,11 +182,11 @@ def analyze_narrative_structure(reordered_chapters, original_chapters, topic="�
 请确保所有章节的pov_requirement字段完全一致。只返回JSON数组，不要其他内容。"""
     
     try:
-        response = generate_response([{"role": "user", "content": prompt}])
+        response = generate_response([{"role": "user", "content": prompt}], performance_analyzer=performance_analyzer, stage_name="chapter_reorder")
         analysis_result = convert_json(response)
         
         if not isinstance(analysis_result, list):
-            print("⚠️ LLM分析格式错误，使用基础模式")
+            print("LLM分析格式错误，使用基础模式")
             return add_basic_analysis(reordered_chapters, original_chapters)
         
         # 验证结果完整性
@@ -194,14 +194,14 @@ def analyze_narrative_structure(reordered_chapters, original_chapters, topic="�
         analysis_ids = [item.get("chapter_id") for item in analysis_result]
         
         if set(chapter_ids) != set(analysis_ids):
-            print("⚠️ LLM分析不完整，使用基础模式")
+            print("LLM分析不完整，使用基础模式")
             return add_basic_analysis(reordered_chapters, original_chapters)
         
-        print("✅ LLM叙述分析成功")
+        print("LLM叙述分析成功")
         return merge_analysis_with_chapters(reordered_chapters, analysis_result)
         
     except Exception as e:
-        print(f"⚠️ LLM分析失败: {e}，使用基础模式")
+        print(f"LLM分析失败: {e}，使用基础模式")
         return add_basic_analysis(reordered_chapters, original_chapters)
 
 # def add_basic_analysis(reordered_chapters, original_chapters):
@@ -271,7 +271,7 @@ def add_basic_analysis(reordered_chapters, original_chapters):
             "narrative_instruction": instruction,
             "transition_hint": "标准过渡",
             "timeline_method": timeline_method,
-            "pov_requirement": "第三人称限知",  # ✅ 强制统一视角
+            "pov_requirement": "第三人称限知",  # 强制统一视角
             "character_consistency_note": "保持角色关系逻辑"
         })
         

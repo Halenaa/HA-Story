@@ -32,17 +32,17 @@ def build_prompt_from_ordered_chapters(ordered_chapters):
     """
 
 
-def reorder_chapters(chapter_list, mode="linear", model="gpt-4.1"):
+def reorder_chapters(chapter_list, mode="linear", model="gpt-4.1", performance_analyzer=None):
     if mode == "linear":
         return chapter_list
 
     elif mode == "nonlinear":
         prompt = build_prompt_from_ordered_chapters(chapter_list)
-        response = generate_response([{"role": "user", "content": prompt}], model=model)
+        response = generate_response([{"role": "user", "content": prompt}], model=model, performance_analyzer=performance_analyzer, stage_name="chapter_reorder")
         try:
             reordered = json.loads(response)
         except Exception as e:
-            print("⚠️ 非线性重排失败，返回原始顺序")
+            print("非线性重排失败，返回原始顺序")
             return chapter_list
 
         # 按 new_order 排序

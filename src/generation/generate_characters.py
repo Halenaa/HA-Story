@@ -3,7 +3,7 @@ import json
 from src.utils.utils import generate_response,convert_json
 
 
-def generate_characters_v1(outline, max_characters=20):
+def generate_characters_v1(outline, max_characters=20, performance_analyzer=None):
     chapter_json = json.dumps(outline, ensure_ascii=False, indent=2)
     msg = [{
         "role": "user",
@@ -34,5 +34,5 @@ def generate_characters_v1(outline, max_characters=20):
 #最后以json结构返回，不需要其他多余的解释
         """
     }]
-    response = generate_response(msg)
+    response = generate_response(msg, performance_analyzer=performance_analyzer, stage_name="character_generation")
     return convert_json(response)

@@ -2,7 +2,7 @@ import os
 import json
 from main_pipeline_glm import main as run_pipeline
 
-topics = ["小红帽"]
+topics = ["白雪公主"]
 reorder_modes = ["linear"]
 temperatures = [0.3]
 seeds = [100]
@@ -36,7 +36,7 @@ for topic in topics:
                         reorder_mode=order,
                         use_cache=False,
                         topic=topic,
-                        style="科幻改写",
+                        style="ABO改写",
                         behavior_model="gpt-4.1",
                         temperature=temp,
                         seed=seed
