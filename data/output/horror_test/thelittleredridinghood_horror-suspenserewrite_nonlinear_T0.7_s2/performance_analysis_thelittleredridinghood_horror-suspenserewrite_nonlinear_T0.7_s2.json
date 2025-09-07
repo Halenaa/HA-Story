@@ -1,0 +1,2623 @@
+{
+  "metadata": {
+    "task_name": "thelittleredridinghood_horror-suspenserewrite_nonlinear_T0.7_s2",
+    "analysis_timestamp": "2025-09-07T05:42:55.207191",
+    "total_execution_time": 223.67282485961914,
+    "total_api_cost": 0.5070299999999998,
+    "total_tokens": 30173,
+    "peak_memory_usage_mb": 79.96875
+  },
+  "experiment_config": {
+    "topic": "The little red riding hood",
+    "style": "Horror-Suspense Rewrite",
+    "temperature": 0.7,
+    "seed": 2,
+    "behavior_model": "gpt-4.1",
+    "generation_mode": "traditional",
+    "reorder_mode": "nonlinear",
+    "use_cache": false,
+    "user_description": null,
+    "file_content": false
+  },
+  "stage_performance": {
+    "stage_times": {
+      "outline_generation": 5.779942035675049,
+      "chapter_reorder": 16.443850994110107,
+      "character_generation": 5.447860956192017,
+      "story_expansion": 30.138021230697632,
+      "dialogue_generation": 120.15231704711914,
+      "story_enhancement": 45.38754105567932
+    },
+    "stage_breakdown_percentage": {
+      "outline_generation": 2.587846032079043,
+      "chapter_reorder": 7.362384308450405,
+      "character_generation": 2.4391637964157016,
+      "story_expansion": 13.49365757912241,
+      "dialogue_generation": 53.79564275840972,
+      "story_enhancement": 20.321305525522718
+    }
+  },
+  "text_features": {
+    "total_char_count": 6456,
+    "total_word_count": 1107,
+    "total_sentence_count": 62,
+    "chapter_count": 5,
+    "avg_chapter_length": 1291.2,
+    "avg_sentence_length": 104.12903225806451,
+    "chapter_details": [
+      {
+        "chapter_id": "Chapter 5",
+        "title": "The Final Stand in the Cabin",
+        "char_count": 1305,
+        "word_count": 231,
+        "sentence_count": 13
+      },
+      {
+        "chapter_id": "Chapter 2",
+        "title": "The Forbidden Shortcut",
+        "char_count": 1655,
+        "word_count": 284,
+        "sentence_count": 24
+      },
+      {
+        "chapter_id": "Chapter 3",
+        "title": "Wolf Arrives at Grandmother’s Cabin",
+        "char_count": 1096,
+        "word_count": 184,
+        "sentence_count": 9
+      },
+      {
+        "chapter_id": "Chapter 1",
+        "title": "Red Receives a Dangerous Mission",
+        "char_count": 831,
+        "word_count": 145,
+        "sentence_count": 6
+      },
+      {
+        "chapter_id": "Chapter 4",
+        "title": "Red Confronts the Impostor",
+        "char_count": 1569,
+        "word_count": 263,
+        "sentence_count": 10
+      }
+    ],
+    "dialogue_features": {
+      "total_dialogue_count": 17,
+      "total_dialogue_chars": 2401,
+      "unique_speakers": 4,
+      "avg_dialogue_length": 141.23529411764707,
+      "speakers_list": [
+        "The Wolf",
+        "Red’s Mother",
+        "Grandmother",
+        "Red"
+      ]
+    },
+    "character_features": {
+      "character_count": 4,
+      "total_description_length": 1506,
+      "avg_description_length": 376.5,
+      "character_complexity_scores": [
+        135.5,
+        120.4,
+        94.1,
+        99.5
+      ],
+      "character_descriptions_total_length": 1506,
+      "character_complexity_score": 449.5
+    }
+  },
+  "complexity_analysis": {
+    "total_generation_time_seconds": 223.67251586914062,
+    "time_per_char": 0.03464568089670703,
+    "time_per_word": 0.20205285986372234,
+    "time_per_chapter": 44.734503173828124,
+    "complexity_indicators": {
+      "linear_indicator": 0.03464568089670703,
+      "n_log_n_indicator": 0.003949231521369457,
+      "sqrt_n_indicator": 2.7837540498696876,
+      "quadratic_indicator": 5.366431365660941e-06
+    },
+    "efficiency_metrics": {
+      "chars_per_second": 28.863626695096844,
+      "words_per_second": 4.949199930525435,
+      "chapters_per_minute": 1.3412465936383293
+    }
+  },
+  "memory_complexity_data": {
+    "peak_memory_usage_mb": 79.96875,
+    "memory_timeline": [
+      {
+        "timestamp": 0.0002067089080810547,
+        "memory_mb": 78.703125
+      },
+      {
+        "timestamp": 0.503706693649292,
+        "memory_mb": 79.96875
+      },
+      {
+        "timestamp": 1.0044920444488525,
+        "memory_mb": 79.96875
+      },
+      {
+        "timestamp": 1.5052618980407715,
+        "memory_mb": 79.96875
+      },
+      {
+        "timestamp": 2.018467664718628,
+        "memory_mb": 62.375
+      },
+      {
+        "timestamp": 2.519167900085449,
+        "memory_mb": 61.984375
+      },
+      {
+        "timestamp": 3.0218019485473633,
+        "memory_mb": 62.015625
+      },
+      {
+        "timestamp": 3.525632858276367,
+        "memory_mb": 62.015625
+      },
+      {
+        "timestamp": 4.030752897262573,
+        "memory_mb": 62.03125
+      },
+      {
+        "timestamp": 4.533077955245972,
+        "memory_mb": 62.03125
+      },
+      {
+        "timestamp": 5.038312911987305,
+        "memory_mb": 62.03125
+      },
+      {
+        "timestamp": 5.542031764984131,
+        "memory_mb": 62.0625
+      },
+      {
+        "timestamp": 6.043587684631348,
+        "memory_mb": 67.6875
+      },
+      {
+        "timestamp": 6.546211004257202,
+        "memory_mb": 67.6875
+      },
+      {
+        "timestamp": 7.04793381690979,
+        "memory_mb": 67.6875
+      },
+      {
+        "timestamp": 7.552912712097168,
+        "memory_mb": 67.828125
+      },
+      {
+        "timestamp": 8.05813193321228,
+        "memory_mb": 67.828125
+      },
+      {
+        "timestamp": 8.56283688545227,
+        "memory_mb": 67.828125
+      },
+      {
+        "timestamp": 9.064036846160889,
+        "memory_mb": 67.828125
+      },
+      {
+        "timestamp": 9.56648588180542,
+        "memory_mb": 67.828125
+      },
+      {
+        "timestamp": 10.071726083755493,
+        "memory_mb": 67.828125
+      },
+      {
+        "timestamp": 10.576871871948242,
+        "memory_mb": 67.828125
+      },
+      {
+        "timestamp": 11.082128763198853,
+        "memory_mb": 67.828125
+      },
+      {
+        "timestamp": 11.584558010101318,
+        "memory_mb": 67.828125
+      },
+      {
+        "timestamp": 12.089800834655762,
+        "memory_mb": 67.828125
+      },
+      {
+        "timestamp": 12.591976881027222,
+        "memory_mb": 67.828125
+      },
+      {
+        "timestamp": 13.092561721801758,
+        "memory_mb": 67.828125
+      },
+      {
+        "timestamp": 13.592854976654053,
+        "memory_mb": 67.6875
+      },
+      {
+        "timestamp": 14.098041772842407,
+        "memory_mb": 67.6875
+      },
+      {
+        "timestamp": 14.600641965866089,
+        "memory_mb": 67.6875
+      },
+      {
+        "timestamp": 15.10590386390686,
+        "memory_mb": 67.6875
+      },
+      {
+        "timestamp": 15.610649824142456,
+        "memory_mb": 67.6875
+      },
+      {
+        "timestamp": 16.115794897079468,
+        "memory_mb": 67.6875
+      },
+      {
+        "timestamp": 16.621034860610962,
+        "memory_mb": 67.6875
+      },
+      {
+        "timestamp": 17.125725984573364,
+        "memory_mb": 67.6875
+      },
+      {
+        "timestamp": 17.630895853042603,
+        "memory_mb": 67.6875
+      },
+      {
+        "timestamp": 18.1330349445343,
+        "memory_mb": 67.6875
+      },
+      {
+        "timestamp": 18.638221740722656,
+        "memory_mb": 67.6875
+      },
+      {
+        "timestamp": 19.14239263534546,
+        "memory_mb": 67.6875
+      },
+      {
+        "timestamp": 19.643518924713135,
+        "memory_mb": 67.6875
+      },
+      {
+        "timestamp": 20.148640871047974,
+        "memory_mb": 67.6875
+      },
+      {
+        "timestamp": 20.649805068969727,
+        "memory_mb": 67.640625
+      },
+      {
+        "timestamp": 21.150826930999756,
+        "memory_mb": 64.125
+      },
+      {
+        "timestamp": 21.656070709228516,
+        "memory_mb": 64.125
+      },
+      {
+        "timestamp": 22.1596097946167,
+        "memory_mb": 64.125
+      },
+      {
+        "timestamp": 22.664804697036743,
+        "memory_mb": 65.203125
+      },
+      {
+        "timestamp": 23.170063734054565,
+        "memory_mb": 65.203125
+      },
+      {
+        "timestamp": 23.670914888381958,
+        "memory_mb": 65.203125
+      },
+      {
+        "timestamp": 24.178349018096924,
+        "memory_mb": 65.203125
+      },
+      {
+        "timestamp": 24.68357491493225,
+        "memory_mb": 65.203125
+      },
+      {
+        "timestamp": 25.186980724334717,
+        "memory_mb": 65.203125
+      },
+      {
+        "timestamp": 25.69088888168335,
+        "memory_mb": 65.203125
+      },
+      {
+        "timestamp": 26.194329738616943,
+        "memory_mb": 65.203125
+      },
+      {
+        "timestamp": 26.699537754058838,
+        "memory_mb": 65.203125
+      },
+      {
+        "timestamp": 27.200397729873657,
+        "memory_mb": 65.203125
+      },
+      {
+        "timestamp": 27.701908826828003,
+        "memory_mb": 65.453125
+      },
+      {
+        "timestamp": 28.20453667640686,
+        "memory_mb": 65.453125
+      },
+      {
+        "timestamp": 28.70899510383606,
+        "memory_mb": 65.453125
+      },
+      {
+        "timestamp": 29.214118719100952,
+        "memory_mb": 65.453125
+      },
+      {
+        "timestamp": 29.71923303604126,
+        "memory_mb": 65.453125
+      },
+      {
+        "timestamp": 30.224350929260254,
+        "memory_mb": 65.453125
+      },
+      {
+        "timestamp": 30.72639489173889,
+        "memory_mb": 65.453125
+      },
+      {
+        "timestamp": 31.22723388671875,
+        "memory_mb": 65.453125
+      },
+      {
+        "timestamp": 31.732390880584717,
+        "memory_mb": 65.453125
+      },
+      {
+        "timestamp": 32.23746299743652,
+        "memory_mb": 48.3125
+      },
+      {
+        "timestamp": 32.74225187301636,
+        "memory_mb": 39.28125
+      },
+      {
+        "timestamp": 33.24731993675232,
+        "memory_mb": 39.28125
+      },
+      {
+        "timestamp": 33.752439975738525,
+        "memory_mb": 39.28125
+      },
+      {
+        "timestamp": 34.25347089767456,
+        "memory_mb": 39.28125
+      },
+      {
+        "timestamp": 34.75844883918762,
+        "memory_mb": 39.296875
+      },
+      {
+        "timestamp": 35.263537883758545,
+        "memory_mb": 39.296875
+      },
+      {
+        "timestamp": 35.768614768981934,
+        "memory_mb": 39.40625
+      },
+      {
+        "timestamp": 36.27370285987854,
+        "memory_mb": 35.109375
+      },
+      {
+        "timestamp": 36.77641797065735,
+        "memory_mb": 35.109375
+      },
+      {
+        "timestamp": 37.28171491622925,
+        "memory_mb": 35.046875
+      },
+      {
+        "timestamp": 37.786842823028564,
+        "memory_mb": 35.0625
+      },
+      {
+        "timestamp": 38.29192399978638,
+        "memory_mb": 35.078125
+      },
+      {
+        "timestamp": 38.792320013046265,
+        "memory_mb": 35.09375
+      },
+      {
+        "timestamp": 39.292558670043945,
+        "memory_mb": 35.09375
+      },
+      {
+        "timestamp": 39.7940559387207,
+        "memory_mb": 35.09375
+      },
+      {
+        "timestamp": 40.29710268974304,
+        "memory_mb": 35.09375
+      },
+      {
+        "timestamp": 40.80224370956421,
+        "memory_mb": 35.109375
+      },
+      {
+        "timestamp": 41.304367780685425,
+        "memory_mb": 35.109375
+      },
+      {
+        "timestamp": 41.809515953063965,
+        "memory_mb": 35.546875
+      },
+      {
+        "timestamp": 42.309783935546875,
+        "memory_mb": 35.546875
+      },
+      {
+        "timestamp": 42.81500005722046,
+        "memory_mb": 35.546875
+      },
+      {
+        "timestamp": 43.32013487815857,
+        "memory_mb": 35.546875
+      },
+      {
+        "timestamp": 43.82533884048462,
+        "memory_mb": 35.546875
+      },
+      {
+        "timestamp": 44.330482959747314,
+        "memory_mb": 35.546875
+      },
+      {
+        "timestamp": 44.830620765686035,
+        "memory_mb": 35.546875
+      },
+      {
+        "timestamp": 45.33258080482483,
+        "memory_mb": 35.546875
+      },
+      {
+        "timestamp": 45.836251735687256,
+        "memory_mb": 35.546875
+      },
+      {
+        "timestamp": 46.341495990753174,
+        "memory_mb": 35.546875
+      },
+      {
+        "timestamp": 46.84671878814697,
+        "memory_mb": 35.5625
+      },
+      {
+        "timestamp": 47.35190296173096,
+        "memory_mb": 35.15625
+      },
+      {
+        "timestamp": 47.85634684562683,
+        "memory_mb": 35.203125
+      },
+      {
+        "timestamp": 48.36142373085022,
+        "memory_mb": 35.1875
+      },
+      {
+        "timestamp": 48.86649966239929,
+        "memory_mb": 35.296875
+      },
+      {
+        "timestamp": 49.3716139793396,
+        "memory_mb": 35.296875
+      },
+      {
+        "timestamp": 49.876739740371704,
+        "memory_mb": 34.203125
+      },
+      {
+        "timestamp": 50.37693381309509,
+        "memory_mb": 34.203125
+      },
+      {
+        "timestamp": 50.88202786445618,
+        "memory_mb": 34.1875
+      },
+      {
+        "timestamp": 51.38698482513428,
+        "memory_mb": 34.1875
+      },
+      {
+        "timestamp": 51.89182782173157,
+        "memory_mb": 34.4375
+      },
+      {
+        "timestamp": 52.39469790458679,
+        "memory_mb": 34.4375
+      },
+      {
+        "timestamp": 52.89981007575989,
+        "memory_mb": 34.53125
+      },
+      {
+        "timestamp": 53.40489172935486,
+        "memory_mb": 34.53125
+      },
+      {
+        "timestamp": 53.91000699996948,
+        "memory_mb": 34.53125
+      },
+      {
+        "timestamp": 54.415082931518555,
+        "memory_mb": 34.53125
+      },
+      {
+        "timestamp": 54.919431924819946,
+        "memory_mb": 34.53125
+      },
+      {
+        "timestamp": 55.42015790939331,
+        "memory_mb": 34.515625
+      },
+      {
+        "timestamp": 55.92498779296875,
+        "memory_mb": 34.421875
+      },
+      {
+        "timestamp": 56.430049896240234,
+        "memory_mb": 34.359375
+      },
+      {
+        "timestamp": 56.935181856155396,
+        "memory_mb": 34.53125
+      },
+      {
+        "timestamp": 57.43689179420471,
+        "memory_mb": 34.53125
+      },
+      {
+        "timestamp": 57.94167971611023,
+        "memory_mb": 35.859375
+      },
+      {
+        "timestamp": 58.44194293022156,
+        "memory_mb": 35.734375
+      },
+      {
+        "timestamp": 58.94328808784485,
+        "memory_mb": 35.734375
+      },
+      {
+        "timestamp": 59.44584083557129,
+        "memory_mb": 35.734375
+      },
+      {
+        "timestamp": 59.95086169242859,
+        "memory_mb": 35.734375
+      },
+      {
+        "timestamp": 60.45593285560608,
+        "memory_mb": 35.734375
+      },
+      {
+        "timestamp": 60.95836687088013,
+        "memory_mb": 35.734375
+      },
+      {
+        "timestamp": 61.46349787712097,
+        "memory_mb": 35.734375
+      },
+      {
+        "timestamp": 61.97109603881836,
+        "memory_mb": 35.53125
+      },
+      {
+        "timestamp": 62.47616982460022,
+        "memory_mb": 36.5625
+      },
+      {
+        "timestamp": 62.97658085823059,
+        "memory_mb": 36.5625
+      },
+      {
+        "timestamp": 63.481693983078,
+        "memory_mb": 36.546875
+      },
+      {
+        "timestamp": 63.982383728027344,
+        "memory_mb": 36.546875
+      },
+      {
+        "timestamp": 64.48754477500916,
+        "memory_mb": 36.359375
+      },
+      {
+        "timestamp": 64.99206876754761,
+        "memory_mb": 36.3125
+      },
+      {
+        "timestamp": 65.49716973304749,
+        "memory_mb": 36.25
+      },
+      {
+        "timestamp": 65.99821996688843,
+        "memory_mb": 36.25
+      },
+      {
+        "timestamp": 66.50185966491699,
+        "memory_mb": 37.21875
+      },
+      {
+        "timestamp": 67.00690293312073,
+        "memory_mb": 37.21875
+      },
+      {
+        "timestamp": 67.50756597518921,
+        "memory_mb": 37.1875
+      },
+      {
+        "timestamp": 68.0140700340271,
+        "memory_mb": 37.28125
+      },
+      {
+        "timestamp": 68.51486682891846,
+        "memory_mb": 37.21875
+      },
+      {
+        "timestamp": 69.01611995697021,
+        "memory_mb": 37.3125
+      },
+      {
+        "timestamp": 69.52128791809082,
+        "memory_mb": 37.3125
+      },
+      {
+        "timestamp": 70.03227996826172,
+        "memory_mb": 37.3125
+      },
+      {
+        "timestamp": 70.53630995750427,
+        "memory_mb": 37.3125
+      },
+      {
+        "timestamp": 71.03832173347473,
+        "memory_mb": 37.453125
+      },
+      {
+        "timestamp": 71.54367685317993,
+        "memory_mb": 37.453125
+      },
+      {
+        "timestamp": 72.04876184463501,
+        "memory_mb": 37.5625
+      },
+      {
+        "timestamp": 72.55030179023743,
+        "memory_mb": 37.484375
+      },
+      {
+        "timestamp": 73.055419921875,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 73.55791187286377,
+        "memory_mb": 36.5
+      },
+      {
+        "timestamp": 74.05828881263733,
+        "memory_mb": 36.671875
+      },
+      {
+        "timestamp": 74.55843567848206,
+        "memory_mb": 36.671875
+      },
+      {
+        "timestamp": 75.06282901763916,
+        "memory_mb": 36.671875
+      },
+      {
+        "timestamp": 75.56611490249634,
+        "memory_mb": 36.765625
+      },
+      {
+        "timestamp": 76.06728863716125,
+        "memory_mb": 36.765625
+      },
+      {
+        "timestamp": 76.5707540512085,
+        "memory_mb": 36.765625
+      },
+      {
+        "timestamp": 77.07570886611938,
+        "memory_mb": 37.0625
+      },
+      {
+        "timestamp": 77.57933592796326,
+        "memory_mb": 37.0625
+      },
+      {
+        "timestamp": 78.08338570594788,
+        "memory_mb": 37.15625
+      },
+      {
+        "timestamp": 78.58468079566956,
+        "memory_mb": 37.15625
+      },
+      {
+        "timestamp": 79.08979773521423,
+        "memory_mb": 37.171875
+      },
+      {
+        "timestamp": 79.59510087966919,
+        "memory_mb": 37.171875
+      },
+      {
+        "timestamp": 80.09558486938477,
+        "memory_mb": 36.890625
+      },
+      {
+        "timestamp": 80.59696292877197,
+        "memory_mb": 36.546875
+      },
+      {
+        "timestamp": 81.09815979003906,
+        "memory_mb": 36.53125
+      },
+      {
+        "timestamp": 81.6008677482605,
+        "memory_mb": 36.53125
+      },
+      {
+        "timestamp": 82.10490703582764,
+        "memory_mb": 36.90625
+      },
+      {
+        "timestamp": 82.60954284667969,
+        "memory_mb": 36.90625
+      },
+      {
+        "timestamp": 83.11001896858215,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 83.61380982398987,
+        "memory_mb": 36.15625
+      },
+      {
+        "timestamp": 84.1189239025116,
+        "memory_mb": 36.09375
+      },
+      {
+        "timestamp": 84.62194466590881,
+        "memory_mb": 36.09375
+      },
+      {
+        "timestamp": 85.1253559589386,
+        "memory_mb": 35.90625
+      },
+      {
+        "timestamp": 85.6290590763092,
+        "memory_mb": 36.203125
+      },
+      {
+        "timestamp": 86.13380098342896,
+        "memory_mb": 36.109375
+      },
+      {
+        "timestamp": 86.63525199890137,
+        "memory_mb": 36.109375
+      },
+      {
+        "timestamp": 87.13625907897949,
+        "memory_mb": 36.359375
+      },
+      {
+        "timestamp": 87.63815593719482,
+        "memory_mb": 36.359375
+      },
+      {
+        "timestamp": 88.14391875267029,
+        "memory_mb": 36.40625
+      },
+      {
+        "timestamp": 88.64515781402588,
+        "memory_mb": 36.40625
+      },
+      {
+        "timestamp": 89.15025687217712,
+        "memory_mb": 36.40625
+      },
+      {
+        "timestamp": 89.65353584289551,
+        "memory_mb": 36.484375
+      },
+      {
+        "timestamp": 90.15873098373413,
+        "memory_mb": 36.484375
+      },
+      {
+        "timestamp": 90.66334271430969,
+        "memory_mb": 36.515625
+      },
+      {
+        "timestamp": 91.16697072982788,
+        "memory_mb": 36.515625
+      },
+      {
+        "timestamp": 91.66808867454529,
+        "memory_mb": 36.515625
+      },
+      {
+        "timestamp": 92.1694917678833,
+        "memory_mb": 36.515625
+      },
+      {
+        "timestamp": 92.6712098121643,
+        "memory_mb": 36.515625
+      },
+      {
+        "timestamp": 93.17629790306091,
+        "memory_mb": 36.515625
+      },
+      {
+        "timestamp": 93.6814169883728,
+        "memory_mb": 36.609375
+      },
+      {
+        "timestamp": 94.18651986122131,
+        "memory_mb": 36.578125
+      },
+      {
+        "timestamp": 94.68767380714417,
+        "memory_mb": 36.453125
+      },
+      {
+        "timestamp": 95.19292378425598,
+        "memory_mb": 36.375
+      },
+      {
+        "timestamp": 95.69755387306213,
+        "memory_mb": 36.375
+      },
+      {
+        "timestamp": 96.20280599594116,
+        "memory_mb": 36.109375
+      },
+      {
+        "timestamp": 96.70472192764282,
+        "memory_mb": 36.109375
+      },
+      {
+        "timestamp": 97.20992588996887,
+        "memory_mb": 36.109375
+      },
+      {
+        "timestamp": 97.71259784698486,
+        "memory_mb": 36.125
+      },
+      {
+        "timestamp": 98.21772074699402,
+        "memory_mb": 36.125
+      },
+      {
+        "timestamp": 98.72283482551575,
+        "memory_mb": 36.125
+      },
+      {
+        "timestamp": 99.2248649597168,
+        "memory_mb": 36.125
+      },
+      {
+        "timestamp": 99.72998881340027,
+        "memory_mb": 36.09375
+      },
+      {
+        "timestamp": 100.23021101951599,
+        "memory_mb": 36.125
+      },
+      {
+        "timestamp": 100.73597002029419,
+        "memory_mb": 35.828125
+      },
+      {
+        "timestamp": 101.23702692985535,
+        "memory_mb": 36.15625
+      },
+      {
+        "timestamp": 101.74214696884155,
+        "memory_mb": 36.0
+      },
+      {
+        "timestamp": 102.24738574028015,
+        "memory_mb": 36.0
+      },
+      {
+        "timestamp": 102.75087571144104,
+        "memory_mb": 36.28125
+      },
+      {
+        "timestamp": 103.2560727596283,
+        "memory_mb": 36.28125
+      },
+      {
+        "timestamp": 103.75943875312805,
+        "memory_mb": 36.40625
+      },
+      {
+        "timestamp": 104.25976586341858,
+        "memory_mb": 36.40625
+      },
+      {
+        "timestamp": 104.7618339061737,
+        "memory_mb": 36.40625
+      },
+      {
+        "timestamp": 105.26699686050415,
+        "memory_mb": 36.421875
+      },
+      {
+        "timestamp": 105.76777791976929,
+        "memory_mb": 36.421875
+      },
+      {
+        "timestamp": 106.26847982406616,
+        "memory_mb": 36.421875
+      },
+      {
+        "timestamp": 106.7721779346466,
+        "memory_mb": 36.390625
+      },
+      {
+        "timestamp": 107.27656173706055,
+        "memory_mb": 36.390625
+      },
+      {
+        "timestamp": 107.78025698661804,
+        "memory_mb": 36.390625
+      },
+      {
+        "timestamp": 108.28548979759216,
+        "memory_mb": 36.390625
+      },
+      {
+        "timestamp": 108.79074096679688,
+        "memory_mb": 36.484375
+      },
+      {
+        "timestamp": 109.29272389411926,
+        "memory_mb": 36.484375
+      },
+      {
+        "timestamp": 109.79789280891418,
+        "memory_mb": 36.484375
+      },
+      {
+        "timestamp": 110.29929375648499,
+        "memory_mb": 36.5
+      },
+      {
+        "timestamp": 110.79945588111877,
+        "memory_mb": 36.453125
+      },
+      {
+        "timestamp": 111.30466198921204,
+        "memory_mb": 36.5625
+      },
+      {
+        "timestamp": 111.80981397628784,
+        "memory_mb": 36.453125
+      },
+      {
+        "timestamp": 112.31142783164978,
+        "memory_mb": 36.15625
+      },
+      {
+        "timestamp": 112.81606483459473,
+        "memory_mb": 36.140625
+      },
+      {
+        "timestamp": 113.31860089302063,
+        "memory_mb": 36.140625
+      },
+      {
+        "timestamp": 113.81989598274231,
+        "memory_mb": 36.140625
+      },
+      {
+        "timestamp": 114.323246717453,
+        "memory_mb": 36.140625
+      },
+      {
+        "timestamp": 114.82531499862671,
+        "memory_mb": 36.140625
+      },
+      {
+        "timestamp": 115.32695865631104,
+        "memory_mb": 36.1875
+      },
+      {
+        "timestamp": 115.83057188987732,
+        "memory_mb": 36.1875
+      },
+      {
+        "timestamp": 116.33544087409973,
+        "memory_mb": 36.1875
+      },
+      {
+        "timestamp": 116.84066081047058,
+        "memory_mb": 36.1875
+      },
+      {
+        "timestamp": 117.34380793571472,
+        "memory_mb": 36.21875
+      },
+      {
+        "timestamp": 117.8488998413086,
+        "memory_mb": 36.125
+      },
+      {
+        "timestamp": 118.35570478439331,
+        "memory_mb": 36.125
+      },
+      {
+        "timestamp": 118.86082482337952,
+        "memory_mb": 36.109375
+      },
+      {
+        "timestamp": 119.36590790748596,
+        "memory_mb": 36.125
+      },
+      {
+        "timestamp": 119.8678719997406,
+        "memory_mb": 36.125
+      },
+      {
+        "timestamp": 120.37309789657593,
+        "memory_mb": 36.125
+      },
+      {
+        "timestamp": 120.87726283073425,
+        "memory_mb": 36.125
+      },
+      {
+        "timestamp": 121.37788891792297,
+        "memory_mb": 36.15625
+      },
+      {
+        "timestamp": 121.87987399101257,
+        "memory_mb": 36.1875
+      },
+      {
+        "timestamp": 122.38511681556702,
+        "memory_mb": 36.1875
+      },
+      {
+        "timestamp": 122.89030075073242,
+        "memory_mb": 36.1875
+      },
+      {
+        "timestamp": 123.39548063278198,
+        "memory_mb": 36.1875
+      },
+      {
+        "timestamp": 123.89868187904358,
+        "memory_mb": 36.953125
+      },
+      {
+        "timestamp": 124.40378904342651,
+        "memory_mb": 36.953125
+      },
+      {
+        "timestamp": 124.90655899047852,
+        "memory_mb": 36.96875
+      },
+      {
+        "timestamp": 125.40914392471313,
+        "memory_mb": 36.96875
+      },
+      {
+        "timestamp": 125.91437005996704,
+        "memory_mb": 36.96875
+      },
+      {
+        "timestamp": 126.41894698143005,
+        "memory_mb": 36.96875
+      },
+      {
+        "timestamp": 126.92413902282715,
+        "memory_mb": 36.96875
+      },
+      {
+        "timestamp": 127.42936706542969,
+        "memory_mb": 36.96875
+      },
+      {
+        "timestamp": 127.93449592590332,
+        "memory_mb": 37.015625
+      },
+      {
+        "timestamp": 128.43966794013977,
+        "memory_mb": 37.015625
+      },
+      {
+        "timestamp": 128.94479274749756,
+        "memory_mb": 37.015625
+      },
+      {
+        "timestamp": 129.44715285301208,
+        "memory_mb": 37.015625
+      },
+      {
+        "timestamp": 129.95239090919495,
+        "memory_mb": 37.015625
+      },
+      {
+        "timestamp": 130.45679879188538,
+        "memory_mb": 37.015625
+      },
+      {
+        "timestamp": 130.96203994750977,
+        "memory_mb": 37.015625
+      },
+      {
+        "timestamp": 131.4632408618927,
+        "memory_mb": 37.015625
+      },
+      {
+        "timestamp": 131.968487739563,
+        "memory_mb": 37.015625
+      },
+      {
+        "timestamp": 132.47370076179504,
+        "memory_mb": 37.015625
+      },
+      {
+        "timestamp": 132.9764928817749,
+        "memory_mb": 37.015625
+      },
+      {
+        "timestamp": 133.4817509651184,
+        "memory_mb": 37.015625
+      },
+      {
+        "timestamp": 133.98256301879883,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 134.48696494102478,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 134.99186182022095,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 135.49699878692627,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 136.00213503837585,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 136.50623893737793,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 137.00776982307434,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 137.5097939968109,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 138.0148069858551,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 138.5198998451233,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 139.02513575553894,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 139.53035187721252,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 140.03103685379028,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 140.53175497055054,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 141.0339047908783,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 141.53909873962402,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 142.04314374923706,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 142.54697179794312,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 143.05209279060364,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 143.55266094207764,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 144.0579047203064,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 144.56315994262695,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 145.06807589530945,
+        "memory_mb": 37.046875
+      },
+      {
+        "timestamp": 145.57057881355286,
+        "memory_mb": 37.15625
+      },
+      {
+        "timestamp": 146.07573890686035,
+        "memory_mb": 37.15625
+      },
+      {
+        "timestamp": 146.57698392868042,
+        "memory_mb": 37.15625
+      },
+      {
+        "timestamp": 147.0821077823639,
+        "memory_mb": 37.15625
+      },
+      {
+        "timestamp": 147.58699488639832,
+        "memory_mb": 37.15625
+      },
+      {
+        "timestamp": 148.09221506118774,
+        "memory_mb": 37.15625
+      },
+      {
+        "timestamp": 148.59736394882202,
+        "memory_mb": 37.15625
+      },
+      {
+        "timestamp": 149.10248804092407,
+        "memory_mb": 37.15625
+      },
+      {
+        "timestamp": 149.60770773887634,
+        "memory_mb": 37.15625
+      },
+      {
+        "timestamp": 150.10950183868408,
+        "memory_mb": 37.15625
+      },
+      {
+        "timestamp": 150.60985589027405,
+        "memory_mb": 37.15625
+      },
+      {
+        "timestamp": 151.11503195762634,
+        "memory_mb": 37.15625
+      },
+      {
+        "timestamp": 151.6194407939911,
+        "memory_mb": 37.359375
+      },
+      {
+        "timestamp": 152.12389183044434,
+        "memory_mb": 37.359375
+      },
+      {
+        "timestamp": 152.6270079612732,
+        "memory_mb": 37.359375
+      },
+      {
+        "timestamp": 153.1321520805359,
+        "memory_mb": 37.359375
+      },
+      {
+        "timestamp": 153.63728880882263,
+        "memory_mb": 37.359375
+      },
+      {
+        "timestamp": 154.1424539089203,
+        "memory_mb": 37.359375
+      },
+      {
+        "timestamp": 154.64700078964233,
+        "memory_mb": 37.359375
+      },
+      {
+        "timestamp": 155.15214085578918,
+        "memory_mb": 37.390625
+      },
+      {
+        "timestamp": 155.6569619178772,
+        "memory_mb": 37.390625
+      },
+      {
+        "timestamp": 156.1621708869934,
+        "memory_mb": 37.390625
+      },
+      {
+        "timestamp": 156.66699886322021,
+        "memory_mb": 37.390625
+      },
+      {
+        "timestamp": 157.17226481437683,
+        "memory_mb": 37.390625
+      },
+      {
+        "timestamp": 157.6774320602417,
+        "memory_mb": 37.390625
+      },
+      {
+        "timestamp": 158.1789150238037,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 158.6803538799286,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 159.1855070590973,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 159.68841981887817,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 160.1936719417572,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 160.69891571998596,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 161.20417094230652,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 161.7058789730072,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 162.2116677761078,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 162.71689295768738,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 163.2221028804779,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 163.72479581832886,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 164.22520875930786,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 164.73044085502625,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 165.2318959236145,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 165.73616194725037,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 166.2413718700409,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 166.7428228855133,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 167.24498295783997,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 167.74701476097107,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 168.25513172149658,
+        "memory_mb": 37.40625
+      },
+      {
+        "timestamp": 168.76008796691895,
+        "memory_mb": 37.390625
+      },
+      {
+        "timestamp": 169.2626359462738,
+        "memory_mb": 37.390625
+      },
+      {
+        "timestamp": 169.76800298690796,
+        "memory_mb": 37.375
+      },
+      {
+        "timestamp": 170.27056002616882,
+        "memory_mb": 37.390625
+      },
+      {
+        "timestamp": 170.77446484565735,
+        "memory_mb": 36.84375
+      },
+      {
+        "timestamp": 171.27694368362427,
+        "memory_mb": 36.734375
+      },
+      {
+        "timestamp": 171.78147768974304,
+        "memory_mb": 36.34375
+      },
+      {
+        "timestamp": 172.28673481941223,
+        "memory_mb": 36.3125
+      },
+      {
+        "timestamp": 172.78696870803833,
+        "memory_mb": 36.3125
+      },
+      {
+        "timestamp": 173.29219508171082,
+        "memory_mb": 36.3125
+      },
+      {
+        "timestamp": 173.79740595817566,
+        "memory_mb": 36.296875
+      },
+      {
+        "timestamp": 174.30042386054993,
+        "memory_mb": 36.296875
+      },
+      {
+        "timestamp": 174.80108904838562,
+        "memory_mb": 36.296875
+      },
+      {
+        "timestamp": 175.30633902549744,
+        "memory_mb": 36.296875
+      },
+      {
+        "timestamp": 175.8097279071808,
+        "memory_mb": 36.296875
+      },
+      {
+        "timestamp": 176.31490683555603,
+        "memory_mb": 36.296875
+      },
+      {
+        "timestamp": 176.81703782081604,
+        "memory_mb": 36.296875
+      },
+      {
+        "timestamp": 177.32213973999023,
+        "memory_mb": 36.296875
+      },
+      {
+        "timestamp": 177.8234989643097,
+        "memory_mb": 36.296875
+      },
+      {
+        "timestamp": 178.3286838531494,
+        "memory_mb": 38.203125
+      },
+      {
+        "timestamp": 178.83363509178162,
+        "memory_mb": 38.015625
+      },
+      {
+        "timestamp": 179.33511090278625,
+        "memory_mb": 37.921875
+      },
+      {
+        "timestamp": 179.84037280082703,
+        "memory_mb": 37.921875
+      },
+      {
+        "timestamp": 180.3430118560791,
+        "memory_mb": 37.953125
+      },
+      {
+        "timestamp": 180.846755027771,
+        "memory_mb": 37.953125
+      },
+      {
+        "timestamp": 181.3477008342743,
+        "memory_mb": 37.953125
+      },
+      {
+        "timestamp": 181.8528549671173,
+        "memory_mb": 37.953125
+      },
+      {
+        "timestamp": 182.35700678825378,
+        "memory_mb": 37.953125
+      },
+      {
+        "timestamp": 182.85874891281128,
+        "memory_mb": 37.953125
+      },
+      {
+        "timestamp": 183.36396288871765,
+        "memory_mb": 37.96875
+      },
+      {
+        "timestamp": 183.86909985542297,
+        "memory_mb": 37.96875
+      },
+      {
+        "timestamp": 184.37287497520447,
+        "memory_mb": 37.96875
+      },
+      {
+        "timestamp": 184.87622594833374,
+        "memory_mb": 38.046875
+      },
+      {
+        "timestamp": 185.38140678405762,
+        "memory_mb": 38.046875
+      },
+      {
+        "timestamp": 185.8829209804535,
+        "memory_mb": 38.328125
+      },
+      {
+        "timestamp": 186.38696694374084,
+        "memory_mb": 38.328125
+      },
+      {
+        "timestamp": 186.8921778202057,
+        "memory_mb": 38.328125
+      },
+      {
+        "timestamp": 187.3973879814148,
+        "memory_mb": 38.328125
+      },
+      {
+        "timestamp": 187.90255570411682,
+        "memory_mb": 38.328125
+      },
+      {
+        "timestamp": 188.4070749282837,
+        "memory_mb": 38.375
+      },
+      {
+        "timestamp": 188.9096598625183,
+        "memory_mb": 38.375
+      },
+      {
+        "timestamp": 189.4148280620575,
+        "memory_mb": 38.375
+      },
+      {
+        "timestamp": 189.91997575759888,
+        "memory_mb": 38.375
+      },
+      {
+        "timestamp": 190.42511367797852,
+        "memory_mb": 38.375
+      },
+      {
+        "timestamp": 190.9303207397461,
+        "memory_mb": 38.390625
+      },
+      {
+        "timestamp": 191.43546175956726,
+        "memory_mb": 38.390625
+      },
+      {
+        "timestamp": 191.94068670272827,
+        "memory_mb": 38.390625
+      },
+      {
+        "timestamp": 192.44299483299255,
+        "memory_mb": 38.390625
+      },
+      {
+        "timestamp": 192.94699478149414,
+        "memory_mb": 38.421875
+      },
+      {
+        "timestamp": 193.4521608352661,
+        "memory_mb": 38.421875
+      },
+      {
+        "timestamp": 193.95740270614624,
+        "memory_mb": 38.421875
+      },
+      {
+        "timestamp": 194.45917582511902,
+        "memory_mb": 38.421875
+      },
+      {
+        "timestamp": 194.96438765525818,
+        "memory_mb": 38.421875
+      },
+      {
+        "timestamp": 195.46960377693176,
+        "memory_mb": 38.421875
+      },
+      {
+        "timestamp": 195.97184371948242,
+        "memory_mb": 38.421875
+      },
+      {
+        "timestamp": 196.47699403762817,
+        "memory_mb": 38.421875
+      },
+      {
+        "timestamp": 196.97903680801392,
+        "memory_mb": 38.421875
+      },
+      {
+        "timestamp": 197.48424291610718,
+        "memory_mb": 38.421875
+      },
+      {
+        "timestamp": 197.98938703536987,
+        "memory_mb": 38.421875
+      },
+      {
+        "timestamp": 198.4945788383484,
+        "memory_mb": 38.421875
+      },
+      {
+        "timestamp": 198.9979829788208,
+        "memory_mb": 38.421875
+      },
+      {
+        "timestamp": 199.50312685966492,
+        "memory_mb": 38.421875
+      },
+      {
+        "timestamp": 200.00634908676147,
+        "memory_mb": 38.421875
+      },
+      {
+        "timestamp": 200.50950598716736,
+        "memory_mb": 38.421875
+      },
+      {
+        "timestamp": 201.0147190093994,
+        "memory_mb": 38.421875
+      },
+      {
+        "timestamp": 201.516943693161,
+        "memory_mb": 38.4375
+      },
+      {
+        "timestamp": 202.01765775680542,
+        "memory_mb": 38.4375
+      },
+      {
+        "timestamp": 202.5216109752655,
+        "memory_mb": 38.4375
+      },
+      {
+        "timestamp": 203.02573370933533,
+        "memory_mb": 38.4375
+      },
+      {
+        "timestamp": 203.53092885017395,
+        "memory_mb": 38.4375
+      },
+      {
+        "timestamp": 204.03604984283447,
+        "memory_mb": 38.4375
+      },
+      {
+        "timestamp": 204.54124069213867,
+        "memory_mb": 38.4375
+      },
+      {
+        "timestamp": 205.0429229736328,
+        "memory_mb": 38.4375
+      },
+      {
+        "timestamp": 205.54459071159363,
+        "memory_mb": 38.4375
+      },
+      {
+        "timestamp": 206.04637479782104,
+        "memory_mb": 38.4375
+      },
+      {
+        "timestamp": 206.55147004127502,
+        "memory_mb": 38.4375
+      },
+      {
+        "timestamp": 207.05662369728088,
+        "memory_mb": 38.453125
+      },
+      {
+        "timestamp": 207.55907082557678,
+        "memory_mb": 38.453125
+      },
+      {
+        "timestamp": 208.06428790092468,
+        "memory_mb": 38.453125
+      },
+      {
+        "timestamp": 208.56568694114685,
+        "memory_mb": 38.453125
+      },
+      {
+        "timestamp": 209.0708327293396,
+        "memory_mb": 38.46875
+      },
+      {
+        "timestamp": 209.57599186897278,
+        "memory_mb": 38.46875
+      },
+      {
+        "timestamp": 210.07618403434753,
+        "memory_mb": 38.46875
+      },
+      {
+        "timestamp": 210.58140063285828,
+        "memory_mb": 38.46875
+      },
+      {
+        "timestamp": 211.08401584625244,
+        "memory_mb": 38.46875
+      },
+      {
+        "timestamp": 211.5860080718994,
+        "memory_mb": 38.53125
+      },
+      {
+        "timestamp": 212.09127283096313,
+        "memory_mb": 38.53125
+      },
+      {
+        "timestamp": 212.5948610305786,
+        "memory_mb": 38.53125
+      },
+      {
+        "timestamp": 213.0970537662506,
+        "memory_mb": 38.53125
+      },
+      {
+        "timestamp": 213.5979368686676,
+        "memory_mb": 38.53125
+      },
+      {
+        "timestamp": 214.1023519039154,
+        "memory_mb": 38.5
+      },
+      {
+        "timestamp": 214.60759806632996,
+        "memory_mb": 38.5
+      },
+      {
+        "timestamp": 215.10957288742065,
+        "memory_mb": 38.5
+      },
+      {
+        "timestamp": 215.61484575271606,
+        "memory_mb": 38.5
+      },
+      {
+        "timestamp": 216.11957788467407,
+        "memory_mb": 38.5
+      },
+      {
+        "timestamp": 216.62166595458984,
+        "memory_mb": 38.515625
+      },
+      {
+        "timestamp": 217.12247800827026,
+        "memory_mb": 38.515625
+      },
+      {
+        "timestamp": 217.62658286094666,
+        "memory_mb": 38.515625
+      },
+      {
+        "timestamp": 218.12706398963928,
+        "memory_mb": 38.515625
+      },
+      {
+        "timestamp": 218.6323640346527,
+        "memory_mb": 38.515625
+      },
+      {
+        "timestamp": 219.13480377197266,
+        "memory_mb": 38.515625
+      },
+      {
+        "timestamp": 219.64002394676208,
+        "memory_mb": 38.640625
+      },
+      {
+        "timestamp": 220.14530301094055,
+        "memory_mb": 38.640625
+      },
+      {
+        "timestamp": 220.64642977714539,
+        "memory_mb": 38.640625
+      },
+      {
+        "timestamp": 221.15156078338623,
+        "memory_mb": 38.640625
+      },
+      {
+        "timestamp": 221.6568009853363,
+        "memory_mb": 38.65625
+      },
+      {
+        "timestamp": 222.1620328426361,
+        "memory_mb": 38.65625
+      },
+      {
+        "timestamp": 222.6647698879242,
+        "memory_mb": 38.65625
+      },
+      {
+        "timestamp": 223.16703987121582,
+        "memory_mb": 38.65625
+      }
+    ],
+    "stage_memory_usage": {
+      "outline_generation_increase": -11.0625,
+      "chapter_reorder_increase": -2.546875,
+      "character_generation_increase": 0.234375,
+      "story_expansion_increase": -30.0625,
+      "dialogue_generation_increase": 1.3125,
+      "story_enhancement_increase": 1.078125
+    },
+    "memory_per_character": 19.9921875,
+    "story_features": {
+      "character_count": 4,
+      "character_description_total_length": 1506,
+      "character_complexity_score": 449.5
+    }
+  },
+  "offline_analysis_ready": {
+    "data_available_for_offline_analysis": true,
+    "story_data_summary": {
+      "chapters": 2,
+      "characters": 2
+    },
+    "note": "For detailed quality analysis, please use offline analysis tools to process the complete performance report JSON file"
+  },
+  "api_cost_breakdown": {
+    "total_cost": 0.5070299999999998,
+    "total_tokens": 30173,
+    "cost_per_stage": {
+      "outline_generation": {
+        "input_tokens": 314,
+        "output_tokens": 529,
+        "total_tokens": 843,
+        "total_cost": 0.01901,
+        "api_calls": 1
+      },
+      "chapter_reorder": {
+        "input_tokens": 1460,
+        "output_tokens": 1296,
+        "total_tokens": 2756,
+        "total_cost": 0.05347999999999999,
+        "api_calls": 2
+      },
+      "character_generation": {
+        "input_tokens": 1470,
+        "output_tokens": 445,
+        "total_tokens": 1915,
+        "total_cost": 0.02805,
+        "api_calls": 1
+      },
+      "story_expansion": {
+        "input_tokens": 4866,
+        "output_tokens": 1754,
+        "total_tokens": 6620,
+        "total_cost": 0.10127999999999998,
+        "api_calls": 5
+      },
+      "dialogue_generation": {
+        "input_tokens": 11798,
+        "output_tokens": 6241,
+        "total_tokens": 18039,
+        "total_cost": 0.3052100000000001,
+        "api_calls": 49
+      }
+    },
+    "detailed_api_calls": {
+      "outline_generation": [
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 314,
+          "output_tokens": 529,
+          "total_tokens": 843,
+          "cost": 0.01901,
+          "response_time": 5.775302171707153,
+          "timestamp": 5.777878999710083
+        }
+      ],
+      "chapter_reorder": [
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 250,
+          "output_tokens": 144,
+          "total_tokens": 394,
+          "cost": 0.00682,
+          "response_time": 1.3692119121551514,
+          "timestamp": 7.150278806686401
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 1210,
+          "output_tokens": 1152,
+          "total_tokens": 2362,
+          "cost": 0.04665999999999999,
+          "response_time": 15.068440914154053,
+          "timestamp": 22.21926498413086
+        }
+      ],
+      "character_generation": [
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 1470,
+          "output_tokens": 445,
+          "total_tokens": 1915,
+          "cost": 0.02805,
+          "response_time": 5.44550895690918,
+          "timestamp": 27.67028498649597
+        }
+      ],
+      "story_expansion": [
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 1025,
+          "output_tokens": 403,
+          "total_tokens": 1428,
+          "cost": 0.02234,
+          "response_time": 7.0536110401153564,
+          "timestamp": 34.72629404067993
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 961,
+          "output_tokens": 376,
+          "total_tokens": 1337,
+          "cost": 0.02089,
+          "response_time": 5.642758131027222,
+          "timestamp": 41.37492775917053
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 959,
+          "output_tokens": 329,
+          "total_tokens": 1288,
+          "cost": 0.019459999999999998,
+          "response_time": 5.054269075393677,
+          "timestamp": 47.43212389945984
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 952,
+          "output_tokens": 255,
+          "total_tokens": 1207,
+          "cost": 0.017169999999999998,
+          "response_time": 3.0024330615997314,
+          "timestamp": 51.43863296508789
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 969,
+          "output_tokens": 391,
+          "total_tokens": 1360,
+          "cost": 0.02142,
+          "response_time": 4.360128879547119,
+          "timestamp": 56.80035400390625
+        }
+      ],
+      "dialogue_generation": [
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 773,
+          "output_tokens": 575,
+          "total_tokens": 1348,
+          "cost": 0.02498,
+          "response_time": 4.387218236923218,
+          "timestamp": 62.198407888412476
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 751,
+          "output_tokens": 584,
+          "total_tokens": 1335,
+          "cost": 0.025029999999999997,
+          "response_time": 4.122228384017944,
+          "timestamp": 66.32163572311401
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 137,
+          "output_tokens": 62,
+          "total_tokens": 199,
+          "cost": 0.0032300000000000002,
+          "response_time": 1.357600212097168,
+          "timestamp": 67.68089580535889
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 115,
+          "output_tokens": 60,
+          "total_tokens": 175,
+          "cost": 0.00295,
+          "response_time": 1.0968821048736572,
+          "timestamp": 68.77841782569885
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 217,
+          "output_tokens": 99,
+          "total_tokens": 316,
+          "cost": 0.0051400000000000005,
+          "response_time": 2.015669822692871,
+          "timestamp": 70.79473686218262
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 130,
+          "output_tokens": 58,
+          "total_tokens": 188,
+          "cost": 0.00304,
+          "response_time": 1.2367000579833984,
+          "timestamp": 72.03161692619324
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 240,
+          "output_tokens": 123,
+          "total_tokens": 363,
+          "cost": 0.00609,
+          "response_time": 1.8677408695220947,
+          "timestamp": 73.90000796318054
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 152,
+          "output_tokens": 62,
+          "total_tokens": 214,
+          "cost": 0.00338,
+          "response_time": 1.387125015258789,
+          "timestamp": 75.28734588623047
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 261,
+          "output_tokens": 112,
+          "total_tokens": 373,
+          "cost": 0.0059700000000000005,
+          "response_time": 1.638007640838623,
+          "timestamp": 76.92588067054749
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 127,
+          "output_tokens": 41,
+          "total_tokens": 168,
+          "cost": 0.0025,
+          "response_time": 0.8630831241607666,
+          "timestamp": 78.60887384414673
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 85,
+          "output_tokens": 72,
+          "total_tokens": 157,
+          "cost": 0.0030099999999999997,
+          "response_time": 1.436798095703125,
+          "timestamp": 80.04633498191833
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 200,
+          "output_tokens": 96,
+          "total_tokens": 296,
+          "cost": 0.00488,
+          "response_time": 2.038862943649292,
+          "timestamp": 82.08555793762207
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 709,
+          "output_tokens": 403,
+          "total_tokens": 1112,
+          "cost": 0.01918,
+          "response_time": 2.6521620750427246,
+          "timestamp": 85.5159170627594
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 139,
+          "output_tokens": 63,
+          "total_tokens": 202,
+          "cost": 0.00328,
+          "response_time": 1.2584660053253174,
+          "timestamp": 86.77554893493652
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 119,
+          "output_tokens": 97,
+          "total_tokens": 216,
+          "cost": 0.0040999999999999995,
+          "response_time": 1.3347480297088623,
+          "timestamp": 88.11049175262451
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 249,
+          "output_tokens": 96,
+          "total_tokens": 345,
+          "cost": 0.00537,
+          "response_time": 1.501072883605957,
+          "timestamp": 89.61189293861389
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 640,
+          "output_tokens": 350,
+          "total_tokens": 990,
+          "cost": 0.0169,
+          "response_time": 2.901144027709961,
+          "timestamp": 93.34375286102295
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 147,
+          "output_tokens": 49,
+          "total_tokens": 196,
+          "cost": 0.00294,
+          "response_time": 1.0913329124450684,
+          "timestamp": 94.43638300895691
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 112,
+          "output_tokens": 97,
+          "total_tokens": 209,
+          "cost": 0.00403,
+          "response_time": 1.535477876663208,
+          "timestamp": 95.97219586372375
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 256,
+          "output_tokens": 105,
+          "total_tokens": 361,
+          "cost": 0.00571,
+          "response_time": 1.5377559661865234,
+          "timestamp": 97.5104467868805
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 167,
+          "output_tokens": 49,
+          "total_tokens": 216,
+          "cost": 0.00314,
+          "response_time": 0.8962700366973877,
+          "timestamp": 98.40748691558838
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 283,
+          "output_tokens": 129,
+          "total_tokens": 412,
+          "cost": 0.006699999999999999,
+          "response_time": 1.5511629581451416,
+          "timestamp": 99.95928597450256
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 196,
+          "output_tokens": 58,
+          "total_tokens": 254,
+          "cost": 0.0037,
+          "response_time": 1.0527067184448242,
+          "timestamp": 101.01220607757568
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 319,
+          "output_tokens": 102,
+          "total_tokens": 421,
+          "cost": 0.00625,
+          "response_time": 1.6025469303131104,
+          "timestamp": 102.6158618927002
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 152,
+          "output_tokens": 53,
+          "total_tokens": 205,
+          "cost": 0.00311,
+          "response_time": 1.2963788509368896,
+          "timestamp": 104.86718368530273
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 119,
+          "output_tokens": 74,
+          "total_tokens": 193,
+          "cost": 0.00341,
+          "response_time": 1.459057092666626,
+          "timestamp": 106.32656693458557
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 244,
+          "output_tokens": 84,
+          "total_tokens": 328,
+          "cost": 0.00496,
+          "response_time": 1.1761260032653809,
+          "timestamp": 107.50303268432617
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 155,
+          "output_tokens": 47,
+          "total_tokens": 202,
+          "cost": 0.00296,
+          "response_time": 0.8592398166656494,
+          "timestamp": 108.36258387565613
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 263,
+          "output_tokens": 89,
+          "total_tokens": 352,
+          "cost": 0.005299999999999999,
+          "response_time": 1.5795049667358398,
+          "timestamp": 109.94344186782837
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 765,
+          "output_tokens": 564,
+          "total_tokens": 1329,
+          "cost": 0.024569999999999998,
+          "response_time": 4.258594989776611,
+          "timestamp": 115.18221092224121
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 145,
+          "output_tokens": 73,
+          "total_tokens": 218,
+          "cost": 0.0036399999999999996,
+          "response_time": 1.984546184539795,
+          "timestamp": 117.16873598098755
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 135,
+          "output_tokens": 90,
+          "total_tokens": 225,
+          "cost": 0.00405,
+          "response_time": 2.138842821121216,
+          "timestamp": 119.30827474594116
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 242,
+          "output_tokens": 109,
+          "total_tokens": 351,
+          "cost": 0.00569,
+          "response_time": 1.6013209819793701,
+          "timestamp": 120.91008472442627
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 144,
+          "output_tokens": 74,
+          "total_tokens": 218,
+          "cost": 0.0036599999999999996,
+          "response_time": 1.592165231704712,
+          "timestamp": 123.40529990196228
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 135,
+          "output_tokens": 78,
+          "total_tokens": 213,
+          "cost": 0.00369,
+          "response_time": 1.1562538146972656,
+          "timestamp": 124.56205677986145
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 245,
+          "output_tokens": 117,
+          "total_tokens": 362,
+          "cost": 0.00596,
+          "response_time": 2.9492862224578857,
+          "timestamp": 127.51195478439331
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 144,
+          "output_tokens": 81,
+          "total_tokens": 225,
+          "cost": 0.0038699999999999997,
+          "response_time": 1.5820369720458984,
+          "timestamp": 130.1158447265625
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 142,
+          "output_tokens": 135,
+          "total_tokens": 277,
+          "cost": 0.005469999999999999,
+          "response_time": 2.2116219997406006,
+          "timestamp": 132.3280770778656
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 299,
+          "output_tokens": 104,
+          "total_tokens": 403,
+          "cost": 0.00611,
+          "response_time": 1.363964319229126,
+          "timestamp": 133.6926007270813
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 147,
+          "output_tokens": 68,
+          "total_tokens": 215,
+          "cost": 0.00351,
+          "response_time": 1.2527191638946533,
+          "timestamp": 135.64524793624878
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 132,
+          "output_tokens": 92,
+          "total_tokens": 224,
+          "cost": 0.00408,
+          "response_time": 2.004676103591919,
+          "timestamp": 137.65046977996826
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 243,
+          "output_tokens": 125,
+          "total_tokens": 368,
+          "cost": 0.00618,
+          "response_time": 1.5408508777618408,
+          "timestamp": 139.19200372695923
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 159,
+          "output_tokens": 58,
+          "total_tokens": 217,
+          "cost": 0.00333,
+          "response_time": 1.2269008159637451,
+          "timestamp": 140.41916584968567
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 266,
+          "output_tokens": 138,
+          "total_tokens": 404,
+          "cost": 0.0068000000000000005,
+          "response_time": 1.6261060237884521,
+          "timestamp": 142.04677772521973
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 182,
+          "output_tokens": 60,
+          "total_tokens": 242,
+          "cost": 0.00362,
+          "response_time": 1.2341151237487793,
+          "timestamp": 143.28120183944702
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 287,
+          "output_tokens": 140,
+          "total_tokens": 427,
+          "cost": 0.00707,
+          "response_time": 2.1304330825805664,
+          "timestamp": 145.4133758544922
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 144,
+          "output_tokens": 67,
+          "total_tokens": 211,
+          "cost": 0.00345,
+          "response_time": 1.3873651027679443,
+          "timestamp": 147.80126190185547
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 128,
+          "output_tokens": 87,
+          "total_tokens": 215,
+          "cost": 0.0038900000000000002,
+          "response_time": 1.5549588203430176,
+          "timestamp": 149.3567590713501
+        },
+        {
+          "model": "gpt-4.1",
+          "api_call_type": "completion",
+          "input_tokens": 257,
+          "output_tokens": 92,
+          "total_tokens": 349,
+          "cost": 0.00533,
+          "response_time": 1.5927908420562744,
+          "timestamp": 150.9499876499176
+        }
+      ]
+    },
+    "response_time_stats": {
+      "outline_generation": {
+        "avg_response_time": 5.775302171707153,
+        "max_response_time": 5.775302171707153,
+        "min_response_time": 5.775302171707153,
+        "total_calls": 1
+      },
+      "chapter_reorder": {
+        "avg_response_time": 8.218826413154602,
+        "max_response_time": 15.068440914154053,
+        "min_response_time": 1.3692119121551514,
+        "total_calls": 2
+      },
+      "character_generation": {
+        "avg_response_time": 5.44550895690918,
+        "max_response_time": 5.44550895690918,
+        "min_response_time": 5.44550895690918,
+        "total_calls": 1
+      },
+      "story_expansion": {
+        "avg_response_time": 5.022640037536621,
+        "max_response_time": 7.0536110401153564,
+        "min_response_time": 3.0024330615997314,
+        "total_calls": 5
+      },
+      "dialogue_generation": {
+        "avg_response_time": 1.7371963092258997,
+        "max_response_time": 4.387218236923218,
+        "min_response_time": 0.8592398166656494,
+        "total_calls": 49
+      },
+      "overall": {
+        "avg_response_time": 2.377487643011685,
+        "max_response_time": 15.068440914154053,
+        "min_response_time": 0.8592398166656494,
+        "total_api_calls": 58
+      }
+    }
+  },
+  "cache_performance": {
+    "total_cache_attempts": 3,
+    "total_cache_hits": 0,
+    "cache_efficiency": 0.0,
+    "cache_hits_by_stage": {}
+  },
+  "error_and_reliability": {
+    "total_errors": 0,
+    "api_failures": 0,
+    "parsing_errors": 0,
+    "retry_attempts": 0,
+    "error_details": []
+  },
+  "performance_summary": {
+    "total_time_seconds": 223.6728687286377,
+    "total_time_formatted": "3m 43.7s",
+    "slowest_stage": "dialogue_generation",
+    "slowest_stage_time": 120.15231704711914,
+    "efficiency_rating": "Normal",
+    "throughput_chars_per_second": 28.863581160719534,
+    "estimated_complexity_class": "Quadratic O(n²) (low confidence - limited data)"
+  }
+}

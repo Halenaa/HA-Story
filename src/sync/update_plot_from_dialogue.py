@@ -3,49 +3,49 @@ from src.utils.utils import generate_response, convert_json
 
 def update_plot_from_dialogue(chapter_id, original_plot, dialogue, character_info, model="gpt-4.1"):
     """
-    根据对话和角色信息，自动更新当前章节的 plot。
-    返回：dict，含 updated_plot / change_summary / changed
+    Automatically update the current chapter's plot based on dialogue and character information.
+    Returns: dict, containing updated_plot / change_summary / changed
     """
     role_profiles = "\n".join([
-        f"{char['name']}（性格：{char['traits']}，动机：{char['motivation']}）"
+        f"{char['name']} (Personality: {char['traits']}, Motivation: {char['motivation']})"
         for char in character_info
     ])
         
-    # ✅ 防御式检查，确保 dialogue 是 list，并兼容不同字段名
+    # Defensive check to ensure dialogue is a list and compatible with different field names
     if isinstance(dialogue, str):
-        dialogue_lines = dialogue  # 如果已经是字符串了，直接用
+        dialogue_lines = dialogue  # If already a string, use directly
     elif isinstance(dialogue, list):
         dialogue_lines = "\n".join([
-            f"{d['speaker']}: {d.get('dialogue', d.get('line', ''))}" for d in dialogue  # ✅ 优先 'dialogue'，兼容 'line'
+            f"{d['speaker']}: {d.get('dialogue', d.get('line', ''))}" for d in dialogue  # Priority 'dialogue', compatible with 'line'
         ])
     else:
         dialogue_lines = ""
     
     prompt = f"""
-你是一个叙事结构专家。现在有一个章节的剧情概要（plot）和对应的角色对话，请你判断：
+You are a narrative structure expert. Now there is a chapter plot summary and corresponding character dialogue. Please determine:
 
-- 当前对话是否已经偏离了原来的 plot（比如角色动机、立场发生变化）
-- 如果是，请你帮我生成一个 **更新后的 plot**，使其与对话行为一致
-- 保持人物逻辑与前后情节衔接自然
+- Whether the current dialogue has deviated from the original plot (such as character motivation or stance changes)
+- If so, please help me generate an **updated plot** that is consistent with the dialogue behavior
+- Maintain character logic and natural connection with preceding and following plot
 
-# 输入信息如下：
+# Input information:
 
-章节编号：{chapter_id}
+Chapter ID: {chapter_id}
 
-原始 plot：
+Original plot:
 {original_plot}
 
-角色设定：
+Character settings:
 {role_profiles}
 
-本章对话：
+Chapter dialogue:
 {dialogue_lines}
 
-# 输出格式如下（严格使用 JSON 返回）：
+# Output format (strictly return JSON):
 {{
-  "updated_plot": "新的 plot（如无变化可与原 plot 一致）",
-  "change_summary": "本次修改的原因说明，如：对话中卡尔背叛，与 plot 中描述不符，已更新。",
-  "changed": true 或 false
+  "updated_plot": "New plot (can be consistent with original plot if no changes needed)",
+  "change_summary": "Explanation of this modification, e.g.: Carl betrays in dialogue, inconsistent with plot description, updated.",
+  "changed": true or false
 }}
 """.strip()
     

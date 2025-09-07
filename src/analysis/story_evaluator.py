@@ -615,10 +615,84 @@ def analyze_story_structure(events, papalampidi_result, li_result, mode="default
     return analysis
 
 
+def read_story_file(story_path):
+    """
+    读取故事文件，支持JSON和Markdown格式
+    """
+    if not os.path.exists(story_path):
+        print(f"⚠️ 故事文件不存在：{story_path}")
+        return None, None
+    
+    file_extension = os.path.splitext(story_path)[1].lower()
+    
+    if file_extension == '.json':
+        print("📖 检测到JSON格式文件")
+        story_data = load_json(story_path)
+        return story_data, 'json'
+    
+    elif file_extension == '.md':
+        print("📖 检测到Markdown格式文件")
+        with open(story_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        return content, 'markdown'
+    
+    else:
+        print(f"⚠️ 不支持的文件格式：{file_extension}")
+        return None, None
+
+def parse_markdown_story(markdown_content):
+    """
+    解析Markdown格式的故事内容
+    返回章节列表，格式类似JSON结构
+    """
+    import re
+    
+    # 按章节分割
+    chapter_sections = re.split(r'\n# ', markdown_content)
+    
+    # 处理第一个章节（可能没有前导换行符）
+    if chapter_sections[0].startswith('# '):
+        chapter_sections[0] = chapter_sections[0][2:]  # 移除开头的'# '
+    
+    chapters = []
+    
+    for i, section in enumerate(chapter_sections):
+        if not section.strip():
+            continue
+            
+        lines = section.strip().split('\n')
+        if not lines:
+            continue
+            
+        # 第一行是标题
+        title = lines[0].strip()
+        
+        # 其余部分是内容
+        content_lines = lines[1:]
+        content = '\n'.join(content_lines).strip()
+        
+        # 移除markdown语法标记（简单处理）
+        content = re.sub(r'\*\*([^*]+)\*\*', r'\1', content)  # 粗体
+        content = re.sub(r'\*([^*]+)\*', r'\1', content)      # 斜体  
+        content = re.sub(r'`([^`]+)`', r'\1', content)        # 代码
+        content = re.sub(r'---+', '', content)               # 分隔线
+        
+        # 创建类似JSON的结构
+        chapter = {
+            'chapter_id': f"Chapter {i+1}",
+            'title': title,
+            'plot': content
+        }
+        chapters.append(chapter)
+    
+    print(f"📚 解析到 {len(chapters)} 个章节")
+    return chapters
+
 def run_story_evaluation(version, mode="default", runs=3, story_file="story_updated.json", model="gpt-4.1"):
     """
     主函数：运行完整的故事评价
     mode: "default", "fixed", "statistical"
+    支持JSON和Markdown格式
     """
     from src.constant import output_dir
     
@@ -626,11 +700,17 @@ def run_story_evaluation(version, mode="default", runs=3, story_file="story_upda
     
     # 读取故事数据
     story_path = os.path.join(output_dir, version, story_file)
-    if not os.path.exists(story_path):
-        print(f"⚠️ 故事文件不存在：{story_path}")
+    story_data, file_format = read_story_file(story_path)
+    
+    if story_data is None:
         return None
     
-    story_data = load_json(story_path)
+    # 根据文件格式处理数据
+    if file_format == 'markdown':
+        story_data = parse_markdown_story(story_data)
+    elif file_format == 'json':
+        # JSON格式保持原样
+        pass
     
     # Step 1: 根据模式提取关键事件
     statistical_summary = None

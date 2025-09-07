@@ -19,51 +19,51 @@ client = OpenAI(api_key=os.getenv("OPENAI_KEY"), base_url=os.getenv("OPENAI_API_
 
 def generate_response(msg, model="gpt-4.1", temperature=0.7, performance_analyzer=None, stage_name=None):     
     """
-    生成LLM响应并记录API成本和token消耗
+    Generate LLM response and record API cost and token consumption
     
     Args:
-        msg: 消息列表
-        model: 模型名称
-        temperature: 温度参数
-        performance_analyzer: 性能分析器实例（可选）
-        stage_name: 当前阶段名称（用于成本统计）
+        msg: Message list
+        model: Model name
+        temperature: Temperature parameter
+        performance_analyzer: Performance analyzer instance (optional)
+        stage_name: Current stage name (for API cost statistics)
     """
-    # 估算输入token数量
+    # Estimate input token count
     input_text = ""
     for message in msg:
         input_text += message.get("content", "")
     
-    # 调用API并记录响应时间
+    # Call API and record response time
     api_start_time = time.time()
     response = client.chat.completions.create(
         model=model,                                 
         messages=msg,
         temperature=temperature,
-        max_tokens=9000  # 修复：添加足够的token限制防止响应被截断
+        max_tokens=9000  # Fix: Add sufficient token limit to prevent response truncation
     )
     api_response_time = time.time() - api_start_time
     
-    # 提取响应内容
+    # Extract response content
     response_content = response.choices[0].message.content
     
-    # 记录API使用统计
+    # Record API usage statistics
     if hasattr(response, 'usage') and response.usage:
-        # 使用API返回的实际token数量
+        # Use actual token count returned by API
         input_tokens = response.usage.prompt_tokens
         output_tokens = response.usage.completion_tokens
         total_tokens = response.usage.total_tokens
     else:
-        # 如果没有usage信息，估算token数量
+        # If no usage information, estimate token count
         from src.utils.api_cost_calculator import APICostCalculator
         input_tokens = APICostCalculator.estimate_tokens_from_text(input_text)
         output_tokens = APICostCalculator.estimate_tokens_from_text(response_content)
         total_tokens = input_tokens + output_tokens
     
-    # 计算API成本
+    # Calculate API cost
     from src.utils.api_cost_calculator import APICostCalculator
     cost = APICostCalculator.calculate_cost(model, input_tokens, output_tokens)
     
-    # 记录到性能分析器
+    # Record to performance analyzer
     if performance_analyzer and stage_name:
         performance_analyzer.add_api_cost(
             stage_name=stage_name,
@@ -75,81 +75,81 @@ def generate_response(msg, model="gpt-4.1", temperature=0.7, performance_analyze
             response_time=api_response_time
         )
     
-    # 打印API调用统计（用于调试）
-    print(f"API调用 - 模型: {model}, 输入: {input_tokens}, 输出: {output_tokens}, 成本: ${cost:.6f}")
+    # Print API call statistics (for debugging)
+    print(f"API call - Model: {model}, Input: {input_tokens}, Output: {output_tokens}, Cost: ${cost:.6f}")
     
     return response_content
 
 def convert_dialogue_dict_to_list(dialogue_dict):
     """
-    将 dict 格式的对白（{角色名: [对白字符串]}) 转为 list[dict] 格式
-    修改：使用 "dialogue" 字段，与 dialogue_inserter.py 核心模块保持一致
+    Convert dict format dialogue ({character_name: [dialogue_strings]}) to list[dict] format
+    Modified: Use "dialogue" field to maintain consistency with dialogue_inserter.py core module
     """
     result = []
     for speaker, lines in dialogue_dict.items():
         for line in lines:
-            # 去掉 "角色名: ..." 前缀（如有）
+            # Remove "character_name: ..." prefix (if any)
             if line.startswith(speaker + ":"):
                 line = line[len(speaker)+1:].strip()
-            result.append({"speaker": speaker, "dialogue": line})  # 使用 "dialogue" 字段
+            result.append({"speaker": speaker, "dialogue": line})  # Use "dialogue" field
     return result
 
 def extract_behavior_llm(dialogue_block, model="gpt-4.1", confirm=False):
     from src.utils.utils import generate_response
 
-    # 整理对话为字符串（无论是 list 还是 dict）
+    # Organize dialogue into string (whether list or dict)
     if isinstance(dialogue_block, dict):
         dialogue_items = []
         for speaker, lines in dialogue_block.items():
             for line in lines:
                 dialogue_items.append(f"{speaker}: {line}")
     else:
-        # 修复：兼容两种字段名：'dialogue' 和 'line'
+        # Fix: Compatible with two field names: 'dialogue' and 'line'
         dialogue_items = []
         for d in dialogue_block:
             speaker = d.get('speaker', '')
-            # 关键修复：先尝试 'dialogue'，再尝试 'line'
+            # Key fix: Try 'dialogue' first, then try 'line'
             content = d.get('dialogue', d.get('line', ''))
             dialogue_items.append(f"{speaker}: {content}")
 
     dialogue_text = "\n".join(dialogue_items)
 
-    # Prompt：让 LLM 返回 dict[str: list[str]] 格式
+    # Prompt: Let LLM return dict[str: list[str]] format
     prompt = f"""
-你是一个叙事行为分析器。请阅读以下多轮角色对话，提取每个角色当前的关键行为状态（如：愤怒、背叛、冷静、反派、退缩等），并以 JSON 格式输出。
+You are a narrative behavior analyzer. Please read the following multi-turn character dialogues, extract each character's current key behavioral states (such as: angry, betrayed, calm, villain, withdrawn, etc.), and output in JSON format.
 
-输出格式如下：
+Output format:
 {{
-  "角色A": ["状态1", "状态2"],
-  "角色B": ["状态3"]
+  "Character A": ["State 1", "State 2"],
+  "Character B": ["State 3"]
 }}
 
-请注意：状态要贴合每位角色的语言风格和行为暗示，不需要解释，只返回 JSON。
+Note: States should match each character's language style and behavioral hints, no explanations needed, only return JSON.
 
-对话如下：
+Dialogue as follows:
 {dialogue_text}
 """
 
     response = generate_response([{"role": "user", "content": prompt}], model=model)
 
-    # 结构化解析
+    # Structured parsing
     from src.utils.utils import convert_json
     result = convert_json(response)
 
-    # 如果解析失败，返回空字典而不是让程序崩溃
+    # If parsing fails, return empty dictionary rather than crash the program
     if not isinstance(result, dict):
-        print(f"extract_behavior_llm 解析失败，返回空结果")
+        print(f"extract_behavior_llm parsing failed, returning empty result")
         return {}
 
-    # 人工确认机制
+    # Manual confirmation mechanism
     if confirm:
-        print("\n 系统提取角色行为如下：")
+        print("\n System extracted character behaviors:")
         for role, states in result.items():
             print(f"- {role}: {', '.join(states)}")
-        fix = input("是否要手动修改任何角色状态？（y/n）: ").strip().lower()
+        fix = input("Do you want to manually modify any character states? (y/n): ").strip().lower()
         if fix == 'y':
             for role in result:
-                manual = input(f"请为 {role} 重新输入状态（用逗号分隔，留空跳过）: ").strip()
+                manual = input(f"Please re-enter states for {role} (separated by commas, leave empty to skip): ").strip()
                 if manual:
                     result[role] = [s.strip() for s in manual.split(",")]
 
@@ -157,36 +157,36 @@ def extract_behavior_llm(dialogue_block, model="gpt-4.1", confirm=False):
 
 def fix_plot_illegal_quotes(content):
     """
-    修复 plot 字符串中出现的非法未转义引号，比如："plot": "...“外婆”..."
-    会把 plot 中的 "角色" → 『角色』
+    Fix illegal unescaped quotes in plot string, e.g.: "plot": "...grandma"...
+    Will replace "character" → 『character』 in plot
     """
     pattern = r'"plot"\s*:\s*"(.*?)"'
     matches = re.findall(pattern, content, re.DOTALL)
     if matches:
         plot_text = matches[0]
-        fixed_plot = plot_text.replace('"', '“')  # 替换非法引号为中文引号
+        fixed_plot = plot_text.replace('"', '\u201c')  # Replace illegal quotes with Chinese quotes
         content = re.sub(pattern, f'"plot": "{fixed_plot}"', content, count=1)
     return content
 
 def convert_json(content):
-    print(f"原始 content: {content}...")  # 打印前100个字符以便调试
+    print(f"Original content: {content}...")  # Print first 100 characters for debugging
     content = content.replace("，", ",").replace("。", ".")
 
     try:
-        # 去除 Markdown 包裹
+        # Remove Markdown wrapping
         if "```json" in content:
             content = content.split("```json")[1].split("```")[0].strip()
         elif "```" in content:
             content = content.split("```")[1].strip()
 
-        # 修复粘连 JSON 对象 {..}{..} 为 [{..},{..}]
+        # Fix concatenated JSON objects {..}{..} to [{..},{..}]
         if re.search(r"}\s*{", content):
             content = "[" + re.sub(r"}\s*{", "},{", content) + "]"
         
-        # 新增：修复粘连 JSON 数组 [...][...] 
+        # Added: Fix concatenated JSON arrays [...][...]
         if re.search(r"\]\s*\[", content):
-            # 找到第一个完整的JSON数组
-            # 使用更智能的方法：计算括号平衡
+            # Find the first complete JSON array
+            # Use smarter method: calculate bracket balance
             bracket_count = 0
             end_pos = -1
             in_string = False
@@ -215,13 +215,13 @@ def convert_json(content):
                             break
             
             if end_pos > 0:
-                # 只取第一个完整的JSON数组
+                # Only take the first complete JSON array
                 content = content[:end_pos + 1]
         
-        # 提取第一个 JSON 结构（改进版）
+        # Extract first JSON structure (improved version)
         content = content.strip()
         if content.startswith("["):
-            # 对于数组，使用括号平衡方法
+            # For arrays, use bracket balance method
             bracket_count = 0
             end_pos = -1
             in_string = False
@@ -254,7 +254,7 @@ def convert_json(content):
                 return json.loads(json_text)
         
         elif content.startswith("{"):
-            # 对于对象，类似处理
+            # For objects, similar processing
             brace_count = 0
             end_pos = -1
             in_string = False
@@ -286,23 +286,23 @@ def convert_json(content):
                 json_text = content[:end_pos + 1]
                 return json.loads(json_text)
 
-        # 尝试直接解析
-        print(f"尝试直接解析 JSON: {content}...")
+        # Try direct parsing
+        print(f"Attempting direct JSON parsing: {content}...")
         return json.loads(content)
 
     except Exception as e:
-        print(f"convert_json 出错：{e}")
-        print(f"🧾 内容片段（前200字）：{content[:200]}")
+        print(f"convert_json error: {e}")
+        print(f"Content fragment (first 200 chars): {content[:200]}")
             
-        # 根据content的格式决定返回类型
+        # Determine return type based on content format
         content_stripped = content.strip()
         if content_stripped.startswith("{"):
-            return {}  # 如果是对象格式，返回空字典
+            return {}  # If object format, return empty dict
         elif content_stripped.startswith("["):
-            return []  # 如果是数组格式，返回空列表
+            return []  # If array format, return empty list
         else:
-            # 默认情况，根据上下文推断
-            return {}  # 大多数story expansion等场景期望字典
+            # Default case, infer from context
+            return {}  # Most story expansion scenarios expect dict
        
 def save_json(obj, folder,file_name):
     folder_path = os.path.join(output_dir,folder)
@@ -322,25 +322,25 @@ def extract_plot_list(chapter_json_list):
 
 def split_plot_into_sentences(plot_text, min_length=2):
     """
-    最佳实践版本：结合各种方法的优点
+    Best practice version: combines advantages of various methods
     """
     if not plot_text: 
         return []
     
     text = plot_text.strip()
     
-    # 替换省略号
+    # Replace ellipsis
     text = text.replace("...", "〈ELLIPSIS〉")
     text = text.replace("……", "〈ELLIPSIS_CN〉")
     
-    # 使用正则表达式找到所有句子
-    # 贪婪匹配到标点符号为止
+    # Use regular expression to find all sentences
+    # Greedy match until punctuation marks
     pattern = r'.+?[.。!！?？;；]+'
     
-    # 找到所有匹配的句子
+    # Find all matching sentences
     sentences = re.findall(pattern, text)
     
-    # 检查是否有剩余的文本（没有标点结尾的）
+    # Check if there's remaining text (without punctuation ending)
     last_pos = 0
     for match in re.finditer(pattern, text):
         last_pos = match.end()
@@ -350,15 +350,15 @@ def split_plot_into_sentences(plot_text, min_length=2):
         if remaining:
             sentences.append(remaining)
     
-    # 处理结果
+    # Process results
     result = []
     for sentence in sentences:
-        # 还原省略号
+        # Restore ellipsis
         sentence = sentence.replace("〈ELLIPSIS〉", "...")
         sentence = sentence.replace("〈ELLIPSIS_CN〉", "……")
         sentence = sentence.strip()
         
-        # 只过滤真正太短的（比如单个字符）
+        # Only filter truly too short ones (like single characters)
         if sentence and len(sentence) >= min_length:
             result.append(sentence)
     
@@ -374,11 +374,11 @@ def save_md(text, path):
 
 def convert_json_safe(content):
     """
-    兼容 true/false/null 的 JSON 解析器（用于 LLM 返回）
+    JSON parser compatible with true/false/null (for LLM returns)
     """
     import json
     content = content.replace("，", ",").replace("。", ".")
-    # 修复常见拼写错误
+    # Fix common spelling errors
     content = content.replace('"peaker"', '"speaker"')
 
     try:
@@ -389,5 +389,5 @@ def convert_json_safe(content):
 
         return json.loads(content)
     except Exception as e:
-        print("convert_json_safe 出错：", e)
+        print("convert_json_safe error:", e)
         return {}

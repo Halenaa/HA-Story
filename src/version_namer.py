@@ -10,14 +10,14 @@ def build_version_name(
     order_mode: str = None
 ) -> str:
     """
-    构建统一版本命名格式，便于后续日志管理和版本区分。
+    Build unified version naming format for subsequent log management and version differentiation.
     
-    示例输出：
+    Example output:
     hongmao_sci_Structure_Role_T0.7_s42
     """
     name_parts = [
         topic.replace(" ", "").lower(),
-        style.replace("改写", "").replace(" ", "").lower(),
+        style.replace("rewrite", "").replace(" ", "").lower(),
     ]
 
     if order_mode:

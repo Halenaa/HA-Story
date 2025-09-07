@@ -1,64 +1,64 @@
 """
-API成本计算器
-用于估算不同LLM模型的API调用成本
+API Cost Calculator
+Used to estimate API call costs for different LLM models
 """
 
 from typing import Dict, Optional
 import re
 
 class APICostCalculator:
-    """API成本计算器"""
+    """API Cost Calculator"""
     
-    # 主要模型的价格表（每1000 tokens的价格，美元）
+    # Price table for major models (price per 1000 tokens, USD)
     MODEL_PRICING = {
-        # OpenAI GPT 系列
+        # OpenAI GPT series
         'gpt-4': {'input': 0.03, 'output': 0.06},
         'gpt-4-32k': {'input': 0.06, 'output': 0.12},
         'gpt-4-turbo': {'input': 0.01, 'output': 0.03},
         'gpt-4-turbo-preview': {'input': 0.01, 'output': 0.03},
-        'gpt-4.1': {'input': 0.01, 'output': 0.03},  # 假设价格
+        'gpt-4.1': {'input': 0.01, 'output': 0.03},  # Assumed pricing
         'gpt-3.5-turbo': {'input': 0.001, 'output': 0.002},
         'gpt-3.5-turbo-16k': {'input': 0.003, 'output': 0.004},
         
-        # Anthropic Claude 系列
+        # Anthropic Claude series
         'claude-3-opus': {'input': 0.015, 'output': 0.075},
         'claude-3-sonnet': {'input': 0.003, 'output': 0.015},
         'claude-3-haiku': {'input': 0.00025, 'output': 0.00125},
         'claude-2': {'input': 0.008, 'output': 0.024},
         'claude-instant': {'input': 0.0008, 'output': 0.0024},
         
-        # Google 系列
+        # Google series
         'gemini-pro': {'input': 0.001, 'output': 0.002},
         'gemini-ultra': {'input': 0.01, 'output': 0.03},
         
-        # 其他模型
+        # Other models
         'llama-2-70b': {'input': 0.0007, 'output': 0.0009},
         'mixtral-8x7b': {'input': 0.0007, 'output': 0.0007},
         
-        # 默认估算价格
+        # Default estimated pricing
         'default': {'input': 0.001, 'output': 0.002}
     }
     
     @classmethod
     def calculate_cost(cls, model_name: str, input_tokens: int, output_tokens: int) -> float:
         """
-        计算API调用成本
+        Calculate API call cost
         
         Args:
-            model_name: 模型名称
-            input_tokens: 输入token数量
-            output_tokens: 输出token数量
+            model_name: Model name
+            input_tokens: Number of input tokens
+            output_tokens: Number of output tokens
             
         Returns:
-            成本（美元）
+            Cost (USD)
         """
-        # 规范化模型名称
+        # Normalize model name
         normalized_model = cls._normalize_model_name(model_name)
         
-        # 获取定价信息
+        # Get pricing information
         pricing = cls.MODEL_PRICING.get(normalized_model, cls.MODEL_PRICING['default'])
         
-        # 计算成本
+        # Calculate cost
         input_cost = (input_tokens / 1000) * pricing['input']
         output_cost = (output_tokens / 1000) * pricing['output']
         total_cost = input_cost + output_cost
@@ -67,22 +67,22 @@ class APICostCalculator:
     
     @classmethod
     def _normalize_model_name(cls, model_name: str) -> str:
-        """规范化模型名称以匹配定价表"""
+        """Normalize model name to match pricing table"""
         if not model_name:
             return 'default'
             
         model_name = model_name.lower().strip()
         
-        # 直接匹配
+        # Direct match
         if model_name in cls.MODEL_PRICING:
             return model_name
         
-        # 模糊匹配
+        # Fuzzy match
         for key in cls.MODEL_PRICING.keys():
             if key in model_name or model_name in key:
                 return key
         
-        # 基于关键词匹配
+        # Keyword-based matching
         if 'gpt-4' in model_name:
             if '32k' in model_name:
                 return 'gpt-4-32k'
@@ -104,7 +104,7 @@ class APICostCalculator:
                 elif 'haiku' in model_name:
                     return 'claude-3-haiku'
                 else:
-                    return 'claude-3-sonnet'  # 默认
+                    return 'claude-3-sonnet'  # default
             elif 'instant' in model_name:
                 return 'claude-instant'
             else:
@@ -120,32 +120,32 @@ class APICostCalculator:
     @classmethod
     def estimate_tokens_from_text(cls, text: str) -> int:
         """
-        从文本估算token数量
-        这是一个粗略的估算，实际token数量可能有差异
+        Estimate token count from text
+        This is a rough estimation, actual token count may vary
         """
         if not text:
             return 0
         
-        # 简单的token估算：
-        # 英文大约 4 字符 = 1 token
-        # 中文大约 1.5-2 字符 = 1 token
+        # Simple token estimation:
+        # English: approximately 4 characters = 1 token
+        # Chinese: approximately 1.5-2 characters = 1 token
         
-        # 计算中英文字符
+        # Count Chinese and English characters
         chinese_chars = len(re.findall(r'[\u4e00-\u9fff]', text))
         english_chars = len(text) - chinese_chars
         
-        # 估算token数量
-        chinese_tokens = chinese_chars / 1.5  # 中文token估算
-        english_tokens = english_chars / 4    # 英文token估算
+        # Estimate token count
+        chinese_tokens = chinese_chars / 1.5  # Chinese token estimation
+        english_tokens = english_chars / 4    # English token estimation
         
         total_tokens = int(chinese_tokens + english_tokens)
         
-        # 最小token数量
+        # Minimum token count
         return max(total_tokens, 1)
     
     @classmethod
     def get_model_pricing_info(cls, model_name: str) -> Dict:
-        """获取模型定价信息"""
+        """Get model pricing information"""
         normalized_model = cls._normalize_model_name(model_name)
         pricing = cls.MODEL_PRICING.get(normalized_model, cls.MODEL_PRICING['default'])
         
@@ -161,28 +161,28 @@ class APICostCalculator:
                                      output_text: str, input_tokens: int = None, 
                                      output_tokens: int = None) -> Dict:
         """
-        计算成本，支持从文本估算token数量
+        Calculate cost with support for token estimation from text
         
         Args:
-            model_name: 模型名称
-            input_text: 输入文本
-            output_text: 输出文本  
-            input_tokens: 实际输入token数量（可选）
-            output_tokens: 实际输出token数量（可选）
+            model_name: Model name
+            input_text: Input text
+            output_text: Output text  
+            input_tokens: Actual input token count (optional)
+            output_tokens: Actual output token count (optional)
             
         Returns:
-            包含成本和token信息的字典
+            Dictionary containing cost and token information
         """
-        # 使用实际token数量或估算
+        # Use actual token count or estimation
         if input_tokens is None:
             input_tokens = cls.estimate_tokens_from_text(input_text)
         if output_tokens is None:
             output_tokens = cls.estimate_tokens_from_text(output_text)
         
-        # 计算成本
+        # Calculate cost
         cost = cls.calculate_cost(model_name, input_tokens, output_tokens)
         
-        # 获取定价信息
+        # Get pricing information
         pricing_info = cls.get_model_pricing_info(model_name)
         
         return {
@@ -198,15 +198,15 @@ class APICostCalculator:
 
 
 def main():
-    """测试API成本计算器"""
+    """Test API cost calculator"""
     calculator = APICostCalculator()
     
-    # 测试用例
+    # Test cases
     test_cases = [
         {
             'model': 'gpt-4',
-            'input_text': '请生成一个关于科幻的故事大纲',
-            'output_text': '这是一个关于时间旅行的科幻故事。主角是一个物理学家...'
+            'input_text': 'Please generate a science fiction story outline',
+            'output_text': 'This is a science fiction story about time travel. The protagonist is a physicist...'
         },
         {
             'model': 'claude-3-sonnet', 
@@ -215,21 +215,21 @@ def main():
         }
     ]
     
-    print("🧮 API成本计算器测试")
+    print("API Cost Calculator Test")
     print("=" * 50)
     
     for i, case in enumerate(test_cases, 1):
-        print(f"\n测试 {i}: {case['model']}")
+        print(f"\nTest {i}: {case['model']}")
         result = calculator.calculate_cost_with_estimation(
             case['model'], case['input_text'], case['output_text']
         )
         
-        print(f"输入Tokens: {result['input_tokens']}")
-        print(f"输出Tokens: {result['output_tokens']}")
-        print(f"总Tokens: {result['total_tokens']}")
-        print(f"总成本: ${result['cost']:.6f}")
-        print(f"输入成本: ${result['input_cost']:.6f}")
-        print(f"输出成本: ${result['output_cost']:.6f}")
+        print(f"Input Tokens: {result['input_tokens']}")
+        print(f"Output Tokens: {result['output_tokens']}")
+        print(f"Total Tokens: {result['total_tokens']}")
+        print(f"Total Cost: ${result['cost']:.6f}")
+        print(f"Input Cost: ${result['input_cost']:.6f}")
+        print(f"Output Cost: ${result['output_cost']:.6f}")
 
 
 if __name__ == "__main__":

@@ -10,21 +10,21 @@ def extract_character_state_timeline(
     confirm: bool = False
 ) -> Dict[str, Dict[str, List[str]]]:
     """
-    提取每章每个角色的行为状态，生成角色状态随章节演化时间线。
-    返回结构：{Chapter X: {角色: [状态, ...]}}
+    Extract behavior states of each character in each chapter, generate character state evolution timeline.
+    Return structure: {Chapter X: {character: [state, ...]}}
     """
     state_log = {}
 
     for idx, item in enumerate(dialogue_data):
-        # ✅ 修复：从数据中读取真实的 chapter_id
+        # Fix: Read real chapter_id from data
         if isinstance(item, list) and len(item) > 0:
-            # sentence_results 格式：每个item是句子级数据
+            # sentence_results format: each item is sentence-level data
             chapter_id = item[0].get("chapter_id", f"Chapter {idx + 1}")
         else:
-            # chapter_results 格式：每个item是章节级数据
+            # chapter_results format: each item is chapter-level data
             chapter_id = item.get("chapter_id", f"Chapter {idx + 1}")
         
-        chapter_key = chapter_id  # ✅ 直接使用真实ID
+        chapter_key = chapter_id  #  Use real ID directly
         dialogue_block = item.get("dialogue", [])
         if not dialogue_block:
             continue
@@ -33,7 +33,7 @@ def extract_character_state_timeline(
             result = extract_behavior_llm(dialogue_block, model=model, confirm=confirm)
             state_log[chapter_key] = result
         except Exception as e:
-            print(f"第 {chapter_key} 章提取失败：{e}")
+            print(f"Chapter {chapter_key} extraction failed: {e}")
             state_log[chapter_key] = {}
 
     return state_log
@@ -45,22 +45,22 @@ def run_character_state_tracker(
     model: str = None
 ) -> Dict[str, Dict[str, List[str]]]:
     """
-    主函数：加载 dialogue，提取角色状态，保存为 role_state.json
+    Main function: Load dialogue, extract character states, save as role_state.json
     """
     if model is None:
         model = os.getenv("OPENAI_MODEL", "gpt-4.1")
 
-    print(f"开始提取角色状态：版本={version}, 模型={model}")
+    print(f"Starting character state extraction: version={version}, model={model}")
     base_dir = os.path.join(output_dir, version)
     dialogue_path = os.path.join(base_dir, dialogue_file)
 
     if not os.path.exists(dialogue_path):
-        print(f"未找到 dialogue 文件：{dialogue_path}")
+        print(f"Dialogue file not found: {dialogue_path}")
         return {}
 
     dialogue_data = load_json(dialogue_path)
     state_log = extract_character_state_timeline(dialogue_data, model=model)
 
     save_json(state_log, version, "role_state.json")
-    print(f"已保存角色状态时间线：{os.path.join(base_dir, 'role_state.json')}")
+    print(f"Character state timeline saved: {os.path.join(base_dir, 'role_state.json')}")
     return state_log

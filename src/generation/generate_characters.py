@@ -8,16 +8,16 @@ def generate_characters_v1(outline, max_characters=20, performance_analyzer=None
     msg = [{
         "role": "user",
         "content": f"""
-你是一位擅长人物设定的故事设计师。
+You are a story designer skilled in character creation.
 
-以下是一个故事的章节大纲：
+Below is the chapter outline of a story:
 
 {chapter_json}
 
-请你根据这些章节信息，分析故事中可能出现的重要角色，并生成一个统一的“角色设定列表”。所有名字都使用中文。
+Please analyze the important characters that may appear in the story based on this chapter information, and generate a unified "character setting list".
 
-每个角色包含：name, role, traits, background, motivation
-角色不超过 {max_characters} 个。
+Each character includes: name, role, traits, background, motivation
+No more than {max_characters} characters.
 
 #OUTPUT FORMAT:
 [
@@ -31,7 +31,7 @@ def generate_characters_v1(outline, max_characters=20, performance_analyzer=None
     ...
 ]
 
-#最后以json结构返回，不需要其他多余的解释
+#Finally return in json structure, no other redundant explanations needed
         """
     }]
     response = generate_response(msg, performance_analyzer=performance_analyzer, stage_name="character_generation")
