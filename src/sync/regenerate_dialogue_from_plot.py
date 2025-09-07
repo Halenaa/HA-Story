@@ -2,37 +2,37 @@ from src.utils.utils import generate_response, convert_json_safe
 
 def regenerate_dialogue_from_plot(chapter_id, plot, character_info, style_hint=None, model="gpt-4.1"):
     """
-    根据 plot 与角色设定，生成角色之间的自然对话。
-    返回：List[Dict]
+    Generate natural dialogue between characters based on plot and character settings.
+    Returns: List[Dict]
     """
     role_profiles = "\n".join([
-        f"{char['name']}（性格：{char['traits']}，动机：{char['motivation']}）"
+        f"{char['name']} (Personality: {char['traits']}, Motivation: {char['motivation']})"
         for char in character_info
     ])
 
-    style_instruction = f"\n风格提示：{style_hint}" if style_hint else ""
+    style_instruction = f"\nStyle hint: {style_hint}" if style_hint else ""
 
     prompt = f"""
-你是一位优秀的小说剧本编剧。
+You are an excellent novel screenplay writer.
 
-请你根据以下 plot，为其对应的角色生成一段“推动情节、反映性格”的自然对话：
-- 使用 json 数组形式输出
-- 包含所有角色轮流发言
-- 每个角色发言 1~2 句，注意语言风格体现性格
-- 无需重述 plot，仅写对话
+Please generate natural dialogue that "advances the plot and reflects character personalities" based on the following plot:
+- Output in json array format
+- Include all characters taking turns to speak
+- Each character speaks 1~2 sentences, pay attention to language style reflecting personality
+- No need to restate the plot, only write dialogue
 
-【章节编号】：{chapter_id}
+【Chapter ID】: {chapter_id}
 
-【剧情概要】：
+【Plot Summary】:
 {plot}
 
-【角色设定】：
+【Character Settings】:
 {role_profiles}
 {style_instruction}
 
-【输出格式】（严格为 json）：
+【Output Format】 (strictly json):
 [
-  {{"speaker": "角色名", "line": "台词内容"}},
+  {{"speaker": "character_name", "line": "dialogue_content"}},
   ...
 ]
 """.strip()

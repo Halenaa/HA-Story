@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "total_chapters": 5,
+    "primary_method": "RoBERTa",
+    "validation_method": "LabMT-en-v1",
+    "analysis_timestamp": "2025-09-06T21:48:07.286475"
+  },
+  "chapter_analysis": [
+    {
+      "chapter_num": 1,
+      "title": "Red Receives the Mission",
+      "roberta_score": 0.0674,
+      "labmt_score": 0.2405,
+      "content_length": 11782
+    },
+    {
+      "chapter_num": 2,
+      "title": "Intercepted at the Spaceport",
+      "roberta_score": -0.0322,
+      "labmt_score": 0.0738,
+      "content_length": 1373
+    },
+    {
+      "chapter_num": 3,
+      "title": "Sabotage in Deep Space",
+      "roberta_score": -0.5537,
+      "labmt_score": 0.1498,
+      "content_length": 3180
+    },
+    {
+      "chapter_num": 4,
+      "title": "Confrontation at the Outpost",
+      "roberta_score": 0.2119,
+      "labmt_score": 0.1148,
+      "content_length": 1262
+    },
+    {
+      "chapter_num": 5,
+      "title": "Escape and Revelation",
+      "roberta_score": -0.4903,
+      "labmt_score": 0.2407,
+      "content_length": 799
+    }
+  ],
+  "primary_analysis": {
+    "method": "RoBERTa",
+    "scores": [
+      0.06743407249450684,
+      -0.03223139047622681,
+      -0.5536689480145772,
+      0.21186621785163878,
+      -0.4903206005692482
+    ],
+    "reagan_classification": {
+      "method": "RoBERTa",
+      "best_match": "Icarus",
+      "confidence": 0.2877,
+      "all_similarities": {
+        "Rags to riches": 0,
+        "Tragedy": 0,
+        "Man in a hole": 0,
+        "Icarus": 0.2877,
+        "Cinderella": 0,
+        "Oedipus": 0.0977
+      },
+      "reagan_category": "IC"
+    }
+  },
+  "validation_analysis": {
+    "method": "LabMT",
+    "scores": [
+      0.2405188679245276,
+      0.073780487804878,
+      0.1497891566265066,
+      0.11479166666666685,
+      0.24072916666666622
+    ],
+    "reagan_classification": {
+      "method": "LabMT",
+      "best_match": "Rags to riches",
+      "confidence": 0.624,
+      "all_similarities": {
+        "Rags to riches": 0.624,
+        "Tragedy": 0.5736,
+        "Man in a hole": 0.0426,
+        "Icarus": 0,
+        "Cinderella": 0,
+        "Oedipus": 0.4832
+      },
+      "reagan_category": "RR"
+    }
+  },
+  "correlation_analysis": {
+    "pearson_correlation": {
+      "r": -0.3127,
+      "p_value": 0.6085,
+      "significance": "Not Significant"
+    },
+    "spearman_correlation": {
+      "r": -0.3,
+      "p_value": 0.6238
+    },
+    "direction_consistency": 0.25,
+    "consistency_level": "Low",
+    "interpretation": "RoBERTa and LabMT correlation coefficient is -0.313, belongs to weak correlation"
+  },
+  "comparison_analysis": {
+    "disagreement_points": [
+      {
+        "chapter": 3,
+        "roberta_score": -0.5536689480145772,
+        "labmt_score": 0.1497891566265066,
+        "difference": 0.7035
+      },
+      {
+        "chapter": 5,
+        "roberta_score": -0.4903206005692482,
+        "labmt_score": 0.24072916666666622,
+        "difference": 0.731
+      }
+    ],
+    "method_advantages": {
+      "RoBERTa": {
+        "strengths": [
+          "Deep learning model with better contextual understanding",
+          "Suitable for modern text and dialogue",
+          "High sensitivity to sci-fi and technical texts"
+        ],
+        "classification": "Icarus",
+        "confidence": 0.2877
+      },
+      "LabMT": {
+        "strengths": [
+          "Fully consistent with Reagan's original method",
+          "Based on large-scale human annotation",
+          "Suitable for traditional literary analysis"
+        ],
+        "classification": "Rags to riches",
+        "confidence": 0.624
+      }
+    },
+    "consistency_assessment": {
+      "classification_agreement": false,
+      "major_disagreements": 2,
+      "recommendation": "Classification differs slightly but overall consistent, recommend using RoBERTa as primary and LabMT for validation, demonstrating the advantages of modern deep learning models"
+    }
+  },
+  "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = -0.313 (Low)\n- Consistency level: RoBERTa and LabMT correlation coefficient is -0.313, belongs to weak correlation\n\nClassification Results:\n- RoBERTa (primary): Icarus\n- LabMT (validation): Rags to riches\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is -0.313, showing low consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation."
+}

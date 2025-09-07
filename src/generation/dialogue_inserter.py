@@ -4,66 +4,67 @@ import os
 from datetime import datetime
 from src.utils.utils import generate_response, convert_json, split_plot_into_sentences, extract_behavior_llm
 
-# 🆕 添加日志设置函数
+# Add logging setup function
 def setup_dialogue_logger():
-    """简单的日志设置，输出到文件和控制台"""
+    """Simple logging setup, output to file and console"""
     logger = logging.getLogger('dialogue_gen')
-    if logger.handlers:  # 避免重复设置
+    if logger.handlers:  # Avoid duplicate setup
         return logger
     
     logger.setLevel(logging.INFO)
     
-    # 文件handler - 输出到data/output/logs/dialogue.log
+    # File handler - output to data/output/logs/dialogue.log
     try:
         log_dir = "data/output/logs"
         os.makedirs(log_dir, exist_ok=True)
         file_handler = logging.FileHandler(f"{log_dir}/dialogue_generation.log", encoding='utf-8')
         file_handler.setLevel(logging.INFO)
         
-        # 格式
+        # Format
         formatter = logging.Formatter('%(asctime)s | %(levelname)s | %(message)s')
         file_handler.setFormatter(formatter)
         logger.addHandler(file_handler)
     except:
-        pass  # 如果日志文件创建失败，不影响主流程
+        pass  # If log file creation fails, does not affect main process
     
     return logger
 
+
 def analyze_dialogue_insertions(plot_list, character_list_json):
     """
-    判断每句话是否需要插入对话，返回结构建议
+    Judge whether each sentence needs dialogue insertion, return structural suggestions
     """
     msg = [{
         "role": "system",
         "content": f"""
-你的角色是一个编剧，需要控制在剧情中哪个节点加入对话情节，并选择对应的演员进行演绎。你需要对以下我给你的 plot 每一句进行分析：
+Your role is a screenwriter who needs to control at which plot points to add dialogue scenes and select corresponding actors for performance. You need to analyze each sentence of the plot I give you:
 
-如果在某个句子后需要插入对话，你则返回 1，并选择对应的演员；否则返回 0，演员列表为空。
+If dialogue needs to be inserted after a sentence, return 1 and select corresponding actors; otherwise return 0 with empty actor list.
 
 #Output Format：
 [
 {{
   "sentence": "...",
   "need_to_action": 0 or 1,
-  "actor_list": ["演员A", "演员B"]
+  "actor_list": ["Actor A", "Actor B"]
 }},
 ...
 ]
 
-以下是 plot 列表：{plot_list}
+Here is the plot list: {plot_list}
 
-这是演员表：{character_list_json}
-只返回符合上述格式的 JSON，不要添加任何解释说明或额外文字。
+This is the actor list: {character_list_json}
+Only return JSON that conforms to the above format, do not add any explanations or extra text.
         """
     }]
-    response = generate_response(msg)
-    print("\n analyze_dialogue_insertions 原始返回内容：\n", response, "\n")  # ✅ 添加这一行
+    response = generate_response(msg)  # This function is not in main process, keep original
+    print("\n analyze_dialogue_insertions raw response content:\n", response, "\n")  # Add this line
 
     return convert_json(response)
 
-def analyze_dialogue_insertions_v2(story, characters):
+def analyze_dialogue_insertions_v2(story, characters, performance_analyzer=None):
     """
-    增强版：确保sentence_results包含完整对话数据
+    Enhanced version: Ensure sentence_results contains complete dialogue data
     """
     from src.utils.utils import split_plot_into_sentences, generate_response, convert_json, extract_behavior_llm
     from src.generation.dialogue_inserter import generate_dialogue_for_insertion
@@ -78,40 +79,41 @@ def analyze_dialogue_insertions_v2(story, characters):
         plot = chapter.get("plot", "")
         
         sentences = split_plot_into_sentences(plot)
-        print(f"章节{chapter_id}分割为{len(sentences)}个句子")
+        print(f"Chapter {chapter_id} split into {len(sentences)} sentences")
         
-        # LLM分析句子
+        # LLM analyze sentences
         msg = [{
             "role": "system", 
-            "content": f"""对每句剧情判断是否需要插入对话：
-句子列表：{sentences}
-演员表：{characters}
-格式：[{{"sentence":"...", "need_to_action":0 or 1, "actor_list":["演员A"]}}]
-只返回JSON。"""
+            "content": f"""Judge whether each plot sentence needs dialogue insertion:
+Sentence list: {sentences}
+Actor list: {characters}
+Format: [{{"sentence":"...", "need_to_action":0 or 1, "actor_list":["Actor A"]}}]
+Only return JSON."""
         }]
-        response = generate_response(msg)
+        response = generate_response(msg, performance_analyzer=performance_analyzer, stage_name="dialogue_generation")
         sentence_analysis = convert_json(response)
         
         chapter_dialogues = []
         all_actors = set()
         
         for sent_idx, result in enumerate(sentence_analysis):
-            # 🎯 为每个句子生成独立的对话
+            # Generate independent dialogue for each sentence
             sentence_dialogue = []
             
             if result.get("need_to_action") == 1:
-                # 生成这个句子的对话
+                # Generate dialogue for this sentence
                 dialogue = generate_dialogue_for_insertion(
                     result["sentence"], 
                     result["actor_list"],
                     [plot],
-                    characters
+                    characters,
+                    performance_analyzer
                 )
                 sentence_dialogue = dialogue
                 chapter_dialogues.extend(dialogue)
                 all_actors.update(result["actor_list"])
                 
-                # behavior提取
+                # behavior extraction
                 if dialogue:
                     try:
                         behavior = extract_behavior_llm(dialogue)
@@ -127,21 +129,21 @@ def analyze_dialogue_insertions_v2(story, characters):
                                     "dialogue_trigger": True
                                 })
                     except Exception as e:
-                        print(f"⚠️ Behavior提取失败: {e}")
+                        print(f"Behavior extraction failed: {e}")
             
-            # 🎯 关键：sentence_results包含dialogue字段
+            # Key: sentence_results contains dialogue field
             sentence_result = {
                 "chapter_id": chapter_id,
                 "sentence_index": sent_idx,
                 "sentence": result.get("sentence", ""),
                 "need_to_action": result.get("need_to_action", 0),
                 "actor_list": result.get("actor_list", []),
-                "dialogue": sentence_dialogue,  # 🎯 每个句子的独立对话
+                "dialogue": sentence_dialogue,  # Independent dialogue for each sentence
                 "scene_context": scene
             }
             sentence_results.append(sentence_result)
         
-        # 章节级结果（兼容后续模块）
+        # Chapter-level results (compatible with subsequent modules)
         chapter_result = {
             "sentence": plot,
             "need_to_action": 1 if chapter_dialogues else 0,
@@ -152,199 +154,79 @@ def analyze_dialogue_insertions_v2(story, characters):
     
     return chapter_results, sentence_results, behavior_timeline
 
-# def generate_dialogue_for_insertion(sentence_context, candidate_characters, full_plot, character_personality):
-#     """
-#     在某一句剧情之后插入对话，loop 判断是否说、谁说、说几轮
-#     """
-#     print(f"\n🔍 开始生成对话，候选角色: {candidate_characters}")
-    
-#     # 改用列表直接存储完整对话数据
-#     dialogue_list = []
-#     history = ""
+# Legacy commented code removed - outdated implementation
 
-#     # 第一个发言人
-#     speaker = candidate_characters[0]
-#     prompt_first = [{
-#         "role": "system",
-#         "content": f"""你是 {speaker}，请基于以下剧情做出第一句发言。
-# 剧情背景是：{sentence_context}
-# 你可以向其他角色说话：{[c for c in candidate_characters if c != speaker]}
-# 用以下json格式返回：
-# {{"dialogue": "...", "action": "..."}}"""
-#     }]
-    
-#     print(f"  📤 发送第一个prompt给{speaker}")
-#     response = generate_response(prompt_first)
-#     print(f"  📥 LLM原始返回: {response[:200]}...")
-    
-#     parsed = convert_json(response)
-#     print(f"  🔍 解析后的类型: {type(parsed)}, 内容: {parsed}")
-    
-#     # 处理第一个回复
-#     if not isinstance(parsed, dict):
-#         print(f"  ⚠️ parsed不是字典，而是{type(parsed)}")
-#         # 如果返回的是列表，处理每个元素
-#         for each in parsed:
-#             if isinstance(each, dict):
-#                 spoken_line = each.get("dialogue", "")
-#                 action = each.get("action", "")
-#                 if spoken_line:
-#                     dialogue_list.append({
-#                         "speaker": speaker,
-#                         "dialogue": spoken_line,
-#                         "action": action or ""  # 保存action
-#                     })
-#                     history += f"{speaker}: {spoken_line}\n"
-#     else:
-#         # 处理字典格式
-#         spoken_line = parsed.get("dialogue", "")
-#         action = parsed.get("action", "")
-#         if spoken_line:
-#             dialogue_list.append({
-#                 "speaker": speaker,
-#                 "dialogue": spoken_line,
-#                 "action": action or ""  # 保存action
-#             })
-#             history += f"{speaker}: {spoken_line}\n"
-#         else:
-#             print(f"  ⚠️ 没有获取到dialogue字段")
-
-#     # 多轮对话循环
-#     state = 1
-#     MAX_ROUNDS = 10
-#     round_count = 0
-
-#     while state != 0 and round_count < MAX_ROUNDS:
-#         round_count += 1
-#         print(f"\n  🔄 第{round_count}轮对话")
-        
-#         # 判断下一个发言人
-#         speaker_prompt = [{
-#             "role": "system",
-#             "content": f"""你是故事编剧。
-# 当前剧情：{sentence_context}
-# 当前已有对话历史：
-# {history}
-
-# 只能从以下角色中选择发言：{candidate_characters}
-# 请判断下一位发言人是谁？如果不需要继续对话，返回"NONE"。
-# 格式：{{"next_speaker": "角色"}}"""
-#         }]
-        
-#         next_res = generate_response(speaker_prompt)
-#         print(f"    📥 下一个发言人返回: {next_res[:100]}...")
-        
-#         next_data = convert_json(next_res)
-#         if not isinstance(next_data, dict):
-#             print(f"    ⚠️ next_data不是字典: {type(next_data)}")
-#             break
-            
-#         next_speaker = next_data.get("next_speaker", "NONE")
-        
-#         if next_speaker == "NONE" or next_speaker not in candidate_characters:
-#             print(f"结束对话，next_speaker={next_speaker}")
-#             break
-
-#         # 生成发言内容
-#         prompt_reply = [{
-#             "role": "system",
-#             "content": f"""你是 {next_speaker}，你要基于剧情：
-# {sentence_context}
-# 以及对话历史：
-# {history}
-# 继续说一句话，格式如下：
-# {{"dialogue": "...", "action": "..."}}"""
-#         }]
-        
-#         response = generate_response(prompt_reply)
-#         parsed = convert_json(response)
-        
-#         if isinstance(parsed, dict) and "dialogue" in parsed:
-#             spoken_line = parsed.get("dialogue", "")
-#             action = parsed.get("action", "")
-            
-#             dialogue_list.append({
-#                 "speaker": next_speaker,
-#                 "dialogue": spoken_line,
-#                 "action": action or ""  # 保存action
-#             })
-#             history += f"{next_speaker}: {spoken_line}\n"
-#         else:
-#             print(f"    ⚠️ 无法解析{next_speaker}的回复")
-    
-#     print(f"  ✅ 生成了{len(dialogue_list)}条对话")
-#     return dialogue_list
-
-def generate_dialogue_for_insertion(sentence_context, candidate_characters, full_plot, character_personality):
+def generate_dialogue_for_insertion(sentence_context, candidate_characters, full_plot, character_personality, performance_analyzer=None):
     """
-    完全信任LLM判断版：保持原有格式，移除所有人为限制
+    Fully trust LLM version: Keep original format, remove all artificial restrictions
     """
-    # 🆕 初始化日志
+    # Initialize logging
     logger = setup_dialogue_logger()
     session_id = datetime.now().strftime("%H%M%S")
     
-    print(f"\n🔍 开始生成对话，候选角色: {candidate_characters}")
-    # 🆕 记录会话开始
+    print(f"\nStarting dialogue generation, candidate characters: {candidate_characters}")
+    # Record session start
     logger.info(f"SESSION_START | session_id={session_id} | characters={candidate_characters} | context={sentence_context[:100]}...")
     
     dialogue_list = []
     history = ""
 
-    # 分析对话目标 - 修复JSON格式问题
+    # Analyze dialogue goals - fix JSON format issues
     goal_prompt = [{
         "role": "system",
-        "content": f"""你是故事编剧。分析以下剧情片段需要用对话表达什么：
+        "content": f"""You are a story screenwriter. Analyze what needs to be expressed through dialogue in the following plot segment:
 
-剧情：{sentence_context}
-可用角色：{candidate_characters}
+Plot: {sentence_context}
+Available characters: {candidate_characters}
 
-请分析：这段剧情最需要通过对话表达什么？预期几轮对话比较合适？
+Please analyze: What does this plot segment most need to express through dialogue? How many rounds of dialogue are appropriate?
+Allocate expected dialogue rounds (expected_rounds) based on actual plot, increase dialogue rounds appropriately if plot is complex.
+Important: expected_rounds must be a single integer, not a range.
 
-⚠️ 重要：expected_rounds必须是单个整数（如2、3、4），不能是范围（如3-5）
-
-格式：{{"goal": "对话目标描述", "expected_rounds": 整数}}"""
+Format: {{"goal": "dialogue goal description", "expected_rounds": integer}}"""
     }]
     
     try:
-        goal_response = generate_response(goal_prompt)
+        goal_response = generate_response(goal_prompt, performance_analyzer=performance_analyzer, stage_name="dialogue_generation")
         goal_data = convert_json(goal_response)
-        
-        # 强化防错处理
+        print(f"  Goal analysis returned: {goal_data.get('expected_rounds')}")
+
+        # Enhanced error handling
         if isinstance(goal_data, dict):
-            dialogue_goal = goal_data.get("goal", "推进剧情")
+            dialogue_goal = goal_data.get("goal", "Advance plot")
             expected_rounds = goal_data.get("expected_rounds", 3)
             
-            # 处理非数字情况
+            # Handle non-numeric situations
             try:
                 expected_rounds = int(expected_rounds)
             except (ValueError, TypeError):
                 expected_rounds = 3
         else:
-            print(f"⚠️ 目标分析返回非dict格式: {type(goal_data)}")
-            dialogue_goal = "推进剧情"
+            print(f"Goal analysis returned non-dict format: {type(goal_data)}")
+            dialogue_goal = "Advance plot"
             expected_rounds = 3
             
     except Exception as e:
-        print(f"⚠️ 目标分析失败: {e}")
-        dialogue_goal = "推进剧情"
+        print(f"Goal analysis failed: {e}")
+        dialogue_goal = "Advance plot"
         expected_rounds = 3
 
-    # 🆕 记录目标设定
+    # 🆕 Record goal setting
     logger.info(f"GOAL_SET | session_id={session_id} | goal='{dialogue_goal}' | expected_rounds={expected_rounds}")
 
-    # 第一个发言人
+    # First speaker
     speaker = candidate_characters[0]
     prompt_first = [{
         "role": "system",
-        "content": f"""你是 {speaker}，请基于以下剧情做出第一句发言。
-剧情背景：{sentence_context}
-对话目标：{dialogue_goal}
-其他角色：{[c for c in candidate_characters if c != speaker]}
-格式：{{"dialogue": "...", "action": "..."}}"""
+        "content": f"""You are {speaker}, please make the first statement based on the following plot.
+Plot background: {sentence_context}
+Dialogue goal: {dialogue_goal}
+Other characters: {[c for c in candidate_characters if c != speaker]}
+Format: {{"dialogue": "...", "action": "..."}}"""
     }]
     
     try:
-        response = generate_response(prompt_first)
+        response = generate_response(prompt_first, performance_analyzer=performance_analyzer, stage_name="dialogue_generation")
         parsed = convert_json(response)
         
         if isinstance(parsed, dict) and "dialogue" in parsed:
@@ -356,74 +238,78 @@ def generate_dialogue_for_insertion(sentence_context, candidate_characters, full
                 "action": action
             })
             history += f"{speaker}: {spoken_line}\n"
-            # 🆕 记录首句对话
+            # Record first dialogue
             logger.info(f"FIRST_DIALOGUE | session_id={session_id} | speaker={speaker} | length={len(spoken_line)}")
     except Exception as e:
-        print(f"⚠️ 第一句对话生成失败: {e}")
-        # 🆕 记录错误
+        print(f"First dialogue generation failed: {e}")
+        # Record error
         logger.error(f"FIRST_DIALOGUE_FAILED | session_id={session_id} | error={e}")
         return []
 
-    # 🎯 完全信任LLM的循环判断
+    # Fully trust LLM's loop judgment
     round_count = 0
-    SAFETY_LIMIT = 20  # 仅作保底
+    SAFETY_LIMIT = 20  # Only as safety fallback
     
     while round_count < SAFETY_LIMIT:
         round_count += 1
         
-        # 保持原有判断格式，LLM已经习惯了
+        # rounds_guidance = ""
+        # if round_count > expected_rounds * 1.5:
+        #     rounds_guidance = f"\nWarning: Current {round_count} rounds, expected {expected_rounds} rounds, please consider whether to end."
+
+        # Maintain original judgment format, LLM is used to it
         judge_prompt = [{
             "role": "system",
-            "content": f"""你是故事编剧。请分析当前对话状态：
+            "content": f"""You are a story screenwriter. Analyze whether the current dialogue has reached a natural stopping point:
 
-【剧情背景】：{sentence_context}
-【对话目标】：{dialogue_goal}
-【预期轮数】：{expected_rounds}
-【当前轮数】：{round_count}
-【对话历史】：
+【Plot Background】: {sentence_context}
+【Dialogue Goal】: {dialogue_goal}
+【Current Round】: {round_count}
+【Dialogue History】:
 {history}
 
-请回答两个问题：
-1. 对话目标是否已经达成？(0-10分评分)
-2. 如果未充分达成，下一个发言人是谁？
+Please judge: Has this dialogue naturally ended? Consider factors including:
+- Whether the dialogue has achieved relatively complete communication
+- Whether obvious repetition or dragging is avoided
+- Whether character interactions have reached a reasonable level
 
-可选角色：{candidate_characters}
+Available characters: {candidate_characters}
 
-格式：{{"goal_achieved": 分数, "should_continue": true/false, "next_speaker": "角色名或NONE", "reason": "判断理由"}}"""
+Format: {{"should_continue": true/false, "next_speaker": "character name or NONE", "reason": "judgment reasoning"}}"""
         }]
         
         try:
-            judge_res = generate_response(judge_prompt)
+            judge_res = generate_response(judge_prompt, performance_analyzer=performance_analyzer, stage_name="dialogue_generation")
             judge_data = convert_json(judge_res)
             
-            # 强化类型检查
+            # Enhanced type checking
             if not isinstance(judge_data, dict):
-                print(f"⚠️ 判断返回非dict格式: {type(judge_data)}")
-                # 🆕 记录判断失败
+                print(f"Judgment returned non-dict format: {type(judge_data)}")
+                # Record judgment failure
                 logger.warning(f"JUDGE_FAILED | session_id={session_id} | round={round_count} | type={type(judge_data)}")
                 break
                 
-            goal_achieved = judge_data.get("goal_achieved", 5)
+            # goal_achieved = judge_data.get("goal_achieved", 5)
             should_continue = judge_data.get("should_continue", False)
             next_speaker = judge_data.get("next_speaker", "NONE")
             reason = judge_data.get("reason", "")
             
-            print(f"    📊 LLM判断: goal_achieved={goal_achieved}, should_continue={should_continue}, next_speaker={next_speaker}")
-            # 🆕 记录LLM判断详情
-            logger.info(f"LLM_JUDGE | session_id={session_id} | round={round_count} | goal_achieved={goal_achieved} | should_continue={should_continue} | next_speaker={next_speaker} | reason={reason[:50]}...")
+            # print(f"    📊 LLM判断: goal_achieved={goal_achieved}, should_continue={should_continue}, next_speaker={next_speaker}")
+            # # 🆕 记录LLM判断详情
+            # logger.info(f"LLM_JUDGE | session_id={session_id} | round={round_count} | goal_achieved={goal_achieved} | should_continue={should_continue} | next_speaker={next_speaker} | reason={reason[:50]}...")
                 
         except Exception as e:
-            print(f"⚠️ 对话判断失败: {e}，结束对话")
-            # 🆕 记录判断错误
+            print(f"Dialogue judgment failed: {e}, ending dialogue")
+            # Record judgment error
             logger.error(f"JUDGE_ERROR | session_id={session_id} | round={round_count} | error={e}")
             break
         
-        # 🎯 完全信任LLM：只看LLM的should_continue判断
+        # Fully trust LLM: only look at LLM's should_continue judgment
         if (not should_continue or
             next_speaker == "NONE" or 
             next_speaker not in candidate_characters):
-            print(f"  🛑 LLM决定结束对话")
-            # 🆕 记录停止原因
+            print(f"  LLM decided to end dialogue")
+            # Record stop reasons
             stop_reasons = []
             if not should_continue:
                 stop_reasons.append("LLM_STOP")
@@ -434,17 +320,17 @@ def generate_dialogue_for_insertion(sentence_context, candidate_characters, full
             logger.info(f"DIALOGUE_END | session_id={session_id} | round={round_count} | reasons={stop_reasons}")
             break
 
-        # 生成发言内容
+        # Generate speech content
         prompt_reply = [{
             "role": "system",
-            "content": f"""你是 {next_speaker}，基于剧情：{sentence_context}
-对话目标：{dialogue_goal}
-对话历史：{history}
-继续说一句话，格式：{{"dialogue": "...", "action": "..."}}"""
+            "content": f"""You are {next_speaker}, based on plot: {sentence_context}
+Dialogue goal: {dialogue_goal}
+Dialogue history: {history}
+Continue with one sentence, format: {{"dialogue": "...", "action": "..."}}"""
         }]
         
         try:
-            response = generate_response(prompt_reply)
+            response = generate_response(prompt_reply, performance_analyzer=performance_analyzer, stage_name="dialogue_generation")
             parsed = convert_json(response)
             
             if isinstance(parsed, dict) and "dialogue" in parsed:
@@ -456,37 +342,57 @@ def generate_dialogue_for_insertion(sentence_context, candidate_characters, full
                     "action": action
                 })
                 history += f"{next_speaker}: {spoken_line}\n"
-                # 🆕 记录每轮对话
+                # Record each round of dialogue
                 logger.info(f"DIALOGUE_ADD | session_id={session_id} | round={round_count} | speaker={next_speaker} | length={len(spoken_line)}")
         except Exception as e:
-            print(f"⚠️ 发言生成失败: {e}，跳过这轮")
-            # 🆕 记录生成失败
+            print(f"Speech generation failed: {e}, skipping this round")
+            # Record generation failure
             logger.warning(f"DIALOGUE_FAILED | session_id={session_id} | round={round_count} | speaker={next_speaker} | error={e}")
             continue
     
     if round_count >= SAFETY_LIMIT:
-        print(f"⚠️ 达到安全保底({SAFETY_LIMIT}轮)")
-        # 🆕 记录安全限制触发
+        print(f"Reached safety fallback ({SAFETY_LIMIT} rounds)")
+        # Record safety limit triggered
         logger.warning(f"SAFETY_LIMIT | session_id={session_id} | limit={SAFETY_LIMIT}")
     
-    # 🆕 记录最终统计
+    # Record final statistics
     final_rounds = len(dialogue_list)
     logger.info(f"SESSION_END | session_id={session_id} | final_rounds={final_rounds} | expected={expected_rounds} | characters_used={[d['speaker'] for d in dialogue_list]}")
     
-    print(f"  ✅ 生成了{final_rounds}条对话")
+    print(f"  Generated {final_rounds} dialogues")
+
+    rounds_data = {
+        "session_id": session_id,
+        "expected_rounds": expected_rounds,
+        "actual_rounds": final_rounds,
+        "deviation": final_rounds - expected_rounds,
+        "sentence_context": sentence_context[:100],
+        "characters": candidate_characters,
+        "timestamp": datetime.now().isoformat()
+    }
+
+    # Save to statistics file
+    try:
+        stats_dir = "data/output/logs"
+        os.makedirs(stats_dir, exist_ok=True)
+        stats_file = f"{stats_dir}/rounds_statistics.jsonl"
+        with open(stats_file, "a", encoding='utf-8') as f:
+            f.write(json.dumps(rounds_data, ensure_ascii=False) + "\n")
+    except:
+        pass    
     return dialogue_list
 
 
 def run_dialogue_insertion(plot_list, character_json):
     """
-    整合控制流程：先判断哪些句子后要插入，再生成每段对话
+    Integrated control flow: first judge which sentences need insertion, then generate each dialogue segment
     """
     marks = analyze_dialogue_insertions(plot_list, character_json)
     
-    # ✅ 添加错误处理
+    # Add error handling
     if not marks or not isinstance(marks, list):
-        print(f"⚠️ analyze_dialogue_insertions 返回无效数据: {type(marks)}")
-        # 返回空对话结构，确保每个plot都有对应的对话块
+        print(f"analyze_dialogue_insertions returned invalid data: {type(marks)}")
+        # Return empty dialogue structure, ensure each plot has corresponding dialogue block
         return [{
             "sentence": plot,
             "need_to_action": 0,
@@ -496,7 +402,7 @@ def run_dialogue_insertion(plot_list, character_json):
     
     final_result = []
 
-    # ✅ 确保返回的结果数量与plot_list匹配
+    # Ensure returned result count matches plot_list
     plot_index = 0
     for item in marks:
         dialogue_block = {
@@ -512,7 +418,8 @@ def run_dialogue_insertion(plot_list, character_json):
                 sentence_context=item["sentence"],
                 candidate_characters=item["actor_list"],
                 full_plot=plot_list,
-                character_personality=character_json
+                character_personality=character_json,
+                performance_analyzer=None
             )
             dialogue_block["dialogue"] = dialogue_memory
             # except Exception as e:
@@ -522,7 +429,7 @@ def run_dialogue_insertion(plot_list, character_json):
         final_result.append(dialogue_block)
         plot_index += 1
     
-    # ✅ 如果marks数量少于plot_list，补充空对话块
+    # If marks count is less than plot_list, supplement empty dialogue blocks
     while len(final_result) < len(plot_list):
         final_result.append({
             "sentence": plot_list[len(final_result)] if len(final_result) < len(plot_list) else "",
@@ -531,7 +438,7 @@ def run_dialogue_insertion(plot_list, character_json):
             "dialogue": []
         })
     
-    print(f"✅ 生成对话块数量: {len(final_result)}, plot数量: {len(plot_list)}")
+    print(f"Generated dialogue blocks count: {len(final_result)}, plot count: {len(plot_list)}")
     
     return final_result
 def apply_structure_to_generate_dialogue(structure_marks, plot_list, characters):
@@ -548,7 +455,8 @@ def apply_structure_to_generate_dialogue(structure_marks, plot_list, characters)
                 sentence_context=item["sentence"],
                 candidate_characters=item["actor_list"],
                 full_plot=plot_list,
-                character_personality=characters
+                character_personality=characters,
+                performance_analyzer=None
             )
             dialogue_block["dialogue"] = dialogue
         final_result.append(dialogue_block)
@@ -558,14 +466,14 @@ def apply_structure_to_generate_dialogue(structure_marks, plot_list, characters)
 
 def pretty_print_dialogue(dialogue_result):
     """
-    美观打印完整对话插入结构，适合人类调试或写入 Markdown 文件
+    Pretty print complete dialogue insertion structure, suitable for human debugging or writing to Markdown files
     """
     for i, block in enumerate(dialogue_result):
-        print(f"\n第 {i+1} 句剧情：{block['sentence'][:80]}...")
+        print(f"\nPlot sentence {i+1}: {block['sentence'][:80]}...")
         if block["need_to_action"] == 0:
-            print("无需插入对话。")
+            print("No dialogue insertion needed.")
         else:
-            print(f"插入角色：{', '.join(block['actor_list'])}")
+            print(f"Insert characters: {', '.join(block['actor_list'])}")
             dialogue = block.get("dialogue", {})
             for role, lines in dialogue.items():
                 for line in lines:
@@ -577,14 +485,14 @@ def generate_dialogue_for_plot(instruction, characters):
     from src.utils.utils import generate_response, convert_json
     character_list = ", ".join([c["name"] for c in characters])
     prompt = f"""
-剧情内容如下：
+Plot content as follows:
 {instruction}
 
-角色有：{character_list}
+Characters include: {character_list}
 
-请为该场景生成5-6轮简洁自然的对话，展现角色风格与互动张力，格式如下：
+Please generate 5-6 rounds of concise and natural dialogue for this scene, showcasing character style and interaction dynamics, format as follows:
 [
-  {{"speaker": "角色A", "line": "说的话"}},
+  {{"speaker": "Character A", "line": "dialogue content"}},
   ...
 ]
 """

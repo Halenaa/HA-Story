@@ -1,0 +1,229 @@
+{
+    "HRED连贯性评价": {
+        "模型名称": "all-mpnet-base-v2",
+        "分析方式": "原文句子连贯性",
+        "句子总数": 76,
+        "相邻对数": 75,
+        "平均连贯性": 0.3649,
+        "客观描述": {
+            "分数": 0.3649,
+            "范围": "0-1（1为完全相似）",
+            "解释": "基于sentence-transformers模型计算的相邻句子语义相似度均值",
+            "参考": "建议与其他文本对比，而非绝对评级"
+        }
+    },
+    "详细分析": {
+        "基本统计": {
+            "平均连贯性": 0.3649426710108916,
+            "连贯性标准差": 0.17050996518996778,
+            "最高连贯性": 0.8353937268257141,
+            "最低连贯性": 0.03872063383460045,
+            "连贯性中位数": 0.3370492160320282
+        },
+        "连贯性断点": [
+            {
+                "位置": 12,
+                "句子对": "The Ugly Duckling cracks throu... → The Brood Mother inspects the ...",
+                "相似度": 0.123
+            },
+            {
+                "位置": 24,
+                "句子对": "I promise I won't be any troub... → ' The Old Cat, stretching his ...",
+                "相似度": 0.054
+            },
+            {
+                "位置": 35,
+                "句子对": "I need to figure out what I'm ... → ' She glances at the Ugly Duck...",
+                "相似度": 0.049
+            },
+            {
+                "位置": 36,
+                "句子对": "' She glances at the Ugly Duck... → 'Maybe if I look at the proble...",
+                "相似度": 0.183
+            },
+            {
+                "位置": 40,
+                "句子对": "My feet, they're, um, good for... → ' The Hen, still uncertain, do...",
+                "相似度": 0.053
+            },
+            {
+                "位置": 45,
+                "句子对": "Why do you always pick on me?... → ' He then mutters to himself a...",
+                "相似度": 0.156
+            },
+            {
+                "位置": 69,
+                "句子对": "We don't have time to waste—fa... → Eyes sharp....",
+                "相似度": 0.039
+            },
+            {
+                "位置": 70,
+                "句子对": "Eyes sharp.... → Let's go!...",
+                "相似度": 0.094
+            }
+        ],
+        "高连贯性段落": [
+            {
+                "起始句子": 14,
+                "结束句子": 17,
+                "长度": 4,
+                "平均相似度": 0.686
+            },
+            {
+                "起始句子": 18,
+                "结束句子": 20,
+                "长度": 3,
+                "平均相似度": 0.565
+            },
+            {
+                "起始句子": 54,
+                "结束句子": 56,
+                "长度": 3,
+                "平均相似度": 0.516
+            },
+            {
+                "起始句子": 57,
+                "结束句子": 64,
+                "长度": 8,
+                "平均相似度": 0.615
+            },
+            {
+                "起始句子": 73,
+                "结束句子": 76,
+                "长度": 4,
+                "平均相似度": 0.523
+            }
+        ],
+        "客观描述": {
+            "分数": 0.3649,
+            "范围": "0-1（1为完全相似）",
+            "解释": "基于sentence-transformers模型计算的相邻句子语义相似度均值",
+            "参考": "建议与其他文本对比，而非绝对评级"
+        }
+    },
+    "逐对相似度示例": [
+        {
+            "句子对": "句子1 → 句子2",
+            "句子1": "The ugly duckling shuffled through the damp grass,...",
+            "句子2": "He paused when he saw the swans gliding in the sha...",
+            "相似度": 0.3279
+        },
+        {
+            "句子对": "句子2 → 句子3",
+            "句子1": "He paused when he saw the swans gliding in the sha...",
+            "句子2": "Driven by a longing he could not name, he moved cl...",
+            "相似度": 0.2529
+        },
+        {
+            "句子对": "句子3 → 句子4",
+            "句子1": "Driven by a longing he could not name, he moved cl...",
+            "句子2": "The largest swan, standing tall among the flock, l...",
+            "相似度": 0.2532
+        },
+        {
+            "句子对": "句子4 → 句子5",
+            "句子1": "The largest swan, standing tall among the flock, l...",
+            "句子2": "The rest of the swans slowed their paddling, watch...",
+            "相似度": 0.4871
+        },
+        {
+            "句子对": "句子5 → 句子6",
+            "句子1": "The rest of the swans slowed their paddling, watch...",
+            "句子2": "The ugly duckling's feathers bristled from the col...",
+            "相似度": 0.2934
+        },
+        {
+            "句子对": "句子6 → 句子7",
+            "句子1": "The ugly duckling's feathers bristled from the col...",
+            "句子2": "The swan leader called out with a low, musical not...",
+            "相似度": 0.2848
+        },
+        {
+            "句子对": "句子7 → 句子8",
+            "句子1": "The swan leader called out with a low, musical not...",
+            "句子2": "Shivering, the ugly duckling hesitated, then waded...",
+            "相似度": 0.4774
+        },
+        {
+            "句子对": "句子8 → 句子9",
+            "句子1": "Shivering, the ugly duckling hesitated, then waded...",
+            "句子2": "The swans parted to make space, their eyes followi...",
+            "相似度": 0.3645
+        },
+        {
+            "句子对": "句子9 → 句子10",
+            "句子1": "The swans parted to make space, their eyes followi...",
+            "句子2": "The leader dipped its head in greeting, signaling ...",
+            "相似度": 0.2234
+        },
+        {
+            "句子对": "句子10 → 句子11",
+            "句子1": "The leader dipped its head in greeting, signaling ...",
+            "句子2": "The ugly duckling drifted forward, uncertainty in ...",
+            "相似度": 0.2236
+        },
+        {
+            "句子对": "句子11 → 句子12",
+            "句子1": "The ugly duckling drifted forward, uncertainty in ...",
+            "句子2": "The Ugly Duckling cracks through the last brittle ...",
+            "相似度": 0.6111
+        },
+        {
+            "句子对": "句子12 → 句子13",
+            "句子1": "The Ugly Duckling cracks through the last brittle ...",
+            "句子2": "The Brood Mother inspects the newcomer, her eyes n...",
+            "相似度": 0.1234
+        },
+        {
+            "句子对": "句子13 → 句子14",
+            "句子1": "The Brood Mother inspects the newcomer, her eyes n...",
+            "句子2": "Alpha Duckling, while initially puffed up and wary...",
+            "相似度": 0.3672
+        },
+        {
+            "句子对": "句子14 → 句子15",
+            "句子1": "Alpha Duckling, while initially puffed up and wary...",
+            "句子2": "The Beta Ducklings remain timid and uneasy, murmur...",
+            "相似度": 0.8354
+        },
+        {
+            "句子对": "句子15 → 句子16",
+            "句子1": "The Beta Ducklings remain timid and uneasy, murmur...",
+            "句子2": "The Ugly Duckling, confused and longing for accept...",
+            "相似度": 0.6726
+        },
+        {
+            "句子对": "句子16 → 句子17",
+            "句子1": "The Ugly Duckling, confused and longing for accept...",
+            "句子2": "Alpha Duckling, instead of outright exclusion, off...",
+            "相似度": 0.5515
+        },
+        {
+            "句子对": "句子17 → 句子18",
+            "句子1": "Alpha Duckling, instead of outright exclusion, off...",
+            "句子2": "The group moves toward the pond, with the Brood Mo...",
+            "相似度": 0.4414
+        },
+        {
+            "句子对": "句子18 → 句子19",
+            "句子1": "The group moves toward the pond, with the Brood Mo...",
+            "句子2": "The Ugly Duckling lags behind, struggling to fit i...",
+            "相似度": 0.6097
+        },
+        {
+            "句子对": "句子19 → 句子20",
+            "句子1": "The Ugly Duckling lags behind, struggling to fit i...",
+            "句子2": "The Ugly Duckling shuffles through the straw, his ...",
+            "相似度": 0.5213
+        },
+        {
+            "句子对": "句子20 → 句子21",
+            "句子1": "The Ugly Duckling shuffles through the straw, his ...",
+            "句子2": "On a splintered crate, the Old Cat lies curled, ta...",
+            "相似度": 0.3538
+        },
+        {
+            "说明": "仅显示前20对，总共有75对相邻句子"
+        }
+    ]
+}

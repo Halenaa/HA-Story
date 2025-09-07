@@ -1,0 +1,203 @@
+# Chapter 1: A Red Hood and a Map of Unfinished Stories
+In a valley where fog braided the pines each dawn, a girl wore a hood the color of ripe pomegranate. People called her Little Red, though her real name was Elinor. She carried a notebook titled “Unfinished Stories,” its first page a hand-drawn map: one road to Grandmother’s cottage, one to a rumor, and one—thin as a scratch—to a wolf.
+“Run the errand, Elinor,” her mother said, setting a wicker basket down. “Bread, broth, rosemary salve, and this letter. Walk the path. Don’t tarry.”
+“If I meet a wolf,” Elinor asked, fastening the red hood, “may I ask for an interview?”
+“If you meet a wolf,” said her mother, “you will keep walking.”
+“Walking is what stories do,” Elinor replied. “Questions are the walking sticks.”
+# Chapter 2: The Forest of Misunderstandings
+The forest was louder than it looked. Leaves clapped; a stream recited a skipping-stone prayer; crows stitched the sky with threadlike voices. The path thinned into a suggestion, as paths do when they grow shy.
+On a stump shaped like a throne sat a wolf with a silver-dark coat and eyes like flint that had learned to be rain.
+“Good morning,” Elinor said, because courtesies can be shields and keys. “Are you looking for a story?”
+“They find me,” the wolf replied. “Even when I go searching only for water.”
+“I’m going to my grandmother. And I have a question.”
+“What question?” His ears tipped.
+“Who taught the wolf to be the villain?”
+“The first storyteller,” he said, “who preferred a straight road to a truthful forest.”
+“Then we will walk crooked,” Elinor decided. “Does crooked lead to danger?”
+“Almost always,” he said.
+“Then we are kin. Trouble is my favorite aunt.”
+# Chapter 3: Terms and Conditions of Meeting a Wolf
+They walked together because the forest had eaten half the path. He kept to her periphery like a moving tree.
+“What’s your name?” Elinor asked.
+“Names have teeth,” he said. “If I hand you mine, it might bite me later.”
+“I’ll call you ‘Sir Possibly.’”
+“Ash,” he offered at last. “What’s left after the bright parts.”
+“You’re thin, Ash.”
+“Winter was long. Deer learned the game of elsewhere. Hunters learned to whistle. Stories turned us into silhouettes.”
+Elinor uncapped the salve and dabbed a scratch on his shoulder.
+“I could decide you’re unwise,” Ash murmured.
+“You still could,” Elinor said. “But don’t. Unwise people write letters they never send. I intend to deliver mine.”
+# Chapter 4: A Cottage with Its Own Weather
+Grandmother’s cottage had a roof that sometimes believed it was a drum. Elinor knocked.
+“Who is it?” coughed a voice.
+“Your granddaughter,” Elinor called, “and a possible wolf.”
+“Bring them both,” Grandmother said. “I have chairs and a spoon with room on it.”
+Inside, sunlight wrapped the old woman like a shawl woven from stubborn snow. Ash paused on the threshold.
+“I was not invited.”
+“I just invited you,” Grandmother replied. “My house has a chair for every guest who intends no harm.”
+“That’s a very ambitious sentence,” Ash said.
+“Sit and spring it,” Grandmother teased, turning a cough into a laugh.
+Elinor set the basket down. “You look as if a storm sits on your chest.”
+“It does,” Grandmother said, smiling. “But it brought company. The wind keeps knocking, and I have been reading it.”
+# Chapter 5: The Letter with Two Mouths
+While the kettle learned to sing, Elinor unfolded the letter written in her mother’s tidy, brave hand.
+“What does it say?” Grandmother asked.
+Elinor read: “Dearest Mama, I found your red hood in the attic. Elinor wears it now. Do you remember the version of the story that ended badly, or did you change the ending when I wasn’t looking? Please tell me the true one. Love, your daughter.”
+“The hood is older than that ending,” Ash said.
+“Older than my bones,” Grandmother nodded. “It belonged to the Red Guild.”
+“The what?” Elinor asked.
+“A guild of women who walked forests carrying medicine and messages, and, when necessary, mercy. The color was a promise: if something hunted you, we hunted the hunting.”
+“Then why do people tell the version with the woodcutter and the belly of stones?” Elinor asked softly.
+“Because a patron liked it,” Grandmother said. “Because shortcuts are easy to sell. Because fear pays better than patience.”
+Ash looked at his paws. “My ancestors remember that shortcut. We avoid it now.”
+# Chapter 6: A Knock That Didn’t Use Hands
+The door rattled. A man entered with rope, a hatchet, and a reputation for saving people from things he did not understand.
+“Afternoon,” he said. “I heard there were wolves.”
+“There was tea,” Elinor answered, stepping between him and Ash.
+“The beast is here,” he declared.
+“The guest is here,” said Grandmother.
+“Wolves don’t visit,” he snapped. “They invade.”
+“People don’t listen,” Ash murmured. “They decide.”
+“What’s your name?” Elinor asked.
+“Jonas. I’m the ending the village pays for.”
+“Then you’re a hired period,” said Elinor. “But this sentence isn’t over.”
+# Chapter 7: The Trial of a Dining Table
+Grandmother thumped the table. “My house has a rule: we don’t end stories until each voice has spoken. Jonas, if you want to be good, prove you can listen.”
+Jonas sat, reluctant. “Say your part, wolf.”
+Ash lifted his head. “I have eaten deer. I have stolen hens in winters when hunger wrote its own laws. But I have not eaten a person. I have not threatened this child or this elder. I came to warm myself by a story.”
+“Easy to say,” Jonas muttered.
+“Often enough to hope it will be believed,” Ash replied. “What have you done?”
+“I’ve cut branches that would break roofs,” Jonas said. “I’ve pulled children from bogs. I’ve killed wolves that killed sheep—and some that were about to.”
+“About to?” Elinor said. “Did the future send you a letter?”
+He flushed. “I can smell intention.”
+“I can smell fear,” Ash said. “It glues a hand to a hatchet.”
+“Drink,” Grandmother ordered, pouring tea. “The tongue is less sharp when warm.”
+# Chapter 8: The Red Guild Remembers
+“Elinor,” Grandmother said, “the Guild hunted the hunting by telling stories before danger happened. We did not wait for wolves and men to collide; we insisted they meet. The hood was a door.”
+“A door?” Jonas asked, eyeing the crimson cloth.
+“To hospitality and to truth,” Grandmother said. “To the possibility that our worst selves are not inevitable.”
+Elinor drew new paths on her map. “A pact,” she proposed. “Ash, show Jonas the den where your young are taught not to touch the flock. Jonas, show Ash the pasture where the ewes wander. We’ll count promises together.”
+“That’s a lot of faith to hang on thread,” Jonas said.
+“It isn’t thread,” Elinor answered. “It’s lineage.”
+# Chapter 9: The Den Where Teeth Learn Patience
+Dusk leaned on the forest as they walked. At a limestone outcrop, Ash slipped through a seam. “This is our den when there is no snow,” he said. Pups murmured within like beads being counted.
+A second wolf emerged: Brindle, her stare exacting.
+“Ash,” she said, “you brought firewood that walks.”
+“This is Jonas,” Ash replied. “He smells of iron and regret.”
+“Most of us do,” Grandmother murmured.
+Elinor lifted the salve. “For scratches,” she offered.
+Brindle studied the hood. “The last red hood I saw belonged to a woman who told the pups that sheep were stories wrapped in wool. She said her name was Mara.”
+Grandmother closed her eyes. “My sister,” she whispered. “She vanished one winter. We found only a hood and a rumor.”
+Jonas’s face shifted. “My father boasted of clearing wolves that year,” he said quietly. “I did not know the story held a woman.”
+“It always does,” Grandmother said. “They are called forests, and houses, and sisters.”
+# Chapter 10: The Pasture Where Sheep Dream in Numbers
+At first light the hill blued with dew. Tilda the shepherd waved them over.
+“You brought me a wolf,” Tilda observed, calm as a good hinge. “And a girl who asks heavy questions.”
+“We’ll walk the boundary,” Elinor said.
+They found a gap where a lamb might wriggle through. “Here,” Ash said. “A fox came once. We chased him.”
+“Predators have politics,” Elinor mused. “We mend this, and hang fluttering cloth.”
+“I’ll mend,” Tilda said. “You flutter.”
+Brindle arrived with three pups and sat them in a row.
+“Do you swear to keep your young from the flock?” Jonas asked, unused words turning in his mouth.
+“Yes,” Brindle said. “Do you swear to keep your men from proving their courage on our spines?”
+Jonas breathed in, then out. “I swear to keep myself,” he said. “And I will ask the others to meet you at a table.”
+# Chapter 11: The Red Table
+They set a table in the birch grove—the kind of trees that peel the truth even when it stings. Tilda brought cheese; Jonas brought doubtful men; Brindle brought elders who remembered Mara’s winter. Grandmother presided in her shawl like a queen who prefers kitchens to thrones.
+Elinor laid her notebook and the hood in the center. “This is the Red Table. Speak into the color. It remembers.”
+A miller said, “Wolves take. That’s what they are.”
+“Hunger takes,” Brindle corrected. “Wolves choose.”
+A young hunter said, “Men protect. That’s what we do.”
+“Fear protects,” Grandmother said. “Men choose.”
+Ash described shifted deer routes after a landslide, how hunger taught patience. Tilda explained lambing seasons. Jonas admitted the hatchet answered faster than patience.
+“Who taught us our first endings?” Elinor asked.
+Silence. Birches hissed their papery breeze.
+“My sister Mara used to say,” Grandmother added, “if you don’t like the ending, move the middle and invite the antagonist.”
+They drafted a pact: mended fences, shared warnings, noise before knives, and public explanations beneath birches if anyone broke the terms.
+# Chapter 12: Moving the Middle
+Summer slid down the valley like a well-oiled drawer. The pact held mostly because it had been spoken aloud. Pups became cautious, then graceful. Jonas learned to walk with his hands empty. The forest gossiped less.
+One evening Ash appeared at the porch. “A stag broke his antler in a thicket,” he said. “We freed him. He owes us nothing, but the forest noticed.”
+“Brindle?” Elinor asked.
+“She says the pups wonder why sheep smell like numbers.”
+“Because some creatures dream in counting,” Grandmother said, laughing a cough into a sigh.
+# Chapter 13: Ada from a Different Story
+Autumn arrived with too many pockets and filled them with color. A freckled girl came carrying apples and a rumor.
+“I’m Ada,” she said. “I followed a whisper about a table that changes endings.”
+“You found it,” Elinor said. “Our rules: tea before judgment, bread before blame, and every truth told twice.”
+“Twice?”
+“The first is for the mouth,” Grandmother said. “The second is for the ears.”
+Ada stayed to rest while her stories chased her.
+# Chapter 14: Winter’s Test
+Winter braided all paths into one white sentence. Deer grew stingy with their tracks. The pact strained the way pacts do: between warm words and cold choices.
+A lamb went missing. Tilda miscounted once, then counted true and found the gap again loosened. Lanterns swung. Old fears put on new coats.
+Ash found fox prints and, close beside, the excited stampede of a young wolf. “He chased the fox,” Ash said, “and the lamb ran toward the ravine.”
+The Red Table gathered beneath a star-empty sky. A young wolf stepped forward, tail low. “I tried to turn the lamb,” he said. “My teeth frightened it.”
+“Men who were not at the table will want an ending with edges,” Jonas warned.
+“Then we must write faster,” Elinor said.
+They reached the ravine. The lamb trembled on a narrow ledge.
+“It’s far,” Jonas said, lying on his belly.
+Ash anchored him by the waist rope in his teeth. Brindle braced Ash; Tilda braced Brindle; Ada braced Tilda; and Grandmother, small but solid, braced everyone with a story. “Once,” she said steadily, “a girl in a red hood taught a cliff to be ashamed of its greed.”
+Jonas hooked the lamb. Together they pulled life upward, syllable by syllable of muscle and will. Snow gave way; night exhaled.
+“Who will tell the village?” Tilda asked.
+“All of us,” Elinor said. “Soup at noon, truth twice.”
+# Chapter 15: A Story Learns New Feet
+By spring, the tale walked on many legs. In the market they said the Red Table kept the valley honest. In the hills they said wolves and men were learning neighborly games. Downriver they said a girl with a notebook taxed lies with ink. None matched, which is how you know a story breathes.
+Elinor carried questions to the den and returned with complaints from the wood: a trap near the north hedge; a shepherd dog forgetting gentleness; a night fire under a pine.
+Jonas taught woodcutters a new practice: counting to ten with their mouths shut. Some made it to seven before speech broke loose like a horse.
+Ada added rivers to Elinor’s map. “When the story crosses water,” she said, “it washes its feet.”
+Grandmother coughed less and told the same joke until it came out truer.
+# Chapter 16: The Woodcutter’s Second Name
+“Jonas,” Elinor asked one afternoon, “if you were not a woodcutter, what would you be?”
+He glanced at his empty hands. “A listener,” he said, surprised by the answer. “If listening were paid as well as fear.”
+“It pays in quieter nights,” Elinor said. “Name yourself Listener, then. Names have teeth—but some bite the right direction.”
+Jonas nodded. “I’ll try.”
+# Chapter 17: The Fox’s Shortcuts
+A fox with too many ideas began testing the new cloth flags. He learned their dance and skipped under anyway.
+Elinor and Ash watched from the hedge.
+“He studies us,” Ash said.
+“Then let him be studied back,” Elinor replied. She tied small bells into the lowest rags. The fox twitched at the first chime and retreated with dignity.
+“Politics,” Ash said dryly.
+“Pedagogy,” Elinor corrected.
+# Chapter 18: The Winter of Mara’s Vanishing—Revisited
+Grandmother sat at the birch table with a packet of letters bound in twine. “Mara wrote these,” she said. “Listen.”
+Elinor read a line aloud: “If I go missing, remember that a missing person is a story with its light turned inward, not out.”
+Brindle lowered her head. “My mother told me that winter smelled of iron and lightning. She said a man was paid to be a period.”
+Jonas swallowed. “My father.”
+“Then your work,” Grandmother said gently, “is to be a comma. Keep the sentence breathing.”
+# Chapter 19: The Day the Deer Came Early
+Deer moved down in unusual daylight, a velvet river among trunks. Ash lifted his head. “Something has shifted,” he said. “The hillside that fell two summers ago is sliding again.”
+They climbed to the scar on the slope and found the soil tired of staying. Elinor traced the cracks with her finger.
+“We need a line of stones,” she said. “And the shepherds must shift the grazing so the roots get a season to stitch.”
+Jonas organized hands; Tilda called neighbors; Brindle’s pack hauled branches. When the rain arrived, the hill held.
+“That table of yours,” a farmer told Elinor, “seems to have grown legs.”
+“It’s called a valley,” Elinor smiled.
+# Chapter 20: The Hunter Who Didn’t Know the Table
+A stranger strode into the market carrying too much certainty and a glittering trap. “Bounty on wolves?” he asked.
+“No,” said Jonas. “Soup.”
+“Soup? The man frowned.
+“Truth twice,” Elinor added, gesturing toward the birch grove. “Come speak into the color.”
+He almost laughed, then saw how many people were walking that way. He followed, and because listening is contagious, he did not set the trap that day.
+# Chapter 21: Of Names and Distances
+“Ash,” Elinor asked, “do you ever wish you were not a wolf?”
+“Sometimes I wish I were the distance between a wolf and a man,” he said. “That distance is a field where anything can grow.”
+“And you?” he asked. “Do you tire of being a girl in a red hood?”
+“Sometimes I wish to be the knot that keeps the fence true. Sometimes the table. Sometimes just the pencil.”
+“Be all three,” Grandmother advised from the doorway. “We are rarely one thing. Even trees are ladders for birds, roofs for rain, and diaries for the wind.”
+# Chapter 22: The Letter Returned
+Elinor wrote back to her mother and tucked the reply beside the original letter: “We changed the ending by moving the middle. The wolf had a name. The woodcutter found a second one. Grandmother kept the weather gentle, and a hood became a door. If someone asks what became of Little Red, tell them she became plural.”
+Her mother’s next letter arrived with pressed thyme. “Plural suits you,” it read. “Bring your grandmother to the village feast. I’ll set a chair for Ash at our gate.”
+“Careful,” Grandmother said, smiling. “Chairs breed more chairs.”
+“So do stories,” Elinor replied.
+# Chapter 23: The Feast and the Quiet
+They carried the Red Table into the square. Lanterns freckled the dusk. Tilda’s cheese met Ada’s apples; soup turned strangers into neighbors. Ash stood respectfully at the edge. Some flinched; most didn’t.
+A child tugged Elinor’s hood. “Is the wolf bad?” he whispered.
+“He is hungry, proud, sometimes impatient,” Elinor said. “And learning. So am I.”
+“Then I’m a wolf too,” the child declared, and ran to play at howling with a friend who decided to be a birch.
+“Balance,” Grandmother said, sipping broth. “It looks like chaos from up close, but so does knitting.”
+# Chapter 24: An Ending That Keeps the Window Open
+Rain wrote its soft grammar on the cottage roof. The kettle made its old promise. Elinor loosened her hood because endings should breathe.
+“To knots and tables and pencils,” Grandmother toasted.
+“And bridges that remember their rivers,” Ada added.
+“And to the day I am not needed,” Jonas said, “because the ending forgot to be sharp.”
+Ash lay just beyond the threshold, polite as a porch light. “And to distances that become fields,” he murmured.
+The moon nodded through a torn cloud. The forest braided its paths anew, as forests do when stories stop pretending to be straight. Somewhere a fox revised his shortcuts. Somewhere a birch peeled back another truth. Somewhere a lamb dreamed in numbers and woke to find the flock still counting.
+If, on certain nights, you hear careful howling beyond the birch grove, that is only Ash reminding the sky that endings are agreements, not decrees. The sky, who knows something about cycles, answers with light.

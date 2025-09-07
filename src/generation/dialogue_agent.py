@@ -3,7 +3,7 @@ import yaml
 from langchain_openai import ChatOpenAI
 from src.utils.utils import convert_json
 
-# 加载 config/prompt.yaml
+# Load config/prompt.yaml
 def load_prompt():
     path = os.path.join("config", "prompt.yaml")
     with open(path, "r", encoding="utf-8") as f:
@@ -37,13 +37,13 @@ class DialogueAgent:
         prompt = [
             {"role": "system", "content": self.system_message},
             {"role": "user", "content": f"""
-历史对话：
+Dialogue history:
 {self.message_history}
 
-请你为这句剧情生成一段符合语境的{mode}：
+Please generate contextually appropriate {mode} for this plot sentence:
 \"{sentence}\"
 
-输出格式：
+Output format:
 {{
   "output": "...",
   "action": "..."

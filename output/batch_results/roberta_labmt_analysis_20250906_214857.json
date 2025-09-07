@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "total_chapters": 6,
+    "primary_method": "RoBERTa",
+    "validation_method": "LabMT-en-v1",
+    "analysis_timestamp": "2025-09-06T21:48:57.170396"
+  },
+  "chapter_analysis": [
+    {
+      "chapter_num": 4,
+      "title": "Grandmother’s Pod Breached",
+      "roberta_score": 0.3314,
+      "labmt_score": 0.2373,
+      "content_length": 13919
+    },
+    {
+      "chapter_num": 3,
+      "title": "Encounter with the Cyberwolf",
+      "roberta_score": -0.3196,
+      "labmt_score": 0.1939,
+      "content_length": 16948
+    },
+    {
+      "chapter_num": 1,
+      "title": "Red Receives the Nanobot Delivery Mission",
+      "roberta_score": 0.0719,
+      "labmt_score": 0.2028,
+      "content_length": 4580
+    },
+    {
+      "chapter_num": 2,
+      "title": "Crossing the Outland Checkpoint",
+      "roberta_score": -0.3265,
+      "labmt_score": 0.1691,
+      "content_length": 40246
+    },
+    {
+      "chapter_num": 5,
+      "title": "Cyberwolf’s Ultimatum",
+      "roberta_score": 0.1671,
+      "labmt_score": 0.1698,
+      "content_length": 13699
+    },
+    {
+      "chapter_num": 6,
+      "title": "Final Showdown and Escape",
+      "roberta_score": -0.5556,
+      "labmt_score": 0.2635,
+      "content_length": 1632
+    }
+  ],
+  "primary_analysis": {
+    "method": "RoBERTa",
+    "scores": [
+      0.3314224322636922,
+      -0.31961921056111653,
+      0.0718676249186198,
+      -0.3264664888381958,
+      0.16708881457646688,
+      -0.5555619171687535
+    ],
+    "reagan_classification": {
+      "method": "RoBERTa",
+      "best_match": "Icarus",
+      "confidence": 0.4054,
+      "all_similarities": {
+        "Rags to riches": 0,
+        "Tragedy": 0.1635,
+        "Man in a hole": 0,
+        "Icarus": 0.4054,
+        "Cinderella": 0.043,
+        "Oedipus": 0
+      },
+      "reagan_category": "IC"
+    }
+  },
+  "validation_analysis": {
+    "method": "LabMT",
+    "scores": [
+      0.23733809523809146,
+      0.19385456273763912,
+      0.20275914634146308,
+      0.16912444933920412,
+      0.16981024667931433,
+      0.26354166666666723
+    ],
+    "reagan_classification": {
+      "method": "LabMT",
+      "best_match": "Rags to riches",
+      "confidence": 0.6553,
+      "all_similarities": {
+        "Rags to riches": 0.6553,
+        "Tragedy": 0.6464,
+        "Man in a hole": 0,
+        "Icarus": 0.0038,
+        "Cinderella": 0,
+        "Oedipus": 0.3263
+      },
+      "reagan_category": "RR"
+    }
+  },
+  "correlation_analysis": {
+    "pearson_correlation": {
+      "r": -0.1829,
+      "p_value": 0.7287,
+      "significance": "Not Significant"
+    },
+    "spearman_correlation": {
+      "r": -0.0286,
+      "p_value": 0.9572
+    },
+    "direction_consistency": 0.8,
+    "consistency_level": "Low",
+    "interpretation": "RoBERTa and LabMT correlation coefficient is -0.183, belongs to weak correlation"
+  },
+  "comparison_analysis": {
+    "disagreement_points": [
+      {
+        "chapter": 2,
+        "roberta_score": -0.31961921056111653,
+        "labmt_score": 0.19385456273763912,
+        "difference": 0.5135
+      },
+      {
+        "chapter": 4,
+        "roberta_score": -0.3264664888381958,
+        "labmt_score": 0.16912444933920412,
+        "difference": 0.4956
+      },
+      {
+        "chapter": 6,
+        "roberta_score": -0.5555619171687535,
+        "labmt_score": 0.26354166666666723,
+        "difference": 0.8191
+      }
+    ],
+    "method_advantages": {
+      "RoBERTa": {
+        "strengths": [
+          "Deep learning model with better contextual understanding",
+          "Suitable for modern text and dialogue",
+          "High sensitivity to sci-fi and technical texts"
+        ],
+        "classification": "Icarus",
+        "confidence": 0.4054
+      },
+      "LabMT": {
+        "strengths": [
+          "Fully consistent with Reagan's original method",
+          "Based on large-scale human annotation",
+          "Suitable for traditional literary analysis"
+        ],
+        "classification": "Rags to riches",
+        "confidence": 0.6553
+      }
+    },
+    "consistency_assessment": {
+      "classification_agreement": false,
+      "major_disagreements": 3,
+      "recommendation": "Two methods differ significantly, recommend detailed analysis of difference causes, may need more in-depth text feature analysis"
+    }
+  },
+  "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = -0.183 (Low)\n- Consistency level: RoBERTa and LabMT correlation coefficient is -0.183, belongs to weak correlation\n\nClassification Results:\n- RoBERTa (primary): Icarus\n- LabMT (validation): Rags to riches\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is -0.183, showing low consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation."
+}

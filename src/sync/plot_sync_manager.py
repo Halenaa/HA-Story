@@ -1,16 +1,16 @@
-# 文件路径建议：src/sync/plot_sync_manager.py
+# File path suggestion: src/sync/plot_sync_manager.py
 
 from src.sync.update_plot_from_dialogue import update_plot_from_dialogue
 from src.sync.regenerate_dialogue_from_plot import regenerate_dialogue_from_plot
 
 def sync_plot_and_dialogue_from_behavior(story, dialogue_result, characters, model="gpt-4.1"):
     """
-    联动更新模块：根据 dialogue 中行为 → 更新 plot → 重生成 dialogue。
+    Linked update module: based on behavior in dialogue → update plot → regenerate dialogue.
 
-    返回：
-        - 更新后的 story
-        - 更新后的 dialogue_result
-        - revision_log：记录每章是否修改、变更摘要等
+    Returns:
+        - Updated story
+        - Updated dialogue_result  
+        - revision_log: Records whether each chapter was modified, change summaries, etc.
     """
     revision_log = []
     updated_story = story.copy()
@@ -28,7 +28,7 @@ def sync_plot_and_dialogue_from_behavior(story, dialogue_result, characters, mod
             })
             continue
 
-        # ✅ Step 1：对话驱动 plot 更新
+        # Step 1: Dialogue-driven plot update
         result = update_plot_from_dialogue(
             chapter_id = ch.get("chapter_id", f"chapter_{idx}"),
             original_plot=ch["plot"],
@@ -42,7 +42,7 @@ def sync_plot_and_dialogue_from_behavior(story, dialogue_result, characters, mod
             ch["plot_updated"] = True
             ch["plot_change_note"] = result["change_summary"]
 
-            # ✅ Step 2：plot 改了 → 联动更新 dialogue
+            # Step 2: Plot changed → linked update dialogue
             new_dialogue = regenerate_dialogue_from_plot(
                 chapter_id=ch["chapter_id"],
                 plot=result["updated_plot"],
