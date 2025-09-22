@@ -1,0 +1,620 @@
+{
+  "HRED_semantic_continuity_evaluation": {
+    "model_name": "all-mpnet-base-v2",
+    "analysis_method": "Original sentence semantic continuity",
+    "measurement_scope": "Adjacent sentence similarity only, not complete coherence",
+    "total_sentences": 400,
+    "adjacent_pairs": 399,
+    "average_semantic_continuity": 0.2641,
+    "objective_description": {
+      "score": 0.2641,
+      "range": "0-1 (1 means completely similar)",
+      "measurement_scope": "Adjacent sentence semantic similarity only",
+      "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+      "limitation": "Does not measure logical coherence, causal relationships, or complete narrative coherence",
+      "reference": "Recommend comparing with other texts rather than absolute rating"
+    }
+  },
+  "detailed_analysis": {
+    "basic_statistics": {
+      "average_semantic_continuity": 0.26411344259883973,
+      "semantic_continuity_std": 0.12481110472806616,
+      "max_semantic_continuity": 0.9199905395507812,
+      "min_semantic_continuity": -0.021911123767495155,
+      "semantic_continuity_median": 0.2516137361526489
+    },
+    "semantic_continuity_breakpoints": [
+      {
+        "position": 5,
+        "sentence_pair": "“Bread, broth, rosemary salve,... → Walk the path....",
+        "similarity": 0.112
+      },
+      {
+        "position": 7,
+        "sentence_pair": "Don’t tarry.... → ” “If I meet a wolf,” Elinor a...",
+        "similarity": 0.101
+      },
+      {
+        "position": 11,
+        "sentence_pair": "“Questions are the walking sti... → The forest was louder than it ...",
+        "similarity": 0.127
+      },
+      {
+        "position": 22,
+        "sentence_pair": "” “I’m going to my grandmother... → And I have a question....",
+        "similarity": 0.116
+      },
+      {
+        "position": 32,
+        "sentence_pair": "Trouble is my favorite aunt.... → They walked together because t...",
+        "similarity": 0.089
+      },
+      {
+        "position": 46,
+        "sentence_pair": "Stories turned us into silhoue... → ” Elinor uncapped the salve an...",
+        "similarity": 0.075
+      },
+      {
+        "position": 52,
+        "sentence_pair": "I intend to deliver mine.... → Grandmother’s cottage had a ro...",
+        "similarity": -0.022
+      },
+      {
+        "position": 61,
+        "sentence_pair": "Ash paused on the threshold.... → “I was not invited....",
+        "similarity": 0.132
+      },
+      {
+        "position": 67,
+        "sentence_pair": "Elinor set the basket down.... → “You look as if a storm sits o...",
+        "similarity": 0.109
+      },
+      {
+        "position": 70,
+        "sentence_pair": "“But it brought company.... → The wind keeps knocking, and I...",
+        "similarity": 0.1
+      },
+      {
+        "position": 76,
+        "sentence_pair": "Elinor wears it now.... → Do you remember the version of...",
+        "similarity": 0.045
+      },
+      {
+        "position": 78,
+        "sentence_pair": "Please tell me the true one.... → Love, your daughter....",
+        "similarity": 0.06
+      },
+      {
+        "position": 79,
+        "sentence_pair": "Love, your daughter.... → ” “The hood is older than that...",
+        "similarity": 0.026
+      },
+      {
+        "position": 87,
+        "sentence_pair": "” “Then why do people tell the... → ” Elinor asked softly....",
+        "similarity": 0.133
+      },
+      {
+        "position": 91,
+        "sentence_pair": "Because fear pays better than ... → ” Ash looked at his paws....",
+        "similarity": 0.03
+      },
+      {
+        "position": 93,
+        "sentence_pair": "“My ancestors remember that sh... → We avoid it now....",
+        "similarity": 0.134
+      },
+      {
+        "position": 94,
+        "sentence_pair": "We avoid it now.... → The door rattled....",
+        "similarity": 0.084
+      },
+      {
+        "position": 96,
+        "sentence_pair": "A man entered with rope, a hat... → “Afternoon,” he said....",
+        "similarity": 0.131
+      },
+      {
+        "position": 111,
+        "sentence_pair": "“But this sentence isn’t over.... → Grandmother thumped the table....",
+        "similarity": 0.086
+      },
+      {
+        "position": 112,
+        "sentence_pair": "Grandmother thumped the table.... → “My house has a rule: we don’t...",
+        "similarity": 0.133
+      },
+      {
+        "position": 121,
+        "sentence_pair": "I have not threatened this chi... → I came to warm myself by a sto...",
+        "similarity": 0.055
+      },
+      {
+        "position": 135,
+        "sentence_pair": "“It glues a hand to a hatchet.... → ” “Drink,” Grandmother ordered...",
+        "similarity": 0.104
+      },
+      {
+        "position": 140,
+        "sentence_pair": "we insisted they meet.... → The hood was a door....",
+        "similarity": 0.104
+      },
+      {
+        "position": 162,
+        "sentence_pair": "” “Most of us do,” Grandmother... → Elinor lifted the salve....",
+        "similarity": 0.1
+      },
+      {
+        "position": 171,
+        "sentence_pair": "We found only a hood and a rum... → ” Jonas’s face shifted....",
+        "similarity": 0.099
+      },
+      {
+        "position": 182,
+        "sentence_pair": "They found a gap where a lamb ... → “Here,” Ash said....",
+        "similarity": 0.079
+      },
+      {
+        "position": 198,
+        "sentence_pair": "They set a table in the birch ... → Tilda brought cheese;...",
+        "similarity": 0.138
+      },
+      {
+        "position": 206,
+        "sentence_pair": "It remembers.... → ” A miller said, “Wolves take....",
+        "similarity": 0.069
+      },
+      {
+        "position": 207,
+        "sentence_pair": "” A miller said, “Wolves take.... → That’s what they are....",
+        "similarity": 0.09
+      },
+      {
+        "position": 208,
+        "sentence_pair": "That’s what they are.... → ” “Hunger takes,” Brindle corr...",
+        "similarity": 0.107
+      },
+      {
+        "position": 211,
+        "sentence_pair": "” A young hunter said, “Men pr... → That’s what we do....",
+        "similarity": 0.096
+      },
+      {
+        "position": 212,
+        "sentence_pair": "That’s what we do.... → ” “Fear protects,” Grandmother...",
+        "similarity": 0.045
+      },
+      {
+        "position": 221,
+        "sentence_pair": "Birches hissed their papery br... → “My sister Mara used to say,” ...",
+        "similarity": 0.066
+      },
+      {
+        "position": 224,
+        "sentence_pair": "Summer slid down the valley li... → The pact held mostly because i...",
+        "similarity": 0.074
+      },
+      {
+        "position": 232,
+        "sentence_pair": "He owes us nothing, but the fo... → ” “Brindle?...",
+        "similarity": 0.099
+      },
+      {
+        "position": 245,
+        "sentence_pair": "“The second is for the ears.... → ” Ada stayed to rest while her...",
+        "similarity": 0.065
+      },
+      {
+        "position": 252,
+        "sentence_pair": "Lanterns swung.... → Old fears put on new coats....",
+        "similarity": 0.12
+      },
+      {
+        "position": 255,
+        "sentence_pair": "“He chased the fox,” Ash said,... → ” The Red Table gathered benea...",
+        "similarity": 0.107
+      },
+      {
+        "position": 256,
+        "sentence_pair": "” The Red Table gathered benea... → A young wolf stepped forward, ...",
+        "similarity": 0.137
+      },
+      {
+        "position": 261,
+        "sentence_pair": "“Then we must write faster,” E... → They reached the ravine....",
+        "similarity": 0.081
+      },
+      {
+        "position": 284,
+        "sentence_pair": "Elinor carried questions to th... → a shepherd dog forgetting gent...",
+        "similarity": 0.134
+      },
+      {
+        "position": 285,
+        "sentence_pair": "a shepherd dog forgetting gent... → a night fire under a pine....",
+        "similarity": 0.044
+      },
+      {
+        "position": 288,
+        "sentence_pair": "Some made it to seven before s... → Ada added rivers to Elinor’s m...",
+        "similarity": 0.008
+      },
+      {
+        "position": 298,
+        "sentence_pair": "Names have teeth—but some bite... → ” Jonas nodded....",
+        "similarity": 0.104
+      },
+      {
+        "position": 300,
+        "sentence_pair": "“I’ll try.... → A fox with too many ideas bega...",
+        "similarity": 0.016
+      },
+      {
+        "position": 301,
+        "sentence_pair": "A fox with too many ideas bega... → He learned their dance and ski...",
+        "similarity": 0.082
+      },
+      {
+        "position": 302,
+        "sentence_pair": "He learned their dance and ski... → Elinor and Ash watched from th...",
+        "similarity": 0.078
+      },
+      {
+        "position": 305,
+        "sentence_pair": "“Then let him be studied back,... → She tied small bells into the ...",
+        "similarity": 0.123
+      },
+      {
+        "position": 309,
+        "sentence_pair": "“Pedagogy,” Elinor corrected.... → Grandmother sat at the birch t...",
+        "similarity": 0.056
+      },
+      {
+        "position": 316,
+        "sentence_pair": "She said a man was paid to be ... → ” Jonas swallowed....",
+        "similarity": 0.104
+      },
+      {
+        "position": 330,
+        "sentence_pair": "Tilda called neighbors;... → Brindle’s pack hauled branches...",
+        "similarity": 0.085
+      },
+      {
+        "position": 334,
+        "sentence_pair": "” “It’s called a valley,” Elin... → A stranger strode into the mar...",
+        "similarity": 0.112
+      },
+      {
+        "position": 345,
+        "sentence_pair": "He followed, and because liste... → “Ash,” Elinor asked, “do you e...",
+        "similarity": 0.107
+      },
+      {
+        "position": 354,
+        "sentence_pair": "Sometimes just the pencil.... → ” “Be all three,” Grandmother ...",
+        "similarity": 0.021
+      },
+      {
+        "position": 357,
+        "sentence_pair": "Even trees are ladders for bir... → Elinor wrote back to her mothe...",
+        "similarity": 0.106
+      },
+      {
+        "position": 369,
+        "sentence_pair": "” “So do stories,” Elinor repl... → They carried the Red Table int...",
+        "similarity": 0.121
+      },
+      {
+        "position": 370,
+        "sentence_pair": "They carried the Red Table int... → Lanterns freckled the dusk....",
+        "similarity": 0.077
+      },
+      {
+        "position": 371,
+        "sentence_pair": "Lanterns freckled the dusk.... → Tilda’s cheese met Ada’s apple...",
+        "similarity": 0.139
+      },
+      {
+        "position": 373,
+        "sentence_pair": "soup turned strangers into nei... → Ash stood respectfully at the ...",
+        "similarity": 0.099
+      },
+      {
+        "position": 376,
+        "sentence_pair": "most didn’t.... → A child tugged Elinor’s hood....",
+        "similarity": 0.05
+      }
+    ],
+    "high_continuity_segments": [
+      {
+        "start_sentence": 8,
+        "end_sentence": 11,
+        "length": 4,
+        "average_similarity": 0.497
+      },
+      {
+        "start_sentence": 19,
+        "end_sentence": 21,
+        "length": 3,
+        "average_similarity": 0.364
+      },
+      {
+        "start_sentence": 35,
+        "end_sentence": 37,
+        "length": 3,
+        "average_similarity": 0.393
+      },
+      {
+        "start_sentence": 39,
+        "end_sentence": 41,
+        "length": 3,
+        "average_similarity": 0.361
+      },
+      {
+        "start_sentence": 48,
+        "end_sentence": 50,
+        "length": 3,
+        "average_similarity": 0.416
+      },
+      {
+        "start_sentence": 56,
+        "end_sentence": 59,
+        "length": 4,
+        "average_similarity": 0.417
+      },
+      {
+        "start_sentence": 62,
+        "end_sentence": 64,
+        "length": 3,
+        "average_similarity": 0.47
+      },
+      {
+        "start_sentence": 73,
+        "end_sentence": 76,
+        "length": 4,
+        "average_similarity": 0.355
+      },
+      {
+        "start_sentence": 80,
+        "end_sentence": 83,
+        "length": 4,
+        "average_similarity": 0.361
+      },
+      {
+        "start_sentence": 106,
+        "end_sentence": 108,
+        "length": 3,
+        "average_similarity": 0.39
+      },
+      {
+        "start_sentence": 118,
+        "end_sentence": 120,
+        "length": 3,
+        "average_similarity": 0.401
+      },
+      {
+        "start_sentence": 125,
+        "end_sentence": 127,
+        "length": 3,
+        "average_similarity": 0.357
+      },
+      {
+        "start_sentence": 138,
+        "end_sentence": 140,
+        "length": 3,
+        "average_similarity": 0.352
+      },
+      {
+        "start_sentence": 151,
+        "end_sentence": 153,
+        "length": 3,
+        "average_similarity": 0.389
+      },
+      {
+        "start_sentence": 157,
+        "end_sentence": 160,
+        "length": 4,
+        "average_similarity": 0.422
+      },
+      {
+        "start_sentence": 168,
+        "end_sentence": 170,
+        "length": 3,
+        "average_similarity": 0.42
+      },
+      {
+        "start_sentence": 187,
+        "end_sentence": 189,
+        "length": 3,
+        "average_similarity": 0.386
+      },
+      {
+        "start_sentence": 209,
+        "end_sentence": 211,
+        "length": 3,
+        "average_similarity": 0.388
+      },
+      {
+        "start_sentence": 257,
+        "end_sentence": 259,
+        "length": 3,
+        "average_similarity": 0.393
+      },
+      {
+        "start_sentence": 265,
+        "end_sentence": 268,
+        "length": 4,
+        "average_similarity": 0.616
+      },
+      {
+        "start_sentence": 294,
+        "end_sentence": 296,
+        "length": 3,
+        "average_similarity": 0.463
+      },
+      {
+        "start_sentence": 303,
+        "end_sentence": 305,
+        "length": 3,
+        "average_similarity": 0.448
+      },
+      {
+        "start_sentence": 318,
+        "end_sentence": 320,
+        "length": 3,
+        "average_similarity": 0.368
+      },
+      {
+        "start_sentence": 322,
+        "end_sentence": 325,
+        "length": 4,
+        "average_similarity": 0.428
+      },
+      {
+        "start_sentence": 346,
+        "end_sentence": 348,
+        "length": 3,
+        "average_similarity": 0.466
+      },
+      {
+        "start_sentence": 349,
+        "end_sentence": 351,
+        "length": 3,
+        "average_similarity": 0.434
+      }
+    ],
+    "objective_description": {
+      "score": 0.2641,
+      "range": "0-1 (1 means completely similar)",
+      "measurement_scope": "Adjacent sentence semantic similarity only",
+      "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+      "limitation": "Does not measure logical coherence, causal relationships, or complete narrative coherence",
+      "reference": "Recommend comparing with other texts rather than absolute rating"
+    }
+  },
+  "pairwise_similarity_examples": [
+    {
+      "sentence_pair": "Sentence 1 → Sentence 2",
+      "sentence_1": "In a valley where fog braided the pines each dawn,...",
+      "sentence_2": "People called her Little Red, though her real name...",
+      "similarity": 0.2779
+    },
+    {
+      "sentence_pair": "Sentence 2 → Sentence 3",
+      "sentence_1": "People called her Little Red, though her real name...",
+      "sentence_2": "She carried a notebook titled “Unfinished Stories,...",
+      "similarity": 0.25
+    },
+    {
+      "sentence_pair": "Sentence 3 → Sentence 4",
+      "sentence_1": "She carried a notebook titled “Unfinished Stories,...",
+      "sentence_2": "“Run the errand, Elinor,” her mother said, setting...",
+      "similarity": 0.3278
+    },
+    {
+      "sentence_pair": "Sentence 4 → Sentence 5",
+      "sentence_1": "“Run the errand, Elinor,” her mother said, setting...",
+      "sentence_2": "“Bread, broth, rosemary salve, and this letter.",
+      "similarity": 0.3238
+    },
+    {
+      "sentence_pair": "Sentence 5 → Sentence 6",
+      "sentence_1": "“Bread, broth, rosemary salve, and this letter.",
+      "sentence_2": "Walk the path.",
+      "similarity": 0.1117
+    },
+    {
+      "sentence_pair": "Sentence 6 → Sentence 7",
+      "sentence_1": "Walk the path.",
+      "sentence_2": "Don’t tarry.",
+      "similarity": 0.2417
+    },
+    {
+      "sentence_pair": "Sentence 7 → Sentence 8",
+      "sentence_1": "Don’t tarry.",
+      "sentence_2": "” “If I meet a wolf,” Elinor asked, fastening the ...",
+      "similarity": 0.1007
+    },
+    {
+      "sentence_pair": "Sentence 8 → Sentence 9",
+      "sentence_1": "” “If I meet a wolf,” Elinor asked, fastening the ...",
+      "sentence_2": "” “If you meet a wolf,” said her mother, “you will...",
+      "similarity": 0.5291
+    },
+    {
+      "sentence_pair": "Sentence 9 → Sentence 10",
+      "sentence_1": "” “If you meet a wolf,” said her mother, “you will...",
+      "sentence_2": "” “Walking is what stories do,” Elinor replied.",
+      "similarity": 0.5312
+    },
+    {
+      "sentence_pair": "Sentence 10 → Sentence 11",
+      "sentence_1": "” “Walking is what stories do,” Elinor replied.",
+      "sentence_2": "“Questions are the walking sticks.",
+      "similarity": 0.43
+    },
+    {
+      "sentence_pair": "Sentence 11 → Sentence 12",
+      "sentence_1": "“Questions are the walking sticks.",
+      "sentence_2": "The forest was louder than it looked.",
+      "similarity": 0.1274
+    },
+    {
+      "sentence_pair": "Sentence 12 → Sentence 13",
+      "sentence_1": "The forest was louder than it looked.",
+      "sentence_2": "Leaves clapped;",
+      "similarity": 0.3845
+    },
+    {
+      "sentence_pair": "Sentence 13 → Sentence 14",
+      "sentence_1": "Leaves clapped;",
+      "sentence_2": "a stream recited a skipping-stone prayer;",
+      "similarity": 0.3053
+    },
+    {
+      "sentence_pair": "Sentence 14 → Sentence 15",
+      "sentence_1": "a stream recited a skipping-stone prayer;",
+      "sentence_2": "crows stitched the sky with threadlike voices.",
+      "similarity": 0.3519
+    },
+    {
+      "sentence_pair": "Sentence 15 → Sentence 16",
+      "sentence_1": "crows stitched the sky with threadlike voices.",
+      "sentence_2": "The path thinned into a suggestion, as paths do wh...",
+      "similarity": 0.1795
+    },
+    {
+      "sentence_pair": "Sentence 16 → Sentence 17",
+      "sentence_1": "The path thinned into a suggestion, as paths do wh...",
+      "sentence_2": "On a stump shaped like a throne sat a wolf with a ...",
+      "similarity": 0.2734
+    },
+    {
+      "sentence_pair": "Sentence 17 → Sentence 18",
+      "sentence_1": "On a stump shaped like a throne sat a wolf with a ...",
+      "sentence_2": "“Good morning,” Elinor said, because courtesies ca...",
+      "similarity": 0.1524
+    },
+    {
+      "sentence_pair": "Sentence 18 → Sentence 19",
+      "sentence_1": "“Good morning,” Elinor said, because courtesies ca...",
+      "sentence_2": "“Are you looking for a story?",
+      "similarity": 0.2412
+    },
+    {
+      "sentence_pair": "Sentence 19 → Sentence 20",
+      "sentence_1": "“Are you looking for a story?",
+      "sentence_2": "” “They find me,” the wolf replied.",
+      "similarity": 0.367
+    },
+    {
+      "sentence_pair": "Sentence 20 → Sentence 21",
+      "sentence_1": "” “They find me,” the wolf replied.",
+      "sentence_2": "“Even when I go searching only for water.",
+      "similarity": 0.3619
+    },
+    {
+      "note": "Only showing first 20 pairs, total of 399 adjacent sentence pairs"
+    }
+  ]
+}

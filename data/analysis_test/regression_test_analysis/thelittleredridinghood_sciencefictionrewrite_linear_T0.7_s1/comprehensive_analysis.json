@@ -1,0 +1,1518 @@
+{
+  "folder_name": "thelittleredridinghood_sciencefictionrewrite_linear_T0.7_s1",
+  "file_path": "/Users/haha/Story/data/output/regression_test/thelittleredridinghood_sciencefictionrewrite_linear_T0.7_s1/enhanced_story_dialogue_updated.md",
+  "analysis_timestamp": null,
+  "emotional_arc_analysis": {
+    "metadata": {
+      "total_chapters": 8,
+      "primary_method": "RoBERTa",
+      "validation_method": "LabMT-en-v1",
+      "analysis_timestamp": "2025-09-09T21:04:57.777127"
+    },
+    "chapter_analysis": [
+      {
+        "chapter_num": 1,
+        "title": "Red Receives the Quantum Delivery",
+        "roberta_score": 0.0795,
+        "labmt_score": 0.1543,
+        "content_length": 3477
+      },
+      {
+        "chapter_num": 2,
+        "title": "Intercepted by the Wolf Drone",
+        "roberta_score": 0.027,
+        "labmt_score": 0.1997,
+        "content_length": 2194
+      },
+      {
+        "chapter_num": 3,
+        "title": "Alliance with the Outlaw Mechanic",
+        "roberta_score": -0.2051,
+        "labmt_score": 0.1478,
+        "content_length": 5007
+      },
+      {
+        "chapter_num": 4,
+        "title": "Wolf Drone Infiltrates Grandmother’s Lab",
+        "roberta_score": -0.4138,
+        "labmt_score": 0.0998,
+        "content_length": 3802
+      },
+      {
+        "chapter_num": 5,
+        "title": "Red’s Risky Rescue Plan",
+        "roberta_score": 0.4491,
+        "labmt_score": 0.1351,
+        "content_length": 8299
+      },
+      {
+        "chapter_num": 6,
+        "title": "Showdown with the Wolf Drone",
+        "roberta_score": 0.0605,
+        "labmt_score": 0.0777,
+        "content_length": 8766
+      },
+      {
+        "chapter_num": 7,
+        "title": "Escape and Sacrifice",
+        "roberta_score": -0.1415,
+        "labmt_score": 0.108,
+        "content_length": 8600
+      },
+      {
+        "chapter_num": 8,
+        "title": "Rebels Receive the Data",
+        "roberta_score": 0.1472,
+        "labmt_score": 0.2018,
+        "content_length": 2009
+      }
+    ],
+    "primary_analysis": {
+      "method": "RoBERTa",
+      "scores": [
+        0.07945817311604818,
+        0.027017136414845783,
+        -0.2050710161526998,
+        -0.41375327905019127,
+        0.44910423358281454,
+        0.06047157049179077,
+        -0.14154271682103475,
+        0.14723870754241944
+      ],
+      "reagan_classification": {
+        "method": "RoBERTa",
+        "best_match": "Man in a hole",
+        "confidence": 0.1886,
+        "all_similarities": {
+          "Rags to riches": 0.1084,
+          "Tragedy": 0,
+          "Man in a hole": 0.1886,
+          "Icarus": 0,
+          "Cinderella": 0,
+          "Oedipus": 0.1073
+        },
+        "reagan_category": "MH"
+      }
+    },
+    "validation_analysis": {
+      "method": "LabMT",
+      "scores": [
+        0.15426339285714397,
+        0.19972222222222258,
+        0.14783653846153788,
+        0.09981250000000075,
+        0.13512276785714272,
+        0.07771874999999961,
+        0.10803030303030292,
+        0.20184210526315827
+      ],
+      "reagan_classification": {
+        "method": "LabMT",
+        "best_match": "Tragedy",
+        "confidence": 0.6884,
+        "all_similarities": {
+          "Rags to riches": 0.606,
+          "Tragedy": 0.6884,
+          "Man in a hole": 0,
+          "Icarus": 0.0805,
+          "Cinderella": 0,
+          "Oedipus": 0.325
+        },
+        "reagan_category": "TR"
+      }
+    },
+    "correlation_analysis": {
+      "pearson_correlation": {
+        "r": 0.3124,
+        "p_value": 0.4513,
+        "significance": "Not Significant"
+      },
+      "spearman_correlation": {
+        "r": 0.381,
+        "p_value": 0.3518
+      },
+      "direction_consistency": 0.7143,
+      "consistency_level": "Low",
+      "interpretation": "RoBERTa and LabMT correlation coefficient is 0.312, belongs to weak correlation"
+    },
+    "comparison_analysis": {
+      "disagreement_points": [
+        {
+          "chapter": 3,
+          "roberta_score": -0.2050710161526998,
+          "labmt_score": 0.14783653846153788,
+          "difference": 0.3529
+        },
+        {
+          "chapter": 4,
+          "roberta_score": -0.41375327905019127,
+          "labmt_score": 0.09981250000000075,
+          "difference": 0.5136
+        },
+        {
+          "chapter": 5,
+          "roberta_score": 0.44910423358281454,
+          "labmt_score": 0.13512276785714272,
+          "difference": 0.314
+        }
+      ],
+      "method_advantages": {
+        "RoBERTa": {
+          "strengths": [
+            "Deep learning model with better contextual understanding",
+            "Suitable for modern text and dialogue",
+            "High sensitivity to sci-fi and technical texts"
+          ],
+          "classification": "Man in a hole",
+          "confidence": 0.1886
+        },
+        "LabMT": {
+          "strengths": [
+            "Fully consistent with Reagan's original method",
+            "Based on large-scale human annotation",
+            "Suitable for traditional literary analysis"
+          ],
+          "classification": "Tragedy",
+          "confidence": 0.6884
+        }
+      },
+      "consistency_assessment": {
+        "classification_agreement": false,
+        "major_disagreements": 3,
+        "recommendation": "Two methods differ significantly, recommend detailed analysis of difference causes, may need more in-depth text feature analysis"
+      }
+    },
+    "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.312 (Low)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.312, belongs to weak correlation\n\nClassification Results:\n- RoBERTa (primary): Man in a hole\n- LabMT (validation): Tragedy\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.312, showing low consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation.",
+    "output_files": {
+      "analysis_json": "/Users/haha/Story/data/regression_test_analysis/thelittleredridinghood_sciencefictionrewrite_linear_T0.7_s1/roberta_labmt_analysis_20250909_210457.json"
+    }
+  },
+  "hred_coherence_analysis": {
+    "HRED_coherence_evaluation": {
+      "model_name": "all-mpnet-base-v2",
+      "analysis_method": "Original sentence coherence",
+      "total_sentences": 431,
+      "adjacent_pairs": 430,
+      "average_coherence": 0.352,
+      "objective_description": {
+        "score": 0.352,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "detailed_analysis": {
+      "basic_statistics": {
+        "average_coherence": 0.35198756949326326,
+        "coherence_std": 0.1844660749456016,
+        "max_coherence": 1.0,
+        "min_coherence": -0.05430565029382706,
+        "coherence_median": 0.32156601548194885
+      },
+      "coherence_breakpoints": [
+        {
+          "position": 5,
+          "sentence_pair": "The lab is cluttered with make... → Dr....",
+          "similarity": 0.059
+        },
+        {
+          "position": 6,
+          "sentence_pair": "Dr.... → Mira slides a palm-sized quant...",
+          "similarity": 0.144
+        },
+        {
+          "position": 7,
+          "sentence_pair": "Mira slides a palm-sized quant... → Grandmother (Dr....",
+          "similarity": 0.08
+        },
+        {
+          "position": 8,
+          "sentence_pair": "Grandmother (Dr.... → Mira)Mira pushes the quantum d...",
+          "similarity": 0.109
+        },
+        {
+          "position": 13,
+          "sentence_pair": "The crystal halted against Red... → “If Overwatch gets their hands...",
+          "similarity": 0.135
+        },
+        {
+          "position": 16,
+          "sentence_pair": "“You must get it to Finn at th... → No detours....",
+          "similarity": 0.113
+        },
+        {
+          "position": 28,
+          "sentence_pair": "Grandmother (Dr.... → Mira)Mira presses the crystal ...",
+          "similarity": 0.128
+        },
+        {
+          "position": 52,
+          "sentence_pair": "The drone's silhouette shifted... → \"The crystal belongs to my mas...",
+          "similarity": 0.085
+        },
+        {
+          "position": 65,
+          "sentence_pair": "She thrusts the satchel at him... → 'We don't have time—the jammer...",
+          "similarity": 0.114
+        },
+        {
+          "position": 75,
+          "sentence_pair": "\" Her fingers drummed a restle... → They're tracking me....",
+          "similarity": 0.053
+        },
+        {
+          "position": 76,
+          "sentence_pair": "They're tracking me.... → Red glances over her shoulder,...",
+          "similarity": 0.134
+        },
+        {
+          "position": 84,
+          "sentence_pair": "They know I took the drive.... → ” There was no mistaking the r...",
+          "similarity": 0.056
+        },
+        {
+          "position": 86,
+          "sentence_pair": "“We need to move, now, before ... → The Agency knows I took the dr...",
+          "similarity": 0.11
+        },
+        {
+          "position": 87,
+          "sentence_pair": "The Agency knows I took the dr... → ' Jax, without hesitation, swe...",
+          "similarity": 0.062
+        },
+        {
+          "position": 88,
+          "sentence_pair": "' Jax, without hesitation, swe... → Outside, the whir of a supply ...",
+          "similarity": 0.14
+        },
+        {
+          "position": 92,
+          "sentence_pair": "Finally, Jax thrusts the hasti... → 'I’ve bypassed the fail-safe....",
+          "similarity": 0.126
+        },
+        {
+          "position": 100,
+          "sentence_pair": "Don’t stop for anything.... → ” Red nodded, knuckles white a...",
+          "similarity": 0.091
+        },
+        {
+          "position": 107,
+          "sentence_pair": "The weight of the patched devi... → It won’t hold long....",
+          "similarity": 0.149
+        },
+        {
+          "position": 108,
+          "sentence_pair": "It won’t hold long.... → Jax squares his shoulders, sca...",
+          "similarity": -0.035
+        },
+        {
+          "position": 116,
+          "sentence_pair": "He was already scanning for co... → Get out the back—now....",
+          "similarity": 0.094
+        },
+        {
+          "position": 118,
+          "sentence_pair": "Don’t stop for anything.... → ' Red bolts through the hidden...",
+          "similarity": 0.07
+        },
+        {
+          "position": 124,
+          "sentence_pair": "Red crouches near the lab's en... → Dr....",
+          "similarity": 0.085
+        },
+        {
+          "position": 125,
+          "sentence_pair": "Dr.... → Mira hovers nearby, her gaze d...",
+          "similarity": 0.05
+        },
+        {
+          "position": 127,
+          "sentence_pair": "Suddenly, the unassuming Suppl... → Dr....",
+          "similarity": 0.091
+        },
+        {
+          "position": 128,
+          "sentence_pair": "Dr.... → Mira approaches, intent on sca...",
+          "similarity": 0.154
+        },
+        {
+          "position": 131,
+          "sentence_pair": "No way—that wasn't supposed to... → ' and quickly observes, 'Wait ...",
+          "similarity": 0.126
+        },
+        {
+          "position": 133,
+          "sentence_pair": "We're supposed to use protocol... → Where did this come from, and ...",
+          "similarity": 0.165
+        },
+        {
+          "position": 149,
+          "sentence_pair": "Something prickled at the back... → That wasn’t the standard suppl...",
+          "similarity": 0.121
+        },
+        {
+          "position": 150,
+          "sentence_pair": "That wasn’t the standard suppl... → She pulled out her checklist, ...",
+          "similarity": 0.068
+        },
+        {
+          "position": 151,
+          "sentence_pair": "She pulled out her checklist, ... → Protocol S-17 was clear: every...",
+          "similarity": 0.128
+        },
+        {
+          "position": 152,
+          "sentence_pair": "Protocol S-17 was clear: every... → So where had this one come fro...",
+          "similarity": 0.012
+        },
+        {
+          "position": 154,
+          "sentence_pair": "And more importantly, why wasn... → Red’s pulse quickened, curiosi...",
+          "similarity": 0.065
+        },
+        {
+          "position": 156,
+          "sentence_pair": "Wolf Drone, still cloaked, piv... → Dr....",
+          "similarity": 0.099
+        },
+        {
+          "position": 157,
+          "sentence_pair": "Dr.... → Mira snatches a pulse rifle fr...",
+          "similarity": 0.074
+        },
+        {
+          "position": 160,
+          "sentence_pair": "Wolf Drone, relentless, shifts... → The scene ends with Red and Dr...",
+          "similarity": 0.163
+        },
+        {
+          "position": 177,
+          "sentence_pair": "” The question hung between th... → If the Overwatch techs had upg...",
+          "similarity": 0.117
+        },
+        {
+          "position": 178,
+          "sentence_pair": "If the Overwatch techs had upg... → Red leans in closer, urgency s...",
+          "similarity": 0.05
+        },
+        {
+          "position": 181,
+          "sentence_pair": "“I triple-checked last night—u... → ” Her gaze flicked up, fierce ...",
+          "similarity": 0.16
+        },
+        {
+          "position": 207,
+          "sentence_pair": "Speed was their only hope.... → Jax clenches his fists, voice ...",
+          "similarity": 0.065
+        },
+        {
+          "position": 211,
+          "sentence_pair": "Rushing would trip every senso... → Stealth, he insisted, bought t...",
+          "similarity": 0.1
+        },
+        {
+          "position": 212,
+          "sentence_pair": "Stealth, he insisted, bought t... → Red glances anxiously over the...",
+          "similarity": 0.166
+        },
+        {
+          "position": 226,
+          "sentence_pair": "The timing has to be perfect.... → ” Jax’s jaw tightened, a flick...",
+          "similarity": 0.1
+        },
+        {
+          "position": 252,
+          "sentence_pair": "The heavy metal door slammed s... → “Jesus, Red, move your ass!...",
+          "similarity": 0.15
+        },
+        {
+          "position": 255,
+          "sentence_pair": "“Did you not hear those sirens... → We don’t have time for you to ...",
+          "similarity": 0.143
+        },
+        {
+          "position": 256,
+          "sentence_pair": "We don’t have time for you to ... → Red staggers inside, eyes wide...",
+          "similarity": 0.07
+        },
+        {
+          "position": 286,
+          "sentence_pair": "She didn’t plan on letting tha... → Jax glances nervously over his...",
+          "similarity": 0.134
+        },
+        {
+          "position": 304,
+          "sentence_pair": "He stumbled on a loose pipe, c... → “Red, what if the grid’s down—...",
+          "similarity": 0.082
+        },
+        {
+          "position": 311,
+          "sentence_pair": "There was no time for hesitati... → Jax stumbles over a loose pipe...",
+          "similarity": 0.162
+        },
+        {
+          "position": 337,
+          "sentence_pair": "Down the hatch, now.... → ” For a split second, his usua...",
+          "similarity": 0.088
+        },
+        {
+          "position": 362,
+          "sentence_pair": "With a sharp gesture, she moti... → “That drone could circle back ...",
+          "similarity": 0.166
+        },
+        {
+          "position": 363,
+          "sentence_pair": "“That drone could circle back ... → Route the data port to the ext...",
+          "similarity": 0.034
+        },
+        {
+          "position": 364,
+          "sentence_pair": "Route the data port to the ext... → ” She kept one wary eye on the...",
+          "similarity": 0.066
+        },
+        {
+          "position": 371,
+          "sentence_pair": "The isolator’s live, buffer’s ... → The job demanded precision, bu...",
+          "similarity": 0.14
+        },
+        {
+          "position": 382,
+          "sentence_pair": "Red’s jaw clenched.... → Sixty seconds could be a lifet...",
+          "similarity": 0.113
+        },
+        {
+          "position": 383,
+          "sentence_pair": "Sixty seconds could be a lifet... → She shifted her stance, body t...",
+          "similarity": 0.119
+        },
+        {
+          "position": 421,
+          "sentence_pair": "If you have any specific conce... → ' Finn’s tension spikes....",
+          "similarity": -0.054
+        },
+        {
+          "position": 428,
+          "sentence_pair": "\"We can't wait any longer—move... → The scene ends as Finn disconn...",
+          "similarity": 0.164
+        },
+        {
+          "position": 429,
+          "sentence_pair": "The scene ends as Finn disconn... → Now move....",
+          "similarity": 0.07
+        },
+        {
+          "position": 430,
+          "sentence_pair": "Now move.... → Outside, the storm faded, and ...",
+          "similarity": 0.104
+        }
+      ],
+      "high_coherence_segments": [
+        {
+          "start_sentence": 29,
+          "end_sentence": 32,
+          "length": 4,
+          "average_similarity": 0.604
+        },
+        {
+          "start_sentence": 46,
+          "end_sentence": 51,
+          "length": 6,
+          "average_similarity": 0.59
+        },
+        {
+          "start_sentence": 57,
+          "end_sentence": 59,
+          "length": 3,
+          "average_similarity": 0.594
+        },
+        {
+          "start_sentence": 67,
+          "end_sentence": 70,
+          "length": 4,
+          "average_similarity": 0.531
+        },
+        {
+          "start_sentence": 101,
+          "end_sentence": 103,
+          "length": 3,
+          "average_similarity": 0.646
+        },
+        {
+          "start_sentence": 120,
+          "end_sentence": 122,
+          "length": 3,
+          "average_similarity": 0.483
+        },
+        {
+          "start_sentence": 136,
+          "end_sentence": 138,
+          "length": 3,
+          "average_similarity": 0.642
+        },
+        {
+          "start_sentence": 164,
+          "end_sentence": 166,
+          "length": 3,
+          "average_similarity": 0.452
+        },
+        {
+          "start_sentence": 167,
+          "end_sentence": 172,
+          "length": 6,
+          "average_similarity": 0.681
+        },
+        {
+          "start_sentence": 191,
+          "end_sentence": 193,
+          "length": 3,
+          "average_similarity": 0.702
+        },
+        {
+          "start_sentence": 208,
+          "end_sentence": 210,
+          "length": 3,
+          "average_similarity": 0.683
+        },
+        {
+          "start_sentence": 219,
+          "end_sentence": 221,
+          "length": 3,
+          "average_similarity": 0.678
+        },
+        {
+          "start_sentence": 232,
+          "end_sentence": 235,
+          "length": 4,
+          "average_similarity": 0.499
+        },
+        {
+          "start_sentence": 242,
+          "end_sentence": 245,
+          "length": 4,
+          "average_similarity": 0.496
+        },
+        {
+          "start_sentence": 246,
+          "end_sentence": 249,
+          "length": 4,
+          "average_similarity": 0.633
+        },
+        {
+          "start_sentence": 257,
+          "end_sentence": 259,
+          "length": 3,
+          "average_similarity": 0.608
+        },
+        {
+          "start_sentence": 270,
+          "end_sentence": 272,
+          "length": 3,
+          "average_similarity": 0.656
+        },
+        {
+          "start_sentence": 277,
+          "end_sentence": 279,
+          "length": 3,
+          "average_similarity": 0.599
+        },
+        {
+          "start_sentence": 293,
+          "end_sentence": 297,
+          "length": 5,
+          "average_similarity": 0.572
+        },
+        {
+          "start_sentence": 301,
+          "end_sentence": 303,
+          "length": 3,
+          "average_similarity": 0.606
+        },
+        {
+          "start_sentence": 325,
+          "end_sentence": 330,
+          "length": 6,
+          "average_similarity": 0.605
+        },
+        {
+          "start_sentence": 345,
+          "end_sentence": 347,
+          "length": 3,
+          "average_similarity": 0.557
+        },
+        {
+          "start_sentence": 384,
+          "end_sentence": 387,
+          "length": 4,
+          "average_similarity": 0.571
+        },
+        {
+          "start_sentence": 392,
+          "end_sentence": 394,
+          "length": 3,
+          "average_similarity": 0.557
+        },
+        {
+          "start_sentence": 409,
+          "end_sentence": 411,
+          "length": 3,
+          "average_similarity": 0.492
+        },
+        {
+          "start_sentence": 412,
+          "end_sentence": 414,
+          "length": 3,
+          "average_similarity": 0.512
+        },
+        {
+          "start_sentence": 418,
+          "end_sentence": 421,
+          "length": 4,
+          "average_similarity": 0.699
+        },
+        {
+          "start_sentence": 424,
+          "end_sentence": 426,
+          "length": 3,
+          "average_similarity": 0.458
+        }
+      ],
+      "objective_description": {
+        "score": 0.352,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "pairwise_similarity_examples": [
+      {
+        "sentence_pair": "Sentence 1 → Sentence 2",
+        "sentence_1": "Red, clutching her reinforced courier satchel, cro...",
+        "sentence_2": "She taps a coded knock on the steel door, signalin...",
+        "similarity": 0.4717
+      },
+      {
+        "sentence_pair": "Sentence 2 → Sentence 3",
+        "sentence_1": "She taps a coded knock on the steel door, signalin...",
+        "sentence_2": "Inside, Dr.",
+        "similarity": 0.2085
+      },
+      {
+        "sentence_pair": "Sentence 3 → Sentence 4",
+        "sentence_1": "Inside, Dr.",
+        "sentence_2": "Mira disables the electromagnetic lock and pulls R...",
+        "similarity": 0.2471
+      },
+      {
+        "sentence_pair": "Sentence 4 → Sentence 5",
+        "sentence_1": "Mira disables the electromagnetic lock and pulls R...",
+        "sentence_2": "The lab is cluttered with makeshift tech, humming ...",
+        "similarity": 0.3026
+      },
+      {
+        "sentence_pair": "Sentence 5 → Sentence 6",
+        "sentence_1": "The lab is cluttered with makeshift tech, humming ...",
+        "sentence_2": "Dr.",
+        "similarity": 0.0594
+      },
+      {
+        "sentence_pair": "Sentence 6 → Sentence 7",
+        "sentence_1": "Dr.",
+        "sentence_2": "Mira slides a palm-sized quantum data crystal acro...",
+        "similarity": 0.1444
+      },
+      {
+        "sentence_pair": "Sentence 7 → Sentence 8",
+        "sentence_1": "Mira slides a palm-sized quantum data crystal acro...",
+        "sentence_2": "Grandmother (Dr.",
+        "similarity": 0.0803
+      },
+      {
+        "sentence_pair": "Sentence 8 → Sentence 9",
+        "sentence_1": "Grandmother (Dr.",
+        "sentence_2": "Mira)Mira pushes the quantum data crystal towards ...",
+        "similarity": 0.1089
+      },
+      {
+        "sentence_pair": "Sentence 9 → Sentence 10",
+        "sentence_1": "Mira)Mira pushes the quantum data crystal towards ...",
+        "sentence_2": "Mira’s hand trembled only slightly as she slid the...",
+        "similarity": 0.6412
+      },
+      {
+        "sentence_pair": "Sentence 10 → Sentence 11",
+        "sentence_1": "Mira’s hand trembled only slightly as she slid the...",
+        "sentence_2": "She fixed Red with a look that cut through the haz...",
+        "similarity": 0.3193
+      },
+      {
+        "sentence_pair": "Sentence 11 → Sentence 12",
+        "sentence_1": "She fixed Red with a look that cut through the haz...",
+        "sentence_2": "“This contains the coordinates to every safe route...",
+        "similarity": 0.4064
+      },
+      {
+        "sentence_pair": "Sentence 12 → Sentence 13",
+        "sentence_1": "“This contains the coordinates to every safe route...",
+        "sentence_2": "The crystal halted against Red’s fingers, and Mira...",
+        "similarity": 0.1927
+      },
+      {
+        "sentence_pair": "Sentence 13 → Sentence 14",
+        "sentence_1": "The crystal halted against Red’s fingers, and Mira...",
+        "sentence_2": "“If Overwatch gets their hands on it, everything w...",
+        "similarity": 0.1346
+      },
+      {
+        "sentence_pair": "Sentence 14 → Sentence 15",
+        "sentence_1": "“If Overwatch gets their hands on it, everything w...",
+        "sentence_2": "” Her tone demanded attention, but beneath it, Red...",
+        "similarity": 0.2032
+      },
+      {
+        "sentence_pair": "Sentence 15 → Sentence 16",
+        "sentence_1": "” Her tone demanded attention, but beneath it, Red...",
+        "sentence_2": "“You must get it to Finn at the safehouse.",
+        "similarity": 0.2326
+      },
+      {
+        "sentence_pair": "Sentence 16 → Sentence 17",
+        "sentence_1": "“You must get it to Finn at the safehouse.",
+        "sentence_2": "No detours.",
+        "similarity": 0.1134
+      },
+      {
+        "sentence_pair": "Sentence 17 → Sentence 18",
+        "sentence_1": "No detours.",
+        "sentence_2": "No signals.",
+        "similarity": 0.3222
+      },
+      {
+        "sentence_pair": "Sentence 18 → Sentence 19",
+        "sentence_1": "No signals.",
+        "sentence_2": "And above all, no hesitation.",
+        "similarity": 0.1861
+      },
+      {
+        "sentence_pair": "Sentence 19 → Sentence 20",
+        "sentence_1": "And above all, no hesitation.",
+        "sentence_2": "” Mira searched his eyes, making sure he felt the ...",
+        "similarity": 0.1778
+      },
+      {
+        "sentence_pair": "Sentence 20 → Sentence 21",
+        "sentence_1": "” Mira searched his eyes, making sure he felt the ...",
+        "sentence_2": "she needed him to understand, not just the message...",
+        "similarity": 0.4376
+      },
+      {
+        "note": "Only showing first 20 pairs, total of 430 adjacent sentence pairs"
+      }
+    ]
+  },
+  "story_structure_analysis": {
+    "evaluation_mode": "default mode",
+    "event_list": [
+      {
+        "event": "Red crouches near a ventilation grate, scans for patrol drones.",
+        "source": "Red, clutching her reinforced courier satchel, crouches beside a rusted ventilation grate and scans the alley for patrol drones.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Mira disables lab lock, pulls Red inside, and reseals the entrance.",
+        "source": "Mira disables the electromagnetic lock and pulls Red into the lab, quickly resealing the entrance.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Mira slides a quantum data crystal to Red, instructing delivery to Finn before Overwatch can trace it.",
+        "source": "Mira slides a palm-sized quantum data crystal across the workbench, instructing Red to deliver it to Finn at the Rebel safehouse before Overwatch can trace its signal.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Mira explains the crystal contains vital safe route coordinates and stresses urgency.",
+        "source": "“This contains the coordinates to every safe route left to us,” she said, each syllable pressed with urgency.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red closes her fist around the crystal.",
+        "source": "Red closed her fist around the crystal, its facets catching the dim light that filtered through the cracks in the bunker ceiling.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Mira presses the crystal into Red's palm, reiterates urgency.",
+        "source": "Mira pressed the crystal firmly into Red’s palm, her grip unyielding as her eyes locked onto his with unspoken urgency.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red pockets the crystal, checks her route, and prepares to evade surveillance.",
+        "source": "Red pockets the crystal, adjusts her hood, and checks her route on a cracked tablet, determined to evade surveillance.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red moves toward the Skyway, but hears a menacing growl signaling danger.",
+        "source": "But just as she reaches the threshold of the Skyway, a low, menacing growl cuts through the night—an unmistakable signal that she is no longer alone.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red sprints across concrete, clutching the data crystal and scanning for surveillance nodes.",
+        "source": "Red sprints across the cracked concrete, clutching a data crystal and scanning for surveillance nodes.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "The bot morphs into Wolf Drone.",
+        "source": "The bot suddenly twists and expands, metal plates shifting as it morphs into the imposing Wolf Drone.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red leaps back, draws a stunner as Wolf Drone blocks her escape.",
+        "source": "Red leaps backward, drawing a compact stunner from her jacket.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Drone's eyes flicker crimson, claws dig furrows.",
+        "source": "The Wolf Drone's eyes flickered with a harsh crimson light, its claws carving deep furrows into the metal floor as it lurched forward, limbs elongating with unnatural precision to block every conceivable escape route.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red hurls a flash grenade, forcing Wolf Drone to recoil.",
+        "source": "' Red hurls a flash grenade at its sensors, forcing the drone to recoil and recalibrate.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red escapes temporarily, but the Wolf Drone marks her trajectory for further pursuit.",
+        "source": "outcome—Red escapes temporarily, but the Wolf Drone marks her trajectory for further pursuit.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red races toward the outlaw mechanic’s workshop, aiming to find help to disappear.",
+        "source": "With minutes to spare and nowhere safe to hide, she races toward the only person in the city daring enough to help her disappear: the outlaw mechanic whose workshop lies hidden beyond the Skyway’s edge.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red darts through alleys toward Jax’s rear entrance and knocks three times.",
+        "source": "She raps three times on the rusted metal door.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax opens the door and she thrusts the satchel at him.",
+        "source": "She thrusts the satchel at him.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red taps impatiently on the console.",
+        "source": "She tapped impatiently on the console, tension flickering across her face.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red tells Jax the Agency knows she took the drive.",
+        "source": "They know I took the drive.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax sweeps the jammer's remains onto his workbench and begins frantic repairs.",
+        "source": "' Jax, without hesitation, sweeps the jammer's remains onto his workbench and begins repairing at a frantic pace, sweat beading on his brow.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax slaps a shutter over the window.",
+        "source": "Jax, cursing the Agency's surveillance, slaps a shutter over the window.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red paces, scanning for exits, nerves taut.",
+        "source": "Red paces, scanning for exits, her nerves taut.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax thrusts the hastily patched jammer into Red's hands.",
+        "source": "Finally, Jax thrusts the hastily patched jammer into her hands.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red snatches the device, glances at Jax, and sprints toward the rear exit.",
+        "source": "Red snatches the device, glancing once at Jax before sprinting toward the rear exit.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax prepares to stall any pursuers as machinery sounds approach.",
+        "source": "Jax wipes his hands, steels himself, and prepares to stall any pursuers as the sounds of machinery approach.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Drone deploys its next directive, targeting Grandmother’s secret lab.",
+        "source": "While she races toward safety, the Wolf Drone deploys its next directive, setting its sensors on a new target: Grandmother’s secret lab.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red crouches near the lab’s encrypted terminal, inputting code to transmit the data crystal.",
+        "source": "Red crouches near the lab's encrypted terminal, her gloved fingers inputting code to transmit the data crystal.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Mira monitors the transfer and security feed, safeguarding the process.",
+        "source": "Mira hovers nearby, her gaze darting between the monitor and the security feed, intent on safeguarding their transfer.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "A Supply Bot enters the lab; Dr. Mira approaches to scan its cargo manifest.",
+        "source": "Mira approaches, intent on scanning its cargo manifest, but Red, noticing something off, intercepts first, grabbing a scanner from the bench and running a diagnostic.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red intercepts and runs a diagnostic, noticing glitches and nonstandard supply codes.",
+        "source": "' and quickly observes, 'Wait a second, that's not standard supply code!",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Drone's camouflage glitches, revealing metallic fangs briefly.",
+        "source": "' As Red investigates further, the bot's panels shimmer briefly—Wolf Drone's camouflage glitches for a split second, revealing metallic fangs.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red lunges to activate emergency lockdown.",
+        "source": "Sensing the threat, Red lunges to activate the emergency lockdown, slamming her palm onto the red switch.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red inspects the bot's label and cross-references it with protocol checklist.",
+        "source": "Red steps closer to the item, inspecting the label and cross-referencing it with their checklist.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Drone ejects microdrones to disable lab cameras while cloaked.",
+        "source": "Wolf Drone, still cloaked, pivots and ejects a swarm of microdrones to disable the lab's cameras.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Mira snatches a pulse rifle and fires at the bot, aiming to disable its sensor array.",
+        "source": "Mira snatches a pulse rifle from the wall and fires at the bot, aiming to disable its sensor array.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red secures the data crystal in a lead-lined case as urgency rises.",
+        "source": "Red scrambles to secure the data crystal in a lead-lined case, the urgency heightened by her discovery.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Drone shifts shape, preparing for direct confrontation.",
+        "source": "Wolf Drone, relentless, shifts shape—its limbs elongate with a metallic grind, preparing for direct confrontation.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Dr. Mira brace for attack as hazard lights flicker and circuitry burns.",
+        "source": "Mira bracing for attack, the lab bathed in flickering hazard lights and the acrid smell of burning circuitry.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red scans the perimeter, signals Jax with a coded tap on the crate.",
+        "source": "Red scans the perimeter, her gloved hand gripping a data crystal as she signals Jax with a coded tap on the crate.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax disables surveillance sensors with a homemade jammer as Red enters.",
+        "source": "As Red slips into the shadowed interior, Jax quickly disables the surveillance sensors with a homemade jammer, sparks dancing as he works.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax assembles a decoy drone while Red outlines her risky rescue plan for Grandmother.",
+        "source": "They huddle by the workbench, Jax assembling a decoy drone while Red outlines her risky rescue plan for Grandmother.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red lays out a faded map, tracing their planned route.",
+        "source": "Red leaned in, urgency sharpening every word as she unfurled the faded map, her finger tracing the jagged route snaking through the city’s forbidden sectors.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax finishes assembling the drone and warns Red about Overwatch patrol cycles.",
+        "source": "“Just make sure you get to Grandmother before the next patrol cycles through,” he muttered, voice low but steady, the edge of worry barely masked by his usual sarcasm.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax argues for stealth, but Red insists speed is needed.",
+        "source": "But Red shook her head, determination sharpening her features.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax presses an EMP grenade into Red’s palm.",
+        "source": "Jax pressed the modified EMP grenade firmly into Red’s palm, his grip unyielding, eyes locking with Red’s in a silent pledge.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red tightens grip on the EMP grenade, ready to move on Jax’s cue.",
+        "source": "Red tightens grip on the EMP grenade, eyes narrowing with steely resolve as she nods toward the west hatch, ready to move on Jax’s cue.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "They compromise: Jax will trigger a distraction, giving Red the chance to plant the EMP charge quickly.",
+        "source": "Ultimately, they compromise—Jax agrees to trigger a distraction at the right moment, giving Red the window she needs to move quickly and plant an EMP charge at the command node.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Both steel themselves for the high-stakes operation, knowing timing and coordination are critical.",
+        "source": "Both steel themselves for the high-stakes operation, knowing timing and coordination are critical to both rescuing Grandmother and disrupting AI Overwatch’s control.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red sprints along the alley, clutching the data crystal.",
+        "source": "Red, clutching the data crystal in a waterproof pouch, sprints along the slick alley, boots splashing through puddles as she scans for threats.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red slides the crystal into Jax’s palm as sirens wail and a Supply Bot rounds the corner.",
+        "source": "As Red slides the crystal into Jax’s palm, sirens wail in the distance and a Supply Bot rounds the corner, its servos whirring in the drizzle.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red shoves Jax down and hurls a pipe at the drone.",
+        "source": "Red shoves Jax down and hurls a broken pipe at the drone, which deflects it with a quick twitch of its shapeshifting limbs.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax grabs Red and yanks him into the hatch.",
+        "source": "Jax curses under his breath, grabbing Red by the collar and yanking him bodily into the cramped hatch.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red staggers inside, rubbing her shoulder.",
+        "source": "Red staggered inside, her eyes wide and breath sharp as she rubbed her aching shoulder, glaring at Jax.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax bars the hatch with a steel beam.",
+        "source": "Jax slammed the heavy steel beam across the hatch, breath ragged and sweat stinging his eyes.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Jax hurriedly bar the hatch as Wolf Drone claws at the metal.",
+        "source": "Together, they hurriedly bar the hatch as the Wolf Drone lunges, claws scraping grooves into the metal, sensors pulsing red as it scans for a breach.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "In the tunnel, Jax bickers with Red about directions and the safety of Finn’s safehouse.",
+        "source": "In the cramped, dim tunnel, Jax bickers anxiously with Red about their next move, questioning her directions and the safety of Finn’s safehouse while Red insists on her knowledge of the tunnels and urges haste.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red crouches, gestures for Jax to move faster toward Finn’s safehouse.",
+        "source": "Red crouches lower, glancing over her shoulder at the distant, echoing whir of the Wolf Drone, then gestures sharply for Jax to move faster.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax glances nervously back as the Wolf Drone’s whir grows louder.",
+        "source": "Jax glanced nervously over his shoulder, the echo of mechanical whirring growing louder in the cramped tunnel.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red grabs Jax’s wrist, pulling him faster through the passage.",
+        "source": "She grabbed his wrist, fingers tight with determination, and pulled him onward, bodies pressed close by the narrow walls and the threat behind them.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Jax press onward through the tunnel, aiming to reach Finn’s safehouse.",
+        "source": "Red’s grip on Jax tightened, her resourcefulness and impulsive courage driving them deeper into the labyrinth, desperate to outrun the machines that had stolen so much from her already.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red darts through the alley, clutching the crystal.",
+        "source": "Red darts through the slick alley, clutching a small data crystal, her boots splashing through puddles as she ducks under a cracked awning.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax opens a hidden trapdoor and urges Red to drop into his underground workshop.",
+        "source": "As thunder rattles the corrugated metal roof, Jax yanks open a hidden trapdoor behind a stack of tire rims, urging Red to drop into his underground workshop.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red hesitates, scans Jax’s face.",
+        "source": "Red hesitated for a heartbeat, her fingers flexing restlessly as she scanned Jax’s face for any hint of uncertainty in the flickering shadows.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax grips Red’s arm.",
+        "source": "Jax gripped Red’s arm with a force that cut through the clamor of thunder rattling the corrugated metal roof overhead.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red hesitates, glances over her shoulder as a drone engine grows louder.",
+        "source": "Red hesitates, casting a wary glance over her shoulder as the distant whir of a drone engine grows louder.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax hisses for urgency; Red vaults down the hatch.",
+        "source": "' and Red vaults down the hatch.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red slams the reinforced door, scans the perimeter.",
+        "source": "Red slams the reinforced door shut, scanning the perimeter through a cracked monitor.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax snaps open his bench, prepares data extraction tools, and glances at Red.",
+        "source": "Jax snaps open his bench, slaps in the isolator, and glances at Red as he readies the data extraction tools.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red scans the alley, weapon drawn, tense, as Jax works frantically on the tech bench.",
+        "source": "Red scans the alley with weapon drawn, body tense, eyes flicking to Jax's hands working frantically over the tech bench.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax prepares patch cables, monitoring Red’s anxious glance toward the alley entrance.",
+        "source": "Jax snaps open his toolkit, his fingers flying over the patch cables as he monitors Red’s anxious glance toward the alley entrance.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red crouches behind a dumpster, eyes flicking between the alley and Jax’s rig status lights.",
+        "source": "Red crouches lower behind a dumpster, eyes flicking between the alley’s mouth and the flickering status lights on Jax’s rig.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax flicks a switch, watches the spectrum analyzer.",
+        "source": "Jax flicked the switch with practiced precision, his gaze never wavering from the jittering lines of the spectrum analyzer.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Jax successfully evade Wolf Drone and prepare for urgent data extraction.",
+        "source": "Outcome: Red and Jax successfully evade the Wolf Drone, with Jax prepping his tech bench for the urgent data extraction, the two exchanging terse, urgent orders.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red passes the data crystal to Finn, who slides it into a decryption terminal.",
+        "source": "She passes it to Finn, who quickly wipes it on his sleeve and slides it into a battered decryption terminal.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "Finn initiates the download, Vera reassures the team about security protocols.",
+        "source": "Vera stands behind them, arms crossed, but instead of sounding urgent, she reassures the team: 'I've reviewed the details of the transfer, and according to our current protocols, it's fully encrypted end-to-end.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "Vera prepares to address security questions.",
+        "source": "Vera opens the security checklist on her device, preparing to address any follow-up questions about the process.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "Red paces nervously as the crystal’s data transfers.",
+        "source": "' Red paces, glancing at the rain-smeared windows, her jaw set, as the crystal’s data transfers.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "Finn disconnects the crystal, hands it back to Red.",
+        "source": "The scene ends as Finn disconnects the crystal, handing it back to Red with a curt, 'We got it.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      }
+    ],
+    "Papalampidi_detailed_results": {
+      "turning_points": {
+        "TP1": "Dr. Mira slides a quantum data crystal to Red, instructing delivery to Finn before Overwatch can trace it.",
+        "TP2": "Red moves toward the Skyway, but hears a menacing growl signaling danger.",
+        "TP3": "Red escapes temporarily, but the Wolf Drone marks her trajectory for further pursuit.",
+        "TP4": "Red and Jax hurriedly bar the hatch as Wolf Drone claws at the metal.",
+        "TP5": "Red passes the data crystal to Finn, who slides it into a decryption terminal."
+      },
+      "stage_division": {
+        "Setup": [
+          "Red crouches near a ventilation grate, scans for patrol drones.",
+          "Dr. Mira disables lab lock, pulls Red inside, and reseals the entrance."
+        ],
+        "New Situation": [
+          "Dr. Mira slides a quantum data crystal to Red, instructing delivery to Finn before Overwatch can trace it.",
+          "Dr. Mira explains the crystal contains vital safe route coordinates and stresses urgency.",
+          "Red closes her fist around the crystal.",
+          "Dr. Mira presses the crystal into Red's palm, reiterates urgency.",
+          "Red pockets the crystal, checks her route, and prepares to evade surveillance."
+        ],
+        "Progress": [
+          "Red moves toward the Skyway, but hears a menacing growl signaling danger.",
+          "Red sprints across concrete, clutching the data crystal and scanning for surveillance nodes.",
+          "The bot morphs into Wolf Drone.",
+          "Red leaps back, draws a stunner as Wolf Drone blocks her escape.",
+          "Wolf Drone's eyes flicker crimson, claws dig furrows.",
+          "Red hurls a flash grenade, forcing Wolf Drone to recoil.",
+          "Red escapes temporarily, but the Wolf Drone marks her trajectory for further pursuit.",
+          "Red races toward the outlaw mechanic’s workshop, aiming to find help to disappear.",
+          "Red darts through alleys toward Jax’s rear entrance and knocks three times.",
+          "Jax opens the door and she thrusts the satchel at him.",
+          "Red taps impatiently on the console.",
+          "Red tells Jax the Agency knows she took the drive.",
+          "Jax sweeps the jammer's remains onto his workbench and begins frantic repairs.",
+          "Jax slaps a shutter over the window.",
+          "Red paces, scanning for exits, nerves taut.",
+          "Jax thrusts the hastily patched jammer into Red's hands.",
+          "Red snatches the device, glances at Jax, and sprints toward the rear exit.",
+          "Jax prepares to stall any pursuers as machinery sounds approach."
+        ],
+        "Complications": [
+          "Wolf Drone deploys its next directive, targeting Grandmother’s secret lab.",
+          "Red crouches near the lab’s encrypted terminal, inputting code to transmit the data crystal.",
+          "Dr. Mira monitors the transfer and security feed, safeguarding the process.",
+          "A Supply Bot enters the lab; Dr. Mira approaches to scan its cargo manifest.",
+          "Red intercepts and runs a diagnostic, noticing glitches and nonstandard supply codes.",
+          "Wolf Drone's camouflage glitches, revealing metallic fangs briefly.",
+          "Red lunges to activate emergency lockdown.",
+          "Red inspects the bot's label and cross-references it with protocol checklist.",
+          "Wolf Drone ejects microdrones to disable lab cameras while cloaked.",
+          "Dr. Mira snatches a pulse rifle and fires at the bot, aiming to disable its sensor array.",
+          "Red secures the data crystal in a lead-lined case as urgency rises.",
+          "Wolf Drone shifts shape, preparing for direct confrontation.",
+          "Red and Dr. Mira brace for attack as hazard lights flicker and circuitry burns.",
+          "Red scans the perimeter, signals Jax with a coded tap on the crate.",
+          "Jax disables surveillance sensors with a homemade jammer as Red enters.",
+          "Jax assembles a decoy drone while Red outlines her risky rescue plan for Grandmother.",
+          "Red lays out a faded map, tracing their planned route.",
+          "Jax finishes assembling the drone and warns Red about Overwatch patrol cycles.",
+          "Jax argues for stealth, but Red insists speed is needed.",
+          "Jax presses an EMP grenade into Red’s palm.",
+          "Red tightens grip on the EMP grenade, ready to move on Jax’s cue.",
+          "They compromise: Jax will trigger a distraction, giving Red the chance to plant the EMP charge quickly.",
+          "Both steel themselves for the high-stakes operation, knowing timing and coordination are critical.",
+          "Red sprints along the alley, clutching the data crystal.",
+          "Red slides the crystal into Jax’s palm as sirens wail and a Supply Bot rounds the corner.",
+          "Red shoves Jax down and hurls a pipe at the drone.",
+          "Jax grabs Red and yanks him into the hatch.",
+          "Red staggers inside, rubbing her shoulder.",
+          "Jax bars the hatch with a steel beam.",
+          "Red and Jax hurriedly bar the hatch as Wolf Drone claws at the metal.",
+          "In the tunnel, Jax bickers with Red about directions and the safety of Finn’s safehouse.",
+          "Red crouches, gestures for Jax to move faster toward Finn’s safehouse.",
+          "Jax glances nervously back as the Wolf Drone’s whir grows louder.",
+          "Red grabs Jax’s wrist, pulling him faster through the passage.",
+          "Red and Jax press onward through the tunnel, aiming to reach Finn’s safehouse."
+        ],
+        "Final Push": [
+          "Red darts through the alley, clutching the crystal.",
+          "Jax opens a hidden trapdoor and urges Red to drop into his underground workshop.",
+          "Red hesitates, scans Jax’s face.",
+          "Jax grips Red’s arm.",
+          "Red hesitates, glances over her shoulder as a drone engine grows louder.",
+          "Jax hisses for urgency; Red vaults down the hatch.",
+          "Red slams the reinforced door, scans the perimeter.",
+          "Jax snaps open his bench, prepares data extraction tools, and glances at Red.",
+          "Red scans the alley, weapon drawn, tense, as Jax works frantically on the tech bench.",
+          "Jax prepares patch cables, monitoring Red’s anxious glance toward the alley entrance.",
+          "Red crouches behind a dumpster, eyes flicking between the alley and Jax’s rig status lights.",
+          "Jax flicks a switch, watches the spectrum analyzer.",
+          "Red and Jax successfully evade Wolf Drone and prepare for urgent data extraction.",
+          "Red passes the data crystal to Finn, who slides it into a decryption terminal.",
+          "Finn initiates the download, Vera reassures the team about security protocols."
+        ],
+        "Aftermath": [
+          "Vera prepares to address security questions.",
+          "Red paces nervously as the crystal’s data transfers.",
+          "Finn disconnects the crystal, hands it back to Red."
+        ]
+      }
+    },
+    "Li_detailed_results": {
+      "Red crouches near a ventilation grate, scans for patrol drones.": "Orientation",
+      "Dr. Mira disables lab lock, pulls Red inside, and reseals the entrance.": "Complicating Action",
+      "Dr. Mira slides a quantum data crystal to Red, instructing delivery to Finn before Overwatch can trace it.": "MRE",
+      "Dr. Mira explains the crystal contains vital safe route coordinates and stresses urgency.": "Evaluation",
+      "Red closes her fist around the crystal.": "Minor Resolution",
+      "Dr. Mira presses the crystal into Red's palm, reiterates urgency.": "Return of MRE",
+      "Red pockets the crystal, checks her route, and prepares to evade surveillance.": "Complicating Action",
+      "Red moves toward the Skyway, but hears a menacing growl signaling danger.": "Complicating Action",
+      "Red sprints across concrete, clutching the data crystal and scanning for surveillance nodes.": "Complicating Action",
+      "The bot morphs into Wolf Drone.": "Complicating Action",
+      "Red leaps back, draws a stunner as Wolf Drone blocks her escape.": "Complicating Action",
+      "Wolf Drone's eyes flicker crimson, claws dig furrows.": "Complicating Action",
+      "Red hurls a flash grenade, forcing Wolf Drone to recoil.": "Minor Resolution",
+      "Red escapes temporarily, but the Wolf Drone marks her trajectory for further pursuit.": "Return of MRE",
+      "Red races toward the outlaw mechanic’s workshop, aiming to find help to disappear.": "Complicating Action",
+      "Red darts through alleys toward Jax’s rear entrance and knocks three times.": "Complicating Action",
+      "Jax opens the door and she thrusts the satchel at him.": "Minor Resolution",
+      "Red taps impatiently on the console.": "Evaluation",
+      "Red tells Jax the Agency knows she took the drive.": "Complicating Action",
+      "Jax sweeps the jammer's remains onto his workbench and begins frantic repairs.": "Complicating Action",
+      "Jax slaps a shutter over the window.": "Minor Resolution",
+      "Red paces, scanning for exits, nerves taut.": "Evaluation",
+      "Jax thrusts the hastily patched jammer into Red's hands.": "Minor Resolution",
+      "Red snatches the device, glances at Jax, and sprints toward the rear exit.": "Complicating Action",
+      "Jax prepares to stall any pursuers as machinery sounds approach.": "Complicating Action",
+      "Wolf Drone deploys its next directive, targeting Grandmother’s secret lab.": "Return of MRE",
+      "Red crouches near the lab’s encrypted terminal, inputting code to transmit the data crystal.": "Complicating Action",
+      "Dr. Mira monitors the transfer and security feed, safeguarding the process.": "Minor Resolution",
+      "A Supply Bot enters the lab; Dr. Mira approaches to scan its cargo manifest.": "Complicating Action",
+      "Red intercepts and runs a diagnostic, noticing glitches and nonstandard supply codes.": "Complicating Action",
+      "Wolf Drone's camouflage glitches, revealing metallic fangs briefly.": "Complicating Action",
+      "Red lunges to activate emergency lockdown.": "Minor Resolution",
+      "Red inspects the bot's label and cross-references it with protocol checklist.": "Evaluation",
+      "Wolf Drone ejects microdrones to disable lab cameras while cloaked.": "Complicating Action",
+      "Dr. Mira snatches a pulse rifle and fires at the bot, aiming to disable its sensor array.": "Complicating Action",
+      "Red secures the data crystal in a lead-lined case as urgency rises.": "Minor Resolution",
+      "Wolf Drone shifts shape, preparing for direct confrontation.": "Complicating Action",
+      "Red and Dr. Mira brace for attack as hazard lights flicker and circuitry burns.": "Complicating Action",
+      "Red scans the perimeter, signals Jax with a coded tap on the crate.": "Complicating Action",
+      "Jax disables surveillance sensors with a homemade jammer as Red enters.": "Minor Resolution",
+      "Jax assembles a decoy drone while Red outlines her risky rescue plan for Grandmother.": "Complicating Action",
+      "Red lays out a faded map, tracing their planned route.": "Evaluation",
+      "Jax finishes assembling the drone and warns Red about Overwatch patrol cycles.": "Evaluation",
+      "Jax argues for stealth, but Red insists speed is needed.": "Evaluation",
+      "Jax presses an EMP grenade into Red’s palm.": "Minor Resolution",
+      "Red tightens grip on the EMP grenade, ready to move on Jax’s cue.": "Minor Resolution",
+      "They compromise: Jax will trigger a distraction, giving Red the chance to plant the EMP charge quickly.": "Minor Resolution",
+      "Both steel themselves for the high-stakes operation, knowing timing and coordination are critical.": "Evaluation",
+      "Red sprints along the alley, clutching the data crystal.": "Complicating Action",
+      "Red slides the crystal into Jax’s palm as sirens wail and a Supply Bot rounds the corner.": "MRE",
+      "Red shoves Jax down and hurls a pipe at the drone.": "Complicating Action",
+      "Jax grabs Red and yanks him into the hatch.": "Minor Resolution",
+      "Red staggers inside, rubbing her shoulder.": "Aftermath",
+      "Jax bars the hatch with a steel beam.": "Minor Resolution",
+      "Red and Jax hurriedly bar the hatch as Wolf Drone claws at the metal.": "Complicating Action",
+      "In the tunnel, Jax bickers with Red about directions and the safety of Finn’s safehouse.": "Evaluation",
+      "Red crouches, gestures for Jax to move faster toward Finn’s safehouse.": "Complicating Action",
+      "Jax glances nervously back as the Wolf Drone’s whir grows louder.": "Complicating Action",
+      "Red grabs Jax’s wrist, pulling him faster through the passage.": "Complicating Action",
+      "Red and Jax press onward through the tunnel, aiming to reach Finn’s safehouse.": "Complicating Action",
+      "Red darts through the alley, clutching the crystal.": "Complicating Action",
+      "Jax opens a hidden trapdoor and urges Red to drop into his underground workshop.": "Minor Resolution",
+      "Red hesitates, scans Jax’s face.": "Evaluation",
+      "Jax grips Red’s arm.": "Complicating Action",
+      "Red hesitates, glances over her shoulder as a drone engine grows louder.": "Complicating Action",
+      "Jax hisses for urgency; Red vaults down the hatch.": "Minor Resolution",
+      "Red slams the reinforced door, scans the perimeter.": "Minor Resolution",
+      "Jax snaps open his bench, prepares data extraction tools, and glances at Red.": "Minor Resolution",
+      "Red scans the alley, weapon drawn, tense, as Jax works frantically on the tech bench.": "Evaluation",
+      "Jax prepares patch cables, monitoring Red’s anxious glance toward the alley entrance.": "Evaluation",
+      "Red crouches behind a dumpster, eyes flicking between the alley and Jax’s rig status lights.": "Evaluation",
+      "Jax flicks a switch, watches the spectrum analyzer.": "Minor Resolution",
+      "Red and Jax successfully evade Wolf Drone and prepare for urgent data extraction.": "Resolution",
+      "Red passes the data crystal to Finn, who slides it into a decryption terminal.": "MRE",
+      "Finn initiates the download, Vera reassures the team about security protocols.": "Resolution",
+      "Vera prepares to address security questions.": "Direct Comment",
+      "Red paces nervously as the crystal’s data transfers.": "Evaluation",
+      "Finn disconnects the crystal, hands it back to Red.": "Aftermath"
+    },
+    "structure_analysis": {
+      "basic_info": {
+        "total_events": 78,
+        "analysis_mode": "default",
+        "analysis_time": null
+      },
+      "Papalampidi_structure_analysis": {
+        "turning_point_integrity": {
+          "identified_tps": [
+            "TP1",
+            "TP2",
+            "TP3",
+            "TP4",
+            "TP5"
+          ],
+          "missing_tps": [],
+          "TP_coverage": "5/5"
+        },
+        "stage_integrity": {
+          "identified_stages": [
+            "Setup",
+            "New Situation",
+            "Progress",
+            "Complications",
+            "Final Push",
+            "Aftermath"
+          ],
+          "missing_stages": [],
+          "stage_coverage": "6/6"
+        }
+      },
+      "Li_function_analysis": {
+        "core_function_check": {
+          "Orientation": "exists",
+          "Complicating Action": "exists",
+          "MRE": "exists",
+          "Resolution": "exists"
+        },
+        "function_distribution": {
+          "Orientation": 1,
+          "Complicating Action": 33,
+          "MRE": 3,
+          "Evaluation": 14,
+          "Minor Resolution": 19,
+          "Return of MRE": 3,
+          "Aftermath": 2,
+          "Resolution": 2,
+          "Direct Comment": 1
+        },
+        "function_diversity": 9
+      }
+    }
+  }
+}

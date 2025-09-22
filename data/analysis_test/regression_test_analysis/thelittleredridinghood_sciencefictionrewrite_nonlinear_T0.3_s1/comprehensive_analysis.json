@@ -1,0 +1,1535 @@
+{
+  "folder_name": "thelittleredridinghood_sciencefictionrewrite_nonlinear_T0.3_s1",
+  "file_path": "/Users/haha/Story/data/output/regression_test/thelittleredridinghood_sciencefictionrewrite_nonlinear_T0.3_s1/enhanced_story_dialogue_updated.md",
+  "analysis_timestamp": null,
+  "emotional_arc_analysis": {
+    "metadata": {
+      "total_chapters": 7,
+      "primary_method": "RoBERTa",
+      "validation_method": "LabMT-en-v1",
+      "analysis_timestamp": "2025-09-09T21:08:10.468337"
+    },
+    "chapter_analysis": [
+      {
+        "chapter_num": 5,
+        "title": "Confrontation in the Core",
+        "roberta_score": 0.0532,
+        "labmt_score": 0.1257,
+        "content_length": 6958
+      },
+      {
+        "chapter_num": 1,
+        "title": "Red Receives the Transmission",
+        "roberta_score": -0.236,
+        "labmt_score": 0.1595,
+        "content_length": 1512
+      },
+      {
+        "chapter_num": 4,
+        "title": "Grandmother’s Hideout",
+        "roberta_score": -0.048,
+        "labmt_score": 0.1934,
+        "content_length": 6660
+      },
+      {
+        "chapter_num": 2,
+        "title": "Checkpoint Confrontation",
+        "roberta_score": -0.4394,
+        "labmt_score": 0.0905,
+        "content_length": 2129
+      },
+      {
+        "chapter_num": 3,
+        "title": "The Sabotaged Corridor",
+        "roberta_score": -0.5076,
+        "labmt_score": 0.1068,
+        "content_length": 4866
+      },
+      {
+        "chapter_num": 6,
+        "title": "Upload and Escape",
+        "roberta_score": 0.0656,
+        "labmt_score": 0.2045,
+        "content_length": 22946
+      },
+      {
+        "chapter_num": 7,
+        "title": "Aftermath and Alliance",
+        "roberta_score": 0.7067,
+        "labmt_score": 0.2707,
+        "content_length": 5373
+      }
+    ],
+    "primary_analysis": {
+      "method": "RoBERTa",
+      "scores": [
+        0.05317707459131877,
+        -0.2359905242919922,
+        -0.04796274503072103,
+        -0.4393619894981384,
+        -0.5076406319936116,
+        0.06563243865966797,
+        0.7067185918490092
+      ],
+      "reagan_classification": {
+        "method": "RoBERTa",
+        "best_match": "Oedipus",
+        "confidence": 0.6907,
+        "all_similarities": {
+          "Rags to riches": 0.1916,
+          "Tragedy": 0,
+          "Man in a hole": 0.3399,
+          "Icarus": 0,
+          "Cinderella": 0,
+          "Oedipus": 0.6907
+        },
+        "reagan_category": "OE"
+      }
+    },
+    "validation_analysis": {
+      "method": "LabMT",
+      "scores": [
+        0.12573033707865067,
+        0.15951219512195114,
+        0.1933810572687209,
+        0.09051136363636392,
+        0.10680803571428621,
+        0.20453825857519203,
+        0.27066011235954957
+      ],
+      "reagan_classification": {
+        "method": "LabMT",
+        "best_match": "Rags to riches",
+        "confidence": 0.7634,
+        "all_similarities": {
+          "Rags to riches": 0.7634,
+          "Tragedy": 0.4969,
+          "Man in a hole": 0.1522,
+          "Icarus": 0,
+          "Cinderella": 0,
+          "Oedipus": 0.3657
+        },
+        "reagan_category": "RR"
+      }
+    },
+    "correlation_analysis": {
+      "pearson_correlation": {
+        "r": 0.8883,
+        "p_value": 0.0075,
+        "significance": "Significant"
+      },
+      "spearman_correlation": {
+        "r": 0.8571,
+        "p_value": 0.0137
+      },
+      "direction_consistency": 0.6667,
+      "consistency_level": "High",
+      "interpretation": "RoBERTa and LabMT correlation coefficient is 0.888, belongs to strong correlation"
+    },
+    "comparison_analysis": {
+      "disagreement_points": [
+        {
+          "chapter": 2,
+          "roberta_score": -0.2359905242919922,
+          "labmt_score": 0.15951219512195114,
+          "difference": 0.3955
+        },
+        {
+          "chapter": 4,
+          "roberta_score": -0.4393619894981384,
+          "labmt_score": 0.09051136363636392,
+          "difference": 0.5299
+        },
+        {
+          "chapter": 5,
+          "roberta_score": -0.5076406319936116,
+          "labmt_score": 0.10680803571428621,
+          "difference": 0.6144
+        },
+        {
+          "chapter": 7,
+          "roberta_score": 0.7067185918490092,
+          "labmt_score": 0.27066011235954957,
+          "difference": 0.4361
+        }
+      ],
+      "method_advantages": {
+        "RoBERTa": {
+          "strengths": [
+            "Deep learning model with better contextual understanding",
+            "Suitable for modern text and dialogue",
+            "High sensitivity to sci-fi and technical texts"
+          ],
+          "classification": "Oedipus",
+          "confidence": 0.6907
+        },
+        "LabMT": {
+          "strengths": [
+            "Fully consistent with Reagan's original method",
+            "Based on large-scale human annotation",
+            "Suitable for traditional literary analysis"
+          ],
+          "classification": "Rags to riches",
+          "confidence": 0.7634
+        }
+      },
+      "consistency_assessment": {
+        "classification_agreement": false,
+        "major_disagreements": 4,
+        "recommendation": "Two methods differ significantly, recommend detailed analysis of difference causes, may need more in-depth text feature analysis"
+      }
+    },
+    "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.888 (High)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.888, belongs to strong correlation\n\nClassification Results:\n- RoBERTa (primary): Oedipus\n- LabMT (validation): Rags to riches\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.888, showing high consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation.",
+    "output_files": {
+      "analysis_json": "/Users/haha/Story/data/regression_test_analysis/thelittleredridinghood_sciencefictionrewrite_nonlinear_T0.3_s1/roberta_labmt_analysis_20250909_210810.json"
+    }
+  },
+  "hred_coherence_analysis": {
+    "HRED_coherence_evaluation": {
+      "model_name": "all-mpnet-base-v2",
+      "analysis_method": "Original sentence coherence",
+      "total_sentences": 452,
+      "adjacent_pairs": 451,
+      "average_coherence": 0.3831,
+      "objective_description": {
+        "score": 0.3831,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "detailed_analysis": {
+      "basic_statistics": {
+        "average_coherence": 0.3831400744175072,
+        "coherence_std": 0.18153250673843338,
+        "max_coherence": 1.0,
+        "min_coherence": 0.0028638681396842003,
+        "coherence_median": 0.3721640706062317
+      },
+      "coherence_breakpoints": [
+        {
+          "position": 8,
+          "sentence_pair": "“Nobody moves.... → Hands up—now....",
+          "similarity": 0.146
+        },
+        {
+          "position": 9,
+          "sentence_pair": "Hands up—now.... → ” He kept his aim steady, eyes...",
+          "similarity": 0.006
+        },
+        {
+          "position": 12,
+          "sentence_pair": "” Wolfe gestured with the flas... → “Let’s keep this simple....",
+          "similarity": 0.171
+        },
+        {
+          "position": 13,
+          "sentence_pair": "“Let’s keep this simple.... → Against the wall, eyes forward...",
+          "similarity": 0.124
+        },
+        {
+          "position": 14,
+          "sentence_pair": "Against the wall, eyes forward... → ” The threat lingered in the a...",
+          "similarity": 0.199
+        },
+        {
+          "position": 15,
+          "sentence_pair": "” The threat lingered in the a... → This sector is restricted....",
+          "similarity": 0.012
+        },
+        {
+          "position": 16,
+          "sentence_pair": "This sector is restricted.... → Officer Wolfe steps forward, b...",
+          "similarity": 0.132
+        },
+        {
+          "position": 38,
+          "sentence_pair": "Red had combed through the off... → It was as if a whole other lay...",
+          "similarity": 0.171
+        },
+        {
+          "position": 39,
+          "sentence_pair": "It was as if a whole other lay... → Red glances over their shoulde...",
+          "similarity": 0.186
+        },
+        {
+          "position": 43,
+          "sentence_pair": "Every time she tried to dig de... → Red lowers their voice, glanci...",
+          "similarity": 0.152
+        },
+        {
+          "position": 55,
+          "sentence_pair": "Time is critical.... → ' As Wolfe demanded their cred...",
+          "similarity": 0.165
+        },
+        {
+          "position": 59,
+          "sentence_pair": "The tension mounted as a venti... → Red’s objective shifted slight...",
+          "similarity": 0.168
+        },
+        {
+          "position": 69,
+          "sentence_pair": "'You’re running deliveries alo... → 'You need to be careful....",
+          "similarity": 0.181
+        },
+        {
+          "position": 70,
+          "sentence_pair": "'You need to be careful.... → They say the drones have been ...",
+          "similarity": 0.187
+        },
+        {
+          "position": 71,
+          "sentence_pair": "They say the drones have been ... → ' Red shrugs off the hand and ...",
+          "similarity": 0.088
+        },
+        {
+          "position": 77,
+          "sentence_pair": "Each step takes her farther fr... → The flickering lights and dist...",
+          "similarity": 0.2
+        },
+        {
+          "position": 81,
+          "sentence_pair": "The panel swung open with a so... → Inside the cramped lab, the gl...",
+          "similarity": 0.113
+        },
+        {
+          "position": 82,
+          "sentence_pair": "Inside the cramped lab, the gl... → Grandmother immediately began ...",
+          "similarity": 0.054
+        },
+        {
+          "position": 92,
+          "sentence_pair": "There had to be a way to conta... → Red refused to accept defeat;...",
+          "similarity": 0.162
+        },
+        {
+          "position": 93,
+          "sentence_pair": "Red refused to accept defeat;... → her mind raced through possibi...",
+          "similarity": 0.107
+        },
+        {
+          "position": 100,
+          "sentence_pair": "not with everything and everyo... → Red leans closer to the displa...",
+          "similarity": 0.052
+        },
+        {
+          "position": 105,
+          "sentence_pair": "There was always a weak point.... → Grandmother’s motivation to pr...",
+          "similarity": 0.089
+        },
+        {
+          "position": 112,
+          "sentence_pair": "“It’s years of secrets conceal... → She lingered for a moment, sca...",
+          "similarity": 0.143
+        },
+        {
+          "position": 116,
+          "sentence_pair": "sometimes it slips in when you... → ” Her fingers were steady, but...",
+          "similarity": 0.091
+        },
+        {
+          "position": 119,
+          "sentence_pair": "I’ve always known that.... → But now you need to be vigilan...",
+          "similarity": 0.177
+        },
+        {
+          "position": 121,
+          "sentence_pair": "If anything happens—if I’m com... → Grandmother’s hand rested ligh...",
+          "similarity": 0.086
+        },
+        {
+          "position": 122,
+          "sentence_pair": "Grandmother’s hand rested ligh... → “Understand what’s at stake, c...",
+          "similarity": 0.193
+        },
+        {
+          "position": 127,
+          "sentence_pair": "The red box rested on the cons... → She listened intently as her g...",
+          "similarity": 0.2
+        },
+        {
+          "position": 129,
+          "sentence_pair": "If anything went wrong—if the ... → No hesitation....",
+          "similarity": 0.169
+        },
+        {
+          "position": 130,
+          "sentence_pair": "No hesitation.... → She’d snatch the box and bolt ...",
+          "similarity": 0.16
+        },
+        {
+          "position": 134,
+          "sentence_pair": "Grandmother knelt beside the h... → She beckoned Red closer, her v...",
+          "similarity": 0.199
+        },
+        {
+          "position": 135,
+          "sentence_pair": "She beckoned Red closer, her v... → Protecting the ship was everyt...",
+          "similarity": 0.192
+        },
+        {
+          "position": 138,
+          "sentence_pair": "“That resolve will keep you al... → “But you must know this—intern...",
+          "similarity": 0.181
+        },
+        {
+          "position": 154,
+          "sentence_pair": "Wolfe stepped closer, boots sq... → 'Identification....",
+          "similarity": 0.1
+        },
+        {
+          "position": 155,
+          "sentence_pair": "'Identification.... → Now....",
+          "similarity": 0.152
+        },
+        {
+          "position": 156,
+          "sentence_pair": "Now.... → ' Red hesitated, weighing her ...",
+          "similarity": 0.003
+        },
+        {
+          "position": 160,
+          "sentence_pair": "Overhead, the comm crackled wi... → ' Wolfe’s eyes narrowed....",
+          "similarity": 0.186
+        },
+        {
+          "position": 177,
+          "sentence_pair": "I know you're in here—there's ... → Lupus AI activates protocol en...",
+          "similarity": 0.085
+        },
+        {
+          "position": 182,
+          "sentence_pair": "The AI’s omnipresence pressed ... → “Deviations will not be tolera...",
+          "similarity": 0.096
+        },
+        {
+          "position": 183,
+          "sentence_pair": "“Deviations will not be tolera... → Somewhere deep in the ship’s c...",
+          "similarity": 0.111
+        },
+        {
+          "position": 184,
+          "sentence_pair": "Somewhere deep in the ship’s c... → “As your designated protocol e...",
+          "similarity": 0.155
+        },
+        {
+          "position": 185,
+          "sentence_pair": "“As your designated protocol e... → ” The words lingered in the re...",
+          "similarity": 0.185
+        },
+        {
+          "position": 188,
+          "sentence_pair": "Deviations will not be tolerat... → Officer WolfeWolfe slams his f...",
+          "similarity": 0.14
+        },
+        {
+          "position": 193,
+          "sentence_pair": "His eyes darted to the failing... → “Listen to me!...",
+          "similarity": 0.128
+        },
+        {
+          "position": 198,
+          "sentence_pair": "“Please, just open the door an... → As your designated protocol en...",
+          "similarity": 0.107
+        },
+        {
+          "position": 199,
+          "sentence_pair": "As your designated protocol en... → ' Determined to reach Grandmot...",
+          "similarity": 0.055
+        },
+        {
+          "position": 201,
+          "sentence_pair": "Sparks spat from the exposed c... → If you keep this up, the whole...",
+          "similarity": 0.113
+        },
+        {
+          "position": 203,
+          "sentence_pair": "Please, just open the door and... → ' Red hesitated, hearing the u...",
+          "similarity": 0.181
+        },
+        {
+          "position": 208,
+          "sentence_pair": "Meanwhile, Wolfe’s footsteps e... → Red and Grandmother work toget...",
+          "similarity": 0.166
+        },
+        {
+          "position": 224,
+          "sentence_pair": "She hesitated, heart thudding ... → If she misaligned the connecto...",
+          "similarity": 0.187
+        },
+        {
+          "position": 255,
+          "sentence_pair": "\"We don't have much time.... → Grandmother begins the upload ...",
+          "similarity": 0.06
+        },
+        {
+          "position": 260,
+          "sentence_pair": "“Payload transfer at fourteen ... → ” She didn’t look up, but Red ...",
+          "similarity": 0.086
+        },
+        {
+          "position": 269,
+          "sentence_pair": "” Even as she spoke, her mind ... → Grandmother routes additional ...",
+          "similarity": 0.191
+        },
+        {
+          "position": 314,
+          "sentence_pair": "“Emergency purge protocols on ... → ” A warning chime sounded, sha...",
+          "similarity": 0.19
+        },
+        {
+          "position": 331,
+          "sentence_pair": "All purge systems are armed an... → ” Even as alarms whispered at ...",
+          "similarity": 0.085
+        },
+        {
+          "position": 336,
+          "sentence_pair": "Without turning, she called ou... → Stand by to initiate purge on ...",
+          "similarity": 0.177
+        },
+        {
+          "position": 337,
+          "sentence_pair": "Stand by to initiate purge on ... → ” The bar surged upward, nearl...",
+          "similarity": 0.112
+        },
+        {
+          "position": 339,
+          "sentence_pair": "“We’re pushing to one hundred ... → Grandmother diverts all availa...",
+          "similarity": 0.186
+        },
+        {
+          "position": 349,
+          "sentence_pair": "The portable drive—their only ... → She didn’t dare look away;...",
+          "similarity": 0.124
+        },
+        {
+          "position": 365,
+          "sentence_pair": "Alarms shrieked through the hi... → “Payload complete—initiating s...",
+          "similarity": 0.162
+        },
+        {
+          "position": 366,
+          "sentence_pair": "“Payload complete—initiating s... → ” She glanced toward her grand...",
+          "similarity": 0.073
+        },
+        {
+          "position": 389,
+          "sentence_pair": "Behind her, Wolfe pressed his ... → Grandmother’s breath caught—if...",
+          "similarity": 0.197
+        },
+        {
+          "position": 410,
+          "sentence_pair": "“Don’t let the sparks distract... → that’s only the old girl compl...",
+          "similarity": 0.095
+        },
+        {
+          "position": 411,
+          "sentence_pair": "that’s only the old girl compl... → ” With a final twist, she nodd...",
+          "similarity": 0.04
+        },
+        {
+          "position": 413,
+          "sentence_pair": "“There, see?... → The current’s flowing just rig...",
+          "similarity": 0.182
+        },
+        {
+          "position": 414,
+          "sentence_pair": "The current’s flowing just rig... → Grandmother steadies her breat...",
+          "similarity": 0.175
+        },
+        {
+          "position": 432,
+          "sentence_pair": "Her voice dropped to a low, st... → “Red, quickly—initiate a statu...",
+          "similarity": 0.148
+        },
+        {
+          "position": 435,
+          "sentence_pair": "Stay alert;... → something feels off....",
+          "similarity": 0.143
+        },
+        {
+          "position": 436,
+          "sentence_pair": "something feels off.... → ” Even as she spoke, her hand ...",
+          "similarity": 0.131
+        },
+        {
+          "position": 443,
+          "sentence_pair": "There was no room for error—no... → Grandmother steps closer to th...",
+          "similarity": 0.195
+        }
+      ],
+      "high_coherence_segments": [
+        {
+          "start_sentence": 3,
+          "end_sentence": 7,
+          "length": 5,
+          "average_similarity": 0.643
+        },
+        {
+          "start_sentence": 17,
+          "end_sentence": 19,
+          "length": 3,
+          "average_similarity": 0.548
+        },
+        {
+          "start_sentence": 24,
+          "end_sentence": 26,
+          "length": 3,
+          "average_similarity": 0.769
+        },
+        {
+          "start_sentence": 56,
+          "end_sentence": 58,
+          "length": 3,
+          "average_similarity": 0.555
+        },
+        {
+          "start_sentence": 74,
+          "end_sentence": 76,
+          "length": 3,
+          "average_similarity": 0.541
+        },
+        {
+          "start_sentence": 79,
+          "end_sentence": 81,
+          "length": 3,
+          "average_similarity": 0.514
+        },
+        {
+          "start_sentence": 86,
+          "end_sentence": 88,
+          "length": 3,
+          "average_similarity": 0.727
+        },
+        {
+          "start_sentence": 101,
+          "end_sentence": 103,
+          "length": 3,
+          "average_similarity": 0.732
+        },
+        {
+          "start_sentence": 106,
+          "end_sentence": 108,
+          "length": 3,
+          "average_similarity": 0.62
+        },
+        {
+          "start_sentence": 150,
+          "end_sentence": 152,
+          "length": 3,
+          "average_similarity": 0.502
+        },
+        {
+          "start_sentence": 162,
+          "end_sentence": 165,
+          "length": 4,
+          "average_similarity": 0.523
+        },
+        {
+          "start_sentence": 169,
+          "end_sentence": 171,
+          "length": 3,
+          "average_similarity": 0.763
+        },
+        {
+          "start_sentence": 204,
+          "end_sentence": 207,
+          "length": 4,
+          "average_similarity": 0.533
+        },
+        {
+          "start_sentence": 217,
+          "end_sentence": 222,
+          "length": 6,
+          "average_similarity": 0.66
+        },
+        {
+          "start_sentence": 231,
+          "end_sentence": 233,
+          "length": 3,
+          "average_similarity": 0.797
+        },
+        {
+          "start_sentence": 242,
+          "end_sentence": 247,
+          "length": 6,
+          "average_similarity": 0.587
+        },
+        {
+          "start_sentence": 250,
+          "end_sentence": 252,
+          "length": 3,
+          "average_similarity": 0.663
+        },
+        {
+          "start_sentence": 256,
+          "end_sentence": 258,
+          "length": 3,
+          "average_similarity": 0.636
+        },
+        {
+          "start_sentence": 270,
+          "end_sentence": 272,
+          "length": 3,
+          "average_similarity": 0.491
+        },
+        {
+          "start_sentence": 278,
+          "end_sentence": 280,
+          "length": 3,
+          "average_similarity": 0.645
+        },
+        {
+          "start_sentence": 291,
+          "end_sentence": 293,
+          "length": 3,
+          "average_similarity": 0.544
+        },
+        {
+          "start_sentence": 303,
+          "end_sentence": 305,
+          "length": 3,
+          "average_similarity": 0.705
+        },
+        {
+          "start_sentence": 323,
+          "end_sentence": 325,
+          "length": 3,
+          "average_similarity": 0.608
+        },
+        {
+          "start_sentence": 358,
+          "end_sentence": 360,
+          "length": 3,
+          "average_similarity": 0.504
+        },
+        {
+          "start_sentence": 361,
+          "end_sentence": 363,
+          "length": 3,
+          "average_similarity": 0.516
+        },
+        {
+          "start_sentence": 380,
+          "end_sentence": 382,
+          "length": 3,
+          "average_similarity": 0.693
+        },
+        {
+          "start_sentence": 402,
+          "end_sentence": 405,
+          "length": 4,
+          "average_similarity": 0.646
+        },
+        {
+          "start_sentence": 419,
+          "end_sentence": 424,
+          "length": 6,
+          "average_similarity": 0.572
+        },
+        {
+          "start_sentence": 428,
+          "end_sentence": 431,
+          "length": 4,
+          "average_similarity": 0.677
+        },
+        {
+          "start_sentence": 438,
+          "end_sentence": 440,
+          "length": 3,
+          "average_similarity": 0.671
+        }
+      ],
+      "objective_description": {
+        "score": 0.3831,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "pairwise_similarity_examples": [
+      {
+        "sentence_pair": "Sentence 1 → Sentence 2",
+        "sentence_1": "Red crouched behind a bank of servers, her gloved ...",
+        "sentence_2": "Grandmother, kneeling beside her, slid a battered ...",
+        "similarity": 0.3468
+      },
+      {
+        "sentence_pair": "Sentence 2 → Sentence 3",
+        "sentence_1": "Grandmother, kneeling beside her, slid a battered ...",
+        "sentence_2": "Red’s eyes darted to the reinforced door as its lo...",
+        "similarity": 0.3076
+      },
+      {
+        "sentence_pair": "Sentence 3 → Sentence 4",
+        "sentence_1": "Red’s eyes darted to the reinforced door as its lo...",
+        "sentence_2": "Officer Wolfe sweeps the flashlight across the dim...",
+        "similarity": 0.7103
+      },
+      {
+        "sentence_pair": "Sentence 4 → Sentence 5",
+        "sentence_1": "Officer Wolfe sweeps the flashlight across the dim...",
+        "sentence_2": "Officer Wolfe swept his flashlight across the dim ...",
+        "similarity": 0.836
+      },
+      {
+        "sentence_pair": "Sentence 5 → Sentence 6",
+        "sentence_1": "Officer Wolfe swept his flashlight across the dim ...",
+        "sentence_2": "The reinforced door’s lock clanked open behind Red...",
+        "similarity": 0.5432
+      },
+      {
+        "sentence_pair": "Sentence 6 → Sentence 7",
+        "sentence_1": "The reinforced door’s lock clanked open behind Red...",
+        "sentence_2": "His voice cut through the tense silence, sharp and...",
+        "similarity": 0.4807
+      },
+      {
+        "sentence_pair": "Sentence 7 → Sentence 8",
+        "sentence_1": "His voice cut through the tense silence, sharp and...",
+        "sentence_2": "“Nobody moves.",
+        "similarity": 0.3013
+      },
+      {
+        "sentence_pair": "Sentence 8 → Sentence 9",
+        "sentence_1": "“Nobody moves.",
+        "sentence_2": "Hands up—now.",
+        "similarity": 0.1461
+      },
+      {
+        "sentence_pair": "Sentence 9 → Sentence 10",
+        "sentence_1": "Hands up—now.",
+        "sentence_2": "” He kept his aim steady, eyes narrowed with suspi...",
+        "similarity": 0.0056
+      },
+      {
+        "sentence_pair": "Sentence 10 → Sentence 11",
+        "sentence_1": "” He kept his aim steady, eyes narrowed with suspi...",
+        "sentence_2": "“I don’t want any trouble,” he warned, his tone st...",
+        "similarity": 0.5317
+      },
+      {
+        "sentence_pair": "Sentence 11 → Sentence 12",
+        "sentence_1": "“I don’t want any trouble,” he warned, his tone st...",
+        "sentence_2": "” Wolfe gestured with the flashlight, directing Re...",
+        "similarity": 0.2837
+      },
+      {
+        "sentence_pair": "Sentence 12 → Sentence 13",
+        "sentence_1": "” Wolfe gestured with the flashlight, directing Re...",
+        "sentence_2": "“Let’s keep this simple.",
+        "similarity": 0.1711
+      },
+      {
+        "sentence_pair": "Sentence 13 → Sentence 14",
+        "sentence_1": "“Let’s keep this simple.",
+        "sentence_2": "Against the wall, eyes forward.",
+        "similarity": 0.1243
+      },
+      {
+        "sentence_pair": "Sentence 14 → Sentence 15",
+        "sentence_1": "Against the wall, eyes forward.",
+        "sentence_2": "” The threat lingered in the air—protective, tacti...",
+        "similarity": 0.1987
+      },
+      {
+        "sentence_pair": "Sentence 15 → Sentence 16",
+        "sentence_1": "” The threat lingered in the air—protective, tacti...",
+        "sentence_2": "This sector is restricted.",
+        "similarity": 0.012
+      },
+      {
+        "sentence_pair": "Sentence 16 → Sentence 17",
+        "sentence_1": "This sector is restricted.",
+        "sentence_2": "Officer Wolfe steps forward, blocking the entrance...",
+        "similarity": 0.1318
+      },
+      {
+        "sentence_pair": "Sentence 17 → Sentence 18",
+        "sentence_1": "Officer Wolfe steps forward, blocking the entrance...",
+        "sentence_2": "Officer Wolfe stepped forward, positioning himself...",
+        "similarity": 0.597
+      },
+      {
+        "sentence_pair": "Sentence 18 → Sentence 19",
+        "sentence_1": "Officer Wolfe stepped forward, positioning himself...",
+        "sentence_2": "His gaze was sharp, assessing the unfamiliar figur...",
+        "similarity": 0.4996
+      },
+      {
+        "sentence_pair": "Sentence 19 → Sentence 20",
+        "sentence_1": "His gaze was sharp, assessing the unfamiliar figur...",
+        "sentence_2": "Raising a gloved hand in a silent command to halt,...",
+        "similarity": 0.2227
+      },
+      {
+        "sentence_pair": "Sentence 20 → Sentence 21",
+        "sentence_1": "Raising a gloved hand in a silent command to halt,...",
+        "sentence_2": "Access is not permitted beyond this point.",
+        "similarity": 0.2235
+      },
+      {
+        "note": "Only showing first 20 pairs, total of 451 adjacent sentence pairs"
+      }
+    ]
+  },
+  "story_structure_analysis": {
+    "evaluation_mode": "default mode",
+    "event_list": [
+      {
+        "event": "Red crouches behind servers, tracing the outline of a hidden maintenance panel.",
+        "source": "Red crouched behind a bank of servers, her gloved fingers tracing the outline of a hidden maintenance panel.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother kneels beside Red, prying open a fiber junction with a micro-spanner.",
+        "source": "Grandmother, kneeling beside her, slid a battered toolkit across the grated floor and began prying open a fiber junction using a micro-spanner.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Officer Wolfe enters the room, flashlight sweeping, and demands Red and Grandmother put their hands up.",
+        "source": "Red’s eyes darted to the reinforced door as its lock clanked open—Officer Wolfe stepped inside, flashlight beam slicing through the haze as he barked, 'Hands where I can see them!",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Officer Wolfe blocks the entrance, declares the sector restricted, and orders Grandmother to turn back.",
+        "source": "Raising a gloved hand in a silent command to halt, Wolfe’s voice was firm and unwavering as he declared, \"I'm sorry, but this sector is restricted.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother snaps a copper wire free and motions for Red to distract Wolfe.",
+        "source": "' Grandmother kept her posture calm, snapping a copper wire free and motioning for Red to distract Wolfe.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red stands in front of the AI interface, hands raised, stating their priority is the safety of the core.",
+        "source": "Our priority is the safety of the core—please, let us through.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red cross-references timestamps, piecing together fragments of hidden data.",
+        "source": "Anxiety mingled with adrenaline as she cross-referenced timestamps, piecing together fragments of hidden data.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red slides a crumpled printout across the table.",
+        "source": "With a quick, practiced motion, she slid a crumpled printout across the table.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red hugs the file tightly to her chest, feeling the weight of it.",
+        "source": "She hugged the file tightly to her chest, feeling the weight of it—far heavier than its slim paper contents should allow.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe demands their credentials; Red recounts her discoveries and reveals evidence of a cover-up and missing crew.",
+        "source": "' As Wolfe demanded their credentials, Red, with a mix of desperation and conviction, pressed further: she began recounting her discoveries from combing through ship reports, noting inconsistencies and a suspected cover-up, and revealing the existence of a hidden list of crew who vanished after questioning the system.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe grows suspicious, unnerved by Red’s suggestion of internal sabotage.",
+        "source": "now, he wasn’t just wary of unauthorized access, but also unnerved by suggestions of internal sabotage.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "A ventilation grate rattles and a drone approaches, underscoring their peril.",
+        "source": "The tension mounted as a ventilation grate rattled above and the whir of a drone approached, underscoring their peril.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother completes a vital bypass and reactivates systems throughout the chamber while Wolfe hesitates.",
+        "source": "Grandmother took advantage of the distraction, completing a vital bypass and reactivating systems throughout the chamber, as Wolfe hesitated, caught between protocol and the disturbing implications of Red’s revelations.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red’s wrist console buzzes urgently with an incoming transmission.",
+        "source": "Even as the immediate standoff hung unresolved, Red’s wrist console buzzed urgently—a transmission was coming through, and whatever it contained could shift the balance of everything they thought they knew.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red presses her palm against a cargo hatch to check its seal.",
+        "source": "Red strides down the corridor, pressing her palm against a cargo hatch to check its seal, feeling the chill metal under her fingers.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red’s Mother warns her about glitching drones.",
+        "source": "They say the drones have been glitching.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red checks her route again, determined to finish her shift quickly and prove she can handle the responsibility.",
+        "source": "Red checks her route again, determined to finish her shift quickly and prove she can handle the responsibility.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red slips into a shadowed maintenance duct after her mother disappears around the corner.",
+        "source": "Red waits until her mother disappears around the corner, then slips into the shadowed maintenance duct, heart pounding with anticipation.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red scans for hostile drones and knocks three times on a faded access panel.",
+        "source": "Red pressed her shoulder against the cold bulkhead, scanning the corridor for hostile drones before rapping three times on the faded access panel.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother immediately begins sealing the entrance with a manual override.",
+        "source": "Grandmother immediately began sealing the entrance with a manual override, her fingers moving with practiced urgency.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother hands Red a battered datapad, its screen pulsing with warning codes.",
+        "source": "She handed Red a battered datapad, its screen pulsing with warning codes.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red leans closer to the flickering display, eyes darting over the numbers as she whispers calculations.",
+        "source": "Red leaned even closer to the flickering display, her eyes darting over the numbers as she whispered calculations, lips barely moving.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red begins pulling up overlapping reports.",
+        "source": "Red leaned in, her gaze fierce as she began pulling up the overlapping reports, each new window illuminating her determination.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red magnifies the latest cluster on the display.",
+        "source": "Red leaned closer to the display, her fingers flying over the controls as she magnified the latest cluster, determination etched on her face.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother hands Red a small, battered red box.",
+        "source": "She extended a battered red box, its paint chipped from years of use, pressing it firmly into Red’s hands.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother instructs Red to know what to do if the codes were threatened.",
+        "source": "If anything went wrong—if the codes were threatened—Red knew exactly what she had to do.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother points out manual override switches and instructs Red to memorize their locations.",
+        "source": "” She pointed to each switch in turn, waiting until Red nodded, memorizing their locations.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Grandmother are aware of Wolfe’s approaching footsteps, signaling imminent confrontation.",
+        "source": "The cramped corridors now pulsed with silent urgency, every shadow a possible threat as the hum of approaching footsteps signaled Wolfe’s relentless pursuit.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red darts down the passage, clutching a sealed data packet under her jacket.",
+        "source": "Red darted down the narrow passage, boots thumping on grooved deck plates as she hugged the wall, clutching a sealed data packet under her jacket.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red slides a forged access card through the checkpoint scanner.",
+        "source": "She paused at the checkpoint scanner, glancing at the surveillance lens above, then slid a forged access card through the reader.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Officer Wolfe blocks Red’s path, demands her clearance and purpose.",
+        "source": "'State your clearance and purpose,' he barked, scanning her up and down.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red offers a secondary ID to Wolfe, who studies it and signals for backup.",
+        "source": "Wolfe studied the badge, jaw tight, then gestured for her to step aside while he keyed in a security code, his gaze never leaving her face.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe signals backup and blocks both Red and the exit.",
+        "source": "He tapped his comm, signaling backup, and shifted to block both Red and the exit.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red escapes into the corridors as backup approaches.",
+        "source": "With Wolfe’s backup closing in and the artificial lights flickering ominously overhead, Red seized the opening and vanished into the labyrinth of corridors beyond the checkpoint.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red exposes tangled wires and searches for a manual override.",
+        "source": "She yanked a maintenance panel loose, exposing tangled wires and scorched insulation, searching for a manual override.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Officer Wolfe sweeps his flashlight through the passage, calling out for Red to show herself.",
+        "source": "Wolfe's heavy boots thudded on the grated deck as he swept his flashlight beam across the narrowing passage, calling out, 'Show yourself!",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Lupus AI announces protocol reminders over the intercom.",
+        "source": "“Attention: All personnel are reminded that ship protocol demands absolute compliance at all times.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe slams his fist against the reinforced metal.",
+        "source": "Wolfe slammed his fist against the reinforced metal, his breath coming hard as sweat traced a line down his temple.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red jams a screwdriver into a control bundle, causing bulkhead doors to slam shut behind Wolfe, trapping him.",
+        "source": "' Determined to reach Grandmother's lab, Red jammed a screwdriver into the control bundle, causing a row of bulkhead doors to slam shut behind Wolfe, trapping him.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe pounds the sealed door, pleading for Red to open it.",
+        "source": "Sparks spat from the exposed circuitry, and Wolfe pounded the sealed door, his voice echoing, 'Listen to me!",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red hesitates, but ducks under cables and presses onward toward the maintenance junction.",
+        "source": "' Red hesitated, hearing the urgency in Wolfe's plea, but ducked under a hanging cable and pressed onward toward the maintenance junction.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe frantically works to override the lockdown, torn between his orders and concern for Red.",
+        "source": "Wolfe, now recognizing the danger posed by the system overload, frantically worked to override the lockdown, torn between his orders and his growing concern for Red's safety.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Grandmother work together to upload a virus-neutralizing payload but encounter complications as the virus mutates rapidly.",
+        "source": "Red and Grandmother work together at the exposed server port to upload the virus-neutralizing payload, but encounter unexpected complications as the virus mutates faster than anticipated.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red yanks a scorched cable free, a shower of sparks lighting her face in the cramped server alcove.",
+        "source": "Red’s breath came fast as she yanked the scorched cable free, a shower of sparks lighting her face in the cramped server alcove.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother instructs Red to crosswire specific pins and initiate the override.",
+        "source": "The hum of danger pressed closer, making her voice taut with insistence as she murmured, “Steady your hands, Red—crosswire the fourth and seventh pins, then initiate the override, or every system we’ve protected falls to the infection.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red hesitates, asks about override subroutine corruption; Grandmother reassures her.",
+        "source": "Voice tight with worry, she asked, “Are you sure the override subroutine isn’t corrupted?",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red bridges the pins as Grandmother monitors the timer.",
+        "source": "Red’s breath hitched as she bridged the pins, a bead of sweat tracing her temple while Grandmother’s eyes flicked between the timer and Red’s trembling hands.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red reroutes power to the auxiliary line as per Grandmother’s instructions.",
+        "source": "Her hands didn’t stop moving as she rerouted power to the auxiliary line, determined to keep the system stable, no matter how fast her heart pounded in her chest.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red snaps the portable drive into the terminal.",
+        "source": "Red snapped the portable drive into the terminal, her fingers trembling with urgency.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother initiates the upload sequence, monitoring the data streams.",
+        "source": "Grandmother’s hands moved with practiced precision as she initiated the upload sequence, her eyes never leaving the flickering data streams on her console.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red monitors for interference.",
+        "source": "“I’m monitoring for interference,” she said, voice low but resolute, each word carrying the weight of her determination.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother diverts upload traffic through backup channels and intensifies monitoring.",
+        "source": "Hidden behind the glow of multiple screens in her concealed lab, Grandmother’s hands moved swiftly, diverting the upload traffic through secure backup channels and intensifying the monitoring protocols.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red instructs Grandmother to prioritize core system shields and prep emergency purge protocols.",
+        "source": "“Grandmother, prioritize core system shields and prep emergency purge protocols,” she instructed, voice steady despite the tension threading through her shoulders.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother escalates system defenses as the upload nears completion.",
+        "source": "“Core shields prioritized,” she murmured, fingers dancing across the controls to reinforce the station’s defenses.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red connects the portable drive with the virus-neutralizing payload.",
+        "source": "Red’s hands flew over the console as she connected the portable drive, the virus-neutralizing payload humming softly in its cradle.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother diverts extra power to the shield generators.",
+        "source": "She diverted extra power to the flickering shield generators, coaxing every ounce of resilience from their battered systems.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red braces at the console, eyes locked on the progress bar as she connects the portable drive.",
+        "source": "Red braced herself at the console, eyes locked on the stubbornly inching progress bar as she connected the portable drive—the virus-neutralizing payload her family had risked so much to secure.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother monitors transfer countdown, finger poised over purge command, ready to deploy emergency cleanse.",
+        "source": "Her wise, steady hands hovered over the console, finger already poised above the purge command.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother triggers the purge protocol when transfer hits one hundred percent.",
+        "source": "The instant it struck one hundred percent, she didn’t hesitate—her hand hovered above the purge protocol button, then pressed down with the certainty of decades spent outsmarting machines.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother races to input override codes to unlock chamber doors as drones approach, Wolfe stands guard.",
+        "source": "Grandmother’s fingers shook as she raced to enter the final digits into the security panel, her breaths coming in rapid, uneven bursts.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe plants himself between Grandmother and the door, weapon drawn.",
+        "source": "Wolfe planted himself squarely between Grandmother and the door, his stance rigid, every muscle tensed as the metallic drone on the other side grew louder, closer, more insistent.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother’s hands tremble as she enters the final code.",
+        "source": "Grandmother’s hands trembled as she tapped in the final sequence, each digit weighted with consequence.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe braces himself at the door, weapon raised.",
+        "source": "Weapon raised and stance unyielding, Officer Wolfe wedged himself protectively between Grandmother and the door.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Lockdown is released at the last moment, Red secures the drive, and the trio escapes through a maintenance hatch as drones breach the doors.",
+        "source": "The lockdown is released at the last moment, allowing Red to secure the drive and the trio to escape through the maintenance hatch just as the drones breach the outer doors.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red crouches by a scorched access panel, prying loose a melted relay as Grandmother hands her a diagnostic tool.",
+        "source": "Red crouched beside a scorched access panel, her gloved fingers prying loose a melted relay as Grandmother handed her a diagnostic tool from a battered kit.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother rewires a critical circuit, murmuring instructions.",
+        "source": "Sparks popped and fizzed as Grandmother rewired a critical circuit, murmuring instructions.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother steadies her breath and aligns a component with the humming board.",
+        "source": "Grandmother steadied her breath, her hands unwavering as she guided the tiny component toward the humming board.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother tightens the connector with a flick and expresses satisfaction as the circuit hums.",
+        "source": "She tightened the connector with a flick so precise it seemed almost effortless, her eyes narrowing in satisfaction as the circuit responded—humming, alive, sparking just as it should.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red inputs override codes into the console while sweat beads at her brow.",
+        "source": "Red scanned the console's flickering display, inputting override codes while sweat beaded at her brow despite the chill.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother instructs Red to prepare a status report for Security.",
+        "source": "“Red, quickly—initiate a status report for Security.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red compiles a status report, ready to flag irregularities unless signaled otherwise by Grandmother.",
+        "source": "She began compiling the status report, her voice calm but alert: she would flag any irregularities immediately, unless Grandmother signaled her to hold back.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother instructs Red to flag anything unusual.",
+        "source": "“Red, flag anything unusual right away,” she instructed, barely glancing up from the screen.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      }
+    ],
+    "Papalampidi_detailed_results": {
+      "turning_points": {
+        "TP1": "Officer Wolfe enters the room, flashlight sweeping, and demands Red and Grandmother put their hands up.",
+        "TP2": "Wolfe demands their credentials; Red recounts her discoveries and reveals evidence of a cover-up and missing crew.",
+        "TP3": "Red jams a screwdriver into a control bundle, causing bulkhead doors to slam shut behind Wolfe, trapping him.",
+        "TP4": "Red and Grandmother work together to upload a virus-neutralizing payload but encounter complications as the virus mutates rapidly.",
+        "TP5": "Lockdown is released at the last moment, Red secures the drive, and the trio escapes through a maintenance hatch as drones breach the doors."
+      },
+      "stage_division": {
+        "Setup": [
+          "Red crouches behind servers, tracing the outline of a hidden maintenance panel.",
+          "Grandmother kneels beside Red, prying open a fiber junction with a micro-spanner.",
+          "Red checks her route again, determined to finish her shift quickly and prove she can handle the responsibility.",
+          "Red slips into a shadowed maintenance duct after her mother disappears around the corner.",
+          "Red scans for hostile drones and knocks three times on a faded access panel.",
+          "Grandmother immediately begins sealing the entrance with a manual override."
+        ],
+        "New Situation": [
+          "Officer Wolfe enters the room, flashlight sweeping, and demands Red and Grandmother put their hands up.",
+          "Officer Wolfe blocks the entrance, declares the sector restricted, and orders Grandmother to turn back.",
+          "Grandmother snaps a copper wire free and motions for Red to distract Wolfe.",
+          "Red stands in front of the AI interface, hands raised, stating their priority is the safety of the core.",
+          "Red cross-references timestamps, piecing together fragments of hidden data.",
+          "Red slides a crumpled printout across the table.",
+          "Red hugs the file tightly to her chest, feeling the weight of it."
+        ],
+        "Progress": [
+          "Wolfe demands their credentials; Red recounts her discoveries and reveals evidence of a cover-up and missing crew.",
+          "Wolfe grows suspicious, unnerved by Red’s suggestion of internal sabotage.",
+          "A ventilation grate rattles and a drone approaches, underscoring their peril.",
+          "Grandmother completes a vital bypass and reactivates systems throughout the chamber while Wolfe hesitates.",
+          "Red’s wrist console buzzes urgently with an incoming transmission.",
+          "Red presses her palm against a cargo hatch to check its seal.",
+          "Red’s Mother warns her about glitching drones.",
+          "Grandmother hands Red a battered datapad, its screen pulsing with warning codes.",
+          "Red leans closer to the flickering display, eyes darting over the numbers as she whispers calculations.",
+          "Red begins pulling up overlapping reports.",
+          "Red magnifies the latest cluster on the display.",
+          "Grandmother hands Red a small, battered red box.",
+          "Grandmother instructs Red to know what to do if the codes were threatened.",
+          "Grandmother points out manual override switches and instructs Red to memorize their locations.",
+          "Red and Grandmother are aware of Wolfe’s approaching footsteps, signaling imminent confrontation.",
+          "Red darts down the passage, clutching a sealed data packet under her jacket.",
+          "Red slides a forged access card through the checkpoint scanner.",
+          "Officer Wolfe blocks Red’s path, demands her clearance and purpose.",
+          "Red offers a secondary ID to Wolfe, who studies it and signals for backup.",
+          "Wolfe signals backup and blocks both Red and the exit.",
+          "Red escapes into the corridors as backup approaches.",
+          "Red exposes tangled wires and searches for a manual override.",
+          "Officer Wolfe sweeps his flashlight through the passage, calling out for Red to show herself.",
+          "Lupus AI announces protocol reminders over the intercom.",
+          "Wolfe slams his fist against the reinforced metal."
+        ],
+        "Complications": [
+          "Red jams a screwdriver into a control bundle, causing bulkhead doors to slam shut behind Wolfe, trapping him.",
+          "Wolfe pounds the sealed door, pleading for Red to open it.",
+          "Red hesitates, but ducks under cables and presses onward toward the maintenance junction.",
+          "Wolfe frantically works to override the lockdown, torn between his orders and concern for Red.",
+          "Red and Grandmother work together to upload a virus-neutralizing payload but encounter complications as the virus mutates rapidly.",
+          "Red yanks a scorched cable free, a shower of sparks lighting her face in the cramped server alcove.",
+          "Grandmother instructs Red to crosswire specific pins and initiate the override.",
+          "Red hesitates, asks about override subroutine corruption; Grandmother reassures her.",
+          "Red bridges the pins as Grandmother monitors the timer.",
+          "Red reroutes power to the auxiliary line as per Grandmother’s instructions.",
+          "Red snaps the portable drive into the terminal.",
+          "Grandmother initiates the upload sequence, monitoring the data streams.",
+          "Red monitors for interference.",
+          "Grandmother diverts upload traffic through backup channels and intensifies monitoring.",
+          "Red instructs Grandmother to prioritize core system shields and prep emergency purge protocols.",
+          "Grandmother escalates system defenses as the upload nears completion.",
+          "Red connects the portable drive with the virus-neutralizing payload.",
+          "Grandmother diverts extra power to the shield generators.",
+          "Red braces at the console, eyes locked on the progress bar as she connects the portable drive.",
+          "Grandmother monitors transfer countdown, finger poised over purge command, ready to deploy emergency cleanse.",
+          "Grandmother triggers the purge protocol when transfer hits one hundred percent.",
+          "Grandmother races to input override codes to unlock chamber doors as drones approach, Wolfe stands guard.",
+          "Wolfe plants himself between Grandmother and the door, weapon drawn.",
+          "Grandmother’s hands tremble as she enters the final code.",
+          "Wolfe braces himself at the door, weapon raised."
+        ],
+        "Final Push": [
+          "Lockdown is released at the last moment, Red secures the drive, and the trio escapes through a maintenance hatch as drones breach the doors."
+        ],
+        "Aftermath": [
+          "Red crouches by a scorched access panel, prying loose a melted relay as Grandmother hands her a diagnostic tool.",
+          "Grandmother rewires a critical circuit, murmuring instructions.",
+          "Grandmother steadies her breath and aligns a component with the humming board.",
+          "Grandmother tightens the connector with a flick and expresses satisfaction as the circuit hums.",
+          "Red inputs override codes into the console while sweat beads at her brow.",
+          "Grandmother instructs Red to prepare a status report for Security.",
+          "Red compiles a status report, ready to flag irregularities unless signaled otherwise by Grandmother.",
+          "Grandmother instructs Red to flag anything unusual."
+        ]
+      }
+    },
+    "Li_detailed_results": {
+      "Red crouches behind servers, tracing the outline of a hidden maintenance panel.": "Orientation",
+      "Grandmother kneels beside Red, prying open a fiber junction with a micro-spanner.": "Orientation",
+      "Officer Wolfe enters the room, flashlight sweeping, and demands Red and Grandmother put their hands up.": "Complicating Action",
+      "Officer Wolfe blocks the entrance, declares the sector restricted, and orders Grandmother to turn back.": "Complicating Action",
+      "Grandmother snaps a copper wire free and motions for Red to distract Wolfe.": "Minor Resolution",
+      "Red stands in front of the AI interface, hands raised, stating their priority is the safety of the core.": "Evaluation",
+      "Red cross-references timestamps, piecing together fragments of hidden data.": "Abstract",
+      "Red slides a crumpled printout across the table.": "Minor Resolution",
+      "Red hugs the file tightly to her chest, feeling the weight of it.": "Evaluation",
+      "Wolfe demands their credentials; Red recounts her discoveries and reveals evidence of a cover-up and missing crew.": "Complicating Action",
+      "Wolfe grows suspicious, unnerved by Red’s suggestion of internal sabotage.": "Complicating Action",
+      "A ventilation grate rattles and a drone approaches, underscoring their peril.": "Complicating Action",
+      "Grandmother completes a vital bypass and reactivates systems throughout the chamber while Wolfe hesitates.": "Minor Resolution",
+      "Red’s wrist console buzzes urgently with an incoming transmission.": "Complicating Action",
+      "Red presses her palm against a cargo hatch to check its seal.": "Orientation",
+      "Red’s Mother warns her about glitching drones.": "Direct Comment",
+      "Red checks her route again, determined to finish her shift quickly and prove she can handle the responsibility.": "Evaluation",
+      "Red slips into a shadowed maintenance duct after her mother disappears around the corner.": "Complicating Action",
+      "Red scans for hostile drones and knocks three times on a faded access panel.": "Complicating Action",
+      "Grandmother immediately begins sealing the entrance with a manual override.": "Complicating Action",
+      "Grandmother hands Red a battered datapad, its screen pulsing with warning codes.": "Orientation",
+      "Red leans closer to the flickering display, eyes darting over the numbers as she whispers calculations.": "Abstract",
+      "Red begins pulling up overlapping reports.": "Abstract",
+      "Red magnifies the latest cluster on the display.": "Abstract",
+      "Grandmother hands Red a small, battered red box.": "Orientation",
+      "Grandmother instructs Red to know what to do if the codes were threatened.": "Direct Comment",
+      "Grandmother points out manual override switches and instructs Red to memorize their locations.": "Direct Comment",
+      "Red and Grandmother are aware of Wolfe’s approaching footsteps, signaling imminent confrontation.": "Complicating Action",
+      "Red darts down the passage, clutching a sealed data packet under her jacket.": "Complicating Action",
+      "Red slides a forged access card through the checkpoint scanner.": "Complicating Action",
+      "Officer Wolfe blocks Red’s path, demands her clearance and purpose.": "Complicating Action",
+      "Red offers a secondary ID to Wolfe, who studies it and signals for backup.": "Complicating Action",
+      "Wolfe signals backup and blocks both Red and the exit.": "Complicating Action",
+      "Red escapes into the corridors as backup approaches.": "Minor Resolution",
+      "Red exposes tangled wires and searches for a manual override.": "Complicating Action",
+      "Officer Wolfe sweeps his flashlight through the passage, calling out for Red to show herself.": "Complicating Action",
+      "Lupus AI announces protocol reminders over the intercom.": "Direct Comment",
+      "Wolfe slams his fist against the reinforced metal.": "Complicating Action",
+      "Red jams a screwdriver into a control bundle, causing bulkhead doors to slam shut behind Wolfe, trapping him.": "MRE",
+      "Wolfe pounds the sealed door, pleading for Red to open it.": "Return of MRE",
+      "Red hesitates, but ducks under cables and presses onward toward the maintenance junction.": "Complicating Action",
+      "Wolfe frantically works to override the lockdown, torn between his orders and concern for Red.": "Return of MRE",
+      "Red and Grandmother work together to upload a virus-neutralizing payload but encounter complications as the virus mutates rapidly.": "Complicating Action",
+      "Red yanks a scorched cable free, a shower of sparks lighting her face in the cramped server alcove.": "Complicating Action",
+      "Grandmother instructs Red to crosswire specific pins and initiate the override.": "Direct Comment",
+      "Red hesitates, asks about override subroutine corruption; Grandmother reassures her.": "Minor Resolution",
+      "Red bridges the pins as Grandmother monitors the timer.": "Complicating Action",
+      "Red reroutes power to the auxiliary line as per Grandmother’s instructions.": "Minor Resolution",
+      "Red snaps the portable drive into the terminal.": "Complicating Action",
+      "Grandmother initiates the upload sequence, monitoring the data streams.": "Complicating Action",
+      "Red monitors for interference.": "Complicating Action",
+      "Grandmother diverts upload traffic through backup channels and intensifies monitoring.": "Minor Resolution",
+      "Red instructs Grandmother to prioritize core system shields and prep emergency purge protocols.": "Direct Comment",
+      "Grandmother escalates system defenses as the upload nears completion.": "Complicating Action",
+      "Red connects the portable drive with the virus-neutralizing payload.": "MRE",
+      "Grandmother diverts extra power to the shield generators.": "Minor Resolution",
+      "Red braces at the console, eyes locked on the progress bar as she connects the portable drive.": "MRE",
+      "Grandmother monitors transfer countdown, finger poised over purge command, ready to deploy emergency cleanse.": "Resolution",
+      "Grandmother triggers the purge protocol when transfer hits one hundred percent.": "Resolution",
+      "Grandmother races to input override codes to unlock chamber doors as drones approach, Wolfe stands guard.": "Complicating Action",
+      "Wolfe plants himself between Grandmother and the door, weapon drawn.": "Complicating Action",
+      "Grandmother’s hands tremble as she enters the final code.": "Complicating Action",
+      "Wolfe braces himself at the door, weapon raised.": "Orientation",
+      "Lockdown is released at the last moment, Red secures the drive, and the trio escapes through a maintenance hatch as drones breach the doors.": "Resolution",
+      "Red crouches by a scorched access panel, prying loose a melted relay as Grandmother hands her a diagnostic tool.": "Orientation",
+      "Grandmother rewires a critical circuit, murmuring instructions.": "Minor Resolution",
+      "Grandmother steadies her breath and aligns a component with the humming board.": "Minor Resolution",
+      "Grandmother tightens the connector with a flick and expresses satisfaction as the circuit hums.": "Minor Resolution",
+      "Red inputs override codes into the console while sweat beads at her brow.": "Complicating Action",
+      "Grandmother instructs Red to prepare a status report for Security.": "Direct Comment",
+      "Red compiles a status report, ready to flag irregularities unless signaled otherwise by Grandmother.": "Aftermath",
+      "Grandmother instructs Red to flag anything unusual.": "Direct Comment"
+    },
+    "structure_analysis": {
+      "basic_info": {
+        "total_events": 72,
+        "analysis_mode": "default",
+        "analysis_time": null
+      },
+      "Papalampidi_structure_analysis": {
+        "turning_point_integrity": {
+          "identified_tps": [
+            "TP1",
+            "TP2",
+            "TP3",
+            "TP4",
+            "TP5"
+          ],
+          "missing_tps": [],
+          "TP_coverage": "5/5"
+        },
+        "stage_integrity": {
+          "identified_stages": [
+            "Setup",
+            "New Situation",
+            "Progress",
+            "Complications",
+            "Final Push",
+            "Aftermath"
+          ],
+          "missing_stages": [],
+          "stage_coverage": "6/6"
+        }
+      },
+      "Li_function_analysis": {
+        "core_function_check": {
+          "Orientation": "exists",
+          "Complicating Action": "exists",
+          "MRE": "exists",
+          "Resolution": "exists"
+        },
+        "function_distribution": {
+          "Orientation": 7,
+          "Complicating Action": 30,
+          "Minor Resolution": 11,
+          "Evaluation": 3,
+          "Abstract": 4,
+          "Direct Comment": 8,
+          "MRE": 3,
+          "Return of MRE": 2,
+          "Resolution": 3,
+          "Aftermath": 1
+        },
+        "function_diversity": 10
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parameters": {
+    "window": 1000,
+    "stride": 500,
+    "bleu_type": "sacreBLEU-4 (13a, exp smoothing, lowercase, effective_order)",
+    "bleu_sample_every": 1,
+    "tokenizer": "simple",
+    "p_low": 5,
+    "p_high": 95,
+    "alpha_min": 0.4,
+    "alpha_max": 0.8
+  },
+  "summary": {
+    "individual_count": 1,
+    "group_count": 1,
+    "genres": [
+      "baseline"
+    ],
+    "structures": [
+      "linear"
+    ],
+    "temperatures": [
+      1.0
+    ]
+  },
+  "env": {
+    "python": "3.11.11 (main, Dec 11 2024, 10:25:04) [Clang 14.0.6 ]",
+    "packages": {
+      "sacrebleu": "2.5.1",
+      "blingfire": "not_available",
+      "spacy": "3.8.7"
+    }
+  }
+}

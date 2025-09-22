@@ -1,0 +1,182 @@
+{
+  "metadata": {
+    "total_chapters": 8,
+    "primary_method": "RoBERTa",
+    "validation_method": "LabMT-en-v1",
+    "analysis_timestamp": "2025-09-09T21:04:57.777127"
+  },
+  "chapter_analysis": [
+    {
+      "chapter_num": 1,
+      "title": "Red Receives the Quantum Delivery",
+      "roberta_score": 0.0795,
+      "labmt_score": 0.1543,
+      "content_length": 3477
+    },
+    {
+      "chapter_num": 2,
+      "title": "Intercepted by the Wolf Drone",
+      "roberta_score": 0.027,
+      "labmt_score": 0.1997,
+      "content_length": 2194
+    },
+    {
+      "chapter_num": 3,
+      "title": "Alliance with the Outlaw Mechanic",
+      "roberta_score": -0.2051,
+      "labmt_score": 0.1478,
+      "content_length": 5007
+    },
+    {
+      "chapter_num": 4,
+      "title": "Wolf Drone Infiltrates Grandmother’s Lab",
+      "roberta_score": -0.4138,
+      "labmt_score": 0.0998,
+      "content_length": 3802
+    },
+    {
+      "chapter_num": 5,
+      "title": "Red’s Risky Rescue Plan",
+      "roberta_score": 0.4491,
+      "labmt_score": 0.1351,
+      "content_length": 8299
+    },
+    {
+      "chapter_num": 6,
+      "title": "Showdown with the Wolf Drone",
+      "roberta_score": 0.0605,
+      "labmt_score": 0.0777,
+      "content_length": 8766
+    },
+    {
+      "chapter_num": 7,
+      "title": "Escape and Sacrifice",
+      "roberta_score": -0.1415,
+      "labmt_score": 0.108,
+      "content_length": 8600
+    },
+    {
+      "chapter_num": 8,
+      "title": "Rebels Receive the Data",
+      "roberta_score": 0.1472,
+      "labmt_score": 0.2018,
+      "content_length": 2009
+    }
+  ],
+  "primary_analysis": {
+    "method": "RoBERTa",
+    "scores": [
+      0.07945817311604818,
+      0.027017136414845783,
+      -0.2050710161526998,
+      -0.41375327905019127,
+      0.44910423358281454,
+      0.06047157049179077,
+      -0.14154271682103475,
+      0.14723870754241944
+    ],
+    "reagan_classification": {
+      "method": "RoBERTa",
+      "best_match": "Man in a hole",
+      "confidence": 0.1886,
+      "all_similarities": {
+        "Rags to riches": 0.1084,
+        "Tragedy": 0,
+        "Man in a hole": 0.1886,
+        "Icarus": 0,
+        "Cinderella": 0,
+        "Oedipus": 0.1073
+      },
+      "reagan_category": "MH"
+    }
+  },
+  "validation_analysis": {
+    "method": "LabMT",
+    "scores": [
+      0.15426339285714397,
+      0.19972222222222258,
+      0.14783653846153788,
+      0.09981250000000075,
+      0.13512276785714272,
+      0.07771874999999961,
+      0.10803030303030292,
+      0.20184210526315827
+    ],
+    "reagan_classification": {
+      "method": "LabMT",
+      "best_match": "Tragedy",
+      "confidence": 0.6884,
+      "all_similarities": {
+        "Rags to riches": 0.606,
+        "Tragedy": 0.6884,
+        "Man in a hole": 0,
+        "Icarus": 0.0805,
+        "Cinderella": 0,
+        "Oedipus": 0.325
+      },
+      "reagan_category": "TR"
+    }
+  },
+  "correlation_analysis": {
+    "pearson_correlation": {
+      "r": 0.3124,
+      "p_value": 0.4513,
+      "significance": "Not Significant"
+    },
+    "spearman_correlation": {
+      "r": 0.381,
+      "p_value": 0.3518
+    },
+    "direction_consistency": 0.7143,
+    "consistency_level": "Low",
+    "interpretation": "RoBERTa and LabMT correlation coefficient is 0.312, belongs to weak correlation"
+  },
+  "comparison_analysis": {
+    "disagreement_points": [
+      {
+        "chapter": 3,
+        "roberta_score": -0.2050710161526998,
+        "labmt_score": 0.14783653846153788,
+        "difference": 0.3529
+      },
+      {
+        "chapter": 4,
+        "roberta_score": -0.41375327905019127,
+        "labmt_score": 0.09981250000000075,
+        "difference": 0.5136
+      },
+      {
+        "chapter": 5,
+        "roberta_score": 0.44910423358281454,
+        "labmt_score": 0.13512276785714272,
+        "difference": 0.314
+      }
+    ],
+    "method_advantages": {
+      "RoBERTa": {
+        "strengths": [
+          "Deep learning model with better contextual understanding",
+          "Suitable for modern text and dialogue",
+          "High sensitivity to sci-fi and technical texts"
+        ],
+        "classification": "Man in a hole",
+        "confidence": 0.1886
+      },
+      "LabMT": {
+        "strengths": [
+          "Fully consistent with Reagan's original method",
+          "Based on large-scale human annotation",
+          "Suitable for traditional literary analysis"
+        ],
+        "classification": "Tragedy",
+        "confidence": 0.6884
+      }
+    },
+    "consistency_assessment": {
+      "classification_agreement": false,
+      "major_disagreements": 3,
+      "recommendation": "Two methods differ significantly, recommend detailed analysis of difference causes, may need more in-depth text feature analysis"
+    }
+  },
+  "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.312 (Low)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.312, belongs to weak correlation\n\nClassification Results:\n- RoBERTa (primary): Man in a hole\n- LabMT (validation): Tragedy\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.312, showing low consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation."
+}

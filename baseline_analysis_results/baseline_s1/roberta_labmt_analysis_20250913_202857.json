@@ -1,0 +1,212 @@
+{
+  "metadata": {
+    "total_chapters": 10,
+    "primary_method": "RoBERTa",
+    "validation_method": "LabMT-en-v1",
+    "analysis_timestamp": "2025-09-13T20:28:57.870855"
+  },
+  "chapter_analysis": [
+    {
+      "chapter_num": 1,
+      "title": "The Transmission",
+      "roberta_score": -0.1896,
+      "labmt_score": 0.2481,
+      "content_length": 2091
+    },
+    {
+      "chapter_num": 2,
+      "title": "Into the Outer Zone",
+      "roberta_score": -0.1885,
+      "labmt_score": 0.2892,
+      "content_length": 2571
+    },
+    {
+      "chapter_num": 3,
+      "title": "The Shortcut",
+      "roberta_score": -0.4871,
+      "labmt_score": 0.1824,
+      "content_length": 2068
+    },
+    {
+      "chapter_num": 4,
+      "title": "The Encounter",
+      "roberta_score": 0.5958,
+      "labmt_score": 0.3085,
+      "content_length": 1826
+    },
+    {
+      "chapter_num": 5,
+      "title": "The Habitat",
+      "roberta_score": 0.3798,
+      "labmt_score": 0.3223,
+      "content_length": 1695
+    },
+    {
+      "chapter_num": 6,
+      "title": "The Wolf Revealed",
+      "roberta_score": 0.0439,
+      "labmt_score": 0.2644,
+      "content_length": 1476
+    },
+    {
+      "chapter_num": 7,
+      "title": "The Intrusion",
+      "roberta_score": 0.3105,
+      "labmt_score": 0.2173,
+      "content_length": 1772
+    },
+    {
+      "chapter_num": 8,
+      "title": "The Secret of the Zone",
+      "roberta_score": -0.3143,
+      "labmt_score": 0.2301,
+      "content_length": 1149
+    },
+    {
+      "chapter_num": 9,
+      "title": "Homeward Bound",
+      "roberta_score": 0.5418,
+      "labmt_score": 0.3814,
+      "content_length": 807
+    },
+    {
+      "chapter_num": 10,
+      "title": "Epilogue—The Guardian",
+      "roberta_score": 0.7488,
+      "labmt_score": 0.3202,
+      "content_length": 852
+    }
+  ],
+  "primary_analysis": {
+    "method": "RoBERTa",
+    "scores": [
+      -0.18956932226816814,
+      -0.18845927715301514,
+      -0.48705387910207115,
+      0.5958388328552247,
+      0.3797659635543823,
+      0.04394124746322632,
+      0.3104629834493001,
+      -0.31425841252009074,
+      0.5417566974957784,
+      0.7487707287073135
+    ],
+    "reagan_classification": {
+      "method": "RoBERTa",
+      "best_match": "Rags to riches",
+      "confidence": 0.6181,
+      "all_similarities": {
+        "Rags to riches": 0.6181,
+        "Tragedy": 0,
+        "Man in a hole": 0.4866,
+        "Icarus": 0,
+        "Cinderella": 0.0502,
+        "Oedipus": 0
+      },
+      "reagan_category": "RR"
+    }
+  },
+  "validation_analysis": {
+    "method": "LabMT",
+    "scores": [
+      0.24809375000000045,
+      0.289226190476191,
+      0.18242187500000062,
+      0.30850806451612933,
+      0.3223076923076924,
+      0.2643749999999998,
+      0.21727272727272728,
+      0.23012195121951207,
+      0.38140625000000017,
+      0.320202702702703
+    ],
+    "reagan_classification": {
+      "method": "LabMT",
+      "best_match": "Rags to riches",
+      "confidence": 0.7252,
+      "all_similarities": {
+        "Rags to riches": 0.7252,
+        "Tragedy": 0.6171,
+        "Man in a hole": 0.0667,
+        "Icarus": 0,
+        "Cinderella": 0,
+        "Oedipus": 0.1623
+      },
+      "reagan_category": "RR"
+    }
+  },
+  "correlation_analysis": {
+    "pearson_correlation": {
+      "r": 0.7462,
+      "p_value": 0.0132,
+      "significance": "Significant"
+    },
+    "spearman_correlation": {
+      "r": 0.7697,
+      "p_value": 0.0092
+    },
+    "direction_consistency": 0.5556,
+    "consistency_level": "High",
+    "interpretation": "RoBERTa and LabMT correlation coefficient is 0.746, belongs to strong correlation"
+  },
+  "comparison_analysis": {
+    "disagreement_points": [
+      {
+        "chapter": 1,
+        "roberta_score": -0.18956932226816814,
+        "labmt_score": 0.24809375000000045,
+        "difference": 0.4377
+      },
+      {
+        "chapter": 2,
+        "roberta_score": -0.18845927715301514,
+        "labmt_score": 0.289226190476191,
+        "difference": 0.4777
+      },
+      {
+        "chapter": 3,
+        "roberta_score": -0.48705387910207115,
+        "labmt_score": 0.18242187500000062,
+        "difference": 0.6695
+      },
+      {
+        "chapter": 8,
+        "roberta_score": -0.31425841252009074,
+        "labmt_score": 0.23012195121951207,
+        "difference": 0.5444
+      },
+      {
+        "chapter": 10,
+        "roberta_score": 0.7487707287073135,
+        "labmt_score": 0.320202702702703,
+        "difference": 0.4286
+      }
+    ],
+    "method_advantages": {
+      "RoBERTa": {
+        "strengths": [
+          "Deep learning model with better contextual understanding",
+          "Suitable for modern text and dialogue",
+          "High sensitivity to sci-fi and technical texts"
+        ],
+        "classification": "Rags to riches",
+        "confidence": 0.6181
+      },
+      "LabMT": {
+        "strengths": [
+          "Fully consistent with Reagan's original method",
+          "Based on large-scale human annotation",
+          "Suitable for traditional literary analysis"
+        ],
+        "classification": "Rags to riches",
+        "confidence": 0.7252
+      }
+    },
+    "consistency_assessment": {
+      "classification_agreement": true,
+      "major_disagreements": 5,
+      "recommendation": "Both methods identify as Rags to riches, results are highly consistent, recommend using RoBERTa as the primary analysis result"
+    }
+  },
+  "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.746 (High)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.746, belongs to strong correlation\n\nClassification Results:\n- RoBERTa (primary): Rags to riches\n- LabMT (validation): Rags to riches\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.746, showing high consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation."
+}

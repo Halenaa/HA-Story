@@ -1,0 +1,162 @@
+{
+  "dod_compliance_info": {
+    "timestamp": "2025-09-14T00:11:14.175709",
+    "analyzer_version": "1.0_dod_compliant",
+    "total_stories_analyzed": 54,
+    "dod_standards_version": "2025.09.13"
+  },
+  "dod_standards_status": {
+    "1": {
+      "name": "Direction Consistency ≥0.60",
+      "target": 0.6,
+      "achieved": true
+    },
+    "2": {
+      "name": "Z-score + Spearman/Pearson",
+      "target": "implemented",
+      "achieved": true
+    },
+    "3": {
+      "name": "BH-FDR Significance",
+      "target": "reported",
+      "achieved": true
+    },
+    "4": {
+      "name": "Threshold Sensitivity",
+      "target": "curves_generated",
+      "achieved": true
+    },
+    "5": {
+      "name": "Coverage <70% Flagging",
+      "target": "flagged",
+      "achieved": true
+    },
+    "6": {
+      "name": "Error Source Panel",
+      "target": "3-5_cases",
+      "achieved": true
+    }
+  },
+  "dod_results": {
+    "1": {
+      "mean_direction_consistency": 0.6135802469135804,
+      "std_direction_consistency": 0.23974336084437722,
+      "median_direction_consistency": 0.6666666666666666,
+      "min_consistency": 0.0,
+      "max_consistency": 1.0,
+      "stories_count": 54,
+      "target_achieved": true
+    },
+    "2": {
+      "total_stories_analyzed": 54,
+      "zscore_possible_count": 54,
+      "spearman_rho_mean": 0.2824514991181658,
+      "spearman_rho_std": 0.40239285996945245,
+      "spearman_rho_median": 0.386904761904762,
+      "pearson_r_mean": 0.289458148928194,
+      "pearson_r_std": 0.3934730413033804,
+      "pearson_r_median": 0.35597455566891356,
+      "implementation_complete": true
+    },
+    "3": {
+      "total_tests": 54,
+      "raw_significant_count": 6,
+      "raw_significant_percentage": 11.11111111111111,
+      "fdr_significant_count": 0,
+      "fdr_significant_percentage": 0.0,
+      "mean_raw_p": 0.40851086396411834,
+      "mean_fdr_corrected_p": 0.6724468937411575,
+      "fdr_method": "benjamini_hochberg",
+      "alpha_level": 0.05
+    },
+    "4": {
+      "threshold_multipliers": [
+        0.4,
+        0.5,
+        0.6
+      ],
+      "sensitivity_summary": {
+        "multiplier_0.4": {
+          "mean_disagreement_rate": 0.8322163433274544,
+          "std_disagreement_rate": 0.13294956094440516,
+          "median_disagreement_rate": 0.8571428571428571,
+          "mean_threshold": 0.0892202364797767,
+          "std_threshold": 0.02064311454687142,
+          "stories_count": 54
+        },
+        "multiplier_0.5": {
+          "mean_disagreement_rate": 0.7987948265726045,
+          "std_disagreement_rate": 0.14937204990516206,
+          "median_disagreement_rate": 0.8166666666666667,
+          "mean_threshold": 0.11152529559972084,
+          "std_threshold": 0.025803893183589267,
+          "stories_count": 54
+        },
+        "multiplier_0.6": {
+          "mean_disagreement_rate": 0.7398001175778952,
+          "std_disagreement_rate": 0.16462837463768662,
+          "median_disagreement_rate": 0.7142857142857143,
+          "mean_threshold": 0.133830354719665,
+          "std_threshold": 0.030964671820307127,
+          "stories_count": 54
+        }
+      },
+      "recommended_multiplier": 0.5
+    },
+    "5": {
+      "total_stories": 54,
+      "coverage_median": 0.98,
+      "coverage_iqr": [
+        0.9609586980776772,
+        0.98
+      ],
+      "coverage_mean": 0.9667045956518945,
+      "coverage_std": 0.03341577970955841,
+      "low_confidence_count": 0,
+      "low_confidence_percentage": 0.0,
+      "low_confidence_threshold": 0.7,
+      "low_confidence_stories": []
+    },
+    "6": {
+      "cases_selected": 5,
+      "selection_criterion": "highest_disagreement_rate",
+      "cases_info": [
+        {
+          "story_id": "sciencefiction_nonlinear_T0.9_s3",
+          "genre": "sciencefiction",
+          "disagreement_rate": 1.0,
+          "max_difference": 0.76
+        },
+        {
+          "story_id": "sciencefiction_linear_T0.9_s2",
+          "genre": "sciencefiction",
+          "disagreement_rate": 1.0,
+          "max_difference": 0.7564
+        },
+        {
+          "story_id": "sciencefiction_nonlinear_T0.3_s3",
+          "genre": "sciencefiction",
+          "disagreement_rate": 1.0,
+          "max_difference": 0.41300000000000003
+        },
+        {
+          "story_id": "sciencefiction_linear_T0.3_s3",
+          "genre": "sciencefiction",
+          "disagreement_rate": 1.0,
+          "max_difference": 0.6873
+        },
+        {
+          "story_id": "horror_nonlinear_T0.9_s1",
+          "genre": "horror",
+          "disagreement_rate": 1.0,
+          "max_difference": 0.6218
+        }
+      ]
+    }
+  },
+  "compliance_summary": {
+    "all_standards_achieved": true,
+    "achieved_count": 6,
+    "total_standards": 6
+  }
+}

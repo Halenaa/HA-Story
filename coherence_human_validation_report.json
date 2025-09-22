@@ -1,0 +1,66 @@
+{
+  "analysis_metadata": {
+    "analysis_date": "2025-09-14T02:12:35.504059",
+    "purpose": "Human validation of automated coherence metric for Master thesis",
+    "human_evaluators": 20,
+    "total_evaluations": 80
+  },
+  "validation_results": {
+    "correlation_analysis": {
+      "overall_correlation": {
+        "pearson_r": 0.769587789762171,
+        "pearson_p": 7.401282325544906e-17,
+        "spearman_r": 0.5046533966875679,
+        "spearman_p": 1.8126560661329824e-06,
+        "sample_size": 80,
+        "significant": "True",
+        "strong_correlation": "True"
+      },
+      "baseline_correlation": {
+        "pearson_r": NaN,
+        "pearson_p": NaN,
+        "sample_size": 20
+      },
+      "experimental_correlation": {
+        "pearson_r": -0.10725139031649068,
+        "pearson_p": 0.41470251882784015,
+        "sample_size": 60
+      }
+    },
+    "threshold_analysis": {
+      "empirical_thresholds": {
+        "excellent": 0.352,
+        "good": 0.293,
+        "poor": 0.234
+      },
+      "old_thresholds": {
+        "excellent": 0.7,
+        "good": 0.5,
+        "poor": 0.3
+      },
+      "human_quartiles": {
+        "Q1": 4.0,
+        "Q2": 5.5,
+        "Q3": 6.0
+      },
+      "threshold_method": "human_score_based_quartiles"
+    },
+    "practical_significance": {
+      "effect_size": {
+        "cohens_d": 3.1002022161793787,
+        "interpretation": "大效应"
+      },
+      "practical_difference": {
+        "absolute_diff": 0.10851576086956521,
+        "relative_diff_percent": 42.58496988517122
+      },
+      "score_interpretation": {
+        "ai_average_auto_coherence": 0.404,
+        "baseline_average_auto_coherence": 0.259,
+        "expected_human_score_for_0404": "5.0",
+        "human_score_range": "2.0 - 8.0",
+        "human_mean": 5.1375
+      }
+    }
+  }
+}

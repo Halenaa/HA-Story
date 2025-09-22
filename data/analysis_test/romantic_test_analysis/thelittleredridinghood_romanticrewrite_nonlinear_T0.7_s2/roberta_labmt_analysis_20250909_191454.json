@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "total_chapters": 6,
+    "primary_method": "RoBERTa",
+    "validation_method": "LabMT-en-v1",
+    "analysis_timestamp": "2025-09-09T19:14:54.964073"
+  },
+  "chapter_analysis": [
+    {
+      "chapter_num": 5,
+      "title": "The Wolf’s Deception",
+      "roberta_score": 0.2004,
+      "labmt_score": 0.1927,
+      "content_length": 4057
+    },
+    {
+      "chapter_num": 1,
+      "title": "Red Receives the Invitation",
+      "roberta_score": 0.335,
+      "labmt_score": 0.2934,
+      "content_length": 10280
+    },
+    {
+      "chapter_num": 2,
+      "title": "Encounter at the Forest Path",
+      "roberta_score": -0.0372,
+      "labmt_score": 0.1854,
+      "content_length": 5789
+    },
+    {
+      "chapter_num": 4,
+      "title": "Race to Grandmother’s Cottage",
+      "roberta_score": 0.2322,
+      "labmt_score": 0.1333,
+      "content_length": 5364
+    },
+    {
+      "chapter_num": 3,
+      "title": "Wolf’s Tempting Proposal",
+      "roberta_score": 0.846,
+      "labmt_score": 0.2705,
+      "content_length": 14947
+    },
+    {
+      "chapter_num": 6,
+      "title": "Revelations and Romantic Decision",
+      "roberta_score": 0.069,
+      "labmt_score": 0.2379,
+      "content_length": 10462
+    }
+  ],
+  "primary_analysis": {
+    "method": "RoBERTa",
+    "scores": [
+      0.20035065412521363,
+      0.33497626781463624,
+      -0.03716038465499878,
+      0.23221144278844197,
+      0.8459996978441874,
+      0.06900601784388224
+    ],
+    "reagan_classification": {
+      "method": "RoBERTa",
+      "best_match": "Rags to riches",
+      "confidence": 0.5669,
+      "all_similarities": {
+        "Rags to riches": 0.5669,
+        "Tragedy": 0.3533,
+        "Man in a hole": 0.2027,
+        "Icarus": 0,
+        "Cinderella": 0,
+        "Oedipus": 0.2644
+      },
+      "reagan_category": "RR"
+    }
+  },
+  "validation_analysis": {
+    "method": "LabMT",
+    "scores": [
+      0.19267006802721065,
+      0.29340966921119205,
+      0.18539215686274524,
+      0.13327586206896624,
+      0.2705409663865521,
+      0.23787499999999917
+    ],
+    "reagan_classification": {
+      "method": "LabMT",
+      "best_match": "Rags to riches",
+      "confidence": 0.6576,
+      "all_similarities": {
+        "Rags to riches": 0.6576,
+        "Tragedy": 0.6233,
+        "Man in a hole": 0.0103,
+        "Icarus": 0,
+        "Cinderella": 0,
+        "Oedipus": 0.3358
+      },
+      "reagan_category": "RR"
+    }
+  },
+  "correlation_analysis": {
+    "pearson_correlation": {
+      "r": 0.5018,
+      "p_value": 0.3105,
+      "significance": "Not Significant"
+    },
+    "spearman_correlation": {
+      "r": 0.5429,
+      "p_value": 0.2657
+    },
+    "direction_consistency": 0.8,
+    "consistency_level": "Medium",
+    "interpretation": "RoBERTa and LabMT correlation coefficient is 0.502, belongs to moderate correlation"
+  },
+  "comparison_analysis": {
+    "disagreement_points": [
+      {
+        "chapter": 5,
+        "roberta_score": 0.8459996978441874,
+        "labmt_score": 0.2705409663865521,
+        "difference": 0.5755
+      }
+    ],
+    "method_advantages": {
+      "RoBERTa": {
+        "strengths": [
+          "Deep learning model with better contextual understanding",
+          "Suitable for modern text and dialogue",
+          "High sensitivity to sci-fi and technical texts"
+        ],
+        "classification": "Rags to riches",
+        "confidence": 0.5669
+      },
+      "LabMT": {
+        "strengths": [
+          "Fully consistent with Reagan's original method",
+          "Based on large-scale human annotation",
+          "Suitable for traditional literary analysis"
+        ],
+        "classification": "Rags to riches",
+        "confidence": 0.6576
+      }
+    },
+    "consistency_assessment": {
+      "classification_agreement": true,
+      "major_disagreements": 1,
+      "recommendation": "Both methods identify as Rags to riches, results are highly consistent, recommend using RoBERTa as the primary analysis result"
+    }
+  },
+  "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.502 (Medium)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.502, belongs to moderate correlation\n\nClassification Results:\n- RoBERTa (primary): Rags to riches\n- LabMT (validation): Rags to riches\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.502, showing medium consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation."
+}

@@ -1,0 +1,1099 @@
+{
+  "folder_name": "thelittleredridinghood_sciencefictionrewrite_linear_T0.3_s2",
+  "file_path": "/Users/haha/Story/data/output/regression_test/thelittleredridinghood_sciencefictionrewrite_linear_T0.3_s2/enhanced_story_dialogue_updated.md",
+  "analysis_timestamp": null,
+  "emotional_arc_analysis": {
+    "metadata": {
+      "total_chapters": 7,
+      "primary_method": "RoBERTa",
+      "validation_method": "LabMT-en-v1",
+      "analysis_timestamp": "2025-09-09T20:37:21.627390"
+    },
+    "chapter_analysis": [
+      {
+        "chapter_num": 1,
+        "title": "Red Receives the Mission",
+        "roberta_score": -0.0392,
+        "labmt_score": 0.1875,
+        "content_length": 11503
+      },
+      {
+        "chapter_num": 2,
+        "title": "Checkpoint Ambush",
+        "roberta_score": 0.2136,
+        "labmt_score": 0.1042,
+        "content_length": 6016
+      },
+      {
+        "chapter_num": 3,
+        "title": "Wolf's Interference",
+        "roberta_score": -0.651,
+        "labmt_score": 0.1212,
+        "content_length": 1827
+      },
+      {
+        "chapter_num": 4,
+        "title": "Grandmother’s Signal",
+        "roberta_score": 0.0259,
+        "labmt_score": 0.1757,
+        "content_length": 1732
+      },
+      {
+        "chapter_num": 5,
+        "title": "Lab Break-In",
+        "roberta_score": -0.0853,
+        "labmt_score": 0.1259,
+        "content_length": 1098
+      },
+      {
+        "chapter_num": 6,
+        "title": "Wolf's Ultimatum",
+        "roberta_score": -0.2128,
+        "labmt_score": 0.1946,
+        "content_length": 1495
+      },
+      {
+        "chapter_num": 7,
+        "title": "Escape and Revelation",
+        "roberta_score": 0.8263,
+        "labmt_score": 0.1915,
+        "content_length": 7681
+      }
+    ],
+    "primary_analysis": {
+      "method": "RoBERTa",
+      "scores": [
+        -0.039225176970163984,
+        0.21358858744303386,
+        -0.6510312472070966,
+        0.02593752316066197,
+        -0.08534784615039825,
+        -0.21275885288531965,
+        0.8262502948443095
+      ],
+      "reagan_classification": {
+        "method": "RoBERTa",
+        "best_match": "Oedipus",
+        "confidence": 0.5142,
+        "all_similarities": {
+          "Rags to riches": 0.3131,
+          "Tragedy": 0,
+          "Man in a hole": 0.3546,
+          "Icarus": 0,
+          "Cinderella": 0,
+          "Oedipus": 0.5142
+        },
+        "reagan_category": "OE"
+      }
+    },
+    "validation_analysis": {
+      "method": "LabMT",
+      "scores": [
+        0.18745394736842091,
+        0.10421052631578998,
+        0.12116279069767444,
+        0.17571428571428638,
+        0.1259374999999998,
+        0.19464285714285734,
+        0.19152719665271922
+      ],
+      "reagan_classification": {
+        "method": "LabMT",
+        "best_match": "Rags to riches",
+        "confidence": 0.7175,
+        "all_similarities": {
+          "Rags to riches": 0.7175,
+          "Tragedy": 0.5872,
+          "Man in a hole": 0.0994,
+          "Icarus": 0,
+          "Cinderella": 0,
+          "Oedipus": 0.2686
+        },
+        "reagan_category": "RR"
+      }
+    },
+    "correlation_analysis": {
+      "pearson_correlation": {
+        "r": 0.3326,
+        "p_value": 0.4661,
+        "significance": "Not Significant"
+      },
+      "spearman_correlation": {
+        "r": 0.0357,
+        "p_value": 0.9394
+      },
+      "direction_consistency": 0.3333,
+      "consistency_level": "Low",
+      "interpretation": "RoBERTa and LabMT correlation coefficient is 0.333, belongs to weak correlation"
+    },
+    "comparison_analysis": {
+      "disagreement_points": [
+        {
+          "chapter": 3,
+          "roberta_score": -0.6510312472070966,
+          "labmt_score": 0.12116279069767444,
+          "difference": 0.7722
+        },
+        {
+          "chapter": 6,
+          "roberta_score": -0.21275885288531965,
+          "labmt_score": 0.19464285714285734,
+          "difference": 0.4074
+        },
+        {
+          "chapter": 7,
+          "roberta_score": 0.8262502948443095,
+          "labmt_score": 0.19152719665271922,
+          "difference": 0.6347
+        }
+      ],
+      "method_advantages": {
+        "RoBERTa": {
+          "strengths": [
+            "Deep learning model with better contextual understanding",
+            "Suitable for modern text and dialogue",
+            "High sensitivity to sci-fi and technical texts"
+          ],
+          "classification": "Oedipus",
+          "confidence": 0.5142
+        },
+        "LabMT": {
+          "strengths": [
+            "Fully consistent with Reagan's original method",
+            "Based on large-scale human annotation",
+            "Suitable for traditional literary analysis"
+          ],
+          "classification": "Rags to riches",
+          "confidence": 0.7175
+        }
+      },
+      "consistency_assessment": {
+        "classification_agreement": false,
+        "major_disagreements": 3,
+        "recommendation": "Two methods differ significantly, recommend detailed analysis of difference causes, may need more in-depth text feature analysis"
+      }
+    },
+    "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.333 (Low)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.333, belongs to weak correlation\n\nClassification Results:\n- RoBERTa (primary): Oedipus\n- LabMT (validation): Rags to riches\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.333, showing low consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation.",
+    "output_files": {
+      "analysis_json": "/Users/haha/Story/data/regression_test_analysis/thelittleredridinghood_sciencefictionrewrite_linear_T0.3_s2/roberta_labmt_analysis_20250909_203721.json"
+    }
+  },
+  "hred_coherence_analysis": {
+    "HRED_coherence_evaluation": {
+      "model_name": "all-mpnet-base-v2",
+      "analysis_method": "Original sentence coherence",
+      "total_sentences": 324,
+      "adjacent_pairs": 323,
+      "average_coherence": 0.3578,
+      "objective_description": {
+        "score": 0.3578,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "detailed_analysis": {
+      "basic_statistics": {
+        "average_coherence": 0.3578319684905072,
+        "coherence_std": 0.16561101851140356,
+        "max_coherence": 0.819748044013977,
+        "min_coherence": -0.07150241732597351,
+        "coherence_median": 0.3631850481033325
+      },
+      "coherence_breakpoints": [
+        {
+          "position": 16,
+          "sentence_pair": "Red’s jaw set with resolve.... → She nodded once, swift and sur...",
+          "similarity": 0.073
+        },
+        {
+          "position": 27,
+          "sentence_pair": "Then, with a gentle but determ... → Ilan before sunrise—Wolf is al...",
+          "similarity": 0.13
+        },
+        {
+          "position": 64,
+          "sentence_pair": "Mira was a barrier forged of b... → Wolf circles the edge of the c...",
+          "similarity": 0.071
+        },
+        {
+          "position": 84,
+          "sentence_pair": "She kept her voice low, tensio... → “I get the route,” she murmure...",
+          "similarity": 0.181
+        },
+        {
+          "position": 86,
+          "sentence_pair": "Are there any backup exits hid... → Red's Mother (Mira)Mira zooms ...",
+          "similarity": 0.111
+        },
+        {
+          "position": 92,
+          "sentence_pair": "Then she looked up, fixing Red... → “But improvising means more ri...",
+          "similarity": 0.052
+        },
+        {
+          "position": 94,
+          "sentence_pair": "Use them only if absolutely ne... → ” The message hung between the...",
+          "similarity": -0.016
+        },
+        {
+          "position": 115,
+          "sentence_pair": "Maintain formation and await m... → This is a live extraction....",
+          "similarity": 0.158
+        },
+        {
+          "position": 116,
+          "sentence_pair": "This is a live extraction.... → Any breach in protocol puts th...",
+          "similarity": 0.137
+        },
+        {
+          "position": 117,
+          "sentence_pair": "Any breach in protocol puts th... → Drone Unit 17 hovers into posi...",
+          "similarity": 0.136
+        },
+        {
+          "position": 120,
+          "sentence_pair": "standing by for your signal—pr... → Agent Kade glances at his wris...",
+          "similarity": 0.129
+        },
+        {
+          "position": 126,
+          "sentence_pair": "awaiting your mark for executi... → Agent Kade taps his HUD, signa...",
+          "similarity": 0.163
+        },
+        {
+          "position": 144,
+          "sentence_pair": "The distant whine of sirens ch... → “Package secured—I’m clear!...",
+          "similarity": 0.162
+        },
+        {
+          "position": 145,
+          "sentence_pair": "“Package secured—I’m clear!... → ” she reported between gulps o...",
+          "similarity": 0.191
+        },
+        {
+          "position": 155,
+          "sentence_pair": "\"Unit 17: --system fail--track... → Red....",
+          "similarity": 0.054
+        },
+        {
+          "position": 174,
+          "sentence_pair": "The path to extraction point D... → Red darts beneath a metal awni...",
+          "similarity": 0.101
+        },
+        {
+          "position": 181,
+          "sentence_pair": "' Wolf’s voice, metallic and s... → Hand it over, or I reroute eve...",
+          "similarity": 0.15
+        },
+        {
+          "position": 193,
+          "sentence_pair": "Red hacks a maintenance termin... → Wolf advances, his voice modul...",
+          "similarity": 0.157
+        },
+        {
+          "position": 194,
+          "sentence_pair": "Wolf advances, his voice modul... → Your resistance ends here....",
+          "similarity": 0.142
+        },
+        {
+          "position": 195,
+          "sentence_pair": "Your resistance ends here.... → ' Red launches a smoke pellet,...",
+          "similarity": 0.108
+        },
+        {
+          "position": 216,
+          "sentence_pair": "Prepare for detainment.... → ' Wolf pivots, hacking the dro...",
+          "similarity": 0.087
+        },
+        {
+          "position": 218,
+          "sentence_pair": "Red uses the distraction to va... → Override protocol....",
+          "similarity": 0.117
+        },
+        {
+          "position": 219,
+          "sentence_pair": "Override protocol.... → ' The scene ends with Red duck...",
+          "similarity": 0.023
+        },
+        {
+          "position": 223,
+          "sentence_pair": "With their path to freedom sud... → Yet as they hurried into the s...",
+          "similarity": 0.145
+        },
+        {
+          "position": 232,
+          "sentence_pair": "When their eyes met, Red nodde... → \"Dr....",
+          "similarity": 0.176
+        },
+        {
+          "position": 235,
+          "sentence_pair": "It's important,\" she said quie... → Grandmother (Dr....",
+          "similarity": 0.1
+        },
+        {
+          "position": 238,
+          "sentence_pair": "Lin Su turns her full attentio... → Dr....",
+          "similarity": 0.094
+        },
+        {
+          "position": 239,
+          "sentence_pair": "Dr.... → Lin Su set aside the schematic...",
+          "similarity": 0.076
+        },
+        {
+          "position": 246,
+          "sentence_pair": "Red’s gaze darted over the sha... → Lin Su to draw closer....",
+          "similarity": 0.145
+        },
+        {
+          "position": 252,
+          "sentence_pair": "she was accustomed to danger, ... → Dr....",
+          "similarity": 0.118
+        },
+        {
+          "position": 253,
+          "sentence_pair": "Dr.... → Lin Su, sensing the gravity of...",
+          "similarity": 0.113
+        },
+        {
+          "position": 254,
+          "sentence_pair": "Lin Su, sensing the gravity of... → Grandmother (Dr....",
+          "similarity": 0.067
+        },
+        {
+          "position": 257,
+          "sentence_pair": "Lin Su gently guides Red to a ... → Dr....",
+          "similarity": 0.066
+        },
+        {
+          "position": 258,
+          "sentence_pair": "Dr.... → Lin Su placed a gentle hand on...",
+          "similarity": 0.104
+        },
+        {
+          "position": 263,
+          "sentence_pair": "“Let’s step aside so you can t... → Red leads Dr....",
+          "similarity": 0.145
+        },
+        {
+          "position": 272,
+          "sentence_pair": "Her hand hovered near the conc... → The city outside might have be...",
+          "similarity": 0.154
+        },
+        {
+          "position": 273,
+          "sentence_pair": "The city outside might have be... → Grandmother (Dr....",
+          "similarity": -0.064
+        },
+        {
+          "position": 276,
+          "sentence_pair": "Lin Su signals readiness to ac... → Dr....",
+          "similarity": 0.03
+        },
+        {
+          "position": 277,
+          "sentence_pair": "Dr.... → Lin Su met Red’s worried gaze ...",
+          "similarity": 0.111
+        },
+        {
+          "position": 285,
+          "sentence_pair": "Red pulls Dr.... → Lin Su behind the cold metal o...",
+          "similarity": 0.158
+        },
+        {
+          "position": 293,
+          "sentence_pair": "Don’t make a sound—he’s right ... → ” Her gaze swept the corridor—...",
+          "similarity": 0.111
+        },
+        {
+          "position": 294,
+          "sentence_pair": "” Her gaze swept the corridor—... → “I won’t let him find you....",
+          "similarity": 0.169
+        },
+        {
+          "position": 295,
+          "sentence_pair": "“I won’t let him find you.... → ” The promise was as much to h...",
+          "similarity": 0.138
+        },
+        {
+          "position": 296,
+          "sentence_pair": "” The promise was as much to h... → Lin Su, fierce and unyielding....",
+          "similarity": 0.173
+        },
+        {
+          "position": 297,
+          "sentence_pair": "Lin Su, fierce and unyielding.... → Red’s hand settled briefly ove...",
+          "similarity": 0.114
+        },
+        {
+          "position": 298,
+          "sentence_pair": "Red’s hand settled briefly ove... → The package was heavy with mea...",
+          "similarity": 0.175
+        },
+        {
+          "position": 303,
+          "sentence_pair": "Not after everything we’ve los... → Grandmother (Dr....",
+          "similarity": -0.072
+        },
+        {
+          "position": 306,
+          "sentence_pair": "Lin Su squeezes Red's hand, he... → Dr....",
+          "similarity": 0.031
+        },
+        {
+          "position": 307,
+          "sentence_pair": "Dr.... → Lin Su’s hand found Red’s and ...",
+          "similarity": 0.089
+        },
+        {
+          "position": 311,
+          "sentence_pair": "” Her eyes, sharp even in the ... → “That research could save thou...",
+          "similarity": 0.136
+        },
+        {
+          "position": 312,
+          "sentence_pair": "“That research could save thou... → WolfRed instinctively presses ...",
+          "similarity": 0.101
+        },
+        {
+          "position": 315,
+          "sentence_pair": "The ticking clock above the do... → From the darkness overhead, Wo...",
+          "similarity": 0.167
+        },
+        {
+          "position": 319,
+          "sentence_pair": "The words seemed to tighten th... → They move stealthily towards t...",
+          "similarity": 0.184
+        },
+        {
+          "position": 321,
+          "sentence_pair": "The tension escalates as they ... → Red leads Dr....",
+          "similarity": 0.133
+        },
+        {
+          "position": 322,
+          "sentence_pair": "Red leads Dr.... → Lin Su to the emergency ziplin...",
+          "similarity": 0.151
+        }
+      ],
+      "high_coherence_segments": [
+        {
+          "start_sentence": 3,
+          "end_sentence": 8,
+          "length": 6,
+          "average_similarity": 0.64
+        },
+        {
+          "start_sentence": 29,
+          "end_sentence": 31,
+          "length": 3,
+          "average_similarity": 0.512
+        },
+        {
+          "start_sentence": 36,
+          "end_sentence": 38,
+          "length": 3,
+          "average_similarity": 0.642
+        },
+        {
+          "start_sentence": 50,
+          "end_sentence": 52,
+          "length": 3,
+          "average_similarity": 0.706
+        },
+        {
+          "start_sentence": 53,
+          "end_sentence": 55,
+          "length": 3,
+          "average_similarity": 0.505
+        },
+        {
+          "start_sentence": 67,
+          "end_sentence": 69,
+          "length": 3,
+          "average_similarity": 0.619
+        },
+        {
+          "start_sentence": 70,
+          "end_sentence": 72,
+          "length": 3,
+          "average_similarity": 0.493
+        },
+        {
+          "start_sentence": 89,
+          "end_sentence": 91,
+          "length": 3,
+          "average_similarity": 0.489
+        },
+        {
+          "start_sentence": 105,
+          "end_sentence": 109,
+          "length": 5,
+          "average_similarity": 0.512
+        },
+        {
+          "start_sentence": 111,
+          "end_sentence": 114,
+          "length": 4,
+          "average_similarity": 0.632
+        },
+        {
+          "start_sentence": 129,
+          "end_sentence": 131,
+          "length": 3,
+          "average_similarity": 0.495
+        },
+        {
+          "start_sentence": 133,
+          "end_sentence": 137,
+          "length": 5,
+          "average_similarity": 0.512
+        },
+        {
+          "start_sentence": 157,
+          "end_sentence": 159,
+          "length": 3,
+          "average_similarity": 0.636
+        },
+        {
+          "start_sentence": 169,
+          "end_sentence": 171,
+          "length": 3,
+          "average_similarity": 0.446
+        },
+        {
+          "start_sentence": 177,
+          "end_sentence": 180,
+          "length": 4,
+          "average_similarity": 0.564
+        },
+        {
+          "start_sentence": 183,
+          "end_sentence": 186,
+          "length": 4,
+          "average_similarity": 0.579
+        },
+        {
+          "start_sentence": 188,
+          "end_sentence": 190,
+          "length": 3,
+          "average_similarity": 0.605
+        },
+        {
+          "start_sentence": 191,
+          "end_sentence": 193,
+          "length": 3,
+          "average_similarity": 0.595
+        },
+        {
+          "start_sentence": 198,
+          "end_sentence": 200,
+          "length": 3,
+          "average_similarity": 0.571
+        },
+        {
+          "start_sentence": 205,
+          "end_sentence": 208,
+          "length": 4,
+          "average_similarity": 0.554
+        },
+        {
+          "start_sentence": 224,
+          "end_sentence": 226,
+          "length": 3,
+          "average_similarity": 0.523
+        },
+        {
+          "start_sentence": 242,
+          "end_sentence": 244,
+          "length": 3,
+          "average_similarity": 0.524
+        },
+        {
+          "start_sentence": 261,
+          "end_sentence": 263,
+          "length": 3,
+          "average_similarity": 0.519
+        }
+      ],
+      "objective_description": {
+        "score": 0.3578,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "pairwise_similarity_examples": [
+      {
+        "sentence_pair": "Sentence 1 → Sentence 2",
+        "sentence_1": "Red crouches behind a rusted ventilation shaft, sc...",
+        "sentence_2": "Mira, bundled in a dark cloak, approaches swiftly,...",
+        "similarity": 0.3557
+      },
+      {
+        "sentence_pair": "Sentence 2 → Sentence 3",
+        "sentence_1": "Mira, bundled in a dark cloak, approaches swiftly,...",
+        "sentence_2": "She thrusts a small, data-encoded vial into Red's ...",
+        "similarity": 0.3326
+      },
+      {
+        "sentence_pair": "Sentence 3 → Sentence 4",
+        "sentence_1": "She thrusts a small, data-encoded vial into Red's ...",
+        "sentence_2": "Red's Mother (Mira)Mira presses the encoded vial i...",
+        "similarity": 0.7345
+      },
+      {
+        "sentence_pair": "Sentence 4 → Sentence 5",
+        "sentence_1": "Red's Mother (Mira)Mira presses the encoded vial i...",
+        "sentence_2": "Mira pressed the encoded vial firmly into Red’s gl...",
+        "similarity": 0.7891
+      },
+      {
+        "sentence_pair": "Sentence 5 → Sentence 6",
+        "sentence_1": "Mira pressed the encoded vial firmly into Red’s gl...",
+        "sentence_2": "She leaned in, voice trembling with urgency as she...",
+        "similarity": 0.6183
+      },
+      {
+        "sentence_pair": "Sentence 6 → Sentence 7",
+        "sentence_1": "She leaned in, voice trembling with urgency as she...",
+        "sentence_2": "Red felt the weight of both the glass and her moth...",
+        "similarity": 0.5987
+      },
+      {
+        "sentence_pair": "Sentence 7 → Sentence 8",
+        "sentence_1": "Red felt the weight of both the glass and her moth...",
+        "sentence_2": "Mira’s words came low but unyielding: before dawn,...",
+        "similarity": 0.4582
+      },
+      {
+        "sentence_pair": "Sentence 8 → Sentence 9",
+        "sentence_1": "Mira’s words came low but unyielding: before dawn,...",
+        "sentence_2": "Ilan, and no one else could know.",
+        "similarity": 0.201
+      },
+      {
+        "sentence_pair": "Sentence 9 → Sentence 10",
+        "sentence_1": "Ilan, and no one else could know.",
+        "sentence_2": "The contents, Mira insisted, could tip the fate of...",
+        "similarity": 0.2157
+      },
+      {
+        "sentence_pair": "Sentence 10 → Sentence 11",
+        "sentence_1": "The contents, Mira insisted, could tip the fate of...",
+        "sentence_2": "Her gaze searched Red’s face, demanding a promise.",
+        "similarity": 0.2606
+      },
+      {
+        "sentence_pair": "Sentence 11 → Sentence 12",
+        "sentence_1": "Her gaze searched Red’s face, demanding a promise.",
+        "sentence_2": "Whatever happened, Mira urged, Red could not let a...",
+        "similarity": 0.5474
+      },
+      {
+        "sentence_pair": "Sentence 12 → Sentence 13",
+        "sentence_1": "Whatever happened, Mira urged, Red could not let a...",
+        "sentence_2": "Red clutches the vial tightly, her jaw set with de...",
+        "similarity": 0.4063
+      },
+      {
+        "sentence_pair": "Sentence 13 → Sentence 14",
+        "sentence_1": "Red clutches the vial tightly, her jaw set with de...",
+        "sentence_2": "Red closed her fingers around the data-encoded via...",
+        "similarity": 0.6422
+      },
+      {
+        "sentence_pair": "Sentence 14 → Sentence 15",
+        "sentence_1": "Red closed her fingers around the data-encoded via...",
+        "sentence_2": "Her mother’s grip tightened on her shoulder—firm, ...",
+        "similarity": 0.4292
+      },
+      {
+        "sentence_pair": "Sentence 15 → Sentence 16",
+        "sentence_1": "Her mother’s grip tightened on her shoulder—firm, ...",
+        "sentence_2": "Red’s jaw set with resolve.",
+        "similarity": 0.2714
+      },
+      {
+        "sentence_pair": "Sentence 16 → Sentence 17",
+        "sentence_1": "Red’s jaw set with resolve.",
+        "sentence_2": "She nodded once, swift and sure, then slipped the ...",
+        "similarity": 0.0731
+      },
+      {
+        "sentence_pair": "Sentence 17 → Sentence 18",
+        "sentence_1": "She nodded once, swift and sure, then slipped the ...",
+        "sentence_2": "“I promise, Mama,” she said quietly, her voice ste...",
+        "similarity": 0.3915
+      },
+      {
+        "sentence_pair": "Sentence 18 → Sentence 19",
+        "sentence_1": "“I promise, Mama,” she said quietly, her voice ste...",
+        "sentence_2": "“I won’t let you down, no matter what.",
+        "similarity": 0.4661
+      },
+      {
+        "sentence_pair": "Sentence 19 → Sentence 20",
+        "sentence_1": "“I won’t let you down, no matter what.",
+        "sentence_2": "Red's Mother (Mira)Mira squeezes Red's shoulder on...",
+        "similarity": 0.2628
+      },
+      {
+        "sentence_pair": "Sentence 20 → Sentence 21",
+        "sentence_1": "Red's Mother (Mira)Mira squeezes Red's shoulder on...",
+        "sentence_2": "Mira squeezed Red’s shoulder one last time, her gr...",
+        "similarity": 0.607
+      },
+      {
+        "note": "Only showing first 20 pairs, total of 323 adjacent sentence pairs"
+      }
+    ]
+  },
+  "story_structure_analysis": {
+    "evaluation_mode": "default mode",
+    "event_list": [
+      {
+        "event": "Red hides behind a ventilation shaft while a regime patrol drone passes overhead.",
+        "source": "Red crouches behind a rusted ventilation shaft, scanning the horizon as a regime patrol drone buzzes past, its searchlight slicing through the drizzle.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Mira hands Red a data-encoded vial and urges her to deliver it to Dr. Ilan.",
+        "source": "She thrusts a small, data-encoded vial into Red's gloved hand and grips her daughter's shoulder, voice urgent: 'This package must reach Dr.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Mira stresses secrecy and the mission's importance, and urges Red not to let anyone stop her.",
+        "source": "' Mira emphasizes the secrecy and importance of the mission, urging Red to promise she will not let anyone stop her.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf arrives, menacingly hinting at his intent to retrieve the package.",
+        "source": "Suddenly, Wolf arrives, his words menacing, hinting at his intent to retrieve the package.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Mira projects a holographic map of regime checkpoints and outlines a covert route.",
+        "source": "Mira regains focus, projecting a holographic map of regime checkpoints and outlining a covert route.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Mira signals Red to move; Red vaults onto a fire escape as Mira wipes away the digital map and ducks into shadow.",
+        "source": "Mira signals Red to move, and Red darts for the edge of the roof, vaulting onto a fire escape as Mira wipes away the digital map and ducks into shadow.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red ducks behind a vending kiosk as Drone Unit 17 sweeps low, its sensors buzzing and red lights scanning for contraband.",
+        "source": "She ducks behind a vending kiosk as Drone Unit 17 sweeps low, its sensors buzzing and red lights scanning for contraband.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Drone Unit 17 confirms, priming containment protocol alpha and tightening the perimeter.",
+        "source": "' The drone confirms, priming containment protocol alpha and tightening the perimeter.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red hacks a street panel, creating a distraction, and communicates with Kade over comms.",
+        "source": "As Red hacks a malfunctioning street panel to create a flare distraction, she reports her sector breach over comms, revealing ongoing contact with Kade.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red insists she can't hold her position and moves toward extraction point Delta, advising backup to watch for heat signatures in the alleys.",
+        "source": "Red insists she can't hold her position and moves toward extraction point Delta, advising backup to watch for heat signatures in the alleys.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "The drone's systems fail momentarily.",
+        "source": "The drone's systems fail momentarily.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red pries open a service grate to access an underground conduit.",
+        "source": "Water drips steadily from her jacket as she kneels, prying open a service grate to access an underground conduit.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf appears as a holographic avatar, intercepting Red's comm signals.",
+        "source": "Wolf, his avatar flickering in the air as a holographic wolf with chromed fur, materializes beside her, intercepting her comm signals with a burst of static.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red deploys a signal jammer to scramble Wolf’s control of the lights.",
+        "source": "Red yanks a signal jammer from her belt and slams it against the wall, scrambling Wolf’s hold on the lights.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red hides the satchel in the conduit and confronts Wolf's avatar.",
+        "source": "With her heart pounding, she shoves her satchel into the open conduit and slams the grate shut, then pivots to face Wolf’s avatar, demanding, 'What do you want from me?",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf reroutes a surveillance drone overhead; Red triggers a flash grenade, blinding the sensors, and sprints down the alley.",
+        "source": "' As Wolf reroutes a surveillance drone overhead, Red triggers a flash grenade, blinding the sensors, and sprints down the alley.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf begins hijacking city security feeds to track Red’s escape.",
+        "source": "Wolf, calculating, begins hijacking city security feeds to track her escape.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red intercepts an encrypted signal from her grandmother while hiding on a rooftop.",
+        "source": "Red crouches behind a battered air conditioning unit, her gloved fingers tapping rapidly on her wrist console to intercept the encrypted signal from her grandmother.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf scans the rooftop and sends a silent command to Drone Unit 17.",
+        "source": "Wolf, his sleek synthetic frame glimmering with moisture, scans the rooftop with glowing ocular sensors, recalibrating his targeting protocols and sending a silent command to Drone Unit 17.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red hacks a maintenance terminal to short-circuit the drone’s sensors, disrupting its control.",
+        "source": "Red hacks a maintenance terminal, rerouting power to trigger a short circuit in the drone’s sensors, causing it to spiral momentarily out of control.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf demands the package; Red uses a smoke pellet and escapes down a ladder.",
+        "source": "' Red launches a smoke pellet, dives across slick tiles, and scrambles down a utility ladder toward the fire escape, clutching the data chip tightly.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf transmits a location update to regime agents.",
+        "source": "Wolf transmits a location update to regime agents, relentless in pursuit.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red overrides the outer perimeter sensors while crouching behind a rusted delivery truck.",
+        "source": "Red crouches behind a rusted delivery truck, her gloved fingers tapping rapid commands into her wrist console, overriding the outer perimeter sensors.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red enters the lab's maintenance corridor by unscrewing the lock panel.",
+        "source": "Red tosses a hacked sensor decoy into a nearby dumpster, drawing the drone away long enough for her to unscrew the lock panel and slip inside the lab's maintenance corridor.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red runs beneath an overpass as Wolf appears via digital projection and demands the package.",
+        "source": "Red darts beneath the overpass, clutching a weatherproof satchel, her boots splashing through puddles as she scans the shadows for pursuit.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf hacks the drone’s targeting array, causing its lights to stutter and its sensors to glitch.",
+        "source": "' Wolf pivots, hacking the drone's targeting array with a gesture, causing its lights to stutter and its sensors to glitch.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red uses the distraction to vault over a low barrier, skidding across slick pavement.",
+        "source": "Red uses the distraction to vault over a low barrier, skidding across slick pavement, as Wolf sends a garbled command to the drone: 'Acquire the courier.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf sends a garbled command to the drone: 'Acquire the courier.'",
+        "source": "Override protocol.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red seeks out Dr. Lin Su to discuss urgent concerns about unusual symptoms she has noticed in patients on the third floor.",
+        "source": "Lin Su, to discuss her urgent concerns about unusual symptoms she has noticed in patients on the third floor.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf interrupts via hacked rooftop security, issuing a threatening ultimatum for the package.",
+        "source": "The two step aside to plan an immediate assessment, but their covert conversation is interrupted by Wolf, who hacks into the rooftop security systems and issues a threatening ultimatum over the speakers, demanding the secret package.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red urges Dr. Lin Su to trust her as they prepare to evade Wolf's search.",
+        "source": "Lin Su to trust her as they prepare to evade Wolf's search.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Alarms sound due to Wolf’s actions; Red and Dr. Lin Su improvise their escape.",
+        "source": "The tension escalates as they hear the alarms triggered by Wolf's actions, forcing them to improvise their escape.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Dr. Lin Su use an emergency zipline to escape from the rooftop.",
+        "source": "Lin Su to the emergency zipline, and together they launch themselves off the rooftop, narrowly escaping Wolf's grasp as the city lights blur below.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      }
+    ],
+    "Papalampidi_detailed_results": {
+      "turning_points": {
+        "TP1": "Mira hands Red a data-encoded vial and urges her to deliver it to Dr. Ilan.",
+        "TP2": "Wolf arrives, menacingly hinting at his intent to retrieve the package.",
+        "TP3": "Red pries open a service grate to access an underground conduit.",
+        "TP4": "Wolf begins hijacking city security feeds to track Red’s escape.",
+        "TP5": "Red and Dr. Lin Su use an emergency zipline to escape from the rooftop."
+      },
+      "stage_division": {
+        "Setup": [
+          "Red hides behind a ventilation shaft while a regime patrol drone passes overhead.",
+          "Mira hands Red a data-encoded vial and urges her to deliver it to Dr. Ilan.",
+          "Mira stresses secrecy and the mission's importance, and urges Red not to let anyone stop her."
+        ],
+        "New Situation": [
+          "Wolf arrives, menacingly hinting at his intent to retrieve the package.",
+          "Mira projects a holographic map of regime checkpoints and outlines a covert route.",
+          "Mira signals Red to move; Red vaults onto a fire escape as Mira wipes away the digital map and ducks into shadow."
+        ],
+        "Progress": [
+          "Red ducks behind a vending kiosk as Drone Unit 17 sweeps low, its sensors buzzing and red lights scanning for contraband.",
+          "Drone Unit 17 confirms, priming containment protocol alpha and tightening the perimeter.",
+          "Red hacks a street panel, creating a distraction, and communicates with Kade over comms.",
+          "Red insists she can't hold her position and moves toward extraction point Delta, advising backup to watch for heat signatures in the alleys.",
+          "The drone's systems fail momentarily.",
+          "Red pries open a service grate to access an underground conduit."
+        ],
+        "Complications": [
+          "Wolf appears as a holographic avatar, intercepting Red's comm signals.",
+          "Red deploys a signal jammer to scramble Wolf’s control of the lights.",
+          "Red hides the satchel in the conduit and confronts Wolf's avatar.",
+          "Wolf reroutes a surveillance drone overhead; Red triggers a flash grenade, blinding the sensors, and sprints down the alley.",
+          "Wolf begins hijacking city security feeds to track Red’s escape.",
+          "Red intercepts an encrypted signal from her grandmother while hiding on a rooftop.",
+          "Wolf scans the rooftop and sends a silent command to Drone Unit 17.",
+          "Red hacks a maintenance terminal to short-circuit the drone’s sensors, disrupting its control.",
+          "Wolf demands the package; Red uses a smoke pellet and escapes down a ladder.",
+          "Wolf transmits a location update to regime agents.",
+          "Red overrides the outer perimeter sensors while crouching behind a rusted delivery truck.",
+          "Red enters the lab's maintenance corridor by unscrewing the lock panel.",
+          "Red runs beneath an overpass as Wolf appears via digital projection and demands the package.",
+          "Wolf hacks the drone’s targeting array, causing its lights to stutter and its sensors to glitch.",
+          "Red uses the distraction to vault over a low barrier, skidding across slick pavement.",
+          "Wolf sends a garbled command to the drone: 'Acquire the courier.'",
+          "Red seeks out Dr. Lin Su to discuss urgent concerns about unusual symptoms she has noticed in patients on the third floor.",
+          "Wolf interrupts via hacked rooftop security, issuing a threatening ultimatum for the package.",
+          "Red urges Dr. Lin Su to trust her as they prepare to evade Wolf's search.",
+          "Alarms sound due to Wolf’s actions; Red and Dr. Lin Su improvise their escape."
+        ],
+        "Final Push": [
+          "Red and Dr. Lin Su use an emergency zipline to escape from the rooftop."
+        ],
+        "Aftermath": []
+      }
+    },
+    "Li_detailed_results": {
+      "Red hides behind a ventilation shaft while a regime patrol drone passes overhead.": "Orientation",
+      "Mira hands Red a data-encoded vial and urges her to deliver it to Dr. Ilan.": "Abstract",
+      "Mira stresses secrecy and the mission's importance, and urges Red not to let anyone stop her.": "Evaluation",
+      "Wolf arrives, menacingly hinting at his intent to retrieve the package.": "Complicating Action",
+      "Mira projects a holographic map of regime checkpoints and outlines a covert route.": "Orientation",
+      "Mira signals Red to move; Red vaults onto a fire escape as Mira wipes away the digital map and ducks into shadow.": "Complicating Action",
+      "Red ducks behind a vending kiosk as Drone Unit 17 sweeps low, its sensors buzzing and red lights scanning for contraband.": "Complicating Action",
+      "Drone Unit 17 confirms, priming containment protocol alpha and tightening the perimeter.": "Complicating Action",
+      "Red hacks a street panel, creating a distraction, and communicates with Kade over comms.": "Minor Resolution",
+      "Red insists she can't hold her position and moves toward extraction point Delta, advising backup to watch for heat signatures in the alleys.": "Complicating Action",
+      "The drone's systems fail momentarily.": "Minor Resolution",
+      "Red pries open a service grate to access an underground conduit.": "Complicating Action",
+      "Wolf appears as a holographic avatar, intercepting Red's comm signals.": "Return of MRE",
+      "Red deploys a signal jammer to scramble Wolf’s control of the lights.": "Minor Resolution",
+      "Red hides the satchel in the conduit and confronts Wolf's avatar.": "MRE",
+      "Wolf reroutes a surveillance drone overhead; Red triggers a flash grenade, blinding the sensors, and sprints down the alley.": "Complicating Action",
+      "Wolf begins hijacking city security feeds to track Red’s escape.": "Complicating Action",
+      "Red intercepts an encrypted signal from her grandmother while hiding on a rooftop.": "Minor Resolution",
+      "Wolf scans the rooftop and sends a silent command to Drone Unit 17.": "Complicating Action",
+      "Red hacks a maintenance terminal to short-circuit the drone’s sensors, disrupting its control.": "Minor Resolution",
+      "Wolf demands the package; Red uses a smoke pellet and escapes down a ladder.": "Complicating Action",
+      "Wolf transmits a location update to regime agents.": "Complicating Action",
+      "Red overrides the outer perimeter sensors while crouching behind a rusted delivery truck.": "Minor Resolution",
+      "Red enters the lab's maintenance corridor by unscrewing the lock panel.": "Complicating Action",
+      "Red runs beneath an overpass as Wolf appears via digital projection and demands the package.": "Return of MRE",
+      "Wolf hacks the drone’s targeting array, causing its lights to stutter and its sensors to glitch.": "Complicating Action",
+      "Red uses the distraction to vault over a low barrier, skidding across slick pavement.": "Minor Resolution",
+      "Wolf sends a garbled command to the drone: 'Acquire the courier.'": "Complicating Action",
+      "Red seeks out Dr. Lin Su to discuss urgent concerns about unusual symptoms she has noticed in patients on the third floor.": "Abstract",
+      "Wolf interrupts via hacked rooftop security, issuing a threatening ultimatum for the package.": "Return of MRE",
+      "Red urges Dr. Lin Su to trust her as they prepare to evade Wolf's search.": "Evaluation",
+      "Alarms sound due to Wolf’s actions; Red and Dr. Lin Su improvise their escape.": "Resolution",
+      "Red and Dr. Lin Su use an emergency zipline to escape from the rooftop.": "Aftermath"
+    },
+    "structure_analysis": {
+      "basic_info": {
+        "total_events": 33,
+        "analysis_mode": "default",
+        "analysis_time": null
+      },
+      "Papalampidi_structure_analysis": {
+        "turning_point_integrity": {
+          "identified_tps": [
+            "TP1",
+            "TP2",
+            "TP3",
+            "TP4",
+            "TP5"
+          ],
+          "missing_tps": [],
+          "TP_coverage": "5/5"
+        },
+        "stage_integrity": {
+          "identified_stages": [
+            "Setup",
+            "New Situation",
+            "Progress",
+            "Complications",
+            "Final Push"
+          ],
+          "missing_stages": [
+            "Aftermath"
+          ],
+          "stage_coverage": "5/6"
+        }
+      },
+      "Li_function_analysis": {
+        "core_function_check": {
+          "Orientation": "exists",
+          "Complicating Action": "exists",
+          "MRE": "exists",
+          "Resolution": "exists"
+        },
+        "function_distribution": {
+          "Orientation": 2,
+          "Abstract": 2,
+          "Evaluation": 2,
+          "Complicating Action": 14,
+          "Minor Resolution": 7,
+          "Return of MRE": 3,
+          "MRE": 1,
+          "Resolution": 1,
+          "Aftermath": 1
+        },
+        "function_diversity": 9
+      }
+    }
+  }
+}

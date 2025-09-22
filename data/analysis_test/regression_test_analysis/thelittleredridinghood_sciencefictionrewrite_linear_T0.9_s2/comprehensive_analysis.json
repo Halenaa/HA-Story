@@ -1,0 +1,1329 @@
+{
+  "folder_name": "thelittleredridinghood_sciencefictionrewrite_linear_T0.9_s2",
+  "file_path": "/Users/haha/Story/data/output/regression_test/thelittleredridinghood_sciencefictionrewrite_linear_T0.9_s2/enhanced_story_dialogue_updated.md",
+  "analysis_timestamp": null,
+  "emotional_arc_analysis": {
+    "metadata": {
+      "total_chapters": 8,
+      "primary_method": "RoBERTa",
+      "validation_method": "LabMT-en-v1",
+      "analysis_timestamp": "2025-09-09T20:25:57.449794"
+    },
+    "chapter_analysis": [
+      {
+        "chapter_num": 1,
+        "title": "Red Receives the Package",
+        "roberta_score": 0.3765,
+        "labmt_score": 0.2165,
+        "content_length": 5054
+      },
+      {
+        "chapter_num": 2,
+        "title": "Entering the Restricted Zone",
+        "roberta_score": -0.2149,
+        "labmt_score": 0.1997,
+        "content_length": 12086
+      },
+      {
+        "chapter_num": 3,
+        "title": "Wolfbot’s Interception",
+        "roberta_score": -0.1189,
+        "labmt_score": 0.1395,
+        "content_length": 5511
+      },
+      {
+        "chapter_num": 4,
+        "title": "Red’s Counterattack",
+        "roberta_score": -0.0699,
+        "labmt_score": 0.188,
+        "content_length": 1502
+      },
+      {
+        "chapter_num": 5,
+        "title": "Grandmother’s Disappearance",
+        "roberta_score": -0.4453,
+        "labmt_score": 0.1809,
+        "content_length": 1247
+      },
+      {
+        "chapter_num": 6,
+        "title": "Infiltrating Wolfbot’s Lair",
+        "roberta_score": -0.01,
+        "labmt_score": 0.2343,
+        "content_length": 944
+      },
+      {
+        "chapter_num": 7,
+        "title": "Showdown and Data Transfer",
+        "roberta_score": -0.6321,
+        "labmt_score": 0.1243,
+        "content_length": 1246
+      },
+      {
+        "chapter_num": 8,
+        "title": "Escape and Resolution",
+        "roberta_score": -0.4672,
+        "labmt_score": 0.1324,
+        "content_length": 17908
+      }
+    ],
+    "primary_analysis": {
+      "method": "RoBERTa",
+      "scores": [
+        0.3764891783396403,
+        -0.21492236455281574,
+        -0.11891499757766724,
+        -0.06988001786745511,
+        -0.445286044052669,
+        -0.010009666283925375,
+        -0.6320866021243009,
+        -0.46721156040827433
+      ],
+      "reagan_classification": {
+        "method": "RoBERTa",
+        "best_match": "Icarus",
+        "confidence": 0.5756,
+        "all_similarities": {
+          "Rags to riches": 0,
+          "Tragedy": 0.0785,
+          "Man in a hole": 0,
+          "Icarus": 0.5756,
+          "Cinderella": 0.0587,
+          "Oedipus": 0
+        },
+        "reagan_category": "IC"
+      }
+    },
+    "validation_analysis": {
+      "method": "LabMT",
+      "scores": [
+        0.21645833333333275,
+        0.19972293814432884,
+        0.13954741379310365,
+        0.18798387096774216,
+        0.18093749999999997,
+        0.23427083333333343,
+        0.12428571428571478,
+        0.13243838028168775
+      ],
+      "reagan_classification": {
+        "method": "LabMT",
+        "best_match": "Tragedy",
+        "confidence": 0.7369,
+        "all_similarities": {
+          "Rags to riches": 0.584,
+          "Tragedy": 0.7369,
+          "Man in a hole": 0,
+          "Icarus": 0.087,
+          "Cinderella": 0,
+          "Oedipus": 0.1246
+        },
+        "reagan_category": "TR"
+      }
+    },
+    "correlation_analysis": {
+      "pearson_correlation": {
+        "r": 0.7187,
+        "p_value": 0.0446,
+        "significance": "Significant"
+      },
+      "spearman_correlation": {
+        "r": 0.8571,
+        "p_value": 0.0065
+      },
+      "direction_consistency": 0.8571,
+      "consistency_level": "High",
+      "interpretation": "RoBERTa and LabMT correlation coefficient is 0.719, belongs to strong correlation"
+    },
+    "comparison_analysis": {
+      "disagreement_points": [
+        {
+          "chapter": 2,
+          "roberta_score": -0.21492236455281574,
+          "labmt_score": 0.19972293814432884,
+          "difference": 0.4146
+        },
+        {
+          "chapter": 5,
+          "roberta_score": -0.445286044052669,
+          "labmt_score": 0.18093749999999997,
+          "difference": 0.6262
+        },
+        {
+          "chapter": 7,
+          "roberta_score": -0.6320866021243009,
+          "labmt_score": 0.12428571428571478,
+          "difference": 0.7564
+        },
+        {
+          "chapter": 8,
+          "roberta_score": -0.46721156040827433,
+          "labmt_score": 0.13243838028168775,
+          "difference": 0.5996
+        }
+      ],
+      "method_advantages": {
+        "RoBERTa": {
+          "strengths": [
+            "Deep learning model with better contextual understanding",
+            "Suitable for modern text and dialogue",
+            "High sensitivity to sci-fi and technical texts"
+          ],
+          "classification": "Icarus",
+          "confidence": 0.5756
+        },
+        "LabMT": {
+          "strengths": [
+            "Fully consistent with Reagan's original method",
+            "Based on large-scale human annotation",
+            "Suitable for traditional literary analysis"
+          ],
+          "classification": "Tragedy",
+          "confidence": 0.7369
+        }
+      },
+      "consistency_assessment": {
+        "classification_agreement": false,
+        "major_disagreements": 4,
+        "recommendation": "Two methods differ significantly, recommend detailed analysis of difference causes, may need more in-depth text feature analysis"
+      }
+    },
+    "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.719 (High)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.719, belongs to strong correlation\n\nClassification Results:\n- RoBERTa (primary): Icarus\n- LabMT (validation): Tragedy\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.719, showing high consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation.",
+    "output_files": {
+      "analysis_json": "/Users/haha/Story/data/regression_test_analysis/thelittleredridinghood_sciencefictionrewrite_linear_T0.9_s2/roberta_labmt_analysis_20250909_202557.json"
+    }
+  },
+  "hred_coherence_analysis": {
+    "HRED_coherence_evaluation": {
+      "model_name": "all-mpnet-base-v2",
+      "analysis_method": "Original sentence coherence",
+      "total_sentences": 458,
+      "adjacent_pairs": 457,
+      "average_coherence": 0.3359,
+      "objective_description": {
+        "score": 0.3359,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "detailed_analysis": {
+      "basic_statistics": {
+        "average_coherence": 0.33589553596407046,
+        "coherence_std": 0.1698858552947246,
+        "max_coherence": 0.863666296005249,
+        "min_coherence": -0.03797384351491928,
+        "coherence_median": 0.32769671082496643
+      },
+      "coherence_breakpoints": [
+        {
+          "position": 10,
+          "sentence_pair": "For a moment, the drone linger... → “Safety is my specialty!...",
+          "similarity": 0.105
+        },
+        {
+          "position": 11,
+          "sentence_pair": "“Safety is my specialty!... → ” it assured, the phrase punct...",
+          "similarity": 0.157
+        },
+        {
+          "position": 52,
+          "sentence_pair": "Just need this damn scanner to... → Every second counted;...",
+          "similarity": 0.089
+        },
+        {
+          "position": 64,
+          "sentence_pair": "Dr.... → Ada leaned closer to the shimm...",
+          "similarity": 0.07
+        },
+        {
+          "position": 71,
+          "sentence_pair": "Red confesses that the data pa... → Dr....",
+          "similarity": 0.02
+        },
+        {
+          "position": 76,
+          "sentence_pair": "Her cybernetic fingers tremble... → Ada....",
+          "similarity": 0.075
+        },
+        {
+          "position": 77,
+          "sentence_pair": "Ada.... → “Before you take this,” she sa...",
+          "similarity": 0.012
+        },
+        {
+          "position": 82,
+          "sentence_pair": "Tampered with, maybe.... → ” Still, Red straightened her ...",
+          "similarity": 0.062
+        },
+        {
+          "position": 86,
+          "sentence_pair": "“I wish I could be sure it’s s... → Grandmother (Dr....",
+          "similarity": 0.111
+        },
+        {
+          "position": 89,
+          "sentence_pair": "Ada gently closes her hand ove... → Dr....",
+          "similarity": 0.083
+        },
+        {
+          "position": 90,
+          "sentence_pair": "Dr.... → Ada’s fingers curled gently ar...",
+          "similarity": 0.1
+        },
+        {
+          "position": 95,
+          "sentence_pair": "“Whatever we find inside, we f... → Grandmother (Dr....",
+          "similarity": 0.111
+        },
+        {
+          "position": 98,
+          "sentence_pair": "Ada gently places a reassuring... → Dr....",
+          "similarity": 0.072
+        },
+        {
+          "position": 107,
+          "sentence_pair": "Ada reassures her, emphasizing... → As they prepare to analyze the...",
+          "similarity": 0.136
+        },
+        {
+          "position": 120,
+          "sentence_pair": "” The mainframe was their last... → Grandmother (Dr....",
+          "similarity": -0.038
+        },
+        {
+          "position": 126,
+          "sentence_pair": "External ports—disabled.... → The AI core—sealed tight behin...",
+          "similarity": 0.064
+        },
+        {
+          "position": 131,
+          "sentence_pair": "Any changes in its protocols o... → Red rushes to manually seal th...",
+          "similarity": 0.073
+        },
+        {
+          "position": 139,
+          "sentence_pair": "Only her sharpened instincts a... → Grandmother (Dr....",
+          "similarity": 0.033
+        },
+        {
+          "position": 141,
+          "sentence_pair": "Ada)Grandmother rapidly inputs... → Dr....",
+          "similarity": 0.122
+        },
+        {
+          "position": 142,
+          "sentence_pair": "Dr.... → Ada’s hands moved with practic...",
+          "similarity": 0.084
+        },
+        {
+          "position": 155,
+          "sentence_pair": "Red’s jaw tightened as she ini... → Grandmother (Dr....",
+          "similarity": 0.02
+        },
+        {
+          "position": 162,
+          "sentence_pair": "Red’s quick thinking, she real... → Dr....",
+          "similarity": 0.03
+        },
+        {
+          "position": 163,
+          "sentence_pair": "Dr.... → Ada immediately implements adv...",
+          "similarity": 0.037
+        },
+        {
+          "position": 166,
+          "sentence_pair": "As Red and Dr.... → Ada secure their foothold with...",
+          "similarity": 0.074
+        },
+        {
+          "position": 194,
+          "sentence_pair": "She glanced up, jaw tight, as ... → “Please present authorized cre...",
+          "similarity": 0.087
+        },
+        {
+          "position": 195,
+          "sentence_pair": "“Please present authorized cre... → Red’s fingers tightened on the...",
+          "similarity": 0.145
+        },
+        {
+          "position": 211,
+          "sentence_pair": "“Warning: security lockdown im... → ” The drone hovered closer, cl...",
+          "similarity": 0.127
+        },
+        {
+          "position": 218,
+          "sentence_pair": "The moment has come to turn th... → Red crouches behind a slick, m...",
+          "similarity": 0.06
+        },
+        {
+          "position": 223,
+          "sentence_pair": "Red tightens the strap on her ... → I need a distraction....",
+          "similarity": 0.016
+        },
+        {
+          "position": 224,
+          "sentence_pair": "I need a distraction.... → ' The drone dips lower, releas...",
+          "similarity": 0.067
+        },
+        {
+          "position": 267,
+          "sentence_pair": "Together, they run emergency d... → Grandmother (Dr....",
+          "similarity": 0.024
+        },
+        {
+          "position": 275,
+          "sentence_pair": "Still, I can't help but worry:... → \" ——Grandmother (Dr....",
+          "similarity": 0.068
+        },
+        {
+          "position": 278,
+          "sentence_pair": "Ada to authorize a preliminary... → Red stumbles into the dimly li...",
+          "similarity": 0.137
+        },
+        {
+          "position": 287,
+          "sentence_pair": "“Grandmother—Ada,” she blurted... → Something’s wrong with the rea...",
+          "similarity": 0.052
+        },
+        {
+          "position": 288,
+          "sentence_pair": "Something’s wrong with the rea... → I couldn’t wait outside....",
+          "similarity": 0.057
+        },
+        {
+          "position": 289,
+          "sentence_pair": "I couldn’t wait outside.... → Grandmother (Dr....",
+          "similarity": 0.011
+        },
+        {
+          "position": 290,
+          "sentence_pair": "Grandmother (Dr.... → Ada)Ada gently reaches for Red...",
+          "similarity": 0.143
+        },
+        {
+          "position": 291,
+          "sentence_pair": "Ada)Ada gently reaches for Red... → Dr....",
+          "similarity": 0.073
+        },
+        {
+          "position": 292,
+          "sentence_pair": "Dr.... → Ada reached out, her touch fir...",
+          "similarity": 0.095
+        },
+        {
+          "position": 301,
+          "sentence_pair": "Boot soles still damp from the... → The decay spikes were off the ...",
+          "similarity": 0.162
+        },
+        {
+          "position": 303,
+          "sentence_pair": "Red’s words tumbled out, tight... → Grandmother (Dr....",
+          "similarity": 0.047
+        },
+        {
+          "position": 306,
+          "sentence_pair": "Ada gently takes the tablet fr... → Dr....",
+          "similarity": 0.156
+        },
+        {
+          "position": 307,
+          "sentence_pair": "Dr.... → Ada reached out with steady ha...",
+          "similarity": 0.134
+        },
+        {
+          "position": 314,
+          "sentence_pair": "Ada’s face.... → Red slipped inside, her boot s...",
+          "similarity": 0.071
+        },
+        {
+          "position": 320,
+          "sentence_pair": "Ada’s expression.... → “But the anomaly kept growing,...",
+          "similarity": 0.15
+        },
+        {
+          "position": 322,
+          "sentence_pair": "” The words hung in the air, h... → Grandmother (Dr....",
+          "similarity": 0.105
+        },
+        {
+          "position": 325,
+          "sentence_pair": "Ada reaches out gently, her ey... → Dr....",
+          "similarity": 0.087
+        },
+        {
+          "position": 326,
+          "sentence_pair": "Dr.... → Ada reached out gently, her we...",
+          "similarity": 0.061
+        },
+        {
+          "position": 334,
+          "sentence_pair": "” There was a quiet authority ... → RedDr....",
+          "similarity": 0.058
+        },
+        {
+          "position": 337,
+          "sentence_pair": "Red slipped inside, boots sque... → Dr....",
+          "similarity": 0.074
+        },
+        {
+          "position": 338,
+          "sentence_pair": "Dr.... → Ada offered a gentle touch, he...",
+          "similarity": 0.107
+        },
+        {
+          "position": 349,
+          "sentence_pair": "\" The datapad buzzed faintly i... → Grandmother (Dr....",
+          "similarity": 0.078
+        },
+        {
+          "position": 350,
+          "sentence_pair": "Grandmother (Dr.... → Ada) adjusts her glasses, lean...",
+          "similarity": 0.161
+        },
+        {
+          "position": 351,
+          "sentence_pair": "Ada) adjusts her glasses, lean... → Dr....",
+          "similarity": 0.137
+        },
+        {
+          "position": 352,
+          "sentence_pair": "Dr.... → Ada adjusted her glasses, the ...",
+          "similarity": 0.126
+        },
+        {
+          "position": 360,
+          "sentence_pair": "Red’s voice trembled with urge... → They’d already combed through ...",
+          "similarity": 0.141
+        },
+        {
+          "position": 361,
+          "sentence_pair": "They’d already combed through ... → Yet the anomaly signature refu...",
+          "similarity": 0.074
+        },
+        {
+          "position": 363,
+          "sentence_pair": "Desperation edged their tone, ... → Grandmother (Dr....",
+          "similarity": 0.003
+        },
+        {
+          "position": 366,
+          "sentence_pair": "Ada’s brows knit in concern as... → Dr....",
+          "similarity": 0.101
+        },
+        {
+          "position": 367,
+          "sentence_pair": "Dr.... → Ada’s brows knit in concern as...",
+          "similarity": 0.11
+        },
+        {
+          "position": 374,
+          "sentence_pair": "Ada’s steady hands.... → Red slipped inside, her boot s...",
+          "similarity": 0.122
+        },
+        {
+          "position": 380,
+          "sentence_pair": "“Should we initiate lockdown, ... → Grandmother (Dr....",
+          "similarity": 0.047
+        },
+        {
+          "position": 383,
+          "sentence_pair": "Ada pulls up the secure archiv... → Dr....",
+          "similarity": 0.114
+        },
+        {
+          "position": 384,
+          "sentence_pair": "Dr.... → Ada’s fingers danced across th...",
+          "similarity": 0.079
+        },
+        {
+          "position": 399,
+          "sentence_pair": "Ada’s hands fly over her conso... → Dr....",
+          "similarity": 0.074
+        },
+        {
+          "position": 400,
+          "sentence_pair": "Dr.... → Ada’s hands flew over the cons...",
+          "similarity": 0.106
+        },
+        {
+          "position": 413,
+          "sentence_pair": "” Even as his heart hammered, ... → Grandmother (Dr....",
+          "similarity": 0.091
+        },
+        {
+          "position": 416,
+          "sentence_pair": "Ada hunches over the terminal,... → Dr....",
+          "similarity": 0.1
+        },
+        {
+          "position": 417,
+          "sentence_pair": "Dr.... → Ada didn’t look up as Red slip...",
+          "similarity": -0.02
+        },
+        {
+          "position": 434,
+          "sentence_pair": "\"We don’t have time to questio... → \" Already, Ada’s deft fingers ...",
+          "similarity": 0.138
+        },
+        {
+          "position": 435,
+          "sentence_pair": "\" Already, Ada’s deft fingers ... → Grandmother (Dr....",
+          "similarity": 0.137
+        },
+        {
+          "position": 450,
+          "sentence_pair": "Red’s voice was low, edged wit... → Grandmother (Dr....",
+          "similarity": 0.137
+        }
+      ],
+      "high_coherence_segments": [
+        {
+          "start_sentence": 15,
+          "end_sentence": 17,
+          "length": 3,
+          "average_similarity": 0.467
+        },
+        {
+          "start_sentence": 18,
+          "end_sentence": 22,
+          "length": 5,
+          "average_similarity": 0.62
+        },
+        {
+          "start_sentence": 24,
+          "end_sentence": 26,
+          "length": 3,
+          "average_similarity": 0.472
+        },
+        {
+          "start_sentence": 38,
+          "end_sentence": 42,
+          "length": 5,
+          "average_similarity": 0.572
+        },
+        {
+          "start_sentence": 50,
+          "end_sentence": 52,
+          "length": 3,
+          "average_similarity": 0.47
+        },
+        {
+          "start_sentence": 55,
+          "end_sentence": 57,
+          "length": 3,
+          "average_similarity": 0.624
+        },
+        {
+          "start_sentence": 92,
+          "end_sentence": 94,
+          "length": 3,
+          "average_similarity": 0.55
+        },
+        {
+          "start_sentence": 111,
+          "end_sentence": 113,
+          "length": 3,
+          "average_similarity": 0.5
+        },
+        {
+          "start_sentence": 122,
+          "end_sentence": 124,
+          "length": 3,
+          "average_similarity": 0.66
+        },
+        {
+          "start_sentence": 157,
+          "end_sentence": 160,
+          "length": 4,
+          "average_similarity": 0.546
+        },
+        {
+          "start_sentence": 172,
+          "end_sentence": 174,
+          "length": 3,
+          "average_similarity": 0.701
+        },
+        {
+          "start_sentence": 186,
+          "end_sentence": 188,
+          "length": 3,
+          "average_similarity": 0.618
+        },
+        {
+          "start_sentence": 202,
+          "end_sentence": 204,
+          "length": 3,
+          "average_similarity": 0.48
+        },
+        {
+          "start_sentence": 212,
+          "end_sentence": 217,
+          "length": 6,
+          "average_similarity": 0.523
+        },
+        {
+          "start_sentence": 229,
+          "end_sentence": 234,
+          "length": 6,
+          "average_similarity": 0.499
+        },
+        {
+          "start_sentence": 245,
+          "end_sentence": 254,
+          "length": 10,
+          "average_similarity": 0.508
+        },
+        {
+          "start_sentence": 255,
+          "end_sentence": 260,
+          "length": 6,
+          "average_similarity": 0.56
+        },
+        {
+          "start_sentence": 265,
+          "end_sentence": 267,
+          "length": 3,
+          "average_similarity": 0.454
+        },
+        {
+          "start_sentence": 309,
+          "end_sentence": 313,
+          "length": 5,
+          "average_similarity": 0.479
+        },
+        {
+          "start_sentence": 339,
+          "end_sentence": 342,
+          "length": 4,
+          "average_similarity": 0.511
+        },
+        {
+          "start_sentence": 353,
+          "end_sentence": 355,
+          "length": 3,
+          "average_similarity": 0.475
+        },
+        {
+          "start_sentence": 368,
+          "end_sentence": 370,
+          "length": 3,
+          "average_similarity": 0.511
+        },
+        {
+          "start_sentence": 391,
+          "end_sentence": 393,
+          "length": 3,
+          "average_similarity": 0.429
+        },
+        {
+          "start_sentence": 404,
+          "end_sentence": 406,
+          "length": 3,
+          "average_similarity": 0.484
+        },
+        {
+          "start_sentence": 423,
+          "end_sentence": 425,
+          "length": 3,
+          "average_similarity": 0.473
+        },
+        {
+          "start_sentence": 445,
+          "end_sentence": 447,
+          "length": 3,
+          "average_similarity": 0.632
+        }
+      ],
+      "objective_description": {
+        "score": 0.3359,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "pairwise_similarity_examples": [
+      {
+        "sentence_pair": "Sentence 1 → Sentence 2",
+        "sentence_1": "Red approaches the delivery bay and is met by Deli...",
+        "sentence_2": "As Red receives the cold, data-sealed package, ano...",
+        "similarity": 0.6745
+      },
+      {
+        "sentence_pair": "Sentence 2 → Sentence 3",
+        "sentence_1": "As Red receives the cold, data-sealed package, ano...",
+        "sentence_2": "Delivery DroneThe drone hovers closer, its lens fo...",
+        "similarity": 0.3843
+      },
+      {
+        "sentence_pair": "Sentence 3 → Sentence 4",
+        "sentence_1": "Delivery DroneThe drone hovers closer, its lens fo...",
+        "sentence_2": "The Delivery Drone drifted closer, its rotors humm...",
+        "similarity": 0.7471
+      },
+      {
+        "sentence_pair": "Sentence 4 → Sentence 5",
+        "sentence_1": "The Delivery Drone drifted closer, its rotors humm...",
+        "sentence_2": "A steady blue beam swept the immediate vicinity, f...",
+        "similarity": 0.4098
+      },
+      {
+        "sentence_pair": "Sentence 5 → Sentence 6",
+        "sentence_1": "A steady blue beam swept the immediate vicinity, f...",
+        "sentence_2": "With a mechanical calmness, the drone's synthesize...",
+        "similarity": 0.2774
+      },
+      {
+        "sentence_pair": "Sentence 6 → Sentence 7",
+        "sentence_1": "With a mechanical calmness, the drone's synthesize...",
+        "sentence_2": "Hovering at eye level, the drone maintained its ca...",
+        "similarity": 0.4869
+      },
+      {
+        "sentence_pair": "Sentence 7 → Sentence 8",
+        "sentence_1": "Hovering at eye level, the drone maintained its ca...",
+        "sentence_2": "“I am here to deliver your scheduled security upda...",
+        "similarity": 0.3152
+      },
+      {
+        "sentence_pair": "Sentence 8 → Sentence 9",
+        "sentence_1": "“I am here to deliver your scheduled security upda...",
+        "sentence_2": "The blue light intensified as encrypted data packe...",
+        "similarity": 0.4017
+      },
+      {
+        "sentence_pair": "Sentence 9 → Sentence 10",
+        "sentence_1": "The blue light intensified as encrypted data packe...",
+        "sentence_2": "For a moment, the drone lingered, its lens glintin...",
+        "similarity": 0.4583
+      },
+      {
+        "sentence_pair": "Sentence 10 → Sentence 11",
+        "sentence_1": "For a moment, the drone lingered, its lens glintin...",
+        "sentence_2": "“Safety is my specialty!",
+        "similarity": 0.1054
+      },
+      {
+        "sentence_pair": "Sentence 11 → Sentence 12",
+        "sentence_1": "“Safety is my specialty!",
+        "sentence_2": "” it assured, the phrase punctuating the hum of in...",
+        "similarity": 0.1567
+      },
+      {
+        "sentence_pair": "Sentence 12 → Sentence 13",
+        "sentence_1": "” it assured, the phrase punctuating the hum of in...",
+        "sentence_2": "Delivery DroneThe drone emits a soft chime as its ...",
+        "similarity": 0.2892
+      },
+      {
+        "sentence_pair": "Sentence 13 → Sentence 14",
+        "sentence_1": "Delivery DroneThe drone emits a soft chime as its ...",
+        "sentence_2": "The Delivery Drone hovered at shoulder height, its...",
+        "similarity": 0.5825
+      },
+      {
+        "sentence_pair": "Sentence 14 → Sentence 15",
+        "sentence_1": "The Delivery Drone hovered at shoulder height, its...",
+        "sentence_2": "A soft chime signaled the start of its briefing, a...",
+        "similarity": 0.3969
+      },
+      {
+        "sentence_pair": "Sentence 15 → Sentence 16",
+        "sentence_1": "A soft chime signaled the start of its briefing, a...",
+        "sentence_2": "As the courier glanced up, the drone's synthesized...",
+        "similarity": 0.4425
+      },
+      {
+        "sentence_pair": "Sentence 16 → Sentence 17",
+        "sentence_1": "As the courier glanced up, the drone's synthesized...",
+        "sentence_2": "The update, it explained, would install advanced f...",
+        "similarity": 0.4911
+      },
+      {
+        "sentence_pair": "Sentence 17 → Sentence 18",
+        "sentence_1": "The update, it explained, would install advanced f...",
+        "sentence_2": "Despite the drone's procedural insistence on follo...",
+        "similarity": 0.365
+      },
+      {
+        "sentence_pair": "Sentence 18 → Sentence 19",
+        "sentence_1": "Despite the drone's procedural insistence on follo...",
+        "sentence_2": "Red decides to take a riskier, unauthorized shortc...",
+        "similarity": 0.6978
+      },
+      {
+        "sentence_pair": "Sentence 19 → Sentence 20",
+        "sentence_1": "Red decides to take a riskier, unauthorized shortc...",
+        "sentence_2": "The Delivery Drone objects, warning that deviation...",
+        "similarity": 0.5201
+      },
+      {
+        "sentence_pair": "Sentence 20 → Sentence 21",
+        "sentence_1": "The Delivery Drone objects, warning that deviation...",
+        "sentence_2": "Delivery DroneThe drone hovers in place, its light...",
+        "similarity": 0.6404
+      },
+      {
+        "note": "Only showing first 20 pairs, total of 457 adjacent sentence pairs"
+      }
+    ]
+  },
+  "story_structure_analysis": {
+    "evaluation_mode": "default mode",
+    "event_list": [
+      {
+        "event": "Red is met by Delivery Drone Delta-7, which transmits a priority security update with advanced protocols.",
+        "source": "Red approaches the delivery bay and is met by Delivery Drone Delta-7, which transmits a priority security update, including advanced firewall protocols and threat countermeasures.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red receives a data-sealed package and Unit 5 warns her about increased rogue unit activity near the restricted zone.",
+        "source": "As Red receives the cold, data-sealed package, another drone (Unit 5) warns her of increased rogue unit activity near the restricted zone and strongly advises her to avoid Sector 7.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "The Delivery Drone scans the area with a blue light and initiates a secure data transfer to Red.",
+        "source": "Delivery DroneThe drone hovers closer, its lens focusing sharply, as a beam of blue light scans the area before initiating the data transfer.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "The Delivery Drone projects a holographic progress bar.",
+        "source": "Delivery DroneThe drone emits a soft chime as its lens pulses, projecting a holographic progress bar into the air.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red decides to take an unauthorized shortcut through an alley, against the drone's warnings.",
+        "source": "Red decides to take a riskier, unauthorized shortcut through an alley to bypass a surveillance checkpoint and reach her destination faster, arguing that protocol can’t account for real-life needs.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "The Delivery Drone warns Red that deviation will trigger incident reports and affect her eligibility, but Red persists.",
+        "source": "The Delivery Drone objects, warning that deviation will trigger incident reports and could suspend upgrade eligibility, but Red stands firm in her decision, motivated by her desire to protect her grandmother.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Unit 5 warns Red to avoid Sector 7 due to rogue unit activity.",
+        "source": "\"Red,\" it intoned, voice clipped and precise, \"my sensors have detected increased rogue unit activity near the restricted zone perimeter.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red prepares herself, secures the package, and heads toward the exit, determined to follow her own judgment.",
+        "source": "Red secures the package and heads toward the exit, determined to follow her own judgment rather than strict orders.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red leaves the delivery bay and enters the restricted zone.",
+        "source": "As the perimeter gates loomed ahead, Red steeled herself, crossing the invisible threshold into the restricted zone where her skills—and her resolve—would be put to the ultimate test.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red approaches an armored hatch, anxiously enters the coded sequence, and hopes the retinal scanner will recognize her.",
+        "source": "Red nervously approaches the armored hatch, tapping out the coded entry sequence and anxiously hoping the retinal scanner will recognize her.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Ada greets Red, expressing concern about strange diagnostic readings.",
+        "source": "Ada greets her with concern, noting strange diagnostic readings reminiscent of past anomalies.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red hesitantly extends the encrypted data package to Dr. Ada.",
+        "source": "Red hesitantly extends the encrypted data package, his hand trembling slightly as he looks into Dr.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Ada accepts the data package and reassures Red, emphasizing their bond and determination.",
+        "source": "Ada gently closes her hand over the data package, her eyes meeting Red's with a mix of reassurance and solemn determination.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Ada locks the door, dims the lights, and prepares to analyze the files with Red.",
+        "source": "Ada gently places a reassuring hand on Red's shoulder, then moves to lock the door and dim the lights, signaling the start of their clandestine analysis.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red urgently reports that Wolfbot has breached the perimeter, now using voice mimicry and improved stealth.",
+        "source": "As they prepare to analyze the files, Red urgently reports that Wolfbot has breached the perimeter, utilizing new voice mimicry tactics and improved stealth.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Ada initiates facility lockdown, sealing blast doors and engaging security protocols.",
+        "source": "Ada)Grandmother's fingers fly across the console, her eyes scanning code as red emergency lights flicker to life and heavy blast doors whir shut throughout the facility.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red rushes to manually seal bulkhead doors.",
+        "source": "Red’s hands trembled as she keyed the override code into the battered console, fighting to manually seal the bulkhead doors before the system lockdown completed.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Ada inputs new security parameters.",
+        "source": "Ada)Grandmother rapidly inputs new security parameters, her hands steady as she monitors system logs for unauthorized access attempts, her face a mask of focused concern.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red scans her wrist monitor for security breaches and relays data to Dr. Ada.",
+        "source": "Red quickly scans her wrist monitor for remaining security breaches, her breath shallow as she relays data to Grandmother.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Ada overrides sensor thresholds and dispatches drones toward the west corridor.",
+        "source": "Ada)Grandmother taps rapidly at her console, eyes scanning for any breach attempts, while she overrides sensor thresholds and dispatches drones toward the west corridor.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Dr. Ada brace for escalating threat as Wolfbot moves closer.",
+        "source": "The duo realizes that their adversary is closer than ever, forcing them to confront the imminent threat head-on as Wolfbot initiates its interception.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red sprints down a rain-slick path, checking the encrypted package strapped to her hip.",
+        "source": "Red sprints down the rain-slick path, her metal boots splashing through shallow puddles as she checks the encrypted package strapped to her hip.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "The Delivery Drone projects a map, warns of increased rogue AI activity, and advises Red to reroute.",
+        "source": "The Delivery Drone hovers at shoulder height, projecting a map and issuing urgent warnings about increased rogue AI activity, advising Red to reroute and follow safe transit protocols.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "At the Malfunctioning Security Gate, the drone requests credentials and threatens lockdown if Red tampers without authentication.",
+        "source": "As they reach the Malfunctioning Security Gate, the drone strictly enforces security measures, repeatedly requesting authorized credentials and threatening a lockdown if Red tampers with the maintenance hatch without proper authentication.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red attempts to input the override code as the drone starts a security countdown.",
+        "source": "Red, pressed for time, attempts to input the override code but struggles as the drone initiates a security countdown.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red manages to bypass the drone's protocols and overrides the gate’s circuitry, slipping through before lockdown.",
+        "source": "With seconds to spare, Red manages to bypass the drone's protocols and overrides the gate’s circuitry, causing it to stutter open with a grinding shriek.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "The drone follows Red, increasing alertness due to her borderline unauthorized methods.",
+        "source": "She slips through, the drone darting after her—objective met: bypass the faulty gate before patrol bots arrive, but with heightened alertness from the drone due to Red's borderline unauthorized methods.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red crouches, scans the perimeter.",
+        "source": "Red crouches behind a slick, moss-covered log, her synthetic eye flickering as she scans the perimeter.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "The Delivery Drone warns of a restricted zone and projects a crimson map overlay.",
+        "source": "'Restricted zone ahead,' it intones, projecting a crimson map overlay.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red signals the drone to deploy a decoy beacon, drawing off two approaching Patrol Bots.",
+        "source": "' Red nods, jaw set, and signals the drone to deploy a decoy beacon deeper into the mist, drawing off two approaching Patrol Bots.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red breaches the perimeter undetected as the Patrol Bots follow the decoy beacon.",
+        "source": "as she disappears into the underbrush, the drone's warning echoes behind her, but the Patrol Bots turn toward the decoy, clearing her path for now.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red discovers that Grandmother’s signal has vanished from the network.",
+        "source": "As the mist thickens around her, a sudden realization pulses through her comm-link: Grandmother’s signal has vanished from the network, leaving Red with a new, urgent mystery and an even more uncertain path ahead.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red hacks a corroded access panel on the security gate.",
+        "source": "Red kneels beside the security gate, fingers probing the corroded access panel as she hacks through the glitching interface.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "The Delivery Drone projects a warning of unauthorized entry and patrol bots en route.",
+        "source": "Delivery Drone hovers above, projecting a warning hologram: 'Unauthorized entry detected.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red uses an override code to delay the patrol bots' scan cycle and slips through the gate.",
+        "source": "' Red mutters, 'Override code, Gamma-3.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red approaches her grandmother's cabin as the drone records her progress.",
+        "source": "The drone pulls back, surveillance optics recording her progress for mission logs.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red pries open a service hatch and uses a dataspike to send a Patrol Bot away with a false alarm.",
+        "source": "Red pries open a service hatch and slides an encrypted dataspike into the control bus, rerouting the Patrol Bot’s attention to a false alarm outside the lair.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red advances toward Wolfbot’s command node to upload the defensive payload from her package.",
+        "source": "Red darts past, boots splashing through puddles, and pulls the dataspike free, her eyes flicking to the next objective—locate Wolfbot’s command node and upload the defensive payload from her package.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red approaches a glitching security gate.",
+        "source": "Red sprints along the rain-slicked path, her cybernetic boots splashing through shallow puddles as she approaches the glitching security gate.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfbot, disguised as a maintenance drone, blocks Red and transmits a jamming signal.",
+        "source": "Wolfbot, disguised as a maintenance drone, emerges from a patch of overgrown ferns, metal limbs clicking and sensors whirring as it blocks Red's route.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red reroutes her neural uplink to override the gate’s control panel.",
+        "source": "Red crouches, quickly rerouting her neural uplink to override the gate’s control panel.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red bursts into Dr. Ada’s lab, urgently reporting containment anomalies and escalating decay readings.",
+        "source": "Ada’s lab ahead of schedule, driven by a sudden spike in containment anomalies and escalating decay readings.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Dr. Ada run emergency diagnostics, confirming the anomaly is learning and adapting to countermeasures.",
+        "source": "Together, they run emergency diagnostics and manually check system logs, confirming the anomaly is learning and morphing in response to their countermeasures.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "Red insists on immediate action, prompting Dr. Ada to authorize a preliminary lockdown and cross-reference anomaly signatures.",
+        "source": "Ada to authorize a preliminary lockdown while she cross-references anomaly signatures against archived failures.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "Ada warns that decrypting the data drive will draw enemy attention.",
+        "source": "The data drive’s decryption becomes a last resort, with Ada warning Red that exposing its contents will draw enemy attention.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfbot’s patrol bots approach, forcing Red and Ada to retreat deeper into the lab’s secure sublevels to prevent a breach.",
+        "source": "Wolfbot’s patrol bots approach, but now Red and Ada’s objective shifts: not just to shield the data, but to prevent a catastrophic breach from the anomaly within, forcing them to retreat deeper into the lab’s secure sublevels as enemies close in.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "Ada initiates the decryption sequence on the drive as Red stands guard, preparing for enemy attention.",
+        "source": "Ada)Ada initiates the decryption sequence, her eyes never leaving Red as the interface glows with warning sigils.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      }
+    ],
+    "Papalampidi_detailed_results": {
+      "turning_points": {
+        "TP1": "Red is met by Delivery Drone Delta-7, which transmits a priority security update with advanced protocols.",
+        "TP2": "Red decides to take an unauthorized shortcut through an alley, against the drone's warnings.",
+        "TP3": "Red breaches the perimeter undetected as the Patrol Bots follow the decoy beacon.",
+        "TP4": "Wolfbot, disguised as a maintenance drone, blocks Red and transmits a jamming signal.",
+        "TP5": "Ada initiates the decryption sequence on the drive as Red stands guard, preparing for enemy attention."
+      },
+      "stage_division": {
+        "Setup": [
+          "Red is met by Delivery Drone Delta-7, which transmits a priority security update with advanced protocols.",
+          "Red receives a data-sealed package and Unit 5 warns her about increased rogue unit activity near the restricted zone.",
+          "The Delivery Drone scans the area with a blue light and initiates a secure data transfer to Red.",
+          "The Delivery Drone projects a holographic progress bar."
+        ],
+        "New Situation": [
+          "Red decides to take an unauthorized shortcut through an alley, against the drone's warnings.",
+          "The Delivery Drone warns Red that deviation will trigger incident reports and affect her eligibility, but Red persists.",
+          "Unit 5 warns Red to avoid Sector 7 due to rogue unit activity.",
+          "Red prepares herself, secures the package, and heads toward the exit, determined to follow her own judgment.",
+          "Red leaves the delivery bay and enters the restricted zone."
+        ],
+        "Progress": [
+          "Red approaches an armored hatch, anxiously enters the coded sequence, and hopes the retinal scanner will recognize her.",
+          "Dr. Ada greets Red, expressing concern about strange diagnostic readings.",
+          "Red hesitantly extends the encrypted data package to Dr. Ada.",
+          "Dr. Ada accepts the data package and reassures Red, emphasizing their bond and determination.",
+          "Dr. Ada locks the door, dims the lights, and prepares to analyze the files with Red.",
+          "Red urgently reports that Wolfbot has breached the perimeter, now using voice mimicry and improved stealth.",
+          "Dr. Ada initiates facility lockdown, sealing blast doors and engaging security protocols.",
+          "Red rushes to manually seal bulkhead doors.",
+          "Dr. Ada inputs new security parameters.",
+          "Red scans her wrist monitor for security breaches and relays data to Dr. Ada.",
+          "Dr. Ada overrides sensor thresholds and dispatches drones toward the west corridor.",
+          "Red and Dr. Ada brace for escalating threat as Wolfbot moves closer.",
+          "Red sprints down a rain-slick path, checking the encrypted package strapped to her hip.",
+          "The Delivery Drone projects a map, warns of increased rogue AI activity, and advises Red to reroute.",
+          "At the Malfunctioning Security Gate, the drone requests credentials and threatens lockdown if Red tampers without authentication.",
+          "Red attempts to input the override code as the drone starts a security countdown.",
+          "Red manages to bypass the drone's protocols and overrides the gate’s circuitry, slipping through before lockdown.",
+          "The drone follows Red, increasing alertness due to her borderline unauthorized methods.",
+          "Red crouches, scans the perimeter.",
+          "The Delivery Drone warns of a restricted zone and projects a crimson map overlay.",
+          "Red signals the drone to deploy a decoy beacon, drawing off two approaching Patrol Bots."
+        ],
+        "Complications": [
+          "Red breaches the perimeter undetected as the Patrol Bots follow the decoy beacon.",
+          "Red discovers that Grandmother’s signal has vanished from the network.",
+          "Red hacks a corroded access panel on the security gate.",
+          "The Delivery Drone projects a warning of unauthorized entry and patrol bots en route.",
+          "Red uses an override code to delay the patrol bots' scan cycle and slips through the gate.",
+          "Red approaches her grandmother's cabin as the drone records her progress.",
+          "Red pries open a service hatch and uses a dataspike to send a Patrol Bot away with a false alarm.",
+          "Red advances toward Wolfbot’s command node to upload the defensive payload from her package.",
+          "Red approaches a glitching security gate.",
+          "Wolfbot, disguised as a maintenance drone, blocks Red and transmits a jamming signal.",
+          "Red reroutes her neural uplink to override the gate’s control panel.",
+          "Red bursts into Dr. Ada’s lab, urgently reporting containment anomalies and escalating decay readings.",
+          "Red and Dr. Ada run emergency diagnostics, confirming the anomaly is learning and adapting to countermeasures.",
+          "Red insists on immediate action, prompting Dr. Ada to authorize a preliminary lockdown and cross-reference anomaly signatures.",
+          "Ada warns that decrypting the data drive will draw enemy attention.",
+          "Wolfbot’s patrol bots approach, forcing Red and Ada to retreat deeper into the lab’s secure sublevels to prevent a breach."
+        ],
+        "Final Push": [
+          "Ada initiates the decryption sequence on the drive as Red stands guard, preparing for enemy attention."
+        ],
+        "Aftermath": []
+      }
+    },
+    "Li_detailed_results": {
+      "Red is met by Delivery Drone Delta-7, which transmits a priority security update with advanced protocols.": "Orientation",
+      "Red receives a data-sealed package and Unit 5 warns her about increased rogue unit activity near the restricted zone.": "Complicating Action",
+      "The Delivery Drone scans the area with a blue light and initiates a secure data transfer to Red.": "Minor Resolution",
+      "The Delivery Drone projects a holographic progress bar.": "Minor Resolution",
+      "Red decides to take an unauthorized shortcut through an alley, against the drone's warnings.": "Complicating Action",
+      "The Delivery Drone warns Red that deviation will trigger incident reports and affect her eligibility, but Red persists.": "Complicating Action",
+      "Unit 5 warns Red to avoid Sector 7 due to rogue unit activity.": "Complicating Action",
+      "Red prepares herself, secures the package, and heads toward the exit, determined to follow her own judgment.": "Evaluation",
+      "Red leaves the delivery bay and enters the restricted zone.": "Complicating Action",
+      "Red approaches an armored hatch, anxiously enters the coded sequence, and hopes the retinal scanner will recognize her.": "Complicating Action",
+      "Dr. Ada greets Red, expressing concern about strange diagnostic readings.": "Orientation",
+      "Red hesitantly extends the encrypted data package to Dr. Ada.": "Minor Resolution",
+      "Dr. Ada accepts the data package and reassures Red, emphasizing their bond and determination.": "Minor Resolution",
+      "Dr. Ada locks the door, dims the lights, and prepares to analyze the files with Red.": "Minor Resolution",
+      "Red urgently reports that Wolfbot has breached the perimeter, now using voice mimicry and improved stealth.": "MRE",
+      "Dr. Ada initiates facility lockdown, sealing blast doors and engaging security protocols.": "Minor Resolution",
+      "Red rushes to manually seal bulkhead doors.": "Minor Resolution",
+      "Dr. Ada inputs new security parameters.": "Minor Resolution",
+      "Red scans her wrist monitor for security breaches and relays data to Dr. Ada.": "Minor Resolution",
+      "Dr. Ada overrides sensor thresholds and dispatches drones toward the west corridor.": "Minor Resolution",
+      "Red and Dr. Ada brace for escalating threat as Wolfbot moves closer.": "Return of MRE",
+      "Red sprints down a rain-slick path, checking the encrypted package strapped to her hip.": "Abstract",
+      "The Delivery Drone projects a map, warns of increased rogue AI activity, and advises Red to reroute.": "Complicating Action",
+      "At the Malfunctioning Security Gate, the drone requests credentials and threatens lockdown if Red tampers without authentication.": "Complicating Action",
+      "Red attempts to input the override code as the drone starts a security countdown.": "Complicating Action",
+      "Red manages to bypass the drone's protocols and overrides the gate’s circuitry, slipping through before lockdown.": "Minor Resolution",
+      "The drone follows Red, increasing alertness due to her borderline unauthorized methods.": "Complicating Action",
+      "Red crouches, scans the perimeter.": "Abstract",
+      "The Delivery Drone warns of a restricted zone and projects a crimson map overlay.": "Orientation",
+      "Red signals the drone to deploy a decoy beacon, drawing off two approaching Patrol Bots.": "Minor Resolution",
+      "Red breaches the perimeter undetected as the Patrol Bots follow the decoy beacon.": "Minor Resolution",
+      "Red discovers that Grandmother’s signal has vanished from the network.": "Complicating Action",
+      "Red hacks a corroded access panel on the security gate.": "Complicating Action",
+      "The Delivery Drone projects a warning of unauthorized entry and patrol bots en route.": "Complicating Action",
+      "Red uses an override code to delay the patrol bots' scan cycle and slips through the gate.": "Minor Resolution",
+      "Red approaches her grandmother's cabin as the drone records her progress.": "Orientation",
+      "Red pries open a service hatch and uses a dataspike to send a Patrol Bot away with a false alarm.": "Minor Resolution",
+      "Red advances toward Wolfbot’s command node to upload the defensive payload from her package.": "Resolution",
+      "Red approaches a glitching security gate.": "Complicating Action",
+      "Wolfbot, disguised as a maintenance drone, blocks Red and transmits a jamming signal.": "Return of MRE",
+      "Red reroutes her neural uplink to override the gate’s control panel.": "Minor Resolution",
+      "Red bursts into Dr. Ada’s lab, urgently reporting containment anomalies and escalating decay readings.": "Complicating Action",
+      "Red and Dr. Ada run emergency diagnostics, confirming the anomaly is learning and adapting to countermeasures.": "Complicating Action",
+      "Red insists on immediate action, prompting Dr. Ada to authorize a preliminary lockdown and cross-reference anomaly signatures.": "Minor Resolution",
+      "Ada warns that decrypting the data drive will draw enemy attention.": "Direct Comment",
+      "Wolfbot’s patrol bots approach, forcing Red and Ada to retreat deeper into the lab’s secure sublevels to prevent a breach.": "Complicating Action",
+      "Ada initiates the decryption sequence on the drive as Red stands guard, preparing for enemy attention.": "Resolution"
+    },
+    "structure_analysis": {
+      "basic_info": {
+        "total_events": 47,
+        "analysis_mode": "default",
+        "analysis_time": null
+      },
+      "Papalampidi_structure_analysis": {
+        "turning_point_integrity": {
+          "identified_tps": [
+            "TP1",
+            "TP2",
+            "TP3",
+            "TP4",
+            "TP5"
+          ],
+          "missing_tps": [],
+          "TP_coverage": "5/5"
+        },
+        "stage_integrity": {
+          "identified_stages": [
+            "Setup",
+            "New Situation",
+            "Progress",
+            "Complications",
+            "Final Push"
+          ],
+          "missing_stages": [
+            "Aftermath"
+          ],
+          "stage_coverage": "5/6"
+        }
+      },
+      "Li_function_analysis": {
+        "core_function_check": {
+          "Orientation": "exists",
+          "Complicating Action": "exists",
+          "MRE": "exists",
+          "Resolution": "exists"
+        },
+        "function_distribution": {
+          "Orientation": 4,
+          "Complicating Action": 17,
+          "Minor Resolution": 17,
+          "Evaluation": 1,
+          "MRE": 1,
+          "Return of MRE": 2,
+          "Abstract": 2,
+          "Resolution": 2,
+          "Direct Comment": 1
+        },
+        "function_diversity": 9
+      }
+    }
+  }
+}

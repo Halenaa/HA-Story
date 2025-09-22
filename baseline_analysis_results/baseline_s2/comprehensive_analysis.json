@@ -1,0 +1,892 @@
+{
+  "baseline_name": "baseline_s2",
+  "source_file": "/Users/haha/Story/output/baseline_s2.md",
+  "text_features": {
+    "total_words": 2043,
+    "total_sentences": 187,
+    "chapter_count": 8,
+    "char_count": 12219
+  },
+  "diversity": {
+    "individual": {
+      "thelittleredridinghood_baselinerewrite_linear_T1.0_s1": {
+        "distinct_1": 0.44721944721944723,
+        "distinct_2": 0.8663333333333334,
+        "distinct_avg": 0.6567763902763903,
+        "distinct_score": 0.6567763902763903,
+        "total_words": 1956,
+        "total_sentences": 184,
+        "genre": "baseline",
+        "structure": "linear",
+        "temperature": 1.0,
+        "seed": 1,
+        "folder_name": "thelittleredridinghood_baselinerewrite_linear_T1.0_s1"
+      }
+    },
+    "group": {
+      "('baseline', 'linear', 1.0)": {
+        "self_bleu_group": 0.0,
+        "self_bleu_group_norm": 0.0,
+        "one_minus_self_bleu": 0.0,
+        "distinct_group": 0.0,
+        "seed_self_bleus": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "seed_distinct_scores": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alpha": 0.7,
+        "diversity_score": 0.0,
+        "genre": "baseline",
+        "structure": "linear",
+        "temperature": 1.0
+      }
+    }
+  },
+  "coherence": {
+    "HRED_coherence_evaluation": {
+      "model_name": "all-mpnet-base-v2",
+      "analysis_method": "Original sentence coherence",
+      "total_sentences": 180,
+      "adjacent_pairs": 179,
+      "average_coherence": 0.2812,
+      "objective_description": {
+        "score": 0.2812,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "detailed_analysis": {
+      "basic_statistics": {
+        "average_coherence": 0.2811895630962356,
+        "coherence_std": 0.12283495284099478,
+        "max_coherence": 0.5814635753631592,
+        "min_coherence": -0.023941390216350555,
+        "coherence_median": 0.2741487920284271
+      },
+      "coherence_breakpoints": [
+        {
+          "position": 3,
+          "sentence_pair": "“Rosaline,” she said, her voic... → I’ve baked a loaf of honey bre...",
+          "similarity": 0.07
+        },
+        {
+          "position": 4,
+          "sentence_pair": "I’ve baked a loaf of honey bre... → Will you take these to her?...",
+          "similarity": 0.15
+        },
+        {
+          "position": 5,
+          "sentence_pair": "Will you take these to her?... → Rosaline nodded eagerly, tying...",
+          "similarity": 0.156
+        },
+        {
+          "position": 10,
+          "sentence_pair": "Stay in the sunlight and do no... → Rosaline smiled, brushing a st...",
+          "similarity": 0.055
+        },
+        {
+          "position": 31,
+          "sentence_pair": "“How thoughtful of you.... → Is she ill?...",
+          "similarity": 0.058
+        },
+        {
+          "position": 34,
+          "sentence_pair": "“I’m bringing her honey bread ... → The wolf nodded, his gaze ling...",
+          "similarity": 0.125
+        },
+        {
+          "position": 36,
+          "sentence_pair": "“A fine granddaughter you are.... → Tell me, which path will you t...",
+          "similarity": 0.066
+        },
+        {
+          "position": 37,
+          "sentence_pair": "Tell me, which path will you t... → Rosaline pointed down the sunl...",
+          "similarity": 0.113
+        },
+        {
+          "position": 43,
+          "sentence_pair": "Your grandmother would be deli... → Rosaline looked curiously down...",
+          "similarity": 0.133
+        },
+        {
+          "position": 45,
+          "sentence_pair": "“Perhaps you’re right,” she sa... → The wolf’s tail flicked....",
+          "similarity": 0.055
+        },
+        {
+          "position": 46,
+          "sentence_pair": "The wolf’s tail flicked.... → “A wise choice....",
+          "similarity": 0.156
+        },
+        {
+          "position": 47,
+          "sentence_pair": "“A wise choice.... → Enjoy the flowers, little one....",
+          "similarity": 0.065
+        },
+        {
+          "position": 49,
+          "sentence_pair": "With that, he melted into the ... → Rosaline, enchanted by the ide...",
+          "similarity": 0.114
+        },
+        {
+          "position": 51,
+          "sentence_pair": "She lost track of time as she ... → Meanwhile, the wolf raced thro...",
+          "similarity": 0.148
+        },
+        {
+          "position": 56,
+          "sentence_pair": "The wolf crept to the window a... → Grandmother, a kindly old woma...",
+          "similarity": 0.114
+        },
+        {
+          "position": 57,
+          "sentence_pair": "Grandmother, a kindly old woma... → The wolf rapped gently on the ...",
+          "similarity": 0.103
+        },
+        {
+          "position": 76,
+          "sentence_pair": "“You won’t win so easily.... → The wolf leapt, and Grandmothe...",
+          "similarity": 0.085
+        },
+        {
+          "position": 80,
+          "sentence_pair": "He spied a cloak hanging by th... → He grinned to himself, hatchin...",
+          "similarity": 0.156
+        },
+        {
+          "position": 97,
+          "sentence_pair": "Let me see your sweet face.... → Rosaline hesitated, but the ro...",
+          "similarity": 0.074
+        },
+        {
+          "position": 112,
+          "sentence_pair": "But Rosaline was quick and cle... → She seized the chair by the be...",
+          "similarity": 0.146
+        },
+        {
+          "position": 115,
+          "sentence_pair": "The woodsman took in the scene... → “Stay back, Rosaline!...",
+          "similarity": 0.117
+        },
+        {
+          "position": 128,
+          "sentence_pair": "“I’m all right.... → Together, they searched the co...",
+          "similarity": 0.124
+        },
+        {
+          "position": 130,
+          "sentence_pair": "At last, they found her locked... → “Oh, my dear Rosaline!...",
+          "similarity": 0.145
+        },
+        {
+          "position": 136,
+          "sentence_pair": "That wolf won’t dare return no... → Grandmother brewed tea, and Ro...",
+          "similarity": -0.024
+        },
+        {
+          "position": 137,
+          "sentence_pair": "Grandmother brewed tea, and Ro... → The woodsman joined them, reco...",
+          "similarity": 0.14
+        },
+        {
+          "position": 143,
+          "sentence_pair": "I’m proud of you.... → The woodsman smiled....",
+          "similarity": 0.134
+        },
+        {
+          "position": 155,
+          "sentence_pair": "And I promise—I’ll never stray... → Her mother smiled, brushing a ...",
+          "similarity": 0.05
+        },
+        {
+          "position": 159,
+          "sentence_pair": "Walk wisely, with courage and ... → Rosaline gazed up at the night...",
+          "similarity": 0.133
+        },
+        {
+          "position": 179,
+          "sentence_pair": "She smiled, knowing that every... → THE END...",
+          "similarity": 0.158
+        }
+      ],
+      "high_coherence_segments": [
+        {
+          "start_sentence": 15,
+          "end_sentence": 18,
+          "length": 4,
+          "average_similarity": 0.46
+        },
+        {
+          "start_sentence": 22,
+          "end_sentence": 24,
+          "length": 3,
+          "average_similarity": 0.433
+        },
+        {
+          "start_sentence": 71,
+          "end_sentence": 73,
+          "length": 3,
+          "average_similarity": 0.44
+        },
+        {
+          "start_sentence": 77,
+          "end_sentence": 79,
+          "length": 3,
+          "average_similarity": 0.364
+        },
+        {
+          "start_sentence": 88,
+          "end_sentence": 90,
+          "length": 3,
+          "average_similarity": 0.463
+        },
+        {
+          "start_sentence": 98,
+          "end_sentence": 103,
+          "length": 6,
+          "average_similarity": 0.43
+        },
+        {
+          "start_sentence": 113,
+          "end_sentence": 115,
+          "length": 3,
+          "average_similarity": 0.503
+        },
+        {
+          "start_sentence": 117,
+          "end_sentence": 122,
+          "length": 6,
+          "average_similarity": 0.506
+        },
+        {
+          "start_sentence": 150,
+          "end_sentence": 152,
+          "length": 3,
+          "average_similarity": 0.424
+        },
+        {
+          "start_sentence": 170,
+          "end_sentence": 172,
+          "length": 3,
+          "average_similarity": 0.426
+        }
+      ],
+      "objective_description": {
+        "score": 0.2812,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "pairwise_similarity_examples": [
+      {
+        "sentence_pair": "Sentence 1 → Sentence 2",
+        "sentence_1": "One crisp morning, sunlight swept over the thatche...",
+        "sentence_2": "Rosaline’s mother called her from the kitchen, whe...",
+        "similarity": 0.2709
+      },
+      {
+        "sentence_pair": "Sentence 2 → Sentence 3",
+        "sentence_1": "Rosaline’s mother called her from the kitchen, whe...",
+        "sentence_2": "“Rosaline,” she said, her voice warm, “your grandm...",
+        "similarity": 0.5066
+      },
+      {
+        "sentence_pair": "Sentence 3 → Sentence 4",
+        "sentence_1": "“Rosaline,” she said, her voice warm, “your grandm...",
+        "sentence_2": "I’ve baked a loaf of honey bread and packed a litt...",
+        "similarity": 0.0696
+      },
+      {
+        "sentence_pair": "Sentence 4 → Sentence 5",
+        "sentence_1": "I’ve baked a loaf of honey bread and packed a litt...",
+        "sentence_2": "Will you take these to her?",
+        "similarity": 0.1502
+      },
+      {
+        "sentence_pair": "Sentence 5 → Sentence 6",
+        "sentence_1": "Will you take these to her?",
+        "sentence_2": "Rosaline nodded eagerly, tying her scarlet cloak a...",
+        "similarity": 0.1557
+      },
+      {
+        "sentence_pair": "Sentence 6 → Sentence 7",
+        "sentence_1": "Rosaline nodded eagerly, tying her scarlet cloak a...",
+        "sentence_2": "“Of course, Mama!",
+        "similarity": 0.3377
+      },
+      {
+        "sentence_pair": "Sentence 7 → Sentence 8",
+        "sentence_1": "“Of course, Mama!",
+        "sentence_2": "Her mother handed her a wicker basket, lining it w...",
+        "similarity": 0.3188
+      },
+      {
+        "sentence_pair": "Sentence 8 → Sentence 9",
+        "sentence_1": "Her mother handed her a wicker basket, lining it w...",
+        "sentence_2": "“Mind the path, dearest.",
+        "similarity": 0.1776
+      },
+      {
+        "sentence_pair": "Sentence 9 → Sentence 10",
+        "sentence_1": "“Mind the path, dearest.",
+        "sentence_2": "Stay in the sunlight and do not stray.",
+        "similarity": 0.236
+      },
+      {
+        "sentence_pair": "Sentence 10 → Sentence 11",
+        "sentence_1": "Stay in the sunlight and do not stray.",
+        "sentence_2": "Rosaline smiled, brushing a stray curl from her ch...",
+        "similarity": 0.0549
+      },
+      {
+        "sentence_pair": "Sentence 11 → Sentence 12",
+        "sentence_1": "Rosaline smiled, brushing a stray curl from her ch...",
+        "sentence_2": "“I’ll be careful, Mama.",
+        "similarity": 0.1951
+      },
+      {
+        "sentence_pair": "Sentence 12 → Sentence 13",
+        "sentence_1": "“I’ll be careful, Mama.",
+        "sentence_2": "Her mother kissed her forehead and watched as Rosa...",
+        "similarity": 0.3469
+      },
+      {
+        "sentence_pair": "Sentence 13 → Sentence 14",
+        "sentence_1": "Her mother kissed her forehead and watched as Rosa...",
+        "sentence_2": "The path to grandmother’s cottage wound through th...",
+        "similarity": 0.3161
+      },
+      {
+        "sentence_pair": "Sentence 14 → Sentence 15",
+        "sentence_1": "The path to grandmother’s cottage wound through th...",
+        "sentence_2": "Sunbeams danced between the leaves, painting the e...",
+        "similarity": 0.3334
+      },
+      {
+        "sentence_pair": "Sentence 15 → Sentence 16",
+        "sentence_1": "Sunbeams danced between the leaves, painting the e...",
+        "sentence_2": "Birds sang from the branches, and rabbits darted t...",
+        "similarity": 0.3511
+      },
+      {
+        "sentence_pair": "Sentence 16 → Sentence 17",
+        "sentence_1": "Birds sang from the branches, and rabbits darted t...",
+        "sentence_2": "Rosaline skipped along the path, humming to hersel...",
+        "similarity": 0.4513
+      },
+      {
+        "sentence_pair": "Sentence 17 → Sentence 18",
+        "sentence_1": "Rosaline skipped along the path, humming to hersel...",
+        "sentence_2": "As she walked, she remembered her mother’s warning...",
+        "similarity": 0.578
+      },
+      {
+        "sentence_pair": "Sentence 18 → Sentence 19",
+        "sentence_1": "As she walked, she remembered her mother’s warning...",
+        "sentence_2": "She paused to watch a butterfly alight on a daisy,...",
+        "similarity": 0.3044
+      },
+      {
+        "sentence_pair": "Sentence 19 → Sentence 20",
+        "sentence_1": "She paused to watch a butterfly alight on a daisy,...",
+        "sentence_2": "Suddenly, from the shadow of a yew tree, a voice c...",
+        "similarity": 0.2539
+      },
+      {
+        "sentence_pair": "Sentence 20 → Sentence 21",
+        "sentence_1": "Suddenly, from the shadow of a yew tree, a voice c...",
+        "sentence_2": "“Good morning, little one.",
+        "similarity": 0.312
+      },
+      {
+        "note": "Only showing first 20 pairs, total of 179 adjacent sentence pairs"
+      }
+    ]
+  },
+  "emotion": {
+    "metadata": {
+      "total_chapters": 8,
+      "primary_method": "RoBERTa",
+      "validation_method": "LabMT-en-v1",
+      "analysis_timestamp": "2025-09-13T20:39:46.335552"
+    },
+    "chapter_analysis": [
+      {
+        "chapter_num": 1,
+        "title": "Chapter 1. A Visit to Grandmother",
+        "roberta_score": 0.4692,
+        "labmt_score": 0.4055,
+        "content_length": 1547
+      },
+      {
+        "chapter_num": 2,
+        "title": "Chapter 2. An Unexpected Encounter",
+        "roberta_score": 0.7282,
+        "labmt_score": 0.3713,
+        "content_length": 1796
+      },
+      {
+        "chapter_num": 3,
+        "title": "Chapter 3. The Wolf’s Plan",
+        "roberta_score": 0.4128,
+        "labmt_score": 0.2749,
+        "content_length": 1696
+      },
+      {
+        "chapter_num": 4,
+        "title": "Chapter 4 Rosaline Arrives",
+        "roberta_score": 0.7072,
+        "labmt_score": 0.3512,
+        "content_length": 1936
+      },
+      {
+        "chapter_num": 5,
+        "title": "Chapter 5 The Woodsman’s Rescue",
+        "roberta_score": 0.3059,
+        "labmt_score": 0.2879,
+        "content_length": 1323
+      },
+      {
+        "chapter_num": 6,
+        "title": "Chapter 6 Lessons and Laughter",
+        "roberta_score": 0.984,
+        "labmt_score": 0.3935,
+        "content_length": 1488
+      },
+      {
+        "chapter_num": 7,
+        "title": "Chapter 7 The Wolf’s Fate",
+        "roberta_score": 0.0199,
+        "labmt_score": 0.1712,
+        "content_length": 862
+      },
+      {
+        "chapter_num": 8,
+        "title": "Chpater 8 Epilogue",
+        "roberta_score": 0.7584,
+        "labmt_score": 0.2992,
+        "content_length": 789
+      }
+    ],
+    "primary_analysis": {
+      "method": "RoBERTa",
+      "scores": [
+        0.46916478872299194,
+        0.7282039761543274,
+        0.412789265314738,
+        0.7071666638056437,
+        0.30592159430185956,
+        0.9839993913968405,
+        0.01990758180618286,
+        0.7583810389041901
+      ],
+      "reagan_classification": {
+        "method": "RoBERTa",
+        "best_match": "Tragedy",
+        "confidence": 0.6057,
+        "all_similarities": {
+          "Rags to riches": 0.5924,
+          "Tragedy": 0.6057,
+          "Man in a hole": 0,
+          "Icarus": 0.0221,
+          "Cinderella": 0,
+          "Oedipus": 0.1268
+        },
+        "reagan_category": "TR"
+      }
+    },
+    "validation_analysis": {
+      "method": "LabMT",
+      "scores": [
+        0.405471014492754,
+        0.37126623376623424,
+        0.2748928571428575,
+        0.3512234042553195,
+        0.2879464285714284,
+        0.39345238095238,
+        0.17118055555555545,
+        0.2992307692307692
+      ],
+      "reagan_classification": {
+        "method": "LabMT",
+        "best_match": "Tragedy",
+        "confidence": 0.7481,
+        "all_similarities": {
+          "Rags to riches": 0.5698,
+          "Tragedy": 0.7481,
+          "Man in a hole": 0,
+          "Icarus": 0.1154,
+          "Cinderella": 0,
+          "Oedipus": 0.162
+        },
+        "reagan_category": "TR"
+      }
+    },
+    "correlation_analysis": {
+      "pearson_correlation": {
+        "r": 0.7702,
+        "p_value": 0.0253,
+        "significance": "Significant"
+      },
+      "spearman_correlation": {
+        "r": 0.6667,
+        "p_value": 0.071
+      },
+      "direction_consistency": 0.8571,
+      "consistency_level": "High",
+      "interpretation": "RoBERTa and LabMT correlation coefficient is 0.770, belongs to strong correlation"
+    },
+    "comparison_analysis": {
+      "disagreement_points": [
+        {
+          "chapter": 2,
+          "roberta_score": 0.7282039761543274,
+          "labmt_score": 0.37126623376623424,
+          "difference": 0.3569
+        },
+        {
+          "chapter": 4,
+          "roberta_score": 0.7071666638056437,
+          "labmt_score": 0.3512234042553195,
+          "difference": 0.3559
+        },
+        {
+          "chapter": 6,
+          "roberta_score": 0.9839993913968405,
+          "labmt_score": 0.39345238095238,
+          "difference": 0.5905
+        },
+        {
+          "chapter": 8,
+          "roberta_score": 0.7583810389041901,
+          "labmt_score": 0.2992307692307692,
+          "difference": 0.4592
+        }
+      ],
+      "method_advantages": {
+        "RoBERTa": {
+          "strengths": [
+            "Deep learning model with better contextual understanding",
+            "Suitable for modern text and dialogue",
+            "High sensitivity to sci-fi and technical texts"
+          ],
+          "classification": "Tragedy",
+          "confidence": 0.6057
+        },
+        "LabMT": {
+          "strengths": [
+            "Fully consistent with Reagan's original method",
+            "Based on large-scale human annotation",
+            "Suitable for traditional literary analysis"
+          ],
+          "classification": "Tragedy",
+          "confidence": 0.7481
+        }
+      },
+      "consistency_assessment": {
+        "classification_agreement": true,
+        "major_disagreements": 4,
+        "recommendation": "Both methods identify as Tragedy, results are highly consistent, recommend using RoBERTa as the primary analysis result"
+      }
+    },
+    "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.770 (High)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.770, belongs to strong correlation\n\nClassification Results:\n- RoBERTa (primary): Tragedy\n- LabMT (validation): Tragedy\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.770, showing high consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation.",
+    "output_files": {
+      "analysis_json": "/Users/haha/Story/baseline_analysis_results/baseline_s2/roberta_labmt_analysis_20250913_203946.json"
+    }
+  },
+  "structure": {
+    "evaluation_mode": "default mode",
+    "event_list": [
+      {
+        "event": "Rosaline’s mother asks her to deliver honey bread and jam to her grandmother.",
+        "source": "Will you take these to her?",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Rosaline prepares the basket, dons her red cloak, and sets out for grandmother’s cottage.",
+        "source": "Her mother kissed her forehead and watched as Rosaline set out, the basket swinging from her arm, her red cloak fluttering like a banner behind her.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Rosaline walks through the forest, enjoying the scenery and wildlife.",
+        "source": "Rosaline skipped along the path, humming to herself, her senses alive to the wonders of the forest—the scent of moss and wildflowers, the chitter of squirrels, the distant babble of a brook.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Rosaline meets a wolf, who questions her about her destination and her grandmother.",
+        "source": "“And where are you going, so early and so cheerfully?",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "The wolf suggests Rosaline take the brook-side path and pick flowers for her grandmother.",
+        "source": "The wildflowers are in bloom, and the air is sweet.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Rosaline chooses the brook-side path, gathers wildflowers, and creates a bouquet.",
+        "source": "Rosaline, enchanted by the idea of surprising her grandmother, wandered down the brook-side path, gathering a handful of wild violets, bluebells, and primroses.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "The wolf races through the woods and reaches grandmother’s cottage ahead of Rosaline.",
+        "source": "He reached Grandmother’s cottage in no time at all.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "The wolf tricks grandmother by pretending to be Rosaline and enters the cottage.",
+        "source": "“Innocent as a lamb,” the wolf replied, disguising his voice, “it is I, Rosaline, come to visit you.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother realizes the wolf’s deception and defends herself with knitting needles.",
+        "source": "She darted behind the table, seized her knitting needles, and brandished them like swords.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother escapes to her bedroom and locks the door; the wolf searches for a way in.",
+        "source": "She managed to dash into her bedroom and lock the door.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "The wolf disguises himself with grandmother’s shawl and cap, hiding in her bed.",
+        "source": "He donned the shawl and a cap, then slipped under the covers of Grandmother’s bed, pulling the quilt up to his chin.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Rosaline arrives at the cottage and enters after hearing ‘grandmother’s’ invitation.",
+        "source": "Rosaline pushed open the door and entered the cozy cottage.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Rosaline notices strange features and questions ‘grandmother’ about her ears, eyes, hands, and teeth.",
+        "source": "“Grandmother, what big ears you have,” she said, noting the furry tips poking from beneath the cap.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "The wolf reveals himself and attacks Rosaline, who defends herself with a chair and tries to escape.",
+        "source": "She seized the chair by the bedside and shoved it between herself and the wolf, scrambling for the door.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "A woodsman bursts in and confronts the wolf, protecting Rosaline.",
+        "source": "Just as the wolf lunged, the cottage door burst open, and a tall figure strode in—a woodsman, broad-shouldered, with an axe slung over his back.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "The woodsman drives the wolf into a corner, then out the window and into the forest.",
+        "source": "The wolf, seeing he was outmatched, leapt through the open window and vanished into the forest, his silver tail a flash in the sunlight.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Rosaline and the woodsman find grandmother safe in her locked bedroom.",
+        "source": "At last, they found her locked safely in her bedroom, clutching her knitting needles, her face pale but determined.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother, Rosaline, and the woodsman share tea, bread, and jam, and recount their experiences.",
+        "source": "Grandmother brewed tea, and Rosaline served honey bread and jam.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Rosaline reflects on her experience, promising to listen to warnings and be cautious.",
+        "source": "She realized how important it was to listen to her mother’s warnings and to trust her own instincts.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "The woodsman walks Rosaline home; her mother welcomes her with relief.",
+        "source": "Rosaline’s mother embraced her at the cottage door, relief shining in her eyes.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Rosaline promises never to stray from the path again.",
+        "source": "And I promise—I’ll never stray from the path again.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "The wolf, defeated, reflects on his loss and the villagers’ strength, considering a new path in life.",
+        "source": "Perhaps, one day, he might seek a different path—a path where kindness and courage were stronger than fear.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "Rosaline grows older, visits grandmother often, and her story becomes a village legend.",
+        "source": "Her tale became legend, told by firesides and in the village square.",
+        "chapter": "Chapter 9",
+        "confidence": "high"
+      },
+      {
+        "event": "Rosaline remembers the lessons learned and sometimes glimpses the wolf in the woods.",
+        "source": "And sometimes, when the moon was full and the forest glimmered with silver light, she thought she glimpsed a shadow among the trees—a flash of silver fur, a pair of curious amber eyes.",
+        "chapter": "Chapter 9",
+        "confidence": "high"
+      }
+    ],
+    "Papalampidi_detailed_results": {
+      "turning_points": {
+        "TP1": "Rosaline’s mother asks her to deliver honey bread and jam to her grandmother.",
+        "TP2": "Rosaline meets a wolf, who questions her about her destination and her grandmother.",
+        "TP3": "Rosaline chooses the brook-side path, gathers wildflowers, and creates a bouquet.",
+        "TP4": "The wolf reveals himself and attacks Rosaline, who defends herself with a chair and tries to escape.",
+        "TP5": "A woodsman bursts in and confronts the wolf, protecting Rosaline."
+      },
+      "stage_division": {
+        "Setup": [
+          "Rosaline’s mother asks her to deliver honey bread and jam to her grandmother.",
+          "Rosaline prepares the basket, dons her red cloak, and sets out for grandmother’s cottage."
+        ],
+        "New Situation": [
+          "Rosaline walks through the forest, enjoying the scenery and wildlife."
+        ],
+        "Progress": [
+          "Rosaline meets a wolf, who questions her about her destination and her grandmother.",
+          "The wolf suggests Rosaline take the brook-side path and pick flowers for her grandmother.",
+          "Rosaline chooses the brook-side path, gathers wildflowers, and creates a bouquet."
+        ],
+        "Complications": [
+          "The wolf races through the woods and reaches grandmother’s cottage ahead of Rosaline.",
+          "The wolf tricks grandmother by pretending to be Rosaline and enters the cottage.",
+          "Grandmother realizes the wolf’s deception and defends herself with knitting needles.",
+          "Grandmother escapes to her bedroom and locks the door; the wolf searches for a way in.",
+          "The wolf disguises himself with grandmother’s shawl and cap, hiding in her bed.",
+          "Rosaline arrives at the cottage and enters after hearing ‘grandmother’s’ invitation.",
+          "Rosaline notices strange features and questions ‘grandmother’ about her ears, eyes, hands, and teeth.",
+          "The wolf reveals himself and attacks Rosaline, who defends herself with a chair and tries to escape."
+        ],
+        "Final Push": [
+          "A woodsman bursts in and confronts the wolf, protecting Rosaline.",
+          "The woodsman drives the wolf into a corner, then out the window and into the forest."
+        ],
+        "Aftermath": [
+          "Rosaline and the woodsman find grandmother safe in her locked bedroom.",
+          "Grandmother, Rosaline, and the woodsman share tea, bread, and jam, and recount their experiences.",
+          "Rosaline reflects on her experience, promising to listen to warnings and be cautious.",
+          "The woodsman walks Rosaline home; her mother welcomes her with relief.",
+          "Rosaline promises never to stray from the path again.",
+          "The wolf, defeated, reflects on his loss and the villagers’ strength, considering a new path in life.",
+          "Rosaline grows older, visits grandmother often, and her story becomes a village legend.",
+          "Rosaline remembers the lessons learned and sometimes glimpses the wolf in the woods."
+        ]
+      }
+    },
+    "Li_detailed_results": {
+      "event1": "Orientation",
+      "event2": "Orientation",
+      "event3": "Orientation",
+      "event4": "Complicating Action",
+      "event5": "Complicating Action",
+      "event6": "Complicating Action",
+      "event7": "Complicating Action",
+      "event8": "Complicating Action",
+      "event9": "Minor Resolution",
+      "event10": "Complicating Action",
+      "event11": "Complicating Action",
+      "event12": "Complicating Action",
+      "event13": "Complicating Action",
+      "event14": "MRE",
+      "event15": "Minor Resolution",
+      "event16": "Resolution",
+      "event17": "Resolution",
+      "event18": "Aftermath",
+      "event19": "Evaluation",
+      "event20": "Resolution",
+      "event21": "Direct Comment",
+      "event22": "Return of MRE",
+      "event23": "Abstract",
+      "event24": "Evaluation"
+    },
+    "structure_analysis": {
+      "basic_info": {
+        "total_events": 24,
+        "analysis_mode": "default",
+        "analysis_time": null
+      },
+      "Papalampidi_structure_analysis": {
+        "turning_point_integrity": {
+          "identified_tps": [
+            "TP1",
+            "TP2",
+            "TP3",
+            "TP4",
+            "TP5"
+          ],
+          "missing_tps": [],
+          "TP_coverage": "5/5"
+        },
+        "stage_integrity": {
+          "identified_stages": [
+            "Setup",
+            "New Situation",
+            "Progress",
+            "Complications",
+            "Final Push",
+            "Aftermath"
+          ],
+          "missing_stages": [],
+          "stage_coverage": "6/6"
+        }
+      },
+      "Li_function_analysis": {
+        "core_function_check": {
+          "Orientation": "exists",
+          "Complicating Action": "exists",
+          "MRE": "exists",
+          "Resolution": "exists"
+        },
+        "function_distribution": {
+          "Orientation": 3,
+          "Complicating Action": 9,
+          "Minor Resolution": 2,
+          "MRE": 1,
+          "Resolution": 3,
+          "Aftermath": 1,
+          "Evaluation": 2,
+          "Direct Comment": 1,
+          "Return of MRE": 1,
+          "Abstract": 1
+        },
+        "function_diversity": 10
+      }
+    }
+  },
+  "fluency": {
+    "baseline_name": "baseline_s2",
+    "source_file": "/Users/haha/Story/output/baseline_s2.md",
+    "pseudo_ppl": 10.23,
+    "err_per_100w": 5.09,
+    "error_count": 104,
+    "word_count": 2043,
+    "char_count": 12543,
+    "analysis_time": "2025-09-13T20:49:00",
+    "analysis_method": "RoBERTa-large GPU",
+    "device": "GPU A800"
+  }
+}

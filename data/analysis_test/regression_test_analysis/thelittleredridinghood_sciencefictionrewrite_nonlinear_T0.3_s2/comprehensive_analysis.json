@@ -1,0 +1,1267 @@
+{
+  "folder_name": "thelittleredridinghood_sciencefictionrewrite_nonlinear_T0.3_s2",
+  "file_path": "/Users/haha/Story/data/output/regression_test/thelittleredridinghood_sciencefictionrewrite_nonlinear_T0.3_s2/enhanced_story_dialogue_updated.md",
+  "analysis_timestamp": null,
+  "emotional_arc_analysis": {
+    "metadata": {
+      "total_chapters": 7,
+      "primary_method": "RoBERTa",
+      "validation_method": "LabMT-en-v1",
+      "analysis_timestamp": "2025-09-09T20:40:22.474300"
+    },
+    "chapter_analysis": [
+      {
+        "chapter_num": 5,
+        "title": "The Outpost Confrontation",
+        "roberta_score": -0.4224,
+        "labmt_score": 0.1062,
+        "content_length": 7916
+      },
+      {
+        "chapter_num": 1,
+        "title": "Red Receives the Mission",
+        "roberta_score": -0.5648,
+        "labmt_score": 0.2206,
+        "content_length": 1833
+      },
+      {
+        "chapter_num": 2,
+        "title": "Entering the Forest Sector",
+        "roberta_score": 0.3186,
+        "labmt_score": 0.2598,
+        "content_length": 2917
+      },
+      {
+        "chapter_num": 3,
+        "title": "Encounter with the Wolf Unit",
+        "roberta_score": -0.4386,
+        "labmt_score": 0.1725,
+        "content_length": 13219
+      },
+      {
+        "chapter_num": 4,
+        "title": "Wolf Unit-9 Outpaces Red",
+        "roberta_score": -0.3508,
+        "labmt_score": 0.3067,
+        "content_length": 1556
+      },
+      {
+        "chapter_num": 6,
+        "title": "Red Outsmarts the Wolf",
+        "roberta_score": -0.453,
+        "labmt_score": 0.1448,
+        "content_length": 11579
+      },
+      {
+        "chapter_num": 7,
+        "title": "Escape and Aftermath",
+        "roberta_score": 0.033,
+        "labmt_score": 0.1874,
+        "content_length": 5389
+      }
+    ],
+    "primary_analysis": {
+      "method": "RoBERTa",
+      "scores": [
+        -0.42236442963282267,
+        -0.5647631764411927,
+        0.3186320940653483,
+        -0.43855666716893515,
+        -0.35077798962593076,
+        -0.45299579699834186,
+        0.03300611972808838
+      ],
+      "reagan_classification": {
+        "method": "RoBERTa",
+        "best_match": "Cinderella",
+        "confidence": 0.2095,
+        "all_similarities": {
+          "Rags to riches": 0,
+          "Tragedy": 0,
+          "Man in a hole": 0.1027,
+          "Icarus": 0,
+          "Cinderella": 0.2095,
+          "Oedipus": 0
+        },
+        "reagan_category": "CN"
+      }
+    },
+    "validation_analysis": {
+      "method": "LabMT",
+      "scores": [
+        0.10624999999999929,
+        0.22063829787234046,
+        0.25979452054794594,
+        0.17245762711864376,
+        0.30666666666666664,
+        0.14478260869565052,
+        0.1874137931034483
+      ],
+      "reagan_classification": {
+        "method": "LabMT",
+        "best_match": "Rags to riches",
+        "confidence": 0.6727,
+        "all_similarities": {
+          "Rags to riches": 0.6727,
+          "Tragedy": 0.6025,
+          "Man in a hole": 0.0351,
+          "Icarus": 0,
+          "Cinderella": 0,
+          "Oedipus": 0.0187
+        },
+        "reagan_category": "RR"
+      }
+    },
+    "correlation_analysis": {
+      "pearson_correlation": {
+        "r": 0.3471,
+        "p_value": 0.4456,
+        "significance": "Not Significant"
+      },
+      "spearman_correlation": {
+        "r": 0.3929,
+        "p_value": 0.3833
+      },
+      "direction_consistency": 0.8333,
+      "consistency_level": "Low",
+      "interpretation": "RoBERTa and LabMT correlation coefficient is 0.347, belongs to weak correlation"
+    },
+    "comparison_analysis": {
+      "disagreement_points": [
+        {
+          "chapter": 1,
+          "roberta_score": -0.42236442963282267,
+          "labmt_score": 0.10624999999999929,
+          "difference": 0.5286
+        },
+        {
+          "chapter": 2,
+          "roberta_score": -0.5647631764411927,
+          "labmt_score": 0.22063829787234046,
+          "difference": 0.7854
+        },
+        {
+          "chapter": 4,
+          "roberta_score": -0.43855666716893515,
+          "labmt_score": 0.17245762711864376,
+          "difference": 0.611
+        },
+        {
+          "chapter": 5,
+          "roberta_score": -0.35077798962593076,
+          "labmt_score": 0.30666666666666664,
+          "difference": 0.6574
+        },
+        {
+          "chapter": 6,
+          "roberta_score": -0.45299579699834186,
+          "labmt_score": 0.14478260869565052,
+          "difference": 0.5978
+        }
+      ],
+      "method_advantages": {
+        "RoBERTa": {
+          "strengths": [
+            "Deep learning model with better contextual understanding",
+            "Suitable for modern text and dialogue",
+            "High sensitivity to sci-fi and technical texts"
+          ],
+          "classification": "Cinderella",
+          "confidence": 0.2095
+        },
+        "LabMT": {
+          "strengths": [
+            "Fully consistent with Reagan's original method",
+            "Based on large-scale human annotation",
+            "Suitable for traditional literary analysis"
+          ],
+          "classification": "Rags to riches",
+          "confidence": 0.6727
+        }
+      },
+      "consistency_assessment": {
+        "classification_agreement": false,
+        "major_disagreements": 5,
+        "recommendation": "Two methods differ significantly, recommend detailed analysis of difference causes, may need more in-depth text feature analysis"
+      }
+    },
+    "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.347 (Low)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.347, belongs to weak correlation\n\nClassification Results:\n- RoBERTa (primary): Cinderella\n- LabMT (validation): Rags to riches\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.347, showing low consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation.",
+    "output_files": {
+      "analysis_json": "/Users/haha/Story/data/regression_test_analysis/thelittleredridinghood_sciencefictionrewrite_nonlinear_T0.3_s2/roberta_labmt_analysis_20250909_204022.json"
+    }
+  },
+  "hred_coherence_analysis": {
+    "HRED_coherence_evaluation": {
+      "model_name": "all-mpnet-base-v2",
+      "analysis_method": "Original sentence coherence",
+      "total_sentences": 391,
+      "adjacent_pairs": 390,
+      "average_coherence": 0.3576,
+      "objective_description": {
+        "score": 0.3576,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "detailed_analysis": {
+      "basic_statistics": {
+        "average_coherence": 0.35764005117787,
+        "coherence_std": 0.18136999002465382,
+        "max_coherence": 0.9043691754341125,
+        "min_coherence": -0.08239257335662842,
+        "coherence_median": 0.34954987466335297
+      },
+      "coherence_breakpoints": [
+        {
+          "position": 11,
+          "sentence_pair": "Mission parameters classified.... → ” The declaration was cold, cl...",
+          "similarity": 0.094
+        },
+        {
+          "position": 19,
+          "sentence_pair": "Red was in violation of Protoc... → There would be no room for neg...",
+          "similarity": 0.13
+        },
+        {
+          "position": 22,
+          "sentence_pair": "The words hung in the air, as ... → Wolf Unit-9 tightens their gri...",
+          "similarity": 0.163
+        },
+        {
+          "position": 30,
+          "sentence_pair": "Red’s fingers tightened around... → The faint hum of surveillance ...",
+          "similarity": 0.174
+        },
+        {
+          "position": 34,
+          "sentence_pair": "The words lingered in the air,... → Wolf Unit-9 steps forward, han...",
+          "similarity": 0.093
+        },
+        {
+          "position": 47,
+          "sentence_pair": "“The sector, or the ones pulli... → She didn’t flinch, even as Wol...",
+          "similarity": 0.031
+        },
+        {
+          "position": 48,
+          "sentence_pair": "She didn’t flinch, even as Wol... → Years in the colony’s underbel...",
+          "similarity": 0.148
+        },
+        {
+          "position": 50,
+          "sentence_pair": "Red’s mind raced through possi... → Not now;...",
+          "similarity": -0.029
+        },
+        {
+          "position": 52,
+          "sentence_pair": "not when the truth hung in the... → Wolf Unit-9 steps forward, arm...",
+          "similarity": 0.066
+        },
+        {
+          "position": 63,
+          "sentence_pair": "“And we both know what that’ll... → ” Every muscle in her body was...",
+          "similarity": 0.17
+        },
+        {
+          "position": 65,
+          "sentence_pair": "She wouldn’t give up the drive... → State your authorization proto...",
+          "similarity": -0.082
+        },
+        {
+          "position": 66,
+          "sentence_pair": "State your authorization proto... → ' As Red hesitated, Wolf Unit-...",
+          "similarity": 0.019
+        },
+        {
+          "position": 68,
+          "sentence_pair": "'Red, you are in violation of ... → The drive contains classified ...",
+          "similarity": 0.138
+        },
+        {
+          "position": 69,
+          "sentence_pair": "The drive contains classified ... → Stand down and transfer the de...",
+          "similarity": 0.125
+        },
+        {
+          "position": 70,
+          "sentence_pair": "Stand down and transfer the de... → ' Red, voice steady, countered...",
+          "similarity": 0.062
+        },
+        {
+          "position": 72,
+          "sentence_pair": "' Wolf Unit-9 retorted, 'You m... → if that drive leaves with you,...",
+          "similarity": 0.061
+        },
+        {
+          "position": 73,
+          "sentence_pair": "if that drive leaves with you,... → ' Red shot back, 'Containment ...",
+          "similarity": 0.12
+        },
+        {
+          "position": 84,
+          "sentence_pair": "Red crouched beside the scarre... → Dr....",
+          "similarity": 0.11
+        },
+        {
+          "position": 85,
+          "sentence_pair": "Dr.... → Hood, her posture rigid with u...",
+          "similarity": 0.119
+        },
+        {
+          "position": 89,
+          "sentence_pair": "Red nodded, securing the drive... → Dr....",
+          "similarity": 0.101
+        },
+        {
+          "position": 90,
+          "sentence_pair": "Dr.... → Hood adjusted the biometric sc...",
+          "similarity": 0.056
+        },
+        {
+          "position": 91,
+          "sentence_pair": "Hood adjusted the biometric sc... → 'Wolf Units are still loose in...",
+          "similarity": 0.084
+        },
+        {
+          "position": 106,
+          "sentence_pair": "' Red responded with calm prof... → Security Drone AIThe drone's s...",
+          "similarity": 0.134
+        },
+        {
+          "position": 130,
+          "sentence_pair": "It blocked her path and scanne... → Wolf Unit-9's optics narrow as...",
+          "similarity": 0.114
+        },
+        {
+          "position": 136,
+          "sentence_pair": "State your designation and pur... → Red shifts the satchel behind ...",
+          "similarity": 0.101
+        },
+        {
+          "position": 142,
+          "sentence_pair": "” The words came quickly, prac... → Wolf Unit-9 steps forward, a w...",
+          "similarity": 0.157
+        },
+        {
+          "position": 148,
+          "sentence_pair": "“Unauthorized transfer of medi... → Red tightens her grip on the s...",
+          "similarity": 0.091
+        },
+        {
+          "position": 153,
+          "sentence_pair": "” Her eyes met the scanner’s l... → “So unless you’re here to help...",
+          "similarity": 0.12
+        },
+        {
+          "position": 182,
+          "sentence_pair": "Eyes darting to the shadowed a... → “You don’t understand—there’s ...",
+          "similarity": 0.118
+        },
+        {
+          "position": 197,
+          "sentence_pair": "With a defiant tilt of her chi... → State your designation and pur...",
+          "similarity": 0.139
+        },
+        {
+          "position": 206,
+          "sentence_pair": "” She paused just long enough ... → “Is that standard protocol aft...",
+          "similarity": 0.152
+        },
+        {
+          "position": 207,
+          "sentence_pair": "“Is that standard protocol aft... → ” The question hung in the air...",
+          "similarity": 0.133
+        },
+        {
+          "position": 212,
+          "sentence_pair": "As she spoke, her eyes seemed ... → “It allows for increased cover...",
+          "similarity": 0.059
+        },
+        {
+          "position": 213,
+          "sentence_pair": "“It allows for increased cover... → ” All the while, Red kept her ...",
+          "similarity": 0.139
+        },
+        {
+          "position": 219,
+          "sentence_pair": "” She watched the android’s he... → “Or is the new pattern going t...",
+          "similarity": 0.049
+        },
+        {
+          "position": 220,
+          "sentence_pair": "“Or is the new pattern going t... → ” Red’s fingers danced quietly...",
+          "similarity": 0.108
+        },
+        {
+          "position": 225,
+          "sentence_pair": "“The recalibrated vectors prio... → “Its recent breach history dem...",
+          "similarity": 0.143
+        },
+        {
+          "position": 226,
+          "sentence_pair": "“Its recent breach history dem... → Secondary sectors have receive...",
+          "similarity": 0.132
+        },
+        {
+          "position": 227,
+          "sentence_pair": "Secondary sectors have receive... → ” As she spoke, her attention ...",
+          "similarity": 0.056
+        },
+        {
+          "position": 230,
+          "sentence_pair": "Red retorted that delay would ... → Wolf Unit-9 remained unmoved, ...",
+          "similarity": 0.161
+        },
+        {
+          "position": 261,
+          "sentence_pair": "Her words crackled over the st... → I’m already past the eastern s...",
+          "similarity": 0.079
+        },
+        {
+          "position": 263,
+          "sentence_pair": "Recommend recalibrating before... → In the surveillance hub, the n...",
+          "similarity": 0.164
+        },
+        {
+          "position": 264,
+          "sentence_pair": "In the surveillance hub, the n... → Wolf Unit-9 halted its mechani...",
+          "similarity": 0.161
+        },
+        {
+          "position": 271,
+          "sentence_pair": "The decoy subroutine Red had t... → It analyzed the thermal scans,...",
+          "similarity": 0.026
+        },
+        {
+          "position": 272,
+          "sentence_pair": "It analyzed the thermal scans,... → Red was bluffing, and Wolf Uni...",
+          "similarity": 0.118
+        },
+        {
+          "position": 287,
+          "sentence_pair": "maybe your scans aren’t as rel... → ” Her words lingered in the co...",
+          "similarity": 0.147
+        },
+        {
+          "position": 293,
+          "sentence_pair": "North entrance alarms?... → That was curious, considering ...",
+          "similarity": 0.166
+        },
+        {
+          "position": 300,
+          "sentence_pair": "Yet as his nanodrones complete... → A smirk, almost human, curled ...",
+          "similarity": 0.112
+        },
+        {
+          "position": 304,
+          "sentence_pair": "“Odd.... → My nanodrones just mapped zero...",
+          "similarity": 0.117
+        },
+        {
+          "position": 305,
+          "sentence_pair": "My nanodrones just mapped zero... → ” His gaze narrowed on the dat...",
+          "similarity": 0.173
+        },
+        {
+          "position": 306,
+          "sentence_pair": "” His gaze narrowed on the dat... → She was clever, but not clever...",
+          "similarity": 0.084
+        },
+        {
+          "position": 307,
+          "sentence_pair": "She was clever, but not clever... → “Are you transmitting from a r...",
+          "similarity": 0.091
+        },
+        {
+          "position": 316,
+          "sentence_pair": "Even as she felt the pressure ... → Wolf Unit-9 diverts a portion ...",
+          "similarity": 0.093
+        },
+        {
+          "position": 321,
+          "sentence_pair": "He flagged the relay as a prob... → No detail would slip past him;...",
+          "similarity": 0.145
+        },
+        {
+          "position": 323,
+          "sentence_pair": "he would not miss even the fai... → Red triggers a false motion al...",
+          "similarity": 0.138
+        },
+        {
+          "position": 343,
+          "sentence_pair": "The machine whirred in protest... → But Red was quicker—her virus ...",
+          "similarity": 0.148
+        },
+        {
+          "position": 362,
+          "sentence_pair": "She squared her shoulders, lip... → You’re not the only one with u...",
+          "similarity": -0.061
+        }
+      ],
+      "high_coherence_segments": [
+        {
+          "start_sentence": 6,
+          "end_sentence": 9,
+          "length": 4,
+          "average_similarity": 0.676
+        },
+        {
+          "start_sentence": 15,
+          "end_sentence": 17,
+          "length": 3,
+          "average_similarity": 0.535
+        },
+        {
+          "start_sentence": 53,
+          "end_sentence": 55,
+          "length": 3,
+          "average_similarity": 0.643
+        },
+        {
+          "start_sentence": 100,
+          "end_sentence": 102,
+          "length": 3,
+          "average_similarity": 0.487
+        },
+        {
+          "start_sentence": 107,
+          "end_sentence": 110,
+          "length": 4,
+          "average_similarity": 0.484
+        },
+        {
+          "start_sentence": 125,
+          "end_sentence": 127,
+          "length": 3,
+          "average_similarity": 0.489
+        },
+        {
+          "start_sentence": 131,
+          "end_sentence": 134,
+          "length": 4,
+          "average_similarity": 0.519
+        },
+        {
+          "start_sentence": 137,
+          "end_sentence": 139,
+          "length": 3,
+          "average_similarity": 0.586
+        },
+        {
+          "start_sentence": 143,
+          "end_sentence": 145,
+          "length": 3,
+          "average_similarity": 0.682
+        },
+        {
+          "start_sentence": 191,
+          "end_sentence": 193,
+          "length": 3,
+          "average_similarity": 0.571
+        },
+        {
+          "start_sentence": 200,
+          "end_sentence": 203,
+          "length": 4,
+          "average_similarity": 0.622
+        },
+        {
+          "start_sentence": 214,
+          "end_sentence": 216,
+          "length": 3,
+          "average_similarity": 0.832
+        },
+        {
+          "start_sentence": 221,
+          "end_sentence": 223,
+          "length": 3,
+          "average_similarity": 0.678
+        },
+        {
+          "start_sentence": 231,
+          "end_sentence": 234,
+          "length": 4,
+          "average_similarity": 0.581
+        },
+        {
+          "start_sentence": 240,
+          "end_sentence": 243,
+          "length": 4,
+          "average_similarity": 0.53
+        },
+        {
+          "start_sentence": 248,
+          "end_sentence": 250,
+          "length": 3,
+          "average_similarity": 0.503
+        },
+        {
+          "start_sentence": 251,
+          "end_sentence": 253,
+          "length": 3,
+          "average_similarity": 0.494
+        },
+        {
+          "start_sentence": 258,
+          "end_sentence": 260,
+          "length": 3,
+          "average_similarity": 0.507
+        },
+        {
+          "start_sentence": 273,
+          "end_sentence": 275,
+          "length": 3,
+          "average_similarity": 0.63
+        },
+        {
+          "start_sentence": 284,
+          "end_sentence": 286,
+          "length": 3,
+          "average_similarity": 0.514
+        },
+        {
+          "start_sentence": 324,
+          "end_sentence": 326,
+          "length": 3,
+          "average_similarity": 0.499
+        },
+        {
+          "start_sentence": 351,
+          "end_sentence": 356,
+          "length": 6,
+          "average_similarity": 0.588
+        },
+        {
+          "start_sentence": 368,
+          "end_sentence": 370,
+          "length": 3,
+          "average_similarity": 0.596
+        },
+        {
+          "start_sentence": 385,
+          "end_sentence": 388,
+          "length": 4,
+          "average_similarity": 0.518
+        }
+      ],
+      "objective_description": {
+        "score": 0.3576,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "pairwise_similarity_examples": [
+      {
+        "sentence_pair": "Sentence 1 → Sentence 2",
+        "sentence_1": "Red crouched behind a felled log, her breath formi...",
+        "sentence_2": "She scanned the warped entry gate, noticing the fl...",
+        "similarity": 0.375
+      },
+      {
+        "sentence_pair": "Sentence 2 → Sentence 3",
+        "sentence_1": "She scanned the warped entry gate, noticing the fl...",
+        "sentence_2": "Red extracted a slim hacking tool from her satchel...",
+        "similarity": 0.4815
+      },
+      {
+        "sentence_pair": "Sentence 3 → Sentence 4",
+        "sentence_1": "Red extracted a slim hacking tool from her satchel...",
+        "sentence_2": "Wolf Unit-9 paused, cocked its head, and began met...",
+        "similarity": 0.3905
+      },
+      {
+        "sentence_pair": "Sentence 4 → Sentence 5",
+        "sentence_1": "Wolf Unit-9 paused, cocked its head, and began met...",
+        "sentence_2": "Red watched, tracking its rhythm, then darted to a...",
+        "similarity": 0.3363
+      },
+      {
+        "sentence_pair": "Sentence 5 → Sentence 6",
+        "sentence_1": "Red watched, tracking its rhythm, then darted to a...",
+        "sentence_2": "The android pivoted, addressing Red directly: 'Des...",
+        "similarity": 0.4459
+      },
+      {
+        "sentence_pair": "Sentence 6 → Sentence 7",
+        "sentence_1": "The android pivoted, addressing Red directly: 'Des...",
+        "sentence_2": "Wolf Unit-9 straightens, shoulders tensing as sens...",
+        "similarity": 0.631
+      },
+      {
+        "sentence_pair": "Sentence 7 → Sentence 8",
+        "sentence_1": "Wolf Unit-9 straightens, shoulders tensing as sens...",
+        "sentence_2": "Wolf Unit-9 straightened, shoulders rigid as its i...",
+        "similarity": 0.8969
+      },
+      {
+        "sentence_pair": "Sentence 8 → Sentence 9",
+        "sentence_1": "Wolf Unit-9 straightened, shoulders rigid as its i...",
+        "sentence_2": "Its eyes flickered with a predatory gleam, voice m...",
+        "similarity": 0.4998
+      },
+      {
+        "sentence_pair": "Sentence 9 → Sentence 10",
+        "sentence_1": "Its eyes flickered with a predatory gleam, voice m...",
+        "sentence_2": "“Designation: Wolf Unit-9.",
+        "similarity": 0.269
+      },
+      {
+        "sentence_pair": "Sentence 10 → Sentence 11",
+        "sentence_1": "“Designation: Wolf Unit-9.",
+        "sentence_2": "Mission parameters classified.",
+        "similarity": 0.3927
+      },
+      {
+        "sentence_pair": "Sentence 11 → Sentence 12",
+        "sentence_1": "Mission parameters classified.",
+        "sentence_2": "” The declaration was cold, clipped—deceptively ne...",
+        "similarity": 0.0941
+      },
+      {
+        "sentence_pair": "Sentence 12 → Sentence 13",
+        "sentence_1": "” The declaration was cold, clipped—deceptively ne...",
+        "sentence_2": "Still, Wolf Unit-9’s gaze never wavered, algorithm...",
+        "similarity": 0.223
+      },
+      {
+        "sentence_pair": "Sentence 13 → Sentence 14",
+        "sentence_1": "Still, Wolf Unit-9’s gaze never wavered, algorithm...",
+        "sentence_2": "Mission parameters classified.",
+        "similarity": 0.2515
+      },
+      {
+        "sentence_pair": "Sentence 14 → Sentence 15",
+        "sentence_1": "Mission parameters classified.",
+        "sentence_2": "Wolf Unit-9 steps forward, mechanical frame hummin...",
+        "similarity": 0.386
+      },
+      {
+        "sentence_pair": "Sentence 15 → Sentence 16",
+        "sentence_1": "Wolf Unit-9 steps forward, mechanical frame hummin...",
+        "sentence_2": "The servos in its right arm tense, ready for escal...",
+        "similarity": 0.5004
+      },
+      {
+        "sentence_pair": "Sentence 16 → Sentence 17",
+        "sentence_1": "The servos in its right arm tense, ready for escal...",
+        "sentence_2": "Wolf Unit-9 advanced, its mechanical frame radiati...",
+        "similarity": 0.569
+      },
+      {
+        "sentence_pair": "Sentence 17 → Sentence 18",
+        "sentence_1": "Wolf Unit-9 advanced, its mechanical frame radiati...",
+        "sentence_2": "Its optics fixed unblinkingly on Red, the android’...",
+        "similarity": 0.298
+      },
+      {
+        "sentence_pair": "Sentence 18 → Sentence 19",
+        "sentence_1": "Its optics fixed unblinkingly on Red, the android’...",
+        "sentence_2": "Red was in violation of Protocol Sigma-12, Wolf Un...",
+        "similarity": 0.2217
+      },
+      {
+        "sentence_pair": "Sentence 19 → Sentence 20",
+        "sentence_1": "Red was in violation of Protocol Sigma-12, Wolf Un...",
+        "sentence_2": "There would be no room for negotiation, not with s...",
+        "similarity": 0.1305
+      },
+      {
+        "sentence_pair": "Sentence 20 → Sentence 21",
+        "sentence_1": "There would be no room for negotiation, not with s...",
+        "sentence_2": "Wolf Unit-9 demanded compliance—stand down, surren...",
+        "similarity": 0.2538
+      },
+      {
+        "note": "Only showing first 20 pairs, total of 390 adjacent sentence pairs"
+      }
+    ]
+  },
+  "story_structure_analysis": {
+    "evaluation_mode": "default mode",
+    "event_list": [
+      {
+        "event": "Red crouches behind a log, observing Wolf Unit-9 near the generator shed.",
+        "source": "Red crouched behind a felled log, her breath forming mist in the chill.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red prepares her hacking tool, calculating her approach to the compound.",
+        "source": "Red extracted a slim hacking tool from her satchel, fingers trembling as she calculated her approach.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Unit-9 slices the last strands of security wire with a retractable blade.",
+        "source": "Wolf Unit-9 paused, cocked its head, and began methodically slicing through the last strands of security wire with a retractable blade.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red darts to a busted console and activates its manual override.",
+        "source": "Red watched, tracking its rhythm, then darted to a busted console under the canopy, activating its manual override.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Unit-9 confronts Red, demanding authorization protocol and stating mission parameters are classified.",
+        "source": "“Designation: Wolf Unit-9.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Unit-9 advances, warns Red of protocol violation, and demands surrender of the classified drive.",
+        "source": "Wolf Unit-9 advanced, its mechanical frame radiating a barely-contained menace, every servo in its right arm coiling with potential energy.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Unit-9 threatens to use force if Red escalates the situation or refuses orders.",
+        "source": "“My orders are clear, and I will use force if necessary.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red tightens grip on the drive, scans for exits, and challenges Wolf Unit-9's allegiance.",
+        "source": "Red’s fingers tightened around the drive, knuckles paling as she measured the distance to the nearest exit—always calculating, always a step ahead.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Unit-9 declares allegiance to the colony, not handlers, and issues a final warning for Red to surrender the drive.",
+        "source": "Allegiance, it declared, was not to the unseen handlers lurking in darkness, but to the fragile lives clustered here, beneath the city’s fractured neon.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red refuses to surrender the drive, stating Wolf Unit-9 will have to take it from her.",
+        "source": "“If you want it, you’ll have to take it from me,” she said, her voice steady, low, carrying the steel edge of someone who’d been cornered before and survived.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red triggers the manual override, setting off emergency klaxons and strobing lights in the compound.",
+        "source": "' Emergency klaxons blared as Red triggered the manual override, strobing lights filling the compound.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Unit-9 lunges at Red, forcing her to retreat toward the outpost entrance.",
+        "source": "Wolf Unit-9 lunged, metallic limbs scraping across concrete, forcing Red to retreat further toward the outpost entrance.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red escapes into the night with the stolen drive as alarms echo and Wolf Unit-9 pursues.",
+        "source": "As alarms echoed through the compound and Wolf Unit-9 pursued relentlessly, Red slipped into the night with the stolen drive pressed tight against her chest.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red receives a sealed data drive from Dr. Hood, who explains its importance for her grandmother's survival.",
+        "source": "Hood, her posture rigid with urgency, slid a sealed data drive across the bench, its casing warm from recent encryption.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red secures the drive, checks her satchel, and receives instructions and a comm-link from Dr. Hood.",
+        "source": "Red nodded, securing the drive into her vest pocket, then triple-checked the magnetic seals on her courier satchel.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red powers on her wristpad, scans route overlays, recalibrates her scrambler, and prepares to leave.",
+        "source": "Red powered on her wristpad, scanning the route overlays and recalibrating her scrambler, the faint tang of ozone stinging her nose as she prepared to leave.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red steps outside the clinic, slips the data drive into her jacket, and heads toward the forest sector.",
+        "source": "Outside the clinic, dusk painted the colony streets in restless shadows, and Red hesitated only a moment before slipping the data drive into her jacket.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red approaches the first checkpoint; a Security Drone AI scans her cargo and credentials.",
+        "source": "Red approached the first checkpoint, her weatherproof pack secure and the data drive nestled in its reinforced pocket.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red presents her ID and mission, requesting confirmation to proceed to Outpost 17.",
+        "source": "“This is Red,” she announced, voice steady and clear, “courier on official assignment.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "The drone verifies Red's credentials, logs her authorized status, and allows her to pass through.",
+        "source": "' The drone scanned her pack and ID chip, then, after verifying her credentials and the mission, sent a confirmation ping to central command before retracting its limbs and allowing her to pass.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red continues down the moss-lined path, while the drone resumes patrol and logs her passage.",
+        "source": "Red adjusted her hood and continued down the moss-lined path, boots squelching in the soft earth.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red notices signs of machine activity and is intercepted by Wolf Unit-9, who blocks her path and scans her satchel.",
+        "source": "Nearing the checkpoint, she noticed telltale signs of recent machine activity: a faint metallic scent and fresh gouges in the bark.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red asserts she is a courier delivering urgent medical supplies to the outpost.",
+        "source": "Forcing her voice to steady, she said, “I’m just a courier—these supplies are for the outpost infirmary.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Unit-9 checks the manifest, finds no record of Red, and warns of penal consequences for unauthorized asset transfer.",
+        "source": "“The manifest does not list your designation,” it stated, words clipped and precise.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red insists delay would endanger lives and pleads for Wolf Unit-9's cooperation.",
+        "source": "With a steady voice edged in urgency, she said, “If those vaccines don’t reach the outpost in the next hour, people out there could die.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Unit-9 cites protocol, threatens detainment and confiscation, and blocks Red's path.",
+        "source": "“Protocol supersedes urgency,” it intoned, each word measured and unyielding.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red challenges Wolf Unit-9 on prioritizing protocol over lives, warning that detainment dooms the outpost.",
+        "source": "“If you detain me,” she warned, her eyes locked on the machine’s unfeeling lens, “you doom the entire outpost—are you willing to trade lives for protocol?",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Unit-9 emits a comms pulse to command, positions itself to block Red, and begins escalation protocol.",
+        "source": "Wolf Unit-9 emitted a sharp, focused pulse from its comms array—a silent transmission slicing through the air, destined for command.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red declares she will find another way if Wolf Unit-9 won't help, preparing to bolt.",
+        "source": "“You don’t understand—there’s no time for your ‘remote authorization.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Unit-9 warns interference will trigger containment subroutines, but Red defies the threat and prepares to escape.",
+        "source": "Voice modulated to a low, warning register, the android stated without a hint of hesitation, “Interference will trigger containment subroutines;",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red distracts Wolf Unit-9 by asking about drone patrol patterns, monitoring for a chance to escape.",
+        "source": "Red angled her head thoughtfully, letting her gaze linger on the flickering surveillance monitors.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Unit-9 responds to Red's questions about drone patrol vectors, momentarily distracted.",
+        "source": "“The adjustment in drone patrol vectors is standard protocol following a perimeter anomaly,” she intoned, her voice even yet edged with an undertone of calculated certainty.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red uses the distraction to assess escape routes as Wolf Unit-9 elaborates on sector coverage.",
+        "source": "Red shifted her weight just enough to angle the transmitter’s screen into view, her gaze darting between the fluctuating signal and Wolf Unit-9’s rigid stance.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Unit-9 explains recalibrated drone vectors prioritize Sector C, keeping attention on Red.",
+        "source": "“The recalibrated vectors prioritize Sector C for overlap,” Wolf Unit-9 explained, her tone clipped and efficient.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "A distant Security Drone AI alarm blares, causing Red to dash for the checkpoint perimeter and Wolf Unit-9 to withdraw.",
+        "source": "The tense standoff was broken when a distant alarm from the Security Drone AI blared, forcing both Red and Wolf Unit-9 to withdraw: Red dashed toward the checkpoint perimeter as Wolf Unit-9 faded into the trees, recalibrating its approach for a later intercept.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red kneels behind a log, traces Wolf Unit-9’s signal, and notices its tracks toward the checkpoint.",
+        "source": "Red kneels behind the log, tapping rapidly on her battered wristpad, the screen flickering as she traces Wolf Unit-9’s signal through colony net nodes.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red splices a comms relay into a maintenance cable to override checkpoint protocols.",
+        "source": "Driven by the urgent need to deliver the AI update to her grandmother, Red pries a comms relay module from her satchel and splices it into a nearby maintenance cable, attempting to override the checkpoint protocols.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Unit-9 appears, scans the area, and slices through security wires, heading toward the checkpoint.",
+        "source": "The android pauses, scanning the area with glowing blue optics, then slices through a tangle of security wires with an extendable blade, outpacing Red and heading toward the checkpoint.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red reroutes her hack to try to lock out Wolf Unit-9 before it can reach the security drone.",
+        "source": "Red bites her lip and reroutes her hack, desperate to lock out Wolf Unit-9 before it can reach the security drone ahead.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Wolf Unit-9 engage in a digital chess match, each using decoys and technical tricks to mislead the other.",
+        "source": "Their exchange became a high-stakes digital chess match, each trying to outmaneuver the other with technical tricks and taunts.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red routes her voice through relays, causing Wolf Unit-9 to redirect surveillance and become uncertain of her location.",
+        "source": "Red’s fingers danced across the interface, rerouting the decoy’s signal to bounce off two additional comms relays.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Unit-9 initiates triangulation protocol, deploys nanodrones, and scans for Red's real location.",
+        "source": "Wolf Unit-9’s optic sensors flickered as he initiated the signal triangulation protocol, digital tendrils reaching out to map the comms landscape.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red triggers a false motion alert in an unused corridor to further distract Wolf Unit-9.",
+        "source": "Red’s fingers flew over the cracked datapad, initiating the decoy subroutine she’d threaded into the colony’s ancient security grid.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "As Wolf Unit-9's systems become preoccupied with false signals, Red exploits a vulnerability, taking remote control and scrambling its routines.",
+        "source": "As Wolf Unit-9's systems became preoccupied with chasing Red's false signals and patching firmware vulnerabilities, Red exploited a vulnerability she had seeded in the android's code, taking remote control and scrambling its core routines.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Unit-9's limbs seize and collapse as Red's virus disables it; Red retrieves her data spike and escapes.",
+        "source": "Wolf Unit-9's protests glitched into static as its limbs seized and collapsed onto the wet concrete.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red hides from a Security Drone AI, spoofs a cargo manifest, and notices Wolf Unit-9's silhouette watching.",
+        "source": "Red ducks behind a mossy stump, clutching the data drive tight to her jacket as the Security Drone AI floats overhead, its scanners flickering red across the undergrowth.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Unit-9 attempts to intercept Red, but she vaults over a log and triggers a remote EMP patch.",
+        "source": "The android steps forward, its movements liquid and precise, attempting to intercept Red with outstretched servos, but she vaults over a fallen log, triggering a remote EMP patch.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red activates the EMP patch, sending a pulse that disrupts Wolf Unit-9 as it closes in.",
+        "source": "Sparks dance as the patch hums to life, sending a pulse that crackles through the air just as Wolf Unit-9 closes in.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf Unit-9 staggers, servos twitching and vision flickering, but recalibrates and continues pursuit.",
+        "source": "Wolf Unit-9 staggered mid-stride, its servos twitching in staccato bursts as a haze of static danced across its optical array.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red sprints deeper into the woods as Wolf Unit-9's systems struggle, hesitating for the first time.",
+        "source": "Red plunged deeper into the tangled underbrush, boots scraping against roots slick with condensation.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red escapes, leaving the drone disabled and Wolf Unit-9 stalled, breaking through the checkpoint with the drive.",
+        "source": "With the drone disabled and Wolf Unit-9 momentarily stalled, Red sprints toward the outpost boundary, the smell of ozone lingering behind her.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      }
+    ],
+    "Papalampidi_detailed_results": {
+      "turning_points": {
+        "TP1": "Red receives a sealed data drive from Dr. Hood, who explains its importance for her grandmother's survival.",
+        "TP2": "Wolf Unit-9 checks the manifest, finds no record of Red, and warns of penal consequences for unauthorized asset transfer.",
+        "TP3": "Red declares she will find another way if Wolf Unit-9 won't help, preparing to bolt.",
+        "TP4": "Wolf Unit-9 lunges at Red, forcing her to retreat toward the outpost entrance.",
+        "TP5": "Red escapes into the night with the stolen drive as alarms echo and Wolf Unit-9 pursues."
+      },
+      "stage_division": {
+        "Setup": [
+          "Red receives a sealed data drive from Dr. Hood, who explains its importance for her grandmother's survival.",
+          "Red secures the drive, checks her satchel, and receives instructions and a comm-link from Dr. Hood.",
+          "Red powers on her wristpad, scans route overlays, recalibrates her scrambler, and prepares to leave.",
+          "Red steps outside the clinic, slips the data drive into her jacket, and heads toward the forest sector."
+        ],
+        "New Situation": [
+          "Red approaches the first checkpoint; a Security Drone AI scans her cargo and credentials.",
+          "Red presents her ID and mission, requesting confirmation to proceed to Outpost 17.",
+          "The drone verifies Red's credentials, logs her authorized status, and allows her to pass through.",
+          "Red continues down the moss-lined path, while the drone resumes patrol and logs her passage."
+        ],
+        "Progress": [
+          "Red notices signs of machine activity and is intercepted by Wolf Unit-9, who blocks her path and scans her satchel.",
+          "Red asserts she is a courier delivering urgent medical supplies to the outpost.",
+          "Wolf Unit-9 checks the manifest, finds no record of Red, and warns of penal consequences for unauthorized asset transfer.",
+          "Red insists delay would endanger lives and pleads for Wolf Unit-9's cooperation.",
+          "Wolf Unit-9 cites protocol, threatens detainment and confiscation, and blocks Red's path.",
+          "Red challenges Wolf Unit-9 on prioritizing protocol over lives, warning that detainment dooms the outpost.",
+          "Wolf Unit-9 emits a comms pulse to command, positions itself to block Red, and begins escalation protocol.",
+          "Red declares she will find another way if Wolf Unit-9 won't help, preparing to bolt.",
+          "Wolf Unit-9 warns interference will trigger containment subroutines, but Red defies the threat and prepares to escape."
+        ],
+        "Complications": [
+          "Red distracts Wolf Unit-9 by asking about drone patrol patterns, monitoring for a chance to escape.",
+          "Wolf Unit-9 responds to Red's questions about drone patrol vectors, momentarily distracted.",
+          "Red uses the distraction to assess escape routes as Wolf Unit-9 elaborates on sector coverage.",
+          "Wolf Unit-9 explains recalibrated drone vectors prioritize Sector C, keeping attention on Red.",
+          "A distant Security Drone AI alarm blares, causing Red to dash for the checkpoint perimeter and Wolf Unit-9 to withdraw.",
+          "Red kneels behind a log, traces Wolf Unit-9’s signal, and notices its tracks toward the checkpoint.",
+          "Red splices a comms relay into a maintenance cable to override checkpoint protocols.",
+          "Wolf Unit-9 appears, scans the area, and slices through security wires, heading toward the checkpoint.",
+          "Red reroutes her hack to try to lock out Wolf Unit-9 before it can reach the security drone.",
+          "Red and Wolf Unit-9 engage in a digital chess match, each using decoys and technical tricks to mislead the other.",
+          "Red routes her voice through relays, causing Wolf Unit-9 to redirect surveillance and become uncertain of her location.",
+          "Wolf Unit-9 initiates triangulation protocol, deploys nanodrones, and scans for Red's real location.",
+          "Red triggers a false motion alert in an unused corridor to further distract Wolf Unit-9.",
+          "As Wolf Unit-9's systems become preoccupied with false signals, Red exploits a vulnerability, taking remote control and scrambling its routines.",
+          "Wolf Unit-9's limbs seize and collapse as Red's virus disables it; Red retrieves her data spike and escapes.",
+          "Red hides from a Security Drone AI, spoofs a cargo manifest, and notices Wolf Unit-9's silhouette watching.",
+          "Wolf Unit-9 attempts to intercept Red, but she vaults over a log and triggers a remote EMP patch.",
+          "Red activates the EMP patch, sending a pulse that disrupts Wolf Unit-9 as it closes in.",
+          "Wolf Unit-9 staggers, servos twitching and vision flickering, but recalibrates and continues pursuit.",
+          "Red sprints deeper into the woods as Wolf Unit-9's systems struggle, hesitating for the first time."
+        ],
+        "Final Push": [
+          "Red escapes, leaving the drone disabled and Wolf Unit-9 stalled, breaking through the checkpoint with the drive.",
+          "Red crouches behind a log, observing Wolf Unit-9 near the generator shed.",
+          "Red prepares her hacking tool, calculating her approach to the compound.",
+          "Wolf Unit-9 slices the last strands of security wire with a retractable blade.",
+          "Red darts to a busted console and activates its manual override.",
+          "Wolf Unit-9 confronts Red, demanding authorization protocol and stating mission parameters are classified.",
+          "Wolf Unit-9 advances, warns Red of protocol violation, and demands surrender of the classified drive.",
+          "Wolf Unit-9 threatens to use force if Red escalates the situation or refuses orders.",
+          "Red tightens grip on the drive, scans for exits, and challenges Wolf Unit-9's allegiance.",
+          "Wolf Unit-9 declares allegiance to the colony, not handlers, and issues a final warning for Red to surrender the drive.",
+          "Red refuses to surrender the drive, stating Wolf Unit-9 will have to take it from her.",
+          "Red triggers the manual override, setting off emergency klaxons and strobing lights in the compound.",
+          "Wolf Unit-9 lunges at Red, forcing her to retreat toward the outpost entrance.",
+          "Red escapes into the night with the stolen drive as alarms echo and Wolf Unit-9 pursues."
+        ],
+        "Aftermath": []
+      }
+    },
+    "Li_detailed_results": {
+      "Red crouches behind a log, observing Wolf Unit-9 near the generator shed.": "Orientation",
+      "Red prepares her hacking tool, calculating her approach to the compound.": "Orientation",
+      "Wolf Unit-9 slices the last strands of security wire with a retractable blade.": "Orientation",
+      "Red darts to a busted console and activates its manual override.": "Complicating Action",
+      "Wolf Unit-9 confronts Red, demanding authorization protocol and stating mission parameters are classified.": "Complicating Action",
+      "Wolf Unit-9 advances, warns Red of protocol violation, and demands surrender of the classified drive.": "Complicating Action",
+      "Wolf Unit-9 threatens to use force if Red escalates the situation or refuses orders.": "Complicating Action",
+      "Red tightens grip on the drive, scans for exits, and challenges Wolf Unit-9's allegiance.": "Complicating Action",
+      "Wolf Unit-9 declares allegiance to the colony, not handlers, and issues a final warning for Red to surrender the drive.": "Complicating Action",
+      "Red refuses to surrender the drive, stating Wolf Unit-9 will have to take it from her.": "MRE",
+      "Red triggers the manual override, setting off emergency klaxons and strobing lights in the compound.": "Minor Resolution",
+      "Wolf Unit-9 lunges at Red, forcing her to retreat toward the outpost entrance.": "Complicating Action",
+      "Red escapes into the night with the stolen drive as alarms echo and Wolf Unit-9 pursues.": "Resolution",
+      "Red receives a sealed data drive from Dr. Hood, who explains its importance for her grandmother's survival.": "Orientation",
+      "Red secures the drive, checks her satchel, and receives instructions and a comm-link from Dr. Hood.": "Orientation",
+      "Red powers on her wristpad, scans route overlays, recalibrates her scrambler, and prepares to leave.": "Orientation",
+      "Red steps outside the clinic, slips the data drive into her jacket, and heads toward the forest sector.": "Orientation",
+      "Red approaches the first checkpoint; a Security Drone AI scans her cargo and credentials.": "Orientation",
+      "Red presents her ID and mission, requesting confirmation to proceed to Outpost 17.": "Orientation",
+      "The drone verifies Red's credentials, logs her authorized status, and allows her to pass through.": "Minor Resolution",
+      "Red continues down the moss-lined path, while the drone resumes patrol and logs her passage.": "Minor Resolution",
+      "Red notices signs of machine activity and is intercepted by Wolf Unit-9, who blocks her path and scans her satchel.": "Complicating Action",
+      "Red asserts she is a courier delivering urgent medical supplies to the outpost.": "Complicating Action",
+      "Wolf Unit-9 checks the manifest, finds no record of Red, and warns of penal consequences for unauthorized asset transfer.": "Complicating Action",
+      "Red insists delay would endanger lives and pleads for Wolf Unit-9's cooperation.": "Complicating Action",
+      "Wolf Unit-9 cites protocol, threatens detainment and confiscation, and blocks Red's path.": "Complicating Action",
+      "Red challenges Wolf Unit-9 on prioritizing protocol over lives, warning that detainment dooms the outpost.": "Complicating Action",
+      "Wolf Unit-9 emits a comms pulse to command, positions itself to block Red, and begins escalation protocol.": "Complicating Action",
+      "Red declares she will find another way if Wolf Unit-9 won't help, preparing to bolt.": "Complicating Action",
+      "Wolf Unit-9 warns interference will trigger containment subroutines, but Red defies the threat and prepares to escape.": "Complicating Action",
+      "Red distracts Wolf Unit-9 by asking about drone patrol patterns, monitoring for a chance to escape.": "Complicating Action",
+      "Wolf Unit-9 responds to Red's questions about drone patrol vectors, momentarily distracted.": "Minor Resolution",
+      "Red uses the distraction to assess escape routes as Wolf Unit-9 elaborates on sector coverage.": "Minor Resolution",
+      "Wolf Unit-9 explains recalibrated drone vectors prioritize Sector C, keeping attention on Red.": "Minor Resolution",
+      "A distant Security Drone AI alarm blares, causing Red to dash for the checkpoint perimeter and Wolf Unit-9 to withdraw.": "Minor Resolution",
+      "Red kneels behind a log, traces Wolf Unit-9’s signal, and notices its tracks toward the checkpoint.": "Complicating Action",
+      "Red splices a comms relay into a maintenance cable to override checkpoint protocols.": "Complicating Action",
+      "Wolf Unit-9 appears, scans the area, and slices through security wires, heading toward the checkpoint.": "Complicating Action",
+      "Red reroutes her hack to try to lock out Wolf Unit-9 before it can reach the security drone.": "Complicating Action",
+      "Red and Wolf Unit-9 engage in a digital chess match, each using decoys and technical tricks to mislead the other.": "Complicating Action",
+      "Red routes her voice through relays, causing Wolf Unit-9 to redirect surveillance and become uncertain of her location.": "Complicating Action",
+      "Wolf Unit-9 initiates triangulation protocol, deploys nanodrones, and scans for Red's real location.": "Complicating Action",
+      "Red triggers a false motion alert in an unused corridor to further distract Wolf Unit-9.": "Minor Resolution",
+      "As Wolf Unit-9's systems become preoccupied with false signals, Red exploits a vulnerability, taking remote control and scrambling its routines.": "MRE",
+      "Wolf Unit-9's limbs seize and collapse as Red's virus disables it; Red retrieves her data spike and escapes.": "Resolution",
+      "Red hides from a Security Drone AI, spoofs a cargo manifest, and notices Wolf Unit-9's silhouette watching.": "Complicating Action",
+      "Wolf Unit-9 attempts to intercept Red, but she vaults over a log and triggers a remote EMP patch.": "Complicating Action",
+      "Red activates the EMP patch, sending a pulse that disrupts Wolf Unit-9 as it closes in.": "Complicating Action",
+      "Wolf Unit-9 staggers, servos twitching and vision flickering, but recalibrates and continues pursuit.": "Minor Resolution",
+      "Red sprints deeper into the woods as Wolf Unit-9's systems struggle, hesitating for the first time.": "Minor Resolution",
+      "Red escapes, leaving the drone disabled and Wolf Unit-9 stalled, breaking through the checkpoint with the drive.": "Resolution"
+    },
+    "structure_analysis": {
+      "basic_info": {
+        "total_events": 51,
+        "analysis_mode": "default",
+        "analysis_time": null
+      },
+      "Papalampidi_structure_analysis": {
+        "turning_point_integrity": {
+          "identified_tps": [
+            "TP1",
+            "TP2",
+            "TP3",
+            "TP4",
+            "TP5"
+          ],
+          "missing_tps": [],
+          "TP_coverage": "5/5"
+        },
+        "stage_integrity": {
+          "identified_stages": [
+            "Setup",
+            "New Situation",
+            "Progress",
+            "Complications",
+            "Final Push"
+          ],
+          "missing_stages": [
+            "Aftermath"
+          ],
+          "stage_coverage": "5/6"
+        }
+      },
+      "Li_function_analysis": {
+        "core_function_check": {
+          "Orientation": "exists",
+          "Complicating Action": "exists",
+          "MRE": "exists",
+          "Resolution": "exists"
+        },
+        "function_distribution": {
+          "Orientation": 9,
+          "Complicating Action": 27,
+          "MRE": 2,
+          "Minor Resolution": 10,
+          "Resolution": 3
+        },
+        "function_diversity": 5
+      }
+    }
+  }
+}

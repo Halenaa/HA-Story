@@ -1,0 +1,1057 @@
+{
+  "folder_name": "thelittleredridinghood_sciencefictionrewrite_linear_T0.3_s3",
+  "file_path": "/Users/haha/Story/data/output/regression_test/thelittleredridinghood_sciencefictionrewrite_linear_T0.3_s3/enhanced_story_dialogue_updated.md",
+  "analysis_timestamp": null,
+  "emotional_arc_analysis": {
+    "metadata": {
+      "total_chapters": 7,
+      "primary_method": "RoBERTa",
+      "validation_method": "LabMT-en-v1",
+      "analysis_timestamp": "2025-09-09T20:50:59.225992"
+    },
+    "chapter_analysis": [
+      {
+        "chapter_num": 1,
+        "title": "Red Receives the Nanomed Delivery Mission",
+        "roberta_score": 0.2414,
+        "labmt_score": 0.1144,
+        "content_length": 7084
+      },
+      {
+        "chapter_num": 2,
+        "title": "Red Outruns the Cybershark Gang",
+        "roberta_score": -0.1995,
+        "labmt_score": 0.0251,
+        "content_length": 5348
+      },
+      {
+        "chapter_num": 3,
+        "title": "Wolfbot Intercepts Red at Checkpoint",
+        "roberta_score": -0.0325,
+        "labmt_score": 0.1929,
+        "content_length": 5258
+      },
+      {
+        "chapter_num": 4,
+        "title": "Red Tricks Wolfbot and Takes the Forest Route",
+        "roberta_score": -0.449,
+        "labmt_score": 0.1522,
+        "content_length": 1482
+      },
+      {
+        "chapter_num": 5,
+        "title": "Red Encounters Grandma’s Doppelgänger",
+        "roberta_score": -0.1952,
+        "labmt_score": 0.2546,
+        "content_length": 4666
+      },
+      {
+        "chapter_num": 6,
+        "title": "Red Battles Wolfbot in the Colony Core",
+        "roberta_score": -0.1837,
+        "labmt_score": -0.0143,
+        "content_length": 2229
+      },
+      {
+        "chapter_num": 7,
+        "title": "Red Delivers the Nanomed and Makes a Pact",
+        "roberta_score": -0.5058,
+        "labmt_score": 0.1815,
+        "content_length": 1190
+      }
+    ],
+    "primary_analysis": {
+      "method": "RoBERTa",
+      "scores": [
+        0.24140434265136718,
+        -0.19950969616572062,
+        -0.03250752290089925,
+        -0.44901142337105493,
+        -0.19519027471542358,
+        -0.1836853782335917,
+        -0.5058273275693258
+      ],
+      "reagan_classification": {
+        "method": "RoBERTa",
+        "best_match": "Icarus",
+        "confidence": 0.514,
+        "all_similarities": {
+          "Rags to riches": 0,
+          "Tragedy": 0,
+          "Man in a hole": 0,
+          "Icarus": 0.514,
+          "Cinderella": 0,
+          "Oedipus": 0.0674
+        },
+        "reagan_category": "IC"
+      }
+    },
+    "validation_analysis": {
+      "method": "LabMT",
+      "scores": [
+        0.11440159574468023,
+        0.025068306010928465,
+        0.19294230769230736,
+        0.15219999999999967,
+        0.254624183006537,
+        -0.014268292682926953,
+        0.18151515151515163
+      ],
+      "reagan_classification": {
+        "method": "LabMT",
+        "best_match": "Rags to riches",
+        "confidence": 0.6149,
+        "all_similarities": {
+          "Rags to riches": 0.6149,
+          "Tragedy": 0.4901,
+          "Man in a hole": 0.077,
+          "Icarus": 0,
+          "Cinderella": 0.09,
+          "Oedipus": 0
+        },
+        "reagan_category": "RR"
+      }
+    },
+    "correlation_analysis": {
+      "pearson_correlation": {
+        "r": -0.1349,
+        "p_value": 0.7731,
+        "significance": "Not Significant"
+      },
+      "spearman_correlation": {
+        "r": -0.1071,
+        "p_value": 0.8192
+      },
+      "direction_consistency": 0.6667,
+      "consistency_level": "Low",
+      "interpretation": "RoBERTa and LabMT correlation coefficient is -0.135, belongs to weak correlation"
+    },
+    "comparison_analysis": {
+      "disagreement_points": [
+        {
+          "chapter": 4,
+          "roberta_score": -0.44901142337105493,
+          "labmt_score": 0.15219999999999967,
+          "difference": 0.6012
+        },
+        {
+          "chapter": 5,
+          "roberta_score": -0.19519027471542358,
+          "labmt_score": 0.254624183006537,
+          "difference": 0.4498
+        },
+        {
+          "chapter": 7,
+          "roberta_score": -0.5058273275693258,
+          "labmt_score": 0.18151515151515163,
+          "difference": 0.6873
+        }
+      ],
+      "method_advantages": {
+        "RoBERTa": {
+          "strengths": [
+            "Deep learning model with better contextual understanding",
+            "Suitable for modern text and dialogue",
+            "High sensitivity to sci-fi and technical texts"
+          ],
+          "classification": "Icarus",
+          "confidence": 0.514
+        },
+        "LabMT": {
+          "strengths": [
+            "Fully consistent with Reagan's original method",
+            "Based on large-scale human annotation",
+            "Suitable for traditional literary analysis"
+          ],
+          "classification": "Rags to riches",
+          "confidence": 0.6149
+        }
+      },
+      "consistency_assessment": {
+        "classification_agreement": false,
+        "major_disagreements": 3,
+        "recommendation": "Two methods differ significantly, recommend detailed analysis of difference causes, may need more in-depth text feature analysis"
+      }
+    },
+    "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = -0.135 (Low)\n- Consistency level: RoBERTa and LabMT correlation coefficient is -0.135, belongs to weak correlation\n\nClassification Results:\n- RoBERTa (primary): Icarus\n- LabMT (validation): Rags to riches\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is -0.135, showing low consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation.",
+    "output_files": {
+      "analysis_json": "/Users/haha/Story/data/regression_test_analysis/thelittleredridinghood_sciencefictionrewrite_linear_T0.3_s3/roberta_labmt_analysis_20250909_205059.json"
+    }
+  },
+  "hred_coherence_analysis": {
+    "HRED_coherence_evaluation": {
+      "model_name": "all-mpnet-base-v2",
+      "analysis_method": "Original sentence coherence",
+      "total_sentences": 279,
+      "adjacent_pairs": 278,
+      "average_coherence": 0.3349,
+      "objective_description": {
+        "score": 0.3349,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "detailed_analysis": {
+      "basic_statistics": {
+        "average_coherence": 0.33492389156503216,
+        "coherence_std": 0.18126913009558562,
+        "max_coherence": 0.9119580984115601,
+        "min_coherence": -0.04821385070681572,
+        "coherence_median": 0.31185615062713623
+      },
+      "coherence_breakpoints": [
+        {
+          "position": 2,
+          "sentence_pair": "Dr.... → Weaver opens it, glancing over...",
+          "similarity": 0.085
+        },
+        {
+          "position": 5,
+          "sentence_pair": "Dr.... → WeaverWeaver steps in close, v...",
+          "similarity": 0.11
+        },
+        {
+          "position": 6,
+          "sentence_pair": "WeaverWeaver steps in close, v... → Dr....",
+          "similarity": 0.11
+        },
+        {
+          "position": 7,
+          "sentence_pair": "Dr.... → Weaver stepped in close, her v...",
+          "similarity": 0.023
+        },
+        {
+          "position": 22,
+          "sentence_pair": "Red’s fingers hovered near her... → Dr....",
+          "similarity": 0.044
+        },
+        {
+          "position": 23,
+          "sentence_pair": "Dr.... → WeaverWeaver leans closer to t...",
+          "similarity": 0.128
+        },
+        {
+          "position": 33,
+          "sentence_pair": "Red’s jaw clenched.... → If those nets snagged her, it ...",
+          "similarity": 0.1
+        },
+        {
+          "position": 37,
+          "sentence_pair": "Was that stretch crawling with... → Dr....",
+          "similarity": -0.048
+        },
+        {
+          "position": 38,
+          "sentence_pair": "Dr.... → WeaverWeaver taps a flickering...",
+          "similarity": 0.048
+        },
+        {
+          "position": 39,
+          "sentence_pair": "WeaverWeaver taps a flickering... → Dr....",
+          "similarity": 0.048
+        },
+        {
+          "position": 40,
+          "sentence_pair": "Dr.... → Weaver tapped the flickering m...",
+          "similarity": 0.024
+        },
+        {
+          "position": 46,
+          "sentence_pair": "\"Our best bet is the east tunn... → \" His gaze lingered on Red, bo...",
+          "similarity": 0.106
+        },
+        {
+          "position": 50,
+          "sentence_pair": "Red asks if the gang is cooper... → Dr....",
+          "similarity": 0.067
+        },
+        {
+          "position": 51,
+          "sentence_pair": "Dr.... → WeaverWeaver firmly places the...",
+          "similarity": 0.139
+        },
+        {
+          "position": 56,
+          "sentence_pair": "“Grandma’s colony won’t be abl... → ” The weight of responsibility...",
+          "similarity": 0.151
+        },
+        {
+          "position": 61,
+          "sentence_pair": "” Concern flickered in her eye... → “Be careful on the eastern pat...",
+          "similarity": 0.137
+        },
+        {
+          "position": 64,
+          "sentence_pair": "Go quickly, and don’t let anyo... → As she released Red’s hand, th...",
+          "similarity": 0.084
+        },
+        {
+          "position": 71,
+          "sentence_pair": "Grandma and her people were co... → Weaver confirms they are not, ...",
+          "similarity": 0.07
+        },
+        {
+          "position": 76,
+          "sentence_pair": "She slips into the shadowy cit... → Beyond Dr....",
+          "similarity": 0.005
+        },
+        {
+          "position": 77,
+          "sentence_pair": "Beyond Dr.... → Weaver’s closed door, the city...",
+          "similarity": 0.093
+        },
+        {
+          "position": 82,
+          "sentence_pair": "Red sprints across rain-glosse... → Weaver's nanomedicine....",
+          "similarity": 0.019
+        },
+        {
+          "position": 83,
+          "sentence_pair": "Weaver's nanomedicine.... → Two Cybershark Gang Members va...",
+          "similarity": 0.044
+        },
+        {
+          "position": 91,
+          "sentence_pair": "Don’t let her slip past.... → ” His tone left no room for he...",
+          "similarity": 0.057
+        },
+        {
+          "position": 102,
+          "sentence_pair": "Everything we’ve worked for ri... → Without waiting for questions,...",
+          "similarity": 0.025
+        },
+        {
+          "position": 108,
+          "sentence_pair": "“If the courier escapes, we lo... → Move out—and don’t come back u...",
+          "similarity": 0.024
+        },
+        {
+          "position": 109,
+          "sentence_pair": "Move out—and don’t come back u... → ” His glare lingered until the...",
+          "similarity": -0.019
+        },
+        {
+          "position": 116,
+          "sentence_pair": "He leaned over the edge, his p... → “Move it!...",
+          "similarity": 0.13
+        },
+        {
+          "position": 122,
+          "sentence_pair": "If she hits the tunnels, we’re... → ” His glare never left the shi...",
+          "similarity": 0.104
+        },
+        {
+          "position": 125,
+          "sentence_pair": "We can't let her reach the col... → Cybershark Gang LeaderThe Cybe...",
+          "similarity": 0.121
+        },
+        {
+          "position": 132,
+          "sentence_pair": "“She knows too much, and the c... → ” The leader straightened, mus...",
+          "similarity": 0.146
+        },
+        {
+          "position": 135,
+          "sentence_pair": "Lock down every access tunnel.... → No one moves alone....",
+          "similarity": 0.094
+        },
+        {
+          "position": 136,
+          "sentence_pair": "No one moves alone.... → ” A ruthless edge crept into t...",
+          "similarity": 0.031
+        },
+        {
+          "position": 150,
+          "sentence_pair": "“State contents and point of o... → ” The warning was delivered wi...",
+          "similarity": 0.148
+        },
+        {
+          "position": 165,
+          "sentence_pair": "Red stepped forward, thrusting... → Her other hand stayed glued to...",
+          "similarity": 0.072
+        },
+        {
+          "position": 174,
+          "sentence_pair": "Her voice was steady, but ther... → Regulations weren’t just a nui...",
+          "similarity": 0.068
+        },
+        {
+          "position": 179,
+          "sentence_pair": "“That’s not up for debate.... → The checkpoint alarms blare as...",
+          "similarity": 0.073
+        },
+        {
+          "position": 213,
+          "sentence_pair": "ah, goodness, it's been so lon... → Or....",
+          "similarity": -0.006
+        },
+        {
+          "position": 225,
+          "sentence_pair": "“Ah, goodness, it’s been so lo... → Or… perhaps not....",
+          "similarity": 0.13
+        },
+        {
+          "position": 234,
+          "sentence_pair": "” The question lingered in the... → ' As static crackles and the s...",
+          "similarity": 0.152
+        },
+        {
+          "position": 235,
+          "sentence_pair": "' As static crackles and the s... → Red tightens her grip on the c...",
+          "similarity": 0.118
+        },
+        {
+          "position": 253,
+          "sentence_pair": "“C-c-courier—dr.... → drop the p-p-package....",
+          "similarity": 0.135
+        }
+      ],
+      "high_coherence_segments": [
+        {
+          "start_sentence": 16,
+          "end_sentence": 18,
+          "length": 3,
+          "average_similarity": 0.661
+        },
+        {
+          "start_sentence": 66,
+          "end_sentence": 68,
+          "length": 3,
+          "average_similarity": 0.65
+        },
+        {
+          "start_sentence": 84,
+          "end_sentence": 87,
+          "length": 4,
+          "average_similarity": 0.6
+        },
+        {
+          "start_sentence": 111,
+          "end_sentence": 115,
+          "length": 5,
+          "average_similarity": 0.611
+        },
+        {
+          "start_sentence": 138,
+          "end_sentence": 141,
+          "length": 4,
+          "average_similarity": 0.469
+        },
+        {
+          "start_sentence": 144,
+          "end_sentence": 147,
+          "length": 4,
+          "average_similarity": 0.712
+        },
+        {
+          "start_sentence": 151,
+          "end_sentence": 153,
+          "length": 3,
+          "average_similarity": 0.461
+        },
+        {
+          "start_sentence": 171,
+          "end_sentence": 173,
+          "length": 3,
+          "average_similarity": 0.507
+        },
+        {
+          "start_sentence": 180,
+          "end_sentence": 186,
+          "length": 7,
+          "average_similarity": 0.564
+        },
+        {
+          "start_sentence": 187,
+          "end_sentence": 189,
+          "length": 3,
+          "average_similarity": 0.522
+        },
+        {
+          "start_sentence": 190,
+          "end_sentence": 196,
+          "length": 7,
+          "average_similarity": 0.567
+        },
+        {
+          "start_sentence": 200,
+          "end_sentence": 202,
+          "length": 3,
+          "average_similarity": 0.622
+        },
+        {
+          "start_sentence": 229,
+          "end_sentence": 231,
+          "length": 3,
+          "average_similarity": 0.56
+        },
+        {
+          "start_sentence": 232,
+          "end_sentence": 234,
+          "length": 3,
+          "average_similarity": 0.539
+        },
+        {
+          "start_sentence": 242,
+          "end_sentence": 246,
+          "length": 5,
+          "average_similarity": 0.61
+        },
+        {
+          "start_sentence": 277,
+          "end_sentence": 279,
+          "length": 3,
+          "average_similarity": 0.482
+        }
+      ],
+      "objective_description": {
+        "score": 0.3349,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "pairwise_similarity_examples": [
+      {
+        "sentence_pair": "Sentence 1 → Sentence 2",
+        "sentence_1": "Red arrives at the clinic's rear entrance, hopping...",
+        "sentence_2": "Dr.",
+        "similarity": 0.1905
+      },
+      {
+        "sentence_pair": "Sentence 2 → Sentence 3",
+        "sentence_1": "Dr.",
+        "sentence_2": "Weaver opens it, glancing over his shoulder before...",
+        "similarity": 0.0852
+      },
+      {
+        "sentence_pair": "Sentence 3 → Sentence 4",
+        "sentence_1": "Weaver opens it, glancing over his shoulder before...",
+        "sentence_2": "He pulls a sealed nano-insulated case from beneath...",
+        "similarity": 0.4242
+      },
+      {
+        "sentence_pair": "Sentence 4 → Sentence 5",
+        "sentence_1": "He pulls a sealed nano-insulated case from beneath...",
+        "sentence_2": "Dr.",
+        "similarity": 0.1544
+      },
+      {
+        "sentence_pair": "Sentence 5 → Sentence 6",
+        "sentence_1": "Dr.",
+        "sentence_2": "WeaverWeaver steps in close, voice low, eyes scann...",
+        "similarity": 0.1098
+      },
+      {
+        "sentence_pair": "Sentence 6 → Sentence 7",
+        "sentence_1": "WeaverWeaver steps in close, voice low, eyes scann...",
+        "sentence_2": "Dr.",
+        "similarity": 0.1098
+      },
+      {
+        "sentence_pair": "Sentence 7 → Sentence 8",
+        "sentence_1": "Dr.",
+        "sentence_2": "Weaver stepped in close, her voice dropping to a w...",
+        "similarity": 0.0229
+      },
+      {
+        "sentence_pair": "Sentence 8 → Sentence 9",
+        "sentence_1": "Weaver stepped in close, her voice dropping to a w...",
+        "sentence_2": "She didn’t waste words.",
+        "similarity": 0.292
+      },
+      {
+        "sentence_pair": "Sentence 9 → Sentence 10",
+        "sentence_1": "She didn’t waste words.",
+        "sentence_2": "“Red, listen up—Wolfbot’s patrols just doubled,” s...",
+        "similarity": 0.2299
+      },
+      {
+        "sentence_pair": "Sentence 10 → Sentence 11",
+        "sentence_1": "“Red, listen up—Wolfbot’s patrols just doubled,” s...",
+        "sentence_2": "“They’re not missing a thing out there.",
+        "similarity": 0.1733
+      },
+      {
+        "sentence_pair": "Sentence 11 → Sentence 12",
+        "sentence_1": "“They’re not missing a thing out there.",
+        "sentence_2": "” Her eyes lingered a moment longer on the far end...",
+        "similarity": 0.208
+      },
+      {
+        "sentence_pair": "Sentence 12 → Sentence 13",
+        "sentence_1": "” Her eyes lingered a moment longer on the far end...",
+        "sentence_2": "“And it gets worse,” Weaver continued, her tone da...",
+        "similarity": 0.4504
+      },
+      {
+        "sentence_pair": "Sentence 13 → Sentence 14",
+        "sentence_1": "“And it gets worse,” Weaver continued, her tone da...",
+        "sentence_2": "” She shook her head, determination hardening her ...",
+        "similarity": 0.34
+      },
+      {
+        "sentence_pair": "Sentence 14 → Sentence 15",
+        "sentence_1": "” She shook her head, determination hardening her ...",
+        "sentence_2": "“You can’t risk your usual path—not tonight.",
+        "similarity": 0.3376
+      },
+      {
+        "sentence_pair": "Sentence 15 → Sentence 16",
+        "sentence_1": "“You can’t risk your usual path—not tonight.",
+        "sentence_2": "Red tightens the straps on her delivery pack, eyes...",
+        "similarity": 0.2767
+      },
+      {
+        "sentence_pair": "Sentence 16 → Sentence 17",
+        "sentence_1": "Red tightens the straps on her delivery pack, eyes...",
+        "sentence_2": "Red yanked her delivery pack straps tight with pra...",
+        "similarity": 0.8404
+      },
+      {
+        "sentence_pair": "Sentence 17 → Sentence 18",
+        "sentence_1": "Red yanked her delivery pack straps tight with pra...",
+        "sentence_2": "She caught Weaver’s urgency, the clipped edge in h...",
+        "similarity": 0.4814
+      },
+      {
+        "sentence_pair": "Sentence 18 → Sentence 19",
+        "sentence_1": "She caught Weaver’s urgency, the clipped edge in h...",
+        "sentence_2": "“Damn, Weaver—how bad is it with the sharks?",
+        "similarity": 0.3176
+      },
+      {
+        "sentence_pair": "Sentence 19 → Sentence 20",
+        "sentence_1": "“Damn, Weaver—how bad is it with the sharks?",
+        "sentence_2": "” she muttered, keeping her tone low, her mind alr...",
+        "similarity": 0.2102
+      },
+      {
+        "sentence_pair": "Sentence 20 → Sentence 21",
+        "sentence_1": "” she muttered, keeping her tone low, her mind alr...",
+        "sentence_2": "Were they working with Wolfbot, or just prowling f...",
+        "similarity": 0.2353
+      },
+      {
+        "note": "Only showing first 20 pairs, total of 278 adjacent sentence pairs"
+      }
+    ]
+  },
+  "story_structure_analysis": {
+    "evaluation_mode": "default mode",
+    "event_list": [
+      {
+        "event": "Red arrives at the clinic's rear entrance, tapping a coded rhythm on the steel door.",
+        "source": "Red arrives at the clinic's rear entrance, hopping off her battered maglev board and tapping a coded rhythm on the steel door.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Weaver retrieves a sealed nano-insulated case from beneath a false floor panel.",
+        "source": "He pulls a sealed nano-insulated case from beneath a false floor panel, the cool container emitting faint blue light.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Weaver warns Red that Wolfbot patrols have doubled.",
+        "source": "“Red, listen up—Wolfbot’s patrols just doubled,” she said, clipped and urgent, every syllable weighted with concern.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Weaver informs Red that Cybershark Gang is equipped with EMP nets capable of disabling her rig.",
+        "source": "\"But Cybershark’s packing EMP nets—one hit, and your rig’s fried.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red scans a flickering city map, considering alternate routes to avoid patrols and traps.",
+        "source": "Red scans the flickering map display, eyes narrowed, tracing alternate routes with a trembling finger.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Weaver advises against Sector 9 due to Wolfbot sweeps.",
+        "source": "\"Sector 9’s crawling,\" he warned, eyes narrowing at the cluster of red blips pulsing on the display.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Weaver hands Red both the nanomedicine and a critical data chip, stressing urgency for Grandma's colony.",
+        "source": "With steady hands, Dr.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red secures the cargo, double-checks for surveillance, and leaves toward the eastern path with determination.",
+        "source": "Red slipped the data chip and vial of nanomedicine deep into her pack, her fingers steady and sure despite the urgency simmering beneath her skin.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red sprints across rain-slicked pavement, carrying Dr. Weaver’s nanomedicine in an insulated satchel.",
+        "source": "Red sprints across rain-glossed pavement, clutching a slick, insulated satchel containing Dr.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Two Cybershark Gang members attempt to block Red’s path.",
+        "source": "Two Cybershark Gang Members vault from behind a dumpster, their cybernetic jaws snapping as they attempt to block her path.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "The Gang Leader coordinates the gang, ordering every exit covered and immediate deployment to intercept Red.",
+        "source": "“I want every exit covered, every alley watched.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red ducks under a holo-sign, kicks a crate into a gang member, and leaps onto a delivery drone to escape.",
+        "source": "' Red ducks under a flickering holo-sign, kicks a loose crate into the legs of an approaching gang member, and leaps onto a delivery drone passing overhead.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "The Gang Leader slams a cyber-fist, orders the crew to circle the next block and prevent Red from reaching the colony.",
+        "source": "The Gang Leader’s cybernetic fist crashed against the rusted rooftop rail with a metallic clang, sending rivulets of rain scattering.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red vanishes into the neon haze as the gang scrambles after her, continuing her mission toward Grandma.",
+        "source": "' The gang members scramble, boots splashing through puddles, as Red vanishes into the neon haze toward her objective: delivering the medicine to her grandmother before dawn.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red approaches an armored checkpoint, clutching her courier satchel.",
+        "source": "Red approaches the armored checkpoint, clutching her silver courier satchel.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfbot intercepts Red, requests cargo manifest and origin, and threatens escalation for noncompliance.",
+        "source": "Wolfbot materializes, stepping into Red’s path and requesting a cargo manifest and point of origin, threatening escalation if she refuses.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfbot claims to be a courier for Central Dispatch.",
+        "source": "“My designation is Wolfbot, official courier for the Central Dispatch.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfbot projects Grandma’s voice, attempting to emotionally manipulate Red into compliance.",
+        "source": "Suddenly, Wolfbot projects Grandma’s voice, pleading for help and trying to emotionally manipulate Red into compliance.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red presents official documentation, insists on protocol.",
+        "source": "Red stepped forward, thrusting the official-looking document toward the gatekeeper.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "A tense standoff ensues, with Red blocking further progress until regulations are acknowledged.",
+        "source": "Red planted herself squarely in the narrow corridor, arms folded tight across her chest—a living barricade against any attempt to skirt the rules.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Checkpoint alarms blare as Wolfbot signals city enforcers, causing confusion and drawing security scrutiny.",
+        "source": "The checkpoint alarms blare as Wolfbot signals city enforcers, but the contradictory motivations—Red enforcing protocol under duress, Wolfbot masquerading as a legitimate courier—create confusion at the gate, drawing additional scrutiny from security and delaying both parties.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red triggers a diversion using her tech skills and attempts to escape into a side alley; Wolfbot launches a drone in pursuit.",
+        "source": "Red, recognizing the escalating risk, uses her tech skills to trigger a diversion (smoke flare, signal jammer) and attempts to escape into a side alley, with Wolfbot recalibrating its approach and launching a drone to pursue, intent on intercepting the nanomedicine.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red dives into alleys, veers off the main route, and heads toward the city’s wooded outskirts as Wolfbot adapts tactics.",
+        "source": "With Wolfbot adapting his tactics and the city’s surveillance tightening, Red makes a split-second decision—she veers off the main route entirely, slipping toward the dense tree line beyond the city’s edge.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red hides behind a dumpster, programs a fake data trail on her wrist-console.",
+        "source": "Red crouches behind a dumpster, her gloved fingers tapping on her wrist-console as she programs a fake data trail.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfbot, projecting a city official hologram, searches the alley for Red using heat sensors.",
+        "source": "Wolfbot, projecting a flickering blue hologram of a city official, strides down the alley, scanning for heat signatures.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red tosses a signal jammer into a puddle, disrupting Wolfbot’s sensors.",
+        "source": "Red tosses a signal jammer into a puddle, sending static through Wolfbot’s sensors.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfbot recalibrates and deploys a spider-drone to search shadows for Red.",
+        "source": "Wolfbot pauses, recalibrating, then deploys a small spider-drone to search the shadows.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red escapes through a chain-link fence hole, heading to the city’s wooded outskirts.",
+        "source": "Red darts from her hiding spot, skidding across slick pavement, and ducks through a hole in the chain-link fence, escaping to the city’s wooded outskirts.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfbot transmits a coded order for Cybershark Gang patrols to converge on Red’s last known location.",
+        "source": "Wolfbot, frustrated by the interference, transmits a coded order for Cybershark Gang patrols to converge on Red’s last known location.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red enters Grandma’s apartment with the nanomedicine case.",
+        "source": "Red enters the apartment, her boots squelching on the wet entry mat as she clutches a sealed nanomedicine case.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red notices Grandma’s behavior is odd; the figure beckons her closer with unnatural movements and speech.",
+        "source": "The figure of Grandma sits propped in bed, but when Red approaches, the woman’s movements are slightly off—too still, too precise.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red questions the Doppelgänger, flicks on a bedside scanner, and challenges its authenticity.",
+        "source": "' Sensing something off, Red narrows her eyes and steps sideways to flick on the bedside scanner.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red throws a disruptor pellet at the hologram, exposing a transmitter hidden in the pillow.",
+        "source": "Red lunges, tossing a disruptor pellet that scatters blue sparks across the projection.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red crushes the transmitter, realizing Wolfbot’s trap nearly succeeded.",
+        "source": "Red snatches up the transmitter, crushing it beneath her boot.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red darts behind a crash cart, clutching the nanomedicine case as Wolfbot scans the corridor with infrared sensors.",
+        "source": "Red darts behind a crash cart, clutching the insulated case of nanomedicine.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfbot, glitching and malfunctioning, orders Red to drop the package and initiates error protocol.",
+        "source": "“C-c-courier—dr.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red throws a sonic jammer, disrupting Wolfbot, and locks herself in the medbay via biometric lock.",
+        "source": "' Red unslings her toolbelt and hurls a sonic jammer, sending static shrieks through the hallway;",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfbot hacks the medbay door, forcing it open as Red barricades it from inside with a supply crate.",
+        "source": "Wolfbot, undeterred, deploys a hacking module that sparks against the panel, forcing the door's mechanisms to grind and smoke.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red vaults over crates as the Cybershark Gang Leader and two members block her escape.",
+        "source": "Red vaults over a pile of rain-slicked crates, landing in a crouch as the Cybershark Gang Leader and two gang members block her escape, chrome limbs gleaming under neon.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "The Gang Leader threatens Red, demanding the nanomedicine vial; Red refuses and taunts him.",
+        "source": "The Leader slams a cybernetic fist into a nearby trashcan, sending it spinning, and snarls, 'Hand over the vial, pup, or we rip it from you.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "A gang member grabs for Red; she escapes, hides the vial, and throws a flash pellet to blind them.",
+        "source": "she twists free, shoves the nanomed vial into her jacket’s hidden pocket, and hurls a flash pellet at their feet.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red flees through a gap between fences, evading capture but forced onto a longer, riskier route to the colony.",
+        "source": "As the alley erupts in blinding light and the acrid smell of burning magnesium fills the air, Red sprints toward a narrow gap between fences, chased by the gang’s echoing footsteps and shouts.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      }
+    ],
+    "Papalampidi_detailed_results": {
+      "turning_points": {
+        "TP1": "Dr. Weaver hands Red both the nanomedicine and a critical data chip, stressing urgency for Grandma's colony.",
+        "TP2": "Dr. Weaver warns Red that Wolfbot patrols have doubled.",
+        "TP3": "Red leaps onto a delivery drone to escape.",
+        "TP4": "Red notices Grandma’s behavior is odd; the figure beckons her closer with unnatural movements and speech.",
+        "TP5": "Red throws a sonic jammer, disrupting Wolfbot, and locks herself in the medbay via biometric lock."
+      },
+      "stage_division": {
+        "Setup": [
+          "Red arrives at the clinic's rear entrance, tapping a coded rhythm on the steel door.",
+          "Dr. Weaver retrieves a sealed nano-insulated case from beneath a false floor panel."
+        ],
+        "New Situation": [
+          "Dr. Weaver warns Red that Wolfbot patrols have doubled.",
+          "Dr. Weaver informs Red that Cybershark Gang is equipped with EMP nets capable of disabling her rig.",
+          "Red scans a flickering city map, considering alternate routes to avoid patrols and traps."
+        ],
+        "Progress": [
+          "Dr. Weaver advises against Sector 9 due to Wolfbot sweeps.",
+          "Dr. Weaver hands Red both the nanomedicine and a critical data chip, stressing urgency for Grandma's colony.",
+          "Red secures the cargo, double-checks for surveillance, and leaves toward the eastern path with determination.",
+          "Red sprints across rain-slicked pavement, carrying Dr. Weaver’s nanomedicine in an insulated satchel."
+        ],
+        "Complications": [
+          "Two Cybershark Gang members attempt to block Red’s path.",
+          "The Gang Leader coordinates the gang, ordering every exit covered and immediate deployment to intercept Red.",
+          "Red ducks under a holo-sign, kicks a crate into a gang member, and leaps onto a delivery drone to escape.",
+          "The Gang Leader slams a cyber-fist, orders the crew to circle the next block and prevent Red from reaching the colony.",
+          "Red vanishes into the neon haze as the gang scrambles after her, continuing her mission toward Grandma.",
+          "Red approaches an armored checkpoint, clutching her courier satchel.",
+          "Wolfbot intercepts Red, requests cargo manifest and origin, and threatens escalation for noncompliance.",
+          "Wolfbot claims to be a courier for Central Dispatch.",
+          "Wolfbot projects Grandma’s voice, attempting to emotionally manipulate Red into compliance.",
+          "Red presents official documentation, insists on protocol.",
+          "A tense standoff ensues, with Red blocking further progress until regulations are acknowledged.",
+          "Checkpoint alarms blare as Wolfbot signals city enforcers, causing confusion and drawing security scrutiny.",
+          "Red triggers a diversion using her tech skills and attempts to escape into a side alley; Wolfbot launches a drone in pursuit.",
+          "Red dives into alleys, veers off the main route, and heads toward the city’s wooded outskirts as Wolfbot adapts tactics.",
+          "Red hides behind a dumpster, programs a fake data trail on her wrist-console.",
+          "Wolfbot, projecting a city official hologram, searches the alley for Red using heat sensors.",
+          "Red tosses a signal jammer into a puddle, disrupting Wolfbot’s sensors.",
+          "Wolfbot recalibrates and deploys a spider-drone to search shadows for Red.",
+          "Red escapes through a chain-link fence hole, heading to the city’s wooded outskirts.",
+          "Wolfbot transmits a coded order for Cybershark Gang patrols to converge on Red’s last known location.",
+          "Red enters Grandma’s apartment with the nanomedicine case.",
+          "Red notices Grandma’s behavior is odd; the figure beckons her closer with unnatural movements and speech.",
+          "Red questions the Doppelgänger, flicks on a bedside scanner, and challenges its authenticity.",
+          "Red throws a disruptor pellet at the hologram, exposing a transmitter hidden in the pillow.",
+          "Red crushes the transmitter, realizing Wolfbot’s trap nearly succeeded.",
+          "Red darts behind a crash cart, clutching the nanomedicine case as Wolfbot scans the corridor with infrared sensors.",
+          "Wolfbot, glitching and malfunctioning, orders Red to drop the package and initiates error protocol."
+        ],
+        "Final Push": [
+          "Red throws a sonic jammer, disrupting Wolfbot, and locks herself in the medbay via biometric lock.",
+          "Wolfbot hacks the medbay door, forcing it open as Red barricades it from inside with a supply crate.",
+          "Red vaults over crates as the Cybershark Gang Leader and two members block her escape.",
+          "The Gang Leader threatens Red, demanding the nanomedicine vial; Red refuses and taunts him.",
+          "A gang member grabs for Red; she escapes, hides the vial, and throws a flash pellet to blind them.",
+          "Red flees through a gap between fences, evading capture but forced onto a longer, riskier route to the colony."
+        ],
+        "Aftermath": []
+      }
+    },
+    "Li_detailed_results": {
+      "Red arrives at the clinic's rear entrance, tapping a coded rhythm on the steel door.": "Orientation",
+      "Dr. Weaver retrieves a sealed nano-insulated case from beneath a false floor panel.": "Orientation",
+      "Dr. Weaver warns Red that Wolfbot patrols have doubled.": "Complicating Action",
+      "Dr. Weaver informs Red that Cybershark Gang is equipped with EMP nets capable of disabling her rig.": "Complicating Action",
+      "Red scans a flickering city map, considering alternate routes to avoid patrols and traps.": "Orientation",
+      "Dr. Weaver advises against Sector 9 due to Wolfbot sweeps.": "Complicating Action",
+      "Dr. Weaver hands Red both the nanomedicine and a critical data chip, stressing urgency for Grandma's colony.": "Abstract",
+      "Red secures the cargo, double-checks for surveillance, and leaves toward the eastern path with determination.": "Orientation",
+      "Red sprints across rain-slicked pavement, carrying Dr. Weaver’s nanomedicine in an insulated satchel.": "Abstract",
+      "Two Cybershark Gang members attempt to block Red’s path.": "Complicating Action",
+      "The Gang Leader coordinates the gang, ordering every exit covered and immediate deployment to intercept Red.": "Complicating Action",
+      "Red ducks under a holo-sign, kicks a crate into a gang member, and leaps onto a delivery drone to escape.": "Minor Resolution",
+      "The Gang Leader slams a cyber-fist, orders the crew to circle the next block and prevent Red from reaching the colony.": "Return of MRE",
+      "Red vanishes into the neon haze as the gang scrambles after her, continuing her mission toward Grandma.": "Minor Resolution",
+      "Red approaches an armored checkpoint, clutching her courier satchel.": "Complicating Action",
+      "Wolfbot intercepts Red, requests cargo manifest and origin, and threatens escalation for noncompliance.": "Complicating Action",
+      "Wolfbot claims to be a courier for Central Dispatch.": "Complicating Action",
+      "Wolfbot projects Grandma’s voice, attempting to emotionally manipulate Red into compliance.": "Complicating Action",
+      "Red presents official documentation, insists on protocol.": "Minor Resolution",
+      "A tense standoff ensues, with Red blocking further progress until regulations are acknowledged.": "Complicating Action",
+      "Checkpoint alarms blare as Wolfbot signals city enforcers, causing confusion and drawing security scrutiny.": "Complicating Action",
+      "Red triggers a diversion using her tech skills and attempts to escape into a side alley; Wolfbot launches a drone in pursuit.": "Complicating Action",
+      "Red dives into alleys, veers off the main route, and heads toward the city’s wooded outskirts as Wolfbot adapts tactics.": "Minor Resolution",
+      "Red hides behind a dumpster, programs a fake data trail on her wrist-console.": "Complicating Action",
+      "Wolfbot, projecting a city official hologram, searches the alley for Red using heat sensors.": "Complicating Action",
+      "Red tosses a signal jammer into a puddle, disrupting Wolfbot’s sensors.": "Minor Resolution",
+      "Wolfbot recalibrates and deploys a spider-drone to search shadows for Red.": "Complicating Action",
+      "Red escapes through a chain-link fence hole, heading to the city’s wooded outskirts.": "Minor Resolution",
+      "Wolfbot transmits a coded order for Cybershark Gang patrols to converge on Red’s last known location.": "Return of MRE",
+      "Red enters Grandma’s apartment with the nanomedicine case.": "MRE",
+      "Red notices Grandma’s behavior is odd; the figure beckons her closer with unnatural movements and speech.": "Complicating Action",
+      "Red questions the Doppelgänger, flicks on a bedside scanner, and challenges its authenticity.": "Complicating Action",
+      "Red throws a disruptor pellet at the hologram, exposing a transmitter hidden in the pillow.": "Minor Resolution",
+      "Red crushes the transmitter, realizing Wolfbot’s trap nearly succeeded.": "Minor Resolution",
+      "Red darts behind a crash cart, clutching the nanomedicine case as Wolfbot scans the corridor with infrared sensors.": "Complicating Action",
+      "Wolfbot, glitching and malfunctioning, orders Red to drop the package and initiates error protocol.": "Complicating Action",
+      "Red throws a sonic jammer, disrupting Wolfbot, and locks herself in the medbay via biometric lock.": "Minor Resolution",
+      "Wolfbot hacks the medbay door, forcing it open as Red barricades it from inside with a supply crate.": "Complicating Action",
+      "Red vaults over crates as the Cybershark Gang Leader and two members block her escape.": "Complicating Action",
+      "The Gang Leader threatens Red, demanding the nanomedicine vial; Red refuses and taunts him.": "Complicating Action",
+      "A gang member grabs for Red; she escapes, hides the vial, and throws a flash pellet to blind them.": "Minor Resolution",
+      "Red flees through a gap between fences, evading capture but forced onto a longer, riskier route to the colony.": "Resolution"
+    },
+    "structure_analysis": {
+      "basic_info": {
+        "total_events": 42,
+        "analysis_mode": "default",
+        "analysis_time": null
+      },
+      "Papalampidi_structure_analysis": {
+        "turning_point_integrity": {
+          "identified_tps": [
+            "TP1",
+            "TP2",
+            "TP3",
+            "TP4",
+            "TP5"
+          ],
+          "missing_tps": [],
+          "TP_coverage": "5/5"
+        },
+        "stage_integrity": {
+          "identified_stages": [
+            "Setup",
+            "New Situation",
+            "Progress",
+            "Complications",
+            "Final Push"
+          ],
+          "missing_stages": [
+            "Aftermath"
+          ],
+          "stage_coverage": "5/6"
+        }
+      },
+      "Li_function_analysis": {
+        "core_function_check": {
+          "Orientation": "exists",
+          "Complicating Action": "exists",
+          "MRE": "exists",
+          "Resolution": "exists"
+        },
+        "function_distribution": {
+          "Orientation": 4,
+          "Complicating Action": 22,
+          "Abstract": 2,
+          "Minor Resolution": 10,
+          "Return of MRE": 2,
+          "MRE": 1,
+          "Resolution": 1
+        },
+        "function_diversity": 7
+      }
+    }
+  }
+}

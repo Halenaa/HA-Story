@@ -1,0 +1,147 @@
+{
+  "analysis_info": {
+    "timestamp": "2025-09-13T23:26:42.289817",
+    "data_source": "metrics_master_clean.csv",
+    "analyzer_version": "1.0",
+    "evaluation_criteria": {
+      "coherent_threshold": 0.35,
+      "stable_std_threshold": 0.18
+    }
+  },
+  "basic_statistics": {
+    "overall": {
+      "count": 54,
+      "mean_coherence": 0.40435740740740733,
+      "std_coherence": 0.0344752117776513,
+      "median_coherence": 0.41885,
+      "min_coherence": 0.296,
+      "max_coherence": 0.4439,
+      "mean_std": 0.17244567784954298,
+      "coherent_stories": 49,
+      "coherent_percentage": 90.74074074074075,
+      "stable_stories": 45,
+      "stable_percentage": 83.33333333333334
+    },
+    "linear_structure": {
+      "count": 27,
+      "mean_coherence": 0.4016222222222222,
+      "std_coherence": 0.03753373183738897,
+      "median_coherence": 0.4162,
+      "coherent_percentage": 88.88888888888889,
+      "stable_percentage": 88.88888888888889
+    },
+    "nonlinear_structure": {
+      "count": 27,
+      "mean_coherence": 0.4070925925925926,
+      "std_coherence": 0.03159864804710099,
+      "median_coherence": 0.4191,
+      "coherent_percentage": 92.5925925925926,
+      "stable_percentage": 77.77777777777779
+    },
+    "sciencefiction_genre": {
+      "count": 18,
+      "mean_coherence": 0.3624,
+      "std_coherence": 0.025559342714553526,
+      "median_coherence": 0.37095,
+      "coherent_percentage": 72.22222222222221,
+      "stable_percentage": 72.22222222222221
+    },
+    "horror_genre": {
+      "count": 18,
+      "mean_coherence": 0.42664444444444444,
+      "std_coherence": 0.012289173725262132,
+      "median_coherence": 0.429,
+      "coherent_percentage": 100.0,
+      "stable_percentage": 94.44444444444444
+    },
+    "romantic_genre": {
+      "count": 18,
+      "mean_coherence": 0.4240277777777778,
+      "std_coherence": 0.010077336573633956,
+      "median_coherence": 0.42425,
+      "coherent_percentage": 100.0,
+      "stable_percentage": 83.33333333333334
+    },
+    "baseline_comparison": {
+      "baseline_mean": 0.2586267912506044,
+      "experiment_mean": 0.40435740740740733,
+      "improvement": 0.14573061615680294,
+      "improvement_percentage": 56.34784217524965
+    }
+  },
+  "structure_analysis": {
+    "statistical_test": {
+      "linear_mean": 0.4016222222222222,
+      "nonlinear_mean": 0.4070925925925926,
+      "linear_count": 27,
+      "nonlinear_count": 27,
+      "t_statistic": -0.579345331718613,
+      "p_value": 0.5648577083263766,
+      "significant": false,
+      "effect_size": -0.15767782750822892
+    },
+    "practical_significance": {
+      "linear_higher": false,
+      "difference_magnitude": 0.005470370370370403,
+      "relative_difference_pct": 1.3620686475220947
+    }
+  },
+  "coherence_diversity_interaction": {
+    "correlation": {
+      "pearson_r": -0.16769895116914937,
+      "p_value": 0.22547350952961698,
+      "significant": false,
+      "strength": "weak",
+      "direction": "negative"
+    },
+    "segments": {
+      "high_coh_high_div": {
+        "count": 11,
+        "percentage": 20.37037037037037,
+        "avg_coherence": 0.427709090909091,
+        "avg_diversity": 0.7843188202020541
+      },
+      "high_coh_low_div": {
+        "count": 16,
+        "percentage": 29.629629629629626,
+        "avg_coherence": 0.4322625,
+        "avg_diversity": 0.2757677334611084
+      },
+      "low_coh_high_div": {
+        "count": 16,
+        "percentage": 29.629629629629626,
+        "avg_coherence": 0.372725,
+        "avg_diversity": 0.735273632832276
+      },
+      "low_coh_low_div": {
+        "count": 11,
+        "percentage": 20.37037037037037,
+        "avg_coherence": 0.38642727272727273,
+        "avg_diversity": 0.27417528431644284
+      }
+    }
+  },
+  "validation": {
+    "value_range": {
+      "min_value": 0.296,
+      "max_value": 0.4439,
+      "within_expected_range": true,
+      "realistic_range": true
+    },
+    "consistency_checks": {},
+    "total_consistency_issues": 0,
+    "structure_health": {
+      "total_stories": 54,
+      "healthy_structure_count": 0,
+      "healthy_percentage": 0.0
+    }
+  },
+  "interpretations": [
+    "✅ EXCELLENT: 90.7% of stories are coherent (above 0.35)",
+    "✅ STABLE: 83.3% of stories have stable coherence (std < 0.18)",
+    "🔗 DIVERSITY INTERACTION: Weak negative correlation between coherence and diversity (r=-0.168)"
+  ],
+  "recommendations": [
+    "GENRE OPTIMIZATION: Sciencefiction stories have lowest coherence - focus improvement efforts here"
+  ]
+}

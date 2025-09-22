@@ -1,0 +1,1071 @@
+{
+  "folder_name": "thelittleredridinghood_sciencefictionrewrite_nonlinear_T0.3_s3",
+  "file_path": "/Users/haha/Story/data/output/regression_test/thelittleredridinghood_sciencefictionrewrite_nonlinear_T0.3_s3/enhanced_story_dialogue_updated.md",
+  "analysis_timestamp": null,
+  "emotional_arc_analysis": {
+    "metadata": {
+      "total_chapters": 5,
+      "primary_method": "RoBERTa",
+      "validation_method": "LabMT-en-v1",
+      "analysis_timestamp": "2025-09-09T20:35:03.935591"
+    },
+    "chapter_analysis": [
+      {
+        "chapter_num": 5,
+        "title": "Confrontation in the Medical Lab",
+        "roberta_score": -0.3144,
+        "labmt_score": 0.0986,
+        "content_length": 2402
+      },
+      {
+        "chapter_num": 2,
+        "title": "Ambush at the Spaceport",
+        "roberta_score": -0.2778,
+        "labmt_score": 0.1151,
+        "content_length": 1877
+      },
+      {
+        "chapter_num": 1,
+        "title": "Red Receives a Coded Mission",
+        "roberta_score": -0.0514,
+        "labmt_score": 0.1679,
+        "content_length": 7159
+      },
+      {
+        "chapter_num": 4,
+        "title": "Wolf Infiltrates the Colony",
+        "roberta_score": -0.403,
+        "labmt_score": 0.006,
+        "content_length": 1335
+      },
+      {
+        "chapter_num": 3,
+        "title": "Sabotage on the Shuttle",
+        "roberta_score": 0.1906,
+        "labmt_score": 0.0956,
+        "content_length": 12521
+      }
+    ],
+    "primary_analysis": {
+      "method": "RoBERTa",
+      "scores": [
+        -0.314395542939504,
+        -0.277784804503123,
+        -0.051395157972971596,
+        -0.4030038833618164,
+        0.19062495231628418
+      ],
+      "reagan_classification": {
+        "method": "RoBERTa",
+        "best_match": "Man in a hole",
+        "confidence": 0.3914,
+        "all_similarities": {
+          "Rags to riches": 0,
+          "Tragedy": 0,
+          "Man in a hole": 0.3914,
+          "Icarus": 0,
+          "Cinderella": 0.068,
+          "Oedipus": 0
+        },
+        "reagan_category": "MH"
+      }
+    },
+    "validation_analysis": {
+      "method": "LabMT",
+      "scores": [
+        0.09855555555555551,
+        0.11511627906976774,
+        0.1678744939271255,
+        0.005961538461538574,
+        0.09561855670103059
+      ],
+      "reagan_classification": {
+        "method": "LabMT",
+        "best_match": "Tragedy",
+        "confidence": 0.6821,
+        "all_similarities": {
+          "Rags to riches": 0.4562,
+          "Tragedy": 0.6821,
+          "Man in a hole": 0,
+          "Icarus": 0.1883,
+          "Cinderella": 0,
+          "Oedipus": 0.0618
+        },
+        "reagan_category": "TR"
+      }
+    },
+    "correlation_analysis": {
+      "pearson_correlation": {
+        "r": 0.48,
+        "p_value": 0.4132,
+        "significance": "Not Significant"
+      },
+      "spearman_correlation": {
+        "r": 0.4,
+        "p_value": 0.5046
+      },
+      "direction_consistency": 1.0,
+      "consistency_level": "Low",
+      "interpretation": "RoBERTa and LabMT correlation coefficient is 0.480, belongs to weak correlation"
+    },
+    "comparison_analysis": {
+      "disagreement_points": [
+        {
+          "chapter": 1,
+          "roberta_score": -0.314395542939504,
+          "labmt_score": 0.09855555555555551,
+          "difference": 0.413
+        },
+        {
+          "chapter": 2,
+          "roberta_score": -0.277784804503123,
+          "labmt_score": 0.11511627906976774,
+          "difference": 0.3929
+        },
+        {
+          "chapter": 4,
+          "roberta_score": -0.4030038833618164,
+          "labmt_score": 0.005961538461538574,
+          "difference": 0.409
+        }
+      ],
+      "method_advantages": {
+        "RoBERTa": {
+          "strengths": [
+            "Deep learning model with better contextual understanding",
+            "Suitable for modern text and dialogue",
+            "High sensitivity to sci-fi and technical texts"
+          ],
+          "classification": "Man in a hole",
+          "confidence": 0.3914
+        },
+        "LabMT": {
+          "strengths": [
+            "Fully consistent with Reagan's original method",
+            "Based on large-scale human annotation",
+            "Suitable for traditional literary analysis"
+          ],
+          "classification": "Tragedy",
+          "confidence": 0.6821
+        }
+      },
+      "consistency_assessment": {
+        "classification_agreement": false,
+        "major_disagreements": 3,
+        "recommendation": "Two methods differ significantly, recommend detailed analysis of difference causes, may need more in-depth text feature analysis"
+      }
+    },
+    "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.480 (Low)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.480, belongs to weak correlation\n\nClassification Results:\n- RoBERTa (primary): Man in a hole\n- LabMT (validation): Tragedy\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.480, showing low consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation.",
+    "output_files": {
+      "analysis_json": "/Users/haha/Story/data/regression_test_analysis/thelittleredridinghood_sciencefictionrewrite_nonlinear_T0.3_s3/roberta_labmt_analysis_20250909_203503.json"
+    }
+  },
+  "hred_coherence_analysis": {
+    "HRED_coherence_evaluation": {
+      "model_name": "all-mpnet-base-v2",
+      "analysis_method": "Original sentence coherence",
+      "total_sentences": 248,
+      "adjacent_pairs": 247,
+      "average_coherence": 0.3744,
+      "objective_description": {
+        "score": 0.3744,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "detailed_analysis": {
+      "basic_statistics": {
+        "average_coherence": 0.37440895578759886,
+        "coherence_std": 0.17621476502566394,
+        "max_coherence": 0.8822891712188721,
+        "min_coherence": 0.009147578850388527,
+        "coherence_median": 0.37814953923225403
+      },
+      "coherence_breakpoints": [
+        {
+          "position": 8,
+          "sentence_pair": "\"Hand over the drive.... → Now....",
+          "similarity": 0.148
+        },
+        {
+          "position": 10,
+          "sentence_pair": "You know what happens if you d... → Axel steps between Red and Wol...",
+          "similarity": 0.009
+        },
+        {
+          "position": 43,
+          "sentence_pair": "Red approached the sealed lab ... → Dr....",
+          "similarity": 0.084
+        },
+        {
+          "position": 44,
+          "sentence_pair": "Dr.... → Willow emerged from the lab, h...",
+          "similarity": 0.155
+        },
+        {
+          "position": 46,
+          "sentence_pair": "She glanced up and down the em... → Speaking in a hushed voice, Dr...",
+          "similarity": 0.162
+        },
+        {
+          "position": 48,
+          "sentence_pair": "Willow emphasized the utmost s... → Dr....",
+          "similarity": 0.095
+        },
+        {
+          "position": 50,
+          "sentence_pair": "Ruby Hood (Dr.... → Willow)Willow leans in closer,...",
+          "similarity": 0.108
+        },
+        {
+          "position": 65,
+          "sentence_pair": "Still, her gaze flickered back... → “But… what’s on this drive tha...",
+          "similarity": 0.187
+        },
+        {
+          "position": 67,
+          "sentence_pair": "” she asked, unable to mask th... → Dr....",
+          "similarity": 0.129
+        },
+        {
+          "position": 69,
+          "sentence_pair": "Ruby Hood (Dr.... → Willow)Willow leans in closer,...",
+          "similarity": 0.123
+        },
+        {
+          "position": 70,
+          "sentence_pair": "Willow)Willow leans in closer,... → Dr....",
+          "similarity": 0.078
+        },
+        {
+          "position": 71,
+          "sentence_pair": "Dr.... → Willow leaned in, her breath b...",
+          "similarity": 0.092
+        },
+        {
+          "position": 91,
+          "sentence_pair": "\"Look for the silver cloak.... → When you see her, just say, ‘t...",
+          "similarity": 0.173
+        },
+        {
+          "position": 93,
+          "sentence_pair": "’ That’s how she’ll know it’s ... → \" The weight of the data drive...",
+          "similarity": 0.137
+        },
+        {
+          "position": 95,
+          "sentence_pair": "Red, determined but seeking cl... → Dr....",
+          "similarity": 0.168
+        },
+        {
+          "position": 98,
+          "sentence_pair": "Willow)Dr.... → Ruby Hood swiftly taps out a c...",
+          "similarity": 0.154
+        },
+        {
+          "position": 99,
+          "sentence_pair": "Ruby Hood swiftly taps out a c... → Dr....",
+          "similarity": 0.074
+        },
+        {
+          "position": 100,
+          "sentence_pair": "Dr.... → Ruby Hood’s fingers danced acr...",
+          "similarity": 0.085
+        },
+        {
+          "position": 108,
+          "sentence_pair": "“Trust your wristband.... → One wrong move and they’ll be ...",
+          "similarity": 0.17
+        },
+        {
+          "position": 109,
+          "sentence_pair": "One wrong move and they’ll be ... → RedDr....",
+          "similarity": 0.057
+        },
+        {
+          "position": 111,
+          "sentence_pair": "Hood glances upward, scanning ... → Dr....",
+          "similarity": 0.036
+        },
+        {
+          "position": 112,
+          "sentence_pair": "Dr.... → Hood’s eyes flicked upward, sc...",
+          "similarity": 0.044
+        },
+        {
+          "position": 117,
+          "sentence_pair": "Their comms would be her guide... → Hood cautioned, silence was th...",
+          "similarity": 0.179
+        },
+        {
+          "position": 119,
+          "sentence_pair": "Red’s heart thudded in her che... → Dr....",
+          "similarity": 0.031
+        },
+        {
+          "position": 120,
+          "sentence_pair": "Dr.... → Willow instructed Red to find ...",
+          "similarity": 0.094
+        },
+        {
+          "position": 146,
+          "sentence_pair": "He didn’t fancy dodging more t... → Shuttle Pilot 2 glances sharpl...",
+          "similarity": 0.124
+        },
+        {
+          "position": 158,
+          "sentence_pair": "” His gaze lingered on a group... → Red produces a detailed manife...",
+          "similarity": 0.198
+        },
+        {
+          "position": 172,
+          "sentence_pair": "“Especially not after what hap... → Red squares her shoulders, voi...",
+          "similarity": 0.168
+        },
+        {
+          "position": 176,
+          "sentence_pair": "Red’s gaze didn’t waver.... → She edged closer to the hatch,...",
+          "similarity": 0.197
+        },
+        {
+          "position": 179,
+          "sentence_pair": "” The words pressed between th... → Shuttle Pilot 1 squares their ...",
+          "similarity": 0.18
+        },
+        {
+          "position": 186,
+          "sentence_pair": "” The words came out clipped a... → Red glances nervously over her...",
+          "similarity": 0.145
+        },
+        {
+          "position": 211,
+          "sentence_pair": "” The warning hung in the air,... → The pilots plan to keep their ...",
+          "similarity": 0.187
+        },
+        {
+          "position": 212,
+          "sentence_pair": "The pilots plan to keep their ... → Red extends the manifest towar...",
+          "similarity": 0.176
+        },
+        {
+          "position": 217,
+          "sentence_pair": "“All items are accounted for, ... → ” She kept her tone practical,...",
+          "similarity": 0.123
+        },
+        {
+          "position": 223,
+          "sentence_pair": "“I appreciate the thoroughness... → “But I can’t help noticing the...",
+          "similarity": 0.137
+        },
+        {
+          "position": 243,
+          "sentence_pair": "Her hands remained calmly fold... → “Take all the time you need, A...",
+          "similarity": 0.121
+        },
+        {
+          "position": 246,
+          "sentence_pair": "Each word was carefully measur... → The alliance between Red, Axel...",
+          "similarity": 0.016
+        }
+      ],
+      "high_coherence_segments": [
+        {
+          "start_sentence": 24,
+          "end_sentence": 26,
+          "length": 3,
+          "average_similarity": 0.467
+        },
+        {
+          "start_sentence": 37,
+          "end_sentence": 40,
+          "length": 4,
+          "average_similarity": 0.616
+        },
+        {
+          "start_sentence": 51,
+          "end_sentence": 53,
+          "length": 3,
+          "average_similarity": 0.627
+        },
+        {
+          "start_sentence": 62,
+          "end_sentence": 64,
+          "length": 3,
+          "average_similarity": 0.489
+        },
+        {
+          "start_sentence": 76,
+          "end_sentence": 78,
+          "length": 3,
+          "average_similarity": 0.646
+        },
+        {
+          "start_sentence": 87,
+          "end_sentence": 89,
+          "length": 3,
+          "average_similarity": 0.686
+        },
+        {
+          "start_sentence": 114,
+          "end_sentence": 116,
+          "length": 3,
+          "average_similarity": 0.472
+        },
+        {
+          "start_sentence": 122,
+          "end_sentence": 126,
+          "length": 5,
+          "average_similarity": 0.554
+        },
+        {
+          "start_sentence": 128,
+          "end_sentence": 130,
+          "length": 3,
+          "average_similarity": 0.563
+        },
+        {
+          "start_sentence": 159,
+          "end_sentence": 161,
+          "length": 3,
+          "average_similarity": 0.584
+        },
+        {
+          "start_sentence": 203,
+          "end_sentence": 205,
+          "length": 3,
+          "average_similarity": 0.645
+        },
+        {
+          "start_sentence": 220,
+          "end_sentence": 222,
+          "length": 3,
+          "average_similarity": 0.547
+        },
+        {
+          "start_sentence": 226,
+          "end_sentence": 228,
+          "length": 3,
+          "average_similarity": 0.505
+        },
+        {
+          "start_sentence": 237,
+          "end_sentence": 239,
+          "length": 3,
+          "average_similarity": 0.531
+        }
+      ],
+      "objective_description": {
+        "score": 0.3744,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "pairwise_similarity_examples": [
+      {
+        "sentence_pair": "Sentence 1 → Sentence 2",
+        "sentence_1": "Red presses her back against a refrigerated storag...",
+        "sentence_2": "Axel stands a few meters away, facing the lab's ma...",
+        "similarity": 0.2268
+      },
+      {
+        "sentence_pair": "Sentence 2 → Sentence 3",
+        "sentence_1": "Axel stands a few meters away, facing the lab's ma...",
+        "sentence_2": "Suddenly, the heavy door slides open with a pneuma...",
+        "similarity": 0.249
+      },
+      {
+        "sentence_pair": "Sentence 3 → Sentence 4",
+        "sentence_1": "Suddenly, the heavy door slides open with a pneuma...",
+        "sentence_2": "Wolf enters, moving with mechanical precision, syn...",
+        "similarity": 0.4369
+      },
+      {
+        "sentence_pair": "Sentence 4 → Sentence 5",
+        "sentence_1": "Wolf enters, moving with mechanical precision, syn...",
+        "sentence_2": "Wolf's eyes scan the room, locking onto Red.",
+        "similarity": 0.5356
+      },
+      {
+        "sentence_pair": "Sentence 5 → Sentence 6",
+        "sentence_1": "Wolf's eyes scan the room, locking onto Red.",
+        "sentence_2": "'Hand over the drive,' Wolf demands, voice flat an...",
+        "similarity": 0.3852
+      },
+      {
+        "sentence_pair": "Sentence 6 → Sentence 7",
+        "sentence_1": "'Hand over the drive,' Wolf demands, voice flat an...",
+        "sentence_2": "Wolf steps forward, gloved hand outstretched, his ...",
+        "similarity": 0.5086
+      },
+      {
+        "sentence_pair": "Sentence 7 → Sentence 8",
+        "sentence_1": "Wolf steps forward, gloved hand outstretched, his ...",
+        "sentence_2": "\"Hand over the drive.",
+        "similarity": 0.239
+      },
+      {
+        "sentence_pair": "Sentence 8 → Sentence 9",
+        "sentence_1": "\"Hand over the drive.",
+        "sentence_2": "Now.",
+        "similarity": 0.1485
+      },
+      {
+        "sentence_pair": "Sentence 9 → Sentence 10",
+        "sentence_1": "Now.",
+        "sentence_2": "You know what happens if you don't.",
+        "similarity": 0.1996
+      },
+      {
+        "sentence_pair": "Sentence 10 → Sentence 11",
+        "sentence_1": "You know what happens if you don't.",
+        "sentence_2": "Axel steps between Red and Wolf, flipping the bato...",
+        "similarity": 0.0091
+      },
+      {
+        "sentence_pair": "Sentence 11 → Sentence 12",
+        "sentence_1": "Axel steps between Red and Wolf, flipping the bato...",
+        "sentence_2": "Red glances at Axel, weighing trust as Wolf advanc...",
+        "similarity": 0.7173
+      },
+      {
+        "sentence_pair": "Sentence 12 → Sentence 13",
+        "sentence_1": "Red glances at Axel, weighing trust as Wolf advanc...",
+        "sentence_2": "The tray crashes to the floor, scattering surgical...",
+        "similarity": 0.2603
+      },
+      {
+        "sentence_pair": "Sentence 13 → Sentence 14",
+        "sentence_1": "The tray crashes to the floor, scattering surgical...",
+        "sentence_2": "The hum of a security drone echoes from the corrid...",
+        "similarity": 0.2194
+      },
+      {
+        "sentence_pair": "Sentence 14 → Sentence 15",
+        "sentence_1": "The hum of a security drone echoes from the corrid...",
+        "sentence_2": "Wolf lunges at Axel, shoving him sideways into a c...",
+        "similarity": 0.2793
+      },
+      {
+        "sentence_pair": "Sentence 15 → Sentence 16",
+        "sentence_1": "Wolf lunges at Axel, shoving him sideways into a c...",
+        "sentence_2": "Red darts left, searching for a path to the emerge...",
+        "similarity": 0.3453
+      },
+      {
+        "sentence_pair": "Sentence 16 → Sentence 17",
+        "sentence_1": "Red darts left, searching for a path to the emerge...",
+        "sentence_2": "Axel regains his footing, swinging the baton at Wo...",
+        "similarity": 0.3311
+      },
+      {
+        "sentence_pair": "Sentence 17 → Sentence 18",
+        "sentence_1": "Axel regains his footing, swinging the baton at Wo...",
+        "sentence_2": "Wolf pivots, unaffected, and turns his attention b...",
+        "similarity": 0.5796
+      },
+      {
+        "sentence_pair": "Sentence 18 → Sentence 19",
+        "sentence_1": "Wolf pivots, unaffected, and turns his attention b...",
+        "sentence_2": "Red spots a keypad beside the exit and rushes towa...",
+        "similarity": 0.4466
+      },
+      {
+        "sentence_pair": "Sentence 19 → Sentence 20",
+        "sentence_1": "Red spots a keypad beside the exit and rushes towa...",
+        "sentence_2": "The door panel beeps;",
+        "similarity": 0.531
+      },
+      {
+        "sentence_pair": "Sentence 20 → Sentence 21",
+        "sentence_1": "The door panel beeps;",
+        "sentence_2": "Wolf surges forward, arm outstretched.",
+        "similarity": 0.234
+      },
+      {
+        "note": "Only showing first 20 pairs, total of 247 adjacent sentence pairs"
+      }
+    ]
+  },
+  "story_structure_analysis": {
+    "evaluation_mode": "default mode",
+    "event_list": [
+      {
+        "event": "Red presses against storage unit, gripping a sealed data drive inside the lab.",
+        "source": "Red presses her back against a refrigerated storage unit, fingers tight around a sealed data drive.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Axel stands ready near the entrance, hand hovering above his stun baton.",
+        "source": "Axel stands a few meters away, facing the lab's main entrance, his hand hovering near a compact stun baton clipped at his hip.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf steps forward, gloved hand outstretched, his gaze unblinking and cold.",
+        "source": "Wolf steps forward, gloved hand outstretched, his gaze unblinking and cold.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Axel steps between Red and Wolf, flipping baton open and adopting a defensive stance.",
+        "source": "Axel steps between Red and Wolf, flipping the baton open with a sharp flick, his stance low and defensive.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf knocks aside a tray, scattering its contents across the floor.",
+        "source": "The tray crashes to the floor, scattering surgical shears and glass ampoules.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "A security drone's hum signals approaching reinforcements from the corridor.",
+        "source": "The hum of a security drone echoes from the corridor, signaling incoming reinforcements.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf lunges at Axel, shoving him into a cabinet door.",
+        "source": "Wolf lunges at Axel, shoving him sideways into a cabinet door, which rattles against its hinges.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red darts left, searching for an emergency exit while clutching the drive.",
+        "source": "Red darts left, searching for a path to the emergency exit, her breath fogging in the cold air as she clutches the drive.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Axel swings his baton at Wolf, causing sparks but not stopping him.",
+        "source": "Axel regains his footing, swinging the baton at Wolf's shoulder, producing a dull clang and a brief flicker of sparks.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf pivots, turns his attention back to Red, and advances relentlessly.",
+        "source": "Wolf pivots, unaffected, and turns his attention back to Red, advancing with relentless focus.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red spots a keypad beside the exit and rushes toward it, fingers fumbling over the slick plastic buttons.",
+        "source": "Red spots a keypad beside the exit and rushes toward it, fingers fumbling over the slick plastic buttons.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Axel intercepts, grappling Wolf's wrist, buying Red just enough time to hit the unlock code.",
+        "source": "Axel intercepts, grappling Wolf's wrist, buying Red just enough time to hit the unlock code.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "The exit opens; Red slips through, pulling Axel after her, leaving Wolf blocked as the door seals.",
+        "source": "The exit slides open and Red slips through, pulling Axel after her, leaving Wolf momentarily blocked as the door seals with a hydraulic thud.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Axel pressed onward, adrenaline masking exhaustion as they navigated the labyrinth of maintenance tunnels.",
+        "source": "Red and Axel pressed onward, adrenaline masking exhaustion as they navigated the labyrinth of maintenance tunnels.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red crouched behind a crate stamped with the colony's insignia, her gloved hand gripping the sealed data drive inside her jacket.",
+        "source": "Red crouched behind a crate stamped with the colony's insignia, her gloved hand gripping the sealed data drive inside her jacket.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "His partner, Shuttle Pilot 2, shifted his weight and tapped the butt of a stun pistol, eyes sweeping the shadows for signs of a target.",
+        "source": "' His partner, Shuttle Pilot 2, shifted his weight and tapped the butt of a stun pistol, eyes sweeping the shadows for signs of a target.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red uses an EMP chip to disable a security drone as it approaches.",
+        "source": "As a security drone hovered closer, blue lights strobing across the crates, Red slipped a small EMP chip from her belt pouch and pressed it against the drone’s access panel when it drifted within reach.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "From the far end of the bay, a tall figure in a grey utility suit—Wolf in disguise—strode toward the commotion, eyes locked on Red.",
+        "source": "From the far end of the bay, a tall figure in a grey utility suit—Wolf in disguise—strode toward the commotion, eyes locked on Red.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red darts for the side corridor, while pilots take cover and Wolf advances toward her.",
+        "source": "' Red darted for the side corridor, boots slapping the metal grating, while the pilots ducked for cover and Wolf advanced, calculating the shortest interception path.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red evades initial detection but is identified by Wolf, escalating the pursuit.",
+        "source": "The outcome: Red disabled a security drone and evaded initial detection, but Wolf identified her location, escalating the pursuit.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Hidden in the shadows, she caught her breath just long enough to notice a flicker on her wrist communicator—a new encrypted transmission pulsing urgently.",
+        "source": "Hidden in the shadows, she caught her breath just long enough to notice a flicker on her wrist communicator—a new encrypted transmission pulsing urgently.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red approaches the sealed lab door and scans her wristband at the security panel.",
+        "source": "Red approached the sealed lab door, boots clinking softly on the grated floor as she paused to scan her wristband at the security panel.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Willow emerges, checks the corridor, and hands Red a data drive.",
+        "source": "She glanced up and down the empty corridor, then pressed the drive into Red's palm.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Dr. Willow explains the drive contains a map of the station’s core systems, warns of its danger if intercepted.",
+        "source": "Willow emphasized the utmost secrecy of Red's mission, explaining that the drive contains a complete map of the station's core systems—information vital to Grandmother's work and dangerous if intercepted.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "“But… what’s on this drive that makes it so dangerous?",
+        "source": "“But… what’s on this drive that makes it so dangerous?",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "\"She’ll be waiting by the old willow tree near the landing site,\" Willow murmured, scanning the dim corridor for any signs of eavesdroppers.",
+        "source": "\"She’ll be waiting by the old willow tree near the landing site,\" Willow murmured, scanning the dim corridor for any signs of eavesdroppers.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Ruby Hood’s fingers danced across Red’s wristband, inputting a coded sequence with practiced speed.",
+        "source": "Ruby Hood’s fingers danced across Red’s wristband, inputting a coded sequence with practiced speed.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Hood glances upward, scanning for drone silhouettes, then subtly tilts her head toward a narrow alleyway, signaling Red to get moving.",
+        "source": "Hood glances upward, scanning for drone silhouettes, then subtly tilts her head toward a narrow alleyway, signaling Red to get moving.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red slips the drive into her jacket, adjusts her hood, and prepares to start her mission.",
+        "source": "Red, slipping the drive into her inner jacket pocket, adjusted her hood and prepared to begin her mission, trusting Willow's guidance and determined to fulfill her task.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "The balance of secrecy was about to shift, for the colony itself was not as secure as it seemed—someone else was already inside, and his presence would soon change everything.",
+        "source": "The balance of secrecy was about to shift, for the colony itself was not as secure as it seemed—someone else was already inside, and his presence would soon change everything.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Axel crouch behind a crate, monitoring corridors and drone patterns.",
+        "source": "Red and Axel crouch behind a crate, monitoring the corridor and security drone patterns.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "As they advance, Red spots a motion sensor activation and quickly adjusts their route, instructing Axel to stay low and alert for changes.",
+        "source": "As they advance, Red spots a motion sensor activation and quickly adjusts their route, instructing Axel to stay low and alert for changes.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "A security drone flags their trail earlier than expected, prompting a change of plan.",
+        "source": "When a security drone flags their trail earlier than expected, Red realizes their planned route is compromised.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Axel suggests rerouting through maintenance with less than three minutes before lockdown.",
+        "source": "Axel suggests abandoning the east corridor and rerouting through maintenance, warning they have under three minutes before lockdown.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red decides they must split up: she will jam sensors, Axel will clear the hatch.",
+        "source": "Red decides they must split up to maximize their chances: she will jam the maintenance sensors, while Axel clears the hatch for their escape.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "With every second counting down, Red and Axel exchange a final, urgent glance before slipping in opposite directions—each carrying the weight of their mission.",
+        "source": "With every second counting down, Red and Axel exchange a final, urgent glance before slipping in opposite directions—each carrying the weight of their mission.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red approaches the cargo bay and appeals to Shuttle Pilot 1 for immediate boarding, citing imminent danger.",
+        "source": "Red approaches the cargo bay with urgency, directly appealing to Shuttle Pilot 1 for immediate boarding, citing imminent danger to the station.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "The pilots debate helping Red, agreeing to assist if they can avoid detection and minimize risk.",
+        "source": "The pilots, motivated by the bounty but wary of increased security scrutiny, debate whether to help her or turn her in, ultimately agreeing to assist if they can minimize risk and avoid detection.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red produces a manifest and claims to have override codes to prevent lockdown, convincing the pilots of her urgency.",
+        "source": "Red produces a detailed manifest and claims to have override codes that could prevent a station-wide lockdown, further convincing the pilots of the seriousness of her mission.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Axel, posing as supervisor, scrutinizes Red’s paperwork, expressing suspicion about discrepancies.",
+        "source": "Axel, now posing as a supervisor rather than a covert accomplice, scrutinizes Red's paperwork, expressing suspicion about discrepancies, but Red provides plausible explanations and offers to show supporting correspondence.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red provides plausible explanations and offers to show supporting correspondence for the manifest discrepancies.",
+        "source": "If Axel wanted to see proof, she added, she could pull up the correspondence right then.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "“But I’m going to need you to stay right here while I verify a few things myself.",
+        "source": "“But I’m going to need you to stay right here while I verify a few things myself.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Shuttle Pilot 1 planted a firm hand on the hatch control, eyes narrowing as Red darted toward the shuttle’s service hatch.",
+        "source": "Shuttle Pilot 1 planted a firm hand on the hatch control, eyes narrowing as Red darted toward the shuttle’s service hatch.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red claims to have override codes and threatens lockdown if delayed further.",
+        "source": "“And if you stall me any longer, the lockdown protocol will trigger.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Shuttle Pilot 1 narrowed their eyes, suspicion sharp in the space between them, but nevertheless shifted just enough to let Red edge closer to the hatch.",
+        "source": "Shuttle Pilot 1 narrowed their eyes, suspicion sharp in the space between them, but nevertheless shifted just enough to let Red edge closer to the hatch.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "The pilots plan to keep their transponder dark and avoid patrols, ready to abort if needed.",
+        "source": "The pilots plan to keep their transponder dark and avoid patrols, ready to abort the operation if anything seems amiss.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red extended the manifest toward Axel, meeting his gaze with a steadiness she hoped would mask her nerves.",
+        "source": "Red extended the manifest toward Axel, meeting his gaze with a steadiness she hoped would mask her nerves.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "If Axel wanted to see proof, she added, she could pull up the correspondence right then.",
+        "source": "If Axel wanted to see proof, she added, she could pull up the correspondence right then.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Alliance between Red, Axel, and the pilots forms out of mutual necessity and distrust, not a coordinated ruse.",
+        "source": "The alliance between Red, Axel, and the pilots forms out of mutual necessity and distrust, rather than a coordinated ruse, and their cooperation hinges on the perceived threat rather than bounty greed alone.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "As the shuttle’s hatch sealed behind them and the engines rumbled to life, Red, Axel, and the pilots faced the uncertain dark beyond the station—united not by trust, but by the fragile hope that escape might offer a second chance.",
+        "source": "As the shuttle’s hatch sealed behind them and the engines rumbled to life, Red, Axel, and the pilots faced the uncertain dark beyond the station—united not by trust, but by the fragile hope that escape might offer a second chance.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      }
+    ],
+    "Papalampidi_detailed_results": {
+      "turning_points": {
+        "TP1": "Dr. Willow emerges, checks the corridor, and hands Red a data drive.",
+        "TP2": "A security drone flags their trail earlier than expected, prompting a change of plan.",
+        "TP3": "Red decides they must split up: she will jam sensors, Axel will clear the hatch.",
+        "TP4": "Wolf lunges at Axel, shoving him into a cabinet door.",
+        "TP5": "The exit opens; Red slips through, pulling Axel after her, leaving Wolf blocked as the door seals."
+      },
+      "stage_division": {
+        "Setup": [
+          "Red crouched behind a crate stamped with the colony's insignia, her gloved hand gripping the sealed data drive inside her jacket.",
+          "Ruby Hood’s fingers danced across Red’s wristband, inputting a coded sequence with practiced speed.",
+          "Red slips the drive into her jacket, adjusts her hood, and prepares to start her mission.",
+          "The balance of secrecy was about to shift, for the colony itself was not as secure as it seemed—someone else was already inside, and his presence would soon change everything.",
+          "Red approaches the sealed lab door and scans her wristband at the security panel.",
+          "Dr. Willow emerges, checks the corridor, and hands Red a data drive.",
+          "Dr. Willow explains the drive contains a map of the station’s core systems, warns of its danger if intercepted.",
+          "“But… what’s on this drive that makes it so dangerous?",
+          "\"She’ll be waiting by the old willow tree near the landing site,\" Willow murmured, scanning the dim corridor for any signs of eavesdroppers."
+        ],
+        "New Situation": [
+          "Red and Axel crouch behind a crate, monitoring corridors and drone patterns.",
+          "As they advance, Red spots a motion sensor activation and quickly adjusts their route, instructing Axel to stay low and alert for changes.",
+          "A security drone flags their trail earlier than expected, prompting a change of plan.",
+          "Axel suggests rerouting through maintenance with less than three minutes before lockdown.",
+          "Red decides they must split up: she will jam sensors, Axel will clear the hatch.",
+          "With every second counting down, Red and Axel exchange a final, urgent glance before slipping in opposite directions—each carrying the weight of their mission."
+        ],
+        "Progress": [
+          "Red approaches the cargo bay and appeals to Shuttle Pilot 1 for immediate boarding, citing imminent danger.",
+          "The pilots debate helping Red, agreeing to assist if they can avoid detection and minimize risk.",
+          "Red produces a manifest and claims to have override codes to prevent lockdown, convincing the pilots of her urgency.",
+          "Axel, posing as supervisor, scrutinizes Red’s paperwork, expressing suspicion about discrepancies.",
+          "Red provides plausible explanations and offers to show supporting correspondence for the manifest discrepancies.",
+          "“But I’m going to need you to stay right here while I verify a few things myself.",
+          "Shuttle Pilot 1 planted a firm hand on the hatch control, eyes narrowing as Red darted toward the shuttle’s service hatch.",
+          "Red claims to have override codes and threatens lockdown if delayed further.",
+          "Shuttle Pilot 1 narrowed their eyes, suspicion sharp in the space between them, but nevertheless shifted just enough to let Red edge closer to the hatch.",
+          "The pilots plan to keep their transponder dark and avoid patrols, ready to abort if needed.",
+          "Red extended the manifest toward Axel, meeting his gaze with a steadiness she hoped would mask her nerves.",
+          "If Axel wanted to see proof, she added, she could pull up the correspondence right then.",
+          "Alliance between Red, Axel, and the pilots forms out of mutual necessity and distrust, not a coordinated ruse."
+        ],
+        "Complications": [
+          "Red presses against storage unit, gripping a sealed data drive inside the lab.",
+          "Axel stands ready near the entrance, hand hovering above his stun baton.",
+          "Wolf steps forward, gloved hand outstretched, his gaze unblinking and cold.",
+          "Axel steps between Red and Wolf, flipping baton open and adopting a defensive stance.",
+          "Wolf knocks aside a tray, scattering its contents across the floor.",
+          "A security drone's hum signals approaching reinforcements from the corridor.",
+          "Wolf lunges at Axel, shoving him into a cabinet door.",
+          "Red darts left, searching for an emergency exit while clutching the drive.",
+          "Axel swings his baton at Wolf, causing sparks but not stopping him.",
+          "Wolf pivots, turns his attention back to Red, and advances relentlessly.",
+          "Red spots a keypad beside the exit and rushes toward it, fingers fumbling over the slick plastic buttons.",
+          "Axel intercepts, grappling Wolf's wrist, buying Red just enough time to hit the unlock code."
+        ],
+        "Final Push": [
+          "The exit opens; Red slips through, pulling Axel after her, leaving Wolf blocked as the door seals.",
+          "Red and Axel pressed onward, adrenaline masking exhaustion as they navigated the labyrinth of maintenance tunnels.",
+          "Red uses an EMP chip to disable a security drone as it approaches.",
+          "From the far end of the bay, a tall figure in a grey utility suit—Wolf in disguise—strode toward the commotion, eyes locked on Red.",
+          "Red darts for the side corridor, while pilots take cover and Wolf advances toward her.",
+          "Red evades initial detection but is identified by Wolf, escalating the pursuit.",
+          "Hidden in the shadows, she caught her breath just long enough to notice a flicker on her wrist communicator—a new encrypted transmission pulsing urgently."
+        ],
+        "Aftermath": [
+          "As the shuttle’s hatch sealed behind them and the engines rumbled to life, Red, Axel, and the pilots faced the uncertain dark beyond the station—united not by trust, but by the fragile hope that escape might offer a second chance."
+        ]
+      }
+    },
+    "Li_detailed_results": {
+      "Red presses against storage unit, gripping a sealed data drive inside the lab.": "Orientation",
+      "Axel stands ready near the entrance, hand hovering above his stun baton.": "Orientation",
+      "Wolf steps forward, gloved hand outstretched, his gaze unblinking and cold.": "Orientation",
+      "Axel steps between Red and Wolf, flipping baton open and adopting a defensive stance.": "Complicating Action",
+      "Wolf knocks aside a tray, scattering its contents across the floor.": "Complicating Action",
+      "A security drone's hum signals approaching reinforcements from the corridor.": "Complicating Action",
+      "Wolf lunges at Axel, shoving him into a cabinet door.": "Complicating Action",
+      "Red darts left, searching for an emergency exit while clutching the drive.": "Complicating Action",
+      "Axel swings his baton at Wolf, causing sparks but not stopping him.": "Complicating Action",
+      "Wolf pivots, turns his attention back to Red, and advances relentlessly.": "Complicating Action",
+      "Red spots a keypad beside the exit and rushes toward it, fingers fumbling over the slick plastic buttons.": "Minor Resolution",
+      "Axel intercepts, grappling Wolf's wrist, buying Red just enough time to hit the unlock code.": "Minor Resolution",
+      "The exit opens; Red slips through, pulling Axel after her, leaving Wolf blocked as the door seals.": "MRE",
+      "Red and Axel pressed onward, adrenaline masking exhaustion as they navigated the labyrinth of maintenance tunnels.": "Aftermath",
+      "Red crouched behind a crate stamped with the colony's insignia, her gloved hand gripping the sealed data drive inside her jacket.": "Orientation",
+      "His partner, Shuttle Pilot 2, shifted his weight and tapped the butt of a stun pistol, eyes sweeping the shadows for signs of a target.": "Orientation",
+      "Red uses an EMP chip to disable a security drone as it approaches.": "Minor Resolution",
+      "From the far end of the bay, a tall figure in a grey utility suit—Wolf in disguise—strode toward the commotion, eyes locked on Red.": "Complicating Action",
+      "Red darts for the side corridor, while pilots take cover and Wolf advances toward her.": "Complicating Action",
+      "Red evades initial detection but is identified by Wolf, escalating the pursuit.": "Complicating Action",
+      "Hidden in the shadows, she caught her breath just long enough to notice a flicker on her wrist communicator—a new encrypted transmission pulsing urgently.": "Minor Resolution",
+      "Red approaches the sealed lab door and scans her wristband at the security panel.": "Complicating Action",
+      "Dr. Willow emerges, checks the corridor, and hands Red a data drive.": "Minor Resolution",
+      "Dr. Willow explains the drive contains a map of the station’s core systems, warns of its danger if intercepted.": "Evaluation",
+      "“But… what’s on this drive that makes it so dangerous?": "Direct Comment",
+      "\"She’ll be waiting by the old willow tree near the landing site,\" Willow murmured, scanning the dim corridor for any signs of eavesdroppers.": "Orientation",
+      "Ruby Hood’s fingers danced across Red’s wristband, inputting a coded sequence with practiced speed.": "Complicating Action",
+      "Hood glances upward, scanning for drone silhouettes, then subtly tilts her head toward a narrow alleyway, signaling Red to get moving.": "Minor Resolution",
+      "Red slips the drive into her jacket, adjusts her hood, and prepares to start her mission.": "Abstract",
+      "The balance of secrecy was about to shift, for the colony itself was not as secure as it seemed—someone else was already inside, and his presence would soon change everything.": "Evaluation",
+      "Red and Axel crouch behind a crate, monitoring corridors and drone patterns.": "Orientation",
+      "As they advance, Red spots a motion sensor activation and quickly adjusts their route, instructing Axel to stay low and alert for changes.": "Complicating Action",
+      "A security drone flags their trail earlier than expected, prompting a change of plan.": "Complicating Action",
+      "Axel suggests rerouting through maintenance with less than three minutes before lockdown.": "Complicating Action",
+      "Red decides they must split up: she will jam sensors, Axel will clear the hatch.": "Complicating Action",
+      "With every second counting down, Red and Axel exchange a final, urgent glance before slipping in opposite directions—each carrying the weight of their mission.": "Abstract",
+      "Red approaches the cargo bay and appeals to Shuttle Pilot 1 for immediate boarding, citing imminent danger.": "Complicating Action",
+      "The pilots debate helping Red, agreeing to assist if they can avoid detection and minimize risk.": "Minor Resolution",
+      "Red produces a manifest and claims to have override codes to prevent lockdown, convincing the pilots of her urgency.": "Minor Resolution",
+      "Axel, posing as supervisor, scrutinizes Red’s paperwork, expressing suspicion about discrepancies.": "Complicating Action",
+      "Red provides plausible explanations and offers to show supporting correspondence for the manifest discrepancies.": "Minor Resolution",
+      "“But I’m going to need you to stay right here while I verify a few things myself.": "Direct Comment",
+      "Shuttle Pilot 1 planted a firm hand on the hatch control, eyes narrowing as Red darted toward the shuttle’s service hatch.": "Complicating Action",
+      "Red claims to have override codes and threatens lockdown if delayed further.": "Complicating Action",
+      "Shuttle Pilot 1 narrowed their eyes, suspicion sharp in the space between them, but nevertheless shifted just enough to let Red edge closer to the hatch.": "Minor Resolution",
+      "The pilots plan to keep their transponder dark and avoid patrols, ready to abort if needed.": "Minor Resolution",
+      "Red extended the manifest toward Axel, meeting his gaze with a steadiness she hoped would mask her nerves.": "Complicating Action",
+      "If Axel wanted to see proof, she added, she could pull up the correspondence right then.": "Minor Resolution",
+      "Alliance between Red, Axel, and the pilots forms out of mutual necessity and distrust, not a coordinated ruse.": "Resolution",
+      "As the shuttle’s hatch sealed behind them and the engines rumbled to life, Red, Axel, and the pilots faced the uncertain dark beyond the station—united not by trust, but by the fragile hope that escape might offer a second chance.": "Aftermath"
+    },
+    "structure_analysis": {
+      "basic_info": {
+        "total_events": 50,
+        "analysis_mode": "default",
+        "analysis_time": null
+      },
+      "Papalampidi_structure_analysis": {
+        "turning_point_integrity": {
+          "identified_tps": [
+            "TP1",
+            "TP2",
+            "TP3",
+            "TP4",
+            "TP5"
+          ],
+          "missing_tps": [],
+          "TP_coverage": "5/5"
+        },
+        "stage_integrity": {
+          "identified_stages": [
+            "Setup",
+            "New Situation",
+            "Progress",
+            "Complications",
+            "Final Push",
+            "Aftermath"
+          ],
+          "missing_stages": [],
+          "stage_coverage": "6/6"
+        }
+      },
+      "Li_function_analysis": {
+        "core_function_check": {
+          "Orientation": "exists",
+          "Complicating Action": "exists",
+          "MRE": "exists",
+          "Resolution": "exists"
+        },
+        "function_distribution": {
+          "Orientation": 7,
+          "Complicating Action": 21,
+          "Minor Resolution": 12,
+          "MRE": 1,
+          "Aftermath": 2,
+          "Evaluation": 2,
+          "Direct Comment": 2,
+          "Abstract": 2,
+          "Resolution": 1
+        },
+        "function_diversity": 9
+      }
+    }
+  }
+}

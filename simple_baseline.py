@@ -1,118 +1,62 @@
 #!/usr/bin/env python3
 """
-超简单基线生成器 - 只用一句话提示词
+最简单的故事生成器 - 输入提示词直接生成
 """
 
-import json
 import time
 import os
-from pathlib import Path
 from datetime import datetime
+from src.utils.utils import generate_response
 
-# 导入LLM
-from glm_llm import LLMCall
-
-def generate_simple_baseline(topic="Little Red Riding Hood", temperature=0.7, seed=1):
-    """最简单的基线：一句话生成完整故事"""
-    
-    # 超简单的提示词
-    prompt = f"Generate a complete story about {topic}."
-    
-    print(f"📝 Baseline: {topic} (T{temperature}, s{seed})")
-    print(f"💭 Prompt: {prompt}")
+def generate_story(prompt):
+    """根据提示词生成故事"""
+    print(f"💭 提示词: {prompt}")
+    print("🔄 生成中...")
     
     start_time = time.time()
     
     try:
-        llm_call = LLMCall()
-        story = llm_call.generate_response(
-            prompt=prompt,
-            temperature=temperature,
-            seed=seed
-        )
+        messages = [{"role": "user", "content": prompt}]
+        story = generate_response(messages, model="gpt-4.1")
         
         generation_time = time.time() - start_time
         word_count = len(story.split())
         
-        result = {
-            "prompt": prompt,
-            "story": story,
-            "stats": {
-                "temperature": temperature,
-                "seed": seed, 
-                "generation_time": generation_time,
-                "word_count": word_count,
-                "timestamp": datetime.now().isoformat()
-            }
-        }
+        print(f"✅ 完成！生成了 {word_count} 词，耗时 {generation_time:.1f}秒")
+        print("\n📖 生成的故事：")
+        print("-" * 50)
+        print(story)
+        print("-" * 50)
         
-        print(f"✅ Generated: {word_count} words in {generation_time:.1f}s")
-        return result
+        # 保存到文件
+        output_dir = "output"
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+        
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"story_{timestamp}.txt"
+        filepath = os.path.join(output_dir, filename)
+        
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(f"生成时间: {datetime.now().isoformat()}\n")
+            f.write(f"提示词: {prompt}\n")
+            f.write(f"字数: {word_count}\n")
+            f.write(f"生成时间: {generation_time:.1f}秒\n")
+            f.write("-" * 80 + "\n\n")
+            f.write(story)
+        
+        print(f"\n💾 故事已保存到: {filepath}")
+        
+        return story
         
     except Exception as e:
-        print(f"❌ Failed: {e}")
+        print(f"❌ 生成失败: {e}")
         return None
 
-def run_baseline_matrix():
-    """运行基线实验矩阵"""
-    print("🚀 Running Baseline Matrix")
-    print("=" * 40)
-    
-    topic = "Little Red Riding Hood"
-    temperatures = [0.3, 0.7, 0.9]
-    seeds = [1, 2, 3]
-    
-    output_dir = Path("data/output/baseline_results")
-    output_dir.mkdir(exist_ok=True)
-    
-    results = []
-    
-    for temp in temperatures:
-        for seed in seeds:
-            print(f"\n📝 T{temp}_s{seed}")
-            result = generate_simple_baseline(topic, temp, seed)
-            
-            if result:
-                # 保存结果
-                filename = f"baseline_T{temp}_s{seed}.json"
-                filepath = output_dir / filename
-                
-                with open(filepath, 'w', encoding='utf-8') as f:
-                    json.dump(result, f, ensure_ascii=False, indent=2)
-                
-                # 保存纯文本版本
-                text_file = output_dir / f"baseline_T{temp}_s{seed}.txt"
-                with open(text_file, 'w', encoding='utf-8') as f:
-                    f.write(result['story'])
-                
-                results.append(result)
-                print(f"💾 Saved: {filename}")
-            
-            time.sleep(1)  # 避免API限制
-    
-    print(f"\n✅ Generated {len(results)}/9 baseline stories")
-    return results
-
 if __name__ == "__main__":
-    import argparse
+    prompt = """You are a writer. Write a complete any version of Little Red Riding Hood. Begin immediately and write the full story with detailed descriptions, dialogue, and scenes. Write at least 3000-5000 words. 
+
+Start now:
+"""
     
-    parser = argparse.ArgumentParser(description="Simple Baseline Generator")
-    parser.add_argument("--mode", choices=["single", "matrix"], default="single")
-    parser.add_argument("--temperature", type=float, default=0.7)
-    parser.add_argument("--seed", type=int, default=1)
-    
-    args = parser.parse_args()
-    
-    if args.mode == "single":
-        result = generate_simple_baseline(temperature=args.temperature, seed=args.seed)
-        if result:
-            output_dir = Path("data/output/baseline_results")
-            output_dir.mkdir(exist_ok=True)
-            
-            filename = f"baseline_test_T{args.temperature}_s{args.seed}.txt"
-            filepath = output_dir / filename
-            with open(filepath, 'w', encoding='utf-8') as f:
-                f.write(result['story'])
-            print(f"💾 Saved: {filepath}")
-    else:
-        run_baseline_matrix()
+    generate_story(prompt)

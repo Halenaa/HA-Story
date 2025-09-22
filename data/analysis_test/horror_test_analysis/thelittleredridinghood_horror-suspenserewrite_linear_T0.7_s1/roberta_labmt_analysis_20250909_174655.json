@@ -1,0 +1,191 @@
+{
+  "metadata": {
+    "total_chapters": 9,
+    "primary_method": "RoBERTa",
+    "validation_method": "LabMT-en-v1",
+    "analysis_timestamp": "2025-09-09T17:46:55.658440"
+  },
+  "chapter_analysis": [
+    {
+      "chapter_num": 1,
+      "title": "Red Receives the Basket and Warning",
+      "roberta_score": 0.1842,
+      "labmt_score": 0.2726,
+      "content_length": 4561
+    },
+    {
+      "chapter_num": 2,
+      "title": "Entering the Woods and Meeting the Huntsman",
+      "roberta_score": 0.6857,
+      "labmt_score": 0.2585,
+      "content_length": 3660
+    },
+    {
+      "chapter_num": 3,
+      "title": "Red’s Shortcut and the Wolf’s Stalking",
+      "roberta_score": 0.5579,
+      "labmt_score": 0.2461,
+      "content_length": 20274
+    },
+    {
+      "chapter_num": 4,
+      "title": "Wolf Tricks Red with a Riddle",
+      "roberta_score": 0.2304,
+      "labmt_score": 0.1938,
+      "content_length": 30263
+    },
+    {
+      "chapter_num": 5,
+      "title": "Wolf Arrives at Grandmother’s House First",
+      "roberta_score": -0.0479,
+      "labmt_score": 0.2244,
+      "content_length": 5320
+    },
+    {
+      "chapter_num": 6,
+      "title": "Red Arrives and Senses Something Wrong",
+      "roberta_score": -0.3381,
+      "labmt_score": 0.2067,
+      "content_length": 6075
+    },
+    {
+      "chapter_num": 7,
+      "title": "Red Confronts the Wolf and Fights Back",
+      "roberta_score": 0.2267,
+      "labmt_score": 0.1649,
+      "content_length": 4753
+    },
+    {
+      "chapter_num": 8,
+      "title": "The Huntsman’s Rescue and Final Showdown",
+      "roberta_score": -0.0695,
+      "labmt_score": 0.0803,
+      "content_length": 12953
+    },
+    {
+      "chapter_num": 9,
+      "title": "Aftermath and Red’s New Resolve",
+      "roberta_score": 0.4749,
+      "labmt_score": 0.2008,
+      "content_length": 4443
+    }
+  ],
+  "primary_analysis": {
+    "method": "RoBERTa",
+    "scores": [
+      0.18419342041015624,
+      0.6856546719868978,
+      0.5579040884971619,
+      0.23043025732040406,
+      -0.047943508625030516,
+      -0.33805840810139975,
+      0.22670483986536663,
+      -0.06945093472798665,
+      0.4749364177385966
+    ],
+    "reagan_classification": {
+      "method": "RoBERTa",
+      "best_match": "Tragedy",
+      "confidence": 0.58,
+      "all_similarities": {
+        "Rags to riches": 0.188,
+        "Tragedy": 0.58,
+        "Man in a hole": 0,
+        "Icarus": 0.3412,
+        "Cinderella": 0,
+        "Oedipus": 0.4843
+      },
+      "reagan_category": "TR"
+    }
+  },
+  "validation_analysis": {
+    "method": "LabMT",
+    "scores": [
+      0.27258108108108137,
+      0.2585185185185177,
+      0.24605797101448545,
+      0.19376293508936815,
+      0.22444767441860436,
+      0.20671487603305794,
+      0.16488013698630133,
+      0.08033529411764495,
+      0.20078817733990095
+    ],
+    "reagan_classification": {
+      "method": "LabMT",
+      "best_match": "Tragedy",
+      "confidence": 0.8021,
+      "all_similarities": {
+        "Rags to riches": 0.5139,
+        "Tragedy": 0.8021,
+        "Man in a hole": 0,
+        "Icarus": 0.2027,
+        "Cinderella": 0,
+        "Oedipus": 0.1441
+      },
+      "reagan_category": "TR"
+    }
+  },
+  "correlation_analysis": {
+    "pearson_correlation": {
+      "r": 0.4263,
+      "p_value": 0.2525,
+      "significance": "Not Significant"
+    },
+    "spearman_correlation": {
+      "r": 0.3333,
+      "p_value": 0.3807
+    },
+    "direction_consistency": 0.625,
+    "consistency_level": "Low",
+    "interpretation": "RoBERTa and LabMT correlation coefficient is 0.426, belongs to weak correlation"
+  },
+  "comparison_analysis": {
+    "disagreement_points": [
+      {
+        "chapter": 2,
+        "roberta_score": 0.6856546719868978,
+        "labmt_score": 0.2585185185185177,
+        "difference": 0.4271
+      },
+      {
+        "chapter": 3,
+        "roberta_score": 0.5579040884971619,
+        "labmt_score": 0.24605797101448545,
+        "difference": 0.3118
+      },
+      {
+        "chapter": 6,
+        "roberta_score": -0.33805840810139975,
+        "labmt_score": 0.20671487603305794,
+        "difference": 0.5448
+      }
+    ],
+    "method_advantages": {
+      "RoBERTa": {
+        "strengths": [
+          "Deep learning model with better contextual understanding",
+          "Suitable for modern text and dialogue",
+          "High sensitivity to sci-fi and technical texts"
+        ],
+        "classification": "Tragedy",
+        "confidence": 0.58
+      },
+      "LabMT": {
+        "strengths": [
+          "Fully consistent with Reagan's original method",
+          "Based on large-scale human annotation",
+          "Suitable for traditional literary analysis"
+        ],
+        "classification": "Tragedy",
+        "confidence": 0.8021
+      }
+    },
+    "consistency_assessment": {
+      "classification_agreement": true,
+      "major_disagreements": 3,
+      "recommendation": "Both methods identify as Tragedy, results are highly consistent, recommend using RoBERTa as the primary analysis result"
+    }
+  },
+  "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.426 (Low)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.426, belongs to weak correlation\n\nClassification Results:\n- RoBERTa (primary): Tragedy\n- LabMT (validation): Tragedy\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.426, showing low consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation."
+}

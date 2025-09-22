@@ -1,0 +1,1704 @@
+{
+  "folder_name": "thelittleredridinghood_romanticrewrite_nonlinear_T0.9_s1",
+  "file_path": "/Users/haha/Story/data/output/romantic_test/thelittleredridinghood_romanticrewrite_nonlinear_T0.9_s1/enhanced_story_dialogue_updated.md",
+  "analysis_timestamp": null,
+  "emotional_arc_analysis": {
+    "metadata": {
+      "total_chapters": 6,
+      "primary_method": "RoBERTa",
+      "validation_method": "LabMT-en-v1",
+      "analysis_timestamp": "2025-09-09T18:39:52.104244"
+    },
+    "chapter_analysis": [
+      {
+        "chapter_num": 5,
+        "title": "The Confrontation at the Cottage",
+        "roberta_score": 0.3567,
+        "labmt_score": 0.1289,
+        "content_length": 43766
+      },
+      {
+        "chapter_num": 1,
+        "title": "Red Receives a Mysterious Letter",
+        "roberta_score": -0.1721,
+        "labmt_score": 0.2057,
+        "content_length": 7403
+      },
+      {
+        "chapter_num": 3,
+        "title": "Wolf's Interception and Deception",
+        "roberta_score": 0.2377,
+        "labmt_score": 0.1985,
+        "content_length": 16644
+      },
+      {
+        "chapter_num": 4,
+        "title": "Grandmother’s Disappearance",
+        "roberta_score": -0.1655,
+        "labmt_score": 0.1602,
+        "content_length": 16351
+      },
+      {
+        "chapter_num": 2,
+        "title": "Red Encounters the Woodsman",
+        "roberta_score": 0.7221,
+        "labmt_score": 0.266,
+        "content_length": 8828
+      },
+      {
+        "chapter_num": 6,
+        "title": "Red’s Choice and Grandmother’s Return",
+        "roberta_score": 0.6934,
+        "labmt_score": 0.2453,
+        "content_length": 8096
+      }
+    ],
+    "primary_analysis": {
+      "method": "RoBERTa",
+      "scores": [
+        0.35666462977727253,
+        -0.1721196134885152,
+        0.23768739302953085,
+        -0.16549843549728394,
+        0.7221468965212504,
+        0.6934381643931071
+      ],
+      "reagan_classification": {
+        "method": "RoBERTa",
+        "best_match": "Rags to riches",
+        "confidence": 0.7233,
+        "all_similarities": {
+          "Rags to riches": 0.7233,
+          "Tragedy": 0.0849,
+          "Man in a hole": 0.4486,
+          "Icarus": 0,
+          "Cinderella": 0,
+          "Oedipus": 0.5569
+        },
+        "reagan_category": "RR"
+      }
+    },
+    "validation_analysis": {
+      "method": "LabMT",
+      "scores": [
+        0.128898601398598,
+        0.2057413249211364,
+        0.19847722960151248,
+        0.16017553191489076,
+        0.2660053380782934,
+        0.24525684931506841
+      ],
+      "reagan_classification": {
+        "method": "LabMT",
+        "best_match": "Rags to riches",
+        "confidence": 0.7716,
+        "all_similarities": {
+          "Rags to riches": 0.7716,
+          "Tragedy": 0.5139,
+          "Man in a hole": 0.1623,
+          "Icarus": 0,
+          "Cinderella": 0,
+          "Oedipus": 0.2433
+        },
+        "reagan_category": "RR"
+      }
+    },
+    "correlation_analysis": {
+      "pearson_correlation": {
+        "r": 0.572,
+        "p_value": 0.2356,
+        "significance": "Not Significant"
+      },
+      "spearman_correlation": {
+        "r": 0.4857,
+        "p_value": 0.3287
+      },
+      "direction_consistency": 0.6,
+      "consistency_level": "Medium",
+      "interpretation": "RoBERTa and LabMT correlation coefficient is 0.572, belongs to moderate correlation"
+    },
+    "comparison_analysis": {
+      "disagreement_points": [
+        {
+          "chapter": 2,
+          "roberta_score": -0.1721196134885152,
+          "labmt_score": 0.2057413249211364,
+          "difference": 0.3779
+        },
+        {
+          "chapter": 4,
+          "roberta_score": -0.16549843549728394,
+          "labmt_score": 0.16017553191489076,
+          "difference": 0.3257
+        },
+        {
+          "chapter": 5,
+          "roberta_score": 0.7221468965212504,
+          "labmt_score": 0.2660053380782934,
+          "difference": 0.4561
+        },
+        {
+          "chapter": 6,
+          "roberta_score": 0.6934381643931071,
+          "labmt_score": 0.24525684931506841,
+          "difference": 0.4482
+        }
+      ],
+      "method_advantages": {
+        "RoBERTa": {
+          "strengths": [
+            "Deep learning model with better contextual understanding",
+            "Suitable for modern text and dialogue",
+            "High sensitivity to sci-fi and technical texts"
+          ],
+          "classification": "Rags to riches",
+          "confidence": 0.7233
+        },
+        "LabMT": {
+          "strengths": [
+            "Fully consistent with Reagan's original method",
+            "Based on large-scale human annotation",
+            "Suitable for traditional literary analysis"
+          ],
+          "classification": "Rags to riches",
+          "confidence": 0.7716
+        }
+      },
+      "consistency_assessment": {
+        "classification_agreement": true,
+        "major_disagreements": 4,
+        "recommendation": "Both methods identify as Rags to riches, results are highly consistent, recommend using RoBERTa as the primary analysis result"
+      }
+    },
+    "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.572 (Medium)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.572, belongs to moderate correlation\n\nClassification Results:\n- RoBERTa (primary): Rags to riches\n- LabMT (validation): Rags to riches\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.572, showing medium consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation.",
+    "output_files": {
+      "analysis_json": "/Users/haha/Story/data/romantic_test_analysis/thelittleredridinghood_romanticrewrite_nonlinear_T0.9_s1/roberta_labmt_analysis_20250909_183952.json"
+    }
+  },
+  "hred_coherence_analysis": {
+    "HRED_coherence_evaluation": {
+      "model_name": "all-mpnet-base-v2",
+      "analysis_method": "Original sentence coherence",
+      "total_sentences": 910,
+      "adjacent_pairs": 909,
+      "average_coherence": 0.4237,
+      "objective_description": {
+        "score": 0.4237,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "detailed_analysis": {
+      "basic_statistics": {
+        "average_coherence": 0.42365439531646415,
+        "coherence_std": 0.16108198894021275,
+        "max_coherence": 0.9360053539276123,
+        "min_coherence": -0.0035256100818514824,
+        "coherence_median": 0.40706318616867065
+      },
+      "coherence_breakpoints": [
+        {
+          "position": 2,
+          "sentence_pair": "Elias stands protectively behi... → When Red knocks, Lucien—posing...",
+          "similarity": 0.135
+        },
+        {
+          "position": 6,
+          "sentence_pair": "Elias, unsettled by signs of i... → Lucien WolfLucien pours the te...",
+          "similarity": 0.202
+        },
+        {
+          "position": 38,
+          "sentence_pair": "\"Very well, Red,\" he murmured,... → \"If it eases your mind, I shal...",
+          "similarity": 0.261
+        },
+        {
+          "position": 44,
+          "sentence_pair": "His gaze never left her, not e... → “See?...",
+          "similarity": 0.196
+        },
+        {
+          "position": 56,
+          "sentence_pair": "But Red only drew a breath, he... → \"Perhaps silence is safer, Luc...",
+          "similarity": 0.237
+        },
+        {
+          "position": 59,
+          "sentence_pair": "The conversation turns tense a... → Elias circles the room, his fi...",
+          "similarity": 0.23
+        },
+        {
+          "position": 63,
+          "sentence_pair": "He paused, gaze flickering to ... → When Lucien offered, Elias sho...",
+          "similarity": 0.19
+        },
+        {
+          "position": 65,
+          "sentence_pair": "“No, thank you, Lucien.... → I can’t seem to settle tonight...",
+          "similarity": 0.048
+        },
+        {
+          "position": 66,
+          "sentence_pair": "I can’t seem to settle tonight... → ” The words were gentle but fi...",
+          "similarity": 0.219
+        },
+        {
+          "position": 80,
+          "sentence_pair": "” The words hung in the dusky ... → Lucien WolfLucien gestures tow...",
+          "similarity": 0.258
+        },
+        {
+          "position": 101,
+          "sentence_pair": "Turning to Lucien with a gentl... → “Perhaps you should,” he sugge...",
+          "similarity": 0.235
+        },
+        {
+          "position": 102,
+          "sentence_pair": "“Perhaps you should,” he sugge... → “There are things that cling t...",
+          "similarity": 0.244
+        },
+        {
+          "position": 112,
+          "sentence_pair": "He stands before Red, unmasked... → Lucien’s hands shook as he tor...",
+          "similarity": 0.261
+        },
+        {
+          "position": 118,
+          "sentence_pair": "I—\" The confession caught in h... → Red (Red Riding Hood)Red freez...",
+          "similarity": 0.207
+        },
+        {
+          "position": 123,
+          "sentence_pair": "Stunned disbelief rooted her t... → \"Lucien—your face, I—what are ...",
+          "similarity": 0.175
+        },
+        {
+          "position": 148,
+          "sentence_pair": "Lucien’s hands trembled as the... → He stood before Red, every mus...",
+          "similarity": 0.24
+        },
+        {
+          "position": 165,
+          "sentence_pair": "” The confession tumbled out, ... → Red (Red Riding Hood)Red steps...",
+          "similarity": 0.17
+        },
+        {
+          "position": 176,
+          "sentence_pair": "” His glance flickered briefly... → “There’s a secret buried benea...",
+          "similarity": 0.22
+        },
+        {
+          "position": 178,
+          "sentence_pair": "” He stepped closer, each word... → “I know the truth, Red....",
+          "similarity": 0.218
+        },
+        {
+          "position": 179,
+          "sentence_pair": "“I know the truth, Red.... → I can share it with you, but o...",
+          "similarity": 0.115
+        },
+        {
+          "position": 180,
+          "sentence_pair": "I can share it with you, but o... → ” Lucien’s voice dropped almos...",
+          "similarity": 0.0
+        },
+        {
+          "position": 187,
+          "sentence_pair": "She swallowed, voice barely st... → If he truly knew what Grandmot...",
+          "similarity": 0.245
+        },
+        {
+          "position": 195,
+          "sentence_pair": "” Elias’s gaze softened as he ... → “I’d never make you choose bet...",
+          "similarity": 0.228
+        },
+        {
+          "position": 224,
+          "sentence_pair": "Her voice, barely more than a ... → “If I choose you, Lucien, and ...",
+          "similarity": 0.228
+        },
+        {
+          "position": 243,
+          "sentence_pair": "She shot to her feet, heart po... → “Lucien, stop—just stop!...",
+          "similarity": 0.243
+        },
+        {
+          "position": 244,
+          "sentence_pair": "“Lucien, stop—just stop!... → ” The words tumbled out, fierc...",
+          "similarity": 0.228
+        },
+        {
+          "position": 245,
+          "sentence_pair": "” The words tumbled out, fierc... → “I know something’s wrong....",
+          "similarity": 0.26
+        },
+        {
+          "position": 246,
+          "sentence_pair": "“I know something’s wrong.... → Don’t lie to me....",
+          "similarity": 0.058
+        },
+        {
+          "position": 247,
+          "sentence_pair": "Don’t lie to me.... → ” She glared at him, demanding...",
+          "similarity": 0.07
+        },
+        {
+          "position": 250,
+          "sentence_pair": "Why have you been following me... → Lucien WolfLucien sets his own...",
+          "similarity": 0.101
+        },
+        {
+          "position": 255,
+          "sentence_pair": "Yet resolution won out, and he... → “Red, please—it’s not what you...",
+          "similarity": 0.219
+        },
+        {
+          "position": 259,
+          "sentence_pair": "Her eyes, luminous with hurt a... → With a sudden, sharp movement,...",
+          "similarity": 0.24
+        },
+        {
+          "position": 266,
+          "sentence_pair": "“But if you really want the tr... → “I’m not here by accident;...",
+          "similarity": 0.253
+        },
+        {
+          "position": 268,
+          "sentence_pair": "I was sent to watch over you, ... → ” The air between them seemed ...",
+          "similarity": 0.256
+        },
+        {
+          "position": 275,
+          "sentence_pair": "“By who, Lucien?... → ” She leaned in, searching his...",
+          "similarity": 0.246
+        },
+        {
+          "position": 280,
+          "sentence_pair": "Her eyes blazed, wounded and w... → “Enough riddles—tell me everyt...",
+          "similarity": 0.253
+        },
+        {
+          "position": 281,
+          "sentence_pair": "“Enough riddles—tell me everyt... → ” The words came out sharp, he...",
+          "similarity": 0.248
+        },
+        {
+          "position": 288,
+          "sentence_pair": "“The Wolf is hunting you, and ... → ” The admission hung between t...",
+          "similarity": 0.183
+        },
+        {
+          "position": 289,
+          "sentence_pair": "” The admission hung between t... → Red (Red Riding Hood)Red stand...",
+          "similarity": 0.157
+        },
+        {
+          "position": 291,
+          "sentence_pair": "Red's chair scraped harshly ag... → Her fists clenched at her side...",
+          "similarity": 0.254
+        },
+        {
+          "position": 294,
+          "sentence_pair": "“You expect me to believe that... → ” Her voice trembled with cont...",
+          "similarity": 0.237
+        },
+        {
+          "position": 306,
+          "sentence_pair": "Her fingers tightened around t... → “Heir to what, Lucien?...",
+          "similarity": 0.156
+        },
+        {
+          "position": 307,
+          "sentence_pair": "“Heir to what, Lucien?... → ” Her words trembled in the ti...",
+          "similarity": 0.192
+        },
+        {
+          "position": 308,
+          "sentence_pair": "” Her words trembled in the ti... → “Stop hiding behind secrets—if...",
+          "similarity": 0.228
+        },
+        {
+          "position": 331,
+          "sentence_pair": "Her voice, though trembling, r... → “Protect me?...",
+          "similarity": 0.249
+        },
+        {
+          "position": 333,
+          "sentence_pair": "Lucien, you call this protecti... → ” The question hung in the air...",
+          "similarity": 0.219
+        },
+        {
+          "position": 334,
+          "sentence_pair": "” The question hung in the air... → Lucien WolfLucien’s voice crac...",
+          "similarity": 0.241
+        },
+        {
+          "position": 344,
+          "sentence_pair": "Voice tight but unwavering, sh... → No more riddles, no more half-...",
+          "similarity": 0.215
+        },
+        {
+          "position": 346,
+          "sentence_pair": "I want the real reason you’re ... → Lucien WolfLucien’s voice shak...",
+          "similarity": 0.167
+        },
+        {
+          "position": 352,
+          "sentence_pair": "” He hesitated, the next words... → “Because I am the Wolf’s son....",
+          "similarity": 0.262
+        },
+        {
+          "position": 353,
+          "sentence_pair": "“Because I am the Wolf’s son.... → ” The revelation hung heavy in...",
+          "similarity": 0.219
+        },
+        {
+          "position": 356,
+          "sentence_pair": "“If anyone finds out, both our... → Red (Red Riding Hood)Red's voi...",
+          "similarity": 0.248
+        },
+        {
+          "position": 361,
+          "sentence_pair": "Disbelief sharpened her words.... → “You—you’re his son?...",
+          "similarity": 0.213
+        },
+        {
+          "position": 362,
+          "sentence_pair": "“You—you’re his son?... → ” The question tumbled out, ra...",
+          "similarity": 0.254
+        },
+        {
+          "position": 378,
+          "sentence_pair": "Gnarled fingers trembled on th... → “Yes, Red—every moment with yo...",
+          "similarity": 0.211
+        },
+        {
+          "position": 390,
+          "sentence_pair": "Every path we followed, every ... → ” He paused, a tremor of despe...",
+          "similarity": 0.19
+        },
+        {
+          "position": 394,
+          "sentence_pair": "“I’m so sorry.... → We were never in control....",
+          "similarity": 0.063
+        },
+        {
+          "position": 395,
+          "sentence_pair": "We were never in control.... → Red (Red Riding Hood)Red's voi...",
+          "similarity": 0.068
+        },
+        {
+          "position": 403,
+          "sentence_pair": "they were a plea, a desperate ... → Elias stares into the fire, hi...",
+          "similarity": 0.231
+        },
+        {
+          "position": 421,
+          "sentence_pair": "Pine resin, and at this time o... → Letters didn’t arrive after du...",
+          "similarity": 0.259
+        },
+        {
+          "position": 422,
+          "sentence_pair": "Letters didn’t arrive after du... → Her unease grew;...",
+          "similarity": 0.182
+        },
+        {
+          "position": 423,
+          "sentence_pair": "Her unease grew;... → nothing good ever came with th...",
+          "similarity": 0.169
+        },
+        {
+          "position": 424,
+          "sentence_pair": "nothing good ever came with th... → Setting the letter down, she g...",
+          "similarity": -0.004
+        },
+        {
+          "position": 426,
+          "sentence_pair": "“Fetch me the lamp,” she said,... → They’d need to see exactly wha...",
+          "similarity": 0.137
+        },
+        {
+          "position": 427,
+          "sentence_pair": "They’d need to see exactly wha... → Despite her mother’s pleas to ...",
+          "similarity": 0.206
+        },
+        {
+          "position": 454,
+          "sentence_pair": "I can’t let you walk into dang... → ” Her gaze flickered to the en...",
+          "similarity": 0.126
+        },
+        {
+          "position": 456,
+          "sentence_pair": "“Grandmother’s warnings aren’t... → they’re a shield....",
+          "similarity": 0.159
+        },
+        {
+          "position": 457,
+          "sentence_pair": "they’re a shield.... → ” She pressed Red’s wrist, des...",
+          "similarity": 0.134
+        },
+        {
+          "position": 458,
+          "sentence_pair": "” She pressed Red’s wrist, des... → “Promise me you’ll think twice...",
+          "similarity": 0.171
+        },
+        {
+          "position": 471,
+          "sentence_pair": "“Don’t let your curiosity blin... → Red (Red Riding Hood)Red gentl...",
+          "similarity": 0.164
+        },
+        {
+          "position": 490,
+          "sentence_pair": "“Permit me but a moment of you... → ” Rising from his bow, Lucien ...",
+          "similarity": 0.223
+        },
+        {
+          "position": 526,
+          "sentence_pair": "Lucien’s voice dropped, silk o... → He was searching only for what...",
+          "similarity": 0.246
+        },
+        {
+          "position": 529,
+          "sentence_pair": "if she chose to stand in his w... → Red (Red Riding Hood)Red shift...",
+          "similarity": 0.255
+        },
+        {
+          "position": 552,
+          "sentence_pair": "or perhaps, it changed me.... → If we slip through here—just b...",
+          "similarity": 0.075
+        },
+        {
+          "position": 554,
+          "sentence_pair": "Of course, the main road is sa... → Red (Red Riding Hood)Red tilts...",
+          "similarity": 0.218
+        },
+        {
+          "position": 564,
+          "sentence_pair": "Shadows could be treacherous, ... → \"I'd rather we stick to what w...",
+          "similarity": 0.221
+        },
+        {
+          "position": 566,
+          "sentence_pair": "\"Unless you have a reason for ... → Lucien WolfLucien's eyes glint...",
+          "similarity": 0.186
+        },
+        {
+          "position": 571,
+          "sentence_pair": "” he said, letting the words h... → His gaze lingered on her, sear...",
+          "similarity": 0.201
+        },
+        {
+          "position": 584,
+          "sentence_pair": "“Sometimes treasures, sometime... → ” Each syllable seemed calcula...",
+          "similarity": 0.241
+        },
+        {
+          "position": 600,
+          "sentence_pair": "“Some tales aren’t meant to be... → Red and Elias refuse the offer...",
+          "similarity": 0.195
+        },
+        {
+          "position": 621,
+          "sentence_pair": "Elias paces a short distance b... → When no answer comes, Red push...",
+          "similarity": 0.203
+        },
+        {
+          "position": 631,
+          "sentence_pair": "She paused in the doorway, sea... → “Grandmother?...",
+          "similarity": 0.202
+        },
+        {
+          "position": 632,
+          "sentence_pair": "“Grandmother?... → It’s me, Red....",
+          "similarity": 0.138
+        },
+        {
+          "position": 634,
+          "sentence_pair": "Are you here?... → ” Her voice, though steady, ca...",
+          "similarity": 0.138
+        },
+        {
+          "position": 635,
+          "sentence_pair": "” Her voice, though steady, ca... → Elias runs his finger along th...",
+          "similarity": 0.233
+        },
+        {
+          "position": 640,
+          "sentence_pair": "There were no fresh crumbs, he... → Red (Red Riding Hood)Red edges...",
+          "similarity": 0.047
+        },
+        {
+          "position": 646,
+          "sentence_pair": "“Please answer, it’s so quiet ... → Elias kneels to inspect a set ...",
+          "similarity": 0.254
+        },
+        {
+          "position": 649,
+          "sentence_pair": "He glanced over his shoulder a... → Straightening, Elias reached f...",
+          "similarity": 0.134
+        },
+        {
+          "position": 653,
+          "sentence_pair": "“If your grandmother’s been he... → Red (Red Riding Hood)Red clutc...",
+          "similarity": 0.254
+        },
+        {
+          "position": 658,
+          "sentence_pair": "It was unlike Grandmother to b... → normally, Red would be greeted...",
+          "similarity": 0.247
+        },
+        {
+          "position": 659,
+          "sentence_pair": "normally, Red would be greeted... → The quiet unsettled her, sharp...",
+          "similarity": 0.139
+        },
+        {
+          "position": 666,
+          "sentence_pair": "” The words lingered between t... → Red (Red Riding Hood)Red steps...",
+          "similarity": 0.201
+        },
+        {
+          "position": 674,
+          "sentence_pair": "Elias crouched low beside the ... → The shape was unmistakable—far...",
+          "similarity": 0.17
+        },
+        {
+          "position": 676,
+          "sentence_pair": "Elias glanced over his shoulde... → The print stood out stark agai...",
+          "similarity": 0.122
+        },
+        {
+          "position": 679,
+          "sentence_pair": "That footprint, he knew, was n... → Red (Red Riding Hood)Red edges...",
+          "similarity": 0.093
+        },
+        {
+          "position": 685,
+          "sentence_pair": "\" The question hung in the air... → Elias lowers his voice, motion...",
+          "similarity": 0.256
+        },
+        {
+          "position": 695,
+          "sentence_pair": "Behind her, Elias scanned the ... → Red’s voice, low and steady de...",
+          "similarity": 0.255
+        },
+        {
+          "position": 710,
+          "sentence_pair": "The sheets were rumpled, twist... → She swallowed, forcing her voi...",
+          "similarity": 0.175
+        },
+        {
+          "position": 713,
+          "sentence_pair": "It’s like she vanished.... → EliasRed edges toward the wind...",
+          "similarity": 0.155
+        },
+        {
+          "position": 721,
+          "sentence_pair": "She pressed herself closer to ... → The shawl—her grandmother woul...",
+          "similarity": 0.166
+        },
+        {
+          "position": 722,
+          "sentence_pair": "The shawl—her grandmother woul... → Red’s voice was barely more th...",
+          "similarity": 0.25
+        },
+        {
+          "position": 727,
+          "sentence_pair": "Her voice trembled, barely lou... → Meanwhile, Elias moved with qu...",
+          "similarity": 0.21
+        },
+        {
+          "position": 728,
+          "sentence_pair": "Meanwhile, Elias moved with qu... → Red’s gaze lingered on the shi...",
+          "similarity": 0.253
+        },
+        {
+          "position": 739,
+          "sentence_pair": "\"Elias, there's a button here ... → \" The words seemed to hang bet...",
+          "similarity": 0.215
+        },
+        {
+          "position": 749,
+          "sentence_pair": "“Elias,” she murmured, her ton... → Do you think someone else migh...",
+          "similarity": 0.232
+        },
+        {
+          "position": 750,
+          "sentence_pair": "Do you think someone else migh... → ” Her words lingered in the si...",
+          "similarity": 0.226
+        },
+        {
+          "position": 751,
+          "sentence_pair": "” Her words lingered in the si... → Elias steps protectively in fr...",
+          "similarity": 0.241
+        },
+        {
+          "position": 757,
+          "sentence_pair": "He tilted his head, listening—... → Elias’s jaw set....",
+          "similarity": 0.164
+        },
+        {
+          "position": 758,
+          "sentence_pair": "Elias’s jaw set.... → \"I hear a floorboard creaking ...",
+          "similarity": 0.049
+        },
+        {
+          "position": 763,
+          "sentence_pair": "The silence in her grandmother... → She glanced at Elias, who was ...",
+          "similarity": 0.25
+        },
+        {
+          "position": 766,
+          "sentence_pair": "” Even as she spoke, her gaze ... → Their coordinated search revea...",
+          "similarity": 0.23
+        },
+        {
+          "position": 767,
+          "sentence_pair": "Their coordinated search revea... → Red exchanges a wary glance wi...",
+          "similarity": 0.258
+        },
+        {
+          "position": 786,
+          "sentence_pair": "” The words hung between them,... → Red (Red Riding Hood)Red shift...",
+          "similarity": 0.248
+        },
+        {
+          "position": 791,
+          "sentence_pair": "“I’m just passing through to v... → ” The words were simple, but e...",
+          "similarity": 0.199
+        },
+        {
+          "position": 794,
+          "sentence_pair": "Elias rested the axe on his sh... → He offered Red a measured, alm...",
+          "similarity": 0.139
+        },
+        {
+          "position": 810,
+          "sentence_pair": "” He hesitated, shifting his w... → Red (Red Riding Hood)Red glanc...",
+          "similarity": 0.174
+        },
+        {
+          "position": 822,
+          "sentence_pair": "” The quiet authority in his w... → Red (Red Riding Hood)Red adjus...",
+          "similarity": 0.211
+        },
+        {
+          "position": 830,
+          "sentence_pair": "sometimes the shadows play tri... → Red initially hesitates, not w...",
+          "similarity": 0.207
+        },
+        {
+          "position": 837,
+          "sentence_pair": "He pointed out the way the gro... → Elias moved with the easy assu...",
+          "similarity": 0.193
+        },
+        {
+          "position": 849,
+          "sentence_pair": "She pushes them forward, her h... → Without a word, Grandmother pr...",
+          "similarity": 0.238
+        },
+        {
+          "position": 856,
+          "sentence_pair": "Each carries a truth, a promis... → ” She paused just long enough ...",
+          "similarity": 0.219
+        },
+        {
+          "position": 857,
+          "sentence_pair": "” She paused just long enough ... → “But you may open only one....",
+          "similarity": 0.197
+        },
+        {
+          "position": 858,
+          "sentence_pair": "“But you may open only one.... → Choose wisely,” she urged, her...",
+          "similarity": 0.232
+        },
+        {
+          "position": 863,
+          "sentence_pair": "When she opened them, Grandmot... → On the table, two envelopes wa...",
+          "similarity": 0.213
+        },
+        {
+          "position": 871,
+          "sentence_pair": "The two envelopes lay before h... → Red swallowed hard, a tremor i...",
+          "similarity": 0.254
+        },
+        {
+          "position": 887,
+          "sentence_pair": "As her fingertips brushed the ... → Red hesitates, torn by the gra...",
+          "similarity": 0.207
+        },
+        {
+          "position": 889,
+          "sentence_pair": "She asks if choosing one means... → Red (Red Riding Hood)Red tears...",
+          "similarity": 0.126
+        },
+        {
+          "position": 896,
+          "sentence_pair": "\"I will choose my own way, in ... → Grandmother folds her hands ti...",
+          "similarity": 0.123
+        }
+      ],
+      "high_coherence_segments": [
+        {
+          "start_sentence": 16,
+          "end_sentence": 18,
+          "length": 3,
+          "average_similarity": 0.534
+        },
+        {
+          "start_sentence": 68,
+          "end_sentence": 70,
+          "length": 3,
+          "average_similarity": 0.694
+        },
+        {
+          "start_sentence": 86,
+          "end_sentence": 88,
+          "length": 3,
+          "average_similarity": 0.756
+        },
+        {
+          "start_sentence": 92,
+          "end_sentence": 94,
+          "length": 3,
+          "average_similarity": 0.668
+        },
+        {
+          "start_sentence": 107,
+          "end_sentence": 109,
+          "length": 3,
+          "average_similarity": 0.654
+        },
+        {
+          "start_sentence": 129,
+          "end_sentence": 133,
+          "length": 5,
+          "average_similarity": 0.582
+        },
+        {
+          "start_sentence": 142,
+          "end_sentence": 145,
+          "length": 4,
+          "average_similarity": 0.667
+        },
+        {
+          "start_sentence": 184,
+          "end_sentence": 187,
+          "length": 4,
+          "average_similarity": 0.643
+        },
+        {
+          "start_sentence": 191,
+          "end_sentence": 194,
+          "length": 4,
+          "average_similarity": 0.624
+        },
+        {
+          "start_sentence": 219,
+          "end_sentence": 223,
+          "length": 5,
+          "average_similarity": 0.628
+        },
+        {
+          "start_sentence": 232,
+          "end_sentence": 234,
+          "length": 3,
+          "average_similarity": 0.638
+        },
+        {
+          "start_sentence": 264,
+          "end_sentence": 266,
+          "length": 3,
+          "average_similarity": 0.624
+        },
+        {
+          "start_sentence": 285,
+          "end_sentence": 287,
+          "length": 3,
+          "average_similarity": 0.529
+        },
+        {
+          "start_sentence": 309,
+          "end_sentence": 311,
+          "length": 3,
+          "average_similarity": 0.604
+        },
+        {
+          "start_sentence": 315,
+          "end_sentence": 317,
+          "length": 3,
+          "average_similarity": 0.627
+        },
+        {
+          "start_sentence": 327,
+          "end_sentence": 329,
+          "length": 3,
+          "average_similarity": 0.573
+        },
+        {
+          "start_sentence": 341,
+          "end_sentence": 344,
+          "length": 4,
+          "average_similarity": 0.565
+        },
+        {
+          "start_sentence": 374,
+          "end_sentence": 377,
+          "length": 4,
+          "average_similarity": 0.627
+        },
+        {
+          "start_sentence": 396,
+          "end_sentence": 398,
+          "length": 3,
+          "average_similarity": 0.524
+        },
+        {
+          "start_sentence": 410,
+          "end_sentence": 412,
+          "length": 3,
+          "average_similarity": 0.611
+        },
+        {
+          "start_sentence": 415,
+          "end_sentence": 419,
+          "length": 5,
+          "average_similarity": 0.668
+        },
+        {
+          "start_sentence": 428,
+          "end_sentence": 430,
+          "length": 3,
+          "average_similarity": 0.516
+        },
+        {
+          "start_sentence": 433,
+          "end_sentence": 436,
+          "length": 4,
+          "average_similarity": 0.572
+        },
+        {
+          "start_sentence": 446,
+          "end_sentence": 452,
+          "length": 7,
+          "average_similarity": 0.63
+        },
+        {
+          "start_sentence": 460,
+          "end_sentence": 464,
+          "length": 5,
+          "average_similarity": 0.66
+        },
+        {
+          "start_sentence": 466,
+          "end_sentence": 470,
+          "length": 5,
+          "average_similarity": 0.691
+        },
+        {
+          "start_sentence": 472,
+          "end_sentence": 481,
+          "length": 10,
+          "average_similarity": 0.601
+        },
+        {
+          "start_sentence": 522,
+          "end_sentence": 524,
+          "length": 3,
+          "average_similarity": 0.624
+        },
+        {
+          "start_sentence": 575,
+          "end_sentence": 577,
+          "length": 3,
+          "average_similarity": 0.524
+        },
+        {
+          "start_sentence": 589,
+          "end_sentence": 591,
+          "length": 3,
+          "average_similarity": 0.644
+        },
+        {
+          "start_sentence": 607,
+          "end_sentence": 609,
+          "length": 3,
+          "average_similarity": 0.601
+        },
+        {
+          "start_sentence": 615,
+          "end_sentence": 618,
+          "length": 4,
+          "average_similarity": 0.61
+        },
+        {
+          "start_sentence": 643,
+          "end_sentence": 645,
+          "length": 3,
+          "average_similarity": 0.586
+        },
+        {
+          "start_sentence": 803,
+          "end_sentence": 805,
+          "length": 3,
+          "average_similarity": 0.692
+        },
+        {
+          "start_sentence": 832,
+          "end_sentence": 835,
+          "length": 4,
+          "average_similarity": 0.622
+        },
+        {
+          "start_sentence": 838,
+          "end_sentence": 845,
+          "length": 8,
+          "average_similarity": 0.63
+        },
+        {
+          "start_sentence": 868,
+          "end_sentence": 870,
+          "length": 3,
+          "average_similarity": 0.684
+        },
+        {
+          "start_sentence": 902,
+          "end_sentence": 904,
+          "length": 3,
+          "average_similarity": 0.65
+        }
+      ],
+      "objective_description": {
+        "score": 0.4237,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "pairwise_similarity_examples": [
+      {
+        "sentence_pair": "Sentence 1 → Sentence 2",
+        "sentence_1": "Red and Elias arrive at the cottage, tension runni...",
+        "sentence_2": "Elias stands protectively behind her, his ax ready...",
+        "similarity": 0.4126
+      },
+      {
+        "sentence_pair": "Sentence 2 → Sentence 3",
+        "sentence_1": "Elias stands protectively behind her, his ax ready...",
+        "sentence_2": "When Red knocks, Lucien—posing as Grandmother—welc...",
+        "similarity": 0.1346
+      },
+      {
+        "sentence_pair": "Sentence 3 → Sentence 4",
+        "sentence_1": "When Red knocks, Lucien—posing as Grandmother—welc...",
+        "sentence_2": "The air is thick with suspicion as Lucien pours te...",
+        "similarity": 0.4773
+      },
+      {
+        "sentence_pair": "Sentence 4 → Sentence 5",
+        "sentence_1": "The air is thick with suspicion as Lucien pours te...",
+        "sentence_2": "Lucien complies to ease her doubts, but the underl...",
+        "similarity": 0.5594
+      },
+      {
+        "sentence_pair": "Sentence 5 → Sentence 6",
+        "sentence_1": "Lucien complies to ease her doubts, but the underl...",
+        "sentence_2": "Elias, unsettled by signs of intrusion (muddy boot...",
+        "similarity": 0.4428
+      },
+      {
+        "sentence_pair": "Sentence 6 → Sentence 7",
+        "sentence_1": "Elias, unsettled by signs of intrusion (muddy boot...",
+        "sentence_2": "Lucien WolfLucien pours the tea with careful grace...",
+        "similarity": 0.2018
+      },
+      {
+        "sentence_pair": "Sentence 7 → Sentence 8",
+        "sentence_1": "Lucien WolfLucien pours the tea with careful grace...",
+        "sentence_2": "His eyes linger on her face, searching for a react...",
+        "similarity": 0.2884
+      },
+      {
+        "sentence_pair": "Sentence 8 → Sentence 9",
+        "sentence_1": "His eyes linger on her face, searching for a react...",
+        "sentence_2": "Lucien poured the tea with meticulous care, the po...",
+        "similarity": 0.2837
+      },
+      {
+        "sentence_pair": "Sentence 9 → Sentence 10",
+        "sentence_1": "Lucien poured the tea with meticulous care, the po...",
+        "sentence_2": "His fingers lingered at the rim, and his gaze, gen...",
+        "similarity": 0.3937
+      },
+      {
+        "sentence_pair": "Sentence 10 → Sentence 11",
+        "sentence_1": "His fingers lingered at the rim, and his gaze, gen...",
+        "sentence_2": "“Please, Red, have some tea,” he urged, the words ...",
+        "similarity": 0.4071
+      },
+      {
+        "sentence_pair": "Sentence 11 → Sentence 12",
+        "sentence_1": "“Please, Red, have some tea,” he urged, the words ...",
+        "sentence_2": "“You look weary—it will calm your nerves.",
+        "similarity": 0.4135
+      },
+      {
+        "sentence_pair": "Sentence 12 → Sentence 13",
+        "sentence_1": "“You look weary—it will calm your nerves.",
+        "sentence_2": "” His voice was silk over steel, persuasive with a...",
+        "similarity": 0.3442
+      },
+      {
+        "sentence_pair": "Sentence 13 → Sentence 14",
+        "sentence_1": "” His voice was silk over steel, persuasive with a...",
+        "sentence_2": "Watching her closely, Lucien leaned in just a frac...",
+        "similarity": 0.353
+      },
+      {
+        "sentence_pair": "Sentence 14 → Sentence 15",
+        "sentence_1": "Watching her closely, Lucien leaned in just a frac...",
+        "sentence_2": "“I would not see you come to harm under my roof.",
+        "similarity": 0.2987
+      },
+      {
+        "sentence_pair": "Sentence 15 → Sentence 16",
+        "sentence_1": "“I would not see you come to harm under my roof.",
+        "sentence_2": "Red (Red Riding Hood)Red hesitates, her fingers ho...",
+        "similarity": 0.3127
+      },
+      {
+        "sentence_pair": "Sentence 16 → Sentence 17",
+        "sentence_1": "Red (Red Riding Hood)Red hesitates, her fingers ho...",
+        "sentence_2": "Red’s fingers lingered just above the rim of the p...",
+        "similarity": 0.5396
+      },
+      {
+        "sentence_pair": "Sentence 17 → Sentence 18",
+        "sentence_1": "Red’s fingers lingered just above the rim of the p...",
+        "sentence_2": "She watched Lucien closely, noting the careful way...",
+        "similarity": 0.5274
+      },
+      {
+        "sentence_pair": "Sentence 18 → Sentence 19",
+        "sentence_1": "She watched Lucien closely, noting the careful way...",
+        "sentence_2": "Something in his composure made her wary.",
+        "similarity": 0.4549
+      },
+      {
+        "sentence_pair": "Sentence 19 → Sentence 20",
+        "sentence_1": "Something in his composure made her wary.",
+        "sentence_2": "With her eyes narrowed in quiet scrutiny, she tipp...",
+        "similarity": 0.6276
+      },
+      {
+        "sentence_pair": "Sentence 20 → Sentence 21",
+        "sentence_1": "With her eyes narrowed in quiet scrutiny, she tipp...",
+        "sentence_2": "“Thank you, Lucien,” she said, her words deliberat...",
+        "similarity": 0.4774
+      },
+      {
+        "note": "Only showing first 20 pairs, total of 909 adjacent sentence pairs"
+      }
+    ]
+  },
+  "story_structure_analysis": {
+    "evaluation_mode": "default mode",
+    "event_list": [
+      {
+        "event": "Red and Elias arrive at the cottage, tension high as Red hesitates at the threshold.",
+        "source": "Red and Elias arrive at the cottage, tension running high as Red hesitates at the threshold.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Elias stands protectively behind Red, his ax ready.",
+        "source": "Elias stands protectively behind her, his ax ready.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red knocks and Lucien, posing as Grandmother, welcomes them in, initially convincing in his disguise.",
+        "source": "When Red knocks, Lucien—posing as Grandmother—welcomes them in, his performance convincing at first.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Lucien pours tea and offers it to Red; she refuses to drink until Lucien does.",
+        "source": "The air is thick with suspicion as Lucien pours tea and offers it to Red, but she challenges him, refusing to drink until he does.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Lucien sips the tea to ease Red’s doubts, but distrust remains.",
+        "source": "Lucien complies to ease her doubts, but the underlying distrust remains.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Elias, noticing muddy boots by the hearth, interrogates Lucien about possible danger inside.",
+        "source": "Elias, unsettled by signs of intrusion (muddy boots by the hearth), interrogates Lucien about them, suggesting that danger may already be inside.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red repeatedly refuses to drink the tea, maintaining her suspicion.",
+        "source": "Red (Red Riding Hood)Red keeps her hands folded in her lap, eyes fixed on Lucien's as she refuses the tea, her posture tense but unyielding.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Lucien abandons his disguise and confesses his deep feelings for Red in a passionate outpouring.",
+        "source": "The conversation turns tense and personal as Lucien abandons his disguise, confessing his deep feelings for Red in a passionate outpouring.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Elias circles the room, investigates muddy boots, and discusses signs of intrusion with Lucien.",
+        "source": "Elias circles the room, his fingers trailing along the edge of the window frame.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Lucien gestures toward the hearth, his eyes narrowing as he studies Elias's restless pacing.",
+        "source": "Lucien WolfLucien gestures toward the hearth, his eyes narrowing as he studies Elias's restless pacing.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Lucien reveals his feelings for Red, removing his shawl and standing before her vulnerable.",
+        "source": "Lucien WolfLucien’s hands tremble as he pulls off the shawl, his voice raw with emotion.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red is shocked by Lucien’s confession, torn between the two men and their secrets.",
+        "source": "Red is shocked by this revelation, torn between the two men and the secrets swirling around her.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Lucien confesses he was sent by a Council to protect Red from the Wolf; he is the Wolf’s son.",
+        "source": "Lucien then reveals that he was never at the cottage by accident: he was sent by a mysterious Council to protect Red from a greater threat—the Wolf—and that Lucien himself is the Wolf's son.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Lucien declares Red is the last heir capable of ending the Wolf and Grandmother orchestrated everything.",
+        "source": "He declares Red is the last heir to a bloodline capable of ending the Wolf, and that Grandmother orchestrated the entire situation, manipulating every choice and danger they've faced.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red, feeling betrayed by Lucien and Grandmother, confronts them with anger and demands the truth.",
+        "source": "Red (Red Riding Hood)Red’s hands tremble as she shoves the teacup across the table, her eyes wide with fear and anger.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Lucien admits his orders came from the Council, and he is the Wolf’s son, torn between loyalties.",
+        "source": "Lucien’s voice cracked as he finally forced himself to meet Red’s gaze, his eyes dark with guilt and desperation.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red reels from the betrayals, and the group realizes Grandmother manipulated every danger and choice.",
+        "source": "Lucien paced the cramped room, shadows flickering across his sharp features as the candlelight trembled with each restless step.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Elias supports Red, vowing to help her face the truth together.",
+        "source": "Elias supports Red, vowing to help her face the truth together.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Elias confront the enormity of secrets revealed, questioning their roles as pawns or family.",
+        "source": "The chapter ends with Red and Elias confronting the enormity of the secrets revealed, questioning their roles as pawns or family, as the crackle of the hearth and distant caws of crows echo the uncertainty ahead.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red slices rye bread as her mother finds a suspicious wax-sealed letter on the doorstep.",
+        "source": "Red slices rye bread as her mother discovers a wax-sealed letter on the doorstep, its pine-resin scent raising suspicion.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red’s mother asks her to fetch the lamp so they can examine the letter together.",
+        "source": "Her mother, anxious, asks Red to fetch the lamp so they can examine the letter together.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red insists on reading the letter herself, determined to face its truths or warnings alone.",
+        "source": "Red, however, asserts her determination to read the letter herself, emphasizing her need to face whatever truths or warnings it contains.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red’s mother warns about family secrets, but Red insists hiding from them makes things worse.",
+        "source": "Red’s mother warns of the dangers of family secrets, but Red, resolute, states that hiding from them would only make things worse.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red opens the letter herself, determined to learn Grandmother’s cryptic message despite her mother’s worry.",
+        "source": "With trembling hands but a steady heart, Red opens the letter, determined to discover Grandmother’s cryptic message, while her mother remains anxious but unable to dissuade her.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red steps beyond the cottage, carrying her grandmother’s words and determination.",
+        "source": "As Red steps beyond the safety of her cottage, the familiar path through the woods seems different—charged with the weight of her grandmother’s words and her own determination.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Elias walk carefully toward Grandmother’s cottage.",
+        "source": "Red and Elias move carefully along the forest path toward Grandmother’s cottage, with Red alert for any sign of danger.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Lucien introduces himself as a lost traveler; Red challenges his intentions.",
+        "source": "He introduces himself as a lost traveler, but Red immediately challenges his intentions, pressing him to reveal his true purpose in the woods.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Lucien admits he seeks something taken from him and hints at hidden secrets in the woods.",
+        "source": "Lucien admits he seeks something that was taken from him and hints at the woods’ hidden secrets, suggesting his motives are more personal and urgent than he first claimed.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Elias steps protectively between Red and Lucien, warning Lucien to stay back.",
+        "source": "Tension escalates as Elias steps protectively between Red and Lucien, warning him to stay back.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Lucien proposes a shortcut through the undergrowth, suggesting it might reveal important truths.",
+        "source": "Lucien, unfazed, shares a story of once being lost in the woods and proposes a shortcut through the undergrowth, claiming it might reveal important truths.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Elias refuse to take Lucien’s shortcut, debating the risk of leaving the safe path.",
+        "source": "Red and Elias refuse the offer, debating the risks of venturing off the safe path.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red firmly chooses the marked trail and asks Elias to trust her judgment.",
+        "source": "Red firmly chooses the marked trail, asserting her agency and asking Elias to trust her judgment.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Lucien, denied, watches them leave and disappears into the shadows, his motives ambiguous.",
+        "source": "Lucien, denied, watches them with narrowed eyes, his motives and past with the woods left ambiguous as he disappears into the shadows, the air thick with secrets and unspoken threats.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Elias continue toward the cottage, uneasy after Lucien’s encounter, and sense an ominous change ahead.",
+        "source": "Unbeknownst to them, danger is already afoot, and by the time the cottage comes into view, something vital has shifted—an ominous absence waiting to be discovered.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red approaches the cottage, knocks, receives no answer, and enters to find the room unlit and empty.",
+        "source": "Red approaches the cottage door, gripping her basket tightly.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red searches the cottage, noting untouched items and the absence of Grandmother’s shawl.",
+        "source": "She steps inside, running her fingers over the cold hearthstones, noting the untouched teacup and the absence of Grandmother's shawl.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Elias inspects the cottage, finding muddy footprints near the back window.",
+        "source": "Elias follows, sniffing the air for unfamiliar scents, then inspects muddy footprints near the back window.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Elias call for Grandmother and search rooms.",
+        "source": "Red quietly calls for her grandmother, her voice low and deliberate, while Elias checks the pantry for signs of recent use.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red finds a scrap of Grandmother’s shawl.",
+        "source": "EliasRed edges toward the window, her hand trembling as she reaches for the piece of fabric.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Elias hears a creaking floorboard, warning Red to stay behind him as he investigates further.",
+        "source": "Elias steps protectively in front of Red, his hand tightening around the handle of a nearby fire iron as he listens intently toward the hallway.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Their search reveals no sign of Grandmother but a lingering musky odor near the bed.",
+        "source": "Their coordinated search reveals no sign of Grandmother, only a faint musky odor lingering near her bed.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Elias, now alert to the silence and sense of intrusion, prepare to widen their search outside.",
+        "source": "Red exchanges a wary glance with Elias, both now alert to the peculiar silence and the sense of intrusion.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red walks along the muddy path, sees Elias chopping wood, and approaches him cautiously.",
+        "source": "Red steps carefully along the muddy path, her basket swinging from one arm as she scans the undergrowth for movement.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Elias exchange polite but cautious greetings, both measuring each other’s wariness.",
+        "source": "Red (Red Riding Hood)Red pauses a few paces away, her grip tightening on her basket as she glances at the gleaming edge of Elias's axe, keeping her tone pleasant but her stance ready to move.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Elias expresses concern for Red’s safety, mentions rumors of wolves, and offers to accompany her.",
+        "source": "Elias straightens, wipes the sweat from his brow, and expresses concern for Red’s safety, mentioning rumors of wolves nearby.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red, initially hesitant, admits hearing something strange and agrees to let Elias accompany her.",
+        "source": "Red initially hesitates, not wanting to trouble him or delay his work, but admits to hearing something strange in the trees.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Elias leads Red along a safe trail, pointing out hidden dangers and offering practical advice.",
+        "source": "Elias gestures to a narrow trail veering away from tangled underbrush, his hand steady and his gaze scanning ahead for any sign of danger.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Elias walk together through thickening mist, Red’s wariness softening as Elias steadies her.",
+        "source": "The mist thickens as they walk, the forest closing in, and Red remains alert, her wariness gradually softening as Elias gently steadies her when she stumbles on a mossy stone.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red enters the cottage with wildflowers and finds Grandmother mending a crimson cloak by the hearth.",
+        "source": "Red enters the cottage, her boots damp with forest dew, carrying a basket of wildflowers.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother presents Red with two sealed letters, stating she may open only one and the choice is final.",
+        "source": "Grandmother presents her with two sealed letters—one from Elias, one from Lucien Wolf—and tells Red she may open only one, warning her that the unopened letter will remain a silence she must carry.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red hesitates, torn by the gravity of the choice.",
+        "source": "Red hesitates, torn by the gravity of the choice.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red tears a letter in half, burns it, and declares her independence from others’ expectations.",
+        "source": "Red (Red Riding Hood)Red tears a letter in half and lets the pieces fall into the glowing embers, watching them curl and blacken.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother acknowledges Red’s resolve, showing concern but also respect for her decision.",
+        "source": "Grandmother folds her hands tightly in her lap, her gaze steady but shadowed with worry.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red asserts her independence, vowing to forge her own path regardless of expectations.",
+        "source": "Red (Red Riding Hood)Red meets Grandmother's gaze steadily, her hands clenched with resolve at her sides.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red’s relationship with Grandmother shifts toward mutual understanding as Red prepares to walk her own path.",
+        "source": "Grandmother acknowledges Red’s resolve with a mixture of concern and respect, marking a shift in their relationship toward mutual understanding.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      }
+    ],
+    "Papalampidi_detailed_results": {
+      "turning_points": {
+        "TP1": "Red enters the cottage with wildflowers and finds Grandmother mending a crimson cloak by the hearth.",
+        "TP2": "Grandmother presents Red with two sealed letters, stating she may open only one and the choice is final.",
+        "TP3": "Red tears a letter in half, burns it, and declares her independence from others’ expectations.",
+        "TP4": "Lucien confesses he was sent by a Council to protect Red from the Wolf; he is the Wolf’s son.",
+        "TP5": "Red asserts her independence, vowing to forge her own path regardless of expectations."
+      },
+      "stage_division": {
+        "Setup": [
+          "Red walks along the muddy path, sees Elias chopping wood, and approaches him cautiously.",
+          "Red and Elias exchange polite but cautious greetings, both measuring each other’s wariness.",
+          "Elias expresses concern for Red’s safety, mentions rumors of wolves, and offers to accompany her.",
+          "Red, initially hesitant, admits hearing something strange and agrees to let Elias accompany her."
+        ],
+        "New Situation": [
+          "Elias leads Red along a safe trail, pointing out hidden dangers and offering practical advice.",
+          "Red and Elias walk together through thickening mist, Red’s wariness softening as Elias steadies her.",
+          "Red enters the cottage with wildflowers and finds Grandmother mending a crimson cloak by the hearth."
+        ],
+        "Progress": [
+          "Grandmother presents Red with two sealed letters, stating she may open only one and the choice is final.",
+          "Red hesitates, torn by the gravity of the choice.",
+          "Red tears a letter in half, burns it, and declares her independence from others’ expectations.",
+          "Grandmother acknowledges Red’s resolve, showing concern but also respect for her decision."
+        ],
+        "Complications": [
+          "Red and Elias arrive at the cottage, tension high as Red hesitates at the threshold.",
+          "Elias stands protectively behind Red, his ax ready.",
+          "Red knocks and Lucien, posing as Grandmother, welcomes them in, initially convincing in his disguise.",
+          "Lucien pours tea and offers it to Red; she refuses to drink until Lucien does.",
+          "Lucien sips the tea to ease Red’s doubts, but distrust remains.",
+          "Elias, noticing muddy boots by the hearth, interrogates Lucien about possible danger inside.",
+          "Red repeatedly refuses to drink the tea, maintaining her suspicion.",
+          "Lucien abandons his disguise and confesses his deep feelings for Red in a passionate outpouring.",
+          "Elias circles the room, investigates muddy boots, and discusses signs of intrusion with Lucien.",
+          "Lucien gestures toward the hearth, his eyes narrowing as he studies Elias's restless pacing.",
+          "Lucien reveals his feelings for Red, removing his shawl and standing before her vulnerable.",
+          "Red is shocked by Lucien’s confession, torn between the two men and their secrets.",
+          "Lucien confesses he was sent by a Council to protect Red from the Wolf; he is the Wolf’s son.",
+          "Lucien declares Red is the last heir capable of ending the Wolf and Grandmother orchestrated everything.",
+          "Red, feeling betrayed by Lucien and Grandmother, confronts them with anger and demands the truth.",
+          "Lucien admits his orders came from the Council, and he is the Wolf’s son, torn between loyalties.",
+          "Red reels from the betrayals, and the group realizes Grandmother manipulated every danger and choice."
+        ],
+        "Final Push": [
+          "Elias supports Red, vowing to help her face the truth together.",
+          "Red and Elias confront the enormity of secrets revealed, questioning their roles as pawns or family.",
+          "Red asserts her independence, vowing to forge her own path regardless of expectations."
+        ],
+        "Aftermath": [
+          "Red’s relationship with Grandmother shifts toward mutual understanding as Red prepares to walk her own path."
+        ]
+      }
+    },
+    "Li_detailed_results": {
+      "Red and Elias arrive at the cottage, tension high as Red hesitates at the threshold.": "Orientation",
+      "Elias stands protectively behind Red, his ax ready.": "Orientation",
+      "Red knocks and Lucien, posing as Grandmother, welcomes them in, initially convincing in his disguise.": "Complicating Action",
+      "Lucien pours tea and offers it to Red; she refuses to drink until Lucien does.": "Complicating Action",
+      "Lucien sips the tea to ease Red’s doubts, but distrust remains.": "Minor Resolution",
+      "Elias, noticing muddy boots by the hearth, interrogates Lucien about possible danger inside.": "Complicating Action",
+      "Red repeatedly refuses to drink the tea, maintaining her suspicion.": "Complicating Action",
+      "Lucien abandons his disguise and confesses his deep feelings for Red in a passionate outpouring.": "MRE",
+      "Elias circles the room, investigates muddy boots, and discusses signs of intrusion with Lucien.": "Complicating Action",
+      "Lucien gestures toward the hearth, his eyes narrowing as he studies Elias's restless pacing.": "Complicating Action",
+      "Lucien reveals his feelings for Red, removing his shawl and standing before her vulnerable.": "Return of MRE",
+      "Red is shocked by Lucien’s confession, torn between the two men and their secrets.": "Complicating Action",
+      "Lucien confesses he was sent by a Council to protect Red from the Wolf; he is the Wolf’s son.": "MRE",
+      "Lucien declares Red is the last heir capable of ending the Wolf and Grandmother orchestrated everything.": "MRE",
+      "Red, feeling betrayed by Lucien and Grandmother, confronts them with anger and demands the truth.": "Complicating Action",
+      "Lucien admits his orders came from the Council, and he is the Wolf’s son, torn between loyalties.": "Return of MRE",
+      "Red reels from the betrayals, and the group realizes Grandmother manipulated every danger and choice.": "Minor Resolution",
+      "Elias supports Red, vowing to help her face the truth together.": "Minor Resolution",
+      "Red and Elias confront the enormity of secrets revealed, questioning their roles as pawns or family.": "Evaluation",
+      "Red slices rye bread as her mother finds a suspicious wax-sealed letter on the doorstep.": "Orientation",
+      "Red’s mother asks her to fetch the lamp so they can examine the letter together.": "Orientation",
+      "Red insists on reading the letter herself, determined to face its truths or warnings alone.": "Complicating Action",
+      "Red’s mother warns about family secrets, but Red insists hiding from them makes things worse.": "Direct Comment",
+      "Red opens the letter herself, determined to learn Grandmother’s cryptic message despite her mother’s worry.": "Minor Resolution",
+      "Red steps beyond the cottage, carrying her grandmother’s words and determination.": "Aftermath",
+      "Red and Elias walk carefully toward Grandmother’s cottage.": "Orientation",
+      "Lucien introduces himself as a lost traveler; Red challenges his intentions.": "Complicating Action",
+      "Lucien admits he seeks something taken from him and hints at hidden secrets in the woods.": "Complicating Action",
+      "Elias steps protectively between Red and Lucien, warning Lucien to stay back.": "Complicating Action",
+      "Lucien proposes a shortcut through the undergrowth, suggesting it might reveal important truths.": "Complicating Action",
+      "Red and Elias refuse to take Lucien’s shortcut, debating the risk of leaving the safe path.": "Minor Resolution",
+      "Red firmly chooses the marked trail and asks Elias to trust her judgment.": "Minor Resolution",
+      "Lucien, denied, watches them leave and disappears into the shadows, his motives ambiguous.": "Aftermath",
+      "Red and Elias continue toward the cottage, uneasy after Lucien’s encounter, and sense an ominous change ahead.": "Complicating Action",
+      "Red approaches the cottage, knocks, receives no answer, and enters to find the room unlit and empty.": "Complicating Action",
+      "Red searches the cottage, noting untouched items and the absence of Grandmother’s shawl.": "Complicating Action",
+      "Elias inspects the cottage, finding muddy footprints near the back window.": "Complicating Action",
+      "Red and Elias call for Grandmother and search rooms.": "Complicating Action",
+      "Red finds a scrap of Grandmother’s shawl.": "Complicating Action",
+      "Elias hears a creaking floorboard, warning Red to stay behind him as he investigates further.": "Complicating Action",
+      "Their search reveals no sign of Grandmother but a lingering musky odor near the bed.": "Complicating Action",
+      "Red and Elias, now alert to the silence and sense of intrusion, prepare to widen their search outside.": "Minor Resolution",
+      "Red walks along the muddy path, sees Elias chopping wood, and approaches him cautiously.": "Orientation",
+      "Red and Elias exchange polite but cautious greetings, both measuring each other’s wariness.": "Orientation",
+      "Elias expresses concern for Red’s safety, mentions rumors of wolves, and offers to accompany her.": "Complicating Action",
+      "Red, initially hesitant, admits hearing something strange and agrees to let Elias accompany her.": "Minor Resolution",
+      "Elias leads Red along a safe trail, pointing out hidden dangers and offering practical advice.": "Orientation",
+      "Red and Elias walk together through thickening mist, Red’s wariness softening as Elias steadies her.": "Minor Resolution",
+      "Red enters the cottage with wildflowers and finds Grandmother mending a crimson cloak by the hearth.": "Orientation",
+      "Grandmother presents Red with two sealed letters, stating she may open only one and the choice is final.": "Complicating Action",
+      "Red hesitates, torn by the gravity of the choice.": "Complicating Action",
+      "Red tears a letter in half, burns it, and declares her independence from others’ expectations.": "Resolution",
+      "Grandmother acknowledges Red’s resolve, showing concern but also respect for her decision.": "Minor Resolution",
+      "Red asserts her independence, vowing to forge her own path regardless of expectations.": "Resolution",
+      "Red’s relationship with Grandmother shifts toward mutual understanding as Red prepares to walk her own path.": "Aftermath"
+    },
+    "structure_analysis": {
+      "basic_info": {
+        "total_events": 55,
+        "analysis_mode": "default",
+        "analysis_time": null
+      },
+      "Papalampidi_structure_analysis": {
+        "turning_point_integrity": {
+          "identified_tps": [
+            "TP1",
+            "TP2",
+            "TP3",
+            "TP4",
+            "TP5"
+          ],
+          "missing_tps": [],
+          "TP_coverage": "5/5"
+        },
+        "stage_integrity": {
+          "identified_stages": [
+            "Setup",
+            "New Situation",
+            "Progress",
+            "Complications",
+            "Final Push",
+            "Aftermath"
+          ],
+          "missing_stages": [],
+          "stage_coverage": "6/6"
+        }
+      },
+      "Li_function_analysis": {
+        "core_function_check": {
+          "Orientation": "exists",
+          "Complicating Action": "exists",
+          "MRE": "exists",
+          "Resolution": "exists"
+        },
+        "function_distribution": {
+          "Orientation": 9,
+          "Complicating Action": 24,
+          "Minor Resolution": 10,
+          "MRE": 3,
+          "Return of MRE": 2,
+          "Evaluation": 1,
+          "Direct Comment": 1,
+          "Aftermath": 3,
+          "Resolution": 2
+        },
+        "function_diversity": 9
+      }
+    }
+  }
+}

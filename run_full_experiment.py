@@ -3,10 +3,10 @@ import json
 from main_pipeline_glm import main as run_pipeline
 
 topics = ["The little red riding hood"]
-styles = ["Romantic Rewrite"]
+styles = ["Sciencefiction Rewrite", "Horror-suspense Rewrite", "Romantic Rewrite"]
 reorder_modes = ["linear", "nonlinear"]
 temperatures = [0.3, 0.7, 0.9]
-seeds = [3]
+seeds = [1, 2, 3]
 
 log_file = "run_loop_status.json"
 finished = set()

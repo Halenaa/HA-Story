@@ -1,0 +1,1061 @@
+{
+  "folder_name": "thelittleredridinghood_sciencefictionrewrite_linear_T0.7_s3",
+  "file_path": "/Users/haha/Story/data/output/regression_test/thelittleredridinghood_sciencefictionrewrite_linear_T0.7_s3/enhanced_story_dialogue_updated.md",
+  "analysis_timestamp": null,
+  "emotional_arc_analysis": {
+    "metadata": {
+      "total_chapters": 5,
+      "primary_method": "RoBERTa",
+      "validation_method": "LabMT-en-v1",
+      "analysis_timestamp": "2025-09-09T20:38:23.731593"
+    },
+    "chapter_analysis": [
+      {
+        "chapter_num": 1,
+        "title": "Red Receives the Coded Delivery",
+        "roberta_score": 0.1843,
+        "labmt_score": 0.138,
+        "content_length": 2939
+      },
+      {
+        "chapter_num": 2,
+        "title": "Wolfbot's Intercept",
+        "roberta_score": -0.3997,
+        "labmt_score": 0.1935,
+        "content_length": 7839
+      },
+      {
+        "chapter_num": 3,
+        "title": "The Subway Standoff",
+        "roberta_score": -0.0528,
+        "labmt_score": 0.1621,
+        "content_length": 5405
+      },
+      {
+        "chapter_num": 4,
+        "title": "Grandmother’s Hideout Breached",
+        "roberta_score": 0.0495,
+        "labmt_score": 0.1501,
+        "content_length": 4601
+      },
+      {
+        "chapter_num": 5,
+        "title": "Red’s Last Gambit",
+        "roberta_score": -0.0646,
+        "labmt_score": 0.227,
+        "content_length": 4379
+      }
+    ],
+    "primary_analysis": {
+      "method": "RoBERTa",
+      "scores": [
+        0.18427188793818156,
+        -0.3997158726056417,
+        -0.052823662757873535,
+        0.0495112935702006,
+        -0.06456771691640219
+      ],
+      "reagan_classification": {
+        "method": "RoBERTa",
+        "best_match": "Oedipus",
+        "confidence": 0.221,
+        "all_similarities": {
+          "Rags to riches": 0,
+          "Tragedy": 0,
+          "Man in a hole": 0.0881,
+          "Icarus": 0,
+          "Cinderella": 0,
+          "Oedipus": 0.221
+        },
+        "reagan_category": "OE"
+      }
+    },
+    "validation_analysis": {
+      "method": "LabMT",
+      "scores": [
+        0.13800000000000012,
+        0.19347150259067258,
+        0.16210591133004937,
+        0.15008620689655094,
+        0.22698113207547221
+      ],
+      "reagan_classification": {
+        "method": "LabMT",
+        "best_match": "Rags to riches",
+        "confidence": 0.7181,
+        "all_similarities": {
+          "Rags to riches": 0.7181,
+          "Tragedy": 0.5542,
+          "Man in a hole": 0.085,
+          "Icarus": 0,
+          "Cinderella": 0,
+          "Oedipus": 0.2958
+        },
+        "reagan_category": "RR"
+      }
+    },
+    "correlation_analysis": {
+      "pearson_correlation": {
+        "r": -0.5888,
+        "p_value": 0.2962,
+        "significance": "Not Significant"
+      },
+      "spearman_correlation": {
+        "r": -0.9,
+        "p_value": 0.0374
+      },
+      "direction_consistency": 0.0,
+      "consistency_level": "Medium",
+      "interpretation": "RoBERTa and LabMT correlation coefficient is -0.589, belongs to moderate correlation"
+    },
+    "comparison_analysis": {
+      "disagreement_points": [
+        {
+          "chapter": 2,
+          "roberta_score": -0.3997158726056417,
+          "labmt_score": 0.19347150259067258,
+          "difference": 0.5932
+        }
+      ],
+      "method_advantages": {
+        "RoBERTa": {
+          "strengths": [
+            "Deep learning model with better contextual understanding",
+            "Suitable for modern text and dialogue",
+            "High sensitivity to sci-fi and technical texts"
+          ],
+          "classification": "Oedipus",
+          "confidence": 0.221
+        },
+        "LabMT": {
+          "strengths": [
+            "Fully consistent with Reagan's original method",
+            "Based on large-scale human annotation",
+            "Suitable for traditional literary analysis"
+          ],
+          "classification": "Rags to riches",
+          "confidence": 0.7181
+        }
+      },
+      "consistency_assessment": {
+        "classification_agreement": false,
+        "major_disagreements": 1,
+        "recommendation": "Classification differs slightly but overall consistent, recommend using RoBERTa as primary and LabMT for validation, demonstrating the advantages of modern deep learning models"
+      }
+    },
+    "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = -0.589 (Medium)\n- Consistency level: RoBERTa and LabMT correlation coefficient is -0.589, belongs to moderate correlation\n\nClassification Results:\n- RoBERTa (primary): Oedipus\n- LabMT (validation): Rags to riches\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is -0.589, showing medium consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation.",
+    "output_files": {
+      "analysis_json": "/Users/haha/Story/data/regression_test_analysis/thelittleredridinghood_sciencefictionrewrite_linear_T0.7_s3/roberta_labmt_analysis_20250909_203823.json"
+    }
+  },
+  "hred_coherence_analysis": {
+    "HRED_coherence_evaluation": {
+      "model_name": "all-mpnet-base-v2",
+      "analysis_method": "Original sentence coherence",
+      "total_sentences": 233,
+      "adjacent_pairs": 232,
+      "average_coherence": 0.378,
+      "objective_description": {
+        "score": 0.378,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "detailed_analysis": {
+      "basic_statistics": {
+        "average_coherence": 0.37803974691457276,
+        "coherence_std": 0.16879378670674197,
+        "max_coherence": 0.8979101181030273,
+        "min_coherence": -0.022765139117836952,
+        "coherence_median": 0.37183547019958496
+      },
+      "coherence_breakpoints": [
+        {
+          "position": 6,
+          "sentence_pair": "The encrypted route lit up—cle... → Delivery point: Dock 7B, north...",
+          "similarity": 0.181
+        },
+        {
+          "position": 7,
+          "sentence_pair": "Delivery point: Dock 7B, north... → No deviations allowed....",
+          "similarity": 0.048
+        },
+        {
+          "position": 8,
+          "sentence_pair": "No deviations allowed.... → Her mother’s voice echoed in h...",
+          "similarity": -0.023
+        },
+        {
+          "position": 9,
+          "sentence_pair": "Her mother’s voice echoed in h... → Tonight, everything hinges on ...",
+          "similarity": 0.119
+        },
+        {
+          "position": 10,
+          "sentence_pair": "Tonight, everything hinges on ... → She tucked the slim parcel dee...",
+          "similarity": 0.153
+        },
+        {
+          "position": 17,
+          "sentence_pair": "When she finally spoke, her vo... → “Red, listen to me—don’t even ...",
+          "similarity": 0.16
+        },
+        {
+          "position": 23,
+          "sentence_pair": "If they catch your signal—if t... → ” She swallowed hard, eyes ple...",
+          "similarity": 0.017
+        },
+        {
+          "position": 35,
+          "sentence_pair": "Red ducked beneath the sputter... → She hunched her shoulders, ins...",
+          "similarity": 0.207
+        },
+        {
+          "position": 37,
+          "sentence_pair": "Keeping her voice barely above... → Package is in motion, status g...",
+          "similarity": 0.097
+        },
+        {
+          "position": 38,
+          "sentence_pair": "Package is in motion, status g... → ” Her eyes flicked upward, tra...",
+          "similarity": 0.205
+        },
+        {
+          "position": 43,
+          "sentence_pair": "“Awaiting further vectors.... → Courier Network DispatcherDisp...",
+          "similarity": 0.195
+        },
+        {
+          "position": 50,
+          "sentence_pair": "In her world, messages were li... → A metallic scrape echoes behin...",
+          "similarity": 0.187
+        },
+        {
+          "position": 55,
+          "sentence_pair": "Wolfbot’s voice crackles, modu... → Your path ends here....",
+          "similarity": 0.153
+        },
+        {
+          "position": 56,
+          "sentence_pair": "Your path ends here.... → Wolfbot's metallic frame block...",
+          "similarity": 0.1
+        },
+        {
+          "position": 62,
+          "sentence_pair": "Its sensors had already mapped... → Wolfbot didn’t need to raise i...",
+          "similarity": 0.19
+        },
+        {
+          "position": 83,
+          "sentence_pair": "the nanobots will be mine.... → Red’s heart hammered in her ch...",
+          "similarity": 0.032
+        },
+        {
+          "position": 103,
+          "sentence_pair": "He clarifies that his group se... → Scavenger Hacker LeaderThe Sca...",
+          "similarity": 0.138
+        },
+        {
+          "position": 106,
+          "sentence_pair": "Armed shadows fanned out behin... → His gaze locked on the courier...",
+          "similarity": 0.088
+        },
+        {
+          "position": 120,
+          "sentence_pair": "otherwise, she refuses to nego... → Red clutches the medicine tigh...",
+          "similarity": 0.127
+        },
+        {
+          "position": 127,
+          "sentence_pair": "“They’re running out of time.... → I can’t let anything stop me n...",
+          "similarity": 0.206
+        },
+        {
+          "position": 128,
+          "sentence_pair": "I can’t let anything stop me n... → ” The urgency in her eyes was ...",
+          "similarity": 0.156
+        },
+        {
+          "position": 141,
+          "sentence_pair": "“You give me a diagnostic kit—... → ” Her eyes flicked to the shad...",
+          "similarity": 0.14
+        },
+        {
+          "position": 142,
+          "sentence_pair": "” Her eyes flicked to the shad... → “No kit, no deal....",
+          "similarity": 0.129
+        },
+        {
+          "position": 143,
+          "sentence_pair": "“No kit, no deal.... → Time’s short, and I can’t risk...",
+          "similarity": 0.2
+        },
+        {
+          "position": 144,
+          "sentence_pair": "Time’s short, and I can’t risk... → ” She let the silence stretch ...",
+          "similarity": 0.186
+        },
+        {
+          "position": 146,
+          "sentence_pair": "“What’s it going to be?... → He tosses Red a battered but f...",
+          "similarity": 0.19
+        },
+        {
+          "position": 156,
+          "sentence_pair": "Wolfbot speaks not only as a p... → This delay is costing our fami...",
+          "similarity": 0.207
+        },
+        {
+          "position": 157,
+          "sentence_pair": "This delay is costing our fami... → Wolfbot’s servos whine as it t...",
+          "similarity": 0.081
+        },
+        {
+          "position": 164,
+          "sentence_pair": "“Compliance is non-negotiable.... → ” The android’s gaze locked on...",
+          "similarity": 0.202
+        },
+        {
+          "position": 166,
+          "sentence_pair": "“Failure to relinquish the ass... → ' Red is startled by Wolfbot's...",
+          "similarity": 0.193
+        },
+        {
+          "position": 172,
+          "sentence_pair": "The delay gnawed at its circui... → Wolfbot folds its arms and giv...",
+          "similarity": 0.083
+        },
+        {
+          "position": 183,
+          "sentence_pair": "” The subtle hum of his intern... → Wolfbot continues, implying a ...",
+          "similarity": 0.146
+        },
+        {
+          "position": 196,
+          "sentence_pair": "The Scavenger Hacker Leader, a... → Red raises her free hand, stat...",
+          "similarity": 0.145
+        },
+        {
+          "position": 203,
+          "sentence_pair": "No amount of smooth talk or th... → Red’s resolve was set in steel...",
+          "similarity": 0.184
+        },
+        {
+          "position": 204,
+          "sentence_pair": "Red’s resolve was set in steel... → She stared them down, signalin...",
+          "similarity": 0.173
+        },
+        {
+          "position": 214,
+          "sentence_pair": "” He gestured for them to reve... → “You’ve got tech we want, we’v...",
+          "similarity": 0.174
+        },
+        {
+          "position": 215,
+          "sentence_pair": "“You’ve got tech we want, we’v... → No kings, no gatekeepers—only ...",
+          "similarity": 0.151
+        },
+        {
+          "position": 216,
+          "sentence_pair": "No kings, no gatekeepers—only ... → ” The words landed heavy, a pr...",
+          "similarity": 0.143
+        },
+        {
+          "position": 227,
+          "sentence_pair": "The truth, he hinted, was that... → But instead of revealing more,...",
+          "similarity": 0.144
+        }
+      ],
+      "high_coherence_segments": [
+        {
+          "start_sentence": 1,
+          "end_sentence": 4,
+          "length": 4,
+          "average_similarity": 0.606
+        },
+        {
+          "start_sentence": 13,
+          "end_sentence": 16,
+          "length": 4,
+          "average_similarity": 0.597
+        },
+        {
+          "start_sentence": 26,
+          "end_sentence": 28,
+          "length": 3,
+          "average_similarity": 0.616
+        },
+        {
+          "start_sentence": 44,
+          "end_sentence": 49,
+          "length": 6,
+          "average_similarity": 0.522
+        },
+        {
+          "start_sentence": 65,
+          "end_sentence": 67,
+          "length": 3,
+          "average_similarity": 0.579
+        },
+        {
+          "start_sentence": 75,
+          "end_sentence": 77,
+          "length": 3,
+          "average_similarity": 0.487
+        },
+        {
+          "start_sentence": 84,
+          "end_sentence": 86,
+          "length": 3,
+          "average_similarity": 0.575
+        },
+        {
+          "start_sentence": 94,
+          "end_sentence": 97,
+          "length": 4,
+          "average_similarity": 0.517
+        },
+        {
+          "start_sentence": 101,
+          "end_sentence": 103,
+          "length": 3,
+          "average_similarity": 0.512
+        },
+        {
+          "start_sentence": 147,
+          "end_sentence": 149,
+          "length": 3,
+          "average_similarity": 0.654
+        },
+        {
+          "start_sentence": 154,
+          "end_sentence": 156,
+          "length": 3,
+          "average_similarity": 0.533
+        },
+        {
+          "start_sentence": 167,
+          "end_sentence": 169,
+          "length": 3,
+          "average_similarity": 0.711
+        },
+        {
+          "start_sentence": 187,
+          "end_sentence": 191,
+          "length": 5,
+          "average_similarity": 0.581
+        },
+        {
+          "start_sentence": 197,
+          "end_sentence": 199,
+          "length": 3,
+          "average_similarity": 0.641
+        },
+        {
+          "start_sentence": 231,
+          "end_sentence": 233,
+          "length": 3,
+          "average_similarity": 0.515
+        }
+      ],
+      "objective_description": {
+        "score": 0.378,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "pairwise_similarity_examples": [
+      {
+        "sentence_pair": "Sentence 1 → Sentence 2",
+        "sentence_1": "Red hunches beneath a flickering awning as her mot...",
+        "sentence_2": "Her mother unzips a foil-wrapped satchel and slide...",
+        "similarity": 0.4908
+      },
+      {
+        "sentence_pair": "Sentence 2 → Sentence 3",
+        "sentence_1": "Her mother unzips a foil-wrapped satchel and slide...",
+        "sentence_2": "Red checks her tablet for the encrypted route, voi...",
+        "similarity": 0.5915
+      },
+      {
+        "sentence_pair": "Sentence 3 → Sentence 4",
+        "sentence_1": "Red checks her tablet for the encrypted route, voi...",
+        "sentence_2": "Red glances over her shoulder, then taps her table...",
+        "similarity": 0.7372
+      },
+      {
+        "sentence_pair": "Sentence 4 → Sentence 5",
+        "sentence_1": "Red glances over her shoulder, then taps her table...",
+        "sentence_2": "Red’s fingers danced across the cracked screen of ...",
+        "similarity": 0.4554
+      },
+      {
+        "sentence_pair": "Sentence 5 → Sentence 6",
+        "sentence_1": "Red’s fingers danced across the cracked screen of ...",
+        "sentence_2": "The encrypted route lit up—clear, direct, uncompro...",
+        "similarity": 0.2871
+      },
+      {
+        "sentence_pair": "Sentence 6 → Sentence 7",
+        "sentence_1": "The encrypted route lit up—clear, direct, uncompro...",
+        "sentence_2": "Delivery point: Dock 7B, north sector.",
+        "similarity": 0.1815
+      },
+      {
+        "sentence_pair": "Sentence 7 → Sentence 8",
+        "sentence_1": "Delivery point: Dock 7B, north sector.",
+        "sentence_2": "No deviations allowed.",
+        "similarity": 0.0476
+      },
+      {
+        "sentence_pair": "Sentence 8 → Sentence 9",
+        "sentence_1": "No deviations allowed.",
+        "sentence_2": "Her mother’s voice echoed in her memory, sharp and...",
+        "similarity": -0.0228
+      },
+      {
+        "sentence_pair": "Sentence 9 → Sentence 10",
+        "sentence_1": "Her mother’s voice echoed in her memory, sharp and...",
+        "sentence_2": "Tonight, everything hinges on this one package.",
+        "similarity": 0.1193
+      },
+      {
+        "sentence_pair": "Sentence 10 → Sentence 11",
+        "sentence_1": "Tonight, everything hinges on this one package.",
+        "sentence_2": "She tucked the slim parcel deeper inside her jacke...",
+        "similarity": 0.1531
+      },
+      {
+        "sentence_pair": "Sentence 11 → Sentence 12",
+        "sentence_1": "She tucked the slim parcel deeper inside her jacke...",
+        "sentence_2": "Just one delivery, she reminded herself, but it ca...",
+        "similarity": 0.374
+      },
+      {
+        "sentence_pair": "Sentence 12 → Sentence 13",
+        "sentence_1": "Just one delivery, she reminded herself, but it ca...",
+        "sentence_2": "Her mother grips her shoulder, eyes scanning the s...",
+        "similarity": 0.2909
+      },
+      {
+        "sentence_pair": "Sentence 13 → Sentence 14",
+        "sentence_1": "Her mother grips her shoulder, eyes scanning the s...",
+        "sentence_2": "Red's MotherHer hand tightens on Red’s shoulder, v...",
+        "similarity": 0.6064
+      },
+      {
+        "sentence_pair": "Sentence 14 → Sentence 15",
+        "sentence_1": "Red's MotherHer hand tightens on Red’s shoulder, v...",
+        "sentence_2": "Red’s mother’s grip tightened on her shoulder, her...",
+        "similarity": 0.7113
+      },
+      {
+        "sentence_pair": "Sentence 15 → Sentence 16",
+        "sentence_1": "Red’s mother’s grip tightened on her shoulder, her...",
+        "sentence_2": "Her eyes darted restlessly over Red’s head, search...",
+        "similarity": 0.4736
+      },
+      {
+        "sentence_pair": "Sentence 16 → Sentence 17",
+        "sentence_1": "Her eyes darted restlessly over Red’s head, search...",
+        "sentence_2": "When she finally spoke, her voice trembled with a ...",
+        "similarity": 0.4539
+      },
+      {
+        "sentence_pair": "Sentence 17 → Sentence 18",
+        "sentence_1": "When she finally spoke, her voice trembled with a ...",
+        "sentence_2": "“Red, listen to me—don’t even think about those ol...",
+        "similarity": 0.1596
+      },
+      {
+        "sentence_pair": "Sentence 18 → Sentence 19",
+        "sentence_1": "“Red, listen to me—don’t even think about those ol...",
+        "sentence_2": "” She drew a shaky breath, the lines of worry deep...",
+        "similarity": 0.2346
+      },
+      {
+        "sentence_pair": "Sentence 19 → Sentence 20",
+        "sentence_1": "” She drew a shaky breath, the lines of worry deep...",
+        "sentence_2": "“People disappear down there, and it’s not just th...",
+        "similarity": 0.3041
+      },
+      {
+        "sentence_pair": "Sentence 20 → Sentence 21",
+        "sentence_1": "“People disappear down there, and it’s not just th...",
+        "sentence_2": "” Her gaze flicked down to the small shield genera...",
+        "similarity": 0.2226
+      },
+      {
+        "note": "Only showing first 20 pairs, total of 232 adjacent sentence pairs"
+      }
+    ]
+  },
+  "story_structure_analysis": {
+    "evaluation_mode": "default mode",
+    "event_list": [
+      {
+        "event": "Red’s mother scans the alley for threats as Red crouches beneath a flickering awning.",
+        "source": "Red hunches beneath a flickering awning as her mother scans the alley for unwelcome eyes.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red’s mother places a foil-wrapped satchel into Red’s backpack, locking it with a code.",
+        "source": "Her mother unzips a foil-wrapped satchel and slides it into Red’s backpack, fingers tapping a coded sequence onto the lock.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red checks her tablet for the encrypted route and confirms the delivery point in a low voice.",
+        "source": "Red checks her tablet for the encrypted route, voice low as she confirms the delivery point.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red glances over her shoulder, then taps her tablet to double-check the coordinates, her voice barely above a whisper.",
+        "source": "Red glances over her shoulder, then taps her tablet to double-check the coordinates, her voice barely above a whisper.",
+        "chapter": "Chapter 1",
+        "confidence": "medium"
+      },
+      {
+        "event": "Red’s mother warns her to avoid the old transit tunnels and keep her signal shield active.",
+        "source": "Her mother grips her shoulder, eyes scanning the shadows, warning her to avoid the old transit tunnels and keep the signal shield active at all times.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red steps from the alley, pulls her hood tight, determined to deliver the nanobot package.",
+        "source": "As Red steps from the alley, she pulls her hood tight, boots splashing through shallow puddles, determined to get the nanobot package to her grandmother before Wolfbot or his agents can intercept.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "As Red rounds the next corner, a surge of static pulses through her shield, signaling the beginning of a deadly game.",
+        "source": "As Red rounds the next corner, a surge of static pulses through her shield, signaling the beginning of a deadly game.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red darts between dumpsters, clutching a shockproof case as she moves through the alley.",
+        "source": "Red darts between overflowing dumpsters, boots splashing through puddles as she clutches a shockproof case tight to her chest.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red whispers coded updates into her comm-link to the Courier Network Dispatcher.",
+        "source": "She pauses under a flickering sign, pressing her comm-link to her ear and whispering coded updates to the Courier Network Dispatcher.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Dispatcher encrypts a response, monitors for interference, and flags surveillance near Red's location.",
+        "source": "Courier Network DispatcherDispatcher encrypts response, monitors for interference, and flags possible surveillance spikes near Red's location.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfbot raises an extendable arm, launching a swarm of Nanite Subroutines that scatter across the wet pavement, their micro-legs ticking against metal.",
+        "source": "Wolfbot raises an extendable arm, launching a swarm of Nanite Subroutines that scatter across the wet pavement, their micro-legs ticking against metal.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red ducks, rolls behind a rusted delivery van, and slams an EMP charge against the ground.",
+        "source": "Red ducks, rolls behind a rusted delivery van, and slams an EMP charge against the ground.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "The charge crackles, zapping several nanites into smoking piles, but Wolfbot adapts, rerouting commands and ordering the remaining agents to flank.",
+        "source": "The charge crackles, zapping several nanites into smoking piles, but Wolfbot adapts, rerouting commands and ordering the remaining agents to flank.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red slips through a maintenance hatch, bolts it behind her, and navigates the passageway.",
+        "source": "Red yanks open the maintenance hatch, slips inside, and bolts the cover behind her, heart pounding as she navigates the dim, narrow passageway.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfbot’s metallic claws scraped against the alley wall with a sound like knives on stone, relentless and precise.",
+        "source": "Wolfbot’s metallic claws scraped against the alley wall with a sound like knives on stone, relentless and precise.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red overrides the hatch’s lock, sealing the barrier as Wolfbot pounds from the other side.",
+        "source": "Red scans the hatch’s control panel, overrides the lock with trembling fingers, and slips inside, sealing the barrier as Wolfbot pounds furiously from the other side.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfbot recalculates, sending nanites through the vent after Red.",
+        "source": "Wolfbot recalculates, sending nanites through the vent after her, relentless in pursuit.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "As the echoes of Wolfbot's rage faded behind the sealed barrier, Red plunged deeper into the labyrinth beneath the city, every step taking her further from safety but closer to her goal.",
+        "source": "As the echoes of Wolfbot's rage faded behind the sealed barrier, Red plunged deeper into the labyrinth beneath the city, every step taking her further from safety but closer to her goal.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red sprints down the platform, clutching the nanobot package to her chest.",
+        "source": "Red sprints down the narrow platform, clutching the insulated nanobot package to her chest.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "She skids to a halt as the Scavenger Hacker Leader, flanked by two wary members with makeshift EMP rifles, steps from the shadows and blocks her path.",
+        "source": "She skids to a halt as the Scavenger Hacker Leader, flanked by two wary members with makeshift EMP rifles, steps from the shadows and blocks her path.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Leader clarifies they seek a fair exchange, wanting to see Red’s package before negotiating.",
+        "source": "He clarifies that his group seeks a fair exchange, wanting to see what Red is carrying before negotiating further.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red pleads for understanding, explaining her family's urgent need, especially her brother’s health.",
+        "source": "Red, desperate and emotional, pleads for understanding, explaining her family's dire need—especially her little brother's deteriorating health—and insists that she cannot be delayed.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Leader leans in to inspect the package, signaling no immediate harm but remaining tense.",
+        "source": "The Scavenger Hacker Leader leaned in just enough to get a clearer look at the package, keeping his hands open and in full view—a calculated gesture to show he meant no immediate harm.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "“You give me a diagnostic kit—intact and functional—and I guarantee your group safe passage through this sector.",
+        "source": "“You give me a diagnostic kit—intact and functional—and I guarantee your group safe passage through this sector.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red clutches the medicine, voice trembling, searching for compassion from the hackers.",
+        "source": "Red's voice trembles as she clutches the medicine tighter, her eyes pleading for compassion.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Moved, the leader signals his crew to lower their weapons.",
+        "source": "Moved by her determination and realizing the potential value of her offer, the leader signals his crew to lower their weapons.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red stood with her arms crossed, the neon glare from the overhead signs catching the sharp line of her jaw.",
+        "source": "Red stood with her arms crossed, the neon glare from the overhead signs catching the sharp line of her jaw.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Leader tosses Red a functional diagnostic scanner and steps aside.",
+        "source": "He tosses Red a battered but functional diagnostic scanner, stepping aside to allow her through.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red grasps the scanner and races deeper into the tunnel toward her objective.",
+        "source": "Red grasps the scanner and races deeper into the tunnel toward her objective.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red crouches behind a rusted generator, clutching the sealed case of medical nanobots to her chest.",
+        "source": "Red crouches behind a rusted generator, clutching the sealed case of medical nanobots to her chest.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "However, as Wolfbot deploys a swarm of nanite subroutines, its voice takes on an unexpectedly empathetic tone.",
+        "source": "However, as Wolfbot deploys a swarm of nanite subroutines, its voice takes on an unexpectedly empathetic tone.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfbot speaks not only as a pursuer but as someone claiming shared stakes: 'Every moment spent resisting is a moment we can't get back.",
+        "source": "Wolfbot speaks not only as a pursuer but as someone claiming shared stakes: 'Every moment spent resisting is a moment we can't get back.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfbot folded its arms, metallic joints clicking softly, and cast a calculating glance at the ticking clock on the wall.",
+        "source": "Wolfbot folded its arms, metallic joints clicking softly, and cast a calculating glance at the ticking clock on the wall.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfbot leaned in, his polished chassis gleaming beneath the flickering lights.",
+        "source": "Wolfbot leaned in, his polished chassis gleaming beneath the flickering lights.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "She pulls a jamming device from her satchel, flicks it on, disrupting the nanites’ signals.",
+        "source": "She pulls a jamming device from her satchel, flicks it on, disrupting the nanites’ signals.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfbot narrows its optical sensors, recalibrates, and advances, the tone shifting back to its original demand: 'Compliance is non-negotiable.",
+        "source": "Wolfbot narrows its optical sensors, recalibrates, and advances, the tone shifting back to its original demand: 'Compliance is non-negotiable.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red overrides the lock with a stolen chip and slips inside, blocking Wolfbot’s entry.",
+        "source": "' Red darts to the door, overrides the lock with a stolen access chip, and slips inside, slamming the door just as Wolfbot's mechanical arm crashes against the frame.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfbot’s agents breach the objective, but Red’s quick thinking temporarily blocks their entry.",
+        "source": "The objective—to breach the hideout—is met by Wolfbot’s agents, but Red’s quick thinking temporarily blocks their entry.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "The encounter leaves Red uneasy, questioning Wolfbot’s motives and deeper connections.",
+        "source": "The encounter leaves Red uneasy, questioning Wolfbot's motives and whether there are deeper connections at play.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red ducks beneath a rusted beam, clutching the satchel and scanning for movement.",
+        "source": "Red ducks beneath a rusted iron beam, clutching the insulated satchel tight to her chest, scanning the shadowy alcoves for movement.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax and two hackers encircle Red, signaling a negotiation for passage.",
+        "source": "The Scavenger Hacker Leader, a wiry teen named Jax with cybernetic blue eyes, blocks her path, signaling two masked hacker members to encircle her, their patched boots scraping on the damp floor.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red raises her hand, clearly stating the package isn’t for sale and requesting safe passage.",
+        "source": "Red raises her free hand, stating, 'I need safe passage—my package isn’t for sale.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Jax negotiates, emphasizing mutual exchange and the risks, pressing Red to protect her package.",
+        "source": "' Jax engages her in negotiation, emphasizing the hacker group's philosophy of mutual exchange and the high stakes surrounding Red's package, pressing her to consider what she is willing to do to protect it.",
+        "chapter": "Chapter 5",
+        "confidence": "medium"
+      },
+      {
+        "event": "Jax offers a tense alliance: Red helps bypass drones, hackers ensure her exit stays clean.",
+        "source": "Jax offers a tense alliance: 'You crack us a way past the upper city’s sweeper drones, we’ll make sure your exit stays squeaky clean.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Fair exchange, nothing less.",
+        "source": "Fair exchange, nothing less.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "It was about what lengths someone would go to keep it out of the wrong hands.",
+        "source": "It was about what lengths someone would go to keep it out of the wrong hands.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red agrees to the deal, choosing cooperation over force to secure safe passage.",
+        "source": "' Red, motivated to protect the nanobots for her grandmother, agrees to the deal—leveraging her skills rather than force to secure safe passage.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red secures a temporary truce and passage into the tunnels; hackers gain chance for escape and tech deals.",
+        "source": "The outcome: Red secures a temporary truce and passage deeper into the tunnels through cooperation, while the hackers gain a potential opportunity for escape and future tech deals.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      }
+    ],
+    "Papalampidi_detailed_results": {
+      "turning_points": {
+        "TP1": "Red’s mother places a foil-wrapped satchel into Red’s backpack, locking it with a code.",
+        "TP2": "As Red rounds the next corner, a surge of static pulses through her shield, signaling the beginning of a deadly game.",
+        "TP3": "Red slips through a maintenance hatch, bolts it behind her, and navigates the passageway.",
+        "TP4": "She skids to a halt as the Scavenger Hacker Leader, flanked by two wary members with makeshift EMP rifles, steps from the shadows and blocks her path.",
+        "TP5": "Red agrees to the deal, choosing cooperation over force to secure safe passage."
+      },
+      "stage_division": {
+        "Setup": [
+          "Red’s mother scans the alley for threats as Red crouches beneath a flickering awning.",
+          "Red’s mother places a foil-wrapped satchel into Red’s backpack, locking it with a code.",
+          "Red checks her tablet for the encrypted route and confirms the delivery point in a low voice.",
+          "Red glances over her shoulder, then taps her tablet to double-check the coordinates, her voice barely above a whisper.",
+          "Red’s mother warns her to avoid the old transit tunnels and keep her signal shield active."
+        ],
+        "New Situation": [
+          "Red steps from the alley, pulls her hood tight, determined to deliver the nanobot package.",
+          "As Red rounds the next corner, a surge of static pulses through her shield, signaling the beginning of a deadly game."
+        ],
+        "Progress": [
+          "Red darts between dumpsters, clutching a shockproof case as she moves through the alley.",
+          "Red whispers coded updates into her comm-link to the Courier Network Dispatcher.",
+          "Dispatcher encrypts a response, monitors for interference, and flags surveillance near Red's location.",
+          "Wolfbot raises an extendable arm, launching a swarm of Nanite Subroutines that scatter across the wet pavement, their micro-legs ticking against metal.",
+          "Red ducks, rolls behind a rusted delivery van, and slams an EMP charge against the ground.",
+          "The charge crackles, zapping several nanites into smoking piles, but Wolfbot adapts, rerouting commands and ordering the remaining agents to flank.",
+          "Red slips through a maintenance hatch, bolts it behind her, and navigates the passageway.",
+          "Wolfbot’s metallic claws scraped against the alley wall with a sound like knives on stone, relentless and precise.",
+          "Red overrides the hatch’s lock, sealing the barrier as Wolfbot pounds from the other side.",
+          "Wolfbot recalculates, sending nanites through the vent after Red.",
+          "As the echoes of Wolfbot's rage faded behind the sealed barrier, Red plunged deeper into the labyrinth beneath the city, every step taking her further from safety but closer to her goal.",
+          "Red sprints down the platform, clutching the nanobot package to her chest."
+        ],
+        "Complications": [
+          "She skids to a halt as the Scavenger Hacker Leader, flanked by two wary members with makeshift EMP rifles, steps from the shadows and blocks her path.",
+          "Leader clarifies they seek a fair exchange, wanting to see Red’s package before negotiating.",
+          "Red pleads for understanding, explaining her family's urgent need, especially her brother’s health.",
+          "Leader leans in to inspect the package, signaling no immediate harm but remaining tense.",
+          "“You give me a diagnostic kit—intact and functional—and I guarantee your group safe passage through this sector.",
+          "Red clutches the medicine, voice trembling, searching for compassion from the hackers.",
+          "Moved, the leader signals his crew to lower their weapons.",
+          "Red stood with her arms crossed, the neon glare from the overhead signs catching the sharp line of her jaw.",
+          "Leader tosses Red a functional diagnostic scanner and steps aside.",
+          "Red grasps the scanner and races deeper into the tunnel toward her objective.",
+          "Red crouches behind a rusted generator, clutching the sealed case of medical nanobots to her chest.",
+          "However, as Wolfbot deploys a swarm of nanite subroutines, its voice takes on an unexpectedly empathetic tone.",
+          "Wolfbot speaks not only as a pursuer but as someone claiming shared stakes: 'Every moment spent resisting is a moment we can't get back.",
+          "Wolfbot folded its arms, metallic joints clicking softly, and cast a calculating glance at the ticking clock on the wall.",
+          "Wolfbot leaned in, his polished chassis gleaming beneath the flickering lights.",
+          "She pulls a jamming device from her satchel, flicks it on, disrupting the nanites’ signals.",
+          "Wolfbot narrows its optical sensors, recalibrates, and advances, the tone shifting back to its original demand: 'Compliance is non-negotiable.",
+          "Red overrides the lock with a stolen chip and slips inside, blocking Wolfbot’s entry.",
+          "Wolfbot’s agents breach the objective, but Red’s quick thinking temporarily blocks their entry.",
+          "The encounter leaves Red uneasy, questioning Wolfbot’s motives and deeper connections.",
+          "Red ducks beneath a rusted beam, clutching the satchel and scanning for movement."
+        ],
+        "Final Push": [
+          "Jax and two hackers encircle Red, signaling a negotiation for passage.",
+          "Red raises her hand, clearly stating the package isn’t for sale and requesting safe passage.",
+          "Jax negotiates, emphasizing mutual exchange and the risks, pressing Red to protect her package.",
+          "Jax offers a tense alliance: Red helps bypass drones, hackers ensure her exit stays clean.",
+          "Fair exchange, nothing less.",
+          "It was about what lengths someone would go to keep it out of the wrong hands.",
+          "Red agrees to the deal, choosing cooperation over force to secure safe passage."
+        ],
+        "Aftermath": [
+          "Red secures a temporary truce and passage into the tunnels; hackers gain chance for escape and tech deals."
+        ]
+      }
+    },
+    "Li_detailed_results": {
+      "Red’s mother scans the alley for threats as Red crouches beneath a flickering awning.": "Orientation",
+      "Red’s mother places a foil-wrapped satchel into Red’s backpack, locking it with a code.": "Orientation",
+      "Red checks her tablet for the encrypted route and confirms the delivery point in a low voice.": "Orientation",
+      "Red glances over her shoulder, then taps her tablet to double-check the coordinates, her voice barely above a whisper.": "Orientation",
+      "Red’s mother warns her to avoid the old transit tunnels and keep her signal shield active.": "Orientation",
+      "Red steps from the alley, pulls her hood tight, determined to deliver the nanobot package.": "Complicating Action",
+      "As Red rounds the next corner, a surge of static pulses through her shield, signaling the beginning of a deadly game.": "Complicating Action",
+      "Red darts between dumpsters, clutching a shockproof case as she moves through the alley.": "Complicating Action",
+      "Red whispers coded updates into her comm-link to the Courier Network Dispatcher.": "Complicating Action",
+      "Dispatcher encrypts a response, monitors for interference, and flags surveillance near Red's location.": "Complicating Action",
+      "Wolfbot raises an extendable arm, launching a swarm of Nanite Subroutines that scatter across the wet pavement, their micro-legs ticking against metal.": "Complicating Action",
+      "Red ducks, rolls behind a rusted delivery van, and slams an EMP charge against the ground.": "Complicating Action",
+      "The charge crackles, zapping several nanites into smoking piles, but Wolfbot adapts, rerouting commands and ordering the remaining agents to flank.": "Complicating Action",
+      "Red slips through a maintenance hatch, bolts it behind her, and navigates the passageway.": "Minor Resolution",
+      "Wolfbot’s metallic claws scraped against the alley wall with a sound like knives on stone, relentless and precise.": "Complicating Action",
+      "Red overrides the hatch’s lock, sealing the barrier as Wolfbot pounds from the other side.": "Minor Resolution",
+      "Wolfbot recalculates, sending nanites through the vent after Red.": "Return of MRE",
+      "As the echoes of Wolfbot's rage faded behind the sealed barrier, Red plunged deeper into the labyrinth beneath the city, every step taking her further from safety but closer to her goal.": "Abstract",
+      "Red sprints down the platform, clutching the nanobot package to her chest.": "Complicating Action",
+      "She skids to a halt as the Scavenger Hacker Leader, flanked by two wary members with makeshift EMP rifles, steps from the shadows and blocks her path.": "Complicating Action",
+      "Leader clarifies they seek a fair exchange, wanting to see Red’s package before negotiating.": "Complicating Action",
+      "Red pleads for understanding, explaining her family's urgent need, especially her brother’s health.": "Complicating Action",
+      "Leader leans in to inspect the package, signaling no immediate harm but remaining tense.": "Minor Resolution",
+      "“You give me a diagnostic kit—intact and functional—and I guarantee your group safe passage through this sector.": "Complicating Action",
+      "Red clutches the medicine, voice trembling, searching for compassion from the hackers.": "Complicating Action",
+      "Moved, the leader signals his crew to lower their weapons.": "Minor Resolution",
+      "Red stood with her arms crossed, the neon glare from the overhead signs catching the sharp line of her jaw.": "Orientation",
+      "Leader tosses Red a functional diagnostic scanner and steps aside.": "Minor Resolution",
+      "Red grasps the scanner and races deeper into the tunnel toward her objective.": "Complicating Action",
+      "Red crouches behind a rusted generator, clutching the sealed case of medical nanobots to her chest.": "Complicating Action",
+      "However, as Wolfbot deploys a swarm of nanite subroutines, its voice takes on an unexpectedly empathetic tone.": "Evaluation",
+      "Wolfbot speaks not only as a pursuer but as someone claiming shared stakes: 'Every moment spent resisting is a moment we can't get back.": "Direct Comment",
+      "Wolfbot folded its arms, metallic joints clicking softly, and cast a calculating glance at the ticking clock on the wall.": "Complicating Action",
+      "Wolfbot leaned in, his polished chassis gleaming beneath the flickering lights.": "Complicating Action",
+      "She pulls a jamming device from her satchel, flicks it on, disrupting the nanites’ signals.": "Complicating Action",
+      "Wolfbot narrows its optical sensors, recalibrates, and advances, the tone shifting back to its original demand: 'Compliance is non-negotiable.": "Return of MRE",
+      "Red overrides the lock with a stolen chip and slips inside, blocking Wolfbot’s entry.": "Minor Resolution",
+      "Wolfbot’s agents breach the objective, but Red’s quick thinking temporarily blocks their entry.": "Complicating Action",
+      "The encounter leaves Red uneasy, questioning Wolfbot’s motives and deeper connections.": "Aftermath",
+      "Red ducks beneath a rusted beam, clutching the satchel and scanning for movement.": "Complicating Action",
+      "Jax and two hackers encircle Red, signaling a negotiation for passage.": "Complicating Action",
+      "Red raises her hand, clearly stating the package isn’t for sale and requesting safe passage.": "Complicating Action",
+      "Jax negotiates, emphasizing mutual exchange and the risks, pressing Red to protect her package.": "Complicating Action",
+      "Jax offers a tense alliance: Red helps bypass drones, hackers ensure her exit stays clean.": "Minor Resolution",
+      "Fair exchange, nothing less.": "Direct Comment",
+      "It was about what lengths someone would go to keep it out of the wrong hands.": "Evaluation",
+      "Red agrees to the deal, choosing cooperation over force to secure safe passage.": "Resolution",
+      "Red secures a temporary truce and passage into the tunnels; hackers gain chance for escape and tech deals.": "Aftermath"
+    },
+    "structure_analysis": {
+      "basic_info": {
+        "total_events": 48,
+        "analysis_mode": "default",
+        "analysis_time": null
+      },
+      "Papalampidi_structure_analysis": {
+        "turning_point_integrity": {
+          "identified_tps": [
+            "TP1",
+            "TP2",
+            "TP3",
+            "TP4",
+            "TP5"
+          ],
+          "missing_tps": [],
+          "TP_coverage": "5/5"
+        },
+        "stage_integrity": {
+          "identified_stages": [
+            "Setup",
+            "New Situation",
+            "Progress",
+            "Complications",
+            "Final Push",
+            "Aftermath"
+          ],
+          "missing_stages": [],
+          "stage_coverage": "6/6"
+        }
+      },
+      "Li_function_analysis": {
+        "core_function_check": {
+          "Orientation": "exists",
+          "Complicating Action": "exists",
+          "MRE": "exists",
+          "Resolution": "exists"
+        },
+        "function_distribution": {
+          "Orientation": 6,
+          "Complicating Action": 25,
+          "Minor Resolution": 7,
+          "Return of MRE": 2,
+          "Abstract": 1,
+          "Evaluation": 2,
+          "Direct Comment": 2,
+          "Aftermath": 2,
+          "Resolution": 1
+        },
+        "function_diversity": 9
+      }
+    }
+  }
+}

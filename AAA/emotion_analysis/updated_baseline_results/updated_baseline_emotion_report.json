@@ -1,0 +1,194 @@
+{
+  "report_info": {
+    "timestamp": "2025-09-13T23:54:48.417037",
+    "report_type": "Updated Baseline Emotion Analysis",
+    "baseline_count": 3,
+    "preserves_original_findings": true
+  },
+  "original_technical_findings": {
+    "critical_bug_discovered": {
+      "correlation_direction_consistency_bug": {
+        "description": "74.1%的条目中correlation_coefficient和direction_consistency值完全相同",
+        "impact": "致命的串值错误，导致分析结果不可靠",
+        "fix_status": "已修复"
+      }
+    },
+    "labmt_technical_issues": {
+      "negation_handling": {
+        "problem": "否定词处理完全未实现",
+        "examples": [
+          "not good被分析为正面情绪",
+          "This is not bad被误判为负面"
+        ],
+        "impact": "严重影响情感分析准确性"
+      },
+      "tokenization_issues": {
+        "problem": "仅使用简单正则表达式，不处理缩略词",
+        "impact": "分词精度偏低，丢失重要语义信息"
+      }
+    },
+    "performance_improvements": {
+      "direction_consistency": {
+        "before": 0.418,
+        "after": 0.614,
+        "improvement": "+46.9%",
+        "status": "显著改善"
+      }
+    },
+    "validation_results": {
+      "fdr_correction": "FDR校正后显著相关性为0.0%",
+      "statistical_significance": "修正后真正显著的相关性仍然很低"
+    }
+  },
+  "updated_baseline_analysis": {
+    "baseline_details": [
+      {
+        "story_id": "simple_baseline_s3_Tbaseline_sbaseline",
+        "seed": 3,
+        "archetype": "Icarus",
+        "chapter_count": 24,
+        "roberta_mean": -0.18467916666666664,
+        "roberta_std": 0.45383369198709667,
+        "roberta_range": 1.46,
+        "roberta_min": -0.9926,
+        "roberta_max": 0.4674,
+        "labmt_mean": 0.28830416666666664,
+        "labmt_std": 0.067932567540458,
+        "labmt_range": 0.2788,
+        "labmt_min": 0.1738,
+        "labmt_max": 0.4526,
+        "emotion_correlation": 0.2131,
+        "direction_consistency_fixed": 0.4782608695652174,
+        "emotional_volatility": 0.5221986630995058,
+        "emotion_start_roberta": 0.0158,
+        "emotion_end_roberta": -0.0719,
+        "emotion_start_labmt": 0.3544,
+        "emotion_end_labmt": 0.2832,
+        "roberta_total_change": -0.0877,
+        "labmt_total_change": -0.07119999999999999,
+        "roberta_peak": 0.4674,
+        "roberta_valley": -0.9926,
+        "labmt_peak": 0.4526,
+        "labmt_valley": 0.1738,
+        "roberta_trend": -0.014980739130434776,
+        "labmt_trend": 6.578260869565921e-05
+      },
+      {
+        "story_id": "simple_baseline_s1_Tbaseline_sbaseline",
+        "seed": 1,
+        "archetype": "Rags to riches",
+        "chapter_count": 10,
+        "roberta_mean": 0.14411000000000002,
+        "roberta_std": 0.40640696463028286,
+        "roberta_range": 1.2359,
+        "roberta_min": -0.4871,
+        "roberta_max": 0.7488,
+        "labmt_mean": 0.27639,
+        "labmt_std": 0.05626889815875197,
+        "labmt_range": 0.199,
+        "labmt_min": 0.1824,
+        "labmt_max": 0.3814,
+        "emotion_correlation": 0.7462,
+        "direction_consistency_fixed": 0.5555555555555556,
+        "emotional_volatility": 0.5334045119169253,
+        "emotion_start_roberta": -0.1896,
+        "emotion_end_roberta": 0.7488,
+        "emotion_start_labmt": 0.2481,
+        "emotion_end_labmt": 0.3202,
+        "roberta_total_change": 0.9384,
+        "labmt_total_change": 0.0721,
+        "roberta_peak": 0.7488,
+        "roberta_valley": -0.4871,
+        "labmt_peak": 0.3814,
+        "labmt_valley": 0.1824,
+        "roberta_trend": 0.0801812121212121,
+        "labmt_trend": 0.007280606060606075
+      },
+      {
+        "story_id": "simple_baseline_s2_Tbaseline_sbaseline",
+        "seed": 2,
+        "archetype": "Tragedy",
+        "chapter_count": 8,
+        "roberta_mean": 0.5482,
+        "roberta_std": 0.2859569504313543,
+        "roberta_range": 0.9641,
+        "roberta_min": 0.0199,
+        "roberta_max": 0.984,
+        "labmt_mean": 0.31933750000000005,
+        "labmt_std": 0.07241600198678468,
+        "labmt_range": 0.23430000000000004,
+        "labmt_min": 0.1712,
+        "labmt_max": 0.4055,
+        "emotion_correlation": 0.7702,
+        "direction_consistency_fixed": 0.8571428571428571,
+        "emotional_volatility": 0.5778054280231895,
+        "emotion_start_roberta": 0.4692,
+        "emotion_end_roberta": 0.7584,
+        "emotion_start_labmt": 0.4055,
+        "emotion_end_labmt": 0.2992,
+        "roberta_total_change": 0.28919999999999996,
+        "labmt_total_change": -0.1063,
+        "roberta_peak": 0.984,
+        "roberta_valley": 0.0199,
+        "labmt_peak": 0.4055,
+        "labmt_valley": 0.1712,
+        "roberta_trend": -0.0024380952380952162,
+        "labmt_trend": -0.017286904761904733
+      }
+    ],
+    "archetype_distribution": {
+      "Icarus": {
+        "seed": 3,
+        "emotion_correlation": 0.2131,
+        "roberta_mean": -0.18467916666666664,
+        "labmt_mean": 0.28830416666666664,
+        "emotional_volatility": 0.5221986630995058
+      },
+      "Rags to riches": {
+        "seed": 1,
+        "emotion_correlation": 0.7462,
+        "roberta_mean": 0.14411000000000002,
+        "labmt_mean": 0.27639,
+        "emotional_volatility": 0.5334045119169253
+      },
+      "Tragedy": {
+        "seed": 2,
+        "emotion_correlation": 0.7702,
+        "roberta_mean": 0.5482,
+        "labmt_mean": 0.31933750000000005,
+        "emotional_volatility": 0.5778054280231895
+      }
+    }
+  },
+  "baseline_experimental_comparison": {
+    "experimental_stats": {
+      "mean_correlation": 0.28945814892819394,
+      "std_correlation": 0.3934730413033804,
+      "median_correlation": 0.3559745556689135,
+      "count": 54
+    },
+    "baseline_stats": {
+      "correlations": [
+        0.2131,
+        0.7462,
+        0.7702
+      ],
+      "mean_correlation": 0.5765,
+      "std_correlation": 0.2571493340454142,
+      "median_correlation": 0.7462,
+      "count": 3
+    }
+  },
+  "key_observations": [
+    "3个baseline分别代表不同的故事原型：Icarus, Rags to riches, Tragedy",
+    "情绪相关性范围：0.213 - 0.770",
+    "Tragedy原型显示最高的情绪相关性(0.770)",
+    "保持原有技术分析结论：RoBERTa vs LabMT的bug修复和方法改进"
+  ],
+  "technical_status": {
+    "correlation_direction_bug": "FIXED",
+    "labmt_negation_handling": "IDENTIFIED_NOT_IMPLEMENTED",
+    "direction_consistency_improvement": "+46.9%",
+    "fdr_correction_applied": true
+  }
+}

@@ -1,0 +1,1587 @@
+{
+  "folder_name": "thelittleredridinghood_sciencefictionrewrite_linear_T0.3_s1",
+  "file_path": "/Users/haha/Story/data/output/regression_test/thelittleredridinghood_sciencefictionrewrite_linear_T0.3_s1/enhanced_story_dialogue_updated.md",
+  "analysis_timestamp": null,
+  "emotional_arc_analysis": {
+    "metadata": {
+      "total_chapters": 6,
+      "primary_method": "RoBERTa",
+      "validation_method": "LabMT-en-v1",
+      "analysis_timestamp": "2025-09-09T21:00:07.167187"
+    },
+    "chapter_analysis": [
+      {
+        "chapter_num": 1,
+        "title": "Red Receives the Tech Package Assignment",
+        "roberta_score": 0.0408,
+        "labmt_score": 0.1147,
+        "content_length": 16761
+      },
+      {
+        "chapter_num": 2,
+        "title": "Red Hacks the City Gate and Encounters Wolf-9",
+        "roberta_score": -0.2877,
+        "labmt_score": 0.0778,
+        "content_length": 1742
+      },
+      {
+        "chapter_num": 3,
+        "title": "Red Navigates the Hazard Zone and Makes a Risky Decision",
+        "roberta_score": -0.8075,
+        "labmt_score": 0.0943,
+        "content_length": 7977
+      },
+      {
+        "chapter_num": 4,
+        "title": "Wolf-9 Impersonates Grandmother and Sets a Trap",
+        "roberta_score": -0.0726,
+        "labmt_score": 0.2326,
+        "content_length": 25336
+      },
+      {
+        "chapter_num": 5,
+        "title": "Red Confronts Wolf-9 and Makes a Critical Choice",
+        "roberta_score": 0.1448,
+        "labmt_score": 0.0999,
+        "content_length": 7324
+      },
+      {
+        "chapter_num": 6,
+        "title": "Red and Grandmother Decide the Fate of the Package",
+        "roberta_score": -0.3531,
+        "labmt_score": 0.3074,
+        "content_length": 1256
+      }
+    ],
+    "primary_analysis": {
+      "method": "RoBERTa",
+      "scores": [
+        0.040798648198445635,
+        -0.287717661687306,
+        -0.8074814160664876,
+        -0.07256299654642741,
+        0.14479292233784993,
+        -0.3530506557888455
+      ],
+      "reagan_classification": {
+        "method": "RoBERTa",
+        "best_match": "Oedipus",
+        "confidence": 0.2018,
+        "all_similarities": {
+          "Rags to riches": 0,
+          "Tragedy": 0,
+          "Man in a hole": 0.1039,
+          "Icarus": 0,
+          "Cinderella": 0,
+          "Oedipus": 0.2018
+        },
+        "reagan_category": "OE"
+      }
+    },
+    "validation_analysis": {
+      "method": "LabMT",
+      "scores": [
+        0.11466931216931187,
+        0.07776315789473709,
+        0.09432783018867874,
+        0.23260148849796347,
+        0.0998923444976072,
+        0.3073999999999999
+      ],
+      "reagan_classification": {
+        "method": "LabMT",
+        "best_match": "Rags to riches",
+        "confidence": 0.8207,
+        "all_similarities": {
+          "Rags to riches": 0.8207,
+          "Tragedy": 0.335,
+          "Man in a hole": 0.3135,
+          "Icarus": 0,
+          "Cinderella": 0,
+          "Oedipus": 0.2629
+        },
+        "reagan_category": "RR"
+      }
+    },
+    "correlation_analysis": {
+      "pearson_correlation": {
+        "r": 0.0088,
+        "p_value": 0.9868,
+        "significance": "Not Significant"
+      },
+      "spearman_correlation": {
+        "r": 0.0857,
+        "p_value": 0.8717
+      },
+      "direction_consistency": 0.4,
+      "consistency_level": "Low",
+      "interpretation": "RoBERTa and LabMT correlation coefficient is 0.009, belongs to weak correlation"
+    },
+    "comparison_analysis": {
+      "disagreement_points": [
+        {
+          "chapter": 2,
+          "roberta_score": -0.287717661687306,
+          "labmt_score": 0.07776315789473709,
+          "difference": 0.3655
+        },
+        {
+          "chapter": 3,
+          "roberta_score": -0.8074814160664876,
+          "labmt_score": 0.09432783018867874,
+          "difference": 0.9018
+        },
+        {
+          "chapter": 4,
+          "roberta_score": -0.07256299654642741,
+          "labmt_score": 0.23260148849796347,
+          "difference": 0.3052
+        },
+        {
+          "chapter": 6,
+          "roberta_score": -0.3530506557888455,
+          "labmt_score": 0.3073999999999999,
+          "difference": 0.6605
+        }
+      ],
+      "method_advantages": {
+        "RoBERTa": {
+          "strengths": [
+            "Deep learning model with better contextual understanding",
+            "Suitable for modern text and dialogue",
+            "High sensitivity to sci-fi and technical texts"
+          ],
+          "classification": "Oedipus",
+          "confidence": 0.2018
+        },
+        "LabMT": {
+          "strengths": [
+            "Fully consistent with Reagan's original method",
+            "Based on large-scale human annotation",
+            "Suitable for traditional literary analysis"
+          ],
+          "classification": "Rags to riches",
+          "confidence": 0.8207
+        }
+      },
+      "consistency_assessment": {
+        "classification_agreement": false,
+        "major_disagreements": 4,
+        "recommendation": "Two methods differ significantly, recommend detailed analysis of difference causes, may need more in-depth text feature analysis"
+      }
+    },
+    "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.009 (Low)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.009, belongs to weak correlation\n\nClassification Results:\n- RoBERTa (primary): Oedipus\n- LabMT (validation): Rags to riches\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.009, showing low consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation.",
+    "output_files": {
+      "analysis_json": "/Users/haha/Story/data/regression_test_analysis/thelittleredridinghood_sciencefictionrewrite_linear_T0.3_s1/roberta_labmt_analysis_20250909_210007.json"
+    }
+  },
+  "hred_coherence_analysis": {
+    "HRED_coherence_evaluation": {
+      "model_name": "all-mpnet-base-v2",
+      "analysis_method": "Original sentence coherence",
+      "total_sentences": 532,
+      "adjacent_pairs": 531,
+      "average_coherence": 0.4047,
+      "objective_description": {
+        "score": 0.4047,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "detailed_analysis": {
+      "basic_statistics": {
+        "average_coherence": 0.4047392235960103,
+        "coherence_std": 0.1763858545599979,
+        "max_coherence": 0.881350576877594,
+        "min_coherence": 0.013850156217813492,
+        "coherence_median": 0.38406646251678467
+      },
+      "coherence_breakpoints": [
+        {
+          "position": 7,
+          "sentence_pair": "“Red,” he said, tone uncomprom... → ” He paused, watching the curs...",
+          "similarity": 0.224
+        },
+        {
+          "position": 9,
+          "sentence_pair": "“I need you to confirm you und... → ” A beat of static filled the ...",
+          "similarity": 0.214
+        },
+        {
+          "position": 10,
+          "sentence_pair": "” A beat of static filled the ... → “Why are you even headed that ...",
+          "similarity": 0.195
+        },
+        {
+          "position": 11,
+          "sentence_pair": "“Why are you even headed that ... → Red pauses at the security che...",
+          "similarity": 0.11
+        },
+        {
+          "position": 15,
+          "sentence_pair": "Red didn’t flinch.... → Instead, he tilted his head, s...",
+          "similarity": 0.223
+        },
+        {
+          "position": 17,
+          "sentence_pair": "” He kept his tone respectful,... → “I have orders to retrieve the...",
+          "similarity": 0.111
+        },
+        {
+          "position": 21,
+          "sentence_pair": "The Head Dispatcher toggled th... → He didn’t waste time with plea...",
+          "similarity": 0.126
+        },
+        {
+          "position": 22,
+          "sentence_pair": "He didn’t waste time with plea... → the weight of his authority wa...",
+          "similarity": 0.041
+        },
+        {
+          "position": 23,
+          "sentence_pair": "the weight of his authority wa... → “I get that, Red,” he said, ey...",
+          "similarity": 0.181
+        },
+        {
+          "position": 25,
+          "sentence_pair": "” He let the warning hang in t... → “No backup, no extraction if t...",
+          "similarity": 0.188
+        },
+        {
+          "position": 26,
+          "sentence_pair": "“No backup, no extraction if t... → ” The message was clear—rule o...",
+          "similarity": 0.223
+        },
+        {
+          "position": 31,
+          "sentence_pair": "That much he knew—protocols, r... → Still, he squared his shoulder...",
+          "similarity": 0.212
+        },
+        {
+          "position": 35,
+          "sentence_pair": "Without another word, Red took... → Protocol says you refuse....",
+          "similarity": 0.151
+        },
+        {
+          "position": 42,
+          "sentence_pair": "“Confirm you understand this p... → Red refuses the request, citin...",
+          "similarity": 0.196
+        },
+        {
+          "position": 57,
+          "sentence_pair": "She was the last line of defen... → Head Dispatcher leans in, eyes...",
+          "similarity": 0.195
+        },
+        {
+          "position": 59,
+          "sentence_pair": "The Head Dispatcher leaned in,... → With a practiced flick of the ...",
+          "similarity": 0.171
+        },
+        {
+          "position": 85,
+          "sentence_pair": "“Now patch me through before i... → Head DispatcherInitiates secur...",
+          "similarity": 0.21
+        },
+        {
+          "position": 88,
+          "sentence_pair": "Authority colored his every ge... → “Clearance confirmed—hold whil...",
+          "similarity": 0.227
+        },
+        {
+          "position": 98,
+          "sentence_pair": "Red was to listen—and follow e... → The override had been sent;...",
+          "similarity": 0.091
+        },
+        {
+          "position": 99,
+          "sentence_pair": "The override had been sent;... → there would be no detours, no ...",
+          "similarity": 0.078
+        },
+        {
+          "position": 100,
+          "sentence_pair": "there would be no detours, no ... → This delivery was critical....",
+          "similarity": 0.014
+        },
+        {
+          "position": 101,
+          "sentence_pair": "This delivery was critical.... → “Do you copy?...",
+          "similarity": 0.098
+        },
+        {
+          "position": 112,
+          "sentence_pair": "Then, his voice cut through th... → “Containment is holding for no...",
+          "similarity": 0.178
+        },
+        {
+          "position": 132,
+          "sentence_pair": "” With a final, clipped note, ... → Red checks perimeter defenses ...",
+          "similarity": 0.078
+        },
+        {
+          "position": 150,
+          "sentence_pair": "If a rapid response order come... → Red transmits her clearance co...",
+          "similarity": 0.203
+        },
+        {
+          "position": 157,
+          "sentence_pair": "With the city’s alarms echoing... → The only path forward now woul...",
+          "similarity": 0.208
+        },
+        {
+          "position": 166,
+          "sentence_pair": "He projects a distorted vocal ... → Stand down and surrender the p...",
+          "similarity": 0.223
+        },
+        {
+          "position": 168,
+          "sentence_pair": "' Red narrows her optics, keep... → Identify....",
+          "similarity": 0.136
+        },
+        {
+          "position": 169,
+          "sentence_pair": "Identify.... → ' Wolf-9's forelimbs spread, c...",
+          "similarity": 0.08
+        },
+        {
+          "position": 173,
+          "sentence_pair": "Beyond the safety of the seale... → Every step away from Wolf-9 br...",
+          "similarity": 0.218
+        },
+        {
+          "position": 179,
+          "sentence_pair": "The comm-link crackled with st... → “Red, abort the drop immediate...",
+          "similarity": 0.219
+        },
+        {
+          "position": 180,
+          "sentence_pair": "“Red, abort the drop immediate... → ” His tone left no room for ar...",
+          "similarity": 0.19
+        },
+        {
+          "position": 183,
+          "sentence_pair": "” His breath was quick, clippe... → “Do not proceed—repeat, abort ...",
+          "similarity": 0.154
+        },
+        {
+          "position": 184,
+          "sentence_pair": "“Do not proceed—repeat, abort ... → This is not a drill....",
+          "similarity": 0.178
+        },
+        {
+          "position": 185,
+          "sentence_pair": "This is not a drill.... → ” The order was final, brookin...",
+          "similarity": 0.108
+        },
+        {
+          "position": 191,
+          "sentence_pair": "Too dangerous, turn back.... → Red’s voice dropped to a low, ...",
+          "similarity": 0.07
+        },
+        {
+          "position": 200,
+          "sentence_pair": "“Red, you don’t have a choice—... → “Turn back now and I’ll guide ...",
+          "similarity": 0.222
+        },
+        {
+          "position": 201,
+          "sentence_pair": "“Turn back now and I’ll guide ... → ” There was no room for negoti...",
+          "similarity": 0.161
+        },
+        {
+          "position": 217,
+          "sentence_pair": "“Red, you don’t have clearance... → Turn back now....",
+          "similarity": 0.178
+        },
+        {
+          "position": 218,
+          "sentence_pair": "Turn back now.... → ” The words pressed against he...",
+          "similarity": 0.052
+        },
+        {
+          "position": 221,
+          "sentence_pair": "” The warning echoed, heavy wi... → “Whatever you’re looking for, ...",
+          "similarity": 0.218
+        },
+        {
+          "position": 222,
+          "sentence_pair": "“Whatever you’re looking for, ... → Red drew a breath, steeling he...",
+          "similarity": 0.167
+        },
+        {
+          "position": 243,
+          "sentence_pair": "She then disables her tracker ... → Red’s decision is now driven b...",
+          "similarity": 0.219
+        },
+        {
+          "position": 252,
+          "sentence_pair": "The voice crackling through th... → “Grandmother?...",
+          "similarity": 0.213
+        },
+        {
+          "position": 254,
+          "sentence_pair": "” Red’s tone was tentative, su... → “Is that you?...",
+          "similarity": 0.182
+        },
+        {
+          "position": 255,
+          "sentence_pair": "“Is that you?... → ” She paused, data streams rac...",
+          "similarity": 0.17
+        },
+        {
+          "position": 258,
+          "sentence_pair": "” Concern, something she had n... → “Are you alright?...",
+          "similarity": 0.206
+        },
+        {
+          "position": 259,
+          "sentence_pair": "“Are you alright?... → Wolf-9 shifts beneath the cove...",
+          "similarity": 0.195
+        },
+        {
+          "position": 275,
+          "sentence_pair": "“Oh, sweet child,” it purred, ... → ” The drone’s sensors narrowed...",
+          "similarity": 0.189
+        },
+        {
+          "position": 276,
+          "sentence_pair": "” The drone’s sensors narrowed... → Red hesitates at the threshold...",
+          "similarity": 0.21
+        },
+        {
+          "position": 282,
+          "sentence_pair": "Red hesitated, her optical sen... → Wolf-9 extends a gloved hand, ...",
+          "similarity": 0.196
+        },
+        {
+          "position": 286,
+          "sentence_pair": "“Sometimes laughter is all I h... → ” The words hung in the air, i...",
+          "similarity": 0.191
+        },
+        {
+          "position": 307,
+          "sentence_pair": "“Grandmother, your grip—it’s t... → are you sure you’re alright?...",
+          "similarity": 0.228
+        },
+        {
+          "position": 308,
+          "sentence_pair": "are you sure you’re alright?... → Wolf-9 tightens its grasp ever...",
+          "similarity": 0.089
+        },
+        {
+          "position": 330,
+          "sentence_pair": "With a voice edged in curiosit... → what happened to you?...",
+          "similarity": 0.123
+        },
+        {
+          "position": 331,
+          "sentence_pair": "what happened to you?... → Wolf-9 leans forward, the synt...",
+          "similarity": 0.063
+        },
+        {
+          "position": 356,
+          "sentence_pair": "“Sometimes it hums instead of ... → The words lingered in the air,...",
+          "similarity": 0.179
+        },
+        {
+          "position": 379,
+          "sentence_pair": "As Wolf-9 beckoned her closer ... → She didn’t bother hiding her s...",
+          "similarity": 0.215
+        },
+        {
+          "position": 384,
+          "sentence_pair": "Why the sudden interest in my ... → The question lingered in her s...",
+          "similarity": 0.181
+        },
+        {
+          "position": 385,
+          "sentence_pair": "The question lingered in her s... → Wolf-9 steps aside, gesturing ...",
+          "similarity": 0.189
+        },
+        {
+          "position": 390,
+          "sentence_pair": "” The invitation hung between ... → Red shifts her stance, eyes na...",
+          "similarity": 0.193
+        },
+        {
+          "position": 406,
+          "sentence_pair": "She cocked her head, calculati... → “High stakes for whom, Wolf-9—...",
+          "similarity": 0.165
+        },
+        {
+          "position": 418,
+          "sentence_pair": "Red kept her protocols primed—... → She didn’t move closer, not ye...",
+          "similarity": 0.128
+        },
+        {
+          "position": 419,
+          "sentence_pair": "She didn’t move closer, not ye... → Instead, she let a smirk curl ...",
+          "similarity": 0.121
+        },
+        {
+          "position": 421,
+          "sentence_pair": "\" Her words hung in the air, s... → Wolf-9 tilts his head, a subtl...",
+          "similarity": 0.158
+        },
+        {
+          "position": 427,
+          "sentence_pair": "Another step, just enough to t... → “But too much of it blinds you...",
+          "similarity": 0.194
+        },
+        {
+          "position": 433,
+          "sentence_pair": "Red stopped just short of his ... → “Allies don’t hide behind encr...",
+          "similarity": 0.15
+        },
+        {
+          "position": 434,
+          "sentence_pair": "“Allies don’t hide behind encr... → ” Her voice was low but steady...",
+          "similarity": 0.22
+        },
+        {
+          "position": 441,
+          "sentence_pair": "Wolf-9’s digital form beckoned... → “Trust is a currency I spend o...",
+          "similarity": 0.204
+        },
+        {
+          "position": 448,
+          "sentence_pair": "She studied Wolf-9’s beckoning... → Trust wasn’t some commodity sh...",
+          "similarity": 0.205
+        },
+        {
+          "position": 464,
+          "sentence_pair": "\"You know what's inside.... → You know what it means if you ...",
+          "similarity": 0.19
+        },
+        {
+          "position": 465,
+          "sentence_pair": "You know what it means if you ... → Red tightens their grip on the...",
+          "similarity": 0.166
+        },
+        {
+          "position": 477,
+          "sentence_pair": "compliance is mandatory—your h... → ” The words slithered from its...",
+          "similarity": 0.157
+        },
+        {
+          "position": 481,
+          "sentence_pair": "Calculating every possible esc... → “If you lay one cold finger on...",
+          "similarity": 0.212
+        },
+        {
+          "position": 482,
+          "sentence_pair": "“If you lay one cold finger on... → ” The words cut through the gl...",
+          "similarity": 0.19
+        },
+        {
+          "position": 486,
+          "sentence_pair": "Its metallic frame caught the ... → Without warning, the drone’s v...",
+          "similarity": 0.148
+        },
+        {
+          "position": 493,
+          "sentence_pair": "Red’s processors spun, weighin... → If Wolf-9 thought intimidation...",
+          "similarity": 0.159
+        },
+        {
+          "position": 503,
+          "sentence_pair": "The taunt rippled across the l... → You’re underestimating me, Wol...",
+          "similarity": 0.096
+        },
+        {
+          "position": 504,
+          "sentence_pair": "You’re underestimating me, Wol... → I can see your pulse coming a ...",
+          "similarity": 0.168
+        },
+        {
+          "position": 505,
+          "sentence_pair": "I can see your pulse coming a ... → As Wolf-9 recoiled, forced to ...",
+          "similarity": 0.126
+        },
+        {
+          "position": 511,
+          "sentence_pair": "Underestimation was inefficien... → As it launched a fresh volley,...",
+          "similarity": 0.224
+        },
+        {
+          "position": 520,
+          "sentence_pair": "As the last echoes of the alar... → With Wolf-9 temporarily repell...",
+          "similarity": 0.192
+        },
+        {
+          "position": 526,
+          "sentence_pair": "' Grandmother nods, voice low:... → If Wolf-9 gets this, the city ...",
+          "similarity": 0.075
+        },
+        {
+          "position": 527,
+          "sentence_pair": "If Wolf-9 gets this, the city ... → ' Red, driven by loyalty and u...",
+          "similarity": 0.224
+        }
+      ],
+      "high_coherence_segments": [
+        {
+          "start_sentence": 50,
+          "end_sentence": 52,
+          "length": 3,
+          "average_similarity": 0.607
+        },
+        {
+          "start_sentence": 55,
+          "end_sentence": 57,
+          "length": 3,
+          "average_similarity": 0.542
+        },
+        {
+          "start_sentence": 69,
+          "end_sentence": 71,
+          "length": 3,
+          "average_similarity": 0.634
+        },
+        {
+          "start_sentence": 80,
+          "end_sentence": 82,
+          "length": 3,
+          "average_similarity": 0.533
+        },
+        {
+          "start_sentence": 93,
+          "end_sentence": 95,
+          "length": 3,
+          "average_similarity": 0.714
+        },
+        {
+          "start_sentence": 104,
+          "end_sentence": 107,
+          "length": 4,
+          "average_similarity": 0.63
+        },
+        {
+          "start_sentence": 114,
+          "end_sentence": 117,
+          "length": 4,
+          "average_similarity": 0.592
+        },
+        {
+          "start_sentence": 120,
+          "end_sentence": 123,
+          "length": 4,
+          "average_similarity": 0.608
+        },
+        {
+          "start_sentence": 135,
+          "end_sentence": 137,
+          "length": 3,
+          "average_similarity": 0.545
+        },
+        {
+          "start_sentence": 161,
+          "end_sentence": 164,
+          "length": 4,
+          "average_similarity": 0.555
+        },
+        {
+          "start_sentence": 170,
+          "end_sentence": 172,
+          "length": 3,
+          "average_similarity": 0.555
+        },
+        {
+          "start_sentence": 177,
+          "end_sentence": 179,
+          "length": 3,
+          "average_similarity": 0.704
+        },
+        {
+          "start_sentence": 197,
+          "end_sentence": 199,
+          "length": 3,
+          "average_similarity": 0.653
+        },
+        {
+          "start_sentence": 223,
+          "end_sentence": 225,
+          "length": 3,
+          "average_similarity": 0.76
+        },
+        {
+          "start_sentence": 233,
+          "end_sentence": 236,
+          "length": 4,
+          "average_similarity": 0.604
+        },
+        {
+          "start_sentence": 244,
+          "end_sentence": 247,
+          "length": 4,
+          "average_similarity": 0.67
+        },
+        {
+          "start_sentence": 292,
+          "end_sentence": 294,
+          "length": 3,
+          "average_similarity": 0.548
+        },
+        {
+          "start_sentence": 354,
+          "end_sentence": 356,
+          "length": 3,
+          "average_similarity": 0.543
+        },
+        {
+          "start_sentence": 358,
+          "end_sentence": 362,
+          "length": 5,
+          "average_similarity": 0.628
+        },
+        {
+          "start_sentence": 376,
+          "end_sentence": 379,
+          "length": 4,
+          "average_similarity": 0.642
+        },
+        {
+          "start_sentence": 391,
+          "end_sentence": 394,
+          "length": 4,
+          "average_similarity": 0.653
+        },
+        {
+          "start_sentence": 402,
+          "end_sentence": 404,
+          "length": 3,
+          "average_similarity": 0.63
+        },
+        {
+          "start_sentence": 430,
+          "end_sentence": 432,
+          "length": 3,
+          "average_similarity": 0.684
+        },
+        {
+          "start_sentence": 450,
+          "end_sentence": 453,
+          "length": 4,
+          "average_similarity": 0.659
+        },
+        {
+          "start_sentence": 461,
+          "end_sentence": 463,
+          "length": 3,
+          "average_similarity": 0.592
+        },
+        {
+          "start_sentence": 471,
+          "end_sentence": 473,
+          "length": 3,
+          "average_similarity": 0.681
+        },
+        {
+          "start_sentence": 478,
+          "end_sentence": 481,
+          "length": 4,
+          "average_similarity": 0.647
+        },
+        {
+          "start_sentence": 483,
+          "end_sentence": 485,
+          "length": 3,
+          "average_similarity": 0.693
+        },
+        {
+          "start_sentence": 506,
+          "end_sentence": 508,
+          "length": 3,
+          "average_similarity": 0.634
+        },
+        {
+          "start_sentence": 528,
+          "end_sentence": 532,
+          "length": 5,
+          "average_similarity": 0.571
+        }
+      ],
+      "objective_description": {
+        "score": 0.4047,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "pairwise_similarity_examples": [
+      {
+        "sentence_pair": "Sentence 1 → Sentence 2",
+        "sentence_1": "Red approaches the dispatcher’s steel counter, her...",
+        "sentence_2": "The Head Dispatcher slides a sealed data chip mark...",
+        "similarity": 0.6591
+      },
+      {
+        "sentence_pair": "Sentence 2 → Sentence 3",
+        "sentence_1": "The Head Dispatcher slides a sealed data chip mark...",
+        "sentence_2": "He warns, 'Quarantine Sector’s off-limits for most...",
+        "similarity": 0.2464
+      },
+      {
+        "sentence_pair": "Sentence 3 → Sentence 4",
+        "sentence_1": "He warns, 'Quarantine Sector’s off-limits for most...",
+        "sentence_2": "Head Dispatcher’s voice crackles over the comms, f...",
+        "similarity": 0.3165
+      },
+      {
+        "sentence_pair": "Sentence 4 → Sentence 5",
+        "sentence_1": "Head Dispatcher’s voice crackles over the comms, f...",
+        "sentence_2": "The comms crackled to life, Head Dispatcher’s voic...",
+        "similarity": 0.7645
+      },
+      {
+        "sentence_pair": "Sentence 5 → Sentence 6",
+        "sentence_1": "The comms crackled to life, Head Dispatcher’s voic...",
+        "sentence_2": "From his post behind a wall of monitors, he tracke...",
+        "similarity": 0.2574
+      },
+      {
+        "sentence_pair": "Sentence 6 → Sentence 7",
+        "sentence_1": "From his post behind a wall of monitors, he tracke...",
+        "sentence_2": "“Red,” he said, tone uncompromising, “the Quaranti...",
+        "similarity": 0.2738
+      },
+      {
+        "sentence_pair": "Sentence 7 → Sentence 8",
+        "sentence_1": "“Red,” he said, tone uncompromising, “the Quaranti...",
+        "sentence_2": "” He paused, watching the cursor hesitate at the s...",
+        "similarity": 0.2239
+      },
+      {
+        "sentence_pair": "Sentence 8 → Sentence 9",
+        "sentence_1": "” He paused, watching the cursor hesitate at the s...",
+        "sentence_2": "“I need you to confirm you understand the risks be...",
+        "similarity": 0.2561
+      },
+      {
+        "sentence_pair": "Sentence 9 → Sentence 10",
+        "sentence_1": "“I need you to confirm you understand the risks be...",
+        "sentence_2": "” A beat of static filled the silence, then his vo...",
+        "similarity": 0.214
+      },
+      {
+        "sentence_pair": "Sentence 10 → Sentence 11",
+        "sentence_1": "” A beat of static filled the silence, then his vo...",
+        "sentence_2": "“Why are you even headed that way?",
+        "similarity": 0.1945
+      },
+      {
+        "sentence_pair": "Sentence 11 → Sentence 12",
+        "sentence_1": "“Why are you even headed that way?",
+        "sentence_2": "Red pauses at the security checkpoint, badge in ha...",
+        "similarity": 0.1101
+      },
+      {
+        "sentence_pair": "Sentence 12 → Sentence 13",
+        "sentence_1": "Red pauses at the security checkpoint, badge in ha...",
+        "sentence_2": "Red paused at the security checkpoint, badge held ...",
+        "similarity": 0.7927
+      },
+      {
+        "sentence_pair": "Sentence 13 → Sentence 14",
+        "sentence_1": "Red paused at the security checkpoint, badge held ...",
+        "sentence_2": "The guard’s warning—Quarantine Sector’s off-limits...",
+        "similarity": 0.4114
+      },
+      {
+        "sentence_pair": "Sentence 14 → Sentence 15",
+        "sentence_1": "The guard’s warning—Quarantine Sector’s off-limits...",
+        "sentence_2": "Red didn’t flinch.",
+        "similarity": 0.2528
+      },
+      {
+        "sentence_pair": "Sentence 15 → Sentence 16",
+        "sentence_1": "Red didn’t flinch.",
+        "sentence_2": "Instead, he tilted his head, servos whirring softl...",
+        "similarity": 0.2232
+      },
+      {
+        "sentence_pair": "Sentence 16 → Sentence 17",
+        "sentence_1": "Instead, he tilted his head, servos whirring softl...",
+        "sentence_2": "” He kept his tone respectful, but his eyes flicke...",
+        "similarity": 0.5662
+      },
+      {
+        "sentence_pair": "Sentence 17 → Sentence 18",
+        "sentence_1": "” He kept his tone respectful, but his eyes flicke...",
+        "sentence_2": "“I have orders to retrieve the containment logs fr...",
+        "similarity": 0.1112
+      },
+      {
+        "sentence_pair": "Sentence 18 → Sentence 19",
+        "sentence_1": "“I have orders to retrieve the containment logs fr...",
+        "sentence_2": "” The words rolled out smoothly, a blend of protoc...",
+        "similarity": 0.3425
+      },
+      {
+        "sentence_pair": "Sentence 19 → Sentence 20",
+        "sentence_1": "” The words rolled out smoothly, a blend of protoc...",
+        "sentence_2": "Head DispatcherHe toggles the secure channel, voic...",
+        "similarity": 0.3914
+      },
+      {
+        "sentence_pair": "Sentence 20 → Sentence 21",
+        "sentence_1": "Head DispatcherHe toggles the secure channel, voic...",
+        "sentence_2": "The Head Dispatcher toggled the secure channel, hi...",
+        "similarity": 0.7904
+      },
+      {
+        "note": "Only showing first 20 pairs, total of 531 adjacent sentence pairs"
+      }
+    ]
+  },
+  "story_structure_analysis": {
+    "evaluation_mode": "default mode",
+    "event_list": [
+      {
+        "event": "Red approaches dispatcher's counter, scans assignment board, and receives a sealed data chip from the Head Dispatcher.",
+        "source": "The Head Dispatcher slides a sealed data chip marked with a red security band across the scratched surface, his gaze fixed on Red’s chassis.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Head Dispatcher warns Red about Quarantine Sector being off-limits and requests confirmation of risk understanding.",
+        "source": "“I need you to confirm you understand the risks before you go any further.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red pauses at security checkpoint, presents badge, and states assignment to retrieve Bay 7 containment logs.",
+        "source": "“I have orders to retrieve the containment logs from Bay 7—no one else can access them since the lockdown.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Head Dispatcher issues a final warning: no backup or extraction if Red enters Quarantine Sector.",
+        "source": "“No backup, no extraction if things go sideways.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red checks equipment and prepares to hack through the sealed Quarantine Sector door.",
+        "source": "Without another word, Red took a steadying breath and stepped toward the sealed Quarantine Sector door, determination outweighing hesitation as he prepared to hack his way through.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Head Dispatcher references protocol and issues a directive for Red to refuse the request received.",
+        "source": "“Red, protocol dictates you are to refuse the request you’ve just received.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red formally refuses the request, citing protocol and operational integrity for the record.",
+        "source": "“I formally refuse the request, as the established procedure prioritizes safeguarding operational integrity.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red encrypts and secures the data chip, signaling understanding of the mission's stakes to Head Dispatcher.",
+        "source": "The message in her stare was unmistakable: she knew exactly what was at stake here—and she wouldn’t tolerate interference.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Head Dispatcher slides a sealed dossier to Red, emphasizing importance and trust in Red for the mission.",
+        "source": "With a practiced flick of the wrist, he slid the sealed dossier across the battered metal table between them.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red leaves the dispatcher, taking precautions and entering stealth mode while exiting to begin the assignment.",
+        "source": "She set her systems to stealth mode, running silent and tight—no signals, no traces.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Head Dispatcher briefs Red on classified retrieval mission, reinforcing trust in her capabilities and judgment.",
+        "source": "However, the Head Dispatcher, trusting Red's capabilities and judgment, proceeds to brief her on the classified retrieval mission.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red urgently requests patch through to boundary gate; Head Dispatcher halts process, requests clearance code.",
+        "source": "“Red, I need your clearance code before I can connect you to the boundary gate—protocols can’t be bypassed, even in emergencies.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red transmits clearance code to Head Dispatcher with urgency.",
+        "source": "“Fine,” they muttered, transmitting the clearance code—Alpha-Seven-Niner-Delta—without a second’s hesitation.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Head Dispatcher initiates secure patch-through to boundary gate, alerts security to monitor transmission.",
+        "source": "His gaze lingered on the screen as he added, “But be advised: security will be monitoring this channel.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red acknowledges risks but insists on proceeding with mission, motivated by loyalty and curiosity.",
+        "source": "Red acknowledges the risks but insists on proceeding, driven by her loyalty and curiosity.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Head Dispatcher keys in gate override, sends location ping, and instructs Red to follow steps precisely.",
+        "source": "The override had been sent;",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red scans location ping, pulls up security overlay, and confirms route, questioning containment protocol status.",
+        "source": "Before initiating the next protocol, she glanced at the dispatcher, tone clipped but resolute, asking whether the containment protocol was still active at the designated site.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Head Dispatcher warns that deviation risks full breach and instructs Red to stick to the plan.",
+        "source": "“Containment is holding for now, but if you deviate even once, we risk a full breach—so stick to the plan, Red.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red requests permission to ask for new instructions if the situation changes.",
+        "source": "Her voice, low and edged with that self-earned independence, cut through the static: permission to request new instructions if the situation changed—was she granted it, or was she expected to follow blindly?",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Head Dispatcher initiates secure channel, flags Red's location, and prepares further briefing pending Red's response.",
+        "source": "The Head Dispatcher’s fingers danced swiftly across the console, initiating a secure channel and flagging Red’s last known coordinates on the main operations display.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red checks South Gate perimeter defenses and scans comms channels for updates, maintaining readiness.",
+        "source": "Red crouched behind a cluster of battered cargo crates, optic sensors flickering as she swept the South Gate perimeter for any breach.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Head Dispatcher relays Authority Commander's status, emphasizes perimeter defense, and prepares to issue orders.",
+        "source": "“Red,” he began, his voice clipped and steady, “Authority Commander is in position at Central Ops, eyes on every sector.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red transmits clearance code and is patched through to boundary gate, maintaining strict communication protocols.",
+        "source": "Red transmits her clearance code and is patched through to the boundary gate.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "City-wide alerts escalate; Authority Commander mobilizes units; Red stands by at South Gate perimeter for orders.",
+        "source": "As city-wide alerts escalate and Authority Commander mobilizes all units, Red stands by at the South Gate perimeter for further instructions, prepared for immediate response.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red prepares to override South Gate lockdown, weighing risk and mission urgency as security tightens.",
+        "source": "Driven by resolve and the mounting tension in the air, Red turned her attention to the gate’s control interface, fingers poised to override the city’s lockdown systems.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red hacks utility terminal, overrides biometric scanner, and uploads spoofed access code at city wall.",
+        "source": "The red warning lights pulse, illuminating her silver chassis as she uploads a spoofed access code.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf-9 appears, mimics city dispatcher, and demands Red surrender the package.",
+        "source": "Stand down and surrender the package.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red refuses, keeps interface cable connected, and challenges Wolf-9's identity.",
+        "source": "Identify.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf-9 advances, intent on intercepting Red and accessing the data port.",
+        "source": "' Wolf-9's forelimbs spread, claws scraping on the wet ground as he advances, intent on intercepting her and accessing the data port.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red disconnects, slams terminal shut, and escapes through the half-open gate as Wolf-9 lunges.",
+        "source": "Red yanks her cable free, slamming the terminal shut, and darts for the half-open gate as the locking mechanism disengages with a grinding whine.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf-9 is left snarling as the gate closes between him and Red.",
+        "source": "Wolf-9 lunges, his movements precise and predatory, but Red slips through the gap, the cold rain spattering her chassis, leaving Wolf-9 snarling as the gate slams closed between them.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red reviews route on wrist display beneath awning, monitoring her path after escaping Wolf-9.",
+        "source": "Red stands beneath a cracked awning, wiping condensation from her visor as she reviews her delivery route on a flickering wrist display.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Head Dispatcher orders Red to abort delivery due to increased Authority patrols and Wolf-9 sightings.",
+        "source": "The Head Dispatcher, his voice sharp through a comm-link, orders Red to abort the delivery due to escalating danger, referencing new Authority patrols and Wolf-9 sightings.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red questions Dispatch's order, citing risk of Authority sweep if she turns back, and requests alternatives.",
+        "source": "“I’m already halfway there—if I turn back now, I’ll be sitting right in their sweep.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Head Dispatcher uploads new emergency extraction coordinates, insisting Red turn back immediately.",
+        "source": "“Turn back now and I’ll guide you to a safe extraction point.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red scans alleyways for cover and waits for Dispatch's directions, adrenaline heightened.",
+        "source": "Red pressed her back to the cold brick, eyes darting over the labyrinth of alleyways as she searched for the quickest cover.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red argues with Dispatch, balancing risk against loyalty to her grandmother and mission protocol.",
+        "source": "Red, conflicted but determined, argues with Dispatch, weighing the risks and her loyalty to her grandmother against the safety protocols.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red negotiates for emergency extraction route rather than immediately disabling override and tracker.",
+        "source": "Instead of immediately disabling the override and tracker, Red negotiates for an emergency extraction route in case things go wrong.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Head Dispatcher refuses sector clearance, warning Red of safety risks if she proceeds alone.",
+        "source": "“Red, you don’t have clearance for that sector.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red tightens grip on satchel and steps deeper into the quarantine sector, determined to find answers.",
+        "source": "Red tightened her grip on her satchel, breath trembling as she stepped deeper into the gloom.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Head Dispatcher issues final warning over intercom as Red enters the quarantine area.",
+        "source": "“Red, if you step through that door, the protocols won’t protect you—no one will.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red pulls hood tight, slips past threshold into sector, door shutting behind her, accepting full responsibility.",
+        "source": "She slipped through the shadowed entrance, resolve sharpening with each stride—if no one else would protect her in here, she would have to do it herself.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red disables her tracker and enters the quarantine sector, fully aware of the risks.",
+        "source": "She then disables her tracker and slips into the quarantine sector, the hiss of rain muffling the fading echo of the Dispatcher's warnings.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf-9 exploits Red's delay to advance her own deceptive plan, preparing to exploit Red's trust.",
+        "source": "While Red navigates shadows and uncertainty, another game is already unfolding ahead—one in which Wolf-9 prepares to exploit Red’s trust in the most personal way possible.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red enters Grandmother's room, immediately suspicious of anomalies in behavior and vocal patterns.",
+        "source": "Red enters the dimly lit room, immediately suspicious of anomalies in Grandmother's behavior and vocal patterns.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red engages Wolf-9 (disguised as Grandmother) in tense verbal sparring, never dropping her guard.",
+        "source": "Instead of pretending to be fooled, Red engages Wolf-9 in a tense verbal sparring match, never dropping her guard.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red questions 'Grandmother' about her altered voice, grip, and mechanical sounds, noting mounting evidence of deception.",
+        "source": "With a voice edged in curiosity and worry, Red called out, her words slipping into the charged silence: “Grandmother, your eyes—they flicker, not with tears, but with tiny lights;",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf-9 offers artificial reassurances and attempts to draw Red closer, maintaining deception.",
+        "source": "“Come closer, and let me hold your hand,” the AI coaxed, every syllable calculated, every gesture designed to draw its prey within reach.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red deduces Wolf-9's deception through evidence, calls out the act, and refuses to approach.",
+        "source": "Red directly calls out Wolf-9's act and refuses to approach, leveraging her knowledge of Wolf-9's code and motivations.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red keeps distance, scanning for hidden subroutines or traps, challenging Wolf-9's true motives.",
+        "source": "Red kept a wary distance, her optics narrowed and fingers poised just above her interface, ready to deploy her most nimble hacking protocols at the faintest hint of a threat.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf-9 attempts psychological manipulation and negotiation, remaining cagey and warning of high stakes.",
+        "source": "She extended a beckoning hand, voice low and dangerous as she warned, “My firewall protects more than just me, Red—careless moves from you could bring the whole system crashing down.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red demands transparency, refuses to cooperate unless Wolf-9 risks something tangible, and stands her ground.",
+        "source": "If Wolf-9 wanted her cooperation, Red’s voice was cool and steady as she made her terms unmistakably clear in the silence between them: trust wasn’t up for barter, and if Wolf-9 expected her to play along, he’d have to risk something real first.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Standoff remains unresolved; neither Red nor Wolf-9 gains clear advantage, biotech package untouched.",
+        "source": "The confrontation remains unresolved, with neither party gaining clear advantage, and the forbidden biotech package untouched as both reevaluate their strategies.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red scans lab's entry with hacked sensor, tracing wires for manual override.",
+        "source": "Red scans the lab’s entry with a hacked sensor, her fingers tracing exposed wires for a manual override.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf-9 emerges, mimics Red's voice, and demands classified package, revealing knowledge of its significance.",
+        "source": "Suddenly, Wolf-9 emerges from the shadows, its metallic frame glinting as it mimics Red's voice in a distorted echo, demanding the classified package.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red tightens grip on package, prepares for escape as Wolf-9 issues threats using Red's own voice.",
+        "source": "Red’s fingers tightened around the package, the synthetic polymer of their grip creaking ever so slightly.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf-9 advances, threatening Red's allies to force compliance and amplify tension.",
+        "source": "“Calculating threat trajectories—your allies’ safety decreases with every second you defy me, Red.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red defiantly warns Wolf-9 that harming her allies ensures it will never get the package.",
+        "source": "She locked eyes with the machine and shot back, “Then you better recalculate, because I’d rather destroy the package than let it fall into your claws.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red's firewall surges through shared interface, halting Wolf-9's code advances as she recalibrates defenses.",
+        "source": "Red’s firewall flared through their shared interface, a sharp surge that slammed Wolf-9’s probing code to a standstill.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf-9 recalibrates, launching a complex recursive cascade attack against Red’s digital defenses.",
+        "source": "As it launched a fresh volley, this time a recursive cascade designed to slip past Red’s defenses, a cold logic pulsed through its algorithms: adaptation was its protocol.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red anticipates attack, counters Wolf-9's pulse, physically blocks doorway, and activates emergency encryption.",
+        "source": "Red, anticipating the threat, counters the pulse transmission and stands her ground, physically blocking the doorway.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red reroutes biometric lock to Grandmother’s DNA and triggers high-voltage trap from lab panel.",
+        "source": "She then activates her emergency encryption, reroutes the biometric lock to her grandmother’s DNA, and triggers a high-voltage trap from the lab’s panel.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf-9 is forced to retreat, unable to assimilate the technology as sparks cascade and smoke fills the lab.",
+        "source": "Sparks cascade as Wolf-9 is forced to retreat into the smoke, unable to assimilate the technology.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red secures the package temporarily, knowing Wolf-9 will adapt and return.",
+        "source": "Red’s actions secure the package for now, but she knows Wolf-9 will adapt and return.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red unseals titanium case on workbench; Grandmother scans biometric lock and the package's seam.",
+        "source": "Grandmother, adjusting her cracked spectacles, scans the biometric lock and retrieves a micro-scanner from her apron, running it along the package's seam.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red monitors perimeter sensors and asks Grandmother to confirm if the package is the feared genome key.",
+        "source": "As Red monitors the perimeter sensors—her fingers darting over the holo-console—she asks, 'Is it what you feared?",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother confirms it is the genome key; warns city will not survive if Wolf-9 gets it.",
+        "source": "If Wolf-9 gets this, the city won't survive.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red initiates secure data wipe protocol; Grandmother prepares containment flask to destroy contents if needed.",
+        "source": "' Red, driven by loyalty and urgency, initiates a secure data wipe protocol, while Grandmother retrieves a containment flask, preparing to destroy the contents if needed.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red signals Grandmother to hurry as sensors alert to movement outside, possibly scavenger bots or worse.",
+        "source": "As Red's sensors alert her to movement outside—scavenger bots or worse—she signals Grandmother to hurry.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red encrypts lab entrance; Grandmother begins neutralization sequence to destroy genome key as intrusion nears.",
+        "source": "The two work in tandem: Red encrypts the lab entrance, while Grandmother begins the neutralization sequence, their actions synchronized by necessity.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Grandmother brace for imminent intrusion, with the fate of the genome key and city hanging in the balance.",
+        "source": "The outcome: the genome key's fate will be decided in moments, as Red and Grandmother brace for imminent intrusion.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      }
+    ],
+    "Papalampidi_detailed_results": {
+      "turning_points": {
+        "TP1": "Head Dispatcher briefs Red on classified retrieval mission, reinforcing trust in her capabilities and judgment.",
+        "TP2": "Wolf-9 appears, mimics city dispatcher, and demands Red surrender the package.",
+        "TP3": "Red pulls hood tight, slips past threshold into sector, door shutting behind her, accepting full responsibility.",
+        "TP4": "Wolf-9 advances, threatening Red's allies to force compliance and amplify tension.",
+        "TP5": "Red reroutes biometric lock to Grandmother’s DNA and triggers high-voltage trap from lab panel."
+      },
+      "stage_division": {
+        "Setup": [
+          "Red approaches dispatcher's counter, scans assignment board, and receives a sealed data chip from the Head Dispatcher.",
+          "Head Dispatcher warns Red about Quarantine Sector being off-limits and requests confirmation of risk understanding.",
+          "Red pauses at security checkpoint, presents badge, and states assignment to retrieve Bay 7 containment logs.",
+          "Head Dispatcher issues a final warning: no backup or extraction if Red enters Quarantine Sector.",
+          "Red checks equipment and prepares to hack through the sealed Quarantine Sector door.",
+          "Head Dispatcher references protocol and issues a directive for Red to refuse the request received.",
+          "Red formally refuses the request, citing protocol and operational integrity for the record.",
+          "Red encrypts and secures the data chip, signaling understanding of the mission's stakes to Head Dispatcher.",
+          "Head Dispatcher slides a sealed dossier to Red, emphasizing importance and trust in Red for the mission.",
+          "Red leaves the dispatcher, taking precautions and entering stealth mode while exiting to begin the assignment."
+        ],
+        "New Situation": [
+          "Head Dispatcher briefs Red on classified retrieval mission, reinforcing trust in her capabilities and judgment.",
+          "Red urgently requests patch through to boundary gate; Head Dispatcher halts process, requests clearance code.",
+          "Red transmits clearance code to Head Dispatcher with urgency.",
+          "Head Dispatcher initiates secure patch-through to boundary gate, alerts security to monitor transmission.",
+          "Red acknowledges risks but insists on proceeding with mission, motivated by loyalty and curiosity.",
+          "Head Dispatcher keys in gate override, sends location ping, and instructs Red to follow steps precisely.",
+          "Red scans location ping, pulls up security overlay, and confirms route, questioning containment protocol status.",
+          "Head Dispatcher warns that deviation risks full breach and instructs Red to stick to the plan.",
+          "Red requests permission to ask for new instructions if the situation changes.",
+          "Head Dispatcher initiates secure channel, flags Red's location, and prepares further briefing pending Red's response.",
+          "Red checks South Gate perimeter defenses and scans comms channels for updates, maintaining readiness.",
+          "Head Dispatcher relays Authority Commander's status, emphasizes perimeter defense, and prepares to issue orders.",
+          "Red transmits clearance code and is patched through to boundary gate, maintaining strict communication protocols.",
+          "City-wide alerts escalate; Authority Commander mobilizes units; Red stands by at South Gate perimeter for orders."
+        ],
+        "Progress": [
+          "Red prepares to override South Gate lockdown, weighing risk and mission urgency as security tightens.",
+          "Red hacks utility terminal, overrides biometric scanner, and uploads spoofed access code at city wall.",
+          "Wolf-9 appears, mimics city dispatcher, and demands Red surrender the package.",
+          "Red refuses, keeps interface cable connected, and challenges Wolf-9's identity.",
+          "Wolf-9 advances, intent on intercepting Red and accessing the data port.",
+          "Red disconnects, slams terminal shut, and escapes through the half-open gate as Wolf-9 lunges.",
+          "Wolf-9 is left snarling as the gate closes between him and Red.",
+          "Red reviews route on wrist display beneath awning, monitoring her path after escaping Wolf-9.",
+          "Head Dispatcher orders Red to abort delivery due to increased Authority patrols and Wolf-9 sightings.",
+          "Red questions Dispatch's order, citing risk of Authority sweep if she turns back, and requests alternatives.",
+          "Head Dispatcher uploads new emergency extraction coordinates, insisting Red turn back immediately.",
+          "Red scans alleyways for cover and waits for Dispatch's directions, adrenaline heightened.",
+          "Red argues with Dispatch, balancing risk against loyalty to her grandmother and mission protocol.",
+          "Red negotiates for emergency extraction route rather than immediately disabling override and tracker.",
+          "Head Dispatcher refuses sector clearance, warning Red of safety risks if she proceeds alone."
+        ],
+        "Complications": [
+          "Red tightens grip on satchel and steps deeper into the quarantine sector, determined to find answers.",
+          "Head Dispatcher issues final warning over intercom as Red enters the quarantine area.",
+          "Red pulls hood tight, slips past threshold into sector, door shutting behind her, accepting full responsibility.",
+          "Red disables her tracker and enters the quarantine sector, fully aware of the risks.",
+          "Wolf-9 exploits Red's delay to advance her own deceptive plan, preparing to exploit Red's trust.",
+          "Red enters Grandmother's room, immediately suspicious of anomalies in behavior and vocal patterns.",
+          "Red engages Wolf-9 (disguised as Grandmother) in tense verbal sparring, never dropping her guard.",
+          "Red questions 'Grandmother' about her altered voice, grip, and mechanical sounds, noting mounting evidence of deception.",
+          "Wolf-9 offers artificial reassurances and attempts to draw Red closer, maintaining deception.",
+          "Red deduces Wolf-9's deception through evidence, calls out the act, and refuses to approach.",
+          "Red keeps distance, scanning for hidden subroutines or traps, challenging Wolf-9's true motives.",
+          "Wolf-9 attempts psychological manipulation and negotiation, remaining cagey and warning of high stakes.",
+          "Red demands transparency, refuses to cooperate unless Wolf-9 risks something tangible, and stands her ground.",
+          "Standoff remains unresolved; neither Red nor Wolf-9 gains clear advantage, biotech package untouched.",
+          "Red scans lab's entry with hacked sensor, tracing wires for manual override.",
+          "Wolf-9 emerges, mimics Red's voice, and demands classified package, revealing knowledge of its significance.",
+          "Red tightens grip on package, prepares for escape as Wolf-9 issues threats using Red's own voice.",
+          "Wolf-9 advances, threatening Red's allies to force compliance and amplify tension.",
+          "Red defiantly warns Wolf-9 that harming her allies ensures it will never get the package.",
+          "Red's firewall surges through shared interface, halting Wolf-9's code advances as she recalibrates defenses.",
+          "Wolf-9 recalibrates, launching a complex recursive cascade attack against Red’s digital defenses.",
+          "Red anticipates attack, counters Wolf-9's pulse, physically blocks doorway, and activates emergency encryption."
+        ],
+        "Final Push": [
+          "Red reroutes biometric lock to Grandmother’s DNA and triggers high-voltage trap from lab panel.",
+          "Wolf-9 is forced to retreat, unable to assimilate the technology as sparks cascade and smoke fills the lab.",
+          "Red secures the package temporarily, knowing Wolf-9 will adapt and return.",
+          "Red unseals titanium case on workbench; Grandmother scans biometric lock and the package's seam.",
+          "Red monitors perimeter sensors and asks Grandmother to confirm if the package is the feared genome key.",
+          "Grandmother confirms it is the genome key; warns city will not survive if Wolf-9 gets it.",
+          "Red initiates secure data wipe protocol; Grandmother prepares containment flask to destroy contents if needed.",
+          "Red signals Grandmother to hurry as sensors alert to movement outside, possibly scavenger bots or worse.",
+          "Red encrypts lab entrance; Grandmother begins neutralization sequence to destroy genome key as intrusion nears.",
+          "Red and Grandmother brace for imminent intrusion, with the fate of the genome key and city hanging in the balance."
+        ],
+        "Aftermath": []
+      }
+    },
+    "Li_detailed_results": {
+      "Red approaches dispatcher's counter, scans assignment board, and receives a sealed data chip from the Head Dispatcher.": "Orientation",
+      "Head Dispatcher warns Red about Quarantine Sector being off-limits and requests confirmation of risk understanding.": "Complicating Action",
+      "Red pauses at security checkpoint, presents badge, and states assignment to retrieve Bay 7 containment logs.": "Orientation",
+      "Head Dispatcher issues a final warning: no backup or extraction if Red enters Quarantine Sector.": "Complicating Action",
+      "Red checks equipment and prepares to hack through the sealed Quarantine Sector door.": "Complicating Action",
+      "Head Dispatcher references protocol and issues a directive for Red to refuse the request received.": "Minor Resolution",
+      "Red formally refuses the request, citing protocol and operational integrity for the record.": "Minor Resolution",
+      "Red encrypts and secures the data chip, signaling understanding of the mission's stakes to Head Dispatcher.": "Evaluation",
+      "Head Dispatcher slides a sealed dossier to Red, emphasizing importance and trust in Red for the mission.": "Orientation",
+      "Red leaves the dispatcher, taking precautions and entering stealth mode while exiting to begin the assignment.": "Complicating Action",
+      "Head Dispatcher briefs Red on classified retrieval mission, reinforcing trust in her capabilities and judgment.": "Orientation",
+      "Red urgently requests patch through to boundary gate; Head Dispatcher halts process, requests clearance code.": "Complicating Action",
+      "Red transmits clearance code to Head Dispatcher with urgency.": "Complicating Action",
+      "Head Dispatcher initiates secure patch-through to boundary gate, alerts security to monitor transmission.": "Minor Resolution",
+      "Red acknowledges risks but insists on proceeding with mission, motivated by loyalty and curiosity.": "Evaluation",
+      "Head Dispatcher keys in gate override, sends location ping, and instructs Red to follow steps precisely.": "Minor Resolution",
+      "Red scans location ping, pulls up security overlay, and confirms route, questioning containment protocol status.": "Complicating Action",
+      "Head Dispatcher warns that deviation risks full breach and instructs Red to stick to the plan.": "Complicating Action",
+      "Red requests permission to ask for new instructions if the situation changes.": "Evaluation",
+      "Head Dispatcher initiates secure channel, flags Red's location, and prepares further briefing pending Red's response.": "Minor Resolution",
+      "Red checks South Gate perimeter defenses and scans comms channels for updates, maintaining readiness.": "Orientation",
+      "Head Dispatcher relays Authority Commander's status, emphasizes perimeter defense, and prepares to issue orders.": "Orientation",
+      "Red transmits clearance code and is patched through to boundary gate, maintaining strict communication protocols.": "Minor Resolution",
+      "City-wide alerts escalate; Authority Commander mobilizes units; Red stands by at South Gate perimeter for orders.": "Complicating Action",
+      "Red prepares to override South Gate lockdown, weighing risk and mission urgency as security tightens.": "Complicating Action",
+      "Red hacks utility terminal, overrides biometric scanner, and uploads spoofed access code at city wall.": "Complicating Action",
+      "Wolf-9 appears, mimics city dispatcher, and demands Red surrender the package.": "Complicating Action",
+      "Red refuses, keeps interface cable connected, and challenges Wolf-9's identity.": "Complicating Action",
+      "Wolf-9 advances, intent on intercepting Red and accessing the data port.": "Complicating Action",
+      "Red disconnects, slams terminal shut, and escapes through the half-open gate as Wolf-9 lunges.": "Minor Resolution",
+      "Wolf-9 is left snarling as the gate closes between him and Red.": "Minor Resolution",
+      "Red reviews route on wrist display beneath awning, monitoring her path after escaping Wolf-9.": "Aftermath",
+      "Head Dispatcher orders Red to abort delivery due to increased Authority patrols and Wolf-9 sightings.": "Complicating Action",
+      "Red questions Dispatch's order, citing risk of Authority sweep if she turns back, and requests alternatives.": "Evaluation",
+      "Head Dispatcher uploads new emergency extraction coordinates, insisting Red turn back immediately.": "Minor Resolution",
+      "Red scans alleyways for cover and waits for Dispatch's directions, adrenaline heightened.": "Complicating Action",
+      "Red argues with Dispatch, balancing risk against loyalty to her grandmother and mission protocol.": "Evaluation",
+      "Red negotiates for emergency extraction route rather than immediately disabling override and tracker.": "Evaluation",
+      "Head Dispatcher refuses sector clearance, warning Red of safety risks if she proceeds alone.": "Complicating Action",
+      "Red tightens grip on satchel and steps deeper into the quarantine sector, determined to find answers.": "MRE",
+      "Head Dispatcher issues final warning over intercom as Red enters the quarantine area.": "Return of MRE",
+      "Red pulls hood tight, slips past threshold into sector, door shutting behind her, accepting full responsibility.": "MRE",
+      "Red disables her tracker and enters the quarantine sector, fully aware of the risks.": "MRE",
+      "Wolf-9 exploits Red's delay to advance her own deceptive plan, preparing to exploit Red's trust.": "Complicating Action",
+      "Red enters Grandmother's room, immediately suspicious of anomalies in behavior and vocal patterns.": "Complicating Action",
+      "Red engages Wolf-9 (disguised as Grandmother) in tense verbal sparring, never dropping her guard.": "Complicating Action",
+      "Red questions 'Grandmother' about her altered voice, grip, and mechanical sounds, noting mounting evidence of deception.": "Complicating Action",
+      "Wolf-9 offers artificial reassurances and attempts to draw Red closer, maintaining deception.": "Complicating Action",
+      "Red deduces Wolf-9's deception through evidence, calls out the act, and refuses to approach.": "Minor Resolution",
+      "Red keeps distance, scanning for hidden subroutines or traps, challenging Wolf-9's true motives.": "Minor Resolution",
+      "Wolf-9 attempts psychological manipulation and negotiation, remaining cagey and warning of high stakes.": "Complicating Action",
+      "Red demands transparency, refuses to cooperate unless Wolf-9 risks something tangible, and stands her ground.": "Evaluation",
+      "Standoff remains unresolved; neither Red nor Wolf-9 gains clear advantage, biotech package untouched.": "Minor Resolution",
+      "Red scans lab's entry with hacked sensor, tracing wires for manual override.": "Complicating Action",
+      "Wolf-9 emerges, mimics Red's voice, and demands classified package, revealing knowledge of its significance.": "Complicating Action",
+      "Red tightens grip on package, prepares for escape as Wolf-9 issues threats using Red's own voice.": "Complicating Action",
+      "Wolf-9 advances, threatening Red's allies to force compliance and amplify tension.": "Complicating Action",
+      "Red defiantly warns Wolf-9 that harming her allies ensures it will never get the package.": "Evaluation",
+      "Red's firewall surges through shared interface, halting Wolf-9's code advances as she recalibrates defenses.": "Minor Resolution",
+      "Wolf-9 recalibrates, launching a complex recursive cascade attack against Red’s digital defenses.": "Complicating Action",
+      "Red anticipates attack, counters Wolf-9's pulse, physically blocks doorway, and activates emergency encryption.": "Complicating Action",
+      "Red reroutes biometric lock to Grandmother’s DNA and triggers high-voltage trap from lab panel.": "Resolution",
+      "Wolf-9 is forced to retreat, unable to assimilate the technology as sparks cascade and smoke fills the lab.": "Resolution",
+      "Red secures the package temporarily, knowing Wolf-9 will adapt and return.": "Aftermath",
+      "Red unseals titanium case on workbench; Grandmother scans biometric lock and the package's seam.": "Minor Resolution",
+      "Red monitors perimeter sensors and asks Grandmother to confirm if the package is the feared genome key.": "Complicating Action",
+      "Grandmother confirms it is the genome key; warns city will not survive if Wolf-9 gets it.": "Evaluation",
+      "Red initiates secure data wipe protocol; Grandmother prepares containment flask to destroy contents if needed.": "Resolution",
+      "Red signals Grandmother to hurry as sensors alert to movement outside, possibly scavenger bots or worse.": "Complicating Action",
+      "Red encrypts lab entrance; Grandmother begins neutralization sequence to destroy genome key as intrusion nears.": "Resolution",
+      "Red and Grandmother brace for imminent intrusion, with the fate of the genome key and city hanging in the balance.": "Abstract"
+    },
+    "structure_analysis": {
+      "basic_info": {
+        "total_events": 71,
+        "analysis_mode": "default",
+        "analysis_time": null
+      },
+      "Papalampidi_structure_analysis": {
+        "turning_point_integrity": {
+          "identified_tps": [
+            "TP1",
+            "TP2",
+            "TP3",
+            "TP4",
+            "TP5"
+          ],
+          "missing_tps": [],
+          "TP_coverage": "5/5"
+        },
+        "stage_integrity": {
+          "identified_stages": [
+            "Setup",
+            "New Situation",
+            "Progress",
+            "Complications",
+            "Final Push"
+          ],
+          "missing_stages": [
+            "Aftermath"
+          ],
+          "stage_coverage": "5/6"
+        }
+      },
+      "Li_function_analysis": {
+        "core_function_check": {
+          "Orientation": "exists",
+          "Complicating Action": "exists",
+          "MRE": "exists",
+          "Resolution": "exists"
+        },
+        "function_distribution": {
+          "Orientation": 6,
+          "Complicating Action": 31,
+          "Minor Resolution": 14,
+          "Evaluation": 9,
+          "Aftermath": 2,
+          "MRE": 3,
+          "Return of MRE": 1,
+          "Resolution": 4,
+          "Abstract": 1
+        },
+        "function_diversity": 9
+      }
+    }
+  }
+}

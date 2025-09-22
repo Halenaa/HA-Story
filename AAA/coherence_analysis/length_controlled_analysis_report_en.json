@@ -1,0 +1,169 @@
+{
+  "analysis_info": {
+    "timestamp": "2025-09-13T23:16:57.746066",
+    "data_source": "/Users/haha/Story/metrics_master_clean.csv",
+    "analyzer_version": "1.0",
+    "control_methods": [
+      "raw",
+      "normalized",
+      "residual",
+      "matched",
+      "stratified"
+    ]
+  },
+  "length_coherence_relationship": {
+    "overall": {
+      "correlation": 0.5659569217234857,
+      "p_value": 4.473778898238504e-06,
+      "significant": true,
+      "interpretation": "strong"
+    },
+    "ai_stories": {
+      "correlation": 0.4738319456171061,
+      "p_value": 0.00029558693343549673,
+      "significant": true,
+      "interpretation": "moderate"
+    },
+    "baseline": {
+      "correlation": NaN,
+      "p_value": NaN,
+      "note": "Too few samples for reliable correlation estimation"
+    }
+  },
+  "raw_comparison": {
+    "baseline": {
+      "mean_coherence": 0.2586267912506044,
+      "std_coherence": 0.023641600116019405,
+      "count": 3,
+      "mean_length": 2605.6666666666665
+    },
+    "ai_stories": {
+      "mean_coherence": 0.40435740740740733,
+      "std_coherence": 0.0344752117776513,
+      "count": 54,
+      "mean_length": 9875.888888888889
+    },
+    "comparison": {
+      "absolute_improvement": 0.14573061615680294,
+      "relative_improvement_pct": 56.34784217524965,
+      "t_statistic": 7.19594279858659,
+      "p_value": 1.8009831806435041e-09,
+      "significant": true
+    }
+  },
+  "normalized_analysis": {
+    "log": {
+      "baseline_mean": 0.03299284440461483,
+      "ai_mean": 0.044450134808397476,
+      "improvement": 0.011457290403782648,
+      "improvement_pct": 34.72659181267825,
+      "t_statistic": 5.885484505466649,
+      "p_value": 2.4614407449358506e-07,
+      "significant": true
+    },
+    "sqrt": {
+      "baseline_mean": 0.005144773176802423,
+      "ai_mean": 0.004343386091019716,
+      "improvement": -0.0008013870857827062,
+      "improvement_pct": -15.576723370354376,
+      "t_statistic": -1.5183266174197925,
+      "p_value": 0.13465979435382242,
+      "significant": false
+    }
+  },
+  "residual_analysis": {
+    "regression_model": {
+      "slope": 3.7851843615189776e-06,
+      "intercept": 0.3669753472290861,
+      "r_squared": 0.224516712687292
+    },
+    "baseline_residual_mean": -0.11821148469647967,
+    "ai_residual_mean": 6.270704120568013e-17,
+    "residual_improvement": 0.11821148469647974,
+    "t_statistic": 6.605179067697408,
+    "p_value": 1.6698621523705712e-08,
+    "significant": true
+  },
+  "matched_analysis": {
+    "matched_pairs_count": 3,
+    "length_range": {
+      "min": 2043.0,
+      "max": 3152.0
+    },
+    "baseline_matched_coherence": 0.2586267912506044,
+    "ai_matched_coherence": 0.35159999999999997,
+    "improvement": 0.09297320874939558,
+    "improvement_pct": 35.94879258247701,
+    "paired_t_statistic": 2.917543702109139,
+    "p_value": 0.10014314653162895,
+    "significant": false,
+    "matched_pairs": [
+      {
+        "baseline_id": "simple_baseline_s3_Tbaseline_sbaseline",
+        "baseline_length": 3152.0,
+        "baseline_coherence": 0.2606539082874481,
+        "ai_id": "sciencefiction_linear_T0.9_s1",
+        "ai_length": 3088.0,
+        "ai_coherence": 0.296
+      },
+      {
+        "baseline_id": "simple_baseline_s1_Tbaseline_sbaseline",
+        "baseline_length": 2622.0,
+        "baseline_coherence": 0.2340369023681294,
+        "ai_id": "sciencefiction_nonlinear_T0.7_s2",
+        "ai_length": 2928.0,
+        "ai_coherence": 0.3794
+      },
+      {
+        "baseline_id": "simple_baseline_s2_Tbaseline_sbaseline",
+        "baseline_length": 2043.0,
+        "baseline_coherence": 0.2811895630962356,
+        "ai_id": "sciencefiction_nonlinear_T0.7_s2",
+        "ai_length": 2928.0,
+        "ai_coherence": 0.3794
+      }
+    ]
+  },
+  "stratified_analysis": {
+    "Q1_Short": {
+      "baseline_count": 3,
+      "ai_count": 12,
+      "baseline_coherence": 0.2586267912506044,
+      "ai_coherence": 0.3773166666666667,
+      "improvement": 0.1186898754160623,
+      "improvement_pct": 45.89233576387455,
+      "t_statistic": 4.844631235923156,
+      "p_value": 0.0003202084889903783,
+      "significant": true
+    },
+    "Q2_Medium_Short": {
+      "note": "Missing baseline or AI samples in this stratum"
+    },
+    "Q3_Medium_Long": {
+      "note": "Missing baseline or AI samples in this stratum"
+    },
+    "Q4_Long": {
+      "note": "Missing baseline or AI samples in this stratum"
+    }
+  },
+  "summary": {
+    "key_findings": [
+      "Original analysis shows AI has 56.3% coherence improvement vs baseline",
+      "Text length has 0.566 correlation with coherence",
+      "Length has significant impact on coherence, requiring length control"
+    ],
+    "method_comparison": {
+      "Normalization methods": {
+        "log_normalization": "34.7%",
+        "sqrt_normalization": "-15.6%"
+      },
+      "Residual analysis": "Residual improvement: 0.1182",
+      "Matched sample analysis": "35.9%"
+    },
+    "recommendations": [
+      "Keep original coherence analysis for overall performance assessment",
+      "Use length-controlled analysis for true AI algorithm improvement evaluation",
+      "Prioritize length-controlled results for algorithm evaluation"
+    ]
+  }
+}

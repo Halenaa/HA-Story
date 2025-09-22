@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "total_chapters": 5,
+    "primary_method": "RoBERTa",
+    "validation_method": "LabMT-en-v1",
+    "analysis_timestamp": "2025-09-09T17:44:51.377461"
+  },
+  "chapter_analysis": [
+    {
+      "chapter_num": 5,
+      "title": "The Final Stand in the Cabin",
+      "roberta_score": -0.2494,
+      "labmt_score": 0.13,
+      "content_length": 1839
+    },
+    {
+      "chapter_num": 2,
+      "title": "The Forbidden Shortcut",
+      "roberta_score": 0.1152,
+      "labmt_score": 0.2351,
+      "content_length": 5318
+    },
+    {
+      "chapter_num": 3,
+      "title": "Wolf Arrives at Grandmother’s Cabin",
+      "roberta_score": 0.0819,
+      "labmt_score": 0.1721,
+      "content_length": 2460
+    },
+    {
+      "chapter_num": 1,
+      "title": "Red Receives a Dangerous Mission",
+      "roberta_score": 0.2651,
+      "labmt_score": 0.2308,
+      "content_length": 4785
+    },
+    {
+      "chapter_num": 4,
+      "title": "Red Confronts the Impostor",
+      "roberta_score": 0.3021,
+      "labmt_score": 0.2366,
+      "content_length": 8554
+    }
+  ],
+  "primary_analysis": {
+    "method": "RoBERTa",
+    "scores": [
+      -0.24936692317326864,
+      0.11523272196451823,
+      0.08191364208857219,
+      0.26506406466166177,
+      0.30205283959706625
+    ],
+    "reagan_classification": {
+      "method": "RoBERTa",
+      "best_match": "Rags to riches",
+      "confidence": 0.9137,
+      "all_similarities": {
+        "Rags to riches": 0.9137,
+        "Tragedy": 0,
+        "Man in a hole": 0.7689,
+        "Icarus": 0,
+        "Cinderella": 0.0342,
+        "Oedipus": 0
+      },
+      "reagan_category": "RR"
+    }
+  },
+  "validation_analysis": {
+    "method": "LabMT",
+    "scores": [
+      0.1299999999999999,
+      0.23507425742574273,
+      0.17209375000000016,
+      0.23079268292682809,
+      0.23656574394463736
+    ],
+    "reagan_classification": {
+      "method": "LabMT",
+      "best_match": "Rags to riches",
+      "confidence": 0.7424,
+      "all_similarities": {
+        "Rags to riches": 0.7424,
+        "Tragedy": 0.5231,
+        "Man in a hole": 0.1301,
+        "Icarus": 0,
+        "Cinderella": 0,
+        "Oedipus": 0.2444
+      },
+      "reagan_category": "RR"
+    }
+  },
+  "correlation_analysis": {
+    "pearson_correlation": {
+      "r": 0.9067,
+      "p_value": 0.0337,
+      "significance": "Significant"
+    },
+    "spearman_correlation": {
+      "r": 0.9,
+      "p_value": 0.0374
+    },
+    "direction_consistency": 1.0,
+    "consistency_level": "High",
+    "interpretation": "RoBERTa and LabMT correlation coefficient is 0.907, belongs to strong correlation"
+  },
+  "comparison_analysis": {
+    "disagreement_points": [
+      {
+        "chapter": 1,
+        "roberta_score": -0.24936692317326864,
+        "labmt_score": 0.1299999999999999,
+        "difference": 0.3794
+      }
+    ],
+    "method_advantages": {
+      "RoBERTa": {
+        "strengths": [
+          "Deep learning model with better contextual understanding",
+          "Suitable for modern text and dialogue",
+          "High sensitivity to sci-fi and technical texts"
+        ],
+        "classification": "Rags to riches",
+        "confidence": 0.9137
+      },
+      "LabMT": {
+        "strengths": [
+          "Fully consistent with Reagan's original method",
+          "Based on large-scale human annotation",
+          "Suitable for traditional literary analysis"
+        ],
+        "classification": "Rags to riches",
+        "confidence": 0.7424
+      }
+    },
+    "consistency_assessment": {
+      "classification_agreement": true,
+      "major_disagreements": 1,
+      "recommendation": "Both methods identify as Rags to riches, results are highly consistent, recommend using RoBERTa as the primary analysis result"
+    }
+  },
+  "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.907 (High)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.907, belongs to strong correlation\n\nClassification Results:\n- RoBERTa (primary): Rags to riches\n- LabMT (validation): Rags to riches\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.907, showing high consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation."
+}

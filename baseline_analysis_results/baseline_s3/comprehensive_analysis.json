@@ -1,0 +1,1365 @@
+{
+  "baseline_name": "baseline_s3",
+  "source_file": "/Users/haha/Story/data/normal_baseline.md",
+  "text_features": {
+    "total_words": 3136,
+    "total_sentences": 385,
+    "chapter_count": 24,
+    "char_count": 18159
+  },
+  "diversity": {
+    "individual": {
+      "thelittleredridinghood_baselinerewrite_linear_T1.0_s1": {
+        "distinct_1": 0.4843156843156843,
+        "distinct_2": 0.9296,
+        "distinct_avg": 0.7069578421578422,
+        "distinct_score": 0.7069578421578422,
+        "total_words": 2783,
+        "total_sentences": 386,
+        "genre": "baseline",
+        "structure": "linear",
+        "temperature": 1.0,
+        "seed": 1,
+        "folder_name": "thelittleredridinghood_baselinerewrite_linear_T1.0_s1"
+      }
+    },
+    "group": {
+      "('baseline', 'linear', 1.0)": {
+        "self_bleu_group": 0.0,
+        "self_bleu_group_norm": 0.0,
+        "one_minus_self_bleu": 0.0,
+        "distinct_group": 0.0,
+        "seed_self_bleus": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "seed_distinct_scores": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alpha": 0.7,
+        "diversity_score": 0.0,
+        "genre": "baseline",
+        "structure": "linear",
+        "temperature": 1.0
+      }
+    }
+  },
+  "coherence": {
+    "HRED_coherence_evaluation": {
+      "model_name": "all-mpnet-base-v2",
+      "analysis_method": "Original sentence coherence",
+      "total_sentences": 400,
+      "adjacent_pairs": 399,
+      "average_coherence": 0.2607,
+      "objective_description": {
+        "score": 0.2607,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "detailed_analysis": {
+      "basic_statistics": {
+        "average_coherence": 0.2606539082874481,
+        "coherence_std": 0.12708741915180843,
+        "max_coherence": 0.9516079425811768,
+        "min_coherence": -0.0219111405313015,
+        "coherence_median": 0.25001218914985657
+      },
+      "coherence_breakpoints": [
+        {
+          "position": 5,
+          "sentence_pair": "“Bread, broth, rosemary salve,... → Walk the path....",
+          "similarity": 0.112
+        },
+        {
+          "position": 7,
+          "sentence_pair": "Don’t tarry.... → “If I meet a wolf,” Elinor ask...",
+          "similarity": 0.085
+        },
+        {
+          "position": 11,
+          "sentence_pair": "“Questions are the walking sti... → The forest was louder than it ...",
+          "similarity": 0.127
+        },
+        {
+          "position": 22,
+          "sentence_pair": "“I’m going to my grandmother.... → And I have a question....",
+          "similarity": 0.107
+        },
+        {
+          "position": 32,
+          "sentence_pair": "Trouble is my favorite aunt.... → They walked together because t...",
+          "similarity": 0.089
+        },
+        {
+          "position": 46,
+          "sentence_pair": "Stories turned us into silhoue... → Elinor uncapped the salve and ...",
+          "similarity": 0.059
+        },
+        {
+          "position": 52,
+          "sentence_pair": "I intend to deliver mine.... → Grandmother’s cottage had a ro...",
+          "similarity": -0.022
+        },
+        {
+          "position": 59,
+          "sentence_pair": "“I have chairs and a spoon wit... → Inside, sunlight wrapped the o...",
+          "similarity": 0.101
+        },
+        {
+          "position": 61,
+          "sentence_pair": "Ash paused on the threshold.... → “I was not invited....",
+          "similarity": 0.132
+        },
+        {
+          "position": 67,
+          "sentence_pair": "Elinor set the basket down.... → “You look as if a storm sits o...",
+          "similarity": 0.109
+        },
+        {
+          "position": 70,
+          "sentence_pair": "“But it brought company.... → The wind keeps knocking, and I...",
+          "similarity": 0.1
+        },
+        {
+          "position": 76,
+          "sentence_pair": "Elinor wears it now.... → Do you remember the version of...",
+          "similarity": 0.045
+        },
+        {
+          "position": 78,
+          "sentence_pair": "Please tell me the true one.... → Love, your daughter....",
+          "similarity": 0.06
+        },
+        {
+          "position": 79,
+          "sentence_pair": "Love, your daughter.... → “The hood is older than that e...",
+          "similarity": 0.022
+        },
+        {
+          "position": 91,
+          "sentence_pair": "Because fear pays better than ... → Ash looked at his paws....",
+          "similarity": 0.01
+        },
+        {
+          "position": 94,
+          "sentence_pair": "We avoid it now.... → The door rattled....",
+          "similarity": 0.084
+        },
+        {
+          "position": 96,
+          "sentence_pair": "A man entered with rope, a hat... → “Afternoon,” he said....",
+          "similarity": 0.131
+        },
+        {
+          "position": 111,
+          "sentence_pair": "“But this sentence isn’t over.... → Grandmother thumped the table....",
+          "similarity": 0.086
+        },
+        {
+          "position": 112,
+          "sentence_pair": "Grandmother thumped the table.... → “My house has a rule: we don’t...",
+          "similarity": 0.133
+        },
+        {
+          "position": 121,
+          "sentence_pair": "I have not threatened this chi... → I came to warm myself by a sto...",
+          "similarity": 0.055
+        },
+        {
+          "position": 135,
+          "sentence_pair": "“It glues a hand to a hatchet.... → “Drink,” Grandmother ordered, ...",
+          "similarity": 0.097
+        },
+        {
+          "position": 140,
+          "sentence_pair": "we insisted they meet.... → The hood was a door....",
+          "similarity": 0.104
+        },
+        {
+          "position": 145,
+          "sentence_pair": "“To the possibility that our w... → Elinor drew new paths on her m...",
+          "similarity": 0.122
+        },
+        {
+          "position": 162,
+          "sentence_pair": "“Most of us do,” Grandmother m... → Elinor lifted the salve....",
+          "similarity": 0.115
+        },
+        {
+          "position": 171,
+          "sentence_pair": "We found only a hood and a rum... → Jonas’s face shifted....",
+          "similarity": 0.093
+        },
+        {
+          "position": 182,
+          "sentence_pair": "They found a gap where a lamb ... → “Here,” Ash said....",
+          "similarity": 0.079
+        },
+        {
+          "position": 190,
+          "sentence_pair": "Brindle arrived with three pup... → “Do you swear to keep your you...",
+          "similarity": 0.114
+        },
+        {
+          "position": 206,
+          "sentence_pair": "It remembers.... → A miller said, “Wolves take....",
+          "similarity": 0.065
+        },
+        {
+          "position": 207,
+          "sentence_pair": "A miller said, “Wolves take.... → That’s what they are....",
+          "similarity": 0.118
+        },
+        {
+          "position": 208,
+          "sentence_pair": "That’s what they are.... → “Hunger takes,” Brindle correc...",
+          "similarity": 0.081
+        },
+        {
+          "position": 211,
+          "sentence_pair": "A young hunter said, “Men prot... → That’s what we do....",
+          "similarity": 0.099
+        },
+        {
+          "position": 212,
+          "sentence_pair": "That’s what we do.... → “Fear protects,” Grandmother s...",
+          "similarity": 0.018
+        },
+        {
+          "position": 221,
+          "sentence_pair": "Birches hissed their papery br... → “My sister Mara used to say,” ...",
+          "similarity": 0.066
+        },
+        {
+          "position": 224,
+          "sentence_pair": "Summer slid down the valley li... → The pact held mostly because i...",
+          "similarity": 0.074
+        },
+        {
+          "position": 232,
+          "sentence_pair": "He owes us nothing, but the fo... → “Brindle?...",
+          "similarity": 0.093
+        },
+        {
+          "position": 245,
+          "sentence_pair": "“The second is for the ears.... → Ada stayed to rest while her s...",
+          "similarity": 0.018
+        },
+        {
+          "position": 246,
+          "sentence_pair": "Ada stayed to rest while her s... → Winter braided all paths into ...",
+          "similarity": 0.102
+        },
+        {
+          "position": 252,
+          "sentence_pair": "Lanterns swung.... → Old fears put on new coats....",
+          "similarity": 0.12
+        },
+        {
+          "position": 255,
+          "sentence_pair": "“He chased the fox,” Ash said,... → The Red Table gathered beneath...",
+          "similarity": 0.029
+        },
+        {
+          "position": 256,
+          "sentence_pair": "The Red Table gathered beneath... → A young wolf stepped forward, ...",
+          "similarity": 0.099
+        },
+        {
+          "position": 261,
+          "sentence_pair": "“Then we must write faster,” E... → They reached the ravine....",
+          "similarity": 0.081
+        },
+        {
+          "position": 285,
+          "sentence_pair": "a shepherd dog forgetting gent... → a night fire under a pine....",
+          "similarity": 0.044
+        },
+        {
+          "position": 288,
+          "sentence_pair": "Some made it to seven before s... → Ada added rivers to Elinor’s m...",
+          "similarity": 0.008
+        },
+        {
+          "position": 298,
+          "sentence_pair": "Names have teeth—but some bite... → Jonas nodded....",
+          "similarity": 0.133
+        },
+        {
+          "position": 300,
+          "sentence_pair": "“I’ll try.... → A fox with too many ideas bega...",
+          "similarity": 0.016
+        },
+        {
+          "position": 301,
+          "sentence_pair": "A fox with too many ideas bega... → He learned their dance and ski...",
+          "similarity": 0.082
+        },
+        {
+          "position": 302,
+          "sentence_pair": "He learned their dance and ski... → Elinor and Ash watched from th...",
+          "similarity": 0.078
+        },
+        {
+          "position": 305,
+          "sentence_pair": "“Then let him be studied back,... → She tied small bells into the ...",
+          "similarity": 0.123
+        },
+        {
+          "position": 309,
+          "sentence_pair": "“Pedagogy,” Elinor corrected.... → Grandmother sat at the birch t...",
+          "similarity": 0.056
+        },
+        {
+          "position": 316,
+          "sentence_pair": "She said a man was paid to be ... → Jonas swallowed....",
+          "similarity": 0.103
+        },
+        {
+          "position": 330,
+          "sentence_pair": "Tilda called neighbors;... → Brindle’s pack hauled branches...",
+          "similarity": 0.085
+        },
+        {
+          "position": 334,
+          "sentence_pair": "“It’s called a valley,” Elinor... → A stranger strode into the mar...",
+          "similarity": 0.105
+        },
+        {
+          "position": 345,
+          "sentence_pair": "He followed, and because liste... → “Ash,” Elinor asked, “do you e...",
+          "similarity": 0.107
+        },
+        {
+          "position": 354,
+          "sentence_pair": "Sometimes just the pencil.... → “Be all three,” Grandmother ad...",
+          "similarity": 0.016
+        },
+        {
+          "position": 357,
+          "sentence_pair": "Even trees are ladders for bir... → Elinor wrote back to her mothe...",
+          "similarity": 0.106
+        },
+        {
+          "position": 366,
+          "sentence_pair": "I’ll set a chair for Ash at ou... → “Careful,” Grandmother said, s...",
+          "similarity": 0.132
+        },
+        {
+          "position": 370,
+          "sentence_pair": "They carried the Red Table int... → Lanterns freckled the dusk....",
+          "similarity": 0.077
+        },
+        {
+          "position": 373,
+          "sentence_pair": "soup turned strangers into nei... → Ash stood respectfully at the ...",
+          "similarity": 0.099
+        },
+        {
+          "position": 376,
+          "sentence_pair": "most didn’t.... → A child tugged Elinor’s hood....",
+          "similarity": 0.05
+        }
+      ],
+      "high_coherence_segments": [
+        {
+          "start_sentence": 8,
+          "end_sentence": 11,
+          "length": 4,
+          "average_similarity": 0.486
+        },
+        {
+          "start_sentence": 19,
+          "end_sentence": 21,
+          "length": 3,
+          "average_similarity": 0.372
+        },
+        {
+          "start_sentence": 35,
+          "end_sentence": 37,
+          "length": 3,
+          "average_similarity": 0.393
+        },
+        {
+          "start_sentence": 38,
+          "end_sentence": 41,
+          "length": 4,
+          "average_similarity": 0.371
+        },
+        {
+          "start_sentence": 48,
+          "end_sentence": 50,
+          "length": 3,
+          "average_similarity": 0.416
+        },
+        {
+          "start_sentence": 56,
+          "end_sentence": 59,
+          "length": 4,
+          "average_similarity": 0.417
+        },
+        {
+          "start_sentence": 62,
+          "end_sentence": 64,
+          "length": 3,
+          "average_similarity": 0.459
+        },
+        {
+          "start_sentence": 73,
+          "end_sentence": 76,
+          "length": 4,
+          "average_similarity": 0.355
+        },
+        {
+          "start_sentence": 80,
+          "end_sentence": 82,
+          "length": 3,
+          "average_similarity": 0.397
+        },
+        {
+          "start_sentence": 89,
+          "end_sentence": 91,
+          "length": 3,
+          "average_similarity": 0.339
+        },
+        {
+          "start_sentence": 106,
+          "end_sentence": 108,
+          "length": 3,
+          "average_similarity": 0.392
+        },
+        {
+          "start_sentence": 118,
+          "end_sentence": 120,
+          "length": 3,
+          "average_similarity": 0.401
+        },
+        {
+          "start_sentence": 125,
+          "end_sentence": 127,
+          "length": 3,
+          "average_similarity": 0.366
+        },
+        {
+          "start_sentence": 138,
+          "end_sentence": 140,
+          "length": 3,
+          "average_similarity": 0.352
+        },
+        {
+          "start_sentence": 141,
+          "end_sentence": 143,
+          "length": 3,
+          "average_similarity": 0.452
+        },
+        {
+          "start_sentence": 151,
+          "end_sentence": 153,
+          "length": 3,
+          "average_similarity": 0.402
+        },
+        {
+          "start_sentence": 157,
+          "end_sentence": 160,
+          "length": 4,
+          "average_similarity": 0.425
+        },
+        {
+          "start_sentence": 168,
+          "end_sentence": 170,
+          "length": 3,
+          "average_similarity": 0.422
+        },
+        {
+          "start_sentence": 187,
+          "end_sentence": 189,
+          "length": 3,
+          "average_similarity": 0.396
+        },
+        {
+          "start_sentence": 209,
+          "end_sentence": 211,
+          "length": 3,
+          "average_similarity": 0.373
+        },
+        {
+          "start_sentence": 243,
+          "end_sentence": 245,
+          "length": 3,
+          "average_similarity": 0.487
+        },
+        {
+          "start_sentence": 257,
+          "end_sentence": 259,
+          "length": 3,
+          "average_similarity": 0.393
+        },
+        {
+          "start_sentence": 265,
+          "end_sentence": 268,
+          "length": 4,
+          "average_similarity": 0.616
+        },
+        {
+          "start_sentence": 294,
+          "end_sentence": 296,
+          "length": 3,
+          "average_similarity": 0.457
+        },
+        {
+          "start_sentence": 303,
+          "end_sentence": 305,
+          "length": 3,
+          "average_similarity": 0.448
+        },
+        {
+          "start_sentence": 318,
+          "end_sentence": 320,
+          "length": 3,
+          "average_similarity": 0.367
+        },
+        {
+          "start_sentence": 322,
+          "end_sentence": 325,
+          "length": 4,
+          "average_similarity": 0.402
+        },
+        {
+          "start_sentence": 346,
+          "end_sentence": 348,
+          "length": 3,
+          "average_similarity": 0.486
+        },
+        {
+          "start_sentence": 349,
+          "end_sentence": 352,
+          "length": 4,
+          "average_similarity": 0.406
+        },
+        {
+          "start_sentence": 395,
+          "end_sentence": 397,
+          "length": 3,
+          "average_similarity": 0.332
+        }
+      ],
+      "objective_description": {
+        "score": 0.2607,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "pairwise_similarity_examples": [
+      {
+        "sentence_pair": "Sentence 1 → Sentence 2",
+        "sentence_1": "In a valley where fog braided the pines each dawn,...",
+        "sentence_2": "People called her Little Red, though her real name...",
+        "similarity": 0.2779
+      },
+      {
+        "sentence_pair": "Sentence 2 → Sentence 3",
+        "sentence_1": "People called her Little Red, though her real name...",
+        "sentence_2": "She carried a notebook titled “Unfinished Stories,...",
+        "similarity": 0.25
+      },
+      {
+        "sentence_pair": "Sentence 3 → Sentence 4",
+        "sentence_1": "She carried a notebook titled “Unfinished Stories,...",
+        "sentence_2": "“Run the errand, Elinor,” her mother said, setting...",
+        "similarity": 0.3278
+      },
+      {
+        "sentence_pair": "Sentence 4 → Sentence 5",
+        "sentence_1": "“Run the errand, Elinor,” her mother said, setting...",
+        "sentence_2": "“Bread, broth, rosemary salve, and this letter.",
+        "similarity": 0.3238
+      },
+      {
+        "sentence_pair": "Sentence 5 → Sentence 6",
+        "sentence_1": "“Bread, broth, rosemary salve, and this letter.",
+        "sentence_2": "Walk the path.",
+        "similarity": 0.1117
+      },
+      {
+        "sentence_pair": "Sentence 6 → Sentence 7",
+        "sentence_1": "Walk the path.",
+        "sentence_2": "Don’t tarry.",
+        "similarity": 0.2417
+      },
+      {
+        "sentence_pair": "Sentence 7 → Sentence 8",
+        "sentence_1": "Don’t tarry.",
+        "sentence_2": "“If I meet a wolf,” Elinor asked, fastening the re...",
+        "similarity": 0.085
+      },
+      {
+        "sentence_pair": "Sentence 8 → Sentence 9",
+        "sentence_1": "“If I meet a wolf,” Elinor asked, fastening the re...",
+        "sentence_2": "“If you meet a wolf,” said her mother, “you will k...",
+        "similarity": 0.5189
+      },
+      {
+        "sentence_pair": "Sentence 9 → Sentence 10",
+        "sentence_1": "“If you meet a wolf,” said her mother, “you will k...",
+        "sentence_2": "“Walking is what stories do,” Elinor replied.",
+        "similarity": 0.5158
+      },
+      {
+        "sentence_pair": "Sentence 10 → Sentence 11",
+        "sentence_1": "“Walking is what stories do,” Elinor replied.",
+        "sentence_2": "“Questions are the walking sticks.",
+        "similarity": 0.4236
+      },
+      {
+        "sentence_pair": "Sentence 11 → Sentence 12",
+        "sentence_1": "“Questions are the walking sticks.",
+        "sentence_2": "The forest was louder than it looked.",
+        "similarity": 0.1274
+      },
+      {
+        "sentence_pair": "Sentence 12 → Sentence 13",
+        "sentence_1": "The forest was louder than it looked.",
+        "sentence_2": "Leaves clapped;",
+        "similarity": 0.3845
+      },
+      {
+        "sentence_pair": "Sentence 13 → Sentence 14",
+        "sentence_1": "Leaves clapped;",
+        "sentence_2": "a stream recited a skipping-stone prayer;",
+        "similarity": 0.3053
+      },
+      {
+        "sentence_pair": "Sentence 14 → Sentence 15",
+        "sentence_1": "a stream recited a skipping-stone prayer;",
+        "sentence_2": "crows stitched the sky with threadlike voices.",
+        "similarity": 0.3519
+      },
+      {
+        "sentence_pair": "Sentence 15 → Sentence 16",
+        "sentence_1": "crows stitched the sky with threadlike voices.",
+        "sentence_2": "The path thinned into a suggestion, as paths do wh...",
+        "similarity": 0.1795
+      },
+      {
+        "sentence_pair": "Sentence 16 → Sentence 17",
+        "sentence_1": "The path thinned into a suggestion, as paths do wh...",
+        "sentence_2": "On a stump shaped like a throne sat a wolf with a ...",
+        "similarity": 0.2734
+      },
+      {
+        "sentence_pair": "Sentence 17 → Sentence 18",
+        "sentence_1": "On a stump shaped like a throne sat a wolf with a ...",
+        "sentence_2": "“Good morning,” Elinor said, because courtesies ca...",
+        "similarity": 0.1524
+      },
+      {
+        "sentence_pair": "Sentence 18 → Sentence 19",
+        "sentence_1": "“Good morning,” Elinor said, because courtesies ca...",
+        "sentence_2": "“Are you looking for a story?",
+        "similarity": 0.2412
+      },
+      {
+        "sentence_pair": "Sentence 19 → Sentence 20",
+        "sentence_1": "“Are you looking for a story?",
+        "sentence_2": "“They find me,” the wolf replied.",
+        "similarity": 0.3826
+      },
+      {
+        "sentence_pair": "Sentence 20 → Sentence 21",
+        "sentence_1": "“They find me,” the wolf replied.",
+        "sentence_2": "“Even when I go searching only for water.",
+        "similarity": 0.3606
+      },
+      {
+        "note": "Only showing first 20 pairs, total of 399 adjacent sentence pairs"
+      }
+    ]
+  },
+  "emotion": {
+    "metadata": {
+      "total_chapters": 24,
+      "primary_method": "RoBERTa",
+      "validation_method": "LabMT-en-v1",
+      "analysis_timestamp": "2025-09-13T20:32:58.786449"
+    },
+    "chapter_analysis": [
+      {
+        "chapter_num": 1,
+        "title": "A Red Hood and a Map of Unfinished Stories",
+        "roberta_score": 0.0158,
+        "labmt_score": 0.3544,
+        "content_length": 720
+      },
+      {
+        "chapter_num": 2,
+        "title": "The Forest of Misunderstandings",
+        "roberta_score": 0.0027,
+        "labmt_score": 0.2916,
+        "content_length": 874
+      },
+      {
+        "chapter_num": 3,
+        "title": "Terms and Conditions of Meeting a Wolf",
+        "roberta_score": -0.421,
+        "labmt_score": 0.3064,
+        "content_length": 680
+      },
+      {
+        "chapter_num": 4,
+        "title": "A Cottage with Its Own Weather",
+        "roberta_score": 0.0854,
+        "labmt_score": 0.3156,
+        "content_length": 797
+      },
+      {
+        "chapter_num": 5,
+        "title": "The Letter with Two Mouths",
+        "roberta_score": -0.0412,
+        "labmt_score": 0.3693,
+        "content_length": 1017
+      },
+      {
+        "chapter_num": 6,
+        "title": "A Knock That Didn’t Use Hands",
+        "roberta_score": 0.0839,
+        "labmt_score": 0.2919,
+        "content_length": 567
+      },
+      {
+        "chapter_num": 7,
+        "title": "The Trial of a Dining Table",
+        "roberta_score": 0.0534,
+        "labmt_score": 0.1825,
+        "content_length": 925
+      },
+      {
+        "chapter_num": 8,
+        "title": "The Red Guild Remembers",
+        "roberta_score": 0.3843,
+        "labmt_score": 0.2029,
+        "content_length": 678
+      },
+      {
+        "chapter_num": 9,
+        "title": "The Den Where Teeth Learn Patience",
+        "roberta_score": 0.1719,
+        "labmt_score": 0.2771,
+        "content_length": 945
+      },
+      {
+        "chapter_num": 10,
+        "title": "The Pasture Where Sheep Dream in Numbers",
+        "roberta_score": -0.0011,
+        "labmt_score": 0.3342,
+        "content_length": 810
+      },
+      {
+        "chapter_num": 11,
+        "title": "The Red Table",
+        "roberta_score": 0.4674,
+        "labmt_score": 0.3051,
+        "content_length": 1130
+      },
+      {
+        "chapter_num": 12,
+        "title": "Moving the Middle",
+        "roberta_score": -0.2193,
+        "labmt_score": 0.2546,
+        "content_length": 537
+      },
+      {
+        "chapter_num": 13,
+        "title": "Ada from a Different Story",
+        "roberta_score": -0.9614,
+        "labmt_score": 0.3691,
+        "content_length": 441
+      },
+      {
+        "chapter_num": 14,
+        "title": "Winter’s Test",
+        "roberta_score": -0.6,
+        "labmt_score": 0.2173,
+        "content_length": 1314
+      },
+      {
+        "chapter_num": 15,
+        "title": "A Story Learns New Feet",
+        "roberta_score": -0.2699,
+        "labmt_score": 0.2046,
+        "content_length": 778
+      },
+      {
+        "chapter_num": 16,
+        "title": "The Woodcutter’s Second Name",
+        "roberta_score": -0.8656,
+        "labmt_score": 0.1738,
+        "content_length": 360
+      },
+      {
+        "chapter_num": 17,
+        "title": "The Fox’s Shortcuts",
+        "roberta_score": -0.9883,
+        "labmt_score": 0.2979,
+        "content_length": 388
+      },
+      {
+        "chapter_num": 18,
+        "title": "The Winter of Mara’s Vanishing—Revisited",
+        "roberta_score": -0.9529,
+        "labmt_score": 0.2975,
+        "content_length": 492
+      },
+      {
+        "chapter_num": 19,
+        "title": "The Day the Deer Came Early",
+        "roberta_score": 0.146,
+        "labmt_score": 0.2302,
+        "content_length": 643
+      },
+      {
+        "chapter_num": 20,
+        "title": "The Hunter Who Didn’t Know the Table",
+        "roberta_score": -0.9926,
+        "labmt_score": 0.2156,
+        "content_length": 407
+      },
+      {
+        "chapter_num": 21,
+        "title": "Of Names and Distances",
+        "roberta_score": 0.0782,
+        "labmt_score": 0.3806,
+        "content_length": 518
+      },
+      {
+        "chapter_num": 22,
+        "title": "The Letter Returned",
+        "roberta_score": 0.2816,
+        "labmt_score": 0.4526,
+        "content_length": 583
+      },
+      {
+        "chapter_num": 23,
+        "title": "The Feast and the Quiet",
+        "roberta_score": 0.1823,
+        "labmt_score": 0.3113,
+        "content_length": 565
+      },
+      {
+        "chapter_num": 24,
+        "title": "An Ending That Keeps the Window Open",
+        "roberta_score": -0.0719,
+        "labmt_score": 0.2832,
+        "content_length": 953
+      }
+    ],
+    "primary_analysis": {
+      "method": "RoBERTa",
+      "scores": [
+        0.015797370672225954,
+        0.002679924170176188,
+        -0.4209620714187622,
+        0.08535348176956177,
+        -0.04123425483703613,
+        0.08388286034266154,
+        0.053427084287007647,
+        0.3842990440981729,
+        0.17187622785568238,
+        -0.0011022885640462239,
+        0.467395011583964,
+        -0.2193162441253662,
+        -0.9613583087921143,
+        -0.6000192125638326,
+        -0.26994947411797265,
+        -0.865575909614563,
+        -0.9882844686508179,
+        -0.9529077410697937,
+        0.14595908919970194,
+        -0.992621660232544,
+        0.07819809516270955,
+        0.28160034120082855,
+        0.18225884437561035,
+        -0.07185355027516684
+      ],
+      "reagan_classification": {
+        "method": "RoBERTa",
+        "best_match": "Icarus",
+        "confidence": 0.2732,
+        "all_similarities": {
+          "Rags to riches": 0,
+          "Tragedy": 0,
+          "Man in a hole": 0,
+          "Icarus": 0.2732,
+          "Cinderella": 0,
+          "Oedipus": 0.2181
+        },
+        "reagan_category": "IC"
+      }
+    },
+    "validation_analysis": {
+      "method": "LabMT",
+      "scores": [
+        0.35442307692307695,
+        0.29158536585365824,
+        0.30644230769230796,
+        0.31560606060606067,
+        0.3693023255813952,
+        0.2918750000000001,
+        0.18249999999999966,
+        0.20285714285714285,
+        0.2771022727272727,
+        0.33416666666666717,
+        0.3051470588235292,
+        0.25460000000000016,
+        0.36906250000000007,
+        0.21727678571428588,
+        0.2045588235294118,
+        0.17375000000000007,
+        0.2978571428571428,
+        0.2975000000000001,
+        0.23022727272727272,
+        0.21562499999999973,
+        0.38058823529411767,
+        0.45262499999999983,
+        0.31125,
+        0.28321428571428586
+      ],
+      "reagan_classification": {
+        "method": "LabMT",
+        "best_match": "Rags to riches",
+        "confidence": 0.6882,
+        "all_similarities": {
+          "Rags to riches": 0.6882,
+          "Tragedy": 0.6861,
+          "Man in a hole": 0.0003,
+          "Icarus": 0,
+          "Cinderella": 0,
+          "Oedipus": 0.1446
+        },
+        "reagan_category": "RR"
+      }
+    },
+    "correlation_analysis": {
+      "pearson_correlation": {
+        "r": 0.2131,
+        "p_value": 0.3173,
+        "significance": "Not Significant"
+      },
+      "spearman_correlation": {
+        "r": 0.1748,
+        "p_value": 0.414
+      },
+      "direction_consistency": 0.4783,
+      "consistency_level": "Low",
+      "interpretation": "RoBERTa and LabMT correlation coefficient is 0.213, belongs to weak correlation"
+    },
+    "comparison_analysis": {
+      "disagreement_points": [
+        {
+          "chapter": 1,
+          "roberta_score": 0.015797370672225954,
+          "labmt_score": 0.35442307692307695,
+          "difference": 0.3386
+        },
+        {
+          "chapter": 3,
+          "roberta_score": -0.4209620714187622,
+          "labmt_score": 0.30644230769230796,
+          "difference": 0.7274
+        },
+        {
+          "chapter": 5,
+          "roberta_score": -0.04123425483703613,
+          "labmt_score": 0.3693023255813952,
+          "difference": 0.4105
+        },
+        {
+          "chapter": 10,
+          "roberta_score": -0.0011022885640462239,
+          "labmt_score": 0.33416666666666717,
+          "difference": 0.3353
+        },
+        {
+          "chapter": 12,
+          "roberta_score": -0.2193162441253662,
+          "labmt_score": 0.25460000000000016,
+          "difference": 0.4739
+        },
+        {
+          "chapter": 13,
+          "roberta_score": -0.9613583087921143,
+          "labmt_score": 0.36906250000000007,
+          "difference": 1.3304
+        },
+        {
+          "chapter": 14,
+          "roberta_score": -0.6000192125638326,
+          "labmt_score": 0.21727678571428588,
+          "difference": 0.8173
+        },
+        {
+          "chapter": 15,
+          "roberta_score": -0.26994947411797265,
+          "labmt_score": 0.2045588235294118,
+          "difference": 0.4745
+        },
+        {
+          "chapter": 16,
+          "roberta_score": -0.865575909614563,
+          "labmt_score": 0.17375000000000007,
+          "difference": 1.0393
+        },
+        {
+          "chapter": 17,
+          "roberta_score": -0.9882844686508179,
+          "labmt_score": 0.2978571428571428,
+          "difference": 1.2861
+        },
+        {
+          "chapter": 18,
+          "roberta_score": -0.9529077410697937,
+          "labmt_score": 0.2975000000000001,
+          "difference": 1.2504
+        },
+        {
+          "chapter": 20,
+          "roberta_score": -0.992621660232544,
+          "labmt_score": 0.21562499999999973,
+          "difference": 1.2082
+        },
+        {
+          "chapter": 21,
+          "roberta_score": 0.07819809516270955,
+          "labmt_score": 0.38058823529411767,
+          "difference": 0.3024
+        },
+        {
+          "chapter": 24,
+          "roberta_score": -0.07185355027516684,
+          "labmt_score": 0.28321428571428586,
+          "difference": 0.3551
+        }
+      ],
+      "method_advantages": {
+        "RoBERTa": {
+          "strengths": [
+            "Deep learning model with better contextual understanding",
+            "Suitable for modern text and dialogue",
+            "High sensitivity to sci-fi and technical texts"
+          ],
+          "classification": "Icarus",
+          "confidence": 0.2732
+        },
+        "LabMT": {
+          "strengths": [
+            "Fully consistent with Reagan's original method",
+            "Based on large-scale human annotation",
+            "Suitable for traditional literary analysis"
+          ],
+          "classification": "Rags to riches",
+          "confidence": 0.6882
+        }
+      },
+      "consistency_assessment": {
+        "classification_agreement": false,
+        "major_disagreements": 14,
+        "recommendation": "Two methods differ significantly, recommend detailed analysis of difference causes, may need more in-depth text feature analysis"
+      }
+    },
+    "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.213 (Low)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.213, belongs to weak correlation\n\nClassification Results:\n- RoBERTa (primary): Icarus\n- LabMT (validation): Rags to riches\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.213, showing low consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation.",
+    "output_files": {
+      "analysis_json": "/Users/haha/Story/baseline_analysis_results/baseline_s3/roberta_labmt_analysis_20250913_203258.json"
+    }
+  },
+  "structure": {
+    "evaluation_mode": "default mode",
+    "event_list": [
+      {
+        "event": "Elinor's mother instructs her to deliver bread, broth, salve, and a letter to Grandmother.",
+        "source": "“Bread, broth, rosemary salve, and this letter.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Elinor meets a wolf in the forest and converses about stories and danger.",
+        "source": "On a stump shaped like a throne sat a wolf with a silver-dark coat and eyes like flint that had learned to be rain.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Elinor and the wolf, now named Ash, walk together; Elinor treats Ash's scratch with salve.",
+        "source": "Elinor uncapped the salve and dabbed a scratch on his shoulder.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Elinor and Ash arrive at Grandmother's cottage; Grandmother invites Ash inside despite his hesitation.",
+        "source": "“I just invited you,” Grandmother replied.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Elinor reads her mother's letter to Grandmother; Grandmother explains the Red Guild and the hood's history.",
+        "source": "“It belonged to the Red Guild.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Jonas, a woodcutter, enters the cottage suspecting a wolf; Elinor and Grandmother challenge his intentions.",
+        "source": "“There was tea,” Elinor answered, stepping between him and Ash.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother orders all to speak; Ash and Jonas share their past actions and perspectives.",
+        "source": "“My house has a rule: we don’t end stories until each voice has spoken.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother explains the Guild's practice of telling stories; Elinor proposes a pact between wolves and people.",
+        "source": "“A pact,” she proposed.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "Ash introduces Jonas to the wolf den; Brindle recalls Mara, Grandmother's sister, and Jonas acknowledges his father's role.",
+        "source": "She said her name was Mara.",
+        "chapter": "Chapter 9",
+        "confidence": "medium"
+      },
+      {
+        "event": "Elinor, Ash, Jonas, Tilda, and Brindle mend a gap in the fence; Brindle and Jonas swear mutual promises.",
+        "source": "“I swear to keep myself,” he said.",
+        "chapter": "Chapter 10",
+        "confidence": "high"
+      },
+      {
+        "event": "A table is set in the birch grove for wolves and villagers to speak and draft a pact.",
+        "source": "They set a table in the birch grove—the kind of trees that peel the truth even when it stings.",
+        "chapter": "Chapter 11",
+        "confidence": "high"
+      },
+      {
+        "event": "The pact holds through summer; Ash reports freeing a stag; Grandmother jokes about counting.",
+        "source": "“Because some creatures dream in counting,” Grandmother said, laughing a cough into a sigh.",
+        "chapter": "Chapter 12",
+        "confidence": "high"
+      },
+      {
+        "event": "Ada arrives with apples and rumors; Elinor and Grandmother explain Red Table rules to her.",
+        "source": "“Our rules: tea before judgment, bread before blame, and every truth told twice.",
+        "chapter": "Chapter 13",
+        "confidence": "high"
+      },
+      {
+        "event": "A lamb goes missing in winter; the Red Table gathers to rescue it, and Jonas retrieves the lamb from a ravine.",
+        "source": "Jonas hooked the lamb.",
+        "chapter": "Chapter 14",
+        "confidence": "high"
+      },
+      {
+        "event": "The Red Table's influence spreads; Elinor collects complaints; Jonas teaches patience; Ada adds rivers to the map.",
+        "source": "Ada added rivers to Elinor’s map.",
+        "chapter": "Chapter 15",
+        "confidence": "high"
+      },
+      {
+        "event": "Elinor asks Jonas what he'd be besides a woodcutter; he says, 'a listener,' and agrees to try.",
+        "source": "“A listener,” he said, surprised by the answer.",
+        "chapter": "Chapter 16",
+        "confidence": "high"
+      },
+      {
+        "event": "A fox tests the boundary flags; Elinor ties bells to deter him, and he retreats.",
+        "source": "The fox twitched at the first chime and retreated with dignity.",
+        "chapter": "Chapter 17",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother shares Mara's letters; Brindle and Jonas reflect on Mara's fate and family history.",
+        "source": "“Mara wrote these,” she said.",
+        "chapter": "Chapter 18",
+        "confidence": "high"
+      },
+      {
+        "event": "A landslide threatens the valley; community works together to stabilize the hill with stones and branches.",
+        "source": "When the rain arrived, the hill held.",
+        "chapter": "Chapter 19",
+        "confidence": "high"
+      },
+      {
+        "event": "A stranger arrives with a wolf trap; Elinor and Jonas guide him to the Red Table, and he leaves the trap unused.",
+        "source": "He followed, and because listening is contagious, he did not set the trap that day.",
+        "chapter": "Chapter 20",
+        "confidence": "high"
+      },
+      {
+        "event": "Elinor and Ash discuss identity and roles; Grandmother observes that everyone contains many possibilities.",
+        "source": "“We are rarely one thing.",
+        "chapter": "Chapter 21",
+        "confidence": "high"
+      },
+      {
+        "event": "Elinor writes her mother about changing the story's ending; her mother invites Grandmother and Ash to the village feast.",
+        "source": "Elinor wrote back to her mother and tucked the reply beside the original letter: “We changed the ending by moving the middle.",
+        "chapter": "Chapter 22",
+        "confidence": "high"
+      },
+      {
+        "event": "The Red Table is brought to the square for a feast; Elinor reassures a child about wolves.",
+        "source": "“Is the wolf bad?",
+        "chapter": "Chapter 23",
+        "confidence": "high"
+      },
+      {
+        "event": "Elinor, Grandmother, Ada, Jonas, and Ash share a quiet evening; the narrative closes with reflection on endings and stories.",
+        "source": "The forest braided its paths anew, as forests do when stories stop pretending to be straight.",
+        "chapter": "Chapter 24",
+        "confidence": "high"
+      }
+    ],
+    "Papalampidi_detailed_results": {
+      "turning_points": {
+        "TP1": "Elinor's mother instructs her to deliver bread, broth, salve, and a letter to Grandmother.",
+        "TP2": "Elinor meets a wolf in the forest and converses about stories and danger.",
+        "TP3": "Elinor proposes a pact between wolves and people.",
+        "TP4": "A landslide threatens the valley; community works together to stabilize the hill with stones and branches.",
+        "TP5": "The Red Table is brought to the square for a feast; Elinor reassures a child about wolves."
+      },
+      "stage_division": {
+        "Setup": [
+          "Elinor's mother instructs her to deliver bread, broth, salve, and a letter to Grandmother.",
+          "Elinor meets a wolf in the forest and converses about stories and danger."
+        ],
+        "New Situation": [
+          "Elinor and the wolf, now named Ash, walk together; Elinor treats Ash's scratch with salve."
+        ],
+        "Progress": [
+          "Elinor and Ash arrive at Grandmother's cottage; Grandmother invites Ash inside despite his hesitation.",
+          "Elinor reads her mother's letter to Grandmother; Grandmother explains the Red Guild and the hood's history."
+        ],
+        "Complications": [
+          "Jonas, a woodcutter, enters the cottage suspecting a wolf; Elinor and Grandmother challenge his intentions.",
+          "Grandmother orders all to speak; Ash and Jonas share their past actions and perspectives.",
+          "Grandmother explains the Guild's practice of telling stories; Elinor proposes a pact between wolves and people."
+        ],
+        "Final Push": [
+          "Ash introduces Jonas to the wolf den; Brindle recalls Mara, Grandmother's sister, and Jonas acknowledges his father's role.",
+          "Elinor, Ash, Jonas, Tilda, and Brindle mend a gap in the fence; Brindle and Jonas swear mutual promises.",
+          "A table is set in the birch grove for wolves and villagers to speak and draft a pact.",
+          "The pact holds through summer; Ash reports freeing a stag; Grandmother jokes about counting.",
+          "Ada arrives with apples and rumors; Elinor and Grandmother explain Red Table rules to her.",
+          "A lamb goes missing in winter; the Red Table gathers to rescue it, and Jonas retrieves the lamb from a ravine.",
+          "The Red Table's influence spreads; Elinor collects complaints; Jonas teaches patience; Ada adds rivers to the map.",
+          "Elinor asks Jonas what he'd be besides a woodcutter; he says, 'a listener,' and agrees to try.",
+          "A fox tests the boundary flags; Elinor ties bells to deter him, and he retreats.",
+          "Grandmother shares Mara's letters; Brindle and Jonas reflect on Mara's fate and family history.",
+          "A landslide threatens the valley; community works together to stabilize the hill with stones and branches.",
+          "A stranger arrives with a wolf trap; Elinor and Jonas guide him to the Red Table, and he leaves the trap unused.",
+          "Elinor and Ash discuss identity and roles; Grandmother observes that everyone contains many possibilities.",
+          "Elinor writes her mother about changing the story's ending; her mother invites Grandmother and Ash to the village feast."
+        ],
+        "Aftermath": [
+          "The Red Table is brought to the square for a feast; Elinor reassures a child about wolves.",
+          "Elinor, Grandmother, Ada, Jonas, and Ash share a quiet evening; the narrative closes with reflection on endings and stories."
+        ]
+      }
+    },
+    "Li_detailed_results": {
+      "event1": "Orientation",
+      "event2": "Complicating Action",
+      "event3": "Minor Resolution",
+      "event4": "Complicating Action",
+      "event5": "Orientation",
+      "event6": "Complicating Action",
+      "event7": "Minor Resolution",
+      "event8": "MRE",
+      "event9": "Return of MRE",
+      "event10": "Resolution",
+      "event11": "Resolution",
+      "event12": "Aftermath",
+      "event13": "Orientation",
+      "event14": "Minor Resolution",
+      "event15": "Aftermath",
+      "event16": "Evaluation",
+      "event17": "Minor Resolution",
+      "event18": "Evaluation",
+      "event19": "Aftermath",
+      "event20": "Minor Resolution",
+      "event21": "Evaluation",
+      "event22": "Resolution",
+      "event23": "Aftermath",
+      "event24": "Direct Comment"
+    },
+    "structure_analysis": {
+      "basic_info": {
+        "total_events": 24,
+        "analysis_mode": "default",
+        "analysis_time": null
+      },
+      "Papalampidi_structure_analysis": {
+        "turning_point_integrity": {
+          "identified_tps": [
+            "TP1",
+            "TP2",
+            "TP3",
+            "TP4",
+            "TP5"
+          ],
+          "missing_tps": [],
+          "TP_coverage": "5/5"
+        },
+        "stage_integrity": {
+          "identified_stages": [
+            "Setup",
+            "New Situation",
+            "Progress",
+            "Complications",
+            "Final Push",
+            "Aftermath"
+          ],
+          "missing_stages": [],
+          "stage_coverage": "6/6"
+        }
+      },
+      "Li_function_analysis": {
+        "core_function_check": {
+          "Orientation": "exists",
+          "Complicating Action": "exists",
+          "MRE": "exists",
+          "Resolution": "exists"
+        },
+        "function_distribution": {
+          "Orientation": 3,
+          "Complicating Action": 3,
+          "Minor Resolution": 5,
+          "MRE": 1,
+          "Return of MRE": 1,
+          "Resolution": 3,
+          "Aftermath": 4,
+          "Evaluation": 3,
+          "Direct Comment": 1
+        },
+        "function_diversity": 9
+      }
+    }
+  },
+  "fluency": {
+    "baseline_name": "baseline_s3",
+    "source_file": "/Users/haha/Story/data/normal_baseline.md",
+    "pseudo_ppl": 12.9,
+    "err_per_100w": 0.0,
+    "error_count": 0,
+    "word_count": 3136,
+    "char_count": 19143,
+    "analysis_time": "2025-09-13T20:49:00",
+    "analysis_method": "RoBERTa-large GPU",
+    "device": "GPU A800"
+  }
+}

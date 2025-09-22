@@ -1,0 +1,1066 @@
+{
+  "summary_stats": {
+    "pseudo_ppl": {
+      "count": 56,
+      "mean": 2.3554492461101337,
+      "median": 2.218153779340705,
+      "std": 0.41737574793548443,
+      "min": 1.8575056594936108,
+      "max": 3.936542570919496,
+      "q25": 2.076271851862523,
+      "q75": 2.511234824101241,
+      "iqr": 0.43496297223871805,
+      "mad": 0.18727728410908728,
+      "skewness": 1.6834601186356948,
+      "kurtosis": 3.6190066715529436
+    },
+    "err_per_100w": {
+      "count": 56,
+      "mean": 0.287135287639319,
+      "median": 0.18819025719236776,
+      "std": 0.34755083967978045,
+      "min": 0.0434858236214993,
+      "max": 2.034498009730208,
+      "q25": 0.1216522710995591,
+      "q75": 0.25770678587758233,
+      "iqr": 0.13605451477802322,
+      "mad": 0.06980465170974004,
+      "skewness": 3.3708424042737017,
+      "kurtosis": 12.84813651818791
+    }
+  },
+  "quality_distribution": {
+    "ppl_distribution": {
+      "good": 48,
+      "excellent": 8
+    },
+    "error_distribution": {
+      "high_quality": 30,
+      "medium_quality": 20,
+      "poor_quality": 6
+    },
+    "combined_distribution": {
+      "high": 32,
+      "medium": 24
+    }
+  },
+  "correlations": {
+    "pearson": {
+      "pseudo_ppl": {
+        "err_per_100w": 0.30919767038207635,
+        "err_per_100w_winz": 0.36876329639938316,
+        "err_per_100w_log1p": 0.3386842401212431,
+        "distinct_avg": 0.799526129206383,
+        "diversity_group_score": 0.07956084527332051,
+        "distinct_score": 0.32027623036074737,
+        "avg_coherence": -0.8404094276143886,
+        "coherence_std": -0.4349024097579617,
+        "roberta_avg_score": -0.637481108706954,
+        "emotion_correlation": -0.09313999289148372,
+        "total_words": -0.4217217971549446,
+        "total_sentences": -0.20886658133860858
+      },
+      "err_per_100w": {
+        "pseudo_ppl": 0.30919767038207635,
+        "err_per_100w_winz": 0.9758774307588512,
+        "err_per_100w_log1p": 0.9880947814390533,
+        "distinct_avg": 0.4844826902563787,
+        "diversity_group_score": 0.10743497584440707,
+        "distinct_score": 0.22895764556606707,
+        "avg_coherence": -0.4794549962497695,
+        "coherence_std": -0.07241833908626787,
+        "roberta_avg_score": -0.3853649295948382,
+        "emotion_correlation": -0.32253468834939475,
+        "total_words": -0.2318062214819352,
+        "total_sentences": -0.11433025454541836
+      },
+      "err_per_100w_robust": {
+        "pseudo_ppl": 0.36876329639938316,
+        "err_per_100w": 0.9758774307588512,
+        "err_per_100w_log1p": 0.9905404191374395,
+        "distinct_avg": 0.48922690345961733,
+        "diversity_group_score": 0.1217369237147613,
+        "distinct_score": 0.20034677518766117,
+        "avg_coherence": -0.5051023729810233,
+        "coherence_std": -0.12287823028266948,
+        "roberta_avg_score": -0.40402668266885994,
+        "emotion_correlation": -0.33645532674313783,
+        "total_words": -0.22498890672424246,
+        "total_sentences": -0.08818041839684511
+      }
+    },
+    "spearman": {
+      "pseudo_ppl": {
+        "err_per_100w": 0.3648667122351333,
+        "err_per_100w_winz": 0.3660070407824808,
+        "err_per_100w_log1p": 0.3648667122351333,
+        "distinct_avg": 0.7469583048530417,
+        "diversity_group_score": 0.09240819441978564,
+        "distinct_score": 0.30253308219252023,
+        "avg_coherence": -0.6289112573844137,
+        "coherence_std": 0.026384142173615857,
+        "roberta_avg_score": -0.6898838004101162,
+        "emotion_correlation": -0.03984962406015038,
+        "total_words": -0.38591934381408066,
+        "total_sentences": -0.27438649322429215
+      },
+      "err_per_100w": {
+        "pseudo_ppl": 0.3648667122351333,
+        "err_per_100w_winz": 0.9999658230660027,
+        "err_per_100w_log1p": 1.0,
+        "distinct_avg": 0.34764183185235814,
+        "diversity_group_score": 0.17760236622687425,
+        "distinct_score": 0.06225002742063044,
+        "avg_coherence": -0.3531623293599884,
+        "coherence_std": 0.05543403964456596,
+        "roberta_avg_score": -0.36336295283663705,
+        "emotion_correlation": -0.055228981544771016,
+        "total_words": -0.18427887901572113,
+        "total_sentences": -0.1311436191456912
+      },
+      "err_per_100w_robust": {
+        "pseudo_ppl": 0.3660070407824808,
+        "err_per_100w": 0.9999658230660027,
+        "err_per_100w_log1p": 0.9999658230660027,
+        "distinct_avg": 0.34785877869867304,
+        "diversity_group_score": 0.17806718692838705,
+        "distinct_score": 0.06278203331848954,
+        "avg_coherence": -0.35372126810258026,
+        "coherence_std": 0.05359034830020823,
+        "roberta_avg_score": -0.3628627091220094,
+        "emotion_correlation": -0.054649851359714896,
+        "total_words": -0.1845585974624518,
+        "total_sentences": -0.13152407978424777
+      }
+    },
+    "partial_correlations": {
+      "diversity_coherence_partial": {
+        "spearman": -0.7144224196855776,
+        "pearson": -0.6897335583767943,
+        "spearman_p": 6.285715708611763e-10,
+        "pearson_p": 4.119149509074581e-09
+      }
+    },
+    "full_pearson_matrix": {
+      "pseudo_ppl": {
+        "pseudo_ppl": 1.0,
+        "err_per_100w": 0.30919767038207635,
+        "err_per_100w_winz": 0.36876329639938316,
+        "err_per_100w_log1p": 0.3386842401212431,
+        "distinct_avg": 0.799526129206383,
+        "diversity_group_score": 0.07956084527332051,
+        "distinct_score": 0.32027623036074737,
+        "avg_coherence": -0.8404094276143886,
+        "coherence_std": -0.4349024097579617,
+        "roberta_avg_score": -0.637481108706954,
+        "emotion_correlation": -0.09313999289148372,
+        "total_words": -0.4217217971549446,
+        "total_sentences": -0.20886658133860858
+      },
+      "err_per_100w": {
+        "pseudo_ppl": 0.30919767038207635,
+        "err_per_100w": 1.0,
+        "err_per_100w_winz": 0.9758774307588512,
+        "err_per_100w_log1p": 0.9880947814390533,
+        "distinct_avg": 0.4844826902563787,
+        "diversity_group_score": 0.10743497584440707,
+        "distinct_score": 0.22895764556606707,
+        "avg_coherence": -0.4794549962497695,
+        "coherence_std": -0.07241833908626787,
+        "roberta_avg_score": -0.3853649295948382,
+        "emotion_correlation": -0.32253468834939475,
+        "total_words": -0.2318062214819352,
+        "total_sentences": -0.11433025454541836
+      },
+      "err_per_100w_winz": {
+        "pseudo_ppl": 0.36876329639938316,
+        "err_per_100w": 0.9758774307588512,
+        "err_per_100w_winz": 1.0,
+        "err_per_100w_log1p": 0.9905404191374395,
+        "distinct_avg": 0.48922690345961733,
+        "diversity_group_score": 0.1217369237147613,
+        "distinct_score": 0.20034677518766117,
+        "avg_coherence": -0.5051023729810233,
+        "coherence_std": -0.12287823028266948,
+        "roberta_avg_score": -0.40402668266885994,
+        "emotion_correlation": -0.33645532674313783,
+        "total_words": -0.22498890672424246,
+        "total_sentences": -0.08818041839684511
+      },
+      "err_per_100w_log1p": {
+        "pseudo_ppl": 0.3386842401212431,
+        "err_per_100w": 0.9880947814390533,
+        "err_per_100w_winz": 0.9905404191374395,
+        "err_per_100w_log1p": 1.0,
+        "distinct_avg": 0.4828650232700389,
+        "diversity_group_score": 0.12040461339671572,
+        "distinct_score": 0.1933635533064429,
+        "avg_coherence": -0.49759474074397764,
+        "coherence_std": -0.07399144313875272,
+        "roberta_avg_score": -0.41282250504918333,
+        "emotion_correlation": -0.3134687472289448,
+        "total_words": -0.22919021124553565,
+        "total_sentences": -0.10310149503501288
+      },
+      "distinct_avg": {
+        "pseudo_ppl": 0.799526129206383,
+        "err_per_100w": 0.4844826902563787,
+        "err_per_100w_winz": 0.48922690345961733,
+        "err_per_100w_log1p": 0.4828650232700389,
+        "distinct_avg": 1.0,
+        "diversity_group_score": 0.28082623410624963,
+        "distinct_score": 0.6543164439165848,
+        "avg_coherence": -0.8446865962918724,
+        "coherence_std": -0.25090115390974993,
+        "roberta_avg_score": -0.5907218064980785,
+        "emotion_correlation": -0.05662982941722047,
+        "total_words": -0.6895149397840701,
+        "total_sentences": -0.5291674756094402
+      },
+      "diversity_group_score": {
+        "pseudo_ppl": 0.07956084527332051,
+        "err_per_100w": 0.10743497584440707,
+        "err_per_100w_winz": 0.1217369237147613,
+        "err_per_100w_log1p": 0.12040461339671572,
+        "distinct_avg": 0.28082623410624963,
+        "diversity_group_score": 1.0,
+        "distinct_score": 0.2803899011159174,
+        "avg_coherence": -0.1676989511691499,
+        "coherence_std": 0.16025248925831292,
+        "roberta_avg_score": 0.1146329308808382,
+        "emotion_correlation": -0.051521945735685706,
+        "total_words": -0.06501619479811632,
+        "total_sentences": -0.06048223010142142
+      },
+      "distinct_score": {
+        "pseudo_ppl": 0.32027623036074737,
+        "err_per_100w": 0.22895764556606707,
+        "err_per_100w_winz": 0.20034677518766117,
+        "err_per_100w_log1p": 0.1933635533064429,
+        "distinct_avg": 0.6543164439165848,
+        "diversity_group_score": 0.2803899011159174,
+        "distinct_score": 1.0,
+        "avg_coherence": -0.310922715830325,
+        "coherence_std": -0.13954921984583454,
+        "roberta_avg_score": 0.0019180774369282618,
+        "emotion_correlation": 0.16590085764594664,
+        "total_words": -0.5757078387001874,
+        "total_sentences": -0.5121249497295347
+      },
+      "avg_coherence": {
+        "pseudo_ppl": -0.8404094276143886,
+        "err_per_100w": -0.4794549962497695,
+        "err_per_100w_winz": -0.5051023729810233,
+        "err_per_100w_log1p": -0.49759474074397764,
+        "distinct_avg": -0.8446865962918724,
+        "diversity_group_score": -0.1676989511691499,
+        "distinct_score": -0.310922715830325,
+        "avg_coherence": 1.0,
+        "coherence_std": 0.4098676092282937,
+        "roberta_avg_score": 0.6398759124341679,
+        "emotion_correlation": 0.15548418709220113,
+        "total_words": 0.4838265164033908,
+        "total_sentences": 0.2648415034243837
+      },
+      "coherence_std": {
+        "pseudo_ppl": -0.4349024097579617,
+        "err_per_100w": -0.07241833908626787,
+        "err_per_100w_winz": -0.12287823028266948,
+        "err_per_100w_log1p": -0.07399144313875272,
+        "distinct_avg": -0.25090115390974993,
+        "diversity_group_score": 0.16025248925831292,
+        "distinct_score": -0.13954921984583454,
+        "avg_coherence": 0.4098676092282937,
+        "coherence_std": 1.0,
+        "roberta_avg_score": 0.062233214584558924,
+        "emotion_correlation": 0.01799495208523183,
+        "total_words": 0.06205311580086444,
+        "total_sentences": -0.11871733893999577
+      },
+      "roberta_avg_score": {
+        "pseudo_ppl": -0.637481108706954,
+        "err_per_100w": -0.3853649295948382,
+        "err_per_100w_winz": -0.40402668266885994,
+        "err_per_100w_log1p": -0.41282250504918333,
+        "distinct_avg": -0.5907218064980785,
+        "diversity_group_score": 0.1146329308808382,
+        "distinct_score": 0.0019180774369282618,
+        "avg_coherence": 0.6398759124341679,
+        "coherence_std": 0.062233214584558924,
+        "roberta_avg_score": 1.0,
+        "emotion_correlation": 0.14286713350032998,
+        "total_words": 0.5113753580088727,
+        "total_sentences": 0.40822490192105804
+      },
+      "emotion_correlation": {
+        "pseudo_ppl": -0.09313999289148372,
+        "err_per_100w": -0.32253468834939475,
+        "err_per_100w_winz": -0.33645532674313783,
+        "err_per_100w_log1p": -0.3134687472289448,
+        "distinct_avg": -0.05662982941722047,
+        "diversity_group_score": -0.051521945735685706,
+        "distinct_score": 0.16590085764594664,
+        "avg_coherence": 0.15548418709220113,
+        "coherence_std": 0.01799495208523183,
+        "roberta_avg_score": 0.14286713350032998,
+        "emotion_correlation": 1.0,
+        "total_words": -0.052278364434426336,
+        "total_sentences": -0.09062151659285284
+      },
+      "total_words": {
+        "pseudo_ppl": -0.4217217971549446,
+        "err_per_100w": -0.2318062214819352,
+        "err_per_100w_winz": -0.22498890672424246,
+        "err_per_100w_log1p": -0.22919021124553565,
+        "distinct_avg": -0.6895149397840701,
+        "diversity_group_score": -0.06501619479811632,
+        "distinct_score": -0.5757078387001874,
+        "avg_coherence": 0.4838265164033908,
+        "coherence_std": 0.06205311580086444,
+        "roberta_avg_score": 0.5113753580088727,
+        "emotion_correlation": -0.052278364434426336,
+        "total_words": 1.0,
+        "total_sentences": 0.9523936619412198
+      },
+      "total_sentences": {
+        "pseudo_ppl": -0.20886658133860858,
+        "err_per_100w": -0.11433025454541836,
+        "err_per_100w_winz": -0.08818041839684511,
+        "err_per_100w_log1p": -0.10310149503501288,
+        "distinct_avg": -0.5291674756094402,
+        "diversity_group_score": -0.06048223010142142,
+        "distinct_score": -0.5121249497295347,
+        "avg_coherence": 0.2648415034243837,
+        "coherence_std": -0.11871733893999577,
+        "roberta_avg_score": 0.40822490192105804,
+        "emotion_correlation": -0.09062151659285284,
+        "total_words": 0.9523936619412198,
+        "total_sentences": 1.0
+      }
+    },
+    "full_spearman_matrix": {
+      "pseudo_ppl": {
+        "pseudo_ppl": 1.0,
+        "err_per_100w": 0.3648667122351333,
+        "err_per_100w_winz": 0.3660070407824808,
+        "err_per_100w_log1p": 0.3648667122351333,
+        "distinct_avg": 0.7469583048530417,
+        "diversity_group_score": 0.09240819441978564,
+        "distinct_score": 0.30253308219252023,
+        "avg_coherence": -0.6289112573844137,
+        "coherence_std": 0.026384142173615857,
+        "roberta_avg_score": -0.6898838004101162,
+        "emotion_correlation": -0.03984962406015038,
+        "total_words": -0.38591934381408066,
+        "total_sentences": -0.27438649322429215
+      },
+      "err_per_100w": {
+        "pseudo_ppl": 0.3648667122351333,
+        "err_per_100w": 1.0,
+        "err_per_100w_winz": 0.9999658230660027,
+        "err_per_100w_log1p": 1.0,
+        "distinct_avg": 0.34764183185235814,
+        "diversity_group_score": 0.17760236622687425,
+        "distinct_score": 0.06225002742063044,
+        "avg_coherence": -0.3531623293599884,
+        "coherence_std": 0.05543403964456596,
+        "roberta_avg_score": -0.36336295283663705,
+        "emotion_correlation": -0.055228981544771016,
+        "total_words": -0.18427887901572113,
+        "total_sentences": -0.1311436191456912
+      },
+      "err_per_100w_winz": {
+        "pseudo_ppl": 0.3660070407824808,
+        "err_per_100w": 0.9999658230660027,
+        "err_per_100w_winz": 1.0,
+        "err_per_100w_log1p": 0.9999658230660027,
+        "distinct_avg": 0.34785877869867304,
+        "diversity_group_score": 0.17806718692838705,
+        "distinct_score": 0.06278203331848954,
+        "avg_coherence": -0.35372126810258026,
+        "coherence_std": 0.05359034830020823,
+        "roberta_avg_score": -0.3628627091220094,
+        "emotion_correlation": -0.054649851359714896,
+        "total_words": -0.1845585974624518,
+        "total_sentences": -0.13152407978424777
+      },
+      "err_per_100w_log1p": {
+        "pseudo_ppl": 0.3648667122351333,
+        "err_per_100w": 1.0,
+        "err_per_100w_winz": 0.9999658230660027,
+        "err_per_100w_log1p": 1.0,
+        "distinct_avg": 0.34764183185235814,
+        "diversity_group_score": 0.17760236622687425,
+        "distinct_score": 0.06225002742063044,
+        "avg_coherence": -0.3531623293599884,
+        "coherence_std": 0.05543403964456596,
+        "roberta_avg_score": -0.36336295283663705,
+        "emotion_correlation": -0.055228981544771016,
+        "total_words": -0.18427887901572113,
+        "total_sentences": -0.1311436191456912
+      },
+      "distinct_avg": {
+        "pseudo_ppl": 0.7469583048530417,
+        "err_per_100w": 0.34764183185235814,
+        "err_per_100w_winz": 0.34785877869867304,
+        "err_per_100w_log1p": 0.34764183185235814,
+        "distinct_avg": 1.0,
+        "diversity_group_score": 0.2689799859877032,
+        "distinct_score": 0.6816395094823563,
+        "avg_coherence": -0.7319924134232916,
+        "coherence_std": 0.013602187286397813,
+        "roberta_avg_score": -0.6,
+        "emotion_correlation": 0.051811346548188655,
+        "total_words": -0.702323991797676,
+        "total_sentences": -0.590163375498736
+      },
+      "diversity_group_score": {
+        "pseudo_ppl": 0.09240819441978564,
+        "err_per_100w": 0.17760236622687425,
+        "err_per_100w_winz": 0.17806718692838705,
+        "err_per_100w_log1p": 0.17760236622687425,
+        "distinct_avg": 0.2689799859877032,
+        "diversity_group_score": 1.0,
+        "distinct_score": 0.25917179101736243,
+        "avg_coherence": -0.194675233225017,
+        "coherence_std": 0.1904272953161134,
+        "roberta_avg_score": 0.12355445077936643,
+        "emotion_correlation": 0.02026796829281544,
+        "total_words": -0.08988901192011367,
+        "total_sentences": -0.07787009329000681
+      },
+      "distinct_score": {
+        "pseudo_ppl": 0.30253308219252023,
+        "err_per_100w": 0.06225002742063044,
+        "err_per_100w_winz": 0.06278203331848954,
+        "err_per_100w_log1p": 0.06225002742063044,
+        "distinct_avg": 0.6816395094823563,
+        "diversity_group_score": 0.25917179101736243,
+        "distinct_score": 1.0,
+        "avg_coherence": -0.23379998020239554,
+        "coherence_std": 0.027757837597777,
+        "roberta_avg_score": -0.01681878829816045,
+        "emotion_correlation": 0.19878303649146953,
+        "total_words": -0.5905377395339872,
+        "total_sentences": -0.5469385741932393
+      },
+      "avg_coherence": {
+        "pseudo_ppl": -0.6289112573844137,
+        "err_per_100w": -0.3531623293599884,
+        "err_per_100w_winz": -0.35372126810258026,
+        "err_per_100w_log1p": -0.3531623293599884,
+        "distinct_avg": -0.7319924134232916,
+        "diversity_group_score": -0.194675233225017,
+        "distinct_score": -0.23379998020239554,
+        "avg_coherence": 1.0,
+        "coherence_std": 0.08353128161771138,
+        "roberta_avg_score": 0.640839415029496,
+        "emotion_correlation": 0.06377633858373545,
+        "total_words": 0.522822428357664,
+        "total_sentences": 0.3880334285255548
+      },
+      "coherence_std": {
+        "pseudo_ppl": 0.026384142173615857,
+        "err_per_100w": 0.05543403964456596,
+        "err_per_100w_winz": 0.05359034830020823,
+        "err_per_100w_log1p": 0.05543403964456596,
+        "distinct_avg": 0.013602187286397813,
+        "diversity_group_score": 0.1904272953161134,
+        "distinct_score": 0.027757837597777,
+        "avg_coherence": 0.08353128161771138,
+        "coherence_std": 1.0,
+        "roberta_avg_score": -0.026384142173615857,
+        "emotion_correlation": -0.008475734791524265,
+        "total_words": -0.010457963089542038,
+        "total_sentences": -0.09043680382056266
+      },
+      "roberta_avg_score": {
+        "pseudo_ppl": -0.6898838004101162,
+        "err_per_100w": -0.36336295283663705,
+        "err_per_100w_winz": -0.3628627091220094,
+        "err_per_100w_log1p": -0.36336295283663705,
+        "distinct_avg": -0.6,
+        "diversity_group_score": 0.12355445077936643,
+        "distinct_score": -0.01681878829816045,
+        "avg_coherence": 0.640839415029496,
+        "coherence_std": -0.026384142173615857,
+        "roberta_avg_score": 1.0,
+        "emotion_correlation": 0.16725905673274094,
+        "total_words": 0.49364319890635683,
+        "total_sentences": 0.39797662270847756
+      },
+      "emotion_correlation": {
+        "pseudo_ppl": -0.03984962406015038,
+        "err_per_100w": -0.055228981544771016,
+        "err_per_100w_winz": -0.054649851359714896,
+        "err_per_100w_log1p": -0.055228981544771016,
+        "distinct_avg": 0.051811346548188655,
+        "diversity_group_score": 0.02026796829281544,
+        "distinct_score": 0.19878303649146953,
+        "avg_coherence": 0.06377633858373545,
+        "coherence_std": -0.008475734791524265,
+        "roberta_avg_score": 0.16725905673274094,
+        "emotion_correlation": 1.0,
+        "total_words": -0.11032125768967874,
+        "total_sentences": -0.15045457687759517
+      },
+      "total_words": {
+        "pseudo_ppl": -0.38591934381408066,
+        "err_per_100w": -0.18427887901572113,
+        "err_per_100w_winz": -0.1845585974624518,
+        "err_per_100w_log1p": -0.18427887901572113,
+        "distinct_avg": -0.702323991797676,
+        "diversity_group_score": -0.08988901192011367,
+        "distinct_score": -0.5905377395339872,
+        "avg_coherence": 0.522822428357664,
+        "coherence_std": -0.010457963089542038,
+        "roberta_avg_score": 0.49364319890635683,
+        "emotion_correlation": -0.11032125768967874,
+        "total_words": 1.0,
+        "total_sentences": 0.9607286918337852
+      },
+      "total_sentences": {
+        "pseudo_ppl": -0.27438649322429215,
+        "err_per_100w": -0.1311436191456912,
+        "err_per_100w_winz": -0.13152407978424777,
+        "err_per_100w_log1p": -0.1311436191456912,
+        "distinct_avg": -0.590163375498736,
+        "diversity_group_score": -0.07787009329000681,
+        "distinct_score": -0.5469385741932393,
+        "avg_coherence": 0.3880334285255548,
+        "coherence_std": -0.09043680382056266,
+        "roberta_avg_score": 0.39797662270847756,
+        "emotion_correlation": -0.15045457687759517,
+        "total_words": 0.9607286918337852,
+        "total_sentences": 1.0
+      }
+    }
+  },
+  "group_analysis": {
+    "by_genre": {
+      "sciencefiction": {
+        "pseudo_ppl": {
+          "mean": 2.660559488564724,
+          "median": 2.680142320631428,
+          "std": 0.2441473265023702,
+          "count": 18
+        },
+        "err_per_100w": {
+          "mean": 0.48665280370841785,
+          "median": 0.250547388901346,
+          "std": 0.5086072022315049,
+          "count": 18
+        }
+      },
+      "horror": {
+        "pseudo_ppl": {
+          "mean": 2.138134037317343,
+          "median": 2.1276148328857376,
+          "std": 0.14034228310189448,
+          "count": 18
+        },
+        "err_per_100w": {
+          "mean": 0.16216502644997316,
+          "median": 0.15528499835012424,
+          "std": 0.06228725617631927,
+          "count": 18
+        }
+      },
+      "romantic": {
+        "pseudo_ppl": {
+          "mean": 2.108624989322576,
+          "median": 2.1132514286275983,
+          "std": 0.1660474598987753,
+          "count": 18
+        },
+        "err_per_100w": {
+          "mean": 0.17433051456579293,
+          "median": 0.1458861395486989,
+          "std": 0.09107649096370261,
+          "count": 18
+        }
+      },
+      "baseline": {
+        "pseudo_ppl": {
+          "mean": 3.78671225424195,
+          "median": 3.78671225424195,
+          "std": 0.2118920659000411,
+          "count": 2
+        },
+        "err_per_100w": {
+          "mean": 0.6314529513832756,
+          "median": 0.6314529513832756,
+          "std": 0.7584077832046378,
+          "count": 2
+        }
+      }
+    },
+    "by_structure": {
+      "nonlinear": {
+        "pseudo_ppl": {
+          "mean": 2.272959268009394,
+          "median": 2.179942056886072,
+          "std": 0.28392066746644884,
+          "count": 27
+        },
+        "err_per_100w": {
+          "mean": 0.23187268076607345,
+          "median": 0.1715885487221168,
+          "std": 0.1820126969818215,
+          "count": 27
+        }
+      },
+      "linear": {
+        "pseudo_ppl": {
+          "mean": 2.331919742127035,
+          "median": 2.235748801763281,
+          "std": 0.34777620891041405,
+          "count": 27
+        },
+        "err_per_100w": {
+          "mean": 0.3168928823833825,
+          "median": 0.1898133502056311,
+          "std": 0.43250325491529,
+          "count": 27
+        }
+      },
+      "baseline": {
+        "pseudo_ppl": {
+          "mean": 3.78671225424195,
+          "median": 3.78671225424195,
+          "std": 0.2118920659000411,
+          "count": 2
+        },
+        "err_per_100w": {
+          "mean": 0.6314529513832756,
+          "median": 0.6314529513832756,
+          "std": 0.7584077832046378,
+          "count": 2
+        }
+      }
+    },
+    "by_temperature": {
+      "0.9": {
+        "pseudo_ppl": {
+          "mean": 2.3111199427373705,
+          "median": 2.1858317494649935,
+          "std": 0.366618280819688,
+          "count": 18
+        },
+        "err_per_100w": {
+          "mean": 0.2553817890085479,
+          "median": 0.20018207182096132,
+          "std": 0.20337495874814235,
+          "count": 18
+        }
+      },
+      "0.7": {
+        "pseudo_ppl": {
+          "mean": 2.327030657362892,
+          "median": 2.2931923756794004,
+          "std": 0.29571107063212554,
+          "count": 18
+        },
+        "err_per_100w": {
+          "mean": 0.2770809283988428,
+          "median": 0.1704539424951593,
+          "std": 0.3198199858476342,
+          "count": 18
+        }
+      },
+      "0.3": {
+        "pseudo_ppl": {
+          "mean": 2.269167915104381,
+          "median": 2.1884757909587735,
+          "std": 0.295434413361171,
+          "count": 18
+        },
+        "err_per_100w": {
+          "mean": 0.2906856273167932,
+          "median": 0.20420425598302538,
+          "std": 0.44517442574846094,
+          "count": 18
+        }
+      },
+      "baseline": {
+        "pseudo_ppl": {
+          "mean": 3.78671225424195,
+          "median": 3.78671225424195,
+          "std": 0.2118920659000411,
+          "count": 2
+        },
+        "err_per_100w": {
+          "mean": 0.6314529513832756,
+          "median": 0.6314529513832756,
+          "std": 0.7584077832046378,
+          "count": 2
+        }
+      }
+    },
+    "by_baseline": {
+      "0": {
+        "pseudo_ppl": {
+          "mean": 2.3024395050682145,
+          "median": 2.2118961981135414,
+          "std": 0.3158537611141153,
+          "count": 54
+        },
+        "err_per_100w": {
+          "mean": 0.27438278157472795,
+          "median": 0.18819025719236776,
+          "std": 0.3314480448192584,
+          "count": 54
+        }
+      },
+      "1": {
+        "pseudo_ppl": {
+          "mean": 3.78671225424195,
+          "median": 3.78671225424195,
+          "std": 0.2118920659000411,
+          "count": 2
+        },
+        "err_per_100w": {
+          "mean": 0.6314529513832756,
+          "median": 0.6314529513832756,
+          "std": 0.7584077832046378,
+          "count": 2
+        }
+      }
+    },
+    "by_3d_config": {
+      "fluency_score_mean": {
+        "baseline_baseline_baseline": 0.0,
+        "horror_linear_0.3": 0.756,
+        "horror_linear_0.7": 0.758,
+        "horror_linear_0.9": 0.827,
+        "horror_nonlinear_0.3": 0.802,
+        "horror_nonlinear_0.7": 0.702,
+        "horror_nonlinear_0.9": 0.809,
+        "romantic_linear_0.3": 0.843,
+        "romantic_linear_0.7": 0.619,
+        "romantic_linear_0.9": 0.761,
+        "romantic_nonlinear_0.3": 0.784,
+        "romantic_nonlinear_0.7": 0.847,
+        "romantic_nonlinear_0.9": 0.827,
+        "sciencefiction_linear_0.3": 0.15,
+        "sciencefiction_linear_0.7": 0.248,
+        "sciencefiction_linear_0.9": 0.164,
+        "sciencefiction_nonlinear_0.3": 0.374,
+        "sciencefiction_nonlinear_0.7": 0.235,
+        "sciencefiction_nonlinear_0.9": 0.286
+      },
+      "fluency_score_std": {
+        "baseline_baseline_baseline": 0.0,
+        "horror_linear_0.3": 0.096,
+        "horror_linear_0.7": 0.168,
+        "horror_linear_0.9": 0.097,
+        "horror_nonlinear_0.3": 0.045,
+        "horror_nonlinear_0.7": 0.156,
+        "horror_nonlinear_0.9": 0.033,
+        "romantic_linear_0.3": 0.15,
+        "romantic_linear_0.7": 0.137,
+        "romantic_linear_0.9": 0.08,
+        "romantic_nonlinear_0.3": 0.082,
+        "romantic_nonlinear_0.7": 0.113,
+        "romantic_nonlinear_0.9": 0.151,
+        "sciencefiction_linear_0.3": 0.136,
+        "sciencefiction_linear_0.7": 0.255,
+        "sciencefiction_linear_0.9": 0.262,
+        "sciencefiction_nonlinear_0.3": 0.221,
+        "sciencefiction_nonlinear_0.7": 0.223,
+        "sciencefiction_nonlinear_0.9": 0.039
+      },
+      "fluency_score_count": {
+        "baseline_baseline_baseline": 2,
+        "horror_linear_0.3": 3,
+        "horror_linear_0.7": 3,
+        "horror_linear_0.9": 3,
+        "horror_nonlinear_0.3": 3,
+        "horror_nonlinear_0.7": 3,
+        "horror_nonlinear_0.9": 3,
+        "romantic_linear_0.3": 3,
+        "romantic_linear_0.7": 3,
+        "romantic_linear_0.9": 3,
+        "romantic_nonlinear_0.3": 3,
+        "romantic_nonlinear_0.7": 3,
+        "romantic_nonlinear_0.9": 3,
+        "sciencefiction_linear_0.3": 3,
+        "sciencefiction_linear_0.7": 3,
+        "sciencefiction_linear_0.9": 3,
+        "sciencefiction_nonlinear_0.3": 3,
+        "sciencefiction_nonlinear_0.7": 3,
+        "sciencefiction_nonlinear_0.9": 3
+      },
+      "coherence_score_mean": {
+        "baseline_baseline_baseline": 0.0,
+        "horror_linear_0.3": 0.918,
+        "horror_linear_0.7": 0.842,
+        "horror_linear_0.9": 0.903,
+        "horror_nonlinear_0.3": 0.907,
+        "horror_nonlinear_0.7": 0.85,
+        "horror_nonlinear_0.9": 0.909,
+        "romantic_linear_0.3": 0.852,
+        "romantic_linear_0.7": 0.849,
+        "romantic_linear_0.9": 0.784,
+        "romantic_nonlinear_0.3": 0.891,
+        "romantic_nonlinear_0.7": 0.961,
+        "romantic_nonlinear_0.9": 0.876,
+        "sciencefiction_linear_0.3": 0.357,
+        "sciencefiction_linear_0.7": 0.369,
+        "sciencefiction_linear_0.9": 0.241,
+        "sciencefiction_nonlinear_0.3": 0.409,
+        "sciencefiction_nonlinear_0.7": 0.357,
+        "sciencefiction_nonlinear_0.9": 0.316
+      },
+      "coherence_score_std": {
+        "baseline_baseline_baseline": 0.0,
+        "horror_linear_0.3": 0.142,
+        "horror_linear_0.7": 0.129,
+        "horror_linear_0.9": 0.062,
+        "horror_nonlinear_0.3": 0.09,
+        "horror_nonlinear_0.7": 0.156,
+        "horror_nonlinear_0.9": 0.098,
+        "romantic_linear_0.3": 0.11,
+        "romantic_linear_0.7": 0.057,
+        "romantic_linear_0.9": 0.12,
+        "romantic_nonlinear_0.3": 0.076,
+        "romantic_nonlinear_0.7": 0.051,
+        "romantic_nonlinear_0.9": 0.057,
+        "sciencefiction_linear_0.3": 0.313,
+        "sciencefiction_linear_0.7": 0.119,
+        "sciencefiction_linear_0.9": 0.34,
+        "sciencefiction_nonlinear_0.3": 0.114,
+        "sciencefiction_nonlinear_0.7": 0.151,
+        "sciencefiction_nonlinear_0.9": 0.151
+      },
+      "diversity_score_mean": {
+        "baseline_baseline_baseline": 0.985,
+        "horror_linear_0.3": 0.079,
+        "horror_linear_0.7": 0.161,
+        "horror_linear_0.9": 0.121,
+        "horror_nonlinear_0.3": 0.23,
+        "horror_nonlinear_0.7": 0.286,
+        "horror_nonlinear_0.9": 0.188,
+        "romantic_linear_0.3": 0.082,
+        "romantic_linear_0.7": 0.155,
+        "romantic_linear_0.9": 0.313,
+        "romantic_nonlinear_0.3": 0.188,
+        "romantic_nonlinear_0.7": 0.294,
+        "romantic_nonlinear_0.9": 0.116,
+        "sciencefiction_linear_0.3": 0.733,
+        "sciencefiction_linear_0.7": 0.771,
+        "sciencefiction_linear_0.9": 0.749,
+        "sciencefiction_nonlinear_0.3": 0.512,
+        "sciencefiction_nonlinear_0.7": 0.648,
+        "sciencefiction_nonlinear_0.9": 0.521
+      },
+      "diversity_score_std": {
+        "baseline_baseline_baseline": 0.021,
+        "horror_linear_0.3": 0.099,
+        "horror_linear_0.7": 0.161,
+        "horror_linear_0.9": 0.134,
+        "horror_nonlinear_0.3": 0.135,
+        "horror_nonlinear_0.7": 0.29,
+        "horror_nonlinear_0.9": 0.218,
+        "romantic_linear_0.3": 0.029,
+        "romantic_linear_0.7": 0.121,
+        "romantic_linear_0.9": 0.246,
+        "romantic_nonlinear_0.3": 0.169,
+        "romantic_nonlinear_0.7": 0.09,
+        "romantic_nonlinear_0.9": 0.201,
+        "sciencefiction_linear_0.3": 0.212,
+        "sciencefiction_linear_0.7": 0.122,
+        "sciencefiction_linear_0.9": 0.184,
+        "sciencefiction_nonlinear_0.3": 0.143,
+        "sciencefiction_nonlinear_0.7": 0.192,
+        "sciencefiction_nonlinear_0.9": 0.092
+      },
+      "emotion_score_mean": {
+        "baseline_baseline_baseline": 0.172,
+        "horror_linear_0.3": 0.454,
+        "horror_linear_0.7": 0.562,
+        "horror_linear_0.9": 0.416,
+        "horror_nonlinear_0.3": 0.561,
+        "horror_nonlinear_0.7": 0.469,
+        "horror_nonlinear_0.9": 0.408,
+        "romantic_linear_0.3": 0.908,
+        "romantic_linear_0.7": 0.695,
+        "romantic_linear_0.9": 0.932,
+        "romantic_nonlinear_0.3": 0.914,
+        "romantic_nonlinear_0.7": 0.752,
+        "romantic_nonlinear_0.9": 0.83,
+        "sciencefiction_linear_0.3": 0.166,
+        "sciencefiction_linear_0.7": 0.326,
+        "sciencefiction_linear_0.9": 0.173,
+        "sciencefiction_nonlinear_0.3": 0.126,
+        "sciencefiction_nonlinear_0.7": 0.104,
+        "sciencefiction_nonlinear_0.9": 0.189
+      },
+      "emotion_score_std": {
+        "baseline_baseline_baseline": 0.097,
+        "horror_linear_0.3": 0.084,
+        "horror_linear_0.7": 0.041,
+        "horror_linear_0.9": 0.162,
+        "horror_nonlinear_0.3": 0.168,
+        "horror_nonlinear_0.7": 0.059,
+        "horror_nonlinear_0.9": 0.058,
+        "romantic_linear_0.3": 0.005,
+        "romantic_linear_0.7": 0.18,
+        "romantic_linear_0.9": 0.118,
+        "romantic_nonlinear_0.3": 0.148,
+        "romantic_nonlinear_0.7": 0.097,
+        "romantic_nonlinear_0.9": 0.148,
+        "sciencefiction_linear_0.3": 0.154,
+        "sciencefiction_linear_0.7": 0.065,
+        "sciencefiction_linear_0.9": 0.11,
+        "sciencefiction_nonlinear_0.3": 0.128,
+        "sciencefiction_nonlinear_0.7": 0.18,
+        "sciencefiction_nonlinear_0.9": 0.183
+      },
+      "structure_score_mean": {
+        "baseline_baseline_baseline": 0.567,
+        "horror_linear_0.3": 0.567,
+        "horror_linear_0.7": 0.433,
+        "horror_linear_0.9": 0.522,
+        "horror_nonlinear_0.3": 0.522,
+        "horror_nonlinear_0.7": 0.567,
+        "horror_nonlinear_0.9": 0.522,
+        "romantic_linear_0.3": 0.522,
+        "romantic_linear_0.7": 0.522,
+        "romantic_linear_0.9": 0.522,
+        "romantic_nonlinear_0.3": 0.522,
+        "romantic_nonlinear_0.7": 0.433,
+        "romantic_nonlinear_0.9": 0.656,
+        "sciencefiction_linear_0.3": 0.478,
+        "sciencefiction_linear_0.7": 0.611,
+        "sciencefiction_linear_0.9": 0.567,
+        "sciencefiction_nonlinear_0.3": 0.522,
+        "sciencefiction_nonlinear_0.7": 0.433,
+        "sciencefiction_nonlinear_0.9": 0.478
+      },
+      "structure_score_std": {
+        "baseline_baseline_baseline": 0.0,
+        "horror_linear_0.3": 0.133,
+        "horror_linear_0.7": 0.133,
+        "horror_linear_0.9": 0.204,
+        "horror_nonlinear_0.3": 0.077,
+        "horror_nonlinear_0.7": 0.133,
+        "horror_nonlinear_0.9": 0.204,
+        "romantic_linear_0.3": 0.077,
+        "romantic_linear_0.7": 0.077,
+        "romantic_linear_0.9": 0.077,
+        "romantic_nonlinear_0.3": 0.204,
+        "romantic_nonlinear_0.7": 0.0,
+        "romantic_nonlinear_0.9": 0.077,
+        "sciencefiction_linear_0.3": 0.154,
+        "sciencefiction_linear_0.7": 0.077,
+        "sciencefiction_linear_0.9": 0.133,
+        "sciencefiction_nonlinear_0.3": 0.204,
+        "sciencefiction_nonlinear_0.7": 0.0,
+        "sciencefiction_nonlinear_0.9": 0.077
+      },
+      "overall_score_mean": {
+        "baseline_baseline_baseline": 0.345,
+        "horror_linear_0.3": 0.555,
+        "horror_linear_0.7": 0.551,
+        "horror_linear_0.9": 0.558,
+        "horror_nonlinear_0.3": 0.605,
+        "horror_nonlinear_0.7": 0.575,
+        "horror_nonlinear_0.9": 0.567,
+        "romantic_linear_0.3": 0.642,
+        "romantic_linear_0.7": 0.568,
+        "romantic_linear_0.9": 0.663,
+        "romantic_nonlinear_0.3": 0.66,
+        "romantic_nonlinear_0.7": 0.657,
+        "romantic_nonlinear_0.9": 0.661,
+        "sciencefiction_linear_0.3": 0.377,
+        "sciencefiction_linear_0.7": 0.465,
+        "sciencefiction_linear_0.9": 0.379,
+        "sciencefiction_nonlinear_0.3": 0.389,
+        "sciencefiction_nonlinear_0.7": 0.355,
+        "sciencefiction_nonlinear_0.9": 0.358
+      },
+      "overall_score_std": {
+        "baseline_baseline_baseline": 0.024,
+        "horror_linear_0.3": 0.044,
+        "horror_linear_0.7": 0.046,
+        "horror_linear_0.9": 0.034,
+        "horror_nonlinear_0.3": 0.032,
+        "horror_nonlinear_0.7": 0.077,
+        "horror_nonlinear_0.9": 0.088,
+        "romantic_linear_0.3": 0.008,
+        "romantic_linear_0.7": 0.096,
+        "romantic_linear_0.9": 0.046,
+        "romantic_nonlinear_0.3": 0.039,
+        "romantic_nonlinear_0.7": 0.027,
+        "romantic_nonlinear_0.9": 0.087,
+        "sciencefiction_linear_0.3": 0.075,
+        "sciencefiction_linear_0.7": 0.022,
+        "sciencefiction_linear_0.9": 0.106,
+        "sciencefiction_nonlinear_0.3": 0.107,
+        "sciencefiction_nonlinear_0.7": 0.137,
+        "sciencefiction_nonlinear_0.9": 0.066
+      }
+    }
+  },
+  "outliers": [
+    {
+      "type": "pseudo_ppl",
+      "story_id": "sciencefiction_baseline_Tbaseline_sbaseline",
+      "value": 3.636881937564404,
+      "threshold": "<1.42 or >3.16"
+    },
+    {
+      "type": "pseudo_ppl",
+      "story_id": "baseline_baseline_Tbaseline_sbaseline",
+      "value": 3.936542570919496,
+      "threshold": "<1.42 or >3.16"
+    },
+    {
+      "type": "err_per_100w",
+      "story_id": "sciencefiction_linear_T0.9_s2",
+      "value": 0.7913090128755365,
+      "threshold": "<-0.08 or >0.46"
+    },
+    {
+      "type": "err_per_100w",
+      "story_id": "sciencefiction_linear_T0.7_s3",
+      "value": 1.374733349134866,
+      "threshold": "<-0.08 or >0.46"
+    },
+    {
+      "type": "err_per_100w",
+      "story_id": "sciencefiction_linear_T0.3_s3",
+      "value": 2.034498009730208,
+      "threshold": "<-0.08 or >0.46"
+    },
+    {
+      "type": "err_per_100w",
+      "story_id": "sciencefiction_nonlinear_T0.9_s1",
+      "value": 0.7003838642332817,
+      "threshold": "<-0.08 or >0.46"
+    },
+    {
+      "type": "err_per_100w",
+      "story_id": "sciencefiction_nonlinear_T0.7_s1",
+      "value": 0.8182717381530438,
+      "threshold": "<-0.08 or >0.46"
+    },
+    {
+      "type": "err_per_100w",
+      "story_id": "sciencefiction_baseline_Tbaseline_sbaseline",
+      "value": 1.167728237791932,
+      "threshold": "<-0.08 or >0.46"
+    }
+  ],
+  "scored_summary": {
+    "fluency_mean": 0.5781847416132707,
+    "coherence_mean": 0.6745103117054336,
+    "diversity_mean": 0.36456779293802366,
+    "emotion_mean": 0.4874387371859898,
+    "structure_mean": 0.5238095238095238,
+    "overall_mean": 0.5257022214504483,
+    "length_penalty_applied": 11,
+    "short_threshold_words": 6405.0
+  }
+}

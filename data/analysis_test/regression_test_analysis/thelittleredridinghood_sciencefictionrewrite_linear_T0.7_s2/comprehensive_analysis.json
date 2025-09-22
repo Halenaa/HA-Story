@@ -1,0 +1,1759 @@
+{
+  "folder_name": "thelittleredridinghood_sciencefictionrewrite_linear_T0.7_s2",
+  "file_path": "/Users/haha/Story/data/output/regression_test/thelittleredridinghood_sciencefictionrewrite_linear_T0.7_s2/enhanced_story_dialogue_updated.md",
+  "analysis_timestamp": null,
+  "emotional_arc_analysis": {
+    "metadata": {
+      "total_chapters": 7,
+      "primary_method": "RoBERTa",
+      "validation_method": "LabMT-en-v1",
+      "analysis_timestamp": "2025-09-09T20:47:50.765878"
+    },
+    "chapter_analysis": [
+      {
+        "chapter_num": 1,
+        "title": "Red Receives the Mission",
+        "roberta_score": 0.6871,
+        "labmt_score": 0.272,
+        "content_length": 3173
+      },
+      {
+        "chapter_num": 2,
+        "title": "Entering the Forbidden Zone",
+        "roberta_score": -0.2646,
+        "labmt_score": 0.2154,
+        "content_length": 5243
+      },
+      {
+        "chapter_num": 3,
+        "title": "Wolf Intercepts Red",
+        "roberta_score": -0.0608,
+        "labmt_score": 0.2039,
+        "content_length": 7914
+      },
+      {
+        "chapter_num": 4,
+        "title": "Grandmother’s Disappearance",
+        "roberta_score": -0.3178,
+        "labmt_score": 0.1179,
+        "content_length": 10025
+      },
+      {
+        "chapter_num": 5,
+        "title": "Wolf Sets a Trap",
+        "roberta_score": 0.153,
+        "labmt_score": 0.1681,
+        "content_length": 14386
+      },
+      {
+        "chapter_num": 6,
+        "title": "Red and Grandmother Reunite",
+        "roberta_score": 0.1602,
+        "labmt_score": 0.2452,
+        "content_length": 8835
+      },
+      {
+        "chapter_num": 7,
+        "title": "Final Confrontation at the Relay Station",
+        "roberta_score": -0.0048,
+        "labmt_score": 0.1649,
+        "content_length": 10146
+      }
+    ],
+    "primary_analysis": {
+      "method": "RoBERTa",
+      "scores": [
+        0.6870662490526835,
+        -0.2646400888760885,
+        -0.060776905218760176,
+        -0.3178012013435364,
+        0.1529735207557678,
+        0.16020201047261556,
+        -0.0048118511835734045
+      ],
+      "reagan_classification": {
+        "method": "RoBERTa",
+        "best_match": "Oedipus",
+        "confidence": 0.5405,
+        "all_similarities": {
+          "Rags to riches": 0,
+          "Tragedy": 0.2772,
+          "Man in a hole": 0,
+          "Icarus": 0.1301,
+          "Cinderella": 0,
+          "Oedipus": 0.5405
+        },
+        "reagan_category": "OE"
+      }
+    },
+    "validation_analysis": {
+      "method": "LabMT",
+      "scores": [
+        0.2719954128440363,
+        0.21536363636363576,
+        0.20386029411764728,
+        0.11786679536679512,
+        0.1681070640176574,
+        0.24519896193771662,
+        0.16489969135802474
+      ],
+      "reagan_classification": {
+        "method": "LabMT",
+        "best_match": "Tragedy",
+        "confidence": 0.7272,
+        "all_similarities": {
+          "Rags to riches": 0.5724,
+          "Tragedy": 0.7272,
+          "Man in a hole": 0,
+          "Icarus": 0.0918,
+          "Cinderella": 0,
+          "Oedipus": 0.3365
+        },
+        "reagan_category": "TR"
+      }
+    },
+    "correlation_analysis": {
+      "pearson_correlation": {
+        "r": 0.7048,
+        "p_value": 0.077,
+        "significance": "Not Significant"
+      },
+      "spearman_correlation": {
+        "r": 0.6786,
+        "p_value": 0.0938
+      },
+      "direction_consistency": 0.8333,
+      "consistency_level": "High",
+      "interpretation": "RoBERTa and LabMT correlation coefficient is 0.705, belongs to strong correlation"
+    },
+    "comparison_analysis": {
+      "disagreement_points": [
+        {
+          "chapter": 1,
+          "roberta_score": 0.6870662490526835,
+          "labmt_score": 0.2719954128440363,
+          "difference": 0.4151
+        },
+        {
+          "chapter": 2,
+          "roberta_score": -0.2646400888760885,
+          "labmt_score": 0.21536363636363576,
+          "difference": 0.48
+        },
+        {
+          "chapter": 4,
+          "roberta_score": -0.3178012013435364,
+          "labmt_score": 0.11786679536679512,
+          "difference": 0.4357
+        }
+      ],
+      "method_advantages": {
+        "RoBERTa": {
+          "strengths": [
+            "Deep learning model with better contextual understanding",
+            "Suitable for modern text and dialogue",
+            "High sensitivity to sci-fi and technical texts"
+          ],
+          "classification": "Oedipus",
+          "confidence": 0.5405
+        },
+        "LabMT": {
+          "strengths": [
+            "Fully consistent with Reagan's original method",
+            "Based on large-scale human annotation",
+            "Suitable for traditional literary analysis"
+          ],
+          "classification": "Tragedy",
+          "confidence": 0.7272
+        }
+      },
+      "consistency_assessment": {
+        "classification_agreement": false,
+        "major_disagreements": 3,
+        "recommendation": "Two methods differ significantly, recommend detailed analysis of difference causes, may need more in-depth text feature analysis"
+      }
+    },
+    "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.705 (High)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.705, belongs to strong correlation\n\nClassification Results:\n- RoBERTa (primary): Oedipus\n- LabMT (validation): Tragedy\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.705, showing high consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation.",
+    "output_files": {
+      "analysis_json": "/Users/haha/Story/data/regression_test_analysis/thelittleredridinghood_sciencefictionrewrite_linear_T0.7_s2/roberta_labmt_analysis_20250909_204750.json"
+    }
+  },
+  "hred_coherence_analysis": {
+    "HRED_coherence_evaluation": {
+      "model_name": "all-mpnet-base-v2",
+      "analysis_method": "Original sentence coherence",
+      "total_sentences": 570,
+      "adjacent_pairs": 569,
+      "average_coherence": 0.3714,
+      "objective_description": {
+        "score": 0.3714,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "detailed_analysis": {
+      "basic_statistics": {
+        "average_coherence": 0.3714076561136384,
+        "coherence_std": 0.169498286985885,
+        "max_coherence": 0.931361734867096,
+        "min_coherence": -0.04035166651010513,
+        "coherence_median": 0.3608275055885315
+      },
+      "coherence_breakpoints": [
+        {
+          "position": 7,
+          "sentence_pair": "We remain vigilant, for the Ou... → Ada’s actions there carry sign...",
+          "similarity": 0.179
+        },
+        {
+          "position": 16,
+          "sentence_pair": "She scanned the delivery route... → Cloaking integrity: 100%....",
+          "similarity": 0.168
+        },
+        {
+          "position": 18,
+          "sentence_pair": "Communications channel: secure... → Her heart thudded in her chest...",
+          "similarity": 0.071
+        },
+        {
+          "position": 22,
+          "sentence_pair": "This would be clean and quick—... → No surprises today....",
+          "similarity": 0.104
+        },
+        {
+          "position": 23,
+          "sentence_pair": "No surprises today.... → Red, determined and focused, c...",
+          "similarity": 0.141
+        },
+        {
+          "position": 29,
+          "sentence_pair": "Ahead, the boundary known as t... → As she approaches the checkpoi...",
+          "similarity": 0.146
+        },
+        {
+          "position": 40,
+          "sentence_pair": "\" The request was delivered wi... → Declare package contents....",
+          "similarity": 0.097
+        },
+        {
+          "position": 41,
+          "sentence_pair": "Declare package contents.... → Border Patrol DroneDrone hover...",
+          "similarity": 0.154
+        },
+        {
+          "position": 47,
+          "sentence_pair": "“Failure to accurately declare... → ” The drone’s lenses focused, ...",
+          "similarity": 0.163
+        },
+        {
+          "position": 52,
+          "sentence_pair": "Her voice, low and unwavering,... → Council delivery—tech componen...",
+          "similarity": -0.04
+        },
+        {
+          "position": 53,
+          "sentence_pair": "Council delivery—tech componen... → She made sure every word carri...",
+          "similarity": 0.141
+        },
+        {
+          "position": 55,
+          "sentence_pair": "These orders were time-sensiti... → the manifest itself bore the u...",
+          "similarity": 0.075
+        },
+        {
+          "position": 58,
+          "sentence_pair": "But the message was clear: sta... → ' The drone hovers closer, its...",
+          "similarity": 0.124
+        },
+        {
+          "position": 67,
+          "sentence_pair": "Satisfied with its own assessm... → Any deviation will trigger det...",
+          "similarity": 0.155
+        },
+        {
+          "position": 71,
+          "sentence_pair": "A crisp, mechanical voice cut ... → \"You are now entering a restri...",
+          "similarity": 0.122
+        },
+        {
+          "position": 75,
+          "sentence_pair": "\"Any deviation from the establ... → Above, the drone’s lenses glin...",
+          "similarity": 0.182
+        },
+        {
+          "position": 76,
+          "sentence_pair": "Above, the drone’s lenses glin... → ' Red nods and strides past th...",
+          "similarity": 0.166
+        },
+        {
+          "position": 79,
+          "sentence_pair": "The hum of its rotors faded be... → Red tightened her grip on the ...",
+          "similarity": 0.123
+        },
+        {
+          "position": 91,
+          "sentence_pair": "\"The next pulse wipes every ci... → \" He tilted his head, expressi...",
+          "similarity": 0.16
+        },
+        {
+          "position": 94,
+          "sentence_pair": "\"No more stalling.... → Machines belong to machines....",
+          "similarity": 0.156
+        },
+        {
+          "position": 95,
+          "sentence_pair": "Machines belong to machines.... → Wolf gazes out across a landsc...",
+          "similarity": 0.196
+        },
+        {
+          "position": 98,
+          "sentence_pair": "The line between them was unmi... → He let the silence settle, a c...",
+          "similarity": 0.094
+        },
+        {
+          "position": 100,
+          "sentence_pair": "Machines, he mused, belonged w... → That was the order of things: ...",
+          "similarity": 0.116
+        },
+        {
+          "position": 104,
+          "sentence_pair": "To claim a machine as somethin... → Wolf’s expression hardened, th...",
+          "similarity": 0.199
+        },
+        {
+          "position": 105,
+          "sentence_pair": "Wolf’s expression hardened, th... → He believed in the freedom tha...",
+          "similarity": 0.19
+        },
+        {
+          "position": 115,
+          "sentence_pair": "He questions whether the divis... → Red uses this distraction to l...",
+          "similarity": 0.183
+        },
+        {
+          "position": 143,
+          "sentence_pair": "A faint smirk played at the co... → She wouldn't get far—not with ...",
+          "similarity": 0.199
+        },
+        {
+          "position": 160,
+          "sentence_pair": "” The bot’s voice module glitc... → Please—identify yourself....",
+          "similarity": 0.061
+        },
+        {
+          "position": 161,
+          "sentence_pair": "Please—identify yourself.... → ” Despite its fractured circui...",
+          "similarity": 0.04
+        },
+        {
+          "position": 168,
+          "sentence_pair": "[Name],” she said, voice clipp... → “Access is required immediatel...",
+          "similarity": 0.201
+        },
+        {
+          "position": 169,
+          "sentence_pair": "“Access is required immediatel... → ” She held the badge higher, l...",
+          "similarity": 0.087
+        },
+        {
+          "position": 171,
+          "sentence_pair": "“Elder Tech authorization.... → ” If the guard had doubts, Red...",
+          "similarity": 0.087
+        },
+        {
+          "position": 173,
+          "sentence_pair": "“If you have questions,” she a... → Marrow....",
+          "similarity": 0.047
+        },
+        {
+          "position": 174,
+          "sentence_pair": "Marrow.... → Access is required immediately...",
+          "similarity": 0.085
+        },
+        {
+          "position": 175,
+          "sentence_pair": "Access is required immediately... → Red pounds on the door, voice ...",
+          "similarity": 0.19
+        },
+        {
+          "position": 178,
+          "sentence_pair": "She cast a furtive glance over... → “Please, you have to let me in...",
+          "similarity": 0.185
+        },
+        {
+          "position": 182,
+          "sentence_pair": "” Her posture was taut and rea... → If you have questions, take th...",
+          "similarity": 0.094
+        },
+        {
+          "position": 183,
+          "sentence_pair": "If you have questions, take th... → ' Her voice wavers as she plea...",
+          "similarity": 0.15
+        },
+        {
+          "position": 185,
+          "sentence_pair": "I don't have anywhere else to ... → ' The bot’s ocular lens flicke...",
+          "similarity": 0.079
+        },
+        {
+          "position": 193,
+          "sentence_pair": "” The bot’s red optics fixed o... → “For your safety, passage is d...",
+          "similarity": 0.15
+        },
+        {
+          "position": 199,
+          "sentence_pair": "Its internal sensors pulsed wi... → “Alert: The location of Marrow...",
+          "similarity": 0.181
+        },
+        {
+          "position": 200,
+          "sentence_pair": "“Alert: The location of Marrow... → ” The message threaded through...",
+          "similarity": 0.147
+        },
+        {
+          "position": 207,
+          "sentence_pair": "No anomalies registered in the... → Pausing only long enough to re...",
+          "similarity": 0.199
+        },
+        {
+          "position": 209,
+          "sentence_pair": "Somewhere in the unknown reach... → Council Security BotTransmitti...",
+          "similarity": 0.116
+        },
+        {
+          "position": 216,
+          "sentence_pair": "Protective protocol engaged.... → Red clenches her fists, her ey...",
+          "similarity": 0.178
+        },
+        {
+          "position": 231,
+          "sentence_pair": "Red’s fingers paused mid-air o... → Compliance came naturally—year...",
+          "similarity": 0.106
+        },
+        {
+          "position": 235,
+          "sentence_pair": "Yet, before moving further, sh... → The security logs contained mo...",
+          "similarity": 0.058
+        },
+        {
+          "position": 237,
+          "sentence_pair": "there were fragments of sensit... → Red glanced back over her shou...",
+          "similarity": 0.169
+        },
+        {
+          "position": 244,
+          "sentence_pair": "' The bot continues, 'The loca... → Initiating sector-wide scan pr...",
+          "similarity": 0.14
+        },
+        {
+          "position": 245,
+          "sentence_pair": "Initiating sector-wide scan pr... → ' Red, frustration and fear ev...",
+          "similarity": -0.008
+        },
+        {
+          "position": 246,
+          "sentence_pair": "' Red, frustration and fear ev... → Every second she's out there a...",
+          "similarity": 0.162
+        },
+        {
+          "position": 249,
+          "sentence_pair": "She's the only family I have l... → ' The bot continues to scan, r...",
+          "similarity": 0.01
+        },
+        {
+          "position": 252,
+          "sentence_pair": "Standing down protocols initia... → However, before I upload the s...",
+          "similarity": 0.192
+        },
+        {
+          "position": 274,
+          "sentence_pair": "“Every route closes behind you... → You’re running on borrowed tim...",
+          "similarity": 0.15
+        },
+        {
+          "position": 275,
+          "sentence_pair": "You’re running on borrowed tim... → Hand over the core....",
+          "similarity": 0.173
+        },
+        {
+          "position": 276,
+          "sentence_pair": "Hand over the core.... → Wolf steps forward, eyes locke...",
+          "similarity": 0.155
+        },
+        {
+          "position": 279,
+          "sentence_pair": "The room seemed to tighten aro... → “Hand over the core....",
+          "similarity": 0.185
+        },
+        {
+          "position": 281,
+          "sentence_pair": "Now.... → ” The command left no room for...",
+          "similarity": 0.125
+        },
+        {
+          "position": 294,
+          "sentence_pair": "His voice, smooth and edged wi... → \"You really think you can outr...",
+          "similarity": 0.197
+        },
+        {
+          "position": 304,
+          "sentence_pair": "she could do it again.... → Red narrowed her eyes, jaw set...",
+          "similarity": 0.105
+        },
+        {
+          "position": 305,
+          "sentence_pair": "Red narrowed her eyes, jaw set... → Losing the key would cost them...",
+          "similarity": 0.142
+        },
+        {
+          "position": 306,
+          "sentence_pair": "Losing the key would cost them... → Wolf steps forward, shadow str...",
+          "similarity": 0.081
+        },
+        {
+          "position": 310,
+          "sentence_pair": "His voice slid into the space ... → “You know what happens if I wa...",
+          "similarity": 0.2
+        },
+        {
+          "position": 315,
+          "sentence_pair": "The flickering lights above ca... → Her voice was clipped, edged w...",
+          "similarity": 0.177
+        },
+        {
+          "position": 319,
+          "sentence_pair": "She'd fight for it, no matter ... → Their conversation exposes mut...",
+          "similarity": 0.158
+        },
+        {
+          "position": 328,
+          "sentence_pair": "” With practiced ease, she twi... → “But nothing comes for free, W...",
+          "similarity": 0.107
+        },
+        {
+          "position": 330,
+          "sentence_pair": "Tell me—why should I just hand... → Wolf steps closer, his gaze lo...",
+          "similarity": 0.036
+        },
+        {
+          "position": 344,
+          "sentence_pair": "Wolf stepped closer, the faint... → His eyes—cold, calculating—rem...",
+          "similarity": 0.161
+        },
+        {
+          "position": 352,
+          "sentence_pair": "Only then—only if he could sho... → Wolf steps forward, lowering h...",
+          "similarity": 0.182
+        },
+        {
+          "position": 409,
+          "sentence_pair": "Stepping forward at the silent... → If Grandmother wanted her here...",
+          "similarity": 0.2
+        },
+        {
+          "position": 410,
+          "sentence_pair": "If Grandmother wanted her here... → They were dangerous, and Red c...",
+          "similarity": 0.192
+        },
+        {
+          "position": 411,
+          "sentence_pair": "They were dangerous, and Red c... → Grandmother (Dr....",
+          "similarity": 0.029
+        },
+        {
+          "position": 444,
+          "sentence_pair": "\"Fair enough,\" Red said, the w... → \"But if there's any hint that ...",
+          "similarity": 0.159
+        },
+        {
+          "position": 452,
+          "sentence_pair": "The biometric lock chimed soft... → As the lid hissed open and the...",
+          "similarity": 0.177
+        },
+        {
+          "position": 458,
+          "sentence_pair": "With careful precision, she ha... → Red’s gaze didn’t waver....",
+          "similarity": 0.149
+        },
+        {
+          "position": 459,
+          "sentence_pair": "Red’s gaze didn’t waver.... → “If that’s true,” she said, he...",
+          "similarity": 0.101
+        },
+        {
+          "position": 461,
+          "sentence_pair": "” The warning in her tone was ... → Grandmother (Dr....",
+          "similarity": 0.176
+        },
+        {
+          "position": 468,
+          "sentence_pair": "After today, Red would see fir... → Together, they move toward the...",
+          "similarity": 0.197
+        },
+        {
+          "position": 475,
+          "sentence_pair": "Ada Marrow.... → As Wolf and his android pack c...",
+          "similarity": 0.185
+        },
+        {
+          "position": 484,
+          "sentence_pair": "Ada, I need a distraction—now,... → They're almost on us, and if t...",
+          "similarity": 0.195
+        },
+        {
+          "position": 485,
+          "sentence_pair": "They're almost on us, and if t... → Grandmother (Dr....",
+          "similarity": -0.037
+        },
+        {
+          "position": 486,
+          "sentence_pair": "Grandmother (Dr.... → Ada Marrow)Ada rapidly types c...",
+          "similarity": 0.176
+        },
+        {
+          "position": 500,
+          "sentence_pair": "just give me the word,\" she mu... → Grandmother (Dr....",
+          "similarity": 0.123
+        },
+        {
+          "position": 501,
+          "sentence_pair": "Grandmother (Dr.... → Ada Marrow)Ada rapidly taps co...",
+          "similarity": 0.16
+        },
+        {
+          "position": 507,
+          "sentence_pair": "go, before they regroup!... → ” Her words cut through the ch...",
+          "similarity": 0.12
+        },
+        {
+          "position": 530,
+          "sentence_pair": "“You mistake patience for weak... → we’re closing in from all side...",
+          "similarity": 0.144
+        },
+        {
+          "position": 531,
+          "sentence_pair": "we’re closing in from all side... → ” The statement wasn’t a threa...",
+          "similarity": 0.08
+        },
+        {
+          "position": 536,
+          "sentence_pair": "The hilt of her blade pressed ... → “You can’t outrun us, Red....",
+          "similarity": 0.136
+        },
+        {
+          "position": 556,
+          "sentence_pair": "” Her gaze sharpened, searchin... → “What do you really plan to do...",
+          "similarity": 0.19
+        },
+        {
+          "position": 561,
+          "sentence_pair": "The offer was clear, irresisti... → “Let’s just say the core will ...",
+          "similarity": 0.2
+        }
+      ],
+      "high_coherence_segments": [
+        {
+          "start_sentence": 42,
+          "end_sentence": 44,
+          "length": 3,
+          "average_similarity": 0.628
+        },
+        {
+          "start_sentence": 49,
+          "end_sentence": 51,
+          "length": 3,
+          "average_similarity": 0.68
+        },
+        {
+          "start_sentence": 80,
+          "end_sentence": 83,
+          "length": 4,
+          "average_similarity": 0.51
+        },
+        {
+          "start_sentence": 110,
+          "end_sentence": 112,
+          "length": 3,
+          "average_similarity": 0.722
+        },
+        {
+          "start_sentence": 117,
+          "end_sentence": 119,
+          "length": 3,
+          "average_similarity": 0.747
+        },
+        {
+          "start_sentence": 132,
+          "end_sentence": 135,
+          "length": 4,
+          "average_similarity": 0.506
+        },
+        {
+          "start_sentence": 137,
+          "end_sentence": 139,
+          "length": 3,
+          "average_similarity": 0.554
+        },
+        {
+          "start_sentence": 141,
+          "end_sentence": 143,
+          "length": 3,
+          "average_similarity": 0.612
+        },
+        {
+          "start_sentence": 144,
+          "end_sentence": 146,
+          "length": 3,
+          "average_similarity": 0.495
+        },
+        {
+          "start_sentence": 153,
+          "end_sentence": 155,
+          "length": 3,
+          "average_similarity": 0.728
+        },
+        {
+          "start_sentence": 163,
+          "end_sentence": 165,
+          "length": 3,
+          "average_similarity": 0.621
+        },
+        {
+          "start_sentence": 186,
+          "end_sentence": 188,
+          "length": 3,
+          "average_similarity": 0.69
+        },
+        {
+          "start_sentence": 217,
+          "end_sentence": 219,
+          "length": 3,
+          "average_similarity": 0.653
+        },
+        {
+          "start_sentence": 257,
+          "end_sentence": 259,
+          "length": 3,
+          "average_similarity": 0.611
+        },
+        {
+          "start_sentence": 265,
+          "end_sentence": 268,
+          "length": 4,
+          "average_similarity": 0.522
+        },
+        {
+          "start_sentence": 283,
+          "end_sentence": 285,
+          "length": 3,
+          "average_similarity": 0.643
+        },
+        {
+          "start_sentence": 296,
+          "end_sentence": 298,
+          "length": 3,
+          "average_similarity": 0.63
+        },
+        {
+          "start_sentence": 374,
+          "end_sentence": 376,
+          "length": 3,
+          "average_similarity": 0.562
+        },
+        {
+          "start_sentence": 381,
+          "end_sentence": 384,
+          "length": 4,
+          "average_similarity": 0.591
+        },
+        {
+          "start_sentence": 393,
+          "end_sentence": 395,
+          "length": 3,
+          "average_similarity": 0.546
+        },
+        {
+          "start_sentence": 396,
+          "end_sentence": 406,
+          "length": 11,
+          "average_similarity": 0.571
+        },
+        {
+          "start_sentence": 426,
+          "end_sentence": 428,
+          "length": 3,
+          "average_similarity": 0.505
+        },
+        {
+          "start_sentence": 450,
+          "end_sentence": 452,
+          "length": 3,
+          "average_similarity": 0.494
+        },
+        {
+          "start_sentence": 463,
+          "end_sentence": 465,
+          "length": 3,
+          "average_similarity": 0.729
+        },
+        {
+          "start_sentence": 480,
+          "end_sentence": 484,
+          "length": 5,
+          "average_similarity": 0.5
+        },
+        {
+          "start_sentence": 493,
+          "end_sentence": 496,
+          "length": 4,
+          "average_similarity": 0.598
+        },
+        {
+          "start_sentence": 517,
+          "end_sentence": 520,
+          "length": 4,
+          "average_similarity": 0.626
+        },
+        {
+          "start_sentence": 558,
+          "end_sentence": 560,
+          "length": 3,
+          "average_similarity": 0.619
+        },
+        {
+          "start_sentence": 564,
+          "end_sentence": 566,
+          "length": 3,
+          "average_similarity": 0.585
+        }
+      ],
+      "objective_description": {
+        "score": 0.3714,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "pairwise_similarity_examples": [
+      {
+        "sentence_pair": "Sentence 1 → Sentence 2",
+        "sentence_1": "Red stands at attention by a loading bay, her synt...",
+        "sentence_2": "The Elder Tech Council materializes on a nearby sc...",
+        "similarity": 0.2484
+      },
+      {
+        "sentence_pair": "Sentence 2 → Sentence 3",
+        "sentence_1": "The Elder Tech Council materializes on a nearby sc...",
+        "sentence_2": "Ada Marrow’s continued presence and influence in t...",
+        "similarity": 0.3871
+      },
+      {
+        "sentence_pair": "Sentence 3 → Sentence 4",
+        "sentence_1": "Ada Marrow’s continued presence and influence in t...",
+        "sentence_2": "Elder Tech CouncilA holographic seal of the Elder ...",
+        "similarity": 0.3202
+      },
+      {
+        "sentence_pair": "Sentence 4 → Sentence 5",
+        "sentence_1": "Elder Tech CouncilA holographic seal of the Elder ...",
+        "sentence_2": "\"The Council acknowledges Ada Marrow’s presence in...",
+        "similarity": 0.3734
+      },
+      {
+        "sentence_pair": "Sentence 5 → Sentence 6",
+        "sentence_1": "\"The Council acknowledges Ada Marrow’s presence in...",
+        "sentence_2": "Her movements, though unorthodox, have not yet div...",
+        "similarity": 0.2883
+      },
+      {
+        "sentence_pair": "Sentence 6 → Sentence 7",
+        "sentence_1": "Her movements, though unorthodox, have not yet div...",
+        "sentence_2": "We remain vigilant, for the Outlands are a crucibl...",
+        "similarity": 0.2293
+      },
+      {
+        "sentence_pair": "Sentence 7 → Sentence 8",
+        "sentence_1": "We remain vigilant, for the Outlands are a crucibl...",
+        "sentence_2": "Ada’s actions there carry significance beyond her ...",
+        "similarity": 0.1793
+      },
+      {
+        "sentence_pair": "Sentence 8 → Sentence 9",
+        "sentence_1": "Ada’s actions there carry significance beyond her ...",
+        "sentence_2": "they risk stirring dormant powers and shifting the...",
+        "similarity": 0.2739
+      },
+      {
+        "sentence_pair": "Sentence 9 → Sentence 10",
+        "sentence_1": "they risk stirring dormant powers and shifting the...",
+        "sentence_2": "The Council expects her to proceed with caution, t...",
+        "similarity": 0.2886
+      },
+      {
+        "sentence_pair": "Sentence 10 → Sentence 11",
+        "sentence_1": "The Council expects her to proceed with caution, t...",
+        "sentence_2": "We will watch, and we will intervene only if neces...",
+        "similarity": 0.4402
+      },
+      {
+        "sentence_pair": "Sentence 11 → Sentence 12",
+        "sentence_1": "We will watch, and we will intervene only if neces...",
+        "sentence_2": "They remind her (and by extension, Red) that loyal...",
+        "similarity": 0.5572
+      },
+      {
+        "sentence_pair": "Sentence 12 → Sentence 13",
+        "sentence_1": "They remind her (and by extension, Red) that loyal...",
+        "sentence_2": "Red taps through her wrist interface, eyes narrowe...",
+        "similarity": 0.3732
+      },
+      {
+        "sentence_pair": "Sentence 13 → Sentence 14",
+        "sentence_1": "Red taps through her wrist interface, eyes narrowe...",
+        "sentence_2": "She draws a steady breath, shoulders squared, read...",
+        "similarity": 0.4258
+      },
+      {
+        "sentence_pair": "Sentence 14 → Sentence 15",
+        "sentence_1": "She draws a steady breath, shoulders squared, read...",
+        "sentence_2": "Red’s fingertip glided across her wrist interface,...",
+        "similarity": 0.3027
+      },
+      {
+        "sentence_pair": "Sentence 15 → Sentence 16",
+        "sentence_1": "Red’s fingertip glided across her wrist interface,...",
+        "sentence_2": "She scanned the delivery route, mapping every turn...",
+        "similarity": 0.3801
+      },
+      {
+        "sentence_pair": "Sentence 16 → Sentence 17",
+        "sentence_1": "She scanned the delivery route, mapping every turn...",
+        "sentence_2": "Cloaking integrity: 100%.",
+        "similarity": 0.1678
+      },
+      {
+        "sentence_pair": "Sentence 17 → Sentence 18",
+        "sentence_1": "Cloaking integrity: 100%.",
+        "sentence_2": "Communications channel: secure.",
+        "similarity": 0.2985
+      },
+      {
+        "sentence_pair": "Sentence 18 → Sentence 19",
+        "sentence_1": "Communications channel: secure.",
+        "sentence_2": "Her heart thudded in her chest—not with fear, but ...",
+        "similarity": 0.0705
+      },
+      {
+        "sentence_pair": "Sentence 19 → Sentence 20",
+        "sentence_1": "Her heart thudded in her chest—not with fear, but ...",
+        "sentence_2": "The package nestled against her side was stable an...",
+        "similarity": 0.3268
+      },
+      {
+        "sentence_pair": "Sentence 20 → Sentence 21",
+        "sentence_1": "The package nestled against her side was stable an...",
+        "sentence_2": "She drew a steady breath, squared her shoulders, a...",
+        "similarity": 0.3441
+      },
+      {
+        "note": "Only showing first 20 pairs, total of 569 adjacent sentence pairs"
+      }
+    ]
+  },
+  "story_structure_analysis": {
+    "evaluation_mode": "default mode",
+    "event_list": [
+      {
+        "event": "Red stands at attention by the loading bay, checks insulated canister containing rare AI core.",
+        "source": "Red stands at attention by a loading bay, her synthetic joints whirring as she checks the insulated canister containing the rare AI core.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Elder Tech Council materializes on screen, delivers a reflective and cautionary message regarding Dr. Ada Marrow's influence in the Outlands.",
+        "source": "The Elder Tech Council materializes on a nearby screen, but instead of issuing direct instructions, their message is more reflective and cautionary: they acknowledge Dr.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Council broadcasts message to Outlands agents.",
+        "source": "Elder Tech CouncilA holographic seal of the Elder Tech Council flickers to life, broadcasting this message to all relevant listening posts and agents in the Outlands.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red completes final systems check, verifies cloaking, secures communications, confirms core’s status.",
+        "source": "Red, determined and focused, completes her final systems check—scanning her route, verifying cloaking, securing communications, and confirming the core’s status.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red mounts her hoverbike and begins her courier journey into the Outlands.",
+        "source": "She expresses her intent to keep the mission efficient and uneventful, then mounts her hoverbike to begin her journey.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Council logs Red’s departure and continues surveillance, noting broader implications.",
+        "source": "The Council logs her departure and continues surveillance, recognizing that events in the Outlands may have wider implications than a simple delivery.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red approaches Forbidden Zone checkpoint, aware of the challenge ahead.",
+        "source": "As she approaches the checkpoint, Red tightens her grip on the handlebars, fully aware that the true test of her mission is about to begin.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red arrives at steel gate, hood up, clutching sealed courier satchel.",
+        "source": "Red, her jacket hood drawn up against the rain, steps up to the steel gate, clutching a sealed courier satchel.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red scans forged Council pass at checkpoint terminal.",
+        "source": "She scans her forged Council pass at the checkpoint terminal, glancing up as the Border Patrol Drone drops from its rail with a mechanical whir.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Border Patrol Drone drops, scans Red’s credentials and requests package declaration.",
+        "source": "Its speaker crackles, 'Courier credentials detected.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red declares package as Council delivery: tech components, priority clearance.",
+        "source": "' Red, voice low and steady, replies, 'Council delivery: tech components, priority clearance.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red displays datapad with official insignia and digital clearance code to drone.",
+        "source": "Red holds out a datapad displaying the official council insignia and a digital clearance code, maintaining unwavering eye contact with the unseen recipient.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Drone scans package exterior, verifies credentials, emits green status light granting clearance.",
+        "source": "Border Patrol DroneThe drone hovers momentarily, its sensors retracting after a thorough scan, then emits a green status light signifying clearance.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Drone warns any deviation from protocol will result in immediate detainment.",
+        "source": "\"Any deviation from the established protocol will result in immediate detainment,\" it warned, making it clear that mercy was not among its programmed virtues.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red nods, passes the barrier, vanishes into misty Outlands.",
+        "source": "' Red nods and strides past the barrier, boots splashing through puddles as she vanishes into the misty Outlands.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red sprints along perimeter wall, clutching AI core.",
+        "source": "Red sprints along the perimeter wall, boots splashing in puddles as she clutches the insulated AI core beneath her jacket.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf emerges, intercepts Red, raises EMP emitter, demands she hand over the core.",
+        "source": "He raises an EMP emitter, his voice low and calculated: 'Courier, give me the core.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf describes EMP emitter’s destructive capability, threatens Red with its use.",
+        "source": "\"The next pulse wipes every circuit within fifty meters—including the ones keeping you alive.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf gazes over landscape, philosophizes about boundaries between humans and machines.",
+        "source": "Wolf gazes out across a landscape dotted with both human and machine settlements, his expression contemplative, as if weighing the cost of this order.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf questions whether separation is dignity or loneliness, expressing internal conflict.",
+        "source": "In moments like this, when the silence stretched between them and their followers, Wolf couldn’t help but wonder—did the wall they’d built truly preserve the dignity of machines, or did it simply enforce a deeper kind of loneliness?",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red sends encrypted distress ping to her grandmother, prepares for next move.",
+        "source": "Red uses this distraction to launch an encrypted distress ping to her grandmother and prepares her next move.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf commands android pack to fan out and hunt for Red.",
+        "source": "Wolf, regaining his focus, commands his android pack to fan out and hunt, his tactical mind reasserting itself.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Android pack reports anomalous movement and initiates intercept.",
+        "source": "One of the pack’s lieutenants, voice filtered through a low, modulated channel, reported, “Sector three registering anomalous movement, Alpha—initiating intercept.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red triggers smoke grenade, vanishes into fog.",
+        "source": "Red triggers a smoke grenade, filling the alley with vapor, and vanishes into the swirling fog.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf vows Red won't get far.",
+        "source": "She wouldn't get far—not with him on her trail.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red attempts to contact grandmother but receives only static.",
+        "source": "But when Red attempts to establish contact, she’s met only by static and silence—a silence that grows more ominous with every passing moment.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red tries entry code at bunker hatch; panel flashes red.",
+        "source": "The panel flashes red.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Council Security Bot emits sputtering alarm, demands credentials from Red.",
+        "source": "Inside the bunker, the Council Security Bot emits a sputtering alarm, its voice module glitching: 'Intruder—state credentials.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red displays Elder Tech badge, requests access for Dr. Marrow.",
+        "source": "' Red straightens, displays her Elder Tech badge, and speaks with urgency: 'I’m here for Dr.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red pounds on door, voice trembling.",
+        "source": "Red’s metal-knuckled fist thudded anxiously against the weathered alloy door, each strike betraying the tremor in her voice.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Security Bot positions itself between Red and corridor, scans for intrusion.",
+        "source": "Council Security Bot extends its arms, servos whirring, positioning itself squarely between you and the corridor, sensors scanning for signs of intrusion.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Security Bot announces facility compromised, activates protective programming.",
+        "source": "Protective protocol engaged.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Security Bot initiates sector-wide scan protocols.",
+        "source": "Without hesitation, it initiated sector-wide scan protocols, a lattice of silent data beams sweeping out from its battered frame.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Security Bot transmits urgent alert to central command.",
+        "source": "At the same time, it transmitted an urgent alert to central command, notifying them for immediate response.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red clenches fists, steels herself.",
+        "source": "Red clenched her fists, the cool metal of her upgraded knuckles pressing into her palms as she stared out at the wavering line where the city’s ruins met the dusk.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red disengages defensive systems, hesitates before uploading security logs, requests clarification of data use.",
+        "source": "Red disengages defensive systems, but hesitates before beginning the upload process, awaiting clarification.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Security Bot assesses request, after pause ejects data chip into Red’s palm.",
+        "source": "After a tense pause, it ejects a data chip into Red's waiting palm.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red pockets data chip, scans horizon, plots next move.",
+        "source": "She pockets the chip and scans the horizon, already plotting her next move.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red crouches behind rusted fuel dispenser, scans for heat signatures.",
+        "source": "Red crouches behind the rusted fuel dispenser, her fingers tapping the forearm interface to scan for heat signatures.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf steps into open, transmits jamming pulse, scrambles Red’s comms.",
+        "source": "He lifts a palm, transmitting a jamming pulse that scrambles Red's comms.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red hurls flash-sphere toward Wolf.",
+        "source": "Red darts sideways, boots scraping on wet gravel, and hurls a flash-sphere towards Wolf.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf threatens Red, steps forward with predatory intent.",
+        "source": "Wolf narrows his eyes, voice low and menacing, stepping forward with deliberate, predatory intent.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Wolf engage in tense negotiation about the AI core and personal stakes.",
+        "source": "' Instead of a terse exchange, Red and Wolf engage in a tense negotiation, revealing personal stakes: Wolf admits the AI core is key to a promise he made, while Red refuses to surrender it without proof of Wolf's resolve.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf admits AI core is key to a promise.",
+        "source": "“It’s the key to a promise I made long before you ever crossed my path.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf and Red exchange threats and challenges, conversation reveals mutual understanding and respect.",
+        "source": "Their conversation exposes mutual understanding and respect, even as threats escalate.",
+        "chapter": "Chapter 5",
+        "confidence": "medium"
+      },
+      {
+        "event": "Red demands to know what Wolf will sacrifice.",
+        "source": "“So tell me, Wolf—what are you willing to give up to keep yours?",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf reveals willingness to pay any price to fulfill promise.",
+        "source": "“Whatever it costs—blood, bone, or the last shred of my pride—I'll pay it,” he said, his voice low but unwavering, each word a promise etched in steel.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red tightens grip on trinket, challenges Wolf.",
+        "source": "Red’s grip tightened around the trinket, the metallic edges pressing into her palm as she took a deliberate step closer, her gaze unwavering and unafraid.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf signals pack for backup, hunt intensifies with personal challenge.",
+        "source": "Wolf signals his pack through a subsonic ping, summoning backup, but now the hunt is laced with personal challenge—both determined to prove their worth and motivations.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red stands at edge of clearing, holds basket out of reach.",
+        "source": "Red stood at the edge of the clearing, the basket clutched firmly in her hand, just beyond Wolf’s reach.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf steps forward, claws flexing.",
+        "source": "Wolf stepped forward, his gaze never wavering from Red, claws flexing in anticipation—a predator savoring the chase.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red stands her ground, challenges Wolf.",
+        "source": "\"Then come and get it, Wolf,\" she challenged, her voice steady and unflinching, \"but be warned—I’m not afraid to bite back.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf circles Red, tension and anticipation rising.",
+        "source": "Wolf circled Red with deliberate slowness, his eyes narrowing to slits as he gauged every twitch and shifting muscle.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red squares stance, tension crackles as confrontation escalates.",
+        "source": "Red squared her stance, grounding herself with practiced precision as the faint whir of her upgraded servos hummed beneath her skin.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf tries to trap Red and seize AI core; Red attempts to evade.",
+        "source": "The objective remains: Wolf tries to trap Red and seize the AI core;",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf’s jamming disrupts Red’s comms, she escapes initial trap, Wolf calls android pack to close escape routes.",
+        "source": "she escapes the initial trap, forcing Wolf to call in his android pack to close off her escape routes, but the clash is now driven by promises, pride, and personal history as much as by the mission.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red disappears into shadows, Wolf’s androids fan out.",
+        "source": "As Red disappears into the shadows beyond the ruined relay station, Wolf’s androids fan out, tightening the net around her.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red ducks beneath sparking wire, scans for hostile signals, clutching AI core case.",
+        "source": "Red, her synthetic boots leaving prints in the damp soil, ducks beneath a sparking wire and scans for hostile android signals, clutching the insulated case containing the AI core.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother emerges, disables outer defense grid, inspects Red and case for damage.",
+        "source": "Upon arrival, Grandmother emerges from behind a camouflaged blast door, disables the outer defense grid, and quickly approaches Red, scrutinizing her for damage and inspecting the case.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red voices concerns about new security upgrades, demands transparency before proceeding.",
+        "source": "Red, wary after previous incidents, voices her concerns about new security upgrades and demands transparency before proceeding further.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother insists on handling biometric seal herself, reassures Red only trusted people are inside.",
+        "source": "Grandmother, equally cautious, insists on handling the biometric seal herself and reassures Red that only trusted individuals are inside the bunker.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red watches Grandmother unlock biometric seal.",
+        "source": "Red watched her grandmother’s steady hands as she unlocked the biometric seal, the faint whir of ancient tech mingling with the soft click of the case.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother unlocks biometric seal on the case.",
+        "source": "Grandmother’s fingers danced across the biometric seal with practiced precision, the case responding to her touch with a quiet click.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red steps over threshold, scans for surveillance nodes.",
+        "source": "Red stepped over the threshold, her boots barely making a sound against the polished tile.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother leads Red down corridor, case in hand.",
+        "source": "Grandmother’s footsteps echoed softly as she ushered Red deeper into the dim corridor, her grip on the case never wavering.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red steps cautiously past threshold and follows Grandmother.",
+        "source": "Red lingered on the threshold, sensors humming quietly beneath her skin as she swept the dim room for anything out of place.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother glances at sealed case, leads Red toward reinforced inner chamber.",
+        "source": "Grandmother’s sharp eyes lingered on the sealed case for a moment, her expression unreadable in the low light.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red scans corridor for hidden watchers.",
+        "source": "Red stepped over the threshold, her sensors quietly sweeping the dimly lit corridor for any sign of hidden watchers or concealed security traps.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother reseals doorway, tightens grip on case.",
+        "source": "Grandmother pressed her palm to the reader and waited for the soft click of the biometric lock, her eyes darting back to Red as the doorway sealed behind them.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "They move toward bunker entrance as blast door closes.",
+        "source": "Together, they move toward the bunker entrance, negotiating trust and the gravity of their task, as the blast door closes, isolating them inside, with both on heightened alert given the dangerous cargo and the threat of Wolf’s pack.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red sprints across concrete clutching AI core case, maintains comms with Grandmother Ada Marrow.",
+        "source": "Red sprints across the slick concrete, clutching the insulated case containing the AI core, while staying in close comms with her grandmother, Dr.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf and android pack close in, Ada triggers perimeter alarms and smoke dispersal to distract them.",
+        "source": "As Wolf and his android pack close in, Ada remotely triggers the perimeter alarms and activates smoke dispersal in the east corridor to draw the pack’s attention, signaling Red to slip toward the maintenance hatch.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red coordinates movements with Ada’s distractions, narrowly evading Wolf’s forces.",
+        "source": "Red coordinates her movements with Ada’s distractions, narrowly evading Wolf’s encircling forces.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf taunts Red over comms, offers legendary upgrades for core, Red refuses and exposes his motives.",
+        "source": "Wolf taunts Red over the comms, offering legendary upgrades in exchange for the core, but Red calls out his true intentions and refuses.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf commands android pack to intercept from west channel, lock down escape routes.",
+        "source": "Wolf intensifies his pursuit, commanding his android pack to intercept from the west channel and lock down all escape routes.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red signals Ada for help, crouches behind crates, scans for danger.",
+        "source": "Red ducks behind a stack of crates, breath quickening, eyes scanning the shadows while urgently signaling to Grandmother Ada for help.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Ada triggers alarms and smoke in corridors, providing Red with escape opportunity.",
+        "source": "Ada Marrow)Ada rapidly types commands into her console, red warning lights and dense smoke erupting down the eastern hallways to draw attention away from Red's position.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red prepares to dash for maintenance hatch as alarms and smoke cloak her movement.",
+        "source": "Red crouches low, eyes fixed on the maintenance hatch, pulse racing as alarms begin to blare.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Ada monitors feeds, signals Red to move, patrols veer toward smoke.",
+        "source": "Only when she saw the patrols veer toward the plumes of smoke did she offer the signal.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf emerges from shadows, blocks Red’s escape.",
+        "source": "Wolf emerged from the darkness, his metal frame catching the harsh light in sharp, deliberate flashes.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red darts into trees, pushes servos to outrun Wolf’s net.",
+        "source": "Red darted into the shadowed trees, her breath quickening as she scanned the dim forest for any gap in Wolf’s tightening net.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf’s voice echoes, Red searches for escape, realizes options are calculated and few.",
+        "source": "But Wolf’s metallic voice reverberated through the darkness, calm and unyielding, stripping away any illusion of safety.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red prepares to carve a new path, refusing to be cornered.",
+        "source": "“Then I guess I’ll just have to carve a new path,” she murmured, not as a boast but as a promise—to herself, to her family’s legacy, and to the city that depended on her.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red reaches maintenance hatch, seals it behind her as Wolf’s forces breach perimeter.",
+        "source": "Despite the tightening net, Red leverages Ada’s support and her own quick thinking to reach the maintenance hatch and seals it behind her, just as Wolf’s forces breach the outer perimeter.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf offers upgrades for core, Red questions his true intentions.",
+        "source": "Red narrows their eyes, arms folded, voice edged with suspicion but laced with curiosity.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf claims core will unlock new era, promises power, threatens consequences if Red hesitates.",
+        "source": "“Let’s just say the core will unlock a new era—one where those with vision remake the world, and those without get left behind.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red steps back, tightly grips core, refuses Wolf’s offer.",
+        "source": "Red took a steady step back, feeling the cool metal of the core pressed firmly against her palm.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red prepares to access grandmother’s hidden bunker as Wolf’s pack commits to stopping her.",
+        "source": "The confrontation escalates as Red prepares to access her grandmother’s hidden bunker, with Wolf’s pack now fully committed to stopping her.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red vanishes into relay station shadows, core secure, Wolf’s forces fading.",
+        "source": "With the core secure and Wolf’s forces fading into the chaos behind her, Red vanished into the shadows of the relay station, carrying hope—and the future—toward the dawn.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      }
+    ],
+    "Papalampidi_detailed_results": {
+      "turning_points": {
+        "TP1": "Red stands at attention by the loading bay, checks insulated canister containing rare AI core.",
+        "TP2": "Wolf emerges, intercepts Red, raises EMP emitter, demands she hand over the core.",
+        "TP3": "Red attempts to contact grandmother but receives only static.",
+        "TP4": "Wolf and android pack close in, Ada triggers perimeter alarms and smoke dispersal to distract them.",
+        "TP5": "Red reaches maintenance hatch, seals it behind her as Wolf’s forces breach perimeter."
+      },
+      "stage_division": {
+        "Setup": [
+          "Red stands at attention by the loading bay, checks insulated canister containing rare AI core.",
+          "Elder Tech Council materializes on screen, delivers a reflective and cautionary message regarding Dr. Ada Marrow's influence in the Outlands.",
+          "Council broadcasts message to Outlands agents.",
+          "Red completes final systems check, verifies cloaking, secures communications, confirms core’s status."
+        ],
+        "New Situation": [
+          "Red mounts her hoverbike and begins her courier journey into the Outlands.",
+          "Council logs Red’s departure and continues surveillance, noting broader implications."
+        ],
+        "Progress": [
+          "Red approaches Forbidden Zone checkpoint, aware of the challenge ahead.",
+          "Red arrives at steel gate, hood up, clutching sealed courier satchel.",
+          "Red scans forged Council pass at checkpoint terminal.",
+          "Border Patrol Drone drops, scans Red’s credentials and requests package declaration.",
+          "Red declares package as Council delivery: tech components, priority clearance.",
+          "Red displays datapad with official insignia and digital clearance code to drone.",
+          "Drone scans package exterior, verifies credentials, emits green status light granting clearance.",
+          "Drone warns any deviation from protocol will result in immediate detainment.",
+          "Red nods, passes the barrier, vanishes into misty Outlands.",
+          "Red sprints along perimeter wall, clutching AI core."
+        ],
+        "Complications": [
+          "Wolf emerges, intercepts Red, raises EMP emitter, demands she hand over the core.",
+          "Wolf describes EMP emitter’s destructive capability, threatens Red with its use.",
+          "Wolf gazes over landscape, philosophizes about boundaries between humans and machines.",
+          "Wolf questions whether separation is dignity or loneliness, expressing internal conflict.",
+          "Red sends encrypted distress ping to her grandmother, prepares for next move.",
+          "Wolf commands android pack to fan out and hunt for Red.",
+          "Android pack reports anomalous movement and initiates intercept.",
+          "Red triggers smoke grenade, vanishes into fog.",
+          "Wolf vows Red won't get far.",
+          "Red attempts to contact grandmother but receives only static.",
+          "Red tries entry code at bunker hatch; panel flashes red.",
+          "Council Security Bot emits sputtering alarm, demands credentials from Red.",
+          "Red displays Elder Tech badge, requests access for Dr. Marrow.",
+          "Red pounds on door, voice trembling.",
+          "Security Bot positions itself between Red and corridor, scans for intrusion.",
+          "Security Bot announces facility compromised, activates protective programming.",
+          "Security Bot initiates sector-wide scan protocols.",
+          "Security Bot transmits urgent alert to central command.",
+          "Red clenches fists, steels herself.",
+          "Red disengages defensive systems, hesitates before uploading security logs, requests clarification of data use.",
+          "Security Bot assesses request, after pause ejects data chip into Red’s palm.",
+          "Red pockets data chip, scans horizon, plots next move.",
+          "Red crouches behind rusted fuel dispenser, scans for heat signatures.",
+          "Wolf steps into open, transmits jamming pulse, scrambles Red’s comms.",
+          "Red hurls flash-sphere toward Wolf.",
+          "Wolf threatens Red, steps forward with predatory intent.",
+          "Red and Wolf engage in tense negotiation about the AI core and personal stakes.",
+          "Wolf admits AI core is key to a promise.",
+          "Wolf and Red exchange threats and challenges, conversation reveals mutual understanding and respect.",
+          "Red demands to know what Wolf will sacrifice.",
+          "Wolf reveals willingness to pay any price to fulfill promise.",
+          "Red tightens grip on trinket, challenges Wolf.",
+          "Wolf signals pack for backup, hunt intensifies with personal challenge.",
+          "Red stands at edge of clearing, holds basket out of reach.",
+          "Wolf steps forward, claws flexing.",
+          "Red stands her ground, challenges Wolf.",
+          "Wolf circles Red, tension and anticipation rising.",
+          "Red squares stance, tension crackles as confrontation escalates.",
+          "Wolf tries to trap Red and seize AI core; Red attempts to evade.",
+          "Wolf’s jamming disrupts Red’s comms, she escapes initial trap, Wolf calls android pack to close escape routes.",
+          "Red disappears into shadows, Wolf’s androids fan out.",
+          "Red ducks beneath sparking wire, scans for hostile signals, clutching AI core case.",
+          "Grandmother emerges, disables outer defense grid, inspects Red and case for damage.",
+          "Red voices concerns about new security upgrades, demands transparency before proceeding.",
+          "Grandmother insists on handling biometric seal herself, reassures Red only trusted people are inside.",
+          "Red watches Grandmother unlock biometric seal.",
+          "Grandmother unlocks biometric seal on the case.",
+          "Red steps over threshold, scans for surveillance nodes.",
+          "Grandmother leads Red down corridor, case in hand.",
+          "Red steps cautiously past threshold and follows Grandmother.",
+          "Grandmother glances at sealed case, leads Red toward reinforced inner chamber.",
+          "Red scans corridor for hidden watchers.",
+          "Grandmother reseals doorway, tightens grip on case.",
+          "They move toward bunker entrance as blast door closes.",
+          "Red sprints across concrete clutching AI core case, maintains comms with Grandmother Ada Marrow.",
+          "Wolf and android pack close in, Ada triggers perimeter alarms and smoke dispersal to distract them.",
+          "Red coordinates movements with Ada’s distractions, narrowly evading Wolf’s forces.",
+          "Wolf taunts Red over comms, offers legendary upgrades for core, Red refuses and exposes his motives.",
+          "Wolf commands android pack to intercept from west channel, lock down escape routes.",
+          "Red signals Ada for help, crouches behind crates, scans for danger.",
+          "Ada triggers alarms and smoke in corridors, providing Red with escape opportunity.",
+          "Red prepares to dash for maintenance hatch as alarms and smoke cloak her movement.",
+          "Ada monitors feeds, signals Red to move, patrols veer toward smoke.",
+          "Wolf emerges from shadows, blocks Red’s escape.",
+          "Red darts into trees, pushes servos to outrun Wolf’s net.",
+          "Wolf’s voice echoes, Red searches for escape, realizes options are calculated and few.",
+          "Red prepares to carve a new path, refusing to be cornered."
+        ],
+        "Final Push": [
+          "Red reaches maintenance hatch, seals it behind her as Wolf’s forces breach perimeter.",
+          "Wolf offers upgrades for core, Red questions his true intentions.",
+          "Wolf claims core will unlock new era, promises power, threatens consequences if Red hesitates.",
+          "Red steps back, tightly grips core, refuses Wolf’s offer.",
+          "Red prepares to access grandmother’s hidden bunker as Wolf’s pack commits to stopping her.",
+          "Red vanishes into relay station shadows, core secure, Wolf’s forces fading."
+        ],
+        "Aftermath": []
+      }
+    },
+    "Li_detailed_results": {
+      "Red stands at attention by the loading bay, checks insulated canister containing rare AI core.": "Orientation",
+      "Elder Tech Council materializes on screen, delivers a reflective and cautionary message regarding Dr. Ada Marrow's influence in the Outlands.": "Evaluation",
+      "Council broadcasts message to Outlands agents.": "Direct Comment",
+      "Red completes final systems check, verifies cloaking, secures communications, confirms core’s status.": "Orientation",
+      "Red mounts her hoverbike and begins her courier journey into the Outlands.": "Abstract",
+      "Council logs Red’s departure and continues surveillance, noting broader implications.": "Evaluation",
+      "Red approaches Forbidden Zone checkpoint, aware of the challenge ahead.": "Complicating Action",
+      "Red arrives at steel gate, hood up, clutching sealed courier satchel.": "Complicating Action",
+      "Red scans forged Council pass at checkpoint terminal.": "Complicating Action",
+      "Border Patrol Drone drops, scans Red’s credentials and requests package declaration.": "Complicating Action",
+      "Red declares package as Council delivery: tech components, priority clearance.": "Minor Resolution",
+      "Red displays datapad with official insignia and digital clearance code to drone.": "Minor Resolution",
+      "Drone scans package exterior, verifies credentials, emits green status light granting clearance.": "Minor Resolution",
+      "Drone warns any deviation from protocol will result in immediate detainment.": "Complicating Action",
+      "Red nods, passes the barrier, vanishes into misty Outlands.": "Minor Resolution",
+      "Red sprints along perimeter wall, clutching AI core.": "Complicating Action",
+      "Wolf emerges, intercepts Red, raises EMP emitter, demands she hand over the core.": "MRE",
+      "Wolf describes EMP emitter’s destructive capability, threatens Red with its use.": "Complicating Action",
+      "Wolf gazes over landscape, philosophizes about boundaries between humans and machines.": "Evaluation",
+      "Wolf questions whether separation is dignity or loneliness, expressing internal conflict.": "Evaluation",
+      "Red sends encrypted distress ping to her grandmother, prepares for next move.": "Minor Resolution",
+      "Wolf commands android pack to fan out and hunt for Red.": "Return of MRE",
+      "Android pack reports anomalous movement and initiates intercept.": "Complicating Action",
+      "Red triggers smoke grenade, vanishes into fog.": "Minor Resolution",
+      "Wolf vows Red won't get far.": "Complicating Action",
+      "Red attempts to contact grandmother but receives only static.": "Complicating Action",
+      "Red tries entry code at bunker hatch; panel flashes red.": "Complicating Action",
+      "Council Security Bot emits sputtering alarm, demands credentials from Red.": "Complicating Action",
+      "Red displays Elder Tech badge, requests access for Dr. Marrow.": "Minor Resolution",
+      "Red pounds on door, voice trembling.": "Complicating Action",
+      "Security Bot positions itself between Red and corridor, scans for intrusion.": "Complicating Action",
+      "Security Bot announces facility compromised, activates protective programming.": "Complicating Action",
+      "Security Bot initiates sector-wide scan protocols.": "Complicating Action",
+      "Security Bot transmits urgent alert to central command.": "Complicating Action",
+      "Red clenches fists, steels herself.": "Minor Resolution",
+      "Red disengages defensive systems, hesitates before uploading security logs, requests clarification of data use.": "Complicating Action",
+      "Security Bot assesses request, after pause ejects data chip into Red’s palm.": "Minor Resolution",
+      "Red pockets data chip, scans horizon, plots next move.": "Minor Resolution",
+      "Red crouches behind rusted fuel dispenser, scans for heat signatures.": "Complicating Action",
+      "Wolf steps into open, transmits jamming pulse, scrambles Red’s comms.": "Complicating Action",
+      "Red hurls flash-sphere toward Wolf.": "Complicating Action",
+      "Wolf threatens Red, steps forward with predatory intent.": "Complicating Action",
+      "Red and Wolf engage in tense negotiation about the AI core and personal stakes.": "MRE",
+      "Wolf admits AI core is key to a promise.": "Return of MRE",
+      "Wolf and Red exchange threats and challenges, conversation reveals mutual understanding and respect.": "Evaluation",
+      "Red demands to know what Wolf will sacrifice.": "Complicating Action",
+      "Wolf reveals willingness to pay any price to fulfill promise.": "Complicating Action",
+      "Red tightens grip on trinket, challenges Wolf.": "Complicating Action",
+      "Wolf signals pack for backup, hunt intensifies with personal challenge.": "Return of MRE",
+      "Red stands at edge of clearing, holds basket out of reach.": "Complicating Action",
+      "Wolf steps forward, claws flexing.": "Complicating Action",
+      "Red stands her ground, challenges Wolf.": "Complicating Action",
+      "Wolf circles Red, tension and anticipation rising.": "Complicating Action",
+      "Red squares stance, tension crackles as confrontation escalates.": "Complicating Action",
+      "Wolf tries to trap Red and seize AI core; Red attempts to evade.": "MRE",
+      "Wolf’s jamming disrupts Red’s comms, she escapes initial trap, Wolf calls android pack to close escape routes.": "Complicating Action",
+      "Red disappears into shadows, Wolf’s androids fan out.": "Minor Resolution",
+      "Red ducks beneath sparking wire, scans for hostile signals, clutching AI core case.": "Complicating Action",
+      "Grandmother emerges, disables outer defense grid, inspects Red and case for damage.": "Minor Resolution",
+      "Red voices concerns about new security upgrades, demands transparency before proceeding.": "Evaluation",
+      "Grandmother insists on handling biometric seal herself, reassures Red only trusted people are inside.": "Minor Resolution",
+      "Red watches Grandmother unlock biometric seal.": "Minor Resolution",
+      "Grandmother unlocks biometric seal on the case.": "Resolution",
+      "Red steps over threshold, scans for surveillance nodes.": "Orientation",
+      "Grandmother leads Red down corridor, case in hand.": "Orientation",
+      "Red steps cautiously past threshold and follows Grandmother.": "Orientation",
+      "Grandmother glances at sealed case, leads Red toward reinforced inner chamber.": "Orientation",
+      "Red scans corridor for hidden watchers.": "Orientation",
+      "Grandmother reseals doorway, tightens grip on case.": "Resolution",
+      "They move toward bunker entrance as blast door closes.": "Resolution",
+      "Red sprints across concrete clutching AI core case, maintains comms with Grandmother Ada Marrow.": "Complicating Action",
+      "Wolf and android pack close in, Ada triggers perimeter alarms and smoke dispersal to distract them.": "Minor Resolution",
+      "Red coordinates movements with Ada’s distractions, narrowly evading Wolf’s forces.": "Minor Resolution",
+      "Wolf taunts Red over comms, offers legendary upgrades for core, Red refuses and exposes his motives.": "Return of MRE",
+      "Wolf commands android pack to intercept from west channel, lock down escape routes.": "Complicating Action",
+      "Red signals Ada for help, crouches behind crates, scans for danger.": "Complicating Action",
+      "Ada triggers alarms and smoke in corridors, providing Red with escape opportunity.": "Minor Resolution",
+      "Red prepares to dash for maintenance hatch as alarms and smoke cloak her movement.": "Minor Resolution",
+      "Ada monitors feeds, signals Red to move, patrols veer toward smoke.": "Minor Resolution",
+      "Wolf emerges from shadows, blocks Red’s escape.": "MRE",
+      "Red darts into trees, pushes servos to outrun Wolf’s net.": "Complicating Action",
+      "Wolf’s voice echoes, Red searches for escape, realizes options are calculated and few.": "Evaluation",
+      "Red prepares to carve a new path, refusing to be cornered.": "Aftermath",
+      "Red reaches maintenance hatch, seals it behind her as Wolf’s forces breach perimeter.": "Resolution",
+      "Wolf offers upgrades for core, Red questions his true intentions.": "Return of MRE",
+      "Wolf claims core will unlock new era, promises power, threatens consequences if Red hesitates.": "Return of MRE",
+      "Red steps back, tightly grips core, refuses Wolf’s offer.": "Resolution",
+      "Red prepares to access grandmother’s hidden bunker as Wolf’s pack commits to stopping her.": "Complicating Action",
+      "Red vanishes into relay station shadows, core secure, Wolf’s forces fading.": "Aftermath"
+    },
+    "structure_analysis": {
+      "basic_info": {
+        "total_events": 89,
+        "analysis_mode": "default",
+        "analysis_time": null
+      },
+      "Papalampidi_structure_analysis": {
+        "turning_point_integrity": {
+          "identified_tps": [
+            "TP1",
+            "TP2",
+            "TP3",
+            "TP4",
+            "TP5"
+          ],
+          "missing_tps": [],
+          "TP_coverage": "5/5"
+        },
+        "stage_integrity": {
+          "identified_stages": [
+            "Setup",
+            "New Situation",
+            "Progress",
+            "Complications",
+            "Final Push"
+          ],
+          "missing_stages": [
+            "Aftermath"
+          ],
+          "stage_coverage": "5/6"
+        }
+      },
+      "Li_function_analysis": {
+        "core_function_check": {
+          "Orientation": "exists",
+          "Complicating Action": "exists",
+          "MRE": "exists",
+          "Resolution": "exists"
+        },
+        "function_distribution": {
+          "Orientation": 7,
+          "Evaluation": 7,
+          "Direct Comment": 1,
+          "Abstract": 1,
+          "Complicating Action": 37,
+          "Minor Resolution": 19,
+          "MRE": 4,
+          "Return of MRE": 6,
+          "Resolution": 5,
+          "Aftermath": 2
+        },
+        "function_diversity": 10
+      }
+    }
+  }
+}

@@ -1,0 +1,391 @@
+{
+  "enhanced_diversity_analysis": {
+    "total_samples": 54,
+    "analysis_date": "2025-09-14T13:49:02.249344",
+    "upstream_diversity_used": true,
+    "metrics_analyzed": [
+      "distinct_avg",
+      "one_minus_self_bleu",
+      "alpha_value",
+      "diversity_group_score"
+    ],
+    "enhancements_applied": [
+      "seed_cv_stability_analysis",
+      "alpha_rebalancing",
+      "robust_statistical_testing",
+      "formal_temperature_analysis"
+    ]
+  },
+  "health_assessment": {
+    "distinct_avg": {
+      "healthy_count": "54",
+      "problematic_count": "0",
+      "total_count": 54,
+      "healthy_percentage": 100.0,
+      "problematic_percentage": 0.0,
+      "mean_score": 0.6359145158360527,
+      "std_score": 0.022540930452469136
+    },
+    "diversity_enhanced": {
+      "high_diversity_count": "42",
+      "low_diversity_count": "0",
+      "total_count": 54,
+      "high_diversity_percentage": 77.77777777777779,
+      "low_diversity_percentage": 0.0,
+      "mean_score": 0.7287587298255958,
+      "std_score": 0.03350190539637988
+    },
+    "alpha_enhanced": {
+      "balanced_count": "54",
+      "bleu_dependent_count": "0",
+      "distinct_dependent_count": "0",
+      "total_count": 54,
+      "balanced_percentage": 100.0,
+      "bleu_dependent_percentage": 0.0,
+      "distinct_dependent_percentage": 0.0,
+      "mean_score": 0.39166666666666666,
+      "std_score": 0.018808869846581984
+    }
+  },
+  "stability_analysis": {
+    "cv_results": {
+      "Horror_linear_T0.3": {
+        "genre": "Horror",
+        "structure": "linear",
+        "temperature": 0.3,
+        "n_seeds": 3,
+        "overall_cv": 0.02473854209204218,
+        "diversity_cv": 0.029269702126481917,
+        "distinct_cv": 0.012561643433724574,
+        "bleu_cv": 0.032384280715920054,
+        "mean_diversity": 0.6542606832932821,
+        "mean_distinct": 0.6153139187704406,
+        "mean_bleu": 0.8267625397919706
+      },
+      "Horror_linear_T0.7": {
+        "genre": "Horror",
+        "structure": "linear",
+        "temperature": 0.7,
+        "n_seeds": 3,
+        "overall_cv": 0.06896226351294756,
+        "diversity_cv": 0.10285547681571543,
+        "distinct_cv": 0.02086859965414593,
+        "bleu_cv": 0.08316271406898129,
+        "mean_diversity": 0.690608297351783,
+        "mean_distinct": 0.6219586360499404,
+        "mean_bleu": 0.8786341501237723
+      },
+      "Horror_linear_T0.9": {
+        "genre": "Horror",
+        "structure": "linear",
+        "temperature": 0.9,
+        "n_seeds": 3,
+        "overall_cv": 0.017671643030424775,
+        "diversity_cv": 0.006802860874707421,
+        "distinct_cv": 0.019029536299557975,
+        "bleu_cv": 0.027182531917008923,
+        "mean_diversity": 0.6649121155055406,
+        "mean_distinct": 0.6176609659072198,
+        "mean_bleu": 0.835562435893479
+      },
+      "Horror_nonlinear_T0.3": {
+        "genre": "Horror",
+        "structure": "nonlinear",
+        "temperature": 0.3,
+        "n_seeds": 3,
+        "overall_cv": 0.03467484329356705,
+        "diversity_cv": 0.032322677121048395,
+        "distinct_cv": 0.01715415788822527,
+        "bleu_cv": 0.05454769487142748,
+        "mean_diversity": 0.6669103958315951,
+        "mean_distinct": 0.6273325742827491,
+        "mean_bleu": 0.824027070460246
+      },
+      "Horror_nonlinear_T0.7": {
+        "genre": "Horror",
+        "structure": "nonlinear",
+        "temperature": 0.7,
+        "n_seeds": 3,
+        "overall_cv": 0.06657977665073707,
+        "diversity_cv": 0.09638753090944607,
+        "distinct_cv": 0.0370993507290543,
+        "bleu_cv": 0.06625244831371087,
+        "mean_diversity": 0.7100041986154245,
+        "mean_distinct": 0.6319035677387327,
+        "mean_bleu": 0.8961614394457911
+      },
+      "Horror_nonlinear_T0.9": {
+        "genre": "Horror",
+        "structure": "nonlinear",
+        "temperature": 0.9,
+        "n_seeds": 3,
+        "overall_cv": 0.021987530699223382,
+        "diversity_cv": 0.010443762019338436,
+        "distinct_cv": 0.02725967277309002,
+        "bleu_cv": 0.02825915730524169,
+        "mean_diversity": 0.6891027934306432,
+        "mean_distinct": 0.6237751073712613,
+        "mean_bleu": 0.8598105254643373
+      },
+      "Romance_linear_T0.3": {
+        "genre": "Romance",
+        "structure": "linear",
+        "temperature": 0.3,
+        "n_seeds": 3,
+        "overall_cv": 0.014708082739772789,
+        "diversity_cv": 0.024589347627056352,
+        "distinct_cv": 0.0037323647117462415,
+        "bleu_cv": 0.015802535880515774,
+        "mean_diversity": 0.6525162334036757,
+        "mean_distinct": 0.6154734948760513,
+        "mean_bleu": 0.8351117601942861
+      },
+      "Romance_linear_T0.7": {
+        "genre": "Romance",
+        "structure": "linear",
+        "temperature": 0.7,
+        "n_seeds": 3,
+        "overall_cv": 0.029011609095582435,
+        "diversity_cv": 0.02177538219059754,
+        "distinct_cv": 0.015202063892765768,
+        "bleu_cv": 0.05005738120338399,
+        "mean_diversity": 0.6117624605728745,
+        "mean_distinct": 0.6212418576373123,
+        "mean_bleu": 0.772679422527314
+      },
+      "Romance_linear_T0.9": {
+        "genre": "Romance",
+        "structure": "linear",
+        "temperature": 0.9,
+        "n_seeds": 3,
+        "overall_cv": 0.046357918435613044,
+        "diversity_cv": 0.060840782611576494,
+        "distinct_cv": 0.03151351689959622,
+        "bleu_cv": 0.046719455795666415,
+        "mean_diversity": 0.6922640243733609,
+        "mean_distinct": 0.6340306288949146,
+        "mean_bleu": 0.8769085683452081
+      },
+      "Romance_nonlinear_T0.3": {
+        "genre": "Romance",
+        "structure": "nonlinear",
+        "temperature": 0.3,
+        "n_seeds": 3,
+        "overall_cv": 0.02899509575219984,
+        "diversity_cv": 0.043525989068041435,
+        "distinct_cv": 0.02115701181694294,
+        "bleu_cv": 0.022302286371615125,
+        "mean_diversity": 0.6843962831656635,
+        "mean_distinct": 0.6237971529538837,
+        "mean_bleu": 0.8661299287353909
+      },
+      "Romance_nonlinear_T0.7": {
+        "genre": "Romance",
+        "structure": "nonlinear",
+        "temperature": 0.7,
+        "n_seeds": 3,
+        "overall_cv": 0.0142514597393186,
+        "diversity_cv": 0.002810285914693266,
+        "distinct_cv": 0.011080977094130876,
+        "bleu_cv": 0.028863116209131658,
+        "mean_diversity": 0.6689491699792938,
+        "mean_distinct": 0.6320611652874585,
+        "mean_bleu": 0.8415394224436165
+      },
+      "Romance_nonlinear_T0.9": {
+        "genre": "Romance",
+        "structure": "nonlinear",
+        "temperature": 0.9,
+        "n_seeds": 3,
+        "overall_cv": 0.04355433842991458,
+        "diversity_cv": 0.06306320243197833,
+        "distinct_cv": 0.029363143569818513,
+        "bleu_cv": 0.038236669287946924,
+        "mean_diversity": 0.660155666489425,
+        "mean_distinct": 0.6156059121854577,
+        "mean_bleu": 0.8564083125162849
+      },
+      "SciFi_linear_T0.3": {
+        "genre": "SciFi",
+        "structure": "linear",
+        "temperature": 0.3,
+        "n_seeds": 3,
+        "overall_cv": 0.021848374961667583,
+        "diversity_cv": 0.02210172980591878,
+        "distinct_cv": 0.028110249839885654,
+        "bleu_cv": 0.015333145239198315,
+        "mean_diversity": 0.7602729000451353,
+        "mean_distinct": 0.668297113072113,
+        "mean_bleu": 0.9266581867552645
+      },
+      "SciFi_linear_T0.7": {
+        "genre": "SciFi",
+        "structure": "linear",
+        "temperature": 0.7,
+        "n_seeds": 3,
+        "overall_cv": 0.02051432861083399,
+        "diversity_cv": 0.03225163038686498,
+        "distinct_cv": 0.016092908277655162,
+        "bleu_cv": 0.01319844716798183,
+        "mean_diversity": 0.7542462027859345,
+        "mean_distinct": 0.6700089744657053,
+        "mean_bleu": 0.9273712654849562
+      },
+      "SciFi_linear_T0.9": {
+        "genre": "SciFi",
+        "structure": "linear",
+        "temperature": 0.9,
+        "n_seeds": 3,
+        "overall_cv": 0.04174202210526377,
+        "diversity_cv": 0.0617573889137972,
+        "distinct_cv": 0.023469919406435842,
+        "bleu_cv": 0.039998757995558264,
+        "mean_diversity": 0.7587249104670931,
+        "mean_distinct": 0.6683457102421387,
+        "mean_bleu": 0.9208381695979266
+      },
+      "SciFi_nonlinear_T0.3": {
+        "genre": "SciFi",
+        "structure": "nonlinear",
+        "temperature": 0.3,
+        "n_seeds": 3,
+        "overall_cv": 0.019026382306995895,
+        "diversity_cv": 0.028524001915550747,
+        "distinct_cv": 0.01759451330570258,
+        "bleu_cv": 0.010960631699734356,
+        "mean_diversity": 0.7476913859478019,
+        "mean_distinct": 0.649543382045305,
+        "mean_bleu": 0.9249702029596879
+      },
+      "SciFi_nonlinear_T0.7": {
+        "genre": "SciFi",
+        "structure": "nonlinear",
+        "temperature": 0.7,
+        "n_seeds": 3,
+        "overall_cv": 0.04872132549798324,
+        "diversity_cv": 0.075005263828764,
+        "distinct_cv": 0.023835901340558,
+        "bleu_cv": 0.0473228113246277,
+        "mean_diversity": 0.7596113043397411,
+        "mean_distinct": 0.6603009176009176,
+        "mean_bleu": 0.9363649172274132
+      },
+      "SciFi_nonlinear_T0.9": {
+        "genre": "SciFi",
+        "structure": "nonlinear",
+        "temperature": 0.9,
+        "n_seeds": 3,
+        "overall_cv": 0.019397412055459532,
+        "diversity_cv": 0.0167546355592328,
+        "distinct_cv": 0.011039171614539715,
+        "bleu_cv": 0.030398428992606086,
+        "mean_diversity": 0.7193125220897816,
+        "mean_distinct": 0.6498102056673486,
+        "mean_bleu": 0.8952568178187615
+      }
+    },
+    "stability_summary": {
+      "stable_combinations": [
+        "Horror_linear_T0.3",
+        "Horror_linear_T0.7",
+        "Horror_linear_T0.9",
+        "Horror_nonlinear_T0.3",
+        "Horror_nonlinear_T0.7",
+        "Horror_nonlinear_T0.9",
+        "Romance_linear_T0.3",
+        "Romance_linear_T0.7",
+        "Romance_linear_T0.9",
+        "Romance_nonlinear_T0.3",
+        "Romance_nonlinear_T0.7",
+        "Romance_nonlinear_T0.9",
+        "SciFi_linear_T0.3",
+        "SciFi_linear_T0.7",
+        "SciFi_linear_T0.9",
+        "SciFi_nonlinear_T0.3",
+        "SciFi_nonlinear_T0.7",
+        "SciFi_nonlinear_T0.9"
+      ],
+      "moderate_combinations": [],
+      "unstable_combinations": []
+    }
+  },
+  "alpha_rebalancing": {
+    "original_mean": 0.39166666666666666,
+    "clipped_mean": 0.39166666666666666,
+    "enhanced_mean": 0.39166666666666666,
+    "target_range": [
+      0.35,
+      0.65
+    ]
+  },
+  "enhanced_statistics": {
+    "structure_comparison": {
+      "t_statistic": -0.5145029040261027,
+      "t_p_value": 0.6090803658107117,
+      "u_statistic": 313.0,
+      "u_p_value": 0.3776152433844582,
+      "cohens_d": 0.14002995400489962,
+      "effect_size_interpretation": "negligible",
+      "mean_difference": 0.00739621023229875,
+      "ci_95_lower": -0.023372465822752476,
+      "ci_95_upper": 0.03514443981906768,
+      "linear_mean": 0.6932853141998534,
+      "nonlinear_mean": 0.7006815244321521,
+      "linear_n": 27,
+      "nonlinear_n": 27
+    }
+  },
+  "temperature_analysis": {
+    "temperature_slopes": {
+      "Horror_linear": {
+        "slope": 0.02819762246697683,
+        "intercept": 0.6520685378211165,
+        "r_squared": 0.034354856646168254,
+        "p_value": 0.6330504921253597,
+        "std_error": 0.05650386836544358
+      },
+      "Horror_nonlinear": {
+        "slope": 0.047094068992865196,
+        "intercept": 0.6588462189304063,
+        "r_squared": 0.09418887729523409,
+        "p_value": 0.4218014447692051,
+        "std_error": 0.05519963552700931
+      },
+      "Romance_linear": {
+        "slope": 0.042227639659978486,
+        "intercept": 0.625436734331984,
+        "r_squared": 0.07062628280843275,
+        "p_value": 0.4894659445808719,
+        "std_error": 0.05789749922352807
+      },
+      "Romance_nonlinear": {
+        "slope": -0.04014627853261549,
+        "intercept": 0.6965930162821173,
+        "r_squared": 0.1467166983408897,
+        "p_value": 0.3089023067532076,
+        "std_error": 0.03659343043611909
+      },
+      "SciFi_linear": {
+        "slope": -0.004363805561203343,
+        "intercept": 0.7605117479548162,
+        "r_squared": 0.0017205248079596653,
+        "p_value": 0.915620309518448,
+        "std_error": 0.039729396944325375
+      },
+      "SciFi_nonlinear": {
+        "slope": -0.03628412037147961,
+        "intercept": 0.7651850136943786,
+        "r_squared": 0.07183055853153539,
+        "p_value": 0.48564494791542967,
+        "std_error": 0.04929769235586018
+      }
+    }
+  },
+  "recommendations": [
+    {
+      "type": "alpha_rebalancing",
+      "severity": "info",
+      "message": "Alpha rebalancing successful: mean \u03b1=0.392 now within target range [0.35, 0.65]"
+    }
+  ]
+}

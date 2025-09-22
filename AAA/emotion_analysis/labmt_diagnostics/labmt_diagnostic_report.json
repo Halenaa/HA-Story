@@ -1,0 +1,1131 @@
+{
+  "diagnostic_info": {
+    "timestamp": "2025-09-13T13:44:38.732478",
+    "total_stories_analyzed": 54,
+    "diagnostic_version": "1.0"
+  },
+  "tokenization_analysis": {
+    "sample_texts": [
+      {
+        "text": "The little girl wasn't happy. She couldn't find her way home!",
+        "current_tokenization": [
+          "the",
+          "little",
+          "girl",
+          "wasn",
+          "t",
+          "happy",
+          "she",
+          "couldn",
+          "t",
+          "find",
+          "her",
+          "way",
+          "home"
+        ],
+        "split_tokenization": [
+          "the",
+          "little",
+          "girl",
+          "wasn't",
+          "happy",
+          "she",
+          "couldn't",
+          "find",
+          "her",
+          "way",
+          "home"
+        ],
+        "sophisticated_tokenization": [
+          "the",
+          "little",
+          "girl",
+          "wasn't",
+          "happy",
+          "she",
+          "couldn't",
+          "find",
+          "her",
+          "way",
+          "home"
+        ],
+        "token_counts": {
+          "current": 13,
+          "split": 11,
+          "sophisticated": 11
+        }
+      },
+      {
+        "text": "Dr. Smith said, \"Don't worry, it'll be fine.\" But she wasn't convinced...",
+        "current_tokenization": [
+          "dr",
+          "smith",
+          "said",
+          "don",
+          "t",
+          "worry",
+          "it",
+          "ll",
+          "be",
+          "fine",
+          "but",
+          "she",
+          "wasn",
+          "t",
+          "convinced"
+        ],
+        "split_tokenization": [
+          "dr",
+          "smith",
+          "said",
+          "\"don't",
+          "worry",
+          "it'll",
+          "be",
+          "fine",
+          "\"",
+          "but",
+          "she",
+          "wasn't",
+          "convinced"
+        ],
+        "sophisticated_tokenization": [
+          "dr",
+          "smith",
+          "said",
+          "don't",
+          "worry",
+          "it'll",
+          "be",
+          "fine",
+          "but",
+          "she",
+          "wasn't",
+          "convinced"
+        ],
+        "token_counts": {
+          "current": 15,
+          "split": 13,
+          "sophisticated": 12
+        }
+      },
+      {
+        "text": "The AI system's algorithms were amazing, but the user-interface was terrible.",
+        "current_tokenization": [
+          "the",
+          "ai",
+          "system",
+          "s",
+          "algorithms",
+          "were",
+          "amazing",
+          "but",
+          "the",
+          "user",
+          "interface",
+          "was",
+          "terrible"
+        ],
+        "split_tokenization": [
+          "the",
+          "ai",
+          "system's",
+          "algorithms",
+          "were",
+          "amazing",
+          "but",
+          "the",
+          "user-interface",
+          "was",
+          "terrible"
+        ],
+        "sophisticated_tokenization": [
+          "the",
+          "ai",
+          "system's",
+          "algorithms",
+          "were",
+          "amazing",
+          "but",
+          "the",
+          "user",
+          "interface",
+          "was",
+          "terrible"
+        ],
+        "token_counts": {
+          "current": 13,
+          "split": 11,
+          "sophisticated": 12
+        }
+      },
+      {
+        "text": "He felt wonderful—absolutely fantastic! However, everything changed quickly.",
+        "current_tokenization": [
+          "he",
+          "felt",
+          "wonderful",
+          "absolutely",
+          "fantastic",
+          "however",
+          "everything",
+          "changed",
+          "quickly"
+        ],
+        "split_tokenization": [
+          "he",
+          "felt",
+          "wonderful—absolutely",
+          "fantastic",
+          "however",
+          "everything",
+          "changed",
+          "quickly"
+        ],
+        "sophisticated_tokenization": [
+          "he",
+          "felt",
+          "wonderful",
+          "absolutely",
+          "fantastic",
+          "however",
+          "everything",
+          "changed",
+          "quickly"
+        ],
+        "token_counts": {
+          "current": 9,
+          "split": 8,
+          "sophisticated": 9
+        }
+      },
+      {
+        "text": "The emotion-detection model couldn't handle complex sentences with multiple clauses.",
+        "current_tokenization": [
+          "the",
+          "emotion",
+          "detection",
+          "model",
+          "couldn",
+          "t",
+          "handle",
+          "complex",
+          "sentences",
+          "with",
+          "multiple",
+          "clauses"
+        ],
+        "split_tokenization": [
+          "the",
+          "emotion-detection",
+          "model",
+          "couldn't",
+          "handle",
+          "complex",
+          "sentences",
+          "with",
+          "multiple",
+          "clauses"
+        ],
+        "sophisticated_tokenization": [
+          "the",
+          "emotion",
+          "detection",
+          "model",
+          "couldn't",
+          "handle",
+          "complex",
+          "sentences",
+          "with",
+          "multiple",
+          "clauses"
+        ],
+        "token_counts": {
+          "current": 12,
+          "split": 10,
+          "sophisticated": 11
+        }
+      }
+    ],
+    "total_samples": 5,
+    "tokenization_methods": {
+      "current": {
+        "mean_tokens_per_text": 12.4,
+        "std_tokens_per_text": 1.9595917942265424,
+        "min_tokens": 9,
+        "max_tokens": 15
+      },
+      "split": {
+        "mean_tokens_per_text": 10.6,
+        "std_tokens_per_text": 1.624807680927192,
+        "min_tokens": 8,
+        "max_tokens": 13
+      },
+      "sophisticated": {
+        "mean_tokens_per_text": 11.0,
+        "std_tokens_per_text": 1.0954451150103321,
+        "min_tokens": 9,
+        "max_tokens": 12
+      }
+    }
+  },
+  "negation_analysis": {
+    "test_cases": [
+      {
+        "text": "I am not happy at all",
+        "expected_sentiment": "negative",
+        "labmt_score": 0.6336498638002603,
+        "actual_sentiment": "positive",
+        "negation_words_in_text": [
+          "not"
+        ],
+        "negation_words_detected": [
+          "not"
+        ],
+        "negation_handled": false
+      },
+      {
+        "text": "This is not bad, it's actually good",
+        "expected_sentiment": "positive",
+        "labmt_score": -0.0008238394843738117,
+        "actual_sentiment": "neutral",
+        "negation_words_in_text": [
+          "not"
+        ],
+        "negation_words_detected": [
+          "not"
+        ],
+        "negation_handled": false
+      },
+      {
+        "text": "She was hardly satisfied with the results",
+        "expected_sentiment": "negative",
+        "labmt_score": 0.2621245757753641,
+        "actual_sentiment": "positive",
+        "negation_words_in_text": [
+          "hardly"
+        ],
+        "negation_words_detected": [
+          "hardly"
+        ],
+        "negation_handled": false
+      },
+      {
+        "text": "The movie was good, but the ending was terrible",
+        "expected_sentiment": "mixed",
+        "labmt_score": 0.0487817792439007,
+        "actual_sentiment": "neutral",
+        "negation_words_in_text": [
+          "but"
+        ],
+        "negation_words_detected": [],
+        "negation_handled": false
+      },
+      {
+        "text": "It wasn't terrible, just disappointing",
+        "expected_sentiment": "negative",
+        "labmt_score": -0.7631022004020571,
+        "actual_sentiment": "negative",
+        "negation_words_in_text": [
+          "wasn't"
+        ],
+        "negation_words_detected": [],
+        "negation_handled": false
+      }
+    ],
+    "negation_detection_rate": 0.6,
+    "context_reversal_handling": "none"
+  },
+  "coverage_analysis": {
+    "story_coverage": [
+      {
+        "story_id": "sciencefiction_nonlinear_T0.9_s3",
+        "genre": "sciencefiction",
+        "structure": "nonlinear",
+        "chapter_count": 5,
+        "estimated_total_words": 500,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0008702855999999998,
+        "mean_absolute_score": 0.14162,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "sciencefiction_linear_T0.9_s2",
+        "genre": "sciencefiction",
+        "structure": "linear",
+        "chapter_count": 8,
+        "estimated_total_words": 800,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0014584650000000004,
+        "mean_absolute_score": 0.17695,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "sciencefiction_nonlinear_T0.9_s2",
+        "genre": "sciencefiction",
+        "structure": "nonlinear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0027254677551020413,
+        "mean_absolute_score": 0.1426714285714286,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "sciencefiction_linear_T0.9_s3",
+        "genre": "sciencefiction",
+        "structure": "linear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0038462624489795914,
+        "mean_absolute_score": 0.12214285714285714,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "sciencefiction_nonlinear_T0.7_s2",
+        "genre": "sciencefiction",
+        "structure": "nonlinear",
+        "chapter_count": 6,
+        "estimated_total_words": 600,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0041205025000000004,
+        "mean_absolute_score": 0.17035,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "sciencefiction_nonlinear_T0.3_s3",
+        "genre": "sciencefiction",
+        "structure": "nonlinear",
+        "chapter_count": 5,
+        "estimated_total_words": 500,
+        "estimated_coverage_rate": 0.8,
+        "score_variance": 0.0027278583999999994,
+        "mean_absolute_score": 0.09664,
+        "coverage_category": "medium"
+      },
+      {
+        "story_id": "sciencefiction_linear_T0.3_s2",
+        "genre": "sciencefiction",
+        "structure": "linear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0012743248979591834,
+        "mean_absolute_score": 0.15722857142857144,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "sciencefiction_linear_T0.7_s3",
+        "genre": "sciencefiction",
+        "structure": "linear",
+        "chapter_count": 5,
+        "estimated_total_words": 500,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0010395944000000002,
+        "mean_absolute_score": 0.17414000000000002,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "sciencefiction_nonlinear_T0.3_s2",
+        "genre": "sciencefiction",
+        "structure": "nonlinear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.004020744081632651,
+        "mean_absolute_score": 0.1997142857142857,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "sciencefiction_nonlinear_T0.7_s3",
+        "genre": "sciencefiction",
+        "structure": "nonlinear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.003975856734693878,
+        "mean_absolute_score": 0.13864285714285715,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "sciencefiction_linear_T0.7_s2",
+        "genre": "sciencefiction",
+        "structure": "linear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0023495371428571437,
+        "mean_absolute_score": 0.19820000000000002,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "sciencefiction_linear_T0.3_s3",
+        "genre": "sciencefiction",
+        "structure": "linear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.007813524081632653,
+        "mean_absolute_score": 0.1335714285714286,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "sciencefiction_linear_T0.9_s1",
+        "genre": "sciencefiction",
+        "structure": "linear",
+        "chapter_count": 5,
+        "estimated_total_words": 500,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.004498685599999999,
+        "mean_absolute_score": 0.16392,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "sciencefiction_nonlinear_T0.9_s1",
+        "genre": "sciencefiction",
+        "structure": "nonlinear",
+        "chapter_count": 6,
+        "estimated_total_words": 600,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0011857688888888892,
+        "mean_absolute_score": 0.2060666666666667,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "sciencefiction_linear_T0.3_s1",
+        "genre": "sciencefiction",
+        "structure": "linear",
+        "chapter_count": 6,
+        "estimated_total_words": 600,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.007258355833333334,
+        "mean_absolute_score": 0.15445,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "sciencefiction_nonlinear_T0.7_s1",
+        "genre": "sciencefiction",
+        "structure": "nonlinear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.00034124408163265326,
+        "mean_absolute_score": 0.1812857142857143,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "sciencefiction_linear_T0.7_s1",
+        "genre": "sciencefiction",
+        "structure": "linear",
+        "chapter_count": 8,
+        "estimated_total_words": 800,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0017739743749999998,
+        "mean_absolute_score": 0.14052499999999998,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "sciencefiction_nonlinear_T0.3_s1",
+        "genre": "sciencefiction",
+        "structure": "nonlinear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0034356224489795915,
+        "mean_absolute_score": 0.16444285714285714,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "horror_linear_T0.9_s3",
+        "genre": "horror",
+        "structure": "linear",
+        "chapter_count": 8,
+        "estimated_total_words": 800,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0021309135937500005,
+        "mean_absolute_score": 0.24328750000000002,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "horror_linear_T0.9_s2",
+        "genre": "horror",
+        "structure": "linear",
+        "chapter_count": 6,
+        "estimated_total_words": 600,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0031810055555555558,
+        "mean_absolute_score": 0.18063333333333334,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "horror_nonlinear_T0.9_s1",
+        "genre": "horror",
+        "structure": "nonlinear",
+        "chapter_count": 8,
+        "estimated_total_words": 800,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0036513125000000005,
+        "mean_absolute_score": 0.2141,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "horror_linear_T0.3_s3",
+        "genre": "horror",
+        "structure": "linear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.002242999183673469,
+        "mean_absolute_score": 0.22822857142857142,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "horror_nonlinear_T0.7_s1",
+        "genre": "horror",
+        "structure": "nonlinear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.002237112653061225,
+        "mean_absolute_score": 0.2151857142857143,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "horror_linear_T0.7_s2",
+        "genre": "horror",
+        "structure": "linear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.001516522040816326,
+        "mean_absolute_score": 0.1927285714285714,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "horror_linear_T0.7_s3",
+        "genre": "horror",
+        "structure": "linear",
+        "chapter_count": 9,
+        "estimated_total_words": 900,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.003240748395061729,
+        "mean_absolute_score": 0.23462222222222223,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "horror_nonlinear_T0.3_s1",
+        "genre": "horror",
+        "structure": "nonlinear",
+        "chapter_count": 8,
+        "estimated_total_words": 800,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.003672284999999999,
+        "mean_absolute_score": 0.22335000000000002,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "horror_linear_T0.3_s2",
+        "genre": "horror",
+        "structure": "linear",
+        "chapter_count": 8,
+        "estimated_total_words": 800,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0014698223437500002,
+        "mean_absolute_score": 0.17433749999999998,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "horror_nonlinear_T0.9_s3",
+        "genre": "horror",
+        "structure": "nonlinear",
+        "chapter_count": 8,
+        "estimated_total_words": 800,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.000568895,
+        "mean_absolute_score": 0.22449999999999998,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "horror_linear_T0.9_s1",
+        "genre": "horror",
+        "structure": "linear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0038258142857142867,
+        "mean_absolute_score": 0.2432,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "horror_nonlinear_T0.9_s2",
+        "genre": "horror",
+        "structure": "nonlinear",
+        "chapter_count": 8,
+        "estimated_total_words": 800,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.00415777734375,
+        "mean_absolute_score": 0.2104625,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "horror_nonlinear_T0.3_s3",
+        "genre": "horror",
+        "structure": "nonlinear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.002811675510204082,
+        "mean_absolute_score": 0.22151428571428575,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "horror_nonlinear_T0.7_s2",
+        "genre": "horror",
+        "structure": "nonlinear",
+        "chapter_count": 5,
+        "estimated_total_words": 500,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0018388776000000003,
+        "mean_absolute_score": 0.20092,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "horror_linear_T0.7_s1",
+        "genre": "horror",
+        "structure": "linear",
+        "chapter_count": 9,
+        "estimated_total_words": 900,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.002977842469135803,
+        "mean_absolute_score": 0.20534444444444444,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "horror_nonlinear_T0.7_s3",
+        "genre": "horror",
+        "structure": "nonlinear",
+        "chapter_count": 8,
+        "estimated_total_words": 800,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0034369235937500007,
+        "mean_absolute_score": 0.1771125,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "horror_nonlinear_T0.3_s2",
+        "genre": "horror",
+        "structure": "nonlinear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.00207803387755102,
+        "mean_absolute_score": 0.2692428571428572,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "horror_linear_T0.3_s1",
+        "genre": "horror",
+        "structure": "linear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0032412538775510205,
+        "mean_absolute_score": 0.20395714285714286,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "romantic_linear_T0.9_s2",
+        "genre": "romantic",
+        "structure": "linear",
+        "chapter_count": 8,
+        "estimated_total_words": 800,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0022046835937500004,
+        "mean_absolute_score": 0.2709125,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "romantic_nonlinear_T0.3_s1",
+        "genre": "romantic",
+        "structure": "nonlinear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0027799877551020406,
+        "mean_absolute_score": 0.2351714285714286,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "romantic_nonlinear_T0.7_s1",
+        "genre": "romantic",
+        "structure": "nonlinear",
+        "chapter_count": 5,
+        "estimated_total_words": 500,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0023091336,
+        "mean_absolute_score": 0.26272,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "romantic_linear_T0.9_s3",
+        "genre": "romantic",
+        "structure": "linear",
+        "chapter_count": 6,
+        "estimated_total_words": 600,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0016425113888888885,
+        "mean_absolute_score": 0.2517833333333333,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "romantic_linear_T0.7_s3",
+        "genre": "romantic",
+        "structure": "linear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0037541183673469383,
+        "mean_absolute_score": 0.24618571428571429,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "romantic_nonlinear_T0.9_s1",
+        "genre": "romantic",
+        "structure": "nonlinear",
+        "chapter_count": 6,
+        "estimated_total_words": 600,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0021797588888888887,
+        "mean_absolute_score": 0.20076666666666668,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "romantic_linear_T0.3_s2",
+        "genre": "romantic",
+        "structure": "linear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.004605074285714286,
+        "mean_absolute_score": 0.2186,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "romantic_linear_T0.3_s3",
+        "genre": "romantic",
+        "structure": "linear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0023802763265306118,
+        "mean_absolute_score": 0.2594285714285714,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "romantic_linear_T0.7_s2",
+        "genre": "romantic",
+        "structure": "linear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0025612338775510206,
+        "mean_absolute_score": 0.23935714285714285,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "romantic_nonlinear_T0.7_s3",
+        "genre": "romantic",
+        "structure": "nonlinear",
+        "chapter_count": 8,
+        "estimated_total_words": 800,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.004672572343749999,
+        "mean_absolute_score": 0.2576625,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "romantic_linear_T0.9_s1",
+        "genre": "romantic",
+        "structure": "linear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0012282612244897961,
+        "mean_absolute_score": 0.27178571428571424,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "romantic_nonlinear_T0.3_s2",
+        "genre": "romantic",
+        "structure": "nonlinear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0025608399999999996,
+        "mean_absolute_score": 0.23510000000000003,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "romantic_nonlinear_T0.3_s3",
+        "genre": "romantic",
+        "structure": "nonlinear",
+        "chapter_count": 6,
+        "estimated_total_words": 600,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0015093222222222228,
+        "mean_absolute_score": 0.3146333333333333,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "romantic_nonlinear_T0.7_s2",
+        "genre": "romantic",
+        "structure": "nonlinear",
+        "chapter_count": 6,
+        "estimated_total_words": 600,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0029516422222222224,
+        "mean_absolute_score": 0.21886666666666665,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "romantic_nonlinear_T0.9_s2",
+        "genre": "romantic",
+        "structure": "nonlinear",
+        "chapter_count": 6,
+        "estimated_total_words": 600,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0037131155555555563,
+        "mean_absolute_score": 0.22233333333333336,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "romantic_linear_T0.3_s1",
+        "genre": "romantic",
+        "structure": "linear",
+        "chapter_count": 6,
+        "estimated_total_words": 600,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.003247281388888889,
+        "mean_absolute_score": 0.21718333333333337,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "romantic_linear_T0.7_s1",
+        "genre": "romantic",
+        "structure": "linear",
+        "chapter_count": 7,
+        "estimated_total_words": 700,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0025160763265306115,
+        "mean_absolute_score": 0.21397142857142856,
+        "coverage_category": "high"
+      },
+      {
+        "story_id": "romantic_nonlinear_T0.9_s3",
+        "genre": "romantic",
+        "structure": "nonlinear",
+        "chapter_count": 8,
+        "estimated_total_words": 800,
+        "estimated_coverage_rate": 1.0,
+        "score_variance": 0.0040660110937499995,
+        "mean_absolute_score": 0.2668125,
+        "coverage_category": "high"
+      }
+    ],
+    "overall_statistics": {
+      "total_stories": 54,
+      "mean_coverage_rate": 0.9962962962962962,
+      "std_coverage_rate": 0.0269633699602982,
+      "min_coverage_rate": 0.8,
+      "max_coverage_rate": 1.0,
+      "high_coverage_stories": 53,
+      "medium_coverage_stories": 1,
+      "low_coverage_stories": 0
+    },
+    "genre_coverage": {
+      "sciencefiction": {
+        "mean_coverage": 0.9888888888888889,
+        "std_coverage": 0.045812284729085107,
+        "story_count": 18
+      },
+      "horror": {
+        "mean_coverage": 1.0,
+        "std_coverage": 0.0,
+        "story_count": 18
+      },
+      "romantic": {
+        "mean_coverage": 1.0,
+        "std_coverage": 0.0,
+        "story_count": 18
+      }
+    }
+  },
+  "stopwords_analysis": {
+    "dictionary_composition": {
+      "total_words_in_dict": 78,
+      "stopwords_in_dict": 24,
+      "content_words_in_dict": 54,
+      "stopwords_percentage": 30.76923076923077
+    },
+    "impact_simulation": {
+      "sample_text": "The amazing story was really good and wonderful, but it had some terrible parts that were very bad",
+      "all_words": [
+        "the",
+        "amazing",
+        "story",
+        "was",
+        "really",
+        "good",
+        "and",
+        "wonderful",
+        "but",
+        "it",
+        "had",
+        "some",
+        "terrible",
+        "parts",
+        "that",
+        "were",
+        "very",
+        "bad"
+      ],
+      "content_words": [
+        "amazing",
+        "story",
+        "really",
+        "good",
+        "wonderful",
+        "some",
+        "terrible",
+        "parts",
+        "very",
+        "bad"
+      ],
+      "all_words_count": 18,
+      "content_words_count": 10,
+      "stopwords_removed": 8,
+      "all_words_score": 0.031865846498056793,
+      "content_words_score": 0.0491329249018595,
+      "score_difference": 0.017267078403802705,
+      "relative_change": 54.18678711345599
+    }
+  },
+  "smoothing_analysis": {
+    "stories_analyzed": [
+      {
+        "story_id": "sciencefiction_nonlinear_T0.9_s3",
+        "genre": "sciencefiction",
+        "chapter_count": 5,
+        "original_correlation": 0.3229,
+        "smoothed_correlations": {
+          "none": 0.32294855799746797,
+          "moving_average_3": -0.060283481716343214,
+          "moving_average_5": 0.16684131923380552,
+          "exponential": 0.10075155831593599
+        },
+        "correlation_improvements": {
+          "moving_average_3": -0.3832320397138112,
+          "moving_average_5": -0.15610723876366245,
+          "exponential": -0.22219699968153198
+        }
+      },
+      {
+        "story_id": "sciencefiction_linear_T0.9_s2",
+        "genre": "sciencefiction",
+        "chapter_count": 8,
+        "original_correlation": 0.7187,
+        "smoothed_correlations": {
+          "none": 0.7188147372396246,
+          "moving_average_3": 0.6034111988613521,
+          "moving_average_5": 0.6649553090433585,
+          "exponential": 0.7773281761629708
+        },
+        "correlation_improvements": {
+          "moving_average_3": -0.11540353837827255,
+          "moving_average_5": -0.0538594281962661,
+          "exponential": 0.05851343892334615
+        }
+      },
+      {
+        "story_id": "sciencefiction_nonlinear_T0.9_s2",
+        "genre": "sciencefiction",
+        "chapter_count": 7,
+        "original_correlation": 0.5415,
+        "smoothed_correlations": {
+          "none": 0.5418679760077876,
+          "moving_average_3": 0.2834660620093317,
+          "moving_average_5": -0.6641451203382968,
+          "exponential": 0.7319678168082964
+        },
+        "correlation_improvements": {
+          "moving_average_3": -0.25840191399845586,
+          "moving_average_5": -1.2060130963460844,
+          "exponential": 0.1900998408005088
+        }
+      },
+      {
+        "story_id": "sciencefiction_linear_T0.9_s3",
+        "genre": "sciencefiction",
+        "chapter_count": 7,
+        "original_correlation": 0.5423,
+        "smoothed_correlations": {
+          "none": 0.5420061957419386,
+          "moving_average_3": 0.23710477611545888,
+          "moving_average_5": 0.7707359063083741,
+          "exponential": -0.33044507064372913
+        },
+        "correlation_improvements": {
+          "moving_average_3": -0.30490141962647976,
+          "moving_average_5": 0.22872971056643543,
+          "exponential": -0.8724512663856678
+        }
+      },
+      {
+        "story_id": "sciencefiction_nonlinear_T0.7_s2",
+        "genre": "sciencefiction",
+        "chapter_count": 6,
+        "original_correlation": 0.0074,
+        "smoothed_correlations": {
+          "none": 0.007489538925719851,
+          "moving_average_3": -0.11455086319937333,
+          "moving_average_5": 0.01678527811409648,
+          "exponential": 0.21415227790375313
+        },
+        "correlation_improvements": {
+          "moving_average_3": -0.12204040212509318,
+          "moving_average_5": 0.009295739188376628,
+          "exponential": 0.20666273897803328
+        }
+      }
+    ],
+    "smoothing_methods": [
+      "none",
+      "moving_average_3",
+      "moving_average_5",
+      "exponential"
+    ],
+    "method_comparison": {
+      "none": {
+        "mean_correlation": 0.4266254011825077,
+        "std_correlation": 0.24429160679547754,
+        "stories_count": 5
+      },
+      "moving_average_3": {
+        "mean_correlation": 0.18982953841408523,
+        "std_correlation": 0.2597138765003431,
+        "stories_count": 5
+      },
+      "moving_average_5": {
+        "mean_correlation": 0.19103453847226756,
+        "std_correlation": 0.5143801975359458,
+        "stories_count": 5
+      },
+      "exponential": {
+        "mean_correlation": 0.29875095170944543,
+        "std_correlation": 0.4144783086991772,
+        "stories_count": 5
+      }
+    }
+  }
+}
