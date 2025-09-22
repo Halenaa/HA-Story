@@ -1,0 +1,125 @@
+{
+  "project_overview": {
+    "total_samples": 54,
+    "genres": [
+      "sciencefiction",
+      "horror",
+      "romantic"
+    ],
+    "conditions_per_genre": 6,
+    "baselines": 2
+  },
+  "genre_rankings": [
+    {
+      "genre": "浪漫",
+      "avg_diversity": 0.5786034239871166
+    },
+    {
+      "genre": "科幻",
+      "avg_diversity": 0.5719843443069383
+    },
+    {
+      "genre": "恐怖",
+      "avg_diversity": 0.39497317672803484
+    }
+  ],
+  "alpha_weights": {
+    "科幻": 0.6925775354536233,
+    "恐怖": 0.8,
+    "浪漫": 0.7262627675703381
+  },
+  "best_conditions": [
+    {
+      "genre": "浪漫",
+      "condition": "linear_T0.9",
+      "diversity_score": 0.9020706239881152,
+      "alpha": 0.7262627675703381
+    },
+    {
+      "genre": "恐怖",
+      "condition": "nonlinear_T0.7",
+      "diversity_score": 0.902032969358962,
+      "alpha": 0.8
+    },
+    {
+      "genre": "科幻",
+      "condition": "nonlinear_T0.7",
+      "diversity_score": 0.8206709584562817,
+      "alpha": 0.6925775354536233
+    },
+    {
+      "genre": "浪漫",
+      "condition": "nonlinear_T0.3",
+      "diversity_score": 0.7980171436990946,
+      "alpha": 0.7262627675703381
+    },
+    {
+      "genre": "科幻",
+      "condition": "linear_T0.7",
+      "diversity_score": 0.7602168782486654,
+      "alpha": 0.6925775354536233
+    },
+    {
+      "genre": "恐怖",
+      "condition": "linear_T0.7",
+      "diversity_score": 0.7390737608159912,
+      "alpha": 0.8
+    },
+    {
+      "genre": "浪漫",
+      "condition": "nonlinear_T0.9",
+      "diversity_score": 0.6483726754994226,
+      "alpha": 0.7262627675703381
+    },
+    {
+      "genre": "科幻",
+      "condition": "linear_T0.9",
+      "diversity_score": 0.6397821143386578,
+      "alpha": 0.6925775354536233
+    },
+    {
+      "genre": "科幻",
+      "condition": "nonlinear_T0.3",
+      "diversity_score": 0.5870579247744794,
+      "alpha": 0.6925775354536233
+    },
+    {
+      "genre": "科幻",
+      "condition": "linear_T0.3",
+      "diversity_score": 0.5668757902724872,
+      "alpha": 0.6925775354536233
+    }
+  ],
+  "temperature_effects": {
+    "0.3": {
+      "科幻": 0.5769668575234833,
+      "恐怖": 0.08220443467586419,
+      "浪漫": 0.6209188572333055,
+      "平均": 0.42669671647755103
+    },
+    "0.7": {
+      "科幻": 0.7904439183524735,
+      "恐怖": 0.8205533650874766,
+      "浪漫": 0.33966976498427537,
+      "平均": 0.6502223494747418
+    },
+    "0.9": {
+      "科幻": 0.3485422570448582,
+      "恐怖": 0.28216173042076353,
+      "浪漫": 0.775221649743769,
+      "平均": 0.4686418790697969
+    }
+  },
+  "baseline_comparison": {
+    "generated_avg": 0.6359145158360527,
+    "generated_std": 0.022331242820957133,
+    "sci_baseline": 0.692187235841082,
+    "normal_baseline": 0.7069578421578422
+  },
+  "key_findings": [
+    "• 浪漫题材表现最佳，平均多样性分数 0.5786",
+    "• T=0.7 是最佳温度设置，跨题材平均多样性最高",
+    "• 不同题材的α权重差异显著，反映了题材特有的多样性模式",
+    "• nonlinear结构整体表现更佳"
+  ]
+}

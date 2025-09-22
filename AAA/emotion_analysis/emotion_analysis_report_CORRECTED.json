@@ -1,0 +1,53 @@
+{
+  "analysis_info": {
+    "timestamp": "2025-09-14T00:24:33.638047",
+    "data_source": "metrics_master_clean.csv",
+    "analyzer_version": "Fixed-1.0",
+    "bug_fixes_applied": [
+      "direction_consistency_recalculation",
+      "correlation_value_sharing_fix"
+    ],
+    "evaluation_criteria": {
+      "correlation_threshold": 0.3,
+      "disagreement_threshold": 3,
+      "agreement_threshold": 0.7
+    }
+  },
+  "corrected_statistics": {
+    "total_stories": 57,
+    "experimental_stories": 54,
+    "baseline_stories": 3,
+    "mean_correlation": 0.30457017543859644,
+    "significant_correlations": 33,
+    "significant_percentage": 57.89473684210527,
+    "stable_stories": 19,
+    "stable_percentage": 33.33333333333333,
+    "direction_consistency_improvement": {
+      "experiments_original": 0.418037037037037,
+      "experiments_fixed": 0.6135802469135804,
+      "experiments_improvement_percent": 46.77652756858928,
+      "baseline_mean": 0.6303333333333333,
+      "overall_original": 0.42921052631578943,
+      "overall_fixed": 0.6144619883040936,
+      "overall_improvement_percent": 43.16097826827443
+    }
+  },
+  "archetype_distribution": {
+    "counts": {
+      "Tragedy": 18,
+      "Rags to riches": 12,
+      "Oedipus": 11,
+      "Icarus": 6,
+      "Cinderella": 5,
+      "Man in a hole": 5
+    },
+    "percentages": {
+      "Tragedy": 31.57894736842105,
+      "Rags to riches": 21.052631578947366,
+      "Oedipus": 19.298245614035086,
+      "Icarus": 10.526315789473683,
+      "Cinderella": 8.771929824561402,
+      "Man in a hole": 8.771929824561402
+    }
+  }
+}

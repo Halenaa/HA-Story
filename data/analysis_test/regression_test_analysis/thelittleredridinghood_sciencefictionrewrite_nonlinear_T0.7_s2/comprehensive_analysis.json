@@ -1,0 +1,779 @@
+{
+  "folder_name": "thelittleredridinghood_sciencefictionrewrite_nonlinear_T0.7_s2",
+  "file_path": "/Users/haha/Story/data/output/regression_test/thelittleredridinghood_sciencefictionrewrite_nonlinear_T0.7_s2/enhanced_story_dialogue_updated.md",
+  "analysis_timestamp": null,
+  "emotional_arc_analysis": {
+    "metadata": {
+      "total_chapters": 6,
+      "primary_method": "RoBERTa",
+      "validation_method": "LabMT-en-v1",
+      "analysis_timestamp": "2025-09-09T20:34:05.883708"
+    },
+    "chapter_analysis": [
+      {
+        "chapter_num": 6,
+        "title": "Showdown in the Bunker",
+        "roberta_score": -0.3353,
+        "labmt_score": 0.1912,
+        "content_length": 1913
+      },
+      {
+        "chapter_num": 1,
+        "title": "Red Receives the Delivery Mission",
+        "roberta_score": 0.0788,
+        "labmt_score": 0.1615,
+        "content_length": 1511
+      },
+      {
+        "chapter_num": 4,
+        "title": "Wolf Infiltrates Grandmother’s Bunker",
+        "roberta_score": 0.3234,
+        "labmt_score": 0.2757,
+        "content_length": 2842
+      },
+      {
+        "chapter_num": 2,
+        "title": "Crossing the Perimeter Gates",
+        "roberta_score": -0.0448,
+        "labmt_score": 0.1588,
+        "content_length": 4748
+      },
+      {
+        "chapter_num": 3,
+        "title": "Ambush in the Biotech Forest",
+        "roberta_score": 0.2086,
+        "labmt_score": 0.0567,
+        "content_length": 2272
+      },
+      {
+        "chapter_num": 5,
+        "title": "Red’s Decision at the Crossroads",
+        "roberta_score": -0.3157,
+        "labmt_score": 0.1782,
+        "content_length": 4368
+      }
+    ],
+    "primary_analysis": {
+      "method": "RoBERTa",
+      "scores": [
+        -0.3353448112805684,
+        0.07877875291384183,
+        0.3233754992485046,
+        -0.04484825929005941,
+        0.20857211748758953,
+        -0.3157484769821167
+      ],
+      "reagan_classification": {
+        "method": "RoBERTa",
+        "best_match": "Cinderella",
+        "confidence": 0.6936,
+        "all_similarities": {
+          "Rags to riches": 0,
+          "Tragedy": 0,
+          "Man in a hole": 0.0095,
+          "Icarus": 0,
+          "Cinderella": 0.6936,
+          "Oedipus": 0
+        },
+        "reagan_category": "CN"
+      }
+    },
+    "validation_analysis": {
+      "method": "LabMT",
+      "scores": [
+        0.19118749999999984,
+        0.16152439024390208,
+        0.2756875000000001,
+        0.15876190476190466,
+        0.05670833333333358,
+        0.1782436708860753
+      ],
+      "reagan_classification": {
+        "method": "LabMT",
+        "best_match": "Tragedy",
+        "confidence": 0.7174,
+        "all_similarities": {
+          "Rags to riches": 0.5176,
+          "Tragedy": 0.7174,
+          "Man in a hole": 0,
+          "Icarus": 0.1605,
+          "Cinderella": 0,
+          "Oedipus": 0.1024
+        },
+        "reagan_category": "TR"
+      }
+    },
+    "correlation_analysis": {
+      "pearson_correlation": {
+        "r": 0.0074,
+        "p_value": 0.9889,
+        "significance": "Not Significant"
+      },
+      "spearman_correlation": {
+        "r": -0.0857,
+        "p_value": 0.8717
+      },
+      "direction_consistency": 0.4,
+      "consistency_level": "Low",
+      "interpretation": "RoBERTa and LabMT correlation coefficient is 0.007, belongs to weak correlation"
+    },
+    "comparison_analysis": {
+      "disagreement_points": [
+        {
+          "chapter": 1,
+          "roberta_score": -0.3353448112805684,
+          "labmt_score": 0.19118749999999984,
+          "difference": 0.5265
+        },
+        {
+          "chapter": 6,
+          "roberta_score": -0.3157484769821167,
+          "labmt_score": 0.1782436708860753,
+          "difference": 0.494
+        }
+      ],
+      "method_advantages": {
+        "RoBERTa": {
+          "strengths": [
+            "Deep learning model with better contextual understanding",
+            "Suitable for modern text and dialogue",
+            "High sensitivity to sci-fi and technical texts"
+          ],
+          "classification": "Cinderella",
+          "confidence": 0.6936
+        },
+        "LabMT": {
+          "strengths": [
+            "Fully consistent with Reagan's original method",
+            "Based on large-scale human annotation",
+            "Suitable for traditional literary analysis"
+          ],
+          "classification": "Tragedy",
+          "confidence": 0.7174
+        }
+      },
+      "consistency_assessment": {
+        "classification_agreement": false,
+        "major_disagreements": 2,
+        "recommendation": "Classification differs slightly but overall consistent, recommend using RoBERTa as primary and LabMT for validation, demonstrating the advantages of modern deep learning models"
+      }
+    },
+    "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.007 (Low)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.007, belongs to weak correlation\n\nClassification Results:\n- RoBERTa (primary): Cinderella\n- LabMT (validation): Tragedy\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.007, showing low consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation.",
+    "output_files": {
+      "analysis_json": "/Users/haha/Story/data/regression_test_analysis/thelittleredridinghood_sciencefictionrewrite_nonlinear_T0.7_s2/roberta_labmt_analysis_20250909_203405.json"
+    }
+  },
+  "hred_coherence_analysis": {
+    "HRED_coherence_evaluation": {
+      "model_name": "all-mpnet-base-v2",
+      "analysis_method": "Original sentence coherence",
+      "total_sentences": 158,
+      "adjacent_pairs": 157,
+      "average_coherence": 0.3794,
+      "objective_description": {
+        "score": 0.3794,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "detailed_analysis": {
+      "basic_statistics": {
+        "average_coherence": 0.37941757494370176,
+        "coherence_std": 0.17162210486948484,
+        "max_coherence": 0.83234703540802,
+        "min_coherence": -0.028721332550048828,
+        "coherence_median": 0.39228445291519165
+      },
+      "coherence_breakpoints": [
+        {
+          "position": 3,
+          "sentence_pair": "The air is sharp with ozone an... → Suddenly, a heavy boot crunche...",
+          "similarity": 0.193
+        },
+        {
+          "position": 12,
+          "sentence_pair": "Wolf’s gaze sharpens, but he d... → The desert wind gusts, carryin...",
+          "similarity": 0.108
+        },
+        {
+          "position": 13,
+          "sentence_pair": "The desert wind gusts, carryin... → Both remain locked in place, t...",
+          "similarity": 0.035
+        },
+        {
+          "position": 23,
+          "sentence_pair": "Mother taps a sequence on her ... → She leans close, voice low: 'N...",
+          "similarity": 0.176
+        },
+        {
+          "position": 24,
+          "sentence_pair": "She leans close, voice low: 'N... → Straight to Outpost Eleven....",
+          "similarity": 0.048
+        },
+        {
+          "position": 26,
+          "sentence_pair": "Avoid Sector D—Wolf's drones a... → ' Red nods, adjusting her satc...",
+          "similarity": 0.029
+        },
+        {
+          "position": 39,
+          "sentence_pair": "The dim light caught the silve... → Calm but unyielding, she issue...",
+          "similarity": 0.2
+        },
+        {
+          "position": 45,
+          "sentence_pair": "The Security AI registered her... → External cameras swiveled in p...",
+          "similarity": 0.194
+        },
+        {
+          "position": 48,
+          "sentence_pair": "\"Acknowledged, Grandmother—com... → report delivery in four minute...",
+          "similarity": 0.191
+        },
+        {
+          "position": 72,
+          "sentence_pair": "Red complies, keeping calm and... → Wolf notes that inspections ha...",
+          "similarity": 0.186
+        },
+        {
+          "position": 73,
+          "sentence_pair": "Wolf notes that inspections ha... → Red assures him everything is ...",
+          "similarity": 0.176
+        },
+        {
+          "position": 77,
+          "sentence_pair": "Wolf handed the slate back to ... → His eyes swept the crowded che...",
+          "similarity": 0.164
+        },
+        {
+          "position": 83,
+          "sentence_pair": "Red straightened, her spine al... → As Wolf handed the slate back,...",
+          "similarity": 0.125
+        },
+        {
+          "position": 84,
+          "sentence_pair": "As Wolf handed the slate back,... → Red’s eyes narrowed, the famil...",
+          "similarity": 0.184
+        },
+        {
+          "position": 111,
+          "sentence_pair": "There was no room for misunder... → Wolf, frustrated but not physi...",
+          "similarity": 0.151
+        },
+        {
+          "position": 122,
+          "sentence_pair": "“Red, listen to me—there’s no ... → ” She darted a frantic glance ...",
+          "similarity": 0.163
+        },
+        {
+          "position": 124,
+          "sentence_pair": "“The Wolf has breached the sec... → He’s closer than we thought, a...",
+          "similarity": 0.139
+        },
+        {
+          "position": 125,
+          "sentence_pair": "He’s closer than we thought, a... → ” Her thumb hovered over the e...",
+          "similarity": 0.068
+        },
+        {
+          "position": 128,
+          "sentence_pair": "” The device clattered as she ... → You're in more danger than we ...",
+          "similarity": 0.169
+        },
+        {
+          "position": 144,
+          "sentence_pair": "Red tightened the strap of her... → The city skyline shimmered ahe...",
+          "similarity": 0.059
+        },
+        {
+          "position": 145,
+          "sentence_pair": "The city skyline shimmered ahe... → She drew a steadying breath, h...",
+          "similarity": 0.187
+        },
+        {
+          "position": 148,
+          "sentence_pair": "I don’t break my word—no matte... → Without another hesitation, Re...",
+          "similarity": 0.206
+        },
+        {
+          "position": 149,
+          "sentence_pair": "Without another hesitation, Re... → If he gets his hands on it, th...",
+          "similarity": -0.029
+        },
+        {
+          "position": 151,
+          "sentence_pair": "That formula was never meant f... → Please, stay safe....",
+          "similarity": 0.005
+        },
+        {
+          "position": 152,
+          "sentence_pair": "Please, stay safe.... → ' Red’s jaw sets....",
+          "similarity": 0.005
+        },
+        {
+          "position": 153,
+          "sentence_pair": "' Red’s jaw sets.... → She glances at the nanomedicin...",
+          "similarity": 0.074
+        },
+        {
+          "position": 156,
+          "sentence_pair": "I promised, and I don't break ... → ' She activates her cybernetic...",
+          "similarity": 0.189
+        }
+      ],
+      "high_coherence_segments": [
+        {
+          "start_sentence": 9,
+          "end_sentence": 11,
+          "length": 3,
+          "average_similarity": 0.559
+        },
+        {
+          "start_sentence": 16,
+          "end_sentence": 18,
+          "length": 3,
+          "average_similarity": 0.577
+        },
+        {
+          "start_sentence": 28,
+          "end_sentence": 31,
+          "length": 4,
+          "average_similarity": 0.494
+        },
+        {
+          "start_sentence": 50,
+          "end_sentence": 52,
+          "length": 3,
+          "average_similarity": 0.534
+        },
+        {
+          "start_sentence": 53,
+          "end_sentence": 55,
+          "length": 3,
+          "average_similarity": 0.538
+        },
+        {
+          "start_sentence": 65,
+          "end_sentence": 69,
+          "length": 5,
+          "average_similarity": 0.601
+        },
+        {
+          "start_sentence": 70,
+          "end_sentence": 72,
+          "length": 3,
+          "average_similarity": 0.493
+        },
+        {
+          "start_sentence": 75,
+          "end_sentence": 77,
+          "length": 3,
+          "average_similarity": 0.613
+        },
+        {
+          "start_sentence": 88,
+          "end_sentence": 90,
+          "length": 3,
+          "average_similarity": 0.518
+        },
+        {
+          "start_sentence": 94,
+          "end_sentence": 98,
+          "length": 5,
+          "average_similarity": 0.553
+        },
+        {
+          "start_sentence": 99,
+          "end_sentence": 103,
+          "length": 5,
+          "average_similarity": 0.665
+        },
+        {
+          "start_sentence": 116,
+          "end_sentence": 121,
+          "length": 6,
+          "average_similarity": 0.622
+        },
+        {
+          "start_sentence": 130,
+          "end_sentence": 134,
+          "length": 5,
+          "average_similarity": 0.607
+        }
+      ],
+      "objective_description": {
+        "score": 0.3794,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "pairwise_similarity_examples": [
+      {
+        "sentence_pair": "Sentence 1 → Sentence 2",
+        "sentence_1": "Red crouches by the bunker’s keypad, her gloved fi...",
+        "sentence_2": "She glances over her shoulder, scanning the shadow...",
+        "similarity": 0.359
+      },
+      {
+        "sentence_pair": "Sentence 2 → Sentence 3",
+        "sentence_1": "She glances over her shoulder, scanning the shadow...",
+        "sentence_2": "The air is sharp with ozone and the distant whir o...",
+        "similarity": 0.2348
+      },
+      {
+        "sentence_pair": "Sentence 3 → Sentence 4",
+        "sentence_1": "The air is sharp with ozone and the distant whir o...",
+        "sentence_2": "Suddenly, a heavy boot crunches on gravel behind h...",
+        "similarity": 0.1933
+      },
+      {
+        "sentence_pair": "Sentence 4 → Sentence 5",
+        "sentence_1": "Suddenly, a heavy boot crunches on gravel behind h...",
+        "sentence_2": "His synthetic voice emerges, clipped and official:...",
+        "similarity": 0.3078
+      },
+      {
+        "sentence_pair": "Sentence 5 → Sentence 6",
+        "sentence_1": "His synthetic voice emerges, clipped and official:...",
+        "sentence_2": "' Red straightens, keeping one hand tight on her s...",
+        "similarity": 0.2108
+      },
+      {
+        "sentence_pair": "Sentence 6 → Sentence 7",
+        "sentence_1": "' Red straightens, keeping one hand tight on her s...",
+        "sentence_2": "She edges sideways, positioning herself between Wo...",
+        "similarity": 0.4043
+      },
+      {
+        "sentence_pair": "Sentence 7 → Sentence 8",
+        "sentence_1": "She edges sideways, positioning herself between Wo...",
+        "sentence_2": "'Just making a delivery,' she answers, her voice s...",
+        "similarity": 0.3156
+      },
+      {
+        "sentence_pair": "Sentence 8 → Sentence 9",
+        "sentence_1": "'Just making a delivery,' she answers, her voice s...",
+        "sentence_2": "Wolf advances, blocking the keypad with his body, ...",
+        "similarity": 0.2258
+      },
+      {
+        "sentence_pair": "Sentence 9 → Sentence 10",
+        "sentence_1": "Wolf advances, blocking the keypad with his body, ...",
+        "sentence_2": "The device emits a sharp beep, and he narrows his ...",
+        "similarity": 0.5394
+      },
+      {
+        "sentence_pair": "Sentence 10 → Sentence 11",
+        "sentence_1": "The device emits a sharp beep, and he narrows his ...",
+        "sentence_2": "Red’s other hand flicks a micro-jammer from her be...",
+        "similarity": 0.579
+      },
+      {
+        "sentence_pair": "Sentence 11 → Sentence 12",
+        "sentence_1": "Red’s other hand flicks a micro-jammer from her be...",
+        "sentence_2": "Wolf’s gaze sharpens, but he doesn’t move aside.",
+        "similarity": 0.2114
+      },
+      {
+        "sentence_pair": "Sentence 12 → Sentence 13",
+        "sentence_1": "Wolf’s gaze sharpens, but he doesn’t move aside.",
+        "sentence_2": "The desert wind gusts, carrying the tang of oxidiz...",
+        "similarity": 0.1076
+      },
+      {
+        "sentence_pair": "Sentence 13 → Sentence 14",
+        "sentence_1": "The desert wind gusts, carrying the tang of oxidiz...",
+        "sentence_2": "Both remain locked in place, the bunker’s door his...",
+        "similarity": 0.0353
+      },
+      {
+        "sentence_pair": "Sentence 14 → Sentence 15",
+        "sentence_1": "Both remain locked in place, the bunker’s door his...",
+        "sentence_2": "Wolf reaches out, palm open, demanding, 'Show me y...",
+        "similarity": 0.2685
+      },
+      {
+        "sentence_pair": "Sentence 15 → Sentence 16",
+        "sentence_1": "Wolf reaches out, palm open, demanding, 'Show me y...",
+        "sentence_2": "' Red hesitates, then slips past him, ducking into...",
+        "similarity": 0.3502
+      },
+      {
+        "sentence_pair": "Sentence 16 → Sentence 17",
+        "sentence_1": "' Red hesitates, then slips past him, ducking into...",
+        "sentence_2": "The standoff ends with Red gaining entry—Wolf foll...",
+        "similarity": 0.6165
+      },
+      {
+        "sentence_pair": "Sentence 17 → Sentence 18",
+        "sentence_1": "The standoff ends with Red gaining entry—Wolf foll...",
+        "sentence_2": "As the tension in the bunker fades into the backgr...",
+        "similarity": 0.5375
+      },
+      {
+        "sentence_pair": "Sentence 18 → Sentence 19",
+        "sentence_1": "As the tension in the bunker fades into the backgr...",
+        "sentence_2": "With Grandmother now stabilized and a plan in moti...",
+        "similarity": 0.4219
+      },
+      {
+        "sentence_pair": "Sentence 19 → Sentence 20",
+        "sentence_1": "With Grandmother now stabilized and a plan in moti...",
+        "sentence_2": "Even as the revolution sparks beyond the bunker’s ...",
+        "similarity": 0.4935
+      },
+      {
+        "sentence_pair": "Sentence 20 → Sentence 21",
+        "sentence_1": "Even as the revolution sparks beyond the bunker’s ...",
+        "sentence_2": "Red stands rigid on the polymer floor near the sea...",
+        "similarity": 0.3669
+      },
+      {
+        "note": "Only showing first 20 pairs, total of 157 adjacent sentence pairs"
+      }
+    ]
+  },
+  "story_structure_analysis": {
+    "evaluation_mode": "default mode",
+    "event_list": [
+      {
+        "event": "Red bypasses the bunker’s security lock.",
+        "source": "Red crouches by the bunker’s keypad, her gloved fingers working quickly to bypass the security lock.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf confronts Red at the bunker entrance, questioning her presence and scanning her.",
+        "source": "Wolf advances, blocking the keypad with his body, scanning her with a handheld sensor.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red uses a micro-jammer to disrupt Wolf’s scanner signal.",
+        "source": "Red’s other hand flicks a micro-jammer from her belt, thumbing the switch to disrupt the scanner’s signal.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red slips past Wolf and enters the bunker as alarms begin to pulse.",
+        "source": "' Red hesitates, then slips past him, ducking into the bunker’s dim corridor as alarms begin to pulse faintly in the distance, triggered by her override.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red receives a coded message with new mission instructions.",
+        "source": "Even as the revolution sparks beyond the bunker’s walls, a coded message arrives for Red, carrying instructions that will thrust her into a mission with stakes higher than ever before.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Mother inspects Red’s delivery case at the starport bay and reveals nanomedicine.",
+        "source": "Mother taps a sequence on her slate, unlocking the case, and reveals a vial of shimmering nanomedicine, then secures it again with a precise snap.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Mother relays security protocols.",
+        "source": "Mother watches her go, fingers tightening on the slate, already relaying security protocols to the nearby terminal.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red boards the mag-rail with the secure package, beginning her journey.",
+        "source": "Red steps onto the mag-rail, the package secure beneath her arm, as the platform hums to life beneath her feet.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother commands Security AI to run enhanced scan of the west ridge.",
+        "source": "She issues a precise voice command to the Security AI, instructing it to run an enhanced scan—specifically requesting a double-check of the west ridge and a detailed report within five minutes.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Security AI initiates perimeter scan and compiles real-time telemetry for Grandmother.",
+        "source": "\"Acknowledged, Grandmother—commencing enhanced scan of the west ridge,\" the AI intoned, its voice devoid of emotion as it continued, \"Compiling real-time telemetry;",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother reviews the telemetry and prepares for potential threats to the outpost.",
+        "source": "Grandmother reviews the telemetry, her expression intent and focused as she prepares for any potential threats on the outpost perimeter.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red presents a manifest at the perimeter checkpoint.",
+        "source": "Red sets the battered satchel on the table with deliberate care, her hands steady though her jaw tightens almost imperceptibly as she slides a folded manifest across the surface.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf notes increased inspections, asks Red if she has anything to declare, and allows her to proceed after warning her.",
+        "source": "Satisfied with her responses, Wolf returns her data slate and allows her to proceed, warning her to keep her eyes open.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red moves deeper into the colony’s corridors, aware of Wolf’s scrutiny.",
+        "source": "Red tucks her satchel tighter and moves quickly toward the colony’s inner sectors, aware of Wolf’s gaze following her.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red is intercepted by Wolf, who blocks her path and issues verbal threats.",
+        "source": "Their exchange is sharp—Wolf makes clear he knows Red’s intent and demands compliance, threatening escalation if she resists.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red challenges Wolf’s authority and, during a network hack distraction, slips past him into the forest.",
+        "source": "Axel’s hack remains in progress, and as the network flickers, Red seizes a brief opening—using distraction rather than brute force—to slip past Wolf and into the deeper forest, her objective unchanged: deliver the nanomedicine to her grandmother.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolf resumes pursuit after Red escapes, frustrated but not physically bested.",
+        "source": "Wolf, frustrated but not physically bested, resumes pursuit, his resolve steeled by Red’s provocation.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red contacts Grandmother via emergency channel and learns Wolf has breached the secondary gate.",
+        "source": "Grandmother’s voice crackles through the device, strained but urgent: 'Red, Wolf breached the secondary gate.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother implores Red to keep the nanomedicine from Wolf, emphasizing its importance.",
+        "source": "' Grandmother’s tone grows desperate: 'Promise me you’ll never let him reach the nanomedicine, Red.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red promises Grandmother to deliver the nanomedicine and chooses to keep moving despite the danger.",
+        "source": "Despite Grandmother’s plea to hide, Red responds, her determination unwavering: 'This medicine is their only chance.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      }
+    ],
+    "Papalampidi_detailed_results": {
+      "turning_points": {
+        "TP1": "Mother inspects Red’s delivery case at the starport bay and reveals nanomedicine.",
+        "TP2": "Red receives a coded message with new mission instructions.",
+        "TP3": "Red challenges Wolf’s authority and, during a network hack distraction, slips past him into the forest.",
+        "TP4": "Red contacts Grandmother via emergency channel and learns Wolf has breached the secondary gate.",
+        "TP5": "Red promises Grandmother to deliver the nanomedicine and chooses to keep moving despite the danger."
+      },
+      "stage_division": {
+        "Setup": [
+          "Red bypasses the bunker’s security lock.",
+          "Wolf confronts Red at the bunker entrance, questioning her presence and scanning her.",
+          "Red uses a micro-jammer to disrupt Wolf’s scanner signal.",
+          "Red slips past Wolf and enters the bunker as alarms begin to pulse."
+        ],
+        "New Situation": [
+          "Red receives a coded message with new mission instructions.",
+          "Mother inspects Red’s delivery case at the starport bay and reveals nanomedicine.",
+          "Mother relays security protocols."
+        ],
+        "Progress": [
+          "Red boards the mag-rail with the secure package, beginning her journey.",
+          "Grandmother commands Security AI to run enhanced scan of the west ridge.",
+          "Security AI initiates perimeter scan and compiles real-time telemetry for Grandmother.",
+          "Grandmother reviews the telemetry and prepares for potential threats to the outpost.",
+          "Red presents a manifest at the perimeter checkpoint.",
+          "Wolf notes increased inspections, asks Red if she has anything to declare, and allows her to proceed after warning her.",
+          "Red moves deeper into the colony’s corridors, aware of Wolf’s scrutiny."
+        ],
+        "Complications": [
+          "Red is intercepted by Wolf, who blocks her path and issues verbal threats.",
+          "Red challenges Wolf’s authority and, during a network hack distraction, slips past him into the forest.",
+          "Wolf resumes pursuit after Red escapes, frustrated but not physically bested."
+        ],
+        "Final Push": [
+          "Red contacts Grandmother via emergency channel and learns Wolf has breached the secondary gate.",
+          "Grandmother implores Red to keep the nanomedicine from Wolf, emphasizing its importance."
+        ],
+        "Aftermath": [
+          "Red promises Grandmother to deliver the nanomedicine and chooses to keep moving despite the danger."
+        ]
+      }
+    },
+    "Li_detailed_results": {
+      "Red bypasses the bunker’s security lock.": "Complicating Action",
+      "Wolf confronts Red at the bunker entrance, questioning her presence and scanning her.": "Orientation",
+      "Red uses a micro-jammer to disrupt Wolf’s scanner signal.": "Complicating Action",
+      "Red slips past Wolf and enters the bunker as alarms begin to pulse.": "Complicating Action",
+      "Red receives a coded message with new mission instructions.": "Orientation",
+      "Mother inspects Red’s delivery case at the starport bay and reveals nanomedicine.": "Orientation",
+      "Mother relays security protocols.": "Orientation",
+      "Red boards the mag-rail with the secure package, beginning her journey.": "Abstract",
+      "Grandmother commands Security AI to run enhanced scan of the west ridge.": "Complicating Action",
+      "Security AI initiates perimeter scan and compiles real-time telemetry for Grandmother.": "Minor Resolution",
+      "Grandmother reviews the telemetry and prepares for potential threats to the outpost.": "Minor Resolution",
+      "Red presents a manifest at the perimeter checkpoint.": "Orientation",
+      "Wolf notes increased inspections, asks Red if she has anything to declare, and allows her to proceed after warning her.": "Minor Resolution",
+      "Red moves deeper into the colony’s corridors, aware of Wolf’s scrutiny.": "Complicating Action",
+      "Red is intercepted by Wolf, who blocks her path and issues verbal threats.": "Complicating Action",
+      "Red challenges Wolf’s authority and, during a network hack distraction, slips past him into the forest.": "MRE",
+      "Wolf resumes pursuit after Red escapes, frustrated but not physically bested.": "Return of MRE",
+      "Red contacts Grandmother via emergency channel and learns Wolf has breached the secondary gate.": "Complicating Action",
+      "Grandmother implores Red to keep the nanomedicine from Wolf, emphasizing its importance.": "Evaluation",
+      "Red promises Grandmother to deliver the nanomedicine and chooses to keep moving despite the danger.": "Resolution"
+    },
+    "structure_analysis": {
+      "basic_info": {
+        "total_events": 20,
+        "analysis_mode": "default",
+        "analysis_time": null
+      },
+      "Papalampidi_structure_analysis": {
+        "turning_point_integrity": {
+          "identified_tps": [
+            "TP1",
+            "TP2",
+            "TP3",
+            "TP4",
+            "TP5"
+          ],
+          "missing_tps": [],
+          "TP_coverage": "5/5"
+        },
+        "stage_integrity": {
+          "identified_stages": [
+            "Setup",
+            "New Situation",
+            "Progress",
+            "Complications",
+            "Final Push",
+            "Aftermath"
+          ],
+          "missing_stages": [],
+          "stage_coverage": "6/6"
+        }
+      },
+      "Li_function_analysis": {
+        "core_function_check": {
+          "Orientation": "exists",
+          "Complicating Action": "exists",
+          "MRE": "exists",
+          "Resolution": "exists"
+        },
+        "function_distribution": {
+          "Complicating Action": 7,
+          "Orientation": 5,
+          "Abstract": 1,
+          "Minor Resolution": 3,
+          "MRE": 1,
+          "Return of MRE": 1,
+          "Evaluation": 1,
+          "Resolution": 1
+        },
+        "function_diversity": 8
+      }
+    }
+  }
+}

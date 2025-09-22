@@ -1,0 +1,269 @@
+{
+  "analysis_info": {
+    "timestamp": "2025-09-14T00:23:06.759795",
+    "data_source": "metrics_master_clean.csv",
+    "analyzer_version": "1.0",
+    "evaluation_criteria": {
+      "correlation_threshold": 0.3,
+      "disagreement_threshold": 3,
+      "agreement_threshold": 0.7
+    }
+  },
+  "basic_statistics": {
+    "overall": {
+      "count": 57,
+      "mean_correlation": 0.30457017543859644,
+      "std_correlation": 0.39278698469349965,
+      "median_correlation": 0.3651,
+      "significant_correlations": 33,
+      "significant_percentage": 57.89473684210527,
+      "stable_stories": 19,
+      "stable_percentage": 33.33333333333333,
+      "mean_roberta_score": 0.13967567972720168,
+      "mean_disagreements": 2.8771929824561404,
+      "mean_direction_consistency": 0.4292105263157895,
+      "classification_agreement_rate": 0.38596491228070173,
+      "reliable_classification": false
+    },
+    "linear_structure": {
+      "count": 27,
+      "mean_correlation": 0.28681111111111113,
+      "significant_percentage": 55.55555555555556,
+      "stable_percentage": 29.629629629629626,
+      "mean_roberta_score": 0.15384855732273564,
+      "mean_direction_consistency": 0.37744814814814814
+    },
+    "nonlinear_structure": {
+      "count": 27,
+      "mean_correlation": 0.2921148148148148,
+      "significant_percentage": 59.25925925925925,
+      "stable_percentage": 29.629629629629626,
+      "mean_roberta_score": 0.12222137388896001,
+      "mean_direction_consistency": 0.458625925925926
+    },
+    "sciencefiction_genre": {
+      "count": 18,
+      "mean_correlation": 0.20326666666666668,
+      "significant_percentage": 55.55555555555556,
+      "stable_percentage": 27.77777777777778,
+      "mean_roberta_score": -0.12897199639035195
+    },
+    "horror_genre": {
+      "count": 18,
+      "mean_correlation": 0.3270722222222222,
+      "significant_percentage": 55.55555555555556,
+      "stable_percentage": 33.33333333333333,
+      "mean_roberta_score": 0.12271917224308576
+    },
+    "romantic_genre": {
+      "count": 18,
+      "mean_correlation": 0.33805,
+      "significant_percentage": 61.111111111111114,
+      "stable_percentage": 27.77777777777778,
+      "mean_roberta_score": 0.42035772096480967
+    }
+  },
+  "archetype_analysis": {
+    "archetype_distribution": {
+      "counts": {
+        "Tragedy": 18,
+        "Rags to riches": 12,
+        "Oedipus": 11,
+        "Icarus": 6,
+        "Cinderella": 5,
+        "Man in a hole": 5
+      },
+      "percentages": {
+        "Tragedy": 31.57894736842105,
+        "Rags to riches": 21.052631578947366,
+        "Oedipus": 19.298245614035086,
+        "Icarus": 10.526315789473683,
+        "Cinderella": 8.771929824561402,
+        "Man in a hole": 8.771929824561402
+      },
+      "total_stories": 57
+    },
+    "most_common_archetypes": [
+      "Tragedy",
+      "Rags to riches",
+      "Oedipus"
+    ],
+    "archetype_by_genre": {
+      "sciencefiction": {
+        "counts": {
+          "Oedipus": 6,
+          "Icarus": 5,
+          "Man in a hole": 4,
+          "Cinderella": 3
+        },
+        "most_common": "Oedipus"
+      },
+      "horror": {
+        "counts": {
+          "Tragedy": 7,
+          "Rags to riches": 5,
+          "Oedipus": 3,
+          "Cinderella": 2,
+          "Man in a hole": 1
+        },
+        "most_common": "Tragedy"
+      },
+      "romantic": {
+        "counts": {
+          "Tragedy": 10,
+          "Rags to riches": 6,
+          "Oedipus": 2
+        },
+        "most_common": "Tragedy"
+      }
+    },
+    "archetype_by_structure": {
+      "linear": {
+        "counts": {
+          "Tragedy": 10,
+          "Oedipus": 7,
+          "Rags to riches": 4,
+          "Icarus": 3,
+          "Man in a hole": 3
+        },
+        "most_common": "Tragedy"
+      },
+      "nonlinear": {
+        "counts": {
+          "Rags to riches": 7,
+          "Tragedy": 7,
+          "Cinderella": 5,
+          "Oedipus": 4,
+          "Man in a hole": 2,
+          "Icarus": 2
+        },
+        "most_common": "Rags to riches"
+      }
+    },
+    "genre_archetype_association": {
+      "chi2_statistic": 37.41624579124579,
+      "p_value": 0.0010998159605956862,
+      "significant": true,
+      "contingency_table": {
+        "Cinderella": {
+          "baseline": 0,
+          "horror": 2,
+          "romantic": 0,
+          "sciencefiction": 3
+        },
+        "Icarus": {
+          "baseline": 1,
+          "horror": 0,
+          "romantic": 0,
+          "sciencefiction": 5
+        },
+        "Man in a hole": {
+          "baseline": 0,
+          "horror": 1,
+          "romantic": 0,
+          "sciencefiction": 4
+        },
+        "Oedipus": {
+          "baseline": 0,
+          "horror": 3,
+          "romantic": 2,
+          "sciencefiction": 6
+        },
+        "Rags to riches": {
+          "baseline": 1,
+          "horror": 5,
+          "romantic": 6,
+          "sciencefiction": 0
+        },
+        "Tragedy": {
+          "baseline": 1,
+          "horror": 7,
+          "romantic": 10,
+          "sciencefiction": 0
+        }
+      }
+    }
+  },
+  "emotion_coherence_interaction": {
+    "emotion_stability_coherence": {
+      "correlation": 0.1602417689475751,
+      "p_value": 0.23376785882325504,
+      "significant": false,
+      "interpretation": "More stable emotions correlate with higher coherence"
+    },
+    "method_agreement_coherence": {
+      "correlation": -0.01043978268651684,
+      "p_value": 0.9385642812230071,
+      "significant": false,
+      "interpretation": "Method disagreement might indicate complexity"
+    },
+    "emotion_range_coherence": {
+      "correlation": -0.2123937382730005,
+      "p_value": 0.11270113513708369,
+      "significant": false,
+      "interpretation": "Narrower emotional range correlates with higher coherence"
+    }
+  },
+  "structure_emotion_relationship": {
+    "volatility_comparison": {
+      "linear_mean": 0.2926411176407589,
+      "nonlinear_mean": 0.27938838537965455,
+      "t_statistic": 0.6913204936733885,
+      "p_value": 0.4924391283962294,
+      "significant": false,
+      "nonlinear_more_volatile": false
+    },
+    "disagreement_comparison": {
+      "linear_mean": 2.925925925925926,
+      "nonlinear_mean": 3.1481481481481484,
+      "t_statistic": -0.6376542589468721,
+      "p_value": 0.5264967136653356,
+      "significant": false,
+      "nonlinear_more_disagreements": true
+    },
+    "correlation_comparison": {
+      "linear_mean": 0.28681111111111113,
+      "nonlinear_mean": 0.2921148148148148,
+      "t_statistic": -0.049052316319177856,
+      "p_value": 0.9610655291361965,
+      "significant": false,
+      "nonlinear_higher_correlation": true
+    }
+  },
+  "validation": {
+    "correlation_range": {
+      "min_value": -0.6239,
+      "max_value": 0.9356,
+      "within_expected_range": true,
+      "realistic_distribution": true
+    },
+    "direction_consistency_range": {
+      "min_value": 0.0074,
+      "max_value": 0.9356,
+      "within_expected_range": true
+    },
+    "logical_consistency": {
+      "high_correlation_fewer_disagreements": true
+    },
+    "classification_agreement": {
+      "total_stories": 57,
+      "agreement_count": 22,
+      "agreement_rate": 0.38596491228070173
+    },
+    "score_parsing": {
+      "roberta_parsing_success_rate": 1.0,
+      "labmt_parsing_success_rate": 1.0,
+      "overall_parsing_success": 1.0
+    }
+  },
+  "interpretations": [
+    "⚠️ MODERATE CONSISTENCY: 57.9% of stories show significant method agreement",
+    "⚠️ VOLATILE EMOTIONS: Only 33.3% of stories show stable emotional patterns",
+    "📚 DOMINANT ARCHETYPE: Tragedy accounts for 31.6% of all stories"
+  ],
+  "recommendations": [
+    "IMPROVE METHOD AGREEMENT: Consider adjusting analysis parameters or validating with human evaluation",
+    "REDUCE VOLATILITY: High disagreement rates suggest need for more consistent emotional trajectory generation",
+    "VALIDATE ARCHETYPES: Low classification agreement suggests need for manual validation of story archetypes"
+  ]
+}

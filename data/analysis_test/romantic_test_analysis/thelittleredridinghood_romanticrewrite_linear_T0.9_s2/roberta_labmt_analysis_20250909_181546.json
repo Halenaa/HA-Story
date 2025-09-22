@@ -1,0 +1,206 @@
+{
+  "metadata": {
+    "total_chapters": 8,
+    "primary_method": "RoBERTa",
+    "validation_method": "LabMT-en-v1",
+    "analysis_timestamp": "2025-09-09T18:15:46.947024"
+  },
+  "chapter_analysis": [
+    {
+      "chapter_num": 1,
+      "title": "Red Receives a Mysterious Invitation",
+      "roberta_score": 0.2012,
+      "labmt_score": 0.3237,
+      "content_length": 1567
+    },
+    {
+      "chapter_num": 2,
+      "title": "The Encounter with the Charming Stranger",
+      "roberta_score": 0.7052,
+      "labmt_score": 0.2609,
+      "content_length": 13255
+    },
+    {
+      "chapter_num": 3,
+      "title": "Wolf Arrives First and Makes His Move",
+      "roberta_score": 0.9957,
+      "labmt_score": 0.2835,
+      "content_length": 19285
+    },
+    {
+      "chapter_num": 4,
+      "title": "Red Uncovers the Truth",
+      "roberta_score": 0.5896,
+      "labmt_score": 0.2047,
+      "content_length": 35421
+    },
+    {
+      "chapter_num": 5,
+      "title": "A Choice of the Heart",
+      "roberta_score": 0.7055,
+      "labmt_score": 0.2181,
+      "content_length": 5660
+    },
+    {
+      "chapter_num": 6,
+      "title": "The Act of Devotion",
+      "roberta_score": -0.0549,
+      "labmt_score": 0.277,
+      "content_length": 11541
+    },
+    {
+      "chapter_num": 7,
+      "title": "Return and Revelations",
+      "roberta_score": 0.6149,
+      "labmt_score": 0.2462,
+      "content_length": 15503
+    },
+    {
+      "chapter_num": 8,
+      "title": "A New Beginning",
+      "roberta_score": 0.8225,
+      "labmt_score": 0.3532,
+      "content_length": 4661
+    }
+  ],
+  "primary_analysis": {
+    "method": "RoBERTa",
+    "scores": [
+      0.20122244755427043,
+      0.7051678895950317,
+      0.9957066059112549,
+      0.5895930806795756,
+      0.7055367231369019,
+      -0.0548547108968099,
+      0.6149155934651692,
+      0.8225091536839803
+    ],
+    "reagan_classification": {
+      "method": "RoBERTa",
+      "best_match": "Rags to riches",
+      "confidence": 0.617,
+      "all_similarities": {
+        "Rags to riches": 0.617,
+        "Tragedy": 0.5641,
+        "Man in a hole": 0,
+        "Icarus": 0.0227,
+        "Cinderella": 0,
+        "Oedipus": 0.1197
+      },
+      "reagan_category": "RR"
+    }
+  },
+  "validation_analysis": {
+    "method": "LabMT",
+    "scores": [
+      0.32368852459016395,
+      0.2609409190371941,
+      0.28349788434414,
+      0.20466090985678376,
+      0.2181043956043962,
+      0.2769656488549588,
+      0.24623036649214347,
+      0.35315972222222114
+    ],
+    "reagan_classification": {
+      "method": "LabMT",
+      "best_match": "Rags to riches",
+      "confidence": 0.675,
+      "all_similarities": {
+        "Rags to riches": 0.675,
+        "Tragedy": 0.6565,
+        "Man in a hole": 0.0092,
+        "Icarus": 0,
+        "Cinderella": 0,
+        "Oedipus": 0.2955
+      },
+      "reagan_category": "RR"
+    }
+  },
+  "correlation_analysis": {
+    "pearson_correlation": {
+      "r": -0.0672,
+      "p_value": 0.8744,
+      "significance": "Not Significant"
+    },
+    "spearman_correlation": {
+      "r": 0.1905,
+      "p_value": 0.6514
+    },
+    "direction_consistency": 0.5714,
+    "consistency_level": "Low",
+    "interpretation": "RoBERTa and LabMT correlation coefficient is -0.067, belongs to weak correlation"
+  },
+  "comparison_analysis": {
+    "disagreement_points": [
+      {
+        "chapter": 2,
+        "roberta_score": 0.7051678895950317,
+        "labmt_score": 0.2609409190371941,
+        "difference": 0.4442
+      },
+      {
+        "chapter": 3,
+        "roberta_score": 0.9957066059112549,
+        "labmt_score": 0.28349788434414,
+        "difference": 0.7122
+      },
+      {
+        "chapter": 4,
+        "roberta_score": 0.5895930806795756,
+        "labmt_score": 0.20466090985678376,
+        "difference": 0.3849
+      },
+      {
+        "chapter": 5,
+        "roberta_score": 0.7055367231369019,
+        "labmt_score": 0.2181043956043962,
+        "difference": 0.4874
+      },
+      {
+        "chapter": 6,
+        "roberta_score": -0.0548547108968099,
+        "labmt_score": 0.2769656488549588,
+        "difference": 0.3318
+      },
+      {
+        "chapter": 7,
+        "roberta_score": 0.6149155934651692,
+        "labmt_score": 0.24623036649214347,
+        "difference": 0.3687
+      },
+      {
+        "chapter": 8,
+        "roberta_score": 0.8225091536839803,
+        "labmt_score": 0.35315972222222114,
+        "difference": 0.4693
+      }
+    ],
+    "method_advantages": {
+      "RoBERTa": {
+        "strengths": [
+          "Deep learning model with better contextual understanding",
+          "Suitable for modern text and dialogue",
+          "High sensitivity to sci-fi and technical texts"
+        ],
+        "classification": "Rags to riches",
+        "confidence": 0.617
+      },
+      "LabMT": {
+        "strengths": [
+          "Fully consistent with Reagan's original method",
+          "Based on large-scale human annotation",
+          "Suitable for traditional literary analysis"
+        ],
+        "classification": "Rags to riches",
+        "confidence": 0.675
+      }
+    },
+    "consistency_assessment": {
+      "classification_agreement": true,
+      "major_disagreements": 7,
+      "recommendation": "Both methods identify as Rags to riches, results are highly consistent, recommend using RoBERTa as the primary analysis result"
+    }
+  },
+  "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = -0.067 (Low)\n- Consistency level: RoBERTa and LabMT correlation coefficient is -0.067, belongs to weak correlation\n\nClassification Results:\n- RoBERTa (primary): Rags to riches\n- LabMT (validation): Rags to riches\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is -0.067, showing low consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation."
+}

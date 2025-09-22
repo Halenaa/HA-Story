@@ -188,43 +188,39 @@ def score_li(result):
     return min(score, 10)
 
 
-def calculate_coherence(events):
-    """计算连贯性分数"""
+def calculate_semantic_continuity(events):
+    """计算语义连续性分数
+    
+    注意：此方法仅测量相邻事件间的语义相似度，不评价完整的故事连贯性。
+    语义连续性 ≠ 逻辑连贯性或因果关系的完整性。
+    """
     if not COHERENCE_AVAILABLE or len(events) < 2:
-        return {"平均连贯性": 0, "连贯性等级": "无法计算"}
+        return {"平均语义连续性": 0, "说明": "事件数量不足，无法计算"}
     
     try:
         model = SentenceTransformer('all-MiniLM-L6-v2')
         event_embeddings = model.encode(events)
         
-        coherence_scores = []
+        continuity_scores = []
         for i in range(len(event_embeddings) - 1):
             similarity = cosine_similarity([event_embeddings[i]], [event_embeddings[i+1]])[0][0]
-            coherence_scores.append(similarity)
+            continuity_scores.append(similarity)
         
-        avg_coherence = np.mean(coherence_scores)
-        min_coherence = np.min(coherence_scores)
-        worst_gap = np.argmin(coherence_scores)
-        
-        if avg_coherence >= 0.7:
-            level = "优秀"
-        elif avg_coherence >= 0.5:
-            level = "良好" 
-        elif avg_coherence >= 0.3:
-            level = "及格"
-        else:
-            level = "需改进"
+        avg_continuity = np.mean(continuity_scores)
+        min_continuity = np.min(continuity_scores)
+        worst_gap = np.argmin(continuity_scores)
         
         return {
-            "平均连贯性": round(avg_coherence, 3),
-            "最低连贯性": round(min_coherence, 3),
-            "最大跳跃位置": worst_gap,
-            "连贯性等级": level,
-            "详细分数": [round(s, 3) for s in coherence_scores]
+            "平均语义连续性": round(avg_continuity, 3),
+            "最低语义连续性": round(min_continuity, 3),
+            "最大语义断裂位置": worst_gap,
+            "测量说明": "仅测量相邻事件的语义相似度，建议与其他样本比较而非绝对评价",
+            "取值范围": "0-1，接近1表示相邻事件语义更相似",
+            "详细分数": [round(s, 3) for s in continuity_scores]
         }
     except Exception as e:
-        print(f"⚠️ 连贯性计算失败：{e}")
-        return {"平均连贯性": 0, "连贯性等级": "计算失败"}
+        print(f"⚠️ 语义连续性计算失败：{e}")
+        return {"平均语义连续性": 0, "说明": "计算失败"}
 
 
 def evaluate_story_dual_track(input_path, output_path, model="gpt-4.1"):
@@ -259,8 +255,8 @@ def evaluate_story_dual_track(input_path, output_path, model="gpt-4.1"):
     li_result = llm_li_annotate(events, model=model)
     li_score = score_li(li_result)
     
-    print("\n🔗 步骤3：连贯性分析...")
-    coherence_result = calculate_coherence(events)
+    print("\n🔗 步骤3：语义连续性分析...")
+    continuity_result = calculate_semantic_continuity(events)
     
     # 汇总结果
     evaluation_result = {
@@ -278,11 +274,11 @@ def evaluate_story_dual_track(input_path, output_path, model="gpt-4.1"):
             "得分": f"{li_score}/10", 
             "详细结果": li_result
         },
-        "连贯性评价": coherence_result,
+        "语义连续性评价": continuity_result,
         "综合诊断": {
-            "结构质量": "优秀" if papalampidi_score >= 8 else "良好" if papalampidi_score >= 6 else "需改进",
-            "功能质量": "优秀" if li_score >= 8 else "良好" if li_score >= 6 else "需改进",
-            "连贯性质量": coherence_result.get("连贯性等级", "无法计算")
+            "结构质量": f"{papalampidi_score}/10分" + (" (表现优异)" if papalampidi_score >= 8 else " (表现良好)" if papalampidi_score >= 6 else " (需要改进)"),
+            "功能质量": f"{li_score}/10分" + (" (表现优异)" if li_score >= 8 else " (表现良好)" if li_score >= 6 else " (需要改进)"),
+            "语义连续性": f"{continuity_result.get('平均语义连续性', 0)}" + " (建议与其他样本对比分析)"
         }
     }
     
@@ -293,9 +289,9 @@ def evaluate_story_dual_track(input_path, output_path, model="gpt-4.1"):
     print(f"""
 📊 评价完成！结果摘要：
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📈 结构质量 (Papalampidi): {papalampidi_score}/10 ({evaluation_result['综合诊断']['结构质量']})
-🏷️  功能质量 (Li):        {li_score}/10 ({evaluation_result['综合诊断']['功能质量']})
-🔗 连贯性质量:            {coherence_result.get('平均连贯性', 0)} ({coherence_result.get('连贯性等级', '无法计算')})
+📈 结构质量 (Papalampidi): {evaluation_result['综合诊断']['结构质量']}
+🏷️  功能质量 (Li):        {evaluation_result['综合诊断']['功能质量']}
+🔗 语义连续性:            {evaluation_result['综合诊断']['语义连续性']}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 💾 详细结果已保存至：{output_path}
 """)

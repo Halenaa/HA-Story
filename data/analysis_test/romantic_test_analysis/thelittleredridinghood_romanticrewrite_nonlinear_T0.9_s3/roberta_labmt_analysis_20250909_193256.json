@@ -1,0 +1,182 @@
+{
+  "metadata": {
+    "total_chapters": 8,
+    "primary_method": "RoBERTa",
+    "validation_method": "LabMT-en-v1",
+    "analysis_timestamp": "2025-09-09T19:32:56.436725"
+  },
+  "chapter_analysis": [
+    {
+      "chapter_num": 5,
+      "title": "Red Arrives and Senses Deception",
+      "roberta_score": 0.7312,
+      "labmt_score": 0.3232,
+      "content_length": 38488
+    },
+    {
+      "chapter_num": 3,
+      "title": "The Wolf's Deceptive Bargain",
+      "roberta_score": 0.888,
+      "labmt_score": 0.2767,
+      "content_length": 20612
+    },
+    {
+      "chapter_num": 1,
+      "title": "Red Receives a Mission from Mother",
+      "roberta_score": 0.2113,
+      "labmt_score": 0.2765,
+      "content_length": 7627
+    },
+    {
+      "chapter_num": 4,
+      "title": "Wolf Reaches Grandmother's House",
+      "roberta_score": 0.4627,
+      "labmt_score": 0.3153,
+      "content_length": 2737
+    },
+    {
+      "chapter_num": 2,
+      "title": "Red Encounters the Handsome Stranger",
+      "roberta_score": 0.3204,
+      "labmt_score": 0.2281,
+      "content_length": 24246
+    },
+    {
+      "chapter_num": 6,
+      "title": "Lucian Confronts the Wolf",
+      "roberta_score": 0.3915,
+      "labmt_score": 0.1388,
+      "content_length": 16089
+    },
+    {
+      "chapter_num": 7,
+      "title": "Red Rescues Grandmother and Makes Her Choice",
+      "roberta_score": 0.6724,
+      "labmt_score": 0.3513,
+      "content_length": 2906
+    },
+    {
+      "chapter_num": 8,
+      "title": "Resolution and A New Beginning",
+      "roberta_score": 0.454,
+      "labmt_score": 0.2246,
+      "content_length": 19853
+    }
+  ],
+  "primary_analysis": {
+    "method": "RoBERTa",
+    "scores": [
+      0.7312011003494263,
+      0.8879962682723999,
+      0.2113405505816142,
+      0.46268274386723834,
+      0.3203580379486084,
+      0.3914594848950704,
+      0.6724130948384602,
+      0.45401700735092165
+    ],
+    "reagan_classification": {
+      "method": "RoBERTa",
+      "best_match": "Tragedy",
+      "confidence": 0.719,
+      "all_similarities": {
+        "Rags to riches": 0.5304,
+        "Tragedy": 0.719,
+        "Man in a hole": 0,
+        "Icarus": 0.1166,
+        "Cinderella": 0,
+        "Oedipus": 0.3934
+      },
+      "reagan_category": "TR"
+    }
+  },
+  "validation_analysis": {
+    "method": "LabMT",
+    "scores": [
+      0.3232121212121264,
+      0.27674315068492694,
+      0.2764942528735639,
+      0.3152564102564097,
+      0.22806199304750163,
+      0.13879824561403176,
+      0.3513204225352109,
+      0.22462243401758797
+    ],
+    "reagan_classification": {
+      "method": "LabMT",
+      "best_match": "Tragedy",
+      "confidence": 0.7171,
+      "all_similarities": {
+        "Rags to riches": 0.5972,
+        "Tragedy": 0.7171,
+        "Man in a hole": 0,
+        "Icarus": 0.083,
+        "Cinderella": 0,
+        "Oedipus": 0.2172
+      },
+      "reagan_category": "TR"
+    }
+  },
+  "correlation_analysis": {
+    "pearson_correlation": {
+      "r": 0.4573,
+      "p_value": 0.2546,
+      "significance": "Not Significant"
+    },
+    "spearman_correlation": {
+      "r": 0.619,
+      "p_value": 0.1017
+    },
+    "direction_consistency": 0.7143,
+    "consistency_level": "Low",
+    "interpretation": "RoBERTa and LabMT correlation coefficient is 0.457, belongs to weak correlation"
+  },
+  "comparison_analysis": {
+    "disagreement_points": [
+      {
+        "chapter": 1,
+        "roberta_score": 0.7312011003494263,
+        "labmt_score": 0.3232121212121264,
+        "difference": 0.408
+      },
+      {
+        "chapter": 2,
+        "roberta_score": 0.8879962682723999,
+        "labmt_score": 0.27674315068492694,
+        "difference": 0.6113
+      },
+      {
+        "chapter": 7,
+        "roberta_score": 0.6724130948384602,
+        "labmt_score": 0.3513204225352109,
+        "difference": 0.3211
+      }
+    ],
+    "method_advantages": {
+      "RoBERTa": {
+        "strengths": [
+          "Deep learning model with better contextual understanding",
+          "Suitable for modern text and dialogue",
+          "High sensitivity to sci-fi and technical texts"
+        ],
+        "classification": "Tragedy",
+        "confidence": 0.719
+      },
+      "LabMT": {
+        "strengths": [
+          "Fully consistent with Reagan's original method",
+          "Based on large-scale human annotation",
+          "Suitable for traditional literary analysis"
+        ],
+        "classification": "Tragedy",
+        "confidence": 0.7171
+      }
+    },
+    "consistency_assessment": {
+      "classification_agreement": true,
+      "major_disagreements": 3,
+      "recommendation": "Both methods identify as Tragedy, results are highly consistent, recommend using RoBERTa as the primary analysis result"
+    }
+  },
+  "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.457 (Low)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.457, belongs to weak correlation\n\nClassification Results:\n- RoBERTa (primary): Tragedy\n- LabMT (validation): Tragedy\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.457, showing low consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation."
+}

@@ -1,0 +1,343 @@
+{
+  "analysis_date": "2025-09-14T15:23:24.830788",
+  "data_file": "/Users/haha/Story/metrics_master_clean.csv",
+  "sample_sizes": {
+    "total": 57,
+    "multi_agent": 54,
+    "baseline": 3
+  },
+  "statistical_tests": {
+    "Diversity": {
+      "distinct_avg": {
+        "permutation_test": {
+          "pvalue": 0.014798520147985201,
+          "statistic": -0.03862143709990018,
+          "method": "permutation_test"
+        },
+        "effect_size": {
+          "cliffs_delta": -0.7530864197530864,
+          "magnitude": "large",
+          "abs_delta": 0.7530864197530864
+        },
+        "multi_agent_stats": {
+          "mean": 0.6359145158360527,
+          "median": 0.6332122777752752,
+          "std": 0.022540930452469136,
+          "n": 54
+        },
+        "baseline_stats": {
+          "mean": 0.6745359529359529,
+          "median": 0.6598736263736263,
+          "std": 0.028120853354723217,
+          "n": 3
+        },
+        "multi_agent_ci": {
+          "ci_lower": 0.6303011555208043,
+          "ci_upper": 0.6424458482972331
+        },
+        "baseline_ci": {
+          "ci_lower": 0.6578088023088023,
+          "ci_upper": 0.7069578421578422
+        },
+        "direction": "higher_better",
+        "corrected_pvalue": 0.073992600739926,
+        "significant_corrected": "False"
+      },
+      "distinct_score": {
+        "permutation_test": {
+          "pvalue": 0.07579242075792421,
+          "statistic": -0.3482712256588385,
+          "method": "permutation_test"
+        },
+        "effect_size": {
+          "cliffs_delta": -0.6604938271604939,
+          "magnitude": "large",
+          "abs_delta": 0.6604938271604939
+        },
+        "multi_agent_stats": {
+          "mean": 0.4239454465578337,
+          "median": 0.37948230045630715,
+          "std": 0.31529916975833755,
+          "n": 54
+        },
+        "baseline_stats": {
+          "mean": 0.7722166722166722,
+          "median": 0.6598736263736263,
+          "std": 0.19727222696034968,
+          "n": 3
+        },
+        "multi_agent_ci": {
+          "ci_lower": 0.34400201004299824,
+          "ci_upper": 0.5097409018168803
+        },
+        "baseline_ci": {
+          "ci_lower": 0.6578088023088023,
+          "ci_upper": 1.0
+        },
+        "direction": "higher_better",
+        "corrected_pvalue": 0.30316968303169683,
+        "significant_corrected": "False"
+      }
+    },
+    "Coherence": {
+      "avg_semantic_continuity": {
+        "permutation_test": {
+          "pvalue": 0.0005999400059994001,
+          "statistic": 0.14573061615680294,
+          "method": "permutation_test"
+        },
+        "effect_size": {
+          "cliffs_delta": 1.0,
+          "magnitude": "large",
+          "abs_delta": 1.0
+        },
+        "multi_agent_stats": {
+          "mean": 0.40435740740740733,
+          "median": 0.41885,
+          "std": 0.0344752117776513,
+          "n": 54
+        },
+        "baseline_stats": {
+          "mean": 0.2586267912506044,
+          "median": 0.2606539082874481,
+          "std": 0.023641600116019405,
+          "n": 3
+        },
+        "multi_agent_ci": {
+          "ci_lower": 0.3937666253756126,
+          "ci_upper": 0.4125308347963217
+        },
+        "baseline_ci": {
+          "ci_lower": 0.23403690236812938,
+          "ci_upper": 0.2743443448266398
+        },
+        "direction": "higher_better",
+        "corrected_pvalue": 0.004199580041995801,
+        "significant_corrected": "True"
+      }
+    },
+    "Fluency": {
+      "pseudo_ppl": {
+        "permutation_test": {
+          "pvalue": 0.1573842615738426,
+          "statistic": -0.35322399909575397,
+          "method": "permutation_test"
+        },
+        "effect_size": {
+          "cliffs_delta": -0.07407407407407407,
+          "magnitude": "negligible",
+          "abs_delta": 0.07407407407407407
+        },
+        "multi_agent_stats": {
+          "mean": 2.3024395050682145,
+          "median": 2.2118961981135414,
+          "std": 0.3158537611141153,
+          "n": 54
+        },
+        "baseline_stats": {
+          "mean": 2.6556635041639685,
+          "median": 2.321079077069624,
+          "std": 1.068982159347755,
+          "n": 3
+        },
+        "multi_agent_ci": {
+          "ci_lower": 2.2260776744612456,
+          "ci_upper": 2.3960196088698975
+        },
+        "baseline_ci": {
+          "ci_lower": 1.9696888357417295,
+          "ci_upper": 3.8519177203444985
+        },
+        "direction": "lower_better",
+        "corrected_pvalue": 0.47215278472152783,
+        "significant_corrected": "False"
+      },
+      "err_per_100w": {
+        "permutation_test": {
+          "pvalue": 0.0045995400459954,
+          "statistic": -3.6856172184252713,
+          "method": "permutation_test"
+        },
+        "effect_size": {
+          "cliffs_delta": -0.3333333333333333,
+          "magnitude": "medium",
+          "abs_delta": 0.3333333333333333
+        },
+        "multi_agent_stats": {
+          "mean": 0.27438278157472795,
+          "median": 0.18819025719236776,
+          "std": 0.3314480448192584,
+          "n": 54
+        },
+        "baseline_stats": {
+          "mean": 3.9599999999999995,
+          "median": 5.09,
+          "std": 3.533227985850899,
+          "n": 3
+        },
+        "multi_agent_ci": {
+          "ci_lower": 0.2118231792602022,
+          "ci_upper": 0.40690832438203844
+        },
+        "baseline_ci": {
+          "ci_lower": 0.0,
+          "ci_upper": 6.223333333333334
+        },
+        "direction": "lower_better",
+        "corrected_pvalue": 0.0275972402759724,
+        "significant_corrected": "True"
+      }
+    },
+    "Emotion": {
+      "correlation_coefficient": {
+        "permutation_test": {
+          "pvalue": 0.21657834216578342,
+          "statistic": -0.28703703703703703,
+          "method": "permutation_test"
+        },
+        "effect_size": {
+          "cliffs_delta": -0.48148148148148145,
+          "magnitude": "large",
+          "abs_delta": 0.48148148148148145
+        },
+        "multi_agent_stats": {
+          "mean": 0.289462962962963,
+          "median": 0.35609999999999997,
+          "std": 0.3935141944630275,
+          "n": 54
+        },
+        "baseline_stats": {
+          "mean": 0.5765,
+          "median": 0.7462,
+          "std": 0.3149423280538835,
+          "n": 3
+        },
+        "multi_agent_ci": {
+          "ci_lower": 0.1798956287357681,
+          "ci_upper": 0.38735816304833265
+        },
+        "baseline_ci": {
+          "ci_lower": 0.21309999999999998,
+          "ci_upper": 0.7622
+        },
+        "direction": "higher_better",
+        "corrected_pvalue": 0.47215278472152783,
+        "significant_corrected": "False"
+      },
+      "roberta_avg_score": {
+        "permutation_test": {
+          "pvalue": 0.8563143685631437,
+          "statistic": -0.031173568305723293,
+          "method": "permutation_test"
+        },
+        "effect_size": {
+          "cliffs_delta": -0.07407407407407407,
+          "magnitude": "negligible",
+          "abs_delta": 0.07407407407407407
+        },
+        "multi_agent_stats": {
+          "mean": 0.13803496560584783,
+          "median": 0.1269490528588343,
+          "std": 0.2524888939277567,
+          "n": 54
+        },
+        "baseline_stats": {
+          "mean": 0.16920853391157112,
+          "median": 0.144119556248188,
+          "std": 0.367082362629769,
+          "n": 3
+        },
+        "multi_agent_ci": {
+          "ci_lower": 0.06915681304325419,
+          "ci_upper": 0.20409381891207878
+        },
+        "baseline_ci": {
+          "ci_lower": -0.0750839759601516,
+          "ci_upper": 0.5481917875508467
+        },
+        "direction": "abs_higher_better",
+        "corrected_pvalue": 0.8563143685631437,
+        "significant_corrected": "False"
+      }
+    },
+    "Structure": {}
+  },
+  "length_control": {
+    "Diversity": {
+      "distinct_avg": {
+        "system_coef": -0.01265531032819701,
+        "system_pvalue": 0.2519717691179789,
+        "length_coef": -3.5715726394994574e-06,
+        "length_pvalue": 2.3037783646198e-08,
+        "r_squared": 0.5141656192849697,
+        "model_summary": "                            OLS Regression Results                            \n==============================================================================\nDep. Variable:           distinct_avg   R-squared:                       0.514\nModel:                            OLS   Adj. R-squared:                  0.496\nMethod:                 Least Squares   F-statistic:                     28.57\nDate:                Sun, 14 Sep 2025   Prob (F-statistic):           3.43e-09\nTime:                        15:23:22   Log-Likelihood:                 152.36\nNo. Observations:                  57   AIC:                            -298.7\nDf Residuals:                      54   BIC:                            -292.6\nDf Model:                           2                                         \nCovariance Type:            nonrobust                                         \n================================================================================\n                   coef    std err          t      P>|t|      [0.025      0.975]\n--------------------------------------------------------------------------------\nconst            0.6838      0.010     68.302      0.000       0.664       0.704\nsystem_dummy    -0.0127      0.011     -1.158      0.252      -0.035       0.009\ntotal_words  -3.572e-06   5.46e-07     -6.539      0.000   -4.67e-06   -2.48e-06\n==============================================================================\nOmnibus:                        2.426   Durbin-Watson:                   0.902\nProb(Omnibus):                  0.297   Jarque-Bera (JB):                1.671\nSkew:                           0.202   Prob(JB):                        0.434\nKurtosis:                       2.265   Cond. No.                     6.57e+04\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.\n[2] The condition number is large, 6.57e+04. This might indicate that there are\nstrong multicollinearity or other numerical problems."
+      },
+      "distinct_score": {
+        "system_coef": -0.05672898983027004,
+        "system_pvalue": 0.7368721007870445,
+        "length_coef": -4.010086994834464e-05,
+        "length_pvalue": 1.4035422894055332e-05,
+        "r_squared": 0.33964175205865743,
+        "model_summary": "                            OLS Regression Results                            \n==============================================================================\nDep. Variable:         distinct_score   R-squared:                       0.340\nModel:                            OLS   Adj. R-squared:                  0.315\nMethod:                 Least Squares   F-statistic:                     13.89\nDate:                Sun, 14 Sep 2025   Prob (F-statistic):           1.36e-05\nTime:                        15:23:22   Log-Likelihood:                -3.3865\nNo. Observations:                  57   AIC:                             12.77\nDf Residuals:                      54   BIC:                             18.90\nDf Model:                           2                                         \nCovariance Type:            nonrobust                                         \n================================================================================\n                   coef    std err          t      P>|t|      [0.025      0.975]\n--------------------------------------------------------------------------------\nconst            0.8767      0.154      5.697      0.000       0.568       1.185\nsystem_dummy    -0.0567      0.168     -0.338      0.737      -0.393       0.280\ntotal_words   -4.01e-05   8.39e-06     -4.777      0.000   -5.69e-05   -2.33e-05\n==============================================================================\nOmnibus:                        2.009   Durbin-Watson:                   1.610\nProb(Omnibus):                  0.366   Jarque-Bera (JB):                1.372\nSkew:                           0.116   Prob(JB):                        0.504\nKurtosis:                       2.276   Cond. No.                     6.57e+04\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.\n[2] The condition number is large, 6.57e+04. This might indicate that there are\nstrong multicollinearity or other numerical problems."
+      }
+    },
+    "Coherence": {
+      "avg_semantic_continuity": {
+        "system_coef": 0.11831687842795084,
+        "system_pvalue": 1.1652697673494848e-07,
+        "length_coef": 3.7706877301392246e-06,
+        "length_pvalue": 0.00027538377038400055,
+        "r_squared": 0.5977570425575223,
+        "model_summary": "                               OLS Regression Results                              \n===================================================================================\nDep. Variable:     avg_semantic_continuity   R-squared:                       0.598\nModel:                                 OLS   Adj. R-squared:                  0.583\nMethod:                      Least Squares   F-statistic:                     40.12\nDate:                     Sun, 14 Sep 2025   Prob (F-statistic):           2.10e-11\nTime:                             15:23:22   Log-Likelihood:                 119.69\nNo. Observations:                       57   AIC:                            -233.4\nDf Residuals:                           54   BIC:                            -227.2\nDf Model:                                2                                         \nCovariance Type:                 nonrobust                                         \n================================================================================\n                   coef    std err          t      P>|t|      [0.025      0.975]\n--------------------------------------------------------------------------------\nconst            0.2488      0.018     14.009      0.000       0.213       0.284\nsystem_dummy     0.1183      0.019      6.103      0.000       0.079       0.157\ntotal_words   3.771e-06   9.69e-07      3.892      0.000    1.83e-06    5.71e-06\n==============================================================================\nOmnibus:                        6.128   Durbin-Watson:                   0.686\nProb(Omnibus):                  0.047   Jarque-Bera (JB):                6.160\nSkew:                          -0.797   Prob(JB):                       0.0460\nKurtosis:                       2.777   Cond. No.                     6.57e+04\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.\n[2] The condition number is large, 6.57e+04. This might indicate that there are\nstrong multicollinearity or other numerical problems."
+      }
+    },
+    "Fluency": {
+      "pseudo_ppl": {
+        "system_coef": -0.15257309749026177,
+        "system_pvalue": 0.5030084712677876,
+        "length_coef": -2.759900529494331e-05,
+        "length_pvalue": 0.017973415481726023,
+        "r_squared": 0.13963448074178264,
+        "model_summary": "                            OLS Regression Results                            \n==============================================================================\nDep. Variable:             pseudo_ppl   R-squared:                       0.140\nModel:                            OLS   Adj. R-squared:                  0.108\nMethod:                 Least Squares   F-statistic:                     4.382\nDate:                Sun, 14 Sep 2025   Prob (F-statistic):             0.0172\nTime:                        15:23:22   Log-Likelihood:                -20.371\nNo. Observations:                  57   AIC:                             46.74\nDf Residuals:                      54   BIC:                             52.87\nDf Model:                           2                                         \nCovariance Type:            nonrobust                                         \n================================================================================\n                   coef    std err          t      P>|t|      [0.025      0.975]\n--------------------------------------------------------------------------------\nconst            2.7276      0.207     13.158      0.000       2.312       3.143\nsystem_dummy    -0.1526      0.226     -0.674      0.503      -0.606       0.301\ntotal_words   -2.76e-05   1.13e-05     -2.441      0.018   -5.03e-05   -4.93e-06\n==============================================================================\nOmnibus:                       10.263   Durbin-Watson:                   1.227\nProb(Omnibus):                  0.006   Jarque-Bera (JB):               11.003\nSkew:                           0.771   Prob(JB):                      0.00408\nKurtosis:                       4.502   Cond. No.                     6.57e+04\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.\n[2] The condition number is large, 6.57e+04. This might indicate that there are\nstrong multicollinearity or other numerical problems."
+      },
+      "err_per_100w": {
+        "system_coef": -3.5294443852200943,
+        "system_pvalue": 9.361642033606203e-10,
+        "length_coef": -2.1481163633260824e-05,
+        "length_pvalue": 0.37171837331385393,
+        "r_squared": 0.5628865860731842,
+        "model_summary": "                            OLS Regression Results                            \n==============================================================================\nDep. Variable:           err_per_100w   R-squared:                       0.563\nModel:                            OLS   Adj. R-squared:                  0.547\nMethod:                 Least Squares   F-statistic:                     34.77\nDate:                Sun, 14 Sep 2025   Prob (F-statistic):           1.98e-10\nTime:                        15:23:22   Log-Likelihood:                -62.902\nNo. Observations:                  57   AIC:                             131.8\nDf Residuals:                      54   BIC:                             137.9\nDf Model:                           2                                         \nCovariance Type:            nonrobust                                         \n================================================================================\n                   coef    std err          t      P>|t|      [0.025      0.975]\n--------------------------------------------------------------------------------\nconst            4.0160      0.437      9.187      0.000       3.140       4.892\nsystem_dummy    -3.5294      0.477     -7.396      0.000      -4.486      -2.573\ntotal_words  -2.148e-05   2.38e-05     -0.901      0.372   -6.93e-05    2.63e-05\n==============================================================================\nOmnibus:                       44.914   Durbin-Watson:                   2.540\nProb(Omnibus):                  0.000   Jarque-Bera (JB):              678.332\nSkew:                          -1.437   Prob(JB):                    5.04e-148\nKurtosis:                      19.654   Cond. No.                     6.57e+04\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.\n[2] The condition number is large, 6.57e+04. This might indicate that there are\nstrong multicollinearity or other numerical problems."
+      }
+    },
+    "Emotion": {
+      "correlation_coefficient": {
+        "system_coef": -0.24283208987747568,
+        "system_pvalue": 0.33695711792635874,
+        "length_coef": -6.080274551251919e-06,
+        "length_pvalue": 0.629357349080331,
+        "r_squared": 0.031329262948622594,
+        "model_summary": "                               OLS Regression Results                              \n===================================================================================\nDep. Variable:     correlation_coefficient   R-squared:                       0.031\nModel:                                 OLS   Adj. R-squared:                 -0.005\nMethod:                      Least Squares   F-statistic:                    0.8732\nDate:                     Sun, 14 Sep 2025   Prob (F-statistic):              0.423\nTime:                             15:23:22   Log-Likelihood:                -26.202\nNo. Observations:                       57   AIC:                             58.40\nDf Residuals:                           54   BIC:                             64.53\nDf Model:                                2                                         \nCovariance Type:                 nonrobust                                         \n================================================================================\n                   coef    std err          t      P>|t|      [0.025      0.975]\n--------------------------------------------------------------------------------\nconst            0.5923      0.230      2.580      0.013       0.132       1.053\nsystem_dummy    -0.2428      0.251     -0.969      0.337      -0.745       0.260\ntotal_words   -6.08e-06   1.25e-05     -0.485      0.629   -3.12e-05     1.9e-05\n==============================================================================\nOmnibus:                        3.626   Durbin-Watson:                   1.880\nProb(Omnibus):                  0.163   Jarque-Bera (JB):                3.387\nSkew:                          -0.531   Prob(JB):                        0.184\nKurtosis:                       2.456   Cond. No.                     6.57e+04\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.\n[2] The condition number is large, 6.57e+04. This might indicate that there are\nstrong multicollinearity or other numerical problems."
+      },
+      "roberta_avg_score": {
+        "system_coef": -0.23662583064925002,
+        "system_pvalue": 0.11212402969966259,
+        "length_coef": 2.8259419872417557e-05,
+        "length_pvalue": 0.0003055108359746992,
+        "r_squared": 0.2168015254082194,
+        "model_summary": "                            OLS Regression Results                            \n==============================================================================\nDep. Variable:      roberta_avg_score   R-squared:                       0.217\nModel:                            OLS   Adj. R-squared:                  0.188\nMethod:                 Least Squares   F-statistic:                     7.474\nDate:                Sun, 14 Sep 2025   Prob (F-statistic):            0.00136\nTime:                        15:23:22   Log-Likelihood:                 4.4041\nNo. Observations:                  57   AIC:                            -2.808\nDf Residuals:                      54   BIC:                             3.321\nDf Model:                           2                                         \nCovariance Type:            nonrobust                                         \n================================================================================\n                   coef    std err          t      P>|t|      [0.025      0.975]\n--------------------------------------------------------------------------------\nconst            0.0956      0.134      0.712      0.479      -0.174       0.365\nsystem_dummy    -0.2366      0.147     -1.615      0.112      -0.530       0.057\ntotal_words   2.826e-05   7.32e-06      3.860      0.000    1.36e-05    4.29e-05\n==============================================================================\nOmnibus:                        0.090   Durbin-Watson:                   0.889\nProb(Omnibus):                  0.956   Jarque-Bera (JB):                0.284\nSkew:                           0.035   Prob(JB):                        0.868\nKurtosis:                       2.661   Cond. No.                     6.57e+04\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.\n[2] The condition number is large, 6.57e+04. This might indicate that there are\nstrong multicollinearity or other numerical problems."
+      }
+    },
+    "Structure": {}
+  },
+  "stratified_analysis": {
+    "genre": {
+      "baseline": {}
+    },
+    "structure": {
+      "baseline": {}
+    },
+    "temperature": {
+      "baseline": {}
+    }
+  }
+}

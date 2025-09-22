@@ -1,0 +1,979 @@
+{
+  "folder_name": "thelittleredridinghood_romanticrewrite_linear_T0.9_s3",
+  "file_path": "/Users/haha/Story/data/output/romantic_test/thelittleredridinghood_romanticrewrite_linear_T0.9_s3/enhanced_story_dialogue_updated.md",
+  "analysis_timestamp": null,
+  "emotional_arc_analysis": {
+    "metadata": {
+      "total_chapters": 6,
+      "primary_method": "RoBERTa",
+      "validation_method": "LabMT-en-v1",
+      "analysis_timestamp": "2025-09-09T18:33:39.581660"
+    },
+    "chapter_analysis": [
+      {
+        "chapter_num": 1,
+        "title": "Red Receives a Mysterious Invitation",
+        "roberta_score": 0.3288,
+        "labmt_score": 0.2854,
+        "content_length": 2730
+      },
+      {
+        "chapter_num": 2,
+        "title": "An Encounter with the Charming Stranger",
+        "roberta_score": 0.8628,
+        "labmt_score": 0.2885,
+        "content_length": 6867
+      },
+      {
+        "chapter_num": 3,
+        "title": "A Race to Grandmother's Cottage",
+        "roberta_score": 0.4451,
+        "labmt_score": 0.2119,
+        "content_length": 6927
+      },
+      {
+        "chapter_num": 4,
+        "title": "Wolfe Arrives First and Strikes a Deal",
+        "roberta_score": 0.6788,
+        "labmt_score": 0.2816,
+        "content_length": 7460
+      },
+      {
+        "chapter_num": 5,
+        "title": "Red's Arrival and the Deceptive Introduction",
+        "roberta_score": 0.7156,
+        "labmt_score": 0.2609,
+        "content_length": 4868
+      },
+      {
+        "chapter_num": 6,
+        "title": "The Confession and the Choice",
+        "roberta_score": 0.3548,
+        "labmt_score": 0.1824,
+        "content_length": 4365
+      }
+    ],
+    "primary_analysis": {
+      "method": "RoBERTa",
+      "scores": [
+        0.32883598407109577,
+        0.8628354708353678,
+        0.4451218565305074,
+        0.6788188974062602,
+        0.7156149427096049,
+        0.35480717817942303
+      ],
+      "reagan_classification": {
+        "method": "RoBERTa",
+        "best_match": "Tragedy",
+        "confidence": 0.627,
+        "all_similarities": {
+          "Rags to riches": 0.6174,
+          "Tragedy": 0.627,
+          "Man in a hole": 0,
+          "Icarus": 0.0076,
+          "Cinderella": 0,
+          "Oedipus": 0.0956
+        },
+        "reagan_category": "TR"
+      }
+    },
+    "validation_analysis": {
+      "method": "LabMT",
+      "scores": [
+        0.2853728070175434,
+        0.28851814516129104,
+        0.21186192468619258,
+        0.28157480314960504,
+        0.26094059405940473,
+        0.18244680851063766
+      ],
+      "reagan_classification": {
+        "method": "LabMT",
+        "best_match": "Tragedy",
+        "confidence": 0.7274,
+        "all_similarities": {
+          "Rags to riches": 0.5757,
+          "Tragedy": 0.7274,
+          "Man in a hole": 0,
+          "Icarus": 0.0887,
+          "Cinderella": 0,
+          "Oedipus": 0.204
+        },
+        "reagan_category": "TR"
+      }
+    },
+    "correlation_analysis": {
+      "pearson_correlation": {
+        "r": 0.5597,
+        "p_value": 0.2481,
+        "significance": "Not Significant"
+      },
+      "spearman_correlation": {
+        "r": 0.3714,
+        "p_value": 0.4685
+      },
+      "direction_consistency": 0.8,
+      "consistency_level": "Medium",
+      "interpretation": "RoBERTa and LabMT correlation coefficient is 0.560, belongs to moderate correlation"
+    },
+    "comparison_analysis": {
+      "disagreement_points": [
+        {
+          "chapter": 2,
+          "roberta_score": 0.8628354708353678,
+          "labmt_score": 0.28851814516129104,
+          "difference": 0.5743
+        },
+        {
+          "chapter": 4,
+          "roberta_score": 0.6788188974062602,
+          "labmt_score": 0.28157480314960504,
+          "difference": 0.3972
+        },
+        {
+          "chapter": 5,
+          "roberta_score": 0.7156149427096049,
+          "labmt_score": 0.26094059405940473,
+          "difference": 0.4547
+        }
+      ],
+      "method_advantages": {
+        "RoBERTa": {
+          "strengths": [
+            "Deep learning model with better contextual understanding",
+            "Suitable for modern text and dialogue",
+            "High sensitivity to sci-fi and technical texts"
+          ],
+          "classification": "Tragedy",
+          "confidence": 0.627
+        },
+        "LabMT": {
+          "strengths": [
+            "Fully consistent with Reagan's original method",
+            "Based on large-scale human annotation",
+            "Suitable for traditional literary analysis"
+          ],
+          "classification": "Tragedy",
+          "confidence": 0.7274
+        }
+      },
+      "consistency_assessment": {
+        "classification_agreement": true,
+        "major_disagreements": 3,
+        "recommendation": "Both methods identify as Tragedy, results are highly consistent, recommend using RoBERTa as the primary analysis result"
+      }
+    },
+    "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.560 (Medium)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.560, belongs to moderate correlation\n\nClassification Results:\n- RoBERTa (primary): Tragedy\n- LabMT (validation): Tragedy\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.560, showing medium consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation.",
+    "output_files": {
+      "analysis_json": "/Users/haha/Story/data/romantic_test_analysis/thelittleredridinghood_romanticrewrite_linear_T0.9_s3/roberta_labmt_analysis_20250909_183339.json"
+    }
+  },
+  "hred_coherence_analysis": {
+    "HRED_coherence_evaluation": {
+      "model_name": "all-mpnet-base-v2",
+      "analysis_method": "Original sentence coherence",
+      "total_sentences": 296,
+      "adjacent_pairs": 295,
+      "average_coherence": 0.3986,
+      "objective_description": {
+        "score": 0.3986,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "detailed_analysis": {
+      "basic_statistics": {
+        "average_coherence": 0.3985601083707001,
+        "coherence_std": 0.17137823219900808,
+        "max_coherence": 0.9005451202392578,
+        "min_coherence": 0.051467977464199066,
+        "coherence_median": 0.36975234746932983
+      },
+      "coherence_breakpoints": [
+        {
+          "position": 3,
+          "sentence_pair": "Her mother is especially insis... → This is important, do you unde...",
+          "similarity": 0.223
+        },
+        {
+          "position": 6,
+          "sentence_pair": "Red’s mother pressed the baske... → She leaned in close, her voice...",
+          "similarity": 0.199
+        },
+        {
+          "position": 8,
+          "sentence_pair": "Red could feel the weight of t... → “Go straight to your grandmoth...",
+          "similarity": 0.176
+        },
+        {
+          "position": 10,
+          "sentence_pair": "“No stopping.... → No talking to anyone....",
+          "similarity": 0.214
+        },
+        {
+          "position": 11,
+          "sentence_pair": "No talking to anyone.... → And absolutely no wandering of...",
+          "similarity": 0.131
+        },
+        {
+          "position": 12,
+          "sentence_pair": "And absolutely no wandering of... → ” Her eyes searched Red’s face...",
+          "similarity": 0.066
+        },
+        {
+          "position": 20,
+          "sentence_pair": "' Red inspects the unfamiliar ... → She strides down the stone pat...",
+          "similarity": 0.131
+        },
+        {
+          "position": 37,
+          "sentence_pair": "Helps them settle, or so I’ve ... → ” He waited, letting the silen...",
+          "similarity": 0.111
+        },
+        {
+          "position": 40,
+          "sentence_pair": "” His gaze didn’t waver, and b... → “Sometimes a bit of green betw...",
+          "similarity": 0.179
+        },
+        {
+          "position": 41,
+          "sentence_pair": "“Sometimes a bit of green betw... → You look like you could use a ...",
+          "similarity": 0.113
+        },
+        {
+          "position": 42,
+          "sentence_pair": "You look like you could use a ... → Wolfe gently gestures toward a...",
+          "similarity": 0.126
+        },
+        {
+          "position": 45,
+          "sentence_pair": "His voice, low and edged with ... → “You look like the weight of t...",
+          "similarity": 0.139
+        },
+        {
+          "position": 54,
+          "sentence_pair": "Wolfe’s gaze drifted to the ba... → He walked a step behind her, b...",
+          "similarity": 0.195
+        },
+        {
+          "position": 57,
+          "sentence_pair": "“Where are you off to, if you ... → ” His eyes, thoughtful and a t...",
+          "similarity": 0.209
+        },
+        {
+          "position": 65,
+          "sentence_pair": "She’s not been feeling well la... → \" The lie slipped out as effor...",
+          "similarity": 0.17
+        },
+        {
+          "position": 69,
+          "sentence_pair": "She kept her tone light—almost... → “I suppose it’s just one of th...",
+          "similarity": 0.139
+        },
+        {
+          "position": 112,
+          "sentence_pair": "“Evenin’, miss.... → Hate to trouble you, but I rec...",
+          "similarity": 0.083
+        },
+        {
+          "position": 113,
+          "sentence_pair": "Hate to trouble you, but I rec... → ” His eyes twinkled with a hin...",
+          "similarity": 0.051
+        },
+        {
+          "position": 115,
+          "sentence_pair": "“Strange things tend to happen... → Red, clever and perceptive, im...",
+          "similarity": 0.174
+        },
+        {
+          "position": 125,
+          "sentence_pair": "Show yourself—I’m not as easy ... → Red Riding HoodRed tightens he...",
+          "similarity": 0.071
+        },
+        {
+          "position": 131,
+          "sentence_pair": "\"So you'd better have a good r... → ' Red remains steadfast, relyi...",
+          "similarity": 0.129
+        },
+        {
+          "position": 143,
+          "sentence_pair": "The race was no longer just a ... → every step now carried consequ...",
+          "similarity": 0.219
+        },
+        {
+          "position": 144,
+          "sentence_pair": "every step now carried consequ... → While Red pressed onward along...",
+          "similarity": 0.216
+        },
+        {
+          "position": 145,
+          "sentence_pair": "While Red pressed onward along... → The outcome of their contest w...",
+          "similarity": 0.175
+        },
+        {
+          "position": 146,
+          "sentence_pair": "The outcome of their contest w... → And as the sun dipped lower, f...",
+          "similarity": 0.064
+        },
+        {
+          "position": 152,
+          "sentence_pair": "Wolfe lingered just beyond the... → With a deft motion, he tipped ...",
+          "similarity": 0.099
+        },
+        {
+          "position": 160,
+          "sentence_pair": "” His gaze flickered up to mee... → “Sometimes, you know, a strang...",
+          "similarity": 0.221
+        },
+        {
+          "position": 178,
+          "sentence_pair": "” The words hung between them,... → Grandmother unlocks the door f...",
+          "similarity": 0.17
+        },
+        {
+          "position": 184,
+          "sentence_pair": "Her voice, when it came, held ... → The door’s open....",
+          "similarity": 0.22
+        },
+        {
+          "position": 186,
+          "sentence_pair": "” She lingered at the threshol... → No dawdling....",
+          "similarity": 0.114
+        },
+        {
+          "position": 187,
+          "sentence_pair": "No dawdling.... → ” Even illness couldn’t dull h...",
+          "similarity": 0.158
+        },
+        {
+          "position": 195,
+          "sentence_pair": "” The words carried a playful ... → As Wolfe gathers and splits wo...",
+          "similarity": 0.208
+        },
+        {
+          "position": 218,
+          "sentence_pair": "Red, anxious about her grandmo... → Wolfe steps out from the shado...",
+          "similarity": 0.207
+        },
+        {
+          "position": 253,
+          "sentence_pair": "\" She paused, studying him wit... → Red’s challenge hangs in the a...",
+          "similarity": 0.176
+        },
+        {
+          "position": 277,
+          "sentence_pair": "it's about loyalty, hidden dan... → Red Riding HoodRed raps sharpl...",
+          "similarity": 0.211
+        },
+        {
+          "position": 282,
+          "sentence_pair": "\" she called, her voice steady... → \"It's me, Red!...",
+          "similarity": 0.187
+        },
+        {
+          "position": 283,
+          "sentence_pair": "\"It's me, Red!... → Please open up—it's important!...",
+          "similarity": 0.071
+        },
+        {
+          "position": 284,
+          "sentence_pair": "Please open up—it's important!... → \" The words hung in the still ...",
+          "similarity": 0.16
+        }
+      ],
+      "high_coherence_segments": [
+        {
+          "start_sentence": 1,
+          "end_sentence": 3,
+          "length": 3,
+          "average_similarity": 0.501
+        },
+        {
+          "start_sentence": 13,
+          "end_sentence": 15,
+          "length": 3,
+          "average_similarity": 0.686
+        },
+        {
+          "start_sentence": 24,
+          "end_sentence": 26,
+          "length": 3,
+          "average_similarity": 0.512
+        },
+        {
+          "start_sentence": 60,
+          "end_sentence": 62,
+          "length": 3,
+          "average_similarity": 0.63
+        },
+        {
+          "start_sentence": 72,
+          "end_sentence": 75,
+          "length": 4,
+          "average_similarity": 0.652
+        },
+        {
+          "start_sentence": 82,
+          "end_sentence": 84,
+          "length": 3,
+          "average_similarity": 0.551
+        },
+        {
+          "start_sentence": 85,
+          "end_sentence": 90,
+          "length": 6,
+          "average_similarity": 0.648
+        },
+        {
+          "start_sentence": 103,
+          "end_sentence": 106,
+          "length": 4,
+          "average_similarity": 0.586
+        },
+        {
+          "start_sentence": 179,
+          "end_sentence": 181,
+          "length": 3,
+          "average_similarity": 0.636
+        },
+        {
+          "start_sentence": 196,
+          "end_sentence": 199,
+          "length": 4,
+          "average_similarity": 0.636
+        },
+        {
+          "start_sentence": 205,
+          "end_sentence": 207,
+          "length": 3,
+          "average_similarity": 0.683
+        },
+        {
+          "start_sentence": 224,
+          "end_sentence": 226,
+          "length": 3,
+          "average_similarity": 0.622
+        },
+        {
+          "start_sentence": 256,
+          "end_sentence": 258,
+          "length": 3,
+          "average_similarity": 0.563
+        },
+        {
+          "start_sentence": 259,
+          "end_sentence": 262,
+          "length": 4,
+          "average_similarity": 0.612
+        },
+        {
+          "start_sentence": 278,
+          "end_sentence": 280,
+          "length": 3,
+          "average_similarity": 0.602
+        },
+        {
+          "start_sentence": 294,
+          "end_sentence": 296,
+          "length": 3,
+          "average_similarity": 0.568
+        }
+      ],
+      "objective_description": {
+        "score": 0.3986,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "pairwise_similarity_examples": [
+      {
+        "sentence_pair": "Sentence 1 → Sentence 2",
+        "sentence_1": "Red Riding Hood tightens the red cloak around her ...",
+        "sentence_2": "Her mother stands by the doorway, glancing nervous...",
+        "similarity": 0.4914
+      },
+      {
+        "sentence_pair": "Sentence 2 → Sentence 3",
+        "sentence_1": "Her mother stands by the doorway, glancing nervous...",
+        "sentence_2": "Her mother is especially insistent and anxious, re...",
+        "similarity": 0.5102
+      },
+      {
+        "sentence_pair": "Sentence 3 → Sentence 4",
+        "sentence_1": "Her mother is especially insistent and anxious, re...",
+        "sentence_2": "This is important, do you understand?",
+        "similarity": 0.2228
+      },
+      {
+        "sentence_pair": "Sentence 4 → Sentence 5",
+        "sentence_1": "This is important, do you understand?",
+        "sentence_2": "Red's MotherShe presses the basket into Red’s hand...",
+        "similarity": 0.25
+      },
+      {
+        "sentence_pair": "Sentence 5 → Sentence 6",
+        "sentence_1": "Red's MotherShe presses the basket into Red’s hand...",
+        "sentence_2": "Red’s mother pressed the basket firmly into her da...",
+        "similarity": 0.8907
+      },
+      {
+        "sentence_pair": "Sentence 6 → Sentence 7",
+        "sentence_1": "Red’s mother pressed the basket firmly into her da...",
+        "sentence_2": "She leaned in close, her voice dropping to a brisk...",
+        "similarity": 0.1993
+      },
+      {
+        "sentence_pair": "Sentence 7 → Sentence 8",
+        "sentence_1": "She leaned in close, her voice dropping to a brisk...",
+        "sentence_2": "Red could feel the weight of the moment settle bet...",
+        "similarity": 0.3467
+      },
+      {
+        "sentence_pair": "Sentence 8 → Sentence 9",
+        "sentence_1": "Red could feel the weight of the moment settle bet...",
+        "sentence_2": "“Go straight to your grandmother’s house,” she ins...",
+        "similarity": 0.1756
+      },
+      {
+        "sentence_pair": "Sentence 9 → Sentence 10",
+        "sentence_1": "“Go straight to your grandmother’s house,” she ins...",
+        "sentence_2": "“No stopping.",
+        "similarity": 0.2684
+      },
+      {
+        "sentence_pair": "Sentence 10 → Sentence 11",
+        "sentence_1": "“No stopping.",
+        "sentence_2": "No talking to anyone.",
+        "similarity": 0.2142
+      },
+      {
+        "sentence_pair": "Sentence 11 → Sentence 12",
+        "sentence_1": "No talking to anyone.",
+        "sentence_2": "And absolutely no wandering off the path.",
+        "similarity": 0.1311
+      },
+      {
+        "sentence_pair": "Sentence 12 → Sentence 13",
+        "sentence_1": "And absolutely no wandering off the path.",
+        "sentence_2": "” Her eyes searched Red’s face, making sure the me...",
+        "similarity": 0.0655
+      },
+      {
+        "sentence_pair": "Sentence 13 → Sentence 14",
+        "sentence_1": "” Her eyes searched Red’s face, making sure the me...",
+        "sentence_2": "Red's MotherShe clasps Red's shoulders firmly, sea...",
+        "similarity": 0.5656
+      },
+      {
+        "sentence_pair": "Sentence 14 → Sentence 15",
+        "sentence_1": "Red's MotherShe clasps Red's shoulders firmly, sea...",
+        "sentence_2": "Red’s mother clasped her daughter’s shoulders with...",
+        "similarity": 0.8066
+      },
+      {
+        "sentence_pair": "Sentence 15 → Sentence 16",
+        "sentence_1": "Red’s mother clasped her daughter’s shoulders with...",
+        "sentence_2": "She leaned in, her voice dropping to a brisk whisp...",
+        "similarity": 0.3296
+      },
+      {
+        "sentence_pair": "Sentence 16 → Sentence 17",
+        "sentence_1": "She leaned in, her voice dropping to a brisk whisp...",
+        "sentence_2": "Searching Red’s eyes for a promise deeper than wor...",
+        "similarity": 0.3935
+      },
+      {
+        "sentence_pair": "Sentence 17 → Sentence 18",
+        "sentence_1": "Searching Red’s eyes for a promise deeper than wor...",
+        "sentence_2": "” There was a rare urgency in her mother’s gaze, a...",
+        "similarity": 0.5692
+      },
+      {
+        "sentence_pair": "Sentence 18 → Sentence 19",
+        "sentence_1": "” There was a rare urgency in her mother’s gaze, a...",
+        "sentence_2": "Promise me now, Red—no matter what you see or hear...",
+        "similarity": 0.3233
+      },
+      {
+        "sentence_pair": "Sentence 19 → Sentence 20",
+        "sentence_1": "Promise me now, Red—no matter what you see or hear...",
+        "sentence_2": "' Red inspects the unfamiliar wax seal, running he...",
+        "similarity": 0.2958
+      },
+      {
+        "sentence_pair": "Sentence 20 → Sentence 21",
+        "sentence_1": "' Red inspects the unfamiliar wax seal, running he...",
+        "sentence_2": "She strides down the stone path, her boots crunchi...",
+        "similarity": 0.1315
+      },
+      {
+        "note": "Only showing first 20 pairs, total of 295 adjacent sentence pairs"
+      }
+    ]
+  },
+  "story_structure_analysis": {
+    "evaluation_mode": "default mode",
+    "event_list": [
+      {
+        "event": "Red Riding Hood steps onto the porch with her basket, tightening her red cloak.",
+        "source": "Red Riding Hood tightens the red cloak around her shoulders as she steps onto the creaking porch, wicker basket in hand.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red's mother gives her a sealed envelope.",
+        "source": "Her mother stands by the doorway, glancing nervously toward the shadowed tree line, and presses a sealed envelope into Red's gloved palm.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red inspects the unfamiliar wax seal, running her thumb over its raised design, nods solemnly, and tucks the letter securely in her basket.",
+        "source": "' Red inspects the unfamiliar wax seal, running her thumb over its raised design, nods solemnly, and tucks the letter securely in her basket.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red strides down the stone path, her boots crunching on wet leaves.",
+        "source": "She strides down the stone path, her boots crunching on wet leaves.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red walks deeper into the woods, unaware someone or something is watching her.",
+        "source": "Yet, as the forest closes in around her, Red is unaware that something—or someone—awaits just beyond the bend, ready to turn her journey into something far more complicated than a simple delivery.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe emerges from behind a thick bramble, brushing leaves from his shoulder, and offers a half-bow.",
+        "source": "From behind a thick bramble, Wolfe emerges, brushing leaves from his shoulder, and offers a half-bow.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "He then gently asks if Red is alright and suggests taking a moment to rest and talk if she wishes, revealing a more openly concerned and supportive side than previously shown.",
+        "source": "' He then gently asks if Red is alright and suggests taking a moment to rest and talk if she wishes, revealing a more openly concerned and supportive side than previously shown.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red, cautious, declines to share details, saying she is bringing food to her sick grandmother.",
+        "source": "Red, still cautious, politely declines to share much detail, simply stating that she is visiting her grandmother who is unwell and bringing bread and honey, subtly avoiding mention of the hidden letter.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe inquires about her journey, but Red deflects and maintains focus on her family.",
+        "source": "Wolfe continues to ask about her journey in a friendly but persistent manner, but Red deflects, maintaining her focus on her family.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Their conversation grows more open; Wolfe expresses philosophical thoughts and signals a wish to see her again.",
+        "source": "Their conversation reveals a slightly more open rapport, with Wolfe expressing philosophical thoughts about choices and paths, signaling his wish to see her again.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "With a graceful sweep of his arm, Wolfe stepped aside at the fork in the path, his cloak catching the breeze and stirring around his boots.",
+        "source": "With a graceful sweep of his arm, Wolfe stepped aside at the fork in the path, his cloak catching the breeze and stirring around his boots.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red continues deeper into the woods, focused and determined after Wolfe's cryptic words.",
+        "source": "Red hesitated only a moment before pressing onward, her thoughts swirling with Wolfe's cryptic words.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red pushes onward, voicing her determination to deliver the letter before nightfall despite the forest dangers.",
+        "source": "Red Riding Hood pushes onward, urgency clear in every step as she speaks aloud her determination to deliver the letter to her grandmother before nightfall, undeterred by the dangers of the forest.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red Riding Hood quickened her pace, the hush of the forest broken now and then by a distant, haunting howl that sent a chill through the gathering dusk.",
+        "source": "Red Riding Hood quickened her pace, the hush of the forest broken now and then by a distant, haunting howl that sent a chill through the gathering dusk.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe stepped out from the shadow of a gnarled oak, the crunch of gravel beneath his boots slicing through the hush of dusk.",
+        "source": "Wolfe stepped out from the shadow of a gnarled oak, the crunch of gravel beneath his boots slicing through the hush of dusk.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Show yourself—I’m not as easy to fool as you think.",
+        "source": "Show yourself—I’m not as easy to fool as you think.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe matched her stride, his steps deliberate yet light, and with a sweep of his arm, gestured toward the tangled entrance of a deer trail veiled by brambles and shadow.",
+        "source": "Wolfe matched her stride, his steps deliberate yet light, and with a sweep of his arm, gestured toward the tangled entrance of a deer trail veiled by brambles and shadow.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe steps onto the worn stone path and raps twice on the weathered door, glancing at the twisted brambles lining the cottage.",
+        "source": "Wolfe steps onto the worn stone path and raps twice on the weathered door, glancing at the twisted brambles lining the cottage.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother leaned a little heavier on her cane, her eyes sharp as she studied Wolfe’s face with a mixture of caution and gentle amusement.",
+        "source": "Grandmother leaned a little heavier on her cane, her eyes sharp as she studied Wolfe’s face with a mixture of caution and gentle amusement.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe set his axe gently against the porch rail, the gesture slow and deliberate, as if to prove he carried no threat.",
+        "source": "Wolfe set his axe gently against the porch rail, the gesture slow and deliberate, as if to prove he carried no threat.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe brushed the last traces of wood dust from his hands, standing respectfully just inside the doorway.",
+        "source": "Wolfe brushed the last traces of wood dust from his hands, standing respectfully just inside the doorway.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe and Grandmother sit by the hearth to begin their negotiation.",
+        "source": "As Wolfe and the grandmother settled by the hearth, the quiet negotiation between them unfolded against the backdrop of the deepening afternoon.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red Riding Hood hurries along the tangled woodland path, fiercely protective of the basket meant for her ailing grandmother.",
+        "source": "Red Riding Hood hurries along the tangled woodland path, fiercely protective of the basket meant for her ailing grandmother.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe emerged from the shadow of the lamppost, arms folded casually across his chest, a faint, knowing smile playing at the corners of his mouth.",
+        "source": "Wolfe emerged from the shadow of the lamppost, arms folded casually across his chest, a faint, knowing smile playing at the corners of his mouth.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red acknowledges Wolfe’s concern, thanks him, but insists on her chosen route.",
+        "source": "Despite her wariness, she acknowledges Wolfe's efforts to help and expresses gratitude for his concern, though she remains firmly in control of her path.",
+        "chapter": "Chapter 5",
+        "confidence": "medium"
+      },
+      {
+        "event": "Red Riding Hood clutched the basket more tightly, her fingers tense around the woven handle as she set off at a brisk pace, the familiar path stretching ahead beneath the shifting shadows of the forest.",
+        "source": "Red Riding Hood clutched the basket more tightly, her fingers tense around the woven handle as she set off at a brisk pace, the familiar path stretching ahead beneath the shifting shadows of the forest.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe follows at a respectful distance, his interest undiminished but his respect for Red's wishes growing.",
+        "source": "Wolfe, seeing her determination and appreciation, continues to follow at a distance, his interest in her mission undiminished but his respect for her wishes growing.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "She noticed the subtle shift in his stance—the way he tried to guide her toward another trail—and narrowed her eyes, her curiosity mingling with caution.",
+        "source": "She noticed the subtle shift in his stance—the way he tried to guide her toward another trail—and narrowed her eyes, her curiosity mingling with caution.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "She rapped sharply on the weathered door, her brow furrowed and eyes scanning the shadowed windows for any sign of movement.",
+        "source": "She rapped sharply on the weathered door, her brow furrowed and eyes scanning the shadowed windows for any sign of movement.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe appears, tense and secretive, warns Red of a traitor within their circle and the need for swift action.",
+        "source": "Wolfe appears, more tense and secretive than before, warning Red that there is a traitor within their circle and that they must act swiftly to protect themselves.",
+        "chapter": "Chapter 6",
+        "confidence": "medium"
+      },
+      {
+        "event": "Red calls for Grandmother, and Wolfe reveals a second, desperate letter that could change everything.",
+        "source": "The exchange at the door escalates as Red calls for Grandmother with increasing urgency, and Wolfe reveals a second, desperate letter, hinting that its contents are a confession that could upend everything.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother opens the door, joins Red, and together they face Wolfe with caution and unity.",
+        "source": "Sensing the threat, Grandmother quietly opens the door and joins Red in a united front, wary of Wolfe's intentions.",
+        "chapter": "Chapter 6",
+        "confidence": "medium"
+      },
+      {
+        "event": "The trio engage in tense verbal sparring, each testing the other's resolve and motives.",
+        "source": "The trio engage in a tense verbal sparring, each testing the other's resolve and motives.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe admits his hunger for truth and trust while Red and Grandmother stand firm, determined to uncover the truth.",
+        "source": "Wolfe admits his hunger—for truth, trust, and perhaps something darker—but Red and Grandmother stand firm, their courage sharpened by fear and their determination to uncover the truth stronger than ever.",
+        "chapter": "Chapter 6",
+        "confidence": "medium"
+      },
+      {
+        "event": "As the night pressed in around the little cottage, the secrets between them were laid bare, and with the final choice made, Red, Grandmother, and Wolfe stepped together into the uncertain dawn—bound by truth, changed by trust, and ready to face whatever waited beyond the woods.",
+        "source": "As the night pressed in around the little cottage, the secrets between them were laid bare, and with the final choice made, Red, Grandmother, and Wolfe stepped together into the uncertain dawn—bound by truth, changed by trust, and ready to face whatever waited beyond the woods.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      }
+    ],
+    "Papalampidi_detailed_results": {
+      "turning_points": {
+        "TP1": "Red's mother gives her a sealed envelope.",
+        "TP2": "Wolfe appears, tense and secretive, warns Red of a traitor within their circle and the need for swift action.",
+        "TP3": "Red calls for Grandmother, and Wolfe reveals a second, desperate letter that could change everything.",
+        "TP4": "The trio engage in tense verbal sparring, each testing the other's resolve and motives.",
+        "TP5": "As the night pressed in around the little cottage, the secrets between them were laid bare, and with the final choice made, Red, Grandmother, and Wolfe stepped together into the uncertain dawn—bound by truth, changed by trust, and ready to face whatever waited beyond the woods."
+      },
+      "stage_division": {
+        "Setup": [
+          "Red Riding Hood steps onto the porch with her basket, tightening her red cloak.",
+          "Red's mother gives her a sealed envelope.",
+          "Red inspects the unfamiliar wax seal, running her thumb over its raised design, nods solemnly, and tucks the letter securely in her basket."
+        ],
+        "New Situation": [
+          "Red strides down the stone path, her boots crunching on wet leaves.",
+          "Red walks deeper into the woods, unaware someone or something is watching her.",
+          "Wolfe emerges from behind a thick bramble, brushing leaves from his shoulder, and offers a half-bow."
+        ],
+        "Progress": [
+          "He then gently asks if Red is alright and suggests taking a moment to rest and talk if she wishes, revealing a more openly concerned and supportive side than previously shown.",
+          "Red, cautious, declines to share details, saying she is bringing food to her sick grandmother.",
+          "Wolfe inquires about her journey, but Red deflects and maintains focus on her family.",
+          "Their conversation grows more open; Wolfe expresses philosophical thoughts and signals a wish to see her again.",
+          "With a graceful sweep of his arm, Wolfe stepped aside at the fork in the path, his cloak catching the breeze and stirring around his boots.",
+          "Red continues deeper into the woods, focused and determined after Wolfe's cryptic words.",
+          "Red pushes onward, voicing her determination to deliver the letter before nightfall despite the forest dangers.",
+          "Red Riding Hood quickened her pace, the hush of the forest broken now and then by a distant, haunting howl that sent a chill through the gathering dusk.",
+          "Wolfe stepped out from the shadow of a gnarled oak, the crunch of gravel beneath his boots slicing through the hush of dusk.",
+          "Show yourself—I’m not as easy to fool as you think.",
+          "Wolfe matched her stride, his steps deliberate yet light, and with a sweep of his arm, gestured toward the tangled entrance of a deer trail veiled by brambles and shadow.",
+          "Wolfe steps onto the worn stone path and raps twice on the weathered door, glancing at the twisted brambles lining the cottage.",
+          "Grandmother leaned a little heavier on her cane, her eyes sharp as she studied Wolfe’s face with a mixture of caution and gentle amusement.",
+          "Wolfe set his axe gently against the porch rail, the gesture slow and deliberate, as if to prove he carried no threat.",
+          "Wolfe brushed the last traces of wood dust from his hands, standing respectfully just inside the doorway.",
+          "Wolfe and Grandmother sit by the hearth to begin their negotiation.",
+          "Red Riding Hood hurries along the tangled woodland path, fiercely protective of the basket meant for her ailing grandmother.",
+          "Wolfe emerged from the shadow of the lamppost, arms folded casually across his chest, a faint, knowing smile playing at the corners of his mouth.",
+          "Red acknowledges Wolfe’s concern, thanks him, but insists on her chosen route.",
+          "Red Riding Hood clutched the basket more tightly, her fingers tense around the woven handle as she set off at a brisk pace, the familiar path stretching ahead beneath the shifting shadows of the forest.",
+          "Wolfe follows at a respectful distance, his interest undiminished but his respect for Red's wishes growing.",
+          "She noticed the subtle shift in his stance—the way he tried to guide her toward another trail—and narrowed her eyes, her curiosity mingling with caution.",
+          "She rapped sharply on the weathered door, her brow furrowed and eyes scanning the shadowed windows for any sign of movement."
+        ],
+        "Complications": [
+          "Wolfe appears, tense and secretive, warns Red of a traitor within their circle and the need for swift action.",
+          "Red calls for Grandmother, and Wolfe reveals a second, desperate letter that could change everything.",
+          "Grandmother opens the door, joins Red, and together they face Wolfe with caution and unity.",
+          "The trio engage in tense verbal sparring, each testing the other's resolve and motives.",
+          "Wolfe admits his hunger for truth and trust while Red and Grandmother stand firm, determined to uncover the truth."
+        ],
+        "Final Push": [
+          "As the night pressed in around the little cottage, the secrets between them were laid bare, and with the final choice made, Red, Grandmother, and Wolfe stepped together into the uncertain dawn—bound by truth, changed by trust, and ready to face whatever waited beyond the woods."
+        ],
+        "Aftermath": []
+      }
+    },
+    "Li_detailed_results": {
+      "Red Riding Hood steps onto the porch with her basket, tightening her red cloak.": "Orientation",
+      "Red's mother gives her a sealed envelope.": "Complicating Action",
+      "Red inspects the unfamiliar wax seal, running her thumb over its raised design, nods solemnly, and tucks the letter securely in her basket.": "Complicating Action",
+      "Red strides down the stone path, her boots crunching on wet leaves.": "Orientation",
+      "Red walks deeper into the woods, unaware someone or something is watching her.": "Complicating Action",
+      "Wolfe emerges from behind a thick bramble, brushing leaves from his shoulder, and offers a half-bow.": "Complicating Action",
+      "He then gently asks if Red is alright and suggests taking a moment to rest and talk if she wishes, revealing a more openly concerned and supportive side than previously shown.": "Minor Resolution",
+      "Red, cautious, declines to share details, saying she is bringing food to her sick grandmother.": "Complicating Action",
+      "Wolfe inquires about her journey, but Red deflects and maintains focus on her family.": "Complicating Action",
+      "Their conversation grows more open; Wolfe expresses philosophical thoughts and signals a wish to see her again.": "Evaluation",
+      "With a graceful sweep of his arm, Wolfe stepped aside at the fork in the path, his cloak catching the breeze and stirring around his boots.": "Minor Resolution",
+      "Red continues deeper into the woods, focused and determined after Wolfe's cryptic words.": "Complicating Action",
+      "Red pushes onward, voicing her determination to deliver the letter before nightfall despite the forest dangers.": "Evaluation",
+      "Red Riding Hood quickened her pace, the hush of the forest broken now and then by a distant, haunting howl that sent a chill through the gathering dusk.": "Complicating Action",
+      "Wolfe stepped out from the shadow of a gnarled oak, the crunch of gravel beneath his boots slicing through the hush of dusk.": "Complicating Action",
+      "Show yourself—I’m not as easy to fool as you think.": "Direct Comment",
+      "Wolfe matched her stride, his steps deliberate yet light, and with a sweep of his arm, gestured toward the tangled entrance of a deer trail veiled by brambles and shadow.": "Complicating Action",
+      "Wolfe steps onto the worn stone path and raps twice on the weathered door, glancing at the twisted brambles lining the cottage.": "Complicating Action",
+      "Grandmother leaned a little heavier on her cane, her eyes sharp as she studied Wolfe’s face with a mixture of caution and gentle amusement.": "Complicating Action",
+      "Wolfe set his axe gently against the porch rail, the gesture slow and deliberate, as if to prove he carried no threat.": "Minor Resolution",
+      "Wolfe brushed the last traces of wood dust from his hands, standing respectfully just inside the doorway.": "Minor Resolution",
+      "Wolfe and Grandmother sit by the hearth to begin their negotiation.": "Complicating Action",
+      "Red Riding Hood hurries along the tangled woodland path, fiercely protective of the basket meant for her ailing grandmother.": "Complicating Action",
+      "Wolfe emerged from the shadow of the lamppost, arms folded casually across his chest, a faint, knowing smile playing at the corners of his mouth.": "Complicating Action",
+      "Red acknowledges Wolfe’s concern, thanks him, but insists on her chosen route.": "Minor Resolution",
+      "Red Riding Hood clutched the basket more tightly, her fingers tense around the woven handle as she set off at a brisk pace, the familiar path stretching ahead beneath the shifting shadows of the forest.": "Orientation",
+      "Wolfe follows at a respectful distance, his interest undiminished but his respect for Red's wishes growing.": "Evaluation",
+      "She noticed the subtle shift in his stance—the way he tried to guide her toward another trail—and narrowed her eyes, her curiosity mingling with caution.": "Complicating Action",
+      "She rapped sharply on the weathered door, her brow furrowed and eyes scanning the shadowed windows for any sign of movement.": "Complicating Action",
+      "Wolfe appears, tense and secretive, warns Red of a traitor within their circle and the need for swift action.": "MRE",
+      "Red calls for Grandmother, and Wolfe reveals a second, desperate letter that could change everything.": "Return of MRE",
+      "Grandmother opens the door, joins Red, and together they face Wolfe with caution and unity.": "Minor Resolution",
+      "The trio engage in tense verbal sparring, each testing the other's resolve and motives.": "Complicating Action",
+      "Wolfe admits his hunger for truth and trust while Red and Grandmother stand firm, determined to uncover the truth.": "Resolution",
+      "As the night pressed in around the little cottage, the secrets between them were laid bare, and with the final choice made, Red, Grandmother, and Wolfe stepped together into the uncertain dawn—bound by truth, changed by trust, and ready to face whatever waited beyond the woods.": "Aftermath"
+    },
+    "structure_analysis": {
+      "basic_info": {
+        "total_events": 35,
+        "analysis_mode": "default",
+        "analysis_time": null
+      },
+      "Papalampidi_structure_analysis": {
+        "turning_point_integrity": {
+          "identified_tps": [
+            "TP1",
+            "TP2",
+            "TP3",
+            "TP4",
+            "TP5"
+          ],
+          "missing_tps": [],
+          "TP_coverage": "5/5"
+        },
+        "stage_integrity": {
+          "identified_stages": [
+            "Setup",
+            "New Situation",
+            "Progress",
+            "Complications",
+            "Final Push"
+          ],
+          "missing_stages": [
+            "Aftermath"
+          ],
+          "stage_coverage": "5/6"
+        }
+      },
+      "Li_function_analysis": {
+        "core_function_check": {
+          "Orientation": "exists",
+          "Complicating Action": "exists",
+          "MRE": "exists",
+          "Resolution": "exists"
+        },
+        "function_distribution": {
+          "Orientation": 3,
+          "Complicating Action": 18,
+          "Minor Resolution": 6,
+          "Evaluation": 3,
+          "Direct Comment": 1,
+          "MRE": 1,
+          "Return of MRE": 1,
+          "Resolution": 1,
+          "Aftermath": 1
+        },
+        "function_diversity": 9
+      }
+    }
+  }
+}

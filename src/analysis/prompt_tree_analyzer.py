@@ -32,7 +32,7 @@ def build_prompt_tree_matrix(input_dir):
     df = pd.DataFrame(all_data).fillna("")
     return df
 
-# 示例调用（请替换为你的 output 路径）
+# Example call (please replace with your output path)
 output_dir = "output"
 tree_df = build_prompt_tree_matrix(output_dir)
 tools.display_dataframe_to_user(name="Prompt Tree Anchor Matrix", dataframe=tree_df)

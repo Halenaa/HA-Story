@@ -1,0 +1,1233 @@
+{
+  "folder_name": "thelittleredridinghood_romanticrewrite_nonlinear_T0.3_s3",
+  "file_path": "/Users/haha/Story/data/output/romantic_test/thelittleredridinghood_romanticrewrite_nonlinear_T0.3_s3/enhanced_story_dialogue_updated.md",
+  "analysis_timestamp": null,
+  "emotional_arc_analysis": {
+    "metadata": {
+      "total_chapters": 6,
+      "primary_method": "RoBERTa",
+      "validation_method": "LabMT-en-v1",
+      "analysis_timestamp": "2025-09-09T19:06:41.328879"
+    },
+    "chapter_analysis": [
+      {
+        "chapter_num": 4,
+        "title": "Red Arrives and Confronts Wolfe",
+        "roberta_score": 0.4222,
+        "labmt_score": 0.2602,
+        "content_length": 17261
+      },
+      {
+        "chapter_num": 2,
+        "title": "Red Encounters the Charming Stranger",
+        "roberta_score": 0.8529,
+        "labmt_score": 0.2898,
+        "content_length": 25580
+      },
+      {
+        "chapter_num": 3,
+        "title": "Wolfe Outpaces Red to Grandmother's House",
+        "roberta_score": 0.7664,
+        "labmt_score": 0.3246,
+        "content_length": 1859
+      },
+      {
+        "chapter_num": 1,
+        "title": "Red Receives a Mysterious Invitation",
+        "roberta_score": 0.6001,
+        "labmt_score": 0.2945,
+        "content_length": 2614
+      },
+      {
+        "chapter_num": 5,
+        "title": "Grandmother Reveals Her Matchmaking Scheme",
+        "roberta_score": 0.1791,
+        "labmt_score": 0.3373,
+        "content_length": 21354
+      },
+      {
+        "chapter_num": 6,
+        "title": "Red and Wolfe Choose Each Other",
+        "roberta_score": 0.499,
+        "labmt_score": 0.3814,
+        "content_length": 5832
+      }
+    ],
+    "primary_analysis": {
+      "method": "RoBERTa",
+      "scores": [
+        0.4221825361251831,
+        0.8528562227884928,
+        0.7664194057385126,
+        0.6000654180844625,
+        0.1791295289993286,
+        0.4989567995071411
+      ],
+      "reagan_classification": {
+        "method": "RoBERTa",
+        "best_match": "Tragedy",
+        "confidence": 0.7231,
+        "all_similarities": {
+          "Rags to riches": 0.5013,
+          "Tragedy": 0.7231,
+          "Man in a hole": 0,
+          "Icarus": 0.1902,
+          "Cinderella": 0,
+          "Oedipus": 0.0492
+        },
+        "reagan_category": "TR"
+      }
+    },
+    "validation_analysis": {
+      "method": "LabMT",
+      "scores": [
+        0.26020417422866804,
+        0.2898485714285697,
+        0.3246093750000001,
+        0.2944866071428567,
+        0.33727066817666795,
+        0.3814042553191499
+      ],
+      "reagan_classification": {
+        "method": "LabMT",
+        "best_match": "Rags to riches",
+        "confidence": 0.738,
+        "all_similarities": {
+          "Rags to riches": 0.738,
+          "Tragedy": 0.5719,
+          "Man in a hole": 0.1034,
+          "Icarus": 0,
+          "Cinderella": 0,
+          "Oedipus": 0.2303
+        },
+        "reagan_category": "RR"
+      }
+    },
+    "correlation_analysis": {
+      "pearson_correlation": {
+        "r": -0.2159,
+        "p_value": 0.6812,
+        "significance": "Not Significant"
+      },
+      "spearman_correlation": {
+        "r": -0.2571,
+        "p_value": 0.6228
+      },
+      "direction_consistency": 0.6,
+      "consistency_level": "Low",
+      "interpretation": "RoBERTa and LabMT correlation coefficient is -0.216, belongs to weak correlation"
+    },
+    "comparison_analysis": {
+      "disagreement_points": [
+        {
+          "chapter": 2,
+          "roberta_score": 0.8528562227884928,
+          "labmt_score": 0.2898485714285697,
+          "difference": 0.563
+        },
+        {
+          "chapter": 3,
+          "roberta_score": 0.7664194057385126,
+          "labmt_score": 0.3246093750000001,
+          "difference": 0.4418
+        },
+        {
+          "chapter": 4,
+          "roberta_score": 0.6000654180844625,
+          "labmt_score": 0.2944866071428567,
+          "difference": 0.3056
+        }
+      ],
+      "method_advantages": {
+        "RoBERTa": {
+          "strengths": [
+            "Deep learning model with better contextual understanding",
+            "Suitable for modern text and dialogue",
+            "High sensitivity to sci-fi and technical texts"
+          ],
+          "classification": "Tragedy",
+          "confidence": 0.7231
+        },
+        "LabMT": {
+          "strengths": [
+            "Fully consistent with Reagan's original method",
+            "Based on large-scale human annotation",
+            "Suitable for traditional literary analysis"
+          ],
+          "classification": "Rags to riches",
+          "confidence": 0.738
+        }
+      },
+      "consistency_assessment": {
+        "classification_agreement": false,
+        "major_disagreements": 3,
+        "recommendation": "Two methods differ significantly, recommend detailed analysis of difference causes, may need more in-depth text feature analysis"
+      }
+    },
+    "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = -0.216 (Low)\n- Consistency level: RoBERTa and LabMT correlation coefficient is -0.216, belongs to weak correlation\n\nClassification Results:\n- RoBERTa (primary): Tragedy\n- LabMT (validation): Rags to riches\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is -0.216, showing low consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation.",
+    "output_files": {
+      "analysis_json": "/Users/haha/Story/data/romantic_test_analysis/thelittleredridinghood_romanticrewrite_nonlinear_T0.3_s3/roberta_labmt_analysis_20250909_190641.json"
+    }
+  },
+  "hred_coherence_analysis": {
+    "HRED_coherence_evaluation": {
+      "model_name": "all-mpnet-base-v2",
+      "analysis_method": "Original sentence coherence",
+      "total_sentences": 628,
+      "adjacent_pairs": 627,
+      "average_coherence": 0.43,
+      "objective_description": {
+        "score": 0.43,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "detailed_analysis": {
+      "basic_statistics": {
+        "average_coherence": 0.42997305836391886,
+        "coherence_std": 0.1769147359949469,
+        "max_coherence": 0.9313093423843384,
+        "min_coherence": 0.014502348378300667,
+        "coherence_median": 0.40798860788345337
+      },
+      "coherence_breakpoints": [
+        {
+          "position": 12,
+          "sentence_pair": "She worries about the chill se... → ” His tone softened, conspirat...",
+          "similarity": 0.216
+        },
+        {
+          "position": 13,
+          "sentence_pair": "” His tone softened, conspirat... → “I often help her with these t...",
+          "similarity": 0.196
+        },
+        {
+          "position": 15,
+          "sentence_pair": "” His eyes flicked over the lo... → Do you always travel alone?...",
+          "similarity": 0.213
+        },
+        {
+          "position": 16,
+          "sentence_pair": "Do you always travel alone?... → She persistently questions Wol...",
+          "similarity": 0.041
+        },
+        {
+          "position": 22,
+          "sentence_pair": "“That’s quite a pile for just ... → ” After a brief pause, she til...",
+          "similarity": 0.198
+        },
+        {
+          "position": 23,
+          "sentence_pair": "” After a brief pause, she til... → “Tell me, what brings you so d...",
+          "similarity": 0.246
+        },
+        {
+          "position": 26,
+          "sentence_pair": "“Is it just the firewood—or is... → Red, perceptive and courageous...",
+          "similarity": 0.205
+        },
+        {
+          "position": 33,
+          "sentence_pair": "Go on, he seemed to beckon wit... → Wolfe, both protective and sec...",
+          "similarity": 0.145
+        },
+        {
+          "position": 36,
+          "sentence_pair": "Red hesitated on the threshold... → “Grandmother?...",
+          "similarity": 0.186
+        },
+        {
+          "position": 42,
+          "sentence_pair": "“Are you sure she’s just resti... → It smells different in here....",
+          "similarity": 0.122
+        },
+        {
+          "position": 43,
+          "sentence_pair": "It smells different in here.... → ” Red’s gaze swept the room, h...",
+          "similarity": 0.162
+        },
+        {
+          "position": 51,
+          "sentence_pair": "” The suggestion slipped easil... → Red (Little Red Riding Hood)Re...",
+          "similarity": 0.228
+        },
+        {
+          "position": 62,
+          "sentence_pair": "Let me fetch a lamp before you... → ” With that, he turned, the li...",
+          "similarity": 0.113
+        },
+        {
+          "position": 63,
+          "sentence_pair": "” With that, he turned, the li... → Red (Little Red Riding Hood)Re...",
+          "similarity": 0.225
+        },
+        {
+          "position": 74,
+          "sentence_pair": "” The words slipped out as muc... → Red (Little Red Riding Hood)Re...",
+          "similarity": 0.197
+        },
+        {
+          "position": 82,
+          "sentence_pair": "His gaze tracked Red’s restles... → Her eyes have grown sensitive,...",
+          "similarity": 0.232
+        },
+        {
+          "position": 83,
+          "sentence_pair": "Her eyes have grown sensitive,... → ” The words hung in the air, h...",
+          "similarity": 0.135
+        },
+        {
+          "position": 84,
+          "sentence_pair": "” The words hung in the air, h... → Red (Little Red Riding Hood)Re...",
+          "similarity": 0.129
+        },
+        {
+          "position": 106,
+          "sentence_pair": "\" The words tumbled from his l... → Red (Little Red Riding Hood)Re...",
+          "similarity": 0.105
+        },
+        {
+          "position": 118,
+          "sentence_pair": "” The words drifted out almost... → Red (Little Red Riding Hood)Re...",
+          "similarity": 0.221
+        },
+        {
+          "position": 121,
+          "sentence_pair": "With a playful tilt of her hea... → “Protective, or secretive?...",
+          "similarity": 0.194
+        },
+        {
+          "position": 130,
+          "sentence_pair": "” The words rolled from him wi... → Red (Little Red Riding Hood)Re...",
+          "similarity": 0.184
+        },
+        {
+          "position": 138,
+          "sentence_pair": "Wolfe finally shifted, steppin... → His gaze found Red, lingering ...",
+          "similarity": 0.223
+        },
+        {
+          "position": 148,
+          "sentence_pair": "“Please,” she said, voice clea... → The chapter ends with Red dema...",
+          "similarity": 0.245
+        },
+        {
+          "position": 160,
+          "sentence_pair": "“That shade you wear,” he rema... → And unless my nose is playing ...",
+          "similarity": 0.151
+        },
+        {
+          "position": 161,
+          "sentence_pair": "And unless my nose is playing ... → ” His voice, soft yet edged wi...",
+          "similarity": 0.113
+        },
+        {
+          "position": 162,
+          "sentence_pair": "” His voice, soft yet edged wi... → “Tell me, Red—where does a tra...",
+          "similarity": 0.198
+        },
+        {
+          "position": 166,
+          "sentence_pair": "Caution flickered in her eyes,... → “The cloak?...",
+          "similarity": 0.236
+        },
+        {
+          "position": 167,
+          "sentence_pair": "“The cloak?... → ” she replied, voice bright wi...",
+          "similarity": 0.216
+        },
+        {
+          "position": 178,
+          "sentence_pair": "Red lifted her basket ever so ... → The aroma of fresh bread and w...",
+          "similarity": 0.159
+        },
+        {
+          "position": 179,
+          "sentence_pair": "The aroma of fresh bread and w... → With a playful tilt of her hea...",
+          "similarity": 0.253
+        },
+        {
+          "position": 183,
+          "sentence_pair": "Wolfe fell into step beside Re... → His gaze lingered on the baske...",
+          "similarity": 0.15
+        },
+        {
+          "position": 194,
+          "sentence_pair": "“I couldn’t help but notice yo... → Are you lost out here, or just...",
+          "similarity": 0.229
+        },
+        {
+          "position": 201,
+          "sentence_pair": "“These woods have a way of dra... → Red (Little Red Riding Hood)Re...",
+          "similarity": 0.208
+        },
+        {
+          "position": 212,
+          "sentence_pair": "“And what is it you hope to fi... → Red (Little Red Riding Hood)Re...",
+          "similarity": 0.174
+        },
+        {
+          "position": 220,
+          "sentence_pair": "The hint of mischief lingered ... → Red (Little Red Riding Hood)Re...",
+          "similarity": 0.155
+        },
+        {
+          "position": 225,
+          "sentence_pair": "Sometimes, she thought aloud, ... → WolfeRed tightens her grip on ...",
+          "similarity": 0.187
+        },
+        {
+          "position": 235,
+          "sentence_pair": "“But it’s usually the ones wit... → Wolfe tilts his head, a faint,...",
+          "similarity": 0.24
+        },
+        {
+          "position": 248,
+          "sentence_pair": "Then, with a curious tilt of h... → “So tell me—are you searching ...",
+          "similarity": 0.248
+        },
+        {
+          "position": 249,
+          "sentence_pair": "“So tell me—are you searching ... → Wolfe's gaze lingers a fractio...",
+          "similarity": 0.242
+        },
+        {
+          "position": 258,
+          "sentence_pair": "Wolfe’s gaze lingered on Red, ... → He took a slow step closer, th...",
+          "similarity": 0.243
+        },
+        {
+          "position": 267,
+          "sentence_pair": "“Especially when they know the... → ” The wind rustled through the...",
+          "similarity": 0.245
+        },
+        {
+          "position": 268,
+          "sentence_pair": "” The wind rustled through the... → she was focused on Wolfe’s eve...",
+          "similarity": 0.177
+        },
+        {
+          "position": 276,
+          "sentence_pair": "Their banter grew layered, ble... → Red (Little Red Riding Hood)Re...",
+          "similarity": 0.104
+        },
+        {
+          "position": 277,
+          "sentence_pair": "Red (Little Red Riding Hood)Re... → She keeps her gaze steady on W...",
+          "similarity": 0.185
+        },
+        {
+          "position": 278,
+          "sentence_pair": "She keeps her gaze steady on W... → Red tilted her head, a mischie...",
+          "similarity": 0.252
+        },
+        {
+          "position": 282,
+          "sentence_pair": "” Yet as she spoke, her finger... → “Lately, I wonder if it belong...",
+          "similarity": 0.248
+        },
+        {
+          "position": 285,
+          "sentence_pair": "“There’s a place I go when I d... → ” Her eyes glimmered with play...",
+          "similarity": 0.105
+        },
+        {
+          "position": 286,
+          "sentence_pair": "” Her eyes glimmered with play... → “But what about you, Wolfe?...",
+          "similarity": 0.206
+        },
+        {
+          "position": 287,
+          "sentence_pair": "“But what about you, Wolfe?... → Do you have a favorite spot, o...",
+          "similarity": 0.112
+        },
+        {
+          "position": 288,
+          "sentence_pair": "Do you have a favorite spot, o... → Wolfe circles closer, eyes gli...",
+          "similarity": 0.078
+        },
+        {
+          "position": 292,
+          "sentence_pair": "“You know, Red,” he began, voi... → ” He let the words hang, watch...",
+          "similarity": 0.23
+        },
+        {
+          "position": 300,
+          "sentence_pair": "Her fingers brushed the rough ... → \"Do you ever wonder what it hi...",
+          "similarity": 0.226
+        },
+        {
+          "position": 314,
+          "sentence_pair": "Wolfe matched Red’s stride wit... → As they wove between the trees...",
+          "similarity": 0.244
+        },
+        {
+          "position": 318,
+          "sentence_pair": "“I wonder what they'd make of ... → Red (Little Red Riding Hood)Re...",
+          "similarity": 0.202
+        },
+        {
+          "position": 328,
+          "sentence_pair": "\" The words lingered between t... → Red (Little Red Riding Hood)Re...",
+          "similarity": 0.146
+        },
+        {
+          "position": 330,
+          "sentence_pair": "Red glanced upward, a playful ... → Her steps remained measured an...",
+          "similarity": 0.198
+        },
+        {
+          "position": 348,
+          "sentence_pair": "” he mused, his tone light and... → Red (Little Red Riding Hood)Re...",
+          "similarity": 0.179
+        },
+        {
+          "position": 352,
+          "sentence_pair": "The path narrowed, and she ins... → Wolfe, undeterred, filled the ...",
+          "similarity": 0.209
+        },
+        {
+          "position": 374,
+          "sentence_pair": "Her mother crossed the room, f... → She paused, watching Red tuck ...",
+          "similarity": 0.208
+        },
+        {
+          "position": 376,
+          "sentence_pair": "You must keep your wits about ... → Red's MotherShe gently places ...",
+          "similarity": 0.099
+        },
+        {
+          "position": 379,
+          "sentence_pair": "“Remember what I told you,” sh... → “These woods can be full of mi...",
+          "similarity": 0.246
+        },
+        {
+          "position": 380,
+          "sentence_pair": "“These woods can be full of mi... → ” She squeezed Red’s shoulder ...",
+          "similarity": 0.136
+        },
+        {
+          "position": 381,
+          "sentence_pair": "” She squeezed Red’s shoulder ... → “You must keep your wits about...",
+          "similarity": 0.157
+        },
+        {
+          "position": 382,
+          "sentence_pair": "“You must keep your wits about... → Red's MotherShe gently places ...",
+          "similarity": 0.075
+        },
+        {
+          "position": 403,
+          "sentence_pair": "“Red, listen to me closely—the... → Not every path you walk is wha...",
+          "similarity": 0.247
+        },
+        {
+          "position": 404,
+          "sentence_pair": "Not every path you walk is wha... → ” The words hung between them,...",
+          "similarity": 0.168
+        },
+        {
+          "position": 409,
+          "sentence_pair": "Red’s curiosity, never far fro... → “What do you mean, Grandmother...",
+          "similarity": 0.244
+        },
+        {
+          "position": 416,
+          "sentence_pair": "Leaning closer, she let her wo... → “There are shadows that move w...",
+          "similarity": 0.228
+        },
+        {
+          "position": 437,
+          "sentence_pair": "“I didn’t truly need help with... → I invited Wolfe here because I...",
+          "similarity": 0.25
+        },
+        {
+          "position": 445,
+          "sentence_pair": "The truth hung in the air, bri... → “Grandmother, you knew all alo...",
+          "similarity": 0.2
+        },
+        {
+          "position": 447,
+          "sentence_pair": "” The question tumbled out, ha... → Grandmother reaches over to ge...",
+          "similarity": 0.229
+        },
+        {
+          "position": 463,
+          "sentence_pair": "“You know, darling,” she began... → Oakley at the market the other...",
+          "similarity": 0.086
+        },
+        {
+          "position": 464,
+          "sentence_pair": "Oakley at the market the other... → She mentioned her grandson, He...",
+          "similarity": 0.189
+        },
+        {
+          "position": 466,
+          "sentence_pair": "Kind, clever, and apparently h... → ” She paused just long enough ...",
+          "similarity": 0.123
+        },
+        {
+          "position": 468,
+          "sentence_pair": "“I thought perhaps you might e... → What do you think?...",
+          "similarity": 0.132
+        },
+        {
+          "position": 469,
+          "sentence_pair": "What do you think?... → Red (Little Red Riding Hood)Re...",
+          "similarity": 0.074
+        },
+        {
+          "position": 497,
+          "sentence_pair": "\"He always seemed... different... → \" Red glanced toward the windo...",
+          "similarity": 0.233
+        },
+        {
+          "position": 505,
+          "sentence_pair": "Yet with Wolfe, even in his ge... → Red (Little Red Riding Hood)Re...",
+          "similarity": 0.228
+        },
+        {
+          "position": 512,
+          "sentence_pair": "The gentle hush of the cottage... → Red, still surprised by the tu...",
+          "similarity": 0.062
+        },
+        {
+          "position": 543,
+          "sentence_pair": "Just last week, he was out the... → ” She smiled, recalling the sc...",
+          "similarity": 0.106
+        },
+        {
+          "position": 544,
+          "sentence_pair": "” She smiled, recalling the sc... → “Every so often, he’d stop and...",
+          "similarity": 0.2
+        },
+        {
+          "position": 545,
+          "sentence_pair": "“Every so often, he’d stop and... → ” Her gaze drifted to the wild...",
+          "similarity": 0.15
+        },
+        {
+          "position": 546,
+          "sentence_pair": "” Her gaze drifted to the wild... → “And those?...",
+          "similarity": 0.241
+        },
+        {
+          "position": 547,
+          "sentence_pair": "“And those?... → ” She nodded to the vase....",
+          "similarity": 0.251
+        },
+        {
+          "position": 548,
+          "sentence_pair": "” She nodded to the vase.... → “Wolfe picked the prettiest on...",
+          "similarity": 0.252
+        },
+        {
+          "position": 549,
+          "sentence_pair": "“Wolfe picked the prettiest on... → ” Grandmother’s voice softened...",
+          "similarity": 0.208
+        },
+        {
+          "position": 551,
+          "sentence_pair": "“Little gestures like these, d... → Red (Little Red Riding Hood)Re...",
+          "similarity": 0.203
+        },
+        {
+          "position": 556,
+          "sentence_pair": "“How do you know it’s not all ... → Grandmother folds her hands ge...",
+          "similarity": 0.219
+        },
+        {
+          "position": 560,
+          "sentence_pair": "“Oh, Red,” she began, her voic... → But I’ve watched him when he t...",
+          "similarity": 0.071
+        },
+        {
+          "position": 561,
+          "sentence_pair": "But I’ve watched him when he t... → ” She leaned in a little, lowe...",
+          "similarity": 0.015
+        },
+        {
+          "position": 563,
+          "sentence_pair": "“Remember that morning it was ... → Wolfe was out there chopping w...",
+          "similarity": 0.152
+        },
+        {
+          "position": 565,
+          "sentence_pair": "And there was that time he cre... → ” Grandmother’s gaze lingered ...",
+          "similarity": 0.148
+        },
+        {
+          "position": 581,
+          "sentence_pair": "As dawn approaches, Red finds ... → Inside the cottage, Grandmothe...",
+          "similarity": 0.176
+        },
+        {
+          "position": 602,
+          "sentence_pair": "Deep down, I suspected it was ... → Grandmother gives Red's mother...",
+          "similarity": 0.24
+        }
+      ],
+      "high_coherence_segments": [
+        {
+          "start_sentence": 3,
+          "end_sentence": 7,
+          "length": 5,
+          "average_similarity": 0.662
+        },
+        {
+          "start_sentence": 28,
+          "end_sentence": 31,
+          "length": 4,
+          "average_similarity": 0.66
+        },
+        {
+          "start_sentence": 40,
+          "end_sentence": 42,
+          "length": 3,
+          "average_similarity": 0.569
+        },
+        {
+          "start_sentence": 64,
+          "end_sentence": 66,
+          "length": 3,
+          "average_similarity": 0.692
+        },
+        {
+          "start_sentence": 71,
+          "end_sentence": 73,
+          "length": 3,
+          "average_similarity": 0.573
+        },
+        {
+          "start_sentence": 107,
+          "end_sentence": 109,
+          "length": 3,
+          "average_similarity": 0.624
+        },
+        {
+          "start_sentence": 172,
+          "end_sentence": 174,
+          "length": 3,
+          "average_similarity": 0.714
+        },
+        {
+          "start_sentence": 232,
+          "end_sentence": 234,
+          "length": 3,
+          "average_similarity": 0.57
+        },
+        {
+          "start_sentence": 273,
+          "end_sentence": 276,
+          "length": 4,
+          "average_similarity": 0.649
+        },
+        {
+          "start_sentence": 312,
+          "end_sentence": 314,
+          "length": 3,
+          "average_similarity": 0.569
+        },
+        {
+          "start_sentence": 342,
+          "end_sentence": 344,
+          "length": 3,
+          "average_similarity": 0.61
+        },
+        {
+          "start_sentence": 362,
+          "end_sentence": 364,
+          "length": 3,
+          "average_similarity": 0.563
+        },
+        {
+          "start_sentence": 370,
+          "end_sentence": 372,
+          "length": 3,
+          "average_similarity": 0.552
+        },
+        {
+          "start_sentence": 400,
+          "end_sentence": 402,
+          "length": 3,
+          "average_similarity": 0.72
+        },
+        {
+          "start_sentence": 419,
+          "end_sentence": 421,
+          "length": 3,
+          "average_similarity": 0.622
+        },
+        {
+          "start_sentence": 426,
+          "end_sentence": 428,
+          "length": 3,
+          "average_similarity": 0.552
+        },
+        {
+          "start_sentence": 458,
+          "end_sentence": 461,
+          "length": 4,
+          "average_similarity": 0.669
+        },
+        {
+          "start_sentence": 473,
+          "end_sentence": 478,
+          "length": 6,
+          "average_similarity": 0.617
+        },
+        {
+          "start_sentence": 480,
+          "end_sentence": 482,
+          "length": 3,
+          "average_similarity": 0.685
+        },
+        {
+          "start_sentence": 491,
+          "end_sentence": 493,
+          "length": 3,
+          "average_similarity": 0.578
+        },
+        {
+          "start_sentence": 521,
+          "end_sentence": 523,
+          "length": 3,
+          "average_similarity": 0.686
+        },
+        {
+          "start_sentence": 566,
+          "end_sentence": 568,
+          "length": 3,
+          "average_similarity": 0.528
+        },
+        {
+          "start_sentence": 577,
+          "end_sentence": 580,
+          "length": 4,
+          "average_similarity": 0.646
+        },
+        {
+          "start_sentence": 587,
+          "end_sentence": 590,
+          "length": 4,
+          "average_similarity": 0.651
+        },
+        {
+          "start_sentence": 614,
+          "end_sentence": 616,
+          "length": 3,
+          "average_similarity": 0.705
+        },
+        {
+          "start_sentence": 621,
+          "end_sentence": 623,
+          "length": 3,
+          "average_similarity": 0.802
+        }
+      ],
+      "objective_description": {
+        "score": 0.43,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "pairwise_similarity_examples": [
+      {
+        "sentence_pair": "Sentence 1 → Sentence 2",
+        "sentence_1": "Red, adjusting her hood as she reaches the cottage...",
+        "sentence_2": "Her concern for her grandmother heightens.",
+        "similarity": 0.3644
+      },
+      {
+        "sentence_pair": "Sentence 2 → Sentence 3",
+        "sentence_1": "Her concern for her grandmother heightens.",
+        "sentence_2": "She knocks, then enters, finding Wolfe by the hear...",
+        "similarity": 0.3103
+      },
+      {
+        "sentence_pair": "Sentence 3 → Sentence 4",
+        "sentence_1": "She knocks, then enters, finding Wolfe by the hear...",
+        "sentence_2": "Wolfe greets her warmly, explaining he’s there at ...",
+        "similarity": 0.5267
+      },
+      {
+        "sentence_pair": "Sentence 4 → Sentence 5",
+        "sentence_1": "Wolfe greets her warmly, explaining he’s there at ...",
+        "sentence_2": "As Wolfe tries to distract her with offers of tea ...",
+        "similarity": 0.7466
+      },
+      {
+        "sentence_pair": "Sentence 5 → Sentence 6",
+        "sentence_1": "As Wolfe tries to distract her with offers of tea ...",
+        "sentence_2": "Wolfe offers a polite smile, but his eyes linger a...",
+        "similarity": 0.5525
+      },
+      {
+        "sentence_pair": "Sentence 6 → Sentence 7",
+        "sentence_1": "Wolfe offers a polite smile, but his eyes linger a...",
+        "sentence_2": "Wolfe’s smile was polite, practiced, but his gaze ...",
+        "similarity": 0.823
+      },
+      {
+        "sentence_pair": "Sentence 7 → Sentence 8",
+        "sentence_1": "Wolfe’s smile was polite, practiced, but his gaze ...",
+        "sentence_2": "“You must be Red,” he said, voice warm and easy, y...",
+        "similarity": 0.4791
+      },
+      {
+        "sentence_pair": "Sentence 8 → Sentence 9",
+        "sentence_1": "“You must be Red,” he said, voice warm and easy, y...",
+        "sentence_2": "“Your cloak is exactly as your grandmother describ...",
+        "similarity": 0.3862
+      },
+      {
+        "sentence_pair": "Sentence 9 → Sentence 10",
+        "sentence_1": "“Your cloak is exactly as your grandmother describ...",
+        "sentence_2": "” He shifted the bundle of firewood in his arms, a...",
+        "similarity": 0.3165
+      },
+      {
+        "sentence_pair": "Sentence 10 → Sentence 11",
+        "sentence_1": "” He shifted the bundle of firewood in his arms, a...",
+        "sentence_2": "“I’m Wolfe—the one she asked to bring more wood fo...",
+        "similarity": 0.3912
+      },
+      {
+        "sentence_pair": "Sentence 11 → Sentence 12",
+        "sentence_1": "“I’m Wolfe—the one she asked to bring more wood fo...",
+        "sentence_2": "She worries about the chill settling in these wood...",
+        "similarity": 0.4219
+      },
+      {
+        "sentence_pair": "Sentence 12 → Sentence 13",
+        "sentence_1": "She worries about the chill settling in these wood...",
+        "sentence_2": "” His tone softened, conspiratorial.",
+        "similarity": 0.2163
+      },
+      {
+        "sentence_pair": "Sentence 13 → Sentence 14",
+        "sentence_1": "” His tone softened, conspiratorial.",
+        "sentence_2": "“I often help her with these things, you know.",
+        "similarity": 0.1955
+      },
+      {
+        "sentence_pair": "Sentence 14 → Sentence 15",
+        "sentence_1": "“I often help her with these things, you know.",
+        "sentence_2": "” His eyes flicked over the lonely path behind her...",
+        "similarity": 0.3951
+      },
+      {
+        "sentence_pair": "Sentence 15 → Sentence 16",
+        "sentence_1": "” His eyes flicked over the lonely path behind her...",
+        "sentence_2": "Do you always travel alone?",
+        "similarity": 0.2134
+      },
+      {
+        "sentence_pair": "Sentence 16 → Sentence 17",
+        "sentence_1": "Do you always travel alone?",
+        "sentence_2": "She persistently questions Wolfe about Grandmother...",
+        "similarity": 0.0413
+      },
+      {
+        "sentence_pair": "Sentence 17 → Sentence 18",
+        "sentence_1": "She persistently questions Wolfe about Grandmother...",
+        "sentence_2": "Red (Little Red Riding Hood)Red leans casually aga...",
+        "similarity": 0.2709
+      },
+      {
+        "sentence_pair": "Sentence 18 → Sentence 19",
+        "sentence_1": "Red (Little Red Riding Hood)Red leans casually aga...",
+        "sentence_2": "Red leaned casually against a mossy log, her arms ...",
+        "similarity": 0.6579
+      },
+      {
+        "sentence_pair": "Sentence 19 → Sentence 20",
+        "sentence_1": "Red leaned casually against a mossy log, her arms ...",
+        "sentence_2": "She watched him from beneath the shadow of her cri...",
+        "similarity": 0.4684
+      },
+      {
+        "sentence_pair": "Sentence 20 → Sentence 21",
+        "sentence_1": "She watched him from beneath the shadow of her cri...",
+        "sentence_2": "“You’ve certainly been busy out here with that ax,...",
+        "similarity": 0.4097
+      },
+      {
+        "note": "Only showing first 20 pairs, total of 627 adjacent sentence pairs"
+      }
+    ]
+  },
+  "story_structure_analysis": {
+    "evaluation_mode": "default mode",
+    "event_list": [
+      {
+        "event": "Red slices bread as her mother packs a basket and gives her safety instructions for the woods.",
+        "source": "Red stood at the table, slicing crusty bread with careful hands, crumbs scattering across the board.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red promises her mother to stay safe before leaving home and stepping out onto the path.",
+        "source": "' Red glanced up, her eyes lingering on the sunlit trees beyond the window, and nodded, the determination in her grip as she hefted the basket and slid her feet into sturdy boots beside the door.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red walks the uneven path with her basket, pausing to inspect mushrooms in the woods.",
+        "source": "She paused to inspect a cluster of mushrooms, brushing her fingers across their velvety caps, when a sharp snap of a twig made her lift her head.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe appears from behind a thicket and greets Red with a playful bow.",
+        "source": "Wolfe emerged from behind a thicket, brushing leaves from his sleeve and offering a playful bow.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Wolfe engage in playful yet wary conversation, questioning each other's motives and intentions.",
+        "source": "Their conversation quickly deepened into a playful yet cautious verbal dance—Red, perceptive and courageous, questioned Wolfe's motives and presence in the woods, showing a mix of curiosity and wariness.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "They share stories and philosophical musings about the forest, probing for each other's intentions.",
+        "source": "The two exchanged stories, questions, and philosophical musings about the secrets of the forest, each subtly probing the other's intentions.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red resumes her walk and Wolfe joins her, both marked by mutual intrigue and caution.",
+        "source": "By the time Red resumed her walk, Wolfe fell in step beside her, their rapport marked by mutual intrigue, a shared sense of caution, and the beginnings of trust amid the uncertainty of the woods.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red pauses to investigate wild strawberries as Wolfe slips off the trail, heading for Grandmother's cottage.",
+        "source": "Wolfe glanced back, noting Red's lingering steps as she paused to investigate a cluster of wild strawberries beside the path.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red calls after Wolfe to race to Grandmother's door, then quickens her pace along the path.",
+        "source": "Red, basket swinging at her side, called after him, 'Race you to Grandmother's door!",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Wolfe dodges through the forest, aiming to reach Grandmother's cottage first and planning his next move.",
+        "source": "He darted between twisted birch trunks, dodging brambles and brushing aside low-hanging branches, intent on reaching Grandmother's cottage first.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red arrives at the cottage, notices muddy footprints, and hears an unfamiliar whistle inside.",
+        "source": "Red, adjusting her hood as she reaches the cottage, notices muddy footprints and an unfamiliar whistle from within.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red knocks and enters, finding Wolfe by the hearth with firewood; he claims Grandmother requested him.",
+        "source": "She knocks, then enters, finding Wolfe by the hearth with a stack of firewood.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red questions Wolfe about Grandmother’s whereabouts and refuses his attempts to distract her.",
+        "source": "She persistently questions Wolfe about Grandmother’s whereabouts and well-being, growing increasingly insistent as Wolfe offers a series of evasions and excuses, attempting to prevent her from entering the back room.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red insists on seeing her grandmother, challenging Wolfe's motives until he reluctantly agrees but warns her.",
+        "source": "Red, perceptive and courageous, refuses to be dissuaded, challenging Wolfe’s motives and arguing her right to see her grandmother.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red demands to see her grandmother, determined to face the truth herself.",
+        "source": "The chapter ends with Red demanding to see her grandmother, determined to face the truth for herself.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother warns Red about dangers in the woods and the importance of trusting her instincts.",
+        "source": "Before sharing any letters or matchmaking intentions, Grandmother adopts a more serious tone, warning Red about the dangers in the woods and the importance of trusting her instincts.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother cryptically alludes to Wolfe and shares a cautionary rhyme, then shifts to matchmaking schemes.",
+        "source": "She shares a cautionary rhyme and speaks cryptically about unseen threats, subtly alluding to Wolfe but not naming him outright.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother admits arranging Wolfe’s visits and discusses the possibility of Red meeting Henry.",
+        "source": "After this, Grandmother shifts to a lighter mood, admitting she orchestrated Wolfe's visits in hopes of encouraging Red's happiness, and openly discusses her matchmaking schemes.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red expresses surprise at Grandmother’s meddling but feels touched by her care and concern.",
+        "source": "Red expresses surprise at her grandmother's meddling but is also touched by her care and concern.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother discusses Wolfe’s gentle actions and the mystery surrounding him, offering reassurances and caution.",
+        "source": "The conversation then explores Red's doubts about Wolfe, with Grandmother acknowledging both Wolfe’s gentle actions and the lingering air of mystery and potential danger she senses in him.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red considers her grandmother’s warnings and hopes, reflecting on her feelings about Wolfe and her future.",
+        "source": "The chapter ends with Red deeply considering both her grandmother’s warnings and hopes, the wind rattling the shutters, and the firelight flickering as Red weighs her feelings about Wolfe and her future.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother stirs stew and watches Red and Wolfe leave along the path as Red's Mother looks on.",
+        "source": "She hums a lively tune, pausing to peer out the window and watch Red and Wolfe disappear along the path.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother and Red’s Mother set the table, preparing food and welcoming atmosphere in the cottage.",
+        "source": "Together, they set the table, the clatter of dishes and the aroma of fresh herbs filling the cozy cottage.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother expresses satisfaction at orchestrating the match, while Red’s Mother accepts and prepares for their return.",
+        "source": "Grandmother ladles stew into bowls, her contented smile betraying her satisfaction at orchestrating the match.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      }
+    ],
+    "Papalampidi_detailed_results": {
+      "turning_points": {
+        "TP1": "Red promises her mother to stay safe before leaving home and stepping out onto the path.",
+        "TP2": "Wolfe appears from behind a thicket and greets Red with a playful bow.",
+        "TP3": "Red calls after Wolfe to race to Grandmother's door, then quickens her pace along the path.",
+        "TP4": "Red knocks and enters, finding Wolfe by the hearth with firewood; he claims Grandmother requested him.",
+        "TP5": "Red demands to see her grandmother, determined to face the truth herself."
+      },
+      "stage_division": {
+        "Setup": [
+          "Red slices bread as her mother packs a basket and gives her safety instructions for the woods.",
+          "Red promises her mother to stay safe before leaving home and stepping out onto the path."
+        ],
+        "New Situation": [
+          "Red walks the uneven path with her basket, pausing to inspect mushrooms in the woods."
+        ],
+        "Progress": [
+          "Wolfe appears from behind a thicket and greets Red with a playful bow.",
+          "Red and Wolfe engage in playful yet wary conversation, questioning each other's motives and intentions.",
+          "They share stories and philosophical musings about the forest, probing for each other's intentions."
+        ],
+        "Complications": [
+          "Red resumes her walk and Wolfe joins her, both marked by mutual intrigue and caution.",
+          "Red pauses to investigate wild strawberries as Wolfe slips off the trail, heading for Grandmother's cottage.",
+          "Red calls after Wolfe to race to Grandmother's door, then quickens her pace along the path.",
+          "Wolfe dodges through the forest, aiming to reach Grandmother's cottage first and planning his next move.",
+          "Red arrives at the cottage, notices muddy footprints, and hears an unfamiliar whistle inside.",
+          "Red knocks and enters, finding Wolfe by the hearth with firewood; he claims Grandmother requested him.",
+          "Red questions Wolfe about Grandmother’s whereabouts and refuses his attempts to distract her.",
+          "Red insists on seeing her grandmother, challenging Wolfe's motives until he reluctantly agrees but warns her.",
+          "Red demands to see her grandmother, determined to face the truth herself."
+        ],
+        "Final Push": [
+          "Grandmother warns Red about dangers in the woods and the importance of trusting her instincts.",
+          "Grandmother cryptically alludes to Wolfe and shares a cautionary rhyme, then shifts to matchmaking schemes.",
+          "Grandmother admits arranging Wolfe’s visits and discusses the possibility of Red meeting Henry.",
+          "Red expresses surprise at Grandmother’s meddling but feels touched by her care and concern.",
+          "Grandmother discusses Wolfe’s gentle actions and the mystery surrounding him, offering reassurances and caution.",
+          "Red considers her grandmother’s warnings and hopes, reflecting on her feelings about Wolfe and her future."
+        ],
+        "Aftermath": [
+          "Grandmother stirs stew and watches Red and Wolfe leave along the path as Red's Mother looks on.",
+          "Grandmother and Red’s Mother set the table, preparing food and welcoming atmosphere in the cottage.",
+          "Grandmother expresses satisfaction at orchestrating the match, while Red’s Mother accepts and prepares for their return."
+        ]
+      }
+    },
+    "Li_detailed_results": {
+      "event1": "Orientation",
+      "event2": "Orientation",
+      "event3": "Orientation",
+      "event4": "Complicating Action",
+      "event5": "Complicating Action",
+      "event6": "Complicating Action",
+      "event7": "Complicating Action",
+      "event8": "Complicating Action",
+      "event9": "Complicating Action",
+      "event10": "Complicating Action",
+      "event11": "MRE",
+      "event12": "Complicating Action",
+      "event13": "Complicating Action",
+      "event14": "Minor Resolution",
+      "event15": "Minor Resolution",
+      "event16": "Resolution",
+      "event17": "Resolution",
+      "event18": "Minor Resolution",
+      "event19": "Minor Resolution",
+      "event20": "Minor Resolution",
+      "event21": "Aftermath",
+      "event22": "Aftermath",
+      "event23": "Evaluation"
+    },
+    "structure_analysis": {
+      "basic_info": {
+        "total_events": 24,
+        "analysis_mode": "default",
+        "analysis_time": null
+      },
+      "Papalampidi_structure_analysis": {
+        "turning_point_integrity": {
+          "identified_tps": [
+            "TP1",
+            "TP2",
+            "TP3",
+            "TP4",
+            "TP5"
+          ],
+          "missing_tps": [],
+          "TP_coverage": "5/5"
+        },
+        "stage_integrity": {
+          "identified_stages": [
+            "Setup",
+            "New Situation",
+            "Progress",
+            "Complications",
+            "Final Push",
+            "Aftermath"
+          ],
+          "missing_stages": [],
+          "stage_coverage": "6/6"
+        }
+      },
+      "Li_function_analysis": {
+        "core_function_check": {
+          "Orientation": "exists",
+          "Complicating Action": "exists",
+          "MRE": "exists",
+          "Resolution": "exists"
+        },
+        "function_distribution": {
+          "Orientation": 3,
+          "Complicating Action": 9,
+          "MRE": 1,
+          "Minor Resolution": 5,
+          "Resolution": 2,
+          "Aftermath": 2,
+          "Evaluation": 1
+        },
+        "function_diversity": 7
+      }
+    }
+  }
+}

@@ -1,0 +1,1991 @@
+{
+  "emotional_arc": {
+    "metadata": {
+      "total_chapters": 8,
+      "primary_method": "RoBERTa",
+      "validation_method": "LabMT-en-v1",
+      "analysis_timestamp": "2025-09-09T17:15:02.291508"
+    },
+    "chapter_analysis": [
+      {
+        "chapter_num": 1,
+        "title": "Red Receives Her Grandmother's Cryptic Letter",
+        "roberta_score": 0.1569,
+        "labmt_score": 0.1965,
+        "content_length": 16912
+      },
+      {
+        "chapter_num": 2,
+        "title": "Crossing Into the Forbidden Forest",
+        "roberta_score": 0.4923,
+        "labmt_score": 0.2243,
+        "content_length": 3773
+      },
+      {
+        "chapter_num": 3,
+        "title": "The Wolf's Sinister Bargain",
+        "roberta_score": 0.4087,
+        "labmt_score": 0.118,
+        "content_length": 4321
+      },
+      {
+        "chapter_num": 4,
+        "title": "Red Finds the Abandoned Cabin",
+        "roberta_score": -0.0819,
+        "labmt_score": 0.1455,
+        "content_length": 11419
+      },
+      {
+        "chapter_num": 5,
+        "title": "The Wolf Sets His Trap",
+        "roberta_score": 0.1066,
+        "labmt_score": 0.2168,
+        "content_length": 3388
+      },
+      {
+        "chapter_num": 6,
+        "title": "Red Fights Back",
+        "roberta_score": 0.2952,
+        "labmt_score": 0.2056,
+        "content_length": 4463
+      },
+      {
+        "chapter_num": 7,
+        "title": "The Final Confrontation",
+        "roberta_score": 0.2724,
+        "labmt_score": 0.1355,
+        "content_length": 24604
+      },
+      {
+        "chapter_num": 8,
+        "title": "Escape from the Woods",
+        "roberta_score": -0.5206,
+        "labmt_score": 0.1525,
+        "content_length": 909
+      }
+    ],
+    "primary_analysis": {
+      "method": "RoBERTa",
+      "scores": [
+        0.15694989363352457,
+        0.49225139220555625,
+        0.40865779320398965,
+        -0.08188158671061198,
+        0.1065938393274943,
+        0.29520771900812787,
+        0.27237464984258014,
+        -0.5205756690767076
+      ],
+      "reagan_classification": {
+        "method": "RoBERTa",
+        "best_match": "Tragedy",
+        "confidence": 0.6495,
+        "all_similarities": {
+          "Rags to riches": 0,
+          "Tragedy": 0.6495,
+          "Man in a hole": 0,
+          "Icarus": 0.4534,
+          "Cinderella": 0.033,
+          "Oedipus": 0
+        },
+        "reagan_category": "TR"
+      }
+    },
+    "validation_analysis": {
+      "method": "LabMT",
+      "scores": [
+        0.19651578073089326,
+        0.2243412162162155,
+        0.11799107142857079,
+        0.1454658385093166,
+        0.21682330827067609,
+        0.20557692307692355,
+        0.13550438596491188,
+        0.15250000000000008
+      ],
+      "reagan_classification": {
+        "method": "LabMT",
+        "best_match": "Tragedy",
+        "confidence": 0.707,
+        "all_similarities": {
+          "Rags to riches": 0.6128,
+          "Tragedy": 0.707,
+          "Man in a hole": 0,
+          "Icarus": 0.05,
+          "Cinderella": 0,
+          "Oedipus": 0.1634
+        },
+        "reagan_category": "TR"
+      }
+    },
+    "correlation_analysis": {
+      "pearson_correlation": {
+        "r": 0.2379,
+        "p_value": 0.5705,
+        "significance": "Not Significant"
+      },
+      "spearman_correlation": {
+        "r": 0.1429,
+        "p_value": 0.7358
+      },
+      "direction_consistency": 0.5714,
+      "consistency_level": "Low",
+      "interpretation": "RoBERTa and LabMT correlation coefficient is 0.238, belongs to weak correlation"
+    },
+    "comparison_analysis": {
+      "disagreement_points": [
+        {
+          "chapter": 8,
+          "roberta_score": -0.5205756690767076,
+          "labmt_score": 0.15250000000000008,
+          "difference": 0.6731
+        }
+      ],
+      "method_advantages": {
+        "RoBERTa": {
+          "strengths": [
+            "Deep learning model with better contextual understanding",
+            "Suitable for modern text and dialogue",
+            "High sensitivity to sci-fi and technical texts"
+          ],
+          "classification": "Tragedy",
+          "confidence": 0.6495
+        },
+        "LabMT": {
+          "strengths": [
+            "Fully consistent with Reagan's original method",
+            "Based on large-scale human annotation",
+            "Suitable for traditional literary analysis"
+          ],
+          "classification": "Tragedy",
+          "confidence": 0.707
+        }
+      },
+      "consistency_assessment": {
+        "classification_agreement": true,
+        "major_disagreements": 1,
+        "recommendation": "Both methods identify as Tragedy, results are highly consistent, recommend using RoBERTa as the primary analysis result"
+      }
+    },
+    "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.238 (Low)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.238, belongs to weak correlation\n\nClassification Results:\n- RoBERTa (primary): Tragedy\n- LabMT (validation): Tragedy\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.238, showing low consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation.",
+    "output_files": {
+      "analysis_json": "/Users/haha/Story/data/horror_test_analysis/thelittleredridinghood_horror-suspenserewrite_linear_T0.3_s2/roberta_labmt_analysis_20250909_171502.json"
+    }
+  },
+  "hred_coherence": {
+    "HRED_coherence_evaluation": {
+      "model_name": "all-mpnet-base-v2",
+      "analysis_method": "Original sentence coherence",
+      "total_sentences": 616,
+      "adjacent_pairs": 615,
+      "average_coherence": 0.44,
+      "objective_description": {
+        "score": 0.44,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "detailed_analysis": {
+      "basic_statistics": {
+        "average_coherence": 0.43996126700828714,
+        "coherence_std": 0.166104821132229,
+        "max_coherence": 0.9353576898574829,
+        "min_coherence": -0.03473442792892456,
+        "coherence_median": 0.42419496178627014
+      },
+      "coherence_breakpoints": [
+        {
+          "position": 8,
+          "sentence_pair": "In a voice made thin by worry,... → ” The memory of the night befo...",
+          "similarity": 0.263
+        },
+        {
+          "position": 12,
+          "sentence_pair": "” Her grip tightened, both lov... → “Whatever’s in those woods, it...",
+          "similarity": 0.159
+        },
+        {
+          "position": 13,
+          "sentence_pair": "“Whatever’s in those woods, it... → Promise me you won’t go near....",
+          "similarity": 0.262
+        },
+        {
+          "position": 14,
+          "sentence_pair": "Promise me you won’t go near.... → Red twists her fingers in her ...",
+          "similarity": 0.146
+        },
+        {
+          "position": 46,
+          "sentence_pair": "Her mother’s anxious voice cal... → “Could everyone look at this?...",
+          "similarity": 0.263
+        },
+        {
+          "position": 48,
+          "sentence_pair": "” she asked, letting her words... → “I found these strange symbols...",
+          "similarity": 0.061
+        },
+        {
+          "position": 51,
+          "sentence_pair": "“Has anyone seen markings like... → ” she added, determination sha...",
+          "similarity": 0.223
+        },
+        {
+          "position": 52,
+          "sentence_pair": "” she added, determination sha... → VillagersHe shuffles backwards...",
+          "similarity": 0.226
+        },
+        {
+          "position": 53,
+          "sentence_pair": "VillagersHe shuffles backwards... → Old Man Harris squinted at the...",
+          "similarity": 0.211
+        },
+        {
+          "position": 62,
+          "sentence_pair": "“Don’t go stirring up trouble—... → ” She squeezed Red’s arm, her ...",
+          "similarity": 0.255
+        },
+        {
+          "position": 63,
+          "sentence_pair": "” She squeezed Red’s arm, her ... → “You know how stories about th...",
+          "similarity": 0.219
+        },
+        {
+          "position": 64,
+          "sentence_pair": "“You know how stories about th... → Red clutches the cloth tighter...",
+          "similarity": 0.154
+        },
+        {
+          "position": 66,
+          "sentence_pair": "Red clutched the scrap of clot... → Not one face hinted at underst...",
+          "similarity": 0.248
+        },
+        {
+          "position": 80,
+          "sentence_pair": "As she tucked the cloth, marke... → If knowing the truth meant ris...",
+          "similarity": 0.107
+        },
+        {
+          "position": 94,
+          "sentence_pair": "“Please—anything your grandfat... → VillagersTom glances around wa...",
+          "similarity": 0.233
+        },
+        {
+          "position": 97,
+          "sentence_pair": "Superstitious whispers seemed ... → After a moment’s hesitation, T...",
+          "similarity": 0.269
+        },
+        {
+          "position": 98,
+          "sentence_pair": "After a moment’s hesitation, T... → He recounted what had been tol...",
+          "similarity": 0.232
+        },
+        {
+          "position": 99,
+          "sentence_pair": "He recounted what had been tol... → RedShe holds the cloth higher,...",
+          "similarity": 0.235
+        },
+        {
+          "position": 104,
+          "sentence_pair": "Refusing to let it win, Red dr... → “If anyone else knows anything...",
+          "similarity": 0.159
+        },
+        {
+          "position": 113,
+          "sentence_pair": "\" The words hung in the cold a... → Red's hand tightens around the...",
+          "similarity": 0.225
+        },
+        {
+          "position": 116,
+          "sentence_pair": "The widow’s cottage felt colde... → Red’s heartbeat quickened, but...",
+          "similarity": 0.269
+        },
+        {
+          "position": 120,
+          "sentence_pair": "“Please, Widow Lark,” Red said... → “Can you tell me what changed ...",
+          "similarity": 0.252
+        },
+        {
+          "position": 149,
+          "sentence_pair": "Behind her, Mother’s voice dri... → Stay on the path, and be home ...",
+          "similarity": 0.24
+        },
+        {
+          "position": 150,
+          "sentence_pair": "Stay on the path, and be home ... → ” But she didn’t slow, didn’t ...",
+          "similarity": 0.167
+        },
+        {
+          "position": 168,
+          "sentence_pair": "The forest quickly swallows an... → As she ventures deeper, the li...",
+          "similarity": 0.264
+        },
+        {
+          "position": 184,
+          "sentence_pair": "“Now, answer me—where is she?... → The Wolf proposes a sinister b...",
+          "similarity": 0.218
+        },
+        {
+          "position": 192,
+          "sentence_pair": "The Wolf bared his teeth in a ... → His voice was a velvet threat,...",
+          "similarity": 0.248
+        },
+        {
+          "position": 208,
+          "sentence_pair": "Still, suspicion gnawed at her... → What if this was another trick...",
+          "similarity": 0.158
+        },
+        {
+          "position": 209,
+          "sentence_pair": "What if this was another trick... → Her mind raced, but she forced...",
+          "similarity": 0.267
+        },
+        {
+          "position": 210,
+          "sentence_pair": "Her mind raced, but she forced... → No time for hesitation now....",
+          "similarity": 0.236
+        },
+        {
+          "position": 211,
+          "sentence_pair": "No time for hesitation now.... → She needed answers—whatever th...",
+          "similarity": 0.178
+        },
+        {
+          "position": 219,
+          "sentence_pair": "Suddenly, the Woodsman emerges... → 'You shouldn't be here, girl,'...",
+          "similarity": 0.193
+        },
+        {
+          "position": 229,
+          "sentence_pair": "With her heart pounding, Red m... → 'My grandmother's missing....",
+          "similarity": 0.103
+        },
+        {
+          "position": 231,
+          "sentence_pair": "I have to find her.... → ' The Woodsman glances at the ...",
+          "similarity": -0.035
+        },
+        {
+          "position": 236,
+          "sentence_pair": "“Those ain’t no squirrel teeth... → Experience told him what the m...",
+          "similarity": 0.273
+        },
+        {
+          "position": 237,
+          "sentence_pair": "Experience told him what the m... → The WoodsmanHe runs his rough ...",
+          "similarity": 0.216
+        },
+        {
+          "position": 247,
+          "sentence_pair": "'Wolf's been near.... → Tracks everywhere....",
+          "similarity": 0.202
+        },
+        {
+          "position": 248,
+          "sentence_pair": "Tracks everywhere.... → ' He gestures at muddy paw pri...",
+          "similarity": 0.266
+        },
+        {
+          "position": 252,
+          "sentence_pair": "His brow furrowed, eyes narrow... → Those prints hadn’t been there...",
+          "similarity": 0.237
+        },
+        {
+          "position": 253,
+          "sentence_pair": "Those prints hadn’t been there... → Something had wandered close, ...",
+          "similarity": 0.241
+        },
+        {
+          "position": 255,
+          "sentence_pair": "The pattern told a story: perh... → He straightened, glancing at t...",
+          "similarity": 0.213
+        },
+        {
+          "position": 261,
+          "sentence_pair": "These weren't from any animal ... → they were too deep, too delibe...",
+          "similarity": 0.251
+        },
+        {
+          "position": 262,
+          "sentence_pair": "they were too deep, too delibe... → Her mind raced with possibilit...",
+          "similarity": 0.215
+        },
+        {
+          "position": 269,
+          "sentence_pair": "She rose slowly, dust clinging... → Whatever did this was hunting—...",
+          "similarity": 0.168
+        },
+        {
+          "position": 278,
+          "sentence_pair": "'Help me search inside,' she i... → The Woodsman nods, pushing the...",
+          "similarity": 0.273
+        },
+        {
+          "position": 283,
+          "sentence_pair": "He tightened his grip on the a... → Let’s see what waits beyond....",
+          "similarity": 0.117
+        },
+        {
+          "position": 284,
+          "sentence_pair": "Let’s see what waits beyond.... → ” Without another word, he ste...",
+          "similarity": 0.12
+        },
+        {
+          "position": 294,
+          "sentence_pair": "It felt as if the shadows them... → With a determined set to her j...",
+          "similarity": 0.26
+        },
+        {
+          "position": 298,
+          "sentence_pair": "No matter what it took, Red wa... → The WoodsmanHe scans the dim c...",
+          "similarity": 0.229
+        },
+        {
+          "position": 311,
+          "sentence_pair": "Determined but wary, Red leane... → The Woodsman edges forward, sc...",
+          "similarity": 0.268
+        },
+        {
+          "position": 319,
+          "sentence_pair": "Faded photographs stared silen... → Determined despite the shiver ...",
+          "similarity": 0.264
+        },
+        {
+          "position": 325,
+          "sentence_pair": "Unbeknownst to them, the real ... → Red crouches behind a thicket,...",
+          "similarity": 0.258
+        },
+        {
+          "position": 341,
+          "sentence_pair": "Determination fueled her steps... → Nothing could happen to Grandm...",
+          "similarity": 0.134
+        },
+        {
+          "position": 343,
+          "sentence_pair": "Not while Red was here to prot... → She beckoned urgently, “Come o...",
+          "similarity": 0.167
+        },
+        {
+          "position": 348,
+          "sentence_pair": "The shadows seemed to lengthen... → We can't waste a single second...",
+          "similarity": 0.262
+        },
+        {
+          "position": 351,
+          "sentence_pair": "Determination burned in her ch... → Red grabs your hand and starts...",
+          "similarity": 0.238
+        },
+        {
+          "position": 360,
+          "sentence_pair": "As the cottage comes into view... → the moment for hesitation has ...",
+          "similarity": 0.27
+        },
+        {
+          "position": 361,
+          "sentence_pair": "the moment for hesitation has ... → Now, Red must summon every oun...",
+          "similarity": 0.268
+        },
+        {
+          "position": 365,
+          "sentence_pair": "He unsheathes his axe, its met... → Are you ready?...",
+          "similarity": 0.124
+        },
+        {
+          "position": 366,
+          "sentence_pair": "Are you ready?... → ' Red nods, stuffing a stone i...",
+          "similarity": 0.21
+        },
+        {
+          "position": 374,
+          "sentence_pair": "“You listen for anything unusu... → ” The path ahead seemed to nar...",
+          "similarity": 0.224
+        },
+        {
+          "position": 381,
+          "sentence_pair": "He paused, scanning the dense,... → if we move together, we’ll be ...",
+          "similarity": 0.166
+        },
+        {
+          "position": 382,
+          "sentence_pair": "if we move together, we’ll be ... → ” With another glance over his...",
+          "similarity": 0.219
+        },
+        {
+          "position": 392,
+          "sentence_pair": "His wary eyes swept the tangle... → A brief nod to Red passed betw...",
+          "similarity": 0.203
+        },
+        {
+          "position": 412,
+          "sentence_pair": "The Wolf edged closer, his cla... → His yellow eyes locked onto Gr...",
+          "similarity": 0.267
+        },
+        {
+          "position": 418,
+          "sentence_pair": "Grandmother clutched the patch... → The Wolf’s shadow stretched ac...",
+          "similarity": 0.262
+        },
+        {
+          "position": 434,
+          "sentence_pair": "His voice curled through the g... → “Little ones make for sweeter ...",
+          "similarity": 0.114
+        },
+        {
+          "position": 435,
+          "sentence_pair": "“Little ones make for sweeter ... → perhaps I shall wait for her a...",
+          "similarity": 0.146
+        },
+        {
+          "position": 436,
+          "sentence_pair": "perhaps I shall wait for her a... → ” The words lingered in the ai...",
+          "similarity": 0.253
+        },
+        {
+          "position": 446,
+          "sentence_pair": "Her hand, pale and urgent, flu... → But the Wolf only smiled, teet...",
+          "similarity": 0.227
+        },
+        {
+          "position": 456,
+          "sentence_pair": "Smoke billowed, thicker and sh... → She moved protectively in fron...",
+          "similarity": 0.241
+        },
+        {
+          "position": 458,
+          "sentence_pair": "The creature drew back, hackle... → Grandmother’s voice was quiet ...",
+          "similarity": 0.259
+        },
+        {
+          "position": 460,
+          "sentence_pair": "“Stay close,” she urged, shiel... → “Rue and wormwood—he cannot st...",
+          "similarity": 0.148
+        },
+        {
+          "position": 461,
+          "sentence_pair": "“Rue and wormwood—he cannot st... → See how he recoils?...",
+          "similarity": 0.122
+        },
+        {
+          "position": 462,
+          "sentence_pair": "See how he recoils?... → Red clung to her cloak, half-h...",
+          "similarity": 0.161
+        },
+        {
+          "position": 464,
+          "sentence_pair": "Grandmother’s eyes tracked the... → “He is not invincible, child....",
+          "similarity": 0.161
+        },
+        {
+          "position": 465,
+          "sentence_pair": "“He is not invincible, child.... → But do not let your guard down...",
+          "similarity": 0.237
+        },
+        {
+          "position": 466,
+          "sentence_pair": "But do not let your guard down... → A wolf, even wounded, is most ...",
+          "similarity": 0.267
+        },
+        {
+          "position": 482,
+          "sentence_pair": "As Grandmother flung another h... → Still, he did not retreat enti...",
+          "similarity": 0.179
+        },
+        {
+          "position": 495,
+          "sentence_pair": "“He won’t slip past us this ti... → Grandmother plants her cane fi...",
+          "similarity": 0.225
+        },
+        {
+          "position": 500,
+          "sentence_pair": "Her voice, low and steady, car... → “Keep your eyes sharp, Red—eve...",
+          "similarity": 0.229
+        },
+        {
+          "position": 507,
+          "sentence_pair": "“Step aside,” he warned, lips ... → Red and Grandmother shift in p...",
+          "similarity": 0.17
+        },
+        {
+          "position": 527,
+          "sentence_pair": "\" As she spoke, Grandmother pr... → The Wolf feints left, then dar...",
+          "similarity": 0.217
+        },
+        {
+          "position": 543,
+          "sentence_pair": "His movements were a calculate... → Red and Grandmother shifted in...",
+          "similarity": 0.178
+        },
+        {
+          "position": 548,
+          "sentence_pair": "Grandmother shifted her stance... → Together, they moved in silent...",
+          "similarity": 0.251
+        },
+        {
+          "position": 549,
+          "sentence_pair": "Together, they moved in silent... → Their eyes tracked every twitc...",
+          "similarity": 0.228
+        },
+        {
+          "position": 560,
+          "sentence_pair": "“For I am tireless when hunger... → Red shifts, mirroring the Wolf...",
+          "similarity": 0.164
+        },
+        {
+          "position": 564,
+          "sentence_pair": "The Wolf began to circle, musc... → Red’s voice, steady and unwave...",
+          "similarity": 0.251
+        },
+        {
+          "position": 567,
+          "sentence_pair": "“Every move you make only tigh... → ” As she spoke, her determinat...",
+          "similarity": 0.273
+        },
+        {
+          "position": 588,
+          "sentence_pair": "“Not this time.... → Whatever happens, I will prote...",
+          "similarity": 0.207
+        },
+        {
+          "position": 589,
+          "sentence_pair": "Whatever happens, I will prote... → ” Behind her, Grandmother’s ha...",
+          "similarity": 0.157
+        },
+        {
+          "position": 611,
+          "sentence_pair": "' Grandmother nods, pulling Re... → They push through brambles, sn...",
+          "similarity": 0.27
+        }
+      ],
+      "high_coherence_segments": [
+        {
+          "start_sentence": 4,
+          "end_sentence": 6,
+          "length": 3,
+          "average_similarity": 0.703
+        },
+        {
+          "start_sentence": 20,
+          "end_sentence": 24,
+          "length": 5,
+          "average_similarity": 0.671
+        },
+        {
+          "start_sentence": 25,
+          "end_sentence": 30,
+          "length": 6,
+          "average_similarity": 0.648
+        },
+        {
+          "start_sentence": 43,
+          "end_sentence": 45,
+          "length": 3,
+          "average_similarity": 0.764
+        },
+        {
+          "start_sentence": 90,
+          "end_sentence": 92,
+          "length": 3,
+          "average_similarity": 0.612
+        },
+        {
+          "start_sentence": 111,
+          "end_sentence": 113,
+          "length": 3,
+          "average_similarity": 0.565
+        },
+        {
+          "start_sentence": 126,
+          "end_sentence": 128,
+          "length": 3,
+          "average_similarity": 0.553
+        },
+        {
+          "start_sentence": 138,
+          "end_sentence": 140,
+          "length": 3,
+          "average_similarity": 0.669
+        },
+        {
+          "start_sentence": 141,
+          "end_sentence": 148,
+          "length": 8,
+          "average_similarity": 0.671
+        },
+        {
+          "start_sentence": 152,
+          "end_sentence": 157,
+          "length": 6,
+          "average_similarity": 0.6
+        },
+        {
+          "start_sentence": 175,
+          "end_sentence": 177,
+          "length": 3,
+          "average_similarity": 0.619
+        },
+        {
+          "start_sentence": 196,
+          "end_sentence": 198,
+          "length": 3,
+          "average_similarity": 0.686
+        },
+        {
+          "start_sentence": 213,
+          "end_sentence": 217,
+          "length": 5,
+          "average_similarity": 0.611
+        },
+        {
+          "start_sentence": 221,
+          "end_sentence": 223,
+          "length": 3,
+          "average_similarity": 0.685
+        },
+        {
+          "start_sentence": 232,
+          "end_sentence": 235,
+          "length": 4,
+          "average_similarity": 0.726
+        },
+        {
+          "start_sentence": 242,
+          "end_sentence": 244,
+          "length": 3,
+          "average_similarity": 0.653
+        },
+        {
+          "start_sentence": 249,
+          "end_sentence": 251,
+          "length": 3,
+          "average_similarity": 0.772
+        },
+        {
+          "start_sentence": 257,
+          "end_sentence": 259,
+          "length": 3,
+          "average_similarity": 0.595
+        },
+        {
+          "start_sentence": 279,
+          "end_sentence": 282,
+          "length": 4,
+          "average_similarity": 0.657
+        },
+        {
+          "start_sentence": 336,
+          "end_sentence": 338,
+          "length": 3,
+          "average_similarity": 0.714
+        },
+        {
+          "start_sentence": 383,
+          "end_sentence": 385,
+          "length": 3,
+          "average_similarity": 0.707
+        },
+        {
+          "start_sentence": 389,
+          "end_sentence": 391,
+          "length": 3,
+          "average_similarity": 0.613
+        },
+        {
+          "start_sentence": 401,
+          "end_sentence": 404,
+          "length": 4,
+          "average_similarity": 0.633
+        },
+        {
+          "start_sentence": 437,
+          "end_sentence": 439,
+          "length": 3,
+          "average_similarity": 0.7
+        },
+        {
+          "start_sentence": 442,
+          "end_sentence": 444,
+          "length": 3,
+          "average_similarity": 0.615
+        },
+        {
+          "start_sentence": 468,
+          "end_sentence": 470,
+          "length": 3,
+          "average_similarity": 0.748
+        },
+        {
+          "start_sentence": 472,
+          "end_sentence": 475,
+          "length": 4,
+          "average_similarity": 0.681
+        },
+        {
+          "start_sentence": 487,
+          "end_sentence": 489,
+          "length": 3,
+          "average_similarity": 0.652
+        },
+        {
+          "start_sentence": 508,
+          "end_sentence": 510,
+          "length": 3,
+          "average_similarity": 0.669
+        },
+        {
+          "start_sentence": 534,
+          "end_sentence": 536,
+          "length": 3,
+          "average_similarity": 0.712
+        },
+        {
+          "start_sentence": 569,
+          "end_sentence": 571,
+          "length": 3,
+          "average_similarity": 0.675
+        },
+        {
+          "start_sentence": 579,
+          "end_sentence": 581,
+          "length": 3,
+          "average_similarity": 0.595
+        },
+        {
+          "start_sentence": 590,
+          "end_sentence": 592,
+          "length": 3,
+          "average_similarity": 0.747
+        },
+        {
+          "start_sentence": 597,
+          "end_sentence": 599,
+          "length": 3,
+          "average_similarity": 0.729
+        }
+      ],
+      "objective_description": {
+        "score": 0.44,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "pairwise_similarity_examples": [
+      {
+        "sentence_pair": "Sentence 1 → Sentence 2",
+        "sentence_1": "Red sits at the rough wooden table, sorting throug...",
+        "sentence_2": "She breaks the seal, unfolds the parchment, and sc...",
+        "similarity": 0.5145
+      },
+      {
+        "sentence_pair": "Sentence 2 → Sentence 3",
+        "sentence_1": "She breaks the seal, unfolds the parchment, and sc...",
+        "sentence_2": "Red's Mother enters, arms laden with kindling, and...",
+        "similarity": 0.5163
+      },
+      {
+        "sentence_pair": "Sentence 3 → Sentence 4",
+        "sentence_1": "Red's Mother enters, arms laden with kindling, and...",
+        "sentence_2": "She warns Red not to venture near the woods, recou...",
+        "similarity": 0.5073
+      },
+      {
+        "sentence_pair": "Sentence 4 → Sentence 5",
+        "sentence_1": "She warns Red not to venture near the woods, recou...",
+        "sentence_2": "Red's MotherShe pulls Red gently aside, her hands ...",
+        "similarity": 0.5626
+      },
+      {
+        "sentence_pair": "Sentence 5 → Sentence 6",
+        "sentence_1": "Red's MotherShe pulls Red gently aside, her hands ...",
+        "sentence_2": "Red’s mother caught her gently by the arm, her fin...",
+        "similarity": 0.844
+      },
+      {
+        "sentence_pair": "Sentence 6 → Sentence 7",
+        "sentence_1": "Red’s mother caught her gently by the arm, her fin...",
+        "sentence_2": "Her eyes darted toward the shadowed window, as if ...",
+        "similarity": 0.2987
+      },
+      {
+        "sentence_pair": "Sentence 7 → Sentence 8",
+        "sentence_1": "Her eyes darted toward the shadowed window, as if ...",
+        "sentence_2": "In a voice made thin by worry, she whispered urgen...",
+        "similarity": 0.3432
+      },
+      {
+        "sentence_pair": "Sentence 8 → Sentence 9",
+        "sentence_1": "In a voice made thin by worry, she whispered urgen...",
+        "sentence_2": "” The memory of the night before flickered in her ...",
+        "similarity": 0.2629
+      },
+      {
+        "sentence_pair": "Sentence 9 → Sentence 10",
+        "sentence_1": "” The memory of the night before flickered in her ...",
+        "sentence_2": "“I heard howls echoing through the trees.",
+        "similarity": 0.3883
+      },
+      {
+        "sentence_pair": "Sentence 10 → Sentence 11",
+        "sentence_1": "“I heard howls echoing through the trees.",
+        "sentence_2": "Closer than ever—I lay awake, listening, and could...",
+        "similarity": 0.4117
+      },
+      {
+        "sentence_pair": "Sentence 11 → Sentence 12",
+        "sentence_1": "Closer than ever—I lay awake, listening, and could...",
+        "sentence_2": "” Her grip tightened, both loving and insistent.",
+        "similarity": 0.288
+      },
+      {
+        "sentence_pair": "Sentence 12 → Sentence 13",
+        "sentence_1": "” Her grip tightened, both loving and insistent.",
+        "sentence_2": "“Whatever’s in those woods, it’s dangerous.",
+        "similarity": 0.1588
+      },
+      {
+        "sentence_pair": "Sentence 13 → Sentence 14",
+        "sentence_1": "“Whatever’s in those woods, it’s dangerous.",
+        "sentence_2": "Promise me you won’t go near.",
+        "similarity": 0.2616
+      },
+      {
+        "sentence_pair": "Sentence 14 → Sentence 15",
+        "sentence_1": "Promise me you won’t go near.",
+        "sentence_2": "Red twists her fingers in her cloak, eyes darting ...",
+        "similarity": 0.1462
+      },
+      {
+        "sentence_pair": "Sentence 15 → Sentence 16",
+        "sentence_1": "Red twists her fingers in her cloak, eyes darting ...",
+        "sentence_2": "Red twisted her fingers in her cloak, her gaze fli...",
+        "similarity": 0.8998
+      },
+      {
+        "sentence_pair": "Sentence 16 → Sentence 17",
+        "sentence_1": "Red twisted her fingers in her cloak, her gaze fli...",
+        "sentence_2": "Her mother's warnings echoed in her mind—howls in ...",
+        "similarity": 0.4713
+      },
+      {
+        "sentence_pair": "Sentence 17 → Sentence 18",
+        "sentence_1": "Her mother's warnings echoed in her mind—howls in ...",
+        "sentence_2": "Yet Red’s voice trembled with a determined compass...",
+        "similarity": 0.5192
+      },
+      {
+        "sentence_pair": "Sentence 18 → Sentence 19",
+        "sentence_1": "Yet Red’s voice trembled with a determined compass...",
+        "sentence_2": "” Even as she spoke, the woods seemed to listen, t...",
+        "similarity": 0.4412
+      },
+      {
+        "sentence_pair": "Sentence 19 → Sentence 20",
+        "sentence_1": "” Even as she spoke, the woods seemed to listen, t...",
+        "sentence_2": "Red's MotherShe kneels beside Red, gripping her ha...",
+        "similarity": 0.3626
+      },
+      {
+        "sentence_pair": "Sentence 20 → Sentence 21",
+        "sentence_1": "Red's MotherShe kneels beside Red, gripping her ha...",
+        "sentence_2": "Red’s mother knelt beside her, fingers tightening ...",
+        "similarity": 0.8329
+      },
+      {
+        "note": "Only showing first 20 pairs, total of 615 adjacent sentence pairs"
+      }
+    ]
+  },
+  "story_structure": {
+    "evaluation_mode": "default mode",
+    "event_list": [
+      {
+        "event": "Red sorts through letters and finds one sealed with her grandmother's symbol.",
+        "source": "Red sits at the rough wooden table, sorting through a bundle of letters when her fingers pause on an envelope sealed with wax and her grandmother's symbol.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red breaks the seal and reads her grandmother's cryptic message.",
+        "source": "She breaks the seal, unfolds the parchment, and scans the cryptic message inside.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red's mother enters, sets down kindling, and glances warily at Red's letter.",
+        "source": "Red's Mother enters, arms laden with kindling, and sets it down with a thud, glancing warily at the letter.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red's mother warns Red not to go near the woods, recounting last night's echoing howls.",
+        "source": "She warns Red not to venture near the woods, recounting the echoing howls she heard the night before, and pleads with Red to promise she will stay close to the cottage.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red questions her mother's warning, expressing concern for anyone needing help in the woods.",
+        "source": "Yet Red’s voice trembled with a determined compassion as she pressed, “But Mama, what if someone needs help out there—what if they're calling for us?",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red's mother kneels and pleads with Red to stay within sight of the cottage.",
+        "source": "“Please, Red, for my peace of mind,” she murmured, voice trembling with memory of the echoing howls she’d heard from the woods last night, “promise me you’ll stay within sight of the cottage today.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red promises to stay close, but curiosity about the woods remains.",
+        "source": "“I’ll stay close,” she promised, voice gentle but steadfast, her eyes lingering on the woods.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red's mother pulls Red into a protective embrace, reiterating her warning about the woods.",
+        "source": "Red's MotherRed's mother pulls Red gently into a protective embrace, her hands trembling ever so slightly as she glances anxiously toward the dark line of trees beyond the cottage window.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red shows the symbols from her grandmother’s message to her mother and villagers.",
+        "source": "Red holds out the scrap of cloth, displaying the copied symbols to the gathered villagers, her voice steady despite her mother's anxious calls from the doorway.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red asks villagers about the strange symbols, seeking their meaning.",
+        "source": "“Has anyone seen markings like these before?",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Old Man Harris warns the symbols belong to the old forest cult and advises Red to leave them be.",
+        "source": "Harris’s voice, tinged with fear and the weight of superstition, barely rose above a whisper as he warned, “Those marks… they belonged to the old forest cult, child—best you leave such things be.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red's mother urges Red not to stir trouble with the markings, fearing bad luck.",
+        "source": "“Don’t go stirring up trouble—those markings are nothing but bad luck.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red clutches the cloth tighter, searching villagers for answers despite her mother's grip.",
+        "source": "Red clutched the scrap of cloth tighter, her fingers knotting around the edges as her gaze swept over the gathered villagers.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Aunt Marla warns that cult symbols mark chosen ones and may draw unwanted attention.",
+        "source": "Some in the village believed the cult marked their chosen with symbols like those, she said, and by displaying them—even just copying—Red might draw unwanted attention.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red squares her shoulders, scanning the crowd for anyone willing to speak further.",
+        "source": "Red squared her shoulders, bracing herself against the heavy silence that had settled over the village square.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red leans in with determination; villagers respond with tension and wary fascination.",
+        "source": "Red leaned in, her eyes bright with determination, and the circle of villagers seemed to contract around her, tension rippling through the crowd.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Tom recounts tales of the symbols, saying they warn of danger for seekers of the forest's heart.",
+        "source": "He recounted what had been told: the symbols warned that danger followed anyone who sought the heart of the forest, and that some secrets out there were guarded by more than mere shadows.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red holds the cloth higher, urging villagers to share information about the symbols or forest.",
+        "source": "“If anyone else knows anything—anything at all—about these markings or what lies in the heart of the forest, now’s the time to speak up.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Widow Lark reveals her late husband bore a similar mark after a night lost in the woods.",
+        "source": "\"My late husband once bore such a mark,\" she murmured, voice thin with remembered dread, \"after a night lost in the woods—and he was never the same again.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red asks Widow Lark what changed after her husband returned from the woods.",
+        "source": "“Can you tell me what changed in him after he returned, or what he saw among those trees?",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Widow Lark recounts the old wanderer’s warnings about the woods and the symbols marking a boundary.",
+        "source": "He claimed the trees whispered and that the shadows watched, warning that the strange symbols marked a boundary—a warning, he’d said, to turn back or risk losing oneself to the forest’s will.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red steps toward the woods clutching the cloth, determined to uncover the truth.",
+        "source": "Taking a resolute step toward the shadowed line of the trees, she lifted her chin, determination burning in her eyes.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Villagers share legends and warnings about the symbols and forest cult.",
+        "source": "Several villagers share legends and personal stories about the symbols, revealing their connection to an old forest cult and warning that those marked are sometimes changed or cursed.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red insists on learning the truth despite her mother's protests and villagers' warnings.",
+        "source": "Despite her mother's heightened protests and the villagers' warnings, Red insists she must learn the truth, seeking out anyone who might help her understand the dangers ahead.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red resolves to face the forest secrets after gathering unsettling information.",
+        "source": "The scene ends with Red more determined than ever, having gathered new, unsettling information, and resolved to uncover the meaning behind her grandmother's warning—even if it means facing the secrets of the forest herself.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "At dawn, Red stands at the village edge, then enters the forbidden woods, seeking answers.",
+        "source": "With one last glance back at the familiar world she is leaving behind, Red steps forward, crossing the threshold into the forbidden woods, where every step draws her closer to the truth—and the dangers that await.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red tightens her cloak and approaches the treeline, scanning for movement.",
+        "source": "Red tightens her red cloak around her shoulders and steps toward the shadowed treeline, scanning the fog for any sign of movement.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Her mother blocks the path, gripping Red's arm and glancing nervously at the forest.",
+        "source": "Her mother stands blocking the narrow path, gripping Red's arm and glancing nervously at the forest.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red pulls free, checks her satchel, and pushes past her mother, determined to reach Grandmother.",
+        "source": "Red pulls her arm free, checks the contents of her satchel—bread, lantern, knife—and pushes past her mother, determined to reach her grandmother.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red's mother calls after her, warning not to stray from the path and to return before nightfall.",
+        "source": "Red's Mother calls after her in a low, urgent voice, warning her not to stray from the path and to return before nightfall, but Red does not look back.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red walks steadily into the woods, not looking back at her mother.",
+        "source": "Red walks steadily forward, her eyes fixed on the winding path ahead, not looking back at her mother calling from behind.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red calls back, promising to be careful, then continues deeper into the woods.",
+        "source": "Without turning, she called back over her shoulder, her voice quick but steady, “I promise I’ll be careful, Mother!",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red pauses briefly to reassure her mother before entering the forbidden woods.",
+        "source": "This time, however, Red pauses for a brief moment in response to her mother's pleading and reassures her: 'I promise I'll be careful, Mother.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red disappears into the woods; the forest quickly swallows traces of the familiar world.",
+        "source": "The forest quickly swallows any trace of the familiar world Red has left behind.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red unlocks the cabin door and searches for her grandmother.",
+        "source": "Red unlocks the cabin door and steps inside, scanning the dark corners for any sign of her grandmother.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf emerges from behind a curtain and circles Red, sniffing the air.",
+        "source": "He circles Red, sniffing the air and brushing his tail against the wooden floor.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red demands to know her grandmother's whereabouts and refuses to back down.",
+        "source": "“I won’t leave until you tell me where my grandmother is,” she demanded, the words edged with compassion and suspicion both.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf proposes a bargain: bring the Woodsman's silver axe to free Grandmother.",
+        "source": "\"Bring me the axe by moonrise,\" he murmured, each word slicing through the hush of the woods, \"or your grandmother will pay the price.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red questions the Wolf's promise and tries to mask her fear with defiance.",
+        "source": "“If I do as you ask,” she managed, determined not to let her fear show, “how can I trust you’ll keep your word and let her go?",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf threatens Grandmother if Red fails to bring the axe by moonrise.",
+        "source": "\" The promise of violence hung in the air between them, tangible as the damp earth under Red’s trembling feet.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red asks what happens if she refuses or fails, glancing toward the woods.",
+        "source": "“And if I refuse,” she asked, steadying herself, “or if I fail—what then?",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf waits for Red's decision; Red agrees to the bargain and leaves the cabin.",
+        "source": "Red, suspicious but desperate, agrees to the terms and backs out of the cabin, lantern swinging and boots sinking into the wet earth as she hurries towards the Woodsman's hut.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red hurries toward the Woodsman's hut, unsettled by the Wolf’s words.",
+        "source": "Unsettled by the wolf’s cryptic words and the chill that lingers in their wake, Red presses forward, the darkness of the forest crowding close around her.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red grips her basket, approaches the Woodsman's cabin, and peers through a window.",
+        "source": "She scans the perimeter, her boots sinking slightly into the mud, and peers through a cracked window, searching for signs of her grandmother.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "The Woodsman emerges, axe in hand, warning Red not to be there.",
+        "source": "'You shouldn't be here, girl,' he warns, voice low and urgent.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red stands her ground, refusing to back away.",
+        "source": "Red clenched her fists, her knuckles whitening as she stood firm, refusing to let fear root her to the spot.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red tells the Woodsman her grandmother is missing and insists on searching for her.",
+        "source": "I have to find her.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "The Woodsman examines gnawed marks on the cabin door and listens for movement.",
+        "source": "The Woodsman ran a rough fingertip along the deep grooves gouged into the wood, his eyes narrowing as he listened for the faintest movement beyond the tree line.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "The Woodsman identifies the marks as signs of something big and dangerous.",
+        "source": "Experience told him what the marks meant—something big had been here, and it was hungry.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "The Woodsman traces muddy paw prints near the threshold, expressing concern.",
+        "source": "The Woodsman stoops low, tracing a finger along one of the paw prints, his brow furrowing with concern as he scans the shadows beyond the threshold.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red kneels to examine claw marks and feels uneasy about what made them.",
+        "source": "Red knelt beside the twisted undergrowth, her fingers tracing the strange marks in the damp soil.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red glances warily at the treeline, hand moving to her knife.",
+        "source": "A cold breeze rustled the undergrowth, and she glanced warily over her shoulder, every sense alert.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red insists on searching inside; the Woodsman nods and pushes the door open.",
+        "source": "The Woodsman nods, pushes the door open with his shoulder, and steps quietly inside, eyes scanning the dim light ahead.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and the Woodsman enter the shadowy cabin, determined to find clues about Grandmother.",
+        "source": "Together, they enter the shadowy cabin, the floorboards creaking beneath their weight, determined to uncover any trace of Grandmother's fate.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red tightens her cloak and scans the cabin for clues, seeking reassurance from the Woodsman.",
+        "source": "Red clutches her cloak tighter, eyes darting to the corners where the flickering lantern light can't reach.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "The Woodsman grips his axe and scans the dim corners, stepping protectively beside Red.",
+        "source": "The Woodsman scanned the dim corners, his grip tightening around the axe handle as the wind rattled the windowpanes.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red gently opens a dusty door, listening for clues in the darkness.",
+        "source": "Red pressed her palm against the dusty door, feeling the rough wood beneath her fingertips as she eased it open.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "The Woodsman edges forward, scanning shadows and warning Red to move slowly.",
+        "source": "The Woodsman edged forward, his boots sending uneasy groans through the warped floorboards as he scanned the dim corners of the cabin.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red lifts her lantern, searching for signs of Grandmother among faded photographs and furniture.",
+        "source": "Red lifted the trembling lantern higher, its frail glow barely pressing back the shadows that clung to the cabin’s every corner.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red crouches behind a thicket, sensing the Wolf is near and urgency grows.",
+        "source": "Red crouches behind a thicket, scanning the forest for movement, her hand tightening around a basket filled with supplies for Grandmother.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red insists on taking a shortcut through the woods; the Woodsman agrees and follows.",
+        "source": "Red insists they take a shortcut through the woods to save time.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red tightens grip on basket, scanning trees for movement, and senses the Wolf nearby.",
+        "source": "Red tightened her grip on the basket, the wicker handle digging into her palm as she scanned the shadowed trees.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and the Woodsman move quickly, intent on reaching Grandmother's cabin before the Wolf.",
+        "source": "Together, they move swiftly and quietly, Red pushing them onward, both intent on reaching Grandmother's cabin before the Wolf does.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red grabs her basket and runs down the forest path, urging the Woodsman to hurry.",
+        "source": "Red snatched up her basket, heart pounding as she sprinted down the winding forest path.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red breaks into a run, glancing anxiously over her shoulder as shadows lengthen.",
+        "source": "Red broke into a run along the winding forest path, her breath quickening as she glanced anxiously over her shoulder.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red grabs the Woodsman's hand and runs, determined to beat the Wolf to Grandmother.",
+        "source": "Red’s grip tightened around my hand as she pulled me into a run, her breath coming in short, determined bursts.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red crouches behind a log, gripping a sling and scanning the underbrush for movement.",
+        "source": "Red crouches behind a fallen log, gripping a makeshift sling in her hand while scanning the underbrush for movement.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "The Woodsman enters the clearing, signals Red to stay low, and unsheathes his axe.",
+        "source": "The Woodsman strides quietly into the clearing, boots crunching on twigs, and signals Red to stay low.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red stuffs a stone into her sling, vowing to reach Grandmother before the Wolf.",
+        "source": "' Red nods, stuffing a stone into her sling and replying, 'We have to reach Grandmother before it does.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red marks trees with chalk while the Woodsman listens for danger as they advance.",
+        "source": "Red grips a piece of chalk tightly, her hands trembling just a little as she draws another mark on the rough bark.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red draws more chalk marks, coordinating with the Woodsman to avoid getting lost or ambushed.",
+        "source": "Red’s fingers tightened around the piece of chalk, leaving a faint dusting on her knuckles as she pressed another careful mark into the coarse bark.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "The Woodsman crouches low, axe ready, scanning for movement and keeping pace with Red.",
+        "source": "Low to the ground, the Woodsman moved alongside Red, his axe gripped tightly and eyes narrowed against the encroaching gloom.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red draws double chalk lines beside a tree, marking wolf sign for the Woodsman.",
+        "source": "Red crouched low beside the rough bark of a pine, her fingers moving quickly to draw two crisp chalk lines on its trunk.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "The Woodsman nods to Red, silently rehearsing their plan as they press forward together.",
+        "source": "A brief nod to Red passed between them—silent understanding, a plan rehearsed more with looks than words.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red enters the cabin with an iron poker; Grandmother urgently warns her to stay back.",
+        "source": "Red enters the cabin, clutching the iron poker, as Grandmother urgently warns her to stay back, seeking to protect Red and buying time by pleading with The Wolf for mercy.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf reveals his predatory intent and is momentarily distracted by Grandmother's offer to sacrifice herself for Red.",
+        "source": "The Wolf, unmoved by appeals and taunting their fear, reveals his predatory intent but is momentarily distracted by Grandmother's offer to sacrifice herself for Red.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother clutches her quilt, pleading for mercy and trying to protect Red.",
+        "source": "The grandmother clutched the patched quilt tighter around her frail shoulders, knuckles white against the faded fabric.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf edges closer, claws scraping, eyes locked on Grandmother.",
+        "source": "The Wolf edged closer, his claws scraping with deliberate menace against the hearthstones, each movement calculated and unhurried.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother edges away from the hearth, pleading for pity from The Wolf.",
+        "source": "Grandmother clutched the patched quilt tighter to her chest, her knuckles whitening as she edged further from the hearth.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf prowls closer, dismissing Grandmother's pleas and recalling his mother's lessons.",
+        "source": "“My mother taught me to hunt,” it murmured, voice silken and low, “not to heed the whimpers of prey.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother pleads for Red's safety as the Wolf nears.",
+        "source": "Voice trembling, she pleaded into the gloom, \"Then take pity, if not on me, on the little one who will soon come through that door—let her find me alive, I beg you.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf threatens to wait for Red, preferring to feast on shared fear.",
+        "source": "perhaps I shall wait for her after all.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother offers herself in exchange for Red's safety, determined to protect her granddaughter.",
+        "source": "” The words tumbled out, fragile yet fierce, her frail body trembling beneath the patchwork as she nodded toward the shadowed heart of the cabin, determined to protect her granddaughter from the darkness prowling so near.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf refuses any bargain, emphasizing the thrill of shared fear between kin.",
+        "source": "“Such bargains are wasted on wolves, old woman—fear tastes richest when shared between kin.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother throws herbs into the fire, creating acrid smoke that forces The Wolf to retreat.",
+        "source": "Grandmother tossed another pinch of herbs into the fire, the powder hissing as it met the flames.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Grandmother block The Wolf's escape, reaffirming their unity and resolve.",
+        "source": "Red and her grandmother moved as one, each step closing the space between themselves and the Wolf, hemming the creature in with silent determination.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother throws more herbs into the fire, thickening the smoke and positioning herself protectively.",
+        "source": "Grandmother tossed another pinch of dried herbs onto the flames, watching as the smoke thickened and curled through the cramped air of the cabin.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red clutches her cloak, asking Grandmother what to do if the smoke fades.",
+        "source": "“But Grandmother,” she murmured, suspicion and fear threading through her words, “what if the smoke fades—what do we do then?",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother tosses more herbs, advising Red to keep the fire alive and wits sharp.",
+        "source": "The Wolf snarled, hackles raised, but Grandmother stood firm, her voice low and steady as she murmured, “We keep the fire alive and our wits sharper still.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf circles beyond the smoke, threatening that hope will fade when the fire dies.",
+        "source": "\"You may drive me back with your bitter herbs, old woman,\" he intoned, every word a low, velvety threat, \"but your fire will not burn forever—and when it dies, so does your hope.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red vows to protect Grandmother, while Grandmother hints at deeper secrets and old magic.",
+        "source": "Red vows not to let harm come to Grandmother again, while Grandmother hints at deeper secrets and old magic.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Grandmother move in sync, closing off the Wolf's escape and tightening their defenses.",
+        "source": "Red and her grandmother moved as one, each step closing the space between themselves and the Wolf, hemming the creature in with silent determination.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf tests their defense by feinting and circling, threatening violence if they do not let him pass.",
+        "source": "The Wolf bared his fangs, a glimmer of cruel intelligence in his eyes, and began to circle low and quick, his lean form a shadow weaving around Red and her grandmother.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Grandmother block the Wolf’s attempted feint, forcing him to retreat and reassess.",
+        "source": "Red and her grandmother shifted together, their movements almost instinctual, blocking the Wolf’s attempted feint toward the doorway.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf feints toward Red, then pivots, testing their coordination.",
+        "source": "The Wolf feinted toward Red, muscles rippling beneath his bristling fur, only to pivot sharply away.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother mirrors Red’s movement, cutting off the Wolf’s latest attempt to escape.",
+        "source": "Grandmother shifted her stance, mirroring Red with practiced precision.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf’s muscles coil, but Red and Grandmother block every attack with unwavering resolve.",
+        "source": "Muscles coiled beneath his bristling fur, the Wolf prowled in a tight circle, his body shifting with predatory precision.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red matches the Wolf's lunge, Grandmother closes the last gap, leaving the Wolf cornered.",
+        "source": "Red's boots pressed into the dusty floor as she shifted, her movements mirroring the Wolf’s tense, predatory lunge.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf darts toward a gap, testing coordination, but Red and Grandmother block his escape.",
+        "source": "Muscles rippling beneath his mottled fur, the Wolf darted toward the slender gap between Red and her trembling grandmother, testing the limits of their coordination.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Grandmother cut off the Wolf’s latest feint, forcing him into a shrinking circle.",
+        "source": "Red and Grandmother pivoted as one, their movements so perfectly aligned that the Wolf’s latest feint faltered, trapping him within an ever-tightening ring of resolve.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf, cornered and desperate, threatens them, but Red and Grandmother stand firm.",
+        "source": "The Wolf, cornered and growing desperate, threatens them, but the pair stand firm, matching his hunger with their determination and knowledge of the woods.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red squares her shoulders, shielding Grandmother with an iron poker, vowing to protect her family.",
+        "source": "Red squared her shoulders, feeling the chill of the iron poker biting into her clenched knuckles.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother crushes dried leaves with trembling fingers, casting a pungent cloud toward the Wolf.",
+        "source": "Grandmother’s fingers, though trembling with age and memory, crushed the brittle leaves with a practiced certainty, releasing a pungent, protective haze that drifted between herself and the Wolf.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf lowers his stance, muscles tensed, eyes flicking between Red and Grandmother as he growls.",
+        "source": "The Wolf lowered his stance, muscles taut beneath his coarse fur, his eyes darting with predatory calculation between Red's trembling grip on the poker and the swirling herbs Grandmother measured out with practiced fingers.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "All three face off for a final confrontation, with Red and Grandmother united in defense.",
+        "source": "The scene closes as all three face off, each poised for a final confrontation, with Red and Grandmother united in defense and The Wolf more menacing, but also increasingly desperate.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red crouches behind a log, scanning the fog for movement, clutching a sturdy branch.",
+        "source": "Red crouches behind a fallen log, scanning the fog for movement while clutching a sturdy branch.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother limps beside Red, clutching a torn shawl and pointing toward an animal trail.",
+        "source": "Grandmother limps beside her, clutching a torn shawl and pointing toward a narrow animal trail leading away from their cabin.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "Red whispers for Grandmother to stay close, suggesting a safer path by the stream.",
+        "source": "Red whispers, 'Stay close, the path's safer by the stream.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother nods and pulls Red's sleeve to urge her onward.",
+        "source": "' Grandmother nods, pulling Red's sleeve to urge her onward.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Grandmother push through brambles, intent on escaping the Wolf's territory.",
+        "source": "They push through brambles, snapping twigs beneath their boots, both intent on escaping the Wolf's territory.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "Their goal is to reach the village before the Wolf catches their scent.",
+        "source": "Their goal is to reach the village before the Wolf catches their scent.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother signals for silence as they hear heavy paws nearby; Red freezes and listens.",
+        "source": "As they round a mossy boulder, Grandmother signals for silence and Red freezes, listening to the muted crunch of heavy paws nearby.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "They slip deeper into the brush, leaving behind broken branches and crushed leaves.",
+        "source": "They slip deeper into the thick brush, leaving only broken branches and crushed leaves behind.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      },
+      {
+        "event": "At dawn, Red and her grandmother emerge from the trees, leaving the darkness of the woods and the Wolf behind.",
+        "source": "As dawn broke over the distant rooftops, Red and her grandmother emerged from the trees, leaving the darkness of the woods—and the Wolf—far behind.",
+        "chapter": "Chapter 8",
+        "confidence": "high"
+      }
+    ],
+    "Papalampidi_detailed_results": {
+      "turning_points": {
+        "TP1": "Red breaks the seal and reads her grandmother's cryptic message.",
+        "TP2": "The Wolf emerges from behind a curtain and circles Red, sniffing the air.",
+        "TP3": "Red agrees to the bargain and leaves the cabin.",
+        "TP4": "The Wolf reveals his predatory intent and is momentarily distracted by Grandmother's offer to sacrifice herself for Red.",
+        "TP5": "All three face off for a final confrontation, with Red and Grandmother united in defense."
+      },
+      "stage_division": {
+        "Setup": [
+          "Red sorts through letters and finds one sealed with her grandmother's symbol.",
+          "Red breaks the seal and reads her grandmother's cryptic message.",
+          "Red's mother enters, sets down kindling, and glances warily at Red's letter.",
+          "Red's mother warns Red not to go near the woods, recounting last night's echoing howls.",
+          "Red questions her mother's warning, expressing concern for anyone needing help in the woods.",
+          "Red's mother kneels and pleads with Red to stay within sight of the cottage.",
+          "Red promises to stay close, but curiosity about the woods remains.",
+          "Red's mother pulls Red into a protective embrace, reiterating her warning about the woods."
+        ],
+        "New Situation": [
+          "Red shows the symbols from her grandmother’s message to her mother and villagers.",
+          "Red asks villagers about the strange symbols, seeking their meaning.",
+          "Old Man Harris warns the symbols belong to the old forest cult and advises Red to leave them be.",
+          "Red's mother urges Red not to stir trouble with the markings, fearing bad luck.",
+          "Red clutches the cloth tighter, searching villagers for answers despite her mother's grip.",
+          "Aunt Marla warns that cult symbols mark chosen ones and may draw unwanted attention.",
+          "Red squares her shoulders, scanning the crowd for anyone willing to speak further.",
+          "Red leans in with determination; villagers respond with tension and wary fascination.",
+          "Tom recounts tales of the symbols, saying they warn of danger for seekers of the forest's heart.",
+          "Red holds the cloth higher, urging villagers to share information about the symbols or forest.",
+          "Widow Lark reveals her late husband bore a similar mark after a night lost in the woods.",
+          "Red asks Widow Lark what changed after her husband returned from the woods.",
+          "Widow Lark recounts the old wanderer’s warnings about the woods and the symbols marking a boundary.",
+          "Red steps toward the woods clutching the cloth, determined to uncover the truth.",
+          "Villagers share legends and warnings about the symbols and forest cult.",
+          "Red insists on learning the truth despite her mother's protests and villagers' warnings.",
+          "Red resolves to face the forest secrets after gathering unsettling information."
+        ],
+        "Progress": [
+          "At dawn, Red stands at the village edge, then enters the forbidden woods, seeking answers.",
+          "Red tightens her cloak and approaches the treeline, scanning for movement.",
+          "Her mother blocks the path, gripping Red's arm and glancing nervously at the forest.",
+          "Red pulls free, checks her satchel, and pushes past her mother, determined to reach Grandmother.",
+          "Red's mother calls after her, warning not to stray from the path and to return before nightfall.",
+          "Red walks steadily into the woods, not looking back at her mother.",
+          "Red calls back, promising to be careful, then continues deeper into the woods.",
+          "Red pauses briefly to reassure her mother before entering the forbidden woods.",
+          "Red disappears into the woods; the forest quickly swallows traces of the familiar world.",
+          "Red unlocks the cabin door and searches for her grandmother."
+        ],
+        "Complications": [
+          "The Wolf emerges from behind a curtain and circles Red, sniffing the air.",
+          "Red demands to know her grandmother's whereabouts and refuses to back down.",
+          "The Wolf proposes a bargain: bring the Woodsman's silver axe to free Grandmother.",
+          "Red questions the Wolf's promise and tries to mask her fear with defiance.",
+          "The Wolf threatens Grandmother if Red fails to bring the axe by moonrise.",
+          "Red asks what happens if she refuses or fails, glancing toward the woods.",
+          "The Wolf waits for Red's decision; Red agrees to the bargain and leaves the cabin.",
+          "Red hurries toward the Woodsman's hut, unsettled by the Wolf’s words.",
+          "Red grips her basket, approaches the Woodsman's cabin, and peers through a window.",
+          "The Woodsman emerges, axe in hand, warning Red not to be there.",
+          "Red stands her ground, refusing to back away.",
+          "Red tells the Woodsman her grandmother is missing and insists on searching for her.",
+          "The Woodsman examines gnawed marks on the cabin door and listens for movement.",
+          "The Woodsman identifies the marks as signs of something big and dangerous.",
+          "The Woodsman traces muddy paw prints near the threshold, expressing concern.",
+          "Red kneels to examine claw marks and feels uneasy about what made them.",
+          "Red glances warily at the treeline, hand moving to her knife.",
+          "Red insists on searching inside; the Woodsman nods and pushes the door open.",
+          "Red and the Woodsman enter the shadowy cabin, determined to find clues about Grandmother.",
+          "Red tightens her cloak and scans the cabin for clues, seeking reassurance from the Woodsman.",
+          "The Woodsman grips his axe and scans the dim corners, stepping protectively beside Red.",
+          "Red gently opens a dusty door, listening for clues in the darkness.",
+          "The Woodsman edges forward, scanning shadows and warning Red to move slowly.",
+          "Red lifts her lantern, searching for signs of Grandmother among faded photographs and furniture.",
+          "Red crouches behind a thicket, sensing the Wolf is near and urgency grows.",
+          "Red insists on taking a shortcut through the woods; the Woodsman agrees and follows.",
+          "Red tightens grip on basket, scanning trees for movement, and senses the Wolf nearby.",
+          "Red and the Woodsman move quickly, intent on reaching Grandmother's cabin before the Wolf.",
+          "Red grabs her basket and runs down the forest path, urging the Woodsman to hurry.",
+          "Red breaks into a run, glancing anxiously over her shoulder as shadows lengthen.",
+          "Red grabs the Woodsman's hand and runs, determined to beat the Wolf to Grandmother.",
+          "Red crouches behind a log, gripping a sling and scanning the underbrush for movement.",
+          "The Woodsman enters the clearing, signals Red to stay low, and unsheathes his axe.",
+          "Red stuffs a stone into her sling, vowing to reach Grandmother before the Wolf.",
+          "Red marks trees with chalk while the Woodsman listens for danger as they advance.",
+          "Red draws more chalk marks, coordinating with the Woodsman to avoid getting lost or ambushed.",
+          "The Woodsman crouches low, axe ready, scanning for movement and keeping pace with Red.",
+          "Red draws double chalk lines beside a tree, marking wolf sign for the Woodsman.",
+          "The Woodsman nods to Red, silently rehearsing their plan as they press forward together."
+        ],
+        "Final Push": [
+          "Red enters the cabin with an iron poker; Grandmother urgently warns her to stay back.",
+          "The Wolf reveals his predatory intent and is momentarily distracted by Grandmother's offer to sacrifice herself for Red.",
+          "Grandmother clutches her quilt, pleading for mercy and trying to protect Red.",
+          "The Wolf edges closer, claws scraping, eyes locked on Grandmother.",
+          "Grandmother edges away from the hearth, pleading for pity from The Wolf.",
+          "The Wolf prowls closer, dismissing Grandmother's pleas and recalling his mother's lessons.",
+          "Grandmother pleads for Red's safety as the Wolf nears.",
+          "The Wolf threatens to wait for Red, preferring to feast on shared fear.",
+          "Grandmother offers herself in exchange for Red's safety, determined to protect her granddaughter.",
+          "The Wolf refuses any bargain, emphasizing the thrill of shared fear between kin.",
+          "Grandmother throws herbs into the fire, creating acrid smoke that forces The Wolf to retreat.",
+          "Red and Grandmother block The Wolf's escape, reaffirming their unity and resolve.",
+          "Grandmother throws more herbs into the fire, thickening the smoke and positioning herself protectively.",
+          "Red clutches her cloak, asking Grandmother what to do if the smoke fades.",
+          "Grandmother tosses more herbs, advising Red to keep the fire alive and wits sharp.",
+          "The Wolf circles beyond the smoke, threatening that hope will fade when the fire dies.",
+          "Red vows to protect Grandmother, while Grandmother hints at deeper secrets and old magic.",
+          "Red and Grandmother move in sync, closing off the Wolf's escape and tightening their defenses.",
+          "The Wolf tests their defense by feinting and circling, threatening violence if they do not let him pass.",
+          "Red and Grandmother block the Wolf’s attempted feint, forcing him to retreat and reassess.",
+          "The Wolf feints toward Red, then pivots, testing their coordination.",
+          "Grandmother mirrors Red’s movement, cutting off the Wolf’s latest attempt to escape.",
+          "The Wolf’s muscles coil, but Red and Grandmother block every attack with unwavering resolve.",
+          "Red matches the Wolf's lunge, Grandmother closes the last gap, leaving the Wolf cornered.",
+          "The Wolf darts toward a gap, testing coordination, but Red and Grandmother block his escape.",
+          "Red and Grandmother cut off the Wolf’s latest feint, forcing him into a shrinking circle.",
+          "The Wolf, cornered and desperate, threatens them, but Red and Grandmother stand firm.",
+          "Red squares her shoulders, shielding Grandmother with an iron poker, vowing to protect her family.",
+          "Grandmother crushes dried leaves with trembling fingers, casting a pungent cloud toward the Wolf.",
+          "The Wolf lowers his stance, muscles tensed, eyes flicking between Red and Grandmother as he growls.",
+          "All three face off for a final confrontation, with Red and Grandmother united in defense."
+        ],
+        "Aftermath": [
+          "Red crouches behind a log, scanning the fog for movement, clutching a sturdy branch.",
+          "Grandmother limps beside Red, clutching a torn shawl and pointing toward an animal trail.",
+          "Red whispers for Grandmother to stay close, suggesting a safer path by the stream.",
+          "Grandmother nods and pulls Red's sleeve to urge her onward.",
+          "Red and Grandmother push through brambles, intent on escaping the Wolf's territory.",
+          "Their goal is to reach the village before the Wolf catches their scent.",
+          "Grandmother signals for silence as they hear heavy paws nearby; Red freezes and listens.",
+          "They slip deeper into the brush, leaving behind broken branches and crushed leaves.",
+          "At dawn, Red and her grandmother emerge from the trees, leaving the darkness of the woods and the Wolf behind."
+        ]
+      }
+    },
+    "Li_detailed_results": {
+      "Red sorts through letters and finds one sealed with her grandmother's symbol.": "Orientation",
+      "Red breaks the seal and reads her grandmother's cryptic message.": "Complicating Action",
+      "Red's mother enters, sets down kindling, and glances warily at Red's letter.": "Orientation",
+      "Red's mother warns Red not to go near the woods, recounting last night's echoing howls.": "Complicating Action",
+      "Red questions her mother's warning, expressing concern for anyone needing help in the woods.": "Complicating Action",
+      "Red's mother kneels and pleads with Red to stay within sight of the cottage.": "Complicating Action",
+      "Red promises to stay close, but curiosity about the woods remains.": "Minor Resolution",
+      "Red's mother pulls Red into a protective embrace, reiterating her warning about the woods.": "Complicating Action",
+      "Red shows the symbols from her grandmother’s message to her mother and villagers.": "Complicating Action",
+      "Red asks villagers about the strange symbols, seeking their meaning.": "Complicating Action",
+      "Old Man Harris warns the symbols belong to the old forest cult and advises Red to leave them be.": "Complicating Action",
+      "Red's mother urges Red not to stir trouble with the markings, fearing bad luck.": "Complicating Action",
+      "Red clutches the cloth tighter, searching villagers for answers despite her mother's grip.": "Complicating Action",
+      "Aunt Marla warns that cult symbols mark chosen ones and may draw unwanted attention.": "Complicating Action",
+      "Red squares her shoulders, scanning the crowd for anyone willing to speak further.": "Complicating Action",
+      "Red leans in with determination; villagers respond with tension and wary fascination.": "Complicating Action",
+      "Tom recounts tales of the symbols, saying they warn of danger for seekers of the forest's heart.": "Complicating Action",
+      "Red holds the cloth higher, urging villagers to share information about the symbols or forest.": "Complicating Action",
+      "Widow Lark reveals her late husband bore a similar mark after a night lost in the woods.": "Complicating Action",
+      "Red asks Widow Lark what changed after her husband returned from the woods.": "Complicating Action",
+      "Widow Lark recounts the old wanderer’s warnings about the woods and the symbols marking a boundary.": "Complicating Action",
+      "Red steps toward the woods clutching the cloth, determined to uncover the truth.": "Complicating Action",
+      "Villagers share legends and warnings about the symbols and forest cult.": "Complicating Action",
+      "Red insists on learning the truth despite her mother's protests and villagers' warnings.": "Complicating Action",
+      "Red resolves to face the forest secrets after gathering unsettling information.": "Minor Resolution",
+      "At dawn, Red stands at the village edge, then enters the forbidden woods, seeking answers.": "MRE",
+      "Red tightens her cloak and approaches the treeline, scanning for movement.": "Complicating Action",
+      "Her mother blocks the path, gripping Red's arm and glancing nervously at the forest.": "Complicating Action",
+      "Red pulls free, checks her satchel, and pushes past her mother, determined to reach Grandmother.": "Complicating Action",
+      "Red's mother calls after her, warning not to stray from the path and to return before nightfall.": "Complicating Action",
+      "Red walks steadily into the woods, not looking back at her mother.": "Complicating Action",
+      "Red calls back, promising to be careful, then continues deeper into the woods.": "Minor Resolution",
+      "Red pauses briefly to reassure her mother before entering the forbidden woods.": "Minor Resolution",
+      "Red disappears into the woods; the forest quickly swallows traces of the familiar world.": "Abstract",
+      "Red unlocks the cabin door and searches for her grandmother.": "Complicating Action",
+      "The Wolf emerges from behind a curtain and circles Red, sniffing the air.": "MRE",
+      "Red demands to know her grandmother's whereabouts and refuses to back down.": "Complicating Action",
+      "The Wolf proposes a bargain: bring the Woodsman's silver axe to free Grandmother.": "Complicating Action",
+      "Red questions the Wolf's promise and tries to mask her fear with defiance.": "Complicating Action",
+      "The Wolf threatens Grandmother if Red fails to bring the axe by moonrise.": "Complicating Action",
+      "Red asks what happens if she refuses or fails, glancing toward the woods.": "Complicating Action",
+      "The Wolf waits for Red's decision; Red agrees to the bargain and leaves the cabin.": "Minor Resolution",
+      "Red hurries toward the Woodsman's hut, unsettled by the Wolf’s words.": "Complicating Action",
+      "Red grips her basket, approaches the Woodsman's cabin, and peers through a window.": "Complicating Action",
+      "The Woodsman emerges, axe in hand, warning Red not to be there.": "Complicating Action",
+      "Red stands her ground, refusing to back away.": "Complicating Action",
+      "Red tells the Woodsman her grandmother is missing and insists on searching for her.": "Complicating Action",
+      "The Woodsman examines gnawed marks on the cabin door and listens for movement.": "Complicating Action",
+      "The Woodsman identifies the marks as signs of something big and dangerous.": "Complicating Action",
+      "The Woodsman traces muddy paw prints near the threshold, expressing concern.": "Complicating Action",
+      "Red kneels to examine claw marks and feels uneasy about what made them.": "Complicating Action",
+      "Red glances warily at the treeline, hand moving to her knife.": "Complicating Action",
+      "Red insists on searching inside; the Woodsman nods and pushes the door open.": "Minor Resolution",
+      "Red and the Woodsman enter the shadowy cabin, determined to find clues about Grandmother.": "Complicating Action",
+      "Red tightens her cloak and scans the cabin for clues, seeking reassurance from the Woodsman.": "Complicating Action",
+      "The Woodsman grips his axe and scans the dim corners, stepping protectively beside Red.": "Complicating Action",
+      "Red gently opens a dusty door, listening for clues in the darkness.": "Complicating Action",
+      "The Woodsman edges forward, scanning shadows and warning Red to move slowly.": "Complicating Action",
+      "Red lifts her lantern, searching for signs of Grandmother among faded photographs and furniture.": "Complicating Action",
+      "Red crouches behind a thicket, sensing the Wolf is near and urgency grows.": "Complicating Action",
+      "Red insists on taking a shortcut through the woods; the Woodsman agrees and follows.": "Complicating Action",
+      "Red tightens grip on basket, scanning trees for movement, and senses the Wolf nearby.": "Complicating Action",
+      "Red and the Woodsman move quickly, intent on reaching Grandmother's cabin before the Wolf.": "Complicating Action",
+      "Red grabs her basket and runs down the forest path, urging the Woodsman to hurry.": "Complicating Action",
+      "Red breaks into a run, glancing anxiously over her shoulder as shadows lengthen.": "Complicating Action",
+      "Red grabs the Woodsman's hand and runs, determined to beat the Wolf to Grandmother.": "Complicating Action",
+      "Red crouches behind a log, gripping a sling and scanning the underbrush for movement.": "Complicating Action",
+      "The Woodsman enters the clearing, signals Red to stay low, and unsheathes his axe.": "Complicating Action",
+      "Red stuffs a stone into her sling, vowing to reach Grandmother before the Wolf.": "Minor Resolution",
+      "Red marks trees with chalk while the Woodsman listens for danger as they advance.": "Complicating Action",
+      "Red draws more chalk marks, coordinating with the Woodsman to avoid getting lost or ambushed.": "Complicating Action",
+      "The Woodsman crouches low, axe ready, scanning for movement and keeping pace with Red.": "Complicating Action",
+      "Red draws double chalk lines beside a tree, marking wolf sign for the Woodsman.": "Complicating Action",
+      "The Woodsman nods to Red, silently rehearsing their plan as they press forward together.": "Minor Resolution",
+      "Red enters the cabin with an iron poker; Grandmother urgently warns her to stay back.": "Complicating Action",
+      "The Wolf reveals his predatory intent and is momentarily distracted by Grandmother's offer to sacrifice herself for Red.": "Complicating Action",
+      "Grandmother clutches her quilt, pleading for mercy and trying to protect Red.": "Complicating Action",
+      "The Wolf edges closer, claws scraping, eyes locked on Grandmother.": "Complicating Action",
+      "Grandmother edges away from the hearth, pleading for pity from The Wolf.": "Complicating Action",
+      "The Wolf prowls closer, dismissing Grandmother's pleas and recalling his mother's lessons.": "Complicating Action",
+      "Grandmother pleads for Red's safety as the Wolf nears.": "Complicating Action",
+      "The Wolf threatens to wait for Red, preferring to feast on shared fear.": "Complicating Action",
+      "Grandmother offers herself in exchange for Red's safety, determined to protect her granddaughter.": "Complicating Action",
+      "The Wolf refuses any bargain, emphasizing the thrill of shared fear between kin.": "Complicating Action",
+      "Grandmother throws herbs into the fire, creating acrid smoke that forces The Wolf to retreat.": "Minor Resolution",
+      "Red and Grandmother block The Wolf's escape, reaffirming their unity and resolve.": "Minor Resolution",
+      "Grandmother throws more herbs into the fire, thickening the smoke and positioning herself protectively.": "Complicating Action",
+      "Red clutches her cloak, asking Grandmother what to do if the smoke fades.": "Complicating Action",
+      "Grandmother tosses more herbs, advising Red to keep the fire alive and wits sharp.": "Minor Resolution",
+      "The Wolf circles beyond the smoke, threatening that hope will fade when the fire dies.": "Complicating Action",
+      "Red vows to protect Grandmother, while Grandmother hints at deeper secrets and old magic.": "Complicating Action",
+      "Red and Grandmother move in sync, closing off the Wolf's escape and tightening their defenses.": "Complicating Action",
+      "The Wolf tests their defense by feinting and circling, threatening violence if they do not let him pass.": "Complicating Action",
+      "Red and Grandmother block the Wolf’s attempted feint, forcing him to retreat and reassess.": "Minor Resolution",
+      "The Wolf feints toward Red, then pivots, testing their coordination.": "Complicating Action",
+      "Grandmother mirrors Red’s movement, cutting off the Wolf’s latest attempt to escape.": "Minor Resolution",
+      "The Wolf’s muscles coil, but Red and Grandmother block every attack with unwavering resolve.": "Complicating Action",
+      "Red matches the Wolf's lunge, Grandmother closes the last gap, leaving the Wolf cornered.": "Complicating Action",
+      "The Wolf darts toward a gap, testing coordination, but Red and Grandmother block his escape.": "Minor Resolution",
+      "Red and Grandmother cut off the Wolf’s latest feint, forcing him into a shrinking circle.": "Minor Resolution",
+      "The Wolf, cornered and desperate, threatens them, but Red and Grandmother stand firm.": "Complicating Action",
+      "Red squares her shoulders, shielding Grandmother with an iron poker, vowing to protect her family.": "Complicating Action",
+      "Grandmother crushes dried leaves with trembling fingers, casting a pungent cloud toward the Wolf.": "Resolution",
+      "The Wolf lowers his stance, muscles tensed, eyes flicking between Red and Grandmother as he growls.": "Return of MRE",
+      "All three face off for a final confrontation, with Red and Grandmother united in defense.": "Abstract",
+      "Red crouches behind a log, scanning the fog for movement, clutching a sturdy branch.": "Complicating Action",
+      "Grandmother limps beside Red, clutching a torn shawl and pointing toward an animal trail.": "Complicating Action",
+      "Red whispers for Grandmother to stay close, suggesting a safer path by the stream.": "Minor Resolution",
+      "Grandmother nods and pulls Red's sleeve to urge her onward.": "Minor Resolution",
+      "Red and Grandmother push through brambles, intent on escaping the Wolf's territory.": "Complicating Action",
+      "Their goal is to reach the village before the Wolf catches their scent.": "Abstract",
+      "Grandmother signals for silence as they hear heavy paws nearby; Red freezes and listens.": "Complicating Action",
+      "They slip deeper into the brush, leaving behind broken branches and crushed leaves.": "Minor Resolution",
+      "At dawn, Red and her grandmother emerge from the trees, leaving the darkness of the woods and the Wolf behind.": "Aftermath"
+    },
+    "structure_analysis": {
+      "basic_info": {
+        "total_events": 114,
+        "analysis_mode": "default",
+        "analysis_time": null
+      },
+      "Papalampidi_structure_analysis": {
+        "turning_point_integrity": {
+          "identified_tps": [
+            "TP1",
+            "TP2",
+            "TP3",
+            "TP4",
+            "TP5"
+          ],
+          "missing_tps": [],
+          "TP_coverage": "5/5"
+        },
+        "stage_integrity": {
+          "identified_stages": [
+            "Setup",
+            "New Situation",
+            "Progress",
+            "Complications",
+            "Final Push",
+            "Aftermath"
+          ],
+          "missing_stages": [],
+          "stage_coverage": "6/6"
+        }
+      },
+      "Li_function_analysis": {
+        "core_function_check": {
+          "Orientation": "exists",
+          "Complicating Action": "exists",
+          "MRE": "exists",
+          "Resolution": "exists"
+        },
+        "function_distribution": {
+          "Orientation": 2,
+          "Complicating Action": 86,
+          "Minor Resolution": 18,
+          "MRE": 2,
+          "Abstract": 3,
+          "Resolution": 1,
+          "Return of MRE": 1,
+          "Aftermath": 1
+        },
+        "function_diversity": 8
+      }
+    }
+  }
+}

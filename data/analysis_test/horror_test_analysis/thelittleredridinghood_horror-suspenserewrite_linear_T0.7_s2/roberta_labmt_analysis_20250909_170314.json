@@ -1,0 +1,173 @@
+{
+  "metadata": {
+    "total_chapters": 7,
+    "primary_method": "RoBERTa",
+    "validation_method": "LabMT-en-v1",
+    "analysis_timestamp": "2025-09-09T17:03:14.480134"
+  },
+  "chapter_analysis": [
+    {
+      "chapter_num": 1,
+      "title": "Red Receives a Dire Warning",
+      "roberta_score": 0.5756,
+      "labmt_score": 0.2408,
+      "content_length": 4269
+    },
+    {
+      "chapter_num": 2,
+      "title": "Entering the Forbidden Woods",
+      "roberta_score": 0.4838,
+      "labmt_score": 0.2386,
+      "content_length": 6069
+    },
+    {
+      "chapter_num": 3,
+      "title": "A Deadly Encounter with the Wolf",
+      "roberta_score": -0.2202,
+      "labmt_score": 0.1907,
+      "content_length": 4713
+    },
+    {
+      "chapter_num": 4,
+      "title": "The Wolf's Invasion",
+      "roberta_score": 0.2969,
+      "labmt_score": 0.1567,
+      "content_length": 3810
+    },
+    {
+      "chapter_num": 5,
+      "title": "Red Faces the Imposter",
+      "roberta_score": 0.0661,
+      "labmt_score": 0.2247,
+      "content_length": 3107
+    },
+    {
+      "chapter_num": 6,
+      "title": "The Huntsman Intervenes",
+      "roberta_score": 0.0368,
+      "labmt_score": 0.1517,
+      "content_length": 1537
+    },
+    {
+      "chapter_num": 7,
+      "title": "The Final Confrontation",
+      "roberta_score": -0.1757,
+      "labmt_score": 0.1459,
+      "content_length": 1241
+    }
+  ],
+  "primary_analysis": {
+    "method": "RoBERTa",
+    "scores": [
+      0.5756279071172078,
+      0.4837579846382141,
+      -0.2201612949371338,
+      0.29692105452219647,
+      0.06611652771631876,
+      0.03681662480036418,
+      -0.17568702697753907
+    ],
+    "reagan_classification": {
+      "method": "RoBERTa",
+      "best_match": "Tragedy",
+      "confidence": 0.7806,
+      "all_similarities": {
+        "Rags to riches": 0,
+        "Tragedy": 0.7806,
+        "Man in a hole": 0,
+        "Icarus": 0.579,
+        "Cinderella": 0,
+        "Oedipus": 0.2562
+      },
+      "reagan_category": "TR"
+    }
+  },
+  "validation_analysis": {
+    "method": "LabMT",
+    "scores": [
+      0.2408155080213894,
+      0.23855357142857092,
+      0.1906643356643356,
+      0.15671755725190772,
+      0.2247368421052638,
+      0.15166666666666706,
+      0.14590909090909032
+    ],
+    "reagan_classification": {
+      "method": "LabMT",
+      "best_match": "Tragedy",
+      "confidence": 0.7703,
+      "all_similarities": {
+        "Rags to riches": 0.5411,
+        "Tragedy": 0.7703,
+        "Man in a hole": 0,
+        "Icarus": 0.1472,
+        "Cinderella": 0,
+        "Oedipus": 0.209
+      },
+      "reagan_category": "TR"
+    }
+  },
+  "correlation_analysis": {
+    "pearson_correlation": {
+      "r": 0.619,
+      "p_value": 0.1383,
+      "significance": "Not Significant"
+    },
+    "spearman_correlation": {
+      "r": 0.7143,
+      "p_value": 0.0713
+    },
+    "direction_consistency": 0.6667,
+    "consistency_level": "Medium",
+    "interpretation": "RoBERTa and LabMT correlation coefficient is 0.619, belongs to moderate correlation"
+  },
+  "comparison_analysis": {
+    "disagreement_points": [
+      {
+        "chapter": 1,
+        "roberta_score": 0.5756279071172078,
+        "labmt_score": 0.2408155080213894,
+        "difference": 0.3348
+      },
+      {
+        "chapter": 3,
+        "roberta_score": -0.2201612949371338,
+        "labmt_score": 0.1906643356643356,
+        "difference": 0.4108
+      },
+      {
+        "chapter": 7,
+        "roberta_score": -0.17568702697753907,
+        "labmt_score": 0.14590909090909032,
+        "difference": 0.3216
+      }
+    ],
+    "method_advantages": {
+      "RoBERTa": {
+        "strengths": [
+          "Deep learning model with better contextual understanding",
+          "Suitable for modern text and dialogue",
+          "High sensitivity to sci-fi and technical texts"
+        ],
+        "classification": "Tragedy",
+        "confidence": 0.7806
+      },
+      "LabMT": {
+        "strengths": [
+          "Fully consistent with Reagan's original method",
+          "Based on large-scale human annotation",
+          "Suitable for traditional literary analysis"
+        ],
+        "classification": "Tragedy",
+        "confidence": 0.7703
+      }
+    },
+    "consistency_assessment": {
+      "classification_agreement": true,
+      "major_disagreements": 3,
+      "recommendation": "Both methods identify as Tragedy, results are highly consistent, recommend using RoBERTa as the primary analysis result"
+    }
+  },
+  "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.619 (Medium)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.619, belongs to moderate correlation\n\nClassification Results:\n- RoBERTa (primary): Tragedy\n- LabMT (validation): Tragedy\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.619, showing medium consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation."
+}

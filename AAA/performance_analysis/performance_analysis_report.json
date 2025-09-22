@@ -1,0 +1,293 @@
+{
+  "analysis_timestamp": "2025-09-13T16:57:20.186595",
+  "summary_statistics": {
+    "total_experiments": 54,
+    "total_cost_usd": 66.32953,
+    "total_runtime_hours": 9.528882785240809,
+    "total_tokens_millions": 4.317605,
+    "average_cost_per_experiment": 1.2283246296296297,
+    "average_runtime_minutes": 10.587647539156455,
+    "cost_range": {
+      "min": 0.44244,
+      "max": 2.6020199999999996,
+      "std": 0.48243936186259556
+    }
+  },
+  "efficiency_rankings": {
+    "most_cost_effective": [
+      {
+        "story_id": "sciencefiction_linear_T0.9_s1",
+        "cost_effectiveness": 1.5909825178813046,
+        "cost_usd": 0.44244,
+        "quality_composite": 0.7039143052114044
+      },
+      {
+        "story_id": "horror_nonlinear_T0.7_s2",
+        "cost_effectiveness": 1.558677724351992,
+        "cost_usd": 0.5070299999999998,
+        "quality_composite": 0.7902963665781901
+      },
+      {
+        "story_id": "sciencefiction_linear_T0.7_s3",
+        "cost_effectiveness": 1.4617423774902192,
+        "cost_usd": 0.49706,
+        "quality_composite": 0.7265736661552884
+      },
+      {
+        "story_id": "sciencefiction_nonlinear_T0.7_s2",
+        "cost_effectiveness": 1.3767430835198433,
+        "cost_usd": 0.51925,
+        "quality_composite": 0.7148738461176787
+      },
+      {
+        "story_id": "horror_linear_T0.7_s2",
+        "cost_effectiveness": 1.2517362513081505,
+        "cost_usd": 0.5632599999999999,
+        "quality_composite": 0.7050529609118287
+      }
+    ],
+    "fastest_execution": [
+      {
+        "story_id": "sciencefiction_linear_T0.9_s1",
+        "wall_time_sec": 206.55821084976196,
+        "quality_composite": 0.7039143052114044
+      },
+      {
+        "story_id": "sciencefiction_nonlinear_T0.7_s2",
+        "wall_time_sec": 217.5330991744995,
+        "quality_composite": 0.7148738461176787
+      },
+      {
+        "story_id": "horror_nonlinear_T0.7_s2",
+        "wall_time_sec": 223.6728248596191,
+        "quality_composite": 0.7902963665781901
+      },
+      {
+        "story_id": "sciencefiction_linear_T0.7_s3",
+        "wall_time_sec": 276.0048608779907,
+        "quality_composite": 0.7265736661552884
+      },
+      {
+        "story_id": "horror_linear_T0.7_s2",
+        "wall_time_sec": 302.15251088142395,
+        "quality_composite": 0.7050529609118287
+      }
+    ],
+    "lowest_cost": [
+      {
+        "story_id": "sciencefiction_linear_T0.9_s1",
+        "cost_usd": 0.44244,
+        "quality_composite": 0.7039143052114044
+      },
+      {
+        "story_id": "sciencefiction_linear_T0.7_s3",
+        "cost_usd": 0.49706,
+        "quality_composite": 0.7265736661552884
+      },
+      {
+        "story_id": "horror_nonlinear_T0.7_s2",
+        "cost_usd": 0.5070299999999998,
+        "quality_composite": 0.7902963665781901
+      },
+      {
+        "story_id": "sciencefiction_nonlinear_T0.7_s2",
+        "cost_usd": 0.51925,
+        "quality_composite": 0.7148738461176787
+      },
+      {
+        "story_id": "horror_linear_T0.7_s2",
+        "cost_usd": 0.5632599999999999,
+        "quality_composite": 0.7050529609118287
+      }
+    ]
+  },
+  "performance_distributions": {
+    "wall_time_sec": {
+      "mean": 635.2588523493873,
+      "median": 559.0800918340683,
+      "std": 488.22539341177065,
+      "min": 206.55821084976196,
+      "max": 3725.8516159057617,
+      "q25": 404.6299238204956,
+      "q75": 684.1554399728775
+    },
+    "peak_mem_mb": {
+      "mean": 64.69241898148148,
+      "median": 77.7265625,
+      "std": 21.314726492469838,
+      "min": 31.78125,
+      "max": 89.390625,
+      "q25": 39.98046875,
+      "q75": 82.8046875
+    },
+    "tokens_total": {
+      "mean": 79955.64814814815,
+      "median": 73403.5,
+      "std": 33221.24668020561,
+      "min": 28138.0,
+      "max": 175178.0,
+      "q25": 56661.5,
+      "q75": 99603.0
+    },
+    "cost_usd": {
+      "mean": 1.2283246296296297,
+      "median": 1.1165950000000002,
+      "std": 0.48243936186259556,
+      "min": 0.44244,
+      "max": 2.6020199999999996,
+      "q25": 0.8861450000000001,
+      "q75": 1.5496925000000001
+    }
+  },
+  "cost_effectiveness": {
+    "mean_cost_per_1k_tokens": 0.01551484765290214,
+    "median_cost_per_1k_tokens": 0.015436314854071244,
+    "best_cost_effectiveness": {
+      "story_id": "sciencefiction_linear_T0.9_s1",
+      "value": 1.5909825178813046
+    },
+    "pareto_frontier_points": 3
+  },
+  "structure_temperature_impact": {
+    "linear_vs_nonlinear_cost": {
+      "linear_mean": 1.1715214814814816,
+      "nonlinear_mean": 1.2851277777777776,
+      "difference": 0.11360629629629604
+    },
+    "temperature_correlation": {
+      "cost_correlation": 0.037963193637160574,
+      "time_correlation": 0.16328299584180744,
+      "tokens_correlation": 0.03573921333953645
+    }
+  },
+  "quality_performance_tradeoffs": {
+    "quality_performance_correlations": {
+      "one_minus_self_bleu": {
+        "wall_time_sec": -0.11433703564558338,
+        "peak_mem_mb": 0.26488249927783436,
+        "tokens_total": -0.43598685569261236,
+        "cost_usd": -0.44145727601456114
+      },
+      "avg_coherence": {
+        "wall_time_sec": 0.18092366527141293,
+        "peak_mem_mb": -0.10879697716360946,
+        "tokens_total": 0.4630495212040805,
+        "cost_usd": 0.4807260930242025
+      },
+      "distinct_score": {
+        "wall_time_sec": -0.0018910852780173,
+        "peak_mem_mb": -0.13346475067497854,
+        "tokens_total": -0.527593548932691,
+        "cost_usd": -0.5250897089311721
+      },
+      "quality_composite": {
+        "wall_time_sec": 0.08865369364340253,
+        "peak_mem_mb": -0.11367409203850824,
+        "tokens_total": -0.35208480619100235,
+        "cost_usd": -0.3448716650332293
+      }
+    },
+    "optimal_configurations": [
+      {
+        "story_id": "sciencefiction_linear_T0.9_s1",
+        "structure": "linear",
+        "temperature": "0.9",
+        "genre": "sciencefiction",
+        "quality_composite": 0.7039143052114044,
+        "cost_usd": 0.44244,
+        "wall_time_sec": 206.55821084976196,
+        "efficiency_score": 27.72844052439321
+      },
+      {
+        "story_id": "horror_nonlinear_T0.7_s2",
+        "structure": "nonlinear",
+        "temperature": "0.7",
+        "genre": "horror",
+        "quality_composite": 0.7902963665781901,
+        "cost_usd": 0.5070299999999998,
+        "wall_time_sec": 223.6728248596191,
+        "efficiency_score": 25.086819604432865
+      },
+      {
+        "story_id": "sciencefiction_nonlinear_T0.7_s2",
+        "structure": "nonlinear",
+        "temperature": "0.7",
+        "genre": "sciencefiction",
+        "quality_composite": 0.7148738461176787,
+        "cost_usd": 0.51925,
+        "wall_time_sec": 217.5330991744995,
+        "efficiency_score": 22.78400445486063
+      },
+      {
+        "story_id": "sciencefiction_linear_T0.7_s3",
+        "structure": "linear",
+        "temperature": "0.7",
+        "genre": "sciencefiction",
+        "quality_composite": 0.7265736661552884,
+        "cost_usd": 0.49706,
+        "wall_time_sec": 276.0048608779907,
+        "efficiency_score": 19.065869138047542
+      },
+      {
+        "story_id": "horror_linear_T0.7_s2",
+        "structure": "linear",
+        "temperature": "0.7",
+        "genre": "horror",
+        "quality_composite": 0.7050529609118287,
+        "cost_usd": 0.5632599999999999,
+        "wall_time_sec": 302.15251088142395,
+        "efficiency_score": 14.913827760570108
+      },
+      {
+        "story_id": "sciencefiction_linear_T0.3_s3",
+        "structure": "linear",
+        "temperature": "0.3",
+        "genre": "sciencefiction",
+        "quality_composite": 0.6904240256472636,
+        "cost_usd": 0.6157600000000001,
+        "wall_time_sec": 306.2727298736572,
+        "efficiency_score": 13.179489651444163
+      },
+      {
+        "story_id": "sciencefiction_nonlinear_T0.3_s3",
+        "structure": "nonlinear",
+        "temperature": "0.3",
+        "genre": "sciencefiction",
+        "quality_composite": 0.5654160144437517,
+        "cost_usd": 0.7022199999999998,
+        "wall_time_sec": 310.34806180000305,
+        "efficiency_score": 9.340032207006946
+      },
+      {
+        "story_id": "sciencefiction_linear_T0.3_s2",
+        "structure": "linear",
+        "temperature": "0.3",
+        "genre": "sciencefiction",
+        "quality_composite": 0.5890573923601198,
+        "cost_usd": 0.6996399999999999,
+        "wall_time_sec": 331.59489727020264,
+        "efficiency_score": 9.140661817075065
+      },
+      {
+        "story_id": "sciencefiction_linear_T0.9_s3",
+        "structure": "linear",
+        "temperature": "0.9",
+        "genre": "sciencefiction",
+        "quality_composite": 0.595206321915797,
+        "cost_usd": 0.7390100000000002,
+        "wall_time_sec": 398.3604409694672,
+        "efficiency_score": 7.278527321363973
+      },
+      {
+        "story_id": "horror_nonlinear_T0.9_s2",
+        "structure": "nonlinear",
+        "temperature": "0.9",
+        "genre": "horror",
+        "quality_composite": 0.6548634514927741,
+        "cost_usd": 0.88123,
+        "wall_time_sec": 376.21214485168457,
+        "efficiency_score": 7.111008023321491
+      }
+    ]
+  }
+}

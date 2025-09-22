@@ -36,7 +36,7 @@ def process_version(version):
     role_state_file = os.path.join(base_dir, "role_state.json")
 
     if not os.path.exists(anchor_file) or not os.path.exists(role_state_file):
-        print(f"⚠️ 缺少文件，跳过版本：{version}")
+        print(f"WARNING: Missing file, skipping version: {version}")
         return None
 
     return {
@@ -54,14 +54,14 @@ def main(version_list, output_csv):
 
     df = pd.DataFrame(records)
     df.to_csv(output_csv, index=False, encoding="utf-8-sig")
-    print(f"✅ 指标统计完成，结果保存至 {output_csv}")
+    print(f" Metrics calculation completed, results saved to {output_csv}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--versions", type=str, required=True,
-                        help="以逗号分隔的版本名列表，如 demo1,demo2")
+                        help="Comma-separated list of version names, e.g. demo1,demo2")
     parser.add_argument("--output", type=str, default="plot_metrics.csv",
-                        help="输出 CSV 文件路径")
+                        help="Output CSV file path")
 
     args = parser.parse_args()
     version_list = [v.strip() for v in args.versions.split(",")]

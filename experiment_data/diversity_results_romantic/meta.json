@@ -1,0 +1,48 @@
+{
+  "parameters": {
+    "window": 1000,
+    "stride": 500,
+    "bleu_type": "sacreBLEU-4 (13a, exp smoothing, lowercase, effective_order)",
+    "bleu_sample_every": 1,
+    "tokenizer": "simple",
+    "p_low": 5,
+    "p_high": 95,
+    "alpha_min": 0.4,
+    "alpha_max": 0.8
+  },
+  "summary": {
+    "individual_count": 18,
+    "group_count": 6,
+    "genres": [
+      "romantic"
+    ],
+    "structures": [
+      "nonlinear",
+      "linear"
+    ],
+    "temperatures": [
+      0.9,
+      0.7,
+      0.3
+    ]
+  },
+  "env": {
+    "python": "3.11.4 (v3.11.4:d2340ef257, Jun  6 2023, 19:15:51) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "packages": {
+      "sacrebleu": "2.5.1",
+      "blingfire": "not_available",
+      "spacy": "not_installed"
+    }
+  },
+  "learn_alpha": {
+    "rho1": 0.5,
+    "rho2": 0.5,
+    "stab1": 0.8100976365735999,
+    "stab2": 0.30533560983076347,
+    "R1": 0.40504881828679995,
+    "R2": 0.15266780491538173,
+    "alpha": 0.7262627675703381,
+    "global_rho_omSB_vs_temp": 0.23904572186687875,
+    "global_rho_distinct_vs_temp": 0.23904572186687875
+  }
+}

@@ -1,0 +1,384 @@
+{
+  "analysis_summary": {
+    "total_configurations": 56,
+    "genres": {
+      "sciencefiction": 18,
+      "horror": 18,
+      "romantic": 18,
+      "baseline": 2
+    },
+    "structures": {
+      "nonlinear": 27,
+      "linear": 27,
+      "baseline": 2
+    },
+    "temperatures": {
+      "0.9": 18,
+      "0.7": 18,
+      "0.3": 18,
+      "baseline": 2
+    },
+    "data_completeness": {
+      "emotional_analysis": "56/56",
+      "coherence_analysis": "56/56",
+      "structure_analysis": "56/56",
+      "text_features": "56/56"
+    }
+  },
+  "genre_comparison": {
+    "sciencefiction": {
+      "count": 18,
+      "emotional_metrics": {
+        "avg_roberta_score": -0.12897199639035195,
+        "reagan_classifications": {
+          "Oedipus": 6,
+          "Icarus": 5,
+          "Man in a hole": 4,
+          "Cinderella": 3
+        }
+      },
+      "coherence_metrics": {
+        "avg_hred_coherence": 0.3624
+      },
+      "structure_metrics": {
+        "avg_tp_coverage": {
+          "5/5": 18
+        },
+        "avg_li_diversity": 8.5
+      },
+      "text_metrics": {
+        "avg_words": 7268.555555555556,
+        "avg_chapters": 6.5,
+        "avg_sentences": 405.05555555555554
+      }
+    },
+    "horror": {
+      "count": 18,
+      "emotional_metrics": {
+        "avg_roberta_score": 0.12271917224308576,
+        "reagan_classifications": {
+          "Tragedy": 7,
+          "Rags to riches": 5,
+          "Oedipus": 3,
+          "Cinderella": 2,
+          "Man in a hole": 1
+        }
+      },
+      "coherence_metrics": {
+        "avg_hred_coherence": 0.42664444444444444
+      },
+      "structure_metrics": {
+        "avg_tp_coverage": {
+          "5/5": 18
+        },
+        "avg_li_diversity": 8.61111111111111
+      },
+      "text_metrics": {
+        "avg_words": 9623.333333333334,
+        "avg_chapters": 7.444444444444445,
+        "avg_sentences": 491.5
+      }
+    },
+    "romantic": {
+      "count": 18,
+      "emotional_metrics": {
+        "avg_roberta_score": 0.42035772096480967,
+        "reagan_classifications": {
+          "Tragedy": 10,
+          "Rags to riches": 6,
+          "Oedipus": 2
+        }
+      },
+      "coherence_metrics": {
+        "avg_hred_coherence": 0.4240277777777778
+      },
+      "structure_metrics": {
+        "avg_tp_coverage": {
+          "5/5": 18
+        },
+        "avg_li_diversity": 8.722222222222221
+      },
+      "text_metrics": {
+        "avg_words": 12735.777777777777,
+        "avg_chapters": 6.722222222222222,
+        "avg_sentences": 642.8888888888889
+      }
+    },
+    "baseline": {
+      "count": 2,
+      "emotional_metrics": {
+        "avg_roberta_score": -0.12820365782293713,
+        "reagan_classifications": {
+          "Cinderella": 1,
+          "Icarus": 1
+        }
+      },
+      "coherence_metrics": {
+        "avg_hred_coherence": 0.26255
+      },
+      "structure_metrics": {
+        "avg_tp_coverage": {
+          "5/5": 2
+        },
+        "avg_li_diversity": 9.0
+      },
+      "text_metrics": {
+        "avg_words": 5344.0,
+        "avg_chapters": 24.0,
+        "avg_sentences": 599.0
+      }
+    }
+  },
+  "structure_comparison": {
+    "nonlinear": {
+      "count": 27,
+      "emotional_metrics": {
+        "avg_roberta_score": 0.12222137388896001,
+        "reagan_classifications": {
+          "Rags to riches": 7,
+          "Tragedy": 7,
+          "Cinderella": 5,
+          "Oedipus": 4,
+          "Man in a hole": 2,
+          "Icarus": 2
+        }
+      },
+      "coherence_metrics": {
+        "avg_hred_coherence": 0.4070925925925926
+      },
+      "structure_metrics": {
+        "avg_tp_coverage": {
+          "5/5": 27
+        },
+        "avg_li_diversity": 8.518518518518519
+      },
+      "text_metrics": {
+        "avg_words": 9904.62962962963,
+        "avg_chapters": 6.7407407407407405,
+        "avg_sentences": 513.6666666666666
+      }
+    },
+    "linear": {
+      "count": 27,
+      "emotional_metrics": {
+        "avg_roberta_score": 0.15384855732273564,
+        "reagan_classifications": {
+          "Tragedy": 10,
+          "Oedipus": 7,
+          "Rags to riches": 4,
+          "Icarus": 3,
+          "Man in a hole": 3
+        }
+      },
+      "coherence_metrics": {
+        "avg_hred_coherence": 0.4016222222222222
+      },
+      "structure_metrics": {
+        "avg_tp_coverage": {
+          "5/5": 27
+        },
+        "avg_li_diversity": 8.703703703703704
+      },
+      "text_metrics": {
+        "avg_words": 9847.148148148148,
+        "avg_chapters": 7.037037037037037,
+        "avg_sentences": 512.6296296296297
+      }
+    },
+    "baseline": {
+      "count": 2,
+      "emotional_metrics": {
+        "avg_roberta_score": -0.12820365782293713,
+        "reagan_classifications": {
+          "Cinderella": 1,
+          "Icarus": 1
+        }
+      },
+      "coherence_metrics": {
+        "avg_hred_coherence": 0.26255
+      },
+      "structure_metrics": {
+        "avg_tp_coverage": {
+          "5/5": 2
+        },
+        "avg_li_diversity": 9.0
+      },
+      "text_metrics": {
+        "avg_words": 5344.0,
+        "avg_chapters": 24.0,
+        "avg_sentences": 599.0
+      }
+    }
+  },
+  "temperature_comparison": {
+    "T0.9": {
+      "count": 18,
+      "emotional_metrics": {
+        "avg_roberta_score": 0.1306116398772589,
+        "reagan_classifications": {
+          "Oedipus": 4,
+          "Rags to riches": 4,
+          "Icarus": 3,
+          "Tragedy": 3,
+          "Cinderella": 2,
+          "Man in a hole": 2
+        }
+      },
+      "coherence_metrics": {
+        "avg_hred_coherence": 0.3999611111111111
+      },
+      "structure_metrics": {
+        "avg_tp_coverage": {
+          "5/5": 18
+        },
+        "avg_li_diversity": 8.777777777777779
+      },
+      "text_metrics": {
+        "avg_words": 10134.111111111111,
+        "avg_chapters": 6.888888888888889,
+        "avg_sentences": 526.0
+      }
+    },
+    "T0.7": {
+      "count": 18,
+      "emotional_metrics": {
+        "avg_roberta_score": 0.12513349328707568,
+        "reagan_classifications": {
+          "Tragedy": 6,
+          "Rags to riches": 4,
+          "Oedipus": 3,
+          "Cinderella": 2,
+          "Man in a hole": 2,
+          "Icarus": 1
+        }
+      },
+      "coherence_metrics": {
+        "avg_hred_coherence": 0.4053333333333333
+      },
+      "structure_metrics": {
+        "avg_tp_coverage": {
+          "5/5": 18
+        },
+        "avg_li_diversity": 8.5
+      },
+      "text_metrics": {
+        "avg_words": 10114.888888888889,
+        "avg_chapters": 6.944444444444445,
+        "avg_sentences": 531.0555555555555
+      }
+    },
+    "T0.3": {
+      "count": 18,
+      "emotional_metrics": {
+        "avg_roberta_score": 0.1583597636532089,
+        "reagan_classifications": {
+          "Tragedy": 8,
+          "Oedipus": 4,
+          "Rags to riches": 3,
+          "Man in a hole": 1,
+          "Cinderella": 1,
+          "Icarus": 1
+        }
+      },
+      "coherence_metrics": {
+        "avg_hred_coherence": 0.4077777777777778
+      },
+      "structure_metrics": {
+        "avg_tp_coverage": {
+          "5/5": 18
+        },
+        "avg_li_diversity": 8.555555555555555
+      },
+      "text_metrics": {
+        "avg_words": 9378.666666666666,
+        "avg_chapters": 6.833333333333333,
+        "avg_sentences": 482.3888888888889
+      }
+    },
+    "Tbaseline": {
+      "count": 2,
+      "emotional_metrics": {
+        "avg_roberta_score": -0.12820365782293713,
+        "reagan_classifications": {
+          "Cinderella": 1,
+          "Icarus": 1
+        }
+      },
+      "coherence_metrics": {
+        "avg_hred_coherence": 0.26255
+      },
+      "structure_metrics": {
+        "avg_tp_coverage": {
+          "5/5": 2
+        },
+        "avg_li_diversity": 9.0
+      },
+      "text_metrics": {
+        "avg_words": 5344.0,
+        "avg_chapters": 24.0,
+        "avg_sentences": 599.0
+      }
+    }
+  },
+  "detailed_metrics": {
+    "emotional_arc": {
+      "roberta_scores": {
+        "mean": 0.12852644334053406,
+        "std": 0.253049308585112,
+        "min": -0.3554539732138316,
+        "max": 0.5724745978911718
+      },
+      "reagan_classifications": {
+        "Tragedy": 17,
+        "Oedipus": 11,
+        "Rags to riches": 11,
+        "Cinderella": 6,
+        "Icarus": 6,
+        "Man in a hole": 5
+      },
+      "correlation_coefficients": {
+        "mean": 0.28507142857142853,
+        "std": 0.38708078166252013
+      }
+    },
+    "coherence": {
+      "hred_scores": {
+        "mean": 0.3992928571428571,
+        "std": 0.04301791109903729,
+        "min": 0.261,
+        "max": 0.4439
+      }
+    },
+    "structure": {
+      "tp_coverage_distribution": {
+        "5/5": 56
+      },
+      "li_diversity": {
+        "mean": 8.625,
+        "std": 1.036822067666386,
+        "min": 5,
+        "max": 10
+      }
+    },
+    "text_features": {
+      "word_counts": {
+        "mean": 9714.035714285714,
+        "std": 4340.770861428713,
+        "min": 2928,
+        "max": 23290
+      },
+      "chapter_counts": {
+        "mean": 7.5,
+        "std": 3.352068560808928,
+        "min": 5,
+        "max": 24
+      },
+      "sentence_counts": {
+        "mean": 516.2142857142857,
+        "std": 212.47149235823392,
+        "min": 155,
+        "max": 1154
+      }
+    }
+  }
+}

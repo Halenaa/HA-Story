@@ -566,7 +566,7 @@ if 'enhancement_history_index' not in st.session_state:
 
 
 def main():
-    st.title("📚 Story Creation System")
+    st.title("📚 HA-Story")
     
     # Show creation process steps
     show_creation_progress()
@@ -899,7 +899,7 @@ def show_welcome_screen():
         return
     
     st.markdown("""
-    ##  Welcome to Story Creation System！
+    ##  Welcome to HA-Story Creation System！
     
     This is a complete story creation tool designed according to backend workflow, including the following main steps:
     """)
@@ -1327,6 +1327,14 @@ def generate_new_outline(topic, style, temperature, seed, reorder_mode, generati
 def load_existing_outline():
     """Load existing outline"""
     st.markdown("### 📁 Load Existing Outline")
+    
+    # Add session state to prevent duplicate uploader after successful upload
+    if st.session_state.get('outline_file_uploaded', False):
+        st.success("✅ Outline file uploaded successfully! The page will refresh automatically.")
+        # Reset flag after display
+        st.session_state.outline_file_uploaded = False
+        return
+    
     uploaded_file = st.file_uploader("Select Outline File", type=['json'], key="outline_upload")
     
     if uploaded_file is not None:
@@ -1393,6 +1401,8 @@ def load_existing_outline():
             # Clear loader state
             st.session_state.show_outline_loader = False
             
+            # Set flag to prevent duplicate uploader
+            st.session_state.outline_file_uploaded = True
             st.rerun()
             
         except json.JSONDecodeError as e:
@@ -1751,6 +1761,13 @@ def load_existing_characters():
     """Load existing character file - integrated version"""
     st.markdown("### 📁 Load Existing Characters")
     
+    # Add session state to prevent duplicate uploader after successful upload
+    if st.session_state.get('character_file_uploaded', False):
+        st.success("✅ Character file uploaded successfully! The page will refresh automatically.")
+        # Reset flag after display
+        st.session_state.character_file_uploaded = False
+        return
+    
     # Add return button
     if st.button("← Return to Character Management"):
         st.session_state.show_character_loader = False
@@ -1832,6 +1849,8 @@ def load_existing_characters():
             # Clear loader state
             st.session_state.show_character_loader = False
             
+            # Set flag to prevent duplicate uploader
+            st.session_state.character_file_uploaded = True
             st.rerun()
             
         except json.JSONDecodeError as e:
@@ -3606,6 +3625,13 @@ def load_existing_story():
     """Load existing story file"""
     st.markdown("### 📁 Load Existing Story")
     
+    # Add session state to prevent duplicate uploader after successful upload
+    if st.session_state.get('story_file_uploaded', False):
+        st.success("✅ Story file uploaded successfully! The page will refresh automatically.")
+        # Reset flag after display
+        st.session_state.story_file_uploaded = False
+        return
+    
     # Add return button
     if st.button("← Return to Story Management"):
         st.session_state.show_story_loader = False
@@ -3679,6 +3705,8 @@ def load_existing_story():
             # Clear loader state
             st.session_state.show_story_loader = False
             
+            # Set flag to prevent duplicate uploader
+            st.session_state.story_file_uploaded = True
             st.rerun()
             
         except json.JSONDecodeError as e:
@@ -5098,7 +5126,7 @@ def execute_cascade_updates(chapter_idx, new_plot, update_suggestions, custom_in
                         
                         # Parse chapter number
                         chapter_str = str(chapter_update.get('chapter', '0'))
-                        # Extract numbers (may be "第1章" or "Chapter 1" format)
+                        # Extract numbers (may be "Chapter 1" or "Chapter 1" format)
                         import re
                         chapter_match = re.search(r'\d+', chapter_str)
                         if chapter_match:
@@ -6977,7 +7005,7 @@ def show_dialogue_display():
         show_behavior_timeline(dialogue_data.get("behavior_timeline", []))
 
 def show_chapter_dialogues(chapter_dialogues):
-    """Display chapter-level dialogues"""
+    """Show chapter dialogues"""
     if not chapter_dialogues:
         st.info("📝 No chapter dialogue data")
         return
@@ -6998,7 +7026,7 @@ def show_chapter_dialogues(chapter_dialogues):
         show_chapter_sentence_dialogues(chapter_dialogues)
 
 def show_chapter_summary_dialogues(chapter_dialogues):
-    """Show chapter summary dialogues"""
+    """Show chapter summary dialogues (original display method)"""
     st.markdown("#### 📖 Chapter Summary Dialogues")
     
     # Organize dialogue data by chapter
@@ -7657,3 +7685,2267 @@ def show_dialogue_manual_edit():
     # Select chapter to edit
     chapter_options = [f"Chapter {i+1}" for i in range(len(st.session_state.dialogue_data["chapter_dialogues"]))]
     selected_chapter = st.selectbox("Select Chapter to Edit", chapter_options, key="edit_chapter_selector")
+    
+    if selected_chapter:
+        chapter_idx = int(selected_chapter.replace("Chapter ", "")) - 1
+        
+        if 0 <= chapter_idx < len(st.session_state.dialogue_data["chapter_dialogues"]):
+            edit_chapter_dialogue(chapter_idx)
+
+def edit_chapter_dialogue(chapter_idx):
+    """Edit dialogue for specified chapter"""
+    chapter_dialogue = st.session_state.dialogue_data["chapter_dialogues"][chapter_idx]
+    dialogues = chapter_dialogue.get("dialogue", [])
+    
+    st.markdown(f"##### Edit Chapter {chapter_idx+1} Dialogue")
+    
+    if not dialogues:
+        st.info("📝 This chapter has no dialogue content")
+        
+        # Add new dialogue
+        if st.button("➕ Add Dialogue", key=f"add_dialogue_{chapter_idx}"):
+            add_new_dialogue_to_chapter(chapter_idx)
+        return
+    
+    # Display existing dialogues and provide editing functionality
+    for i, dialogue in enumerate(dialogues):
+        # Compatible with different field names
+        dialogue_text = dialogue.get('dialogue', dialogue.get('line', ''))
+        speaker = dialogue.get('speaker', 'Unknown')
+        
+        with st.expander(f"Dialogue {i+1}: {speaker} - {dialogue_text[:30]}...", expanded=False):
+            col1, col2 = st.columns([3, 1])
+            
+            with col1:
+                # Edit dialogue content
+                new_speaker = st.text_input(
+                    "Character Name", 
+                    value=speaker, 
+                    key=f"edit_speaker_{chapter_idx}_{i}"
+                )
+                
+                new_dialogue = st.text_area(
+                    "Dialogue Content", 
+                    value=dialogue_text, 
+                    key=f"edit_dialogue_{chapter_idx}_{i}",
+                    height=100
+                )
+                
+                new_action = st.text_area(
+                    "Action Description", 
+                    value=dialogue.get('action', ''), 
+                    key=f"edit_action_{chapter_idx}_{i}",
+                    height=60
+                )
+            
+            with col2:
+                # Action buttons
+                if st.button("💾 Save Changes", key=f"save_dialogue_{chapter_idx}_{i}"):
+                    save_dialogue_edit(chapter_idx, i, new_speaker, new_dialogue, new_action)
+                
+                if st.button("🗑️ Delete Dialogue", key=f"delete_dialogue_{chapter_idx}_{i}"):
+                    delete_dialogue_from_chapter(chapter_idx, i)
+    
+    # Add new dialogue
+    st.markdown("---")
+    if st.button("➕ Add New Dialogue", key=f"add_new_dialogue_{chapter_idx}"):
+        add_new_dialogue_to_chapter(chapter_idx)
+
+def save_dialogue_edit(chapter_idx, dialogue_idx, new_speaker, new_dialogue, new_action):
+    """Save dialogue editing"""
+    try:
+        print(f"💾 [Dialogue Edit] Saving changes to dialogue {dialogue_idx+1} in Chapter {chapter_idx+1}")
+        
+        # Save current state
+        save_dialogue_to_history(f"Before editing Chapter {chapter_idx+1} dialogue {dialogue_idx+1}")
+        
+        # Update dialogue content - use "line" field to maintain consistency with backend data format
+        st.session_state.dialogue_data["chapter_dialogues"][chapter_idx]["dialogue"][dialogue_idx] = {
+            "speaker": new_speaker,
+            "line": new_dialogue,  # Use "line" field
+            "action": new_action
+        }
+        
+        # Save operation to history
+        save_dialogue_to_history(f"Chapter {chapter_idx+1} dialogue {dialogue_idx+1} editing completed")
+        
+        st.success(f"✅ Chapter {chapter_idx+1} dialogue {dialogue_idx+1} changes saved")
+        st.rerun()
+        
+    except Exception as e:
+        error_msg = f"Save dialogue editing failed: {str(e)}"
+        print(f"❌ [Dialogue Edit] {error_msg}")
+        st.error(f" {error_msg}")
+
+def delete_dialogue_from_chapter(chapter_idx, dialogue_idx):
+    """Delete dialogue from chapter"""
+    try:
+        print(f"🗑️ [Dialogue Delete] Deleting dialogue {dialogue_idx+1} from Chapter {chapter_idx+1}")
+        
+        # Save current state
+        save_dialogue_to_history(f"Before deleting Chapter {chapter_idx+1} dialogue {dialogue_idx+1}")
+        
+        # Delete dialogue
+        dialogues = st.session_state.dialogue_data["chapter_dialogues"][chapter_idx]["dialogue"]
+        if 0 <= dialogue_idx < len(dialogues):
+            dialogues.pop(dialogue_idx)
+        
+        # Save operation to history
+        save_dialogue_to_history(f"Chapter {chapter_idx+1} dialogue {dialogue_idx+1} deletion completed")
+        
+        st.success(f"✅ Chapter {chapter_idx+1} dialogue {dialogue_idx+1} deleted")
+        st.rerun()
+        
+    except Exception as e:
+        error_msg = f"Delete dialogue failed: {str(e)}"
+        print(f"❌ [Dialogue Delete] {error_msg}")
+        st.error(f" {error_msg}")
+
+def add_new_dialogue_to_chapter(chapter_idx):
+    """Add new dialogue to chapter"""
+    st.markdown(f"##### ➕ Add New Dialogue to Chapter {chapter_idx+1}")
+    
+    # Get available characters
+    characters = [char.get("name", f"Character{i+1}") for i, char in enumerate(st.session_state.characters_data)]
+    
+    with st.form(f"add_dialogue_form_{chapter_idx}"):
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            new_speaker = st.selectbox("Select Character", characters + ["Other"], key=f"new_speaker_{chapter_idx}")
+            if new_speaker == "Other":
+                new_speaker = st.text_input("Custom Character Name", key=f"custom_speaker_{chapter_idx}")
+        
+        with col2:
+            st.write("")  # Placeholder
+        
+        new_dialogue = st.text_area("Dialogue Content", key=f"new_dialogue_content_{chapter_idx}", height=100)
+        new_action = st.text_area("Action Description (Optional)", key=f"new_action_{chapter_idx}", height=60)
+        
+        if st.form_submit_button("➕ Add Dialogue"):
+            if new_speaker and new_dialogue:
+                try:
+                    # Save current state
+                    save_dialogue_to_history(f"Before adding new dialogue to Chapter {chapter_idx+1}")
+                    
+                    # Add new dialogue - use "line" field to maintain consistency with backend data format
+                    new_dialogue_item = {
+                        "speaker": new_speaker,
+                        "line": new_dialogue,  # Use "line" field
+                        "action": new_action
+                    }
+                    
+                    if "dialogue" not in st.session_state.dialogue_data["chapter_dialogues"][chapter_idx]:
+                        st.session_state.dialogue_data["chapter_dialogues"][chapter_idx]["dialogue"] = []
+                    
+                    st.session_state.dialogue_data["chapter_dialogues"][chapter_idx]["dialogue"].append(new_dialogue_item)
+                    
+                    # Save operation to history
+                    save_dialogue_to_history(f"Adding new dialogue to Chapter {chapter_idx+1} completed")
+                    
+                    st.success(f"✅ New dialogue added to Chapter {chapter_idx+1}")
+                    st.rerun()
+                    
+                except Exception as e:
+                    error_msg = f"Add new dialogue failed: {str(e)}"
+                    print(f"❌ [Dialogue Add] {error_msg}")
+                    st.error(f" {error_msg}")
+            else:
+                st.error("❌ Please fill in character name and dialogue content")
+
+def show_dialogue_file_management():
+    """Dialogue file management"""
+    st.markdown("#### 📁 Dialogue File Management")
+    
+    # File operation options
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        if st.button("💾 Save to Project", type="primary", use_container_width=True):
+            save_dialogue_to_project()
+    
+    with col2:
+        if st.button("📁 Load Dialogue File", use_container_width=True):
+            st.session_state.show_dialogue_loader_file = True
+            st.rerun()
+    
+    with col3:
+        if st.button("📤 Export Dialogue", use_container_width=True):
+            export_dialogue_files()
+    
+    # Show dialogue loader
+    if st.session_state.get('show_dialogue_loader_file', False):
+        load_existing_dialogue("file_management")
+    
+    # Display current dialogue file information
+    if st.session_state.get('dialogue_data'):
+        st.markdown("---")
+        st.markdown("##### 📊 Current Dialogue Data Information")
+        
+        dialogue_data = st.session_state.dialogue_data
+        
+        col1, col2, col3, col4 = st.columns(4)
+        
+        with col1:
+            chapter_count = len(dialogue_data.get("chapter_dialogues", []))
+            st.metric("Chapter Dialogues", chapter_count)
+        
+        with col2:
+            sentence_count = len(dialogue_data.get("sentence_dialogues", []))
+            st.metric("Sentence Dialogues", sentence_count)
+        
+        with col3:
+            behavior_count = len(dialogue_data.get("behavior_timeline", []))
+            st.metric("Behavior Events", behavior_count)
+        
+        with col4:
+            generation_params = dialogue_data.get("generation_params", {})
+            timestamp = generation_params.get("timestamp", "Unknown")
+            st.metric("Generation Time", timestamp[:10] if timestamp != "Unknown" else "Unknown")
+
+def save_dialogue_to_project():
+    """Save dialogue to project directory"""
+    try:
+        if not st.session_state.get('dialogue_data'):
+            st.warning("⚠️ No dialogue data available to save")
+            return
+        
+        print(f"💾 [Dialogue Save] ===== Starting to save dialogue to project =====")
+        
+        start_time = time.time()
+        
+        # Save chapter dialogues
+        chapter_dialogues = st.session_state.dialogue_data.get("chapter_dialogues", [])
+        save_json(chapter_dialogues, st.session_state.current_version, "dialogue_marks.json")
+        
+        # Save sentence dialogues
+        sentence_dialogues = st.session_state.dialogue_data.get("sentence_dialogues", [])
+        save_json(sentence_dialogues, st.session_state.current_version, "sentence_dialogues.json")
+        
+        # Save behavior timeline
+        behavior_timeline = st.session_state.dialogue_data.get("behavior_timeline", [])
+        save_json(behavior_timeline, st.session_state.current_version, "behavior_timeline_raw.json")
+        
+        # Save complete dialogue data
+        save_json(st.session_state.dialogue_data, st.session_state.current_version, "dialogue_complete.json")
+        
+        end_time = time.time()
+        
+        # Log operation
+        log_backend_operation(
+            "Save Dialogue to Project", 
+            {"version": st.session_state.current_version},
+            start_time, end_time, 
+            {
+                "chapter_dialogues": len(chapter_dialogues),
+                "sentence_dialogues": len(sentence_dialogues),
+                "behavior_timeline": len(behavior_timeline)
+            }
+        )
+        
+        print(f"💾 [Dialogue Save] Chapter dialogues: {len(chapter_dialogues)} items")
+        print(f"💾 [Dialogue Save] Sentence dialogues: {len(sentence_dialogues)} items")
+        print(f"💾 [Dialogue Save] Behavior timeline: {len(behavior_timeline)} items")
+        print(f"💾 [Dialogue Save] ===== Save completed =====")
+        
+        st.success(f"✅ Dialogue data saved to project directory: {st.session_state.current_version}/")
+        
+        # Display save details
+        with st.expander("📄 Save Details", expanded=True):
+            col1, col2 = st.columns(2)
+            with col1:
+                st.json({
+                    "Version Directory": st.session_state.current_version,
+                    "Chapter Dialogue File": "dialogue_marks.json",
+                    "Sentence Dialogue File": "sentence_dialogues.json"
+                })
+            with col2:
+                st.json({
+                    "Behavior Timeline File": "behavior_timeline_raw.json",
+                    "Complete Data File": "dialogue_complete.json",
+                    "Save Time": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                })
+        
+    except Exception as e:
+        error_msg = f"Save dialogue to project failed: {str(e)}"
+        print(f"❌ [Dialogue Save] {error_msg}")
+        st.error(f" {error_msg}")
+
+def load_existing_dialogue(context="default"):
+    """Load existing dialogue file"""
+    st.markdown("##### 📁 Load Dialogue File")
+    
+    # Provide two loading methods
+    load_method = st.radio(
+        "Select Loading Method",
+        ["Single File Load (Recommended)", "Multi-File Load"],
+        key=f"load_method_{context}",
+        help="Single File: Load complete dialogue data file; Multi-File: Load chapter dialogue, sentence dialogue, and behavior timeline files separately"
+    )
+    
+    if load_method == "Single File Load (Recommended)":
+        # Single file uploader
+        uploaded_file = st.file_uploader(
+            "Select Complete Dialogue File",
+            type=['json'],
+            help="Recommend uploading dialogue_complete.json file, which contains all dialogue data",
+            key=f"dialogue_file_uploader_{context}"
+        )
+        
+        if uploaded_file is not None:
+            process_single_dialogue_file(uploaded_file, context)
+    
+    else:
+        # Multi-file uploader
+        st.markdown("##### 📁 Upload Dialogue Files Separately")
+        
+        col1, col2, col3 = st.columns(3)
+        
+        with col1:
+            chapter_file = st.file_uploader(
+                "Chapter Dialogue File",
+                type=['json'],
+                help="dialogue_marks.json",
+                key=f"chapter_dialogue_uploader_{context}"
+            )
+        
+        with col2:
+            sentence_file = st.file_uploader(
+                "Sentence Dialogue File",
+                type=['json'],
+                help="sentence_dialogues.json",
+                key=f"sentence_dialogue_uploader_{context}"
+            )
+        
+        with col3:
+            behavior_file = st.file_uploader(
+                "Behavior Timeline File",
+                type=['json'],
+                help="behavior_timeline_raw.json",
+                key=f"behavior_timeline_uploader_{context}"
+            )
+        
+        if any([chapter_file, sentence_file, behavior_file]):
+            process_multiple_dialogue_files(chapter_file, sentence_file, behavior_file, context)
+
+def process_single_dialogue_file(uploaded_file, context):
+    """Process single dialogue file"""
+    try:
+        # Read file content
+        uploaded_file.seek(0)
+        file_content = uploaded_file.read().decode('utf-8')
+        dialogue_data = json.loads(file_content)
+        
+        print(f"📁 [Dialogue Load] File name: {uploaded_file.name}")
+        print(f"📁 [Dialogue Load] File size: {len(file_content)} characters")
+        print(f"📁 [Dialogue Load] Data type: {type(dialogue_data)}")
+        
+        # Validate file format
+        if validate_dialogue_file(dialogue_data, uploaded_file.name):
+            # Display preview
+            with st.expander("📄 File Preview", expanded=True):
+                if isinstance(dialogue_data, dict):
+                    # Complete dialogue data format
+                    col1, col2, col3 = st.columns(3)
+                    with col1:
+                        chapter_count = len(dialogue_data.get("chapter_dialogues", []))
+                        st.metric("Chapter Dialogues", chapter_count)
+                    with col2:
+                        sentence_count = len(dialogue_data.get("sentence_dialogues", []))
+                        st.metric("Sentence Dialogues", sentence_count)
+                    with col3:
+                        behavior_count = len(dialogue_data.get("behavior_timeline", []))
+                        st.metric("Behavior Events", behavior_count)
+                elif isinstance(dialogue_data, list):
+                    # Single data format
+                    st.metric("Data Items", len(dialogue_data))
+            
+            # Load confirmation
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                if st.button("✅ Confirm Load", type="primary", use_container_width=True, key=f"confirm_load_{context}"):
+                    load_dialogue_data(dialogue_data, uploaded_file.name, context)
+            
+            with col2:
+                if st.button("❌ Cancel", use_container_width=True, key=f"cancel_load_{context}"):
+                    close_dialogue_loader(context)
+        
+    except json.JSONDecodeError as e:
+        st.error(f"❌ JSON parsing failed: {str(e)}")
+    except Exception as e:
+        st.error(f"❌ File loading failed: {str(e)}")
+
+def process_multiple_dialogue_files(chapter_file, sentence_file, behavior_file, context):
+    """Process multiple dialogue files"""
+    try:
+        dialogue_data = {
+            "chapter_dialogues": [],
+            "sentence_dialogues": [],
+            "behavior_timeline": [],
+            "generation_params": {
+                "loaded_from_multiple_files": True,
+                "timestamp": datetime.datetime.now().isoformat()
+            }
+        }
+        
+        files_loaded = []
+        
+        # Load chapter dialogue file
+        if chapter_file is not None:
+            try:
+                chapter_file.seek(0)
+                chapter_content = chapter_file.read().decode('utf-8')
+                chapter_data = json.loads(chapter_content)
+                dialogue_data["chapter_dialogues"] = chapter_data if isinstance(chapter_data, list) else []
+                files_loaded.append(f"Chapter Dialogue: {chapter_file.name}")
+                print(f"📁 [Multi-File Load] Chapter dialogue file loaded successfully: {len(dialogue_data['chapter_dialogues'])} items")
+            except Exception as e:
+                st.error(f"❌ Chapter dialogue file loading failed: {str(e)}")
+        
+        # Load sentence dialogue file
+        if sentence_file is not None:
+            try:
+                sentence_file.seek(0)
+                sentence_content = sentence_file.read().decode('utf-8')
+                sentence_data = json.loads(sentence_content)
+                dialogue_data["sentence_dialogues"] = sentence_data if isinstance(sentence_data, list) else []
+                files_loaded.append(f"Sentence Dialogue: {sentence_file.name}")
+                print(f"📁 [Multi-File Load] Sentence dialogue file loaded successfully: {len(dialogue_data['sentence_dialogues'])} items")
+            except Exception as e:
+                st.error(f"❌ Sentence dialogue file loading failed: {str(e)}")
+        
+        # Load behavior timeline file
+        if behavior_file is not None:
+            try:
+                behavior_file.seek(0)
+                behavior_content = behavior_file.read().decode('utf-8')
+                behavior_data = json.loads(behavior_content)
+                dialogue_data["behavior_timeline"] = behavior_data if isinstance(behavior_data, list) else []
+                files_loaded.append(f"Behavior Timeline: {behavior_file.name}")
+                print(f"📁 [Multi-File Load] Behavior timeline file loaded successfully: {len(dialogue_data['behavior_timeline'])} items")
+            except Exception as e:
+                st.error(f"❌ Behavior timeline file loading failed: {str(e)}")
+        
+        if files_loaded:
+            # Display loaded file information
+            with st.expander("📁 Loaded Files", expanded=True):
+                for file_info in files_loaded:
+                    st.success(f" {file_info}")
+                
+                # Display statistics
+                col1, col2, col3 = st.columns(3)
+                with col1:
+                    st.metric("Chapter Dialogues", len(dialogue_data["chapter_dialogues"]))
+                with col2:
+                    st.metric("Sentence Dialogues", len(dialogue_data["sentence_dialogues"]))
+                with col3:
+                    st.metric("Behavior Events", len(dialogue_data["behavior_timeline"]))
+            
+            # Load confirmation
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                if st.button("✅ Confirm Load", type="primary", use_container_width=True, key=f"confirm_multi_load_{context}"):
+                    load_dialogue_data(dialogue_data, "Multi-File Combination", context)
+            
+            with col2:
+                if st.button("❌ Cancel", use_container_width=True, key=f"cancel_multi_load_{context}"):
+                    close_dialogue_loader(context)
+        else:
+            st.warning("⚠️ Please upload at least one dialogue file")
+    
+    except Exception as e:
+        st.error(f"❌ Multi-file loading failed: {str(e)}")
+
+def load_dialogue_data(dialogue_data, source_name, context):
+    """Load dialogue data to session state"""
+    try:
+        # Save current state
+        save_dialogue_to_history("Before loading dialogue file")
+        
+        # Load data
+        if isinstance(dialogue_data, dict):
+            st.session_state.dialogue_data = dialogue_data
+        else:
+            # If single format, try to build complete format
+            st.session_state.dialogue_data = {
+                "chapter_dialogues": dialogue_data if "dialogue" in str(dialogue_data) else [],
+                "sentence_dialogues": dialogue_data if "sentence" in str(dialogue_data) else [],
+                "behavior_timeline": dialogue_data if "behavior" in str(dialogue_data) else [],
+                "generation_params": {
+                    "loaded_from_file": source_name,
+                    "timestamp": datetime.datetime.now().isoformat()
+                }
+            }
+        
+        # Save operation to history
+        save_dialogue_to_history(f"Load dialogue file: {source_name}")
+        
+        st.success(f"✅ Dialogue data {source_name} loaded successfully!")
+        close_dialogue_loader(context)
+        st.rerun()
+        
+    except Exception as e:
+        st.error(f"❌ Load dialogue data failed: {str(e)}")
+
+def close_dialogue_loader(context):
+    """Close dialogue loader"""
+    if context == "generation_options":
+        st.session_state.show_dialogue_loader_gen = False
+    elif context == "file_management":
+        st.session_state.show_dialogue_loader_file = False
+
+def validate_dialogue_file(data, filename):
+    """Validate dialogue file format"""
+    try:
+        if isinstance(data, dict):
+            # Complete dialogue data format validation
+            required_keys = ["chapter_dialogues", "sentence_dialogues", "behavior_timeline"]
+            missing_keys = [key for key in required_keys if key not in data]
+            
+            if missing_keys:
+                st.warning(f"⚠️ File missing fields: {', '.join(missing_keys)}, will attempt compatible loading")
+            
+            return True
+            
+        elif isinstance(data, list):
+            # Single data format validation
+            if not data:
+                st.warning("⚠️ File is empty list")
+                return True
+            
+            # Check if it's chapter dialogue format
+            if all(isinstance(item, dict) and "dialogue" in item for item in data):
+                st.info("ℹ️ Detected chapter dialogue format")
+                return True
+            
+            # Check if it's sentence dialogue format
+            if all(isinstance(item, dict) and "sentence" in item for item in data):
+                st.info("ℹ️ Detected sentence dialogue format")
+                return True
+            
+            # Check if it's behavior timeline format
+            if all(isinstance(item, dict) and "behavior" in item for item in data):
+                st.info("ℹ️ Detected behavior timeline format")
+                return True
+            
+            st.warning("⚠️ Unrecognized data format, will attempt generic loading")
+            return True
+        
+        else:
+            st.error("❌ Unsupported data format, please upload JSON format dialogue file")
+            return False
+    
+    except Exception as e:
+        st.error(f"❌ File validation failed: {str(e)}")
+        return False
+
+def export_dialogue_files():
+    """Export dialogue files"""
+    if not st.session_state.get('dialogue_data'):
+        st.warning("⚠️ No dialogue data available to export")
+        return
+    
+    st.markdown("##### 📤 Export Dialogue Files")
+    
+    # Export options
+    export_format = st.radio(
+        "Select Export Format",
+        ["Complete Data (JSON)", "Chapter Dialogues (JSON)", "Sentence Dialogues (JSON)", "Behavior Timeline (JSON)", "Readable Text (TXT)"],
+        key="dialogue_export_format"
+    )
+    
+    try:
+        dialogue_data = st.session_state.dialogue_data
+        
+        if export_format == "Complete Data (JSON)":
+            export_data = dialogue_data
+            filename = f"dialogue_complete_{st.session_state.current_version}.json"
+            
+        elif export_format == "Chapter Dialogues (JSON)":
+            export_data = dialogue_data.get("chapter_dialogues", [])
+            filename = f"chapter_dialogues_{st.session_state.current_version}.json"
+            
+        elif export_format == "Sentence Dialogues (JSON)":
+            export_data = dialogue_data.get("sentence_dialogues", [])
+            filename = f"sentence_dialogues_{st.session_state.current_version}.json"
+            
+        elif export_format == "Behavior Timeline (JSON)":
+            export_data = dialogue_data.get("behavior_timeline", [])
+            filename = f"behavior_timeline_{st.session_state.current_version}.json"
+            
+        elif export_format == "Readable Text (TXT)":
+            export_data = generate_dialogue_text_format(dialogue_data)
+            filename = f"dialogue_readable_{st.session_state.current_version}.txt"
+        
+        # Generate download content
+        if export_format.endswith("(JSON)"):
+            download_content = json.dumps(export_data, ensure_ascii=False, indent=2)
+        else:
+            download_content = export_data
+        
+        # Download button
+        st.download_button(
+            label=f"📥 Download {filename}",
+            data=download_content,
+            file_name=filename,
+            mime="application/json" if export_format.endswith("(JSON)") else "text/plain",
+            use_container_width=True
+        )
+        
+        # Display preview
+        with st.expander("📄 Export Preview", expanded=False):
+            if export_format.endswith("(JSON)"):
+                st.json(export_data)
+            else:
+                st.text(download_content[:1000] + "..." if len(download_content) > 1000 else download_content)
+        
+    except Exception as e:
+        st.error(f"❌ Export failed: {str(e)}")
+
+def generate_dialogue_text_format(dialogue_data):
+    """Generate readable text format dialogue"""
+    lines = []
+    lines.append(f"Story Dialogue Content - {st.session_state.current_version}")
+    lines.append("=" * 50)
+    lines.append("")
+    
+    # Chapter dialogues
+    chapter_dialogues = dialogue_data.get("chapter_dialogues", [])
+    for i, chapter in enumerate(chapter_dialogues):
+        lines.append(f"Chapter {i+1} Dialogue")
+        lines.append("-" * 20)
+        
+        dialogues = chapter.get("dialogue", [])
+        if dialogues:
+            for j, dialogue in enumerate(dialogues):
+                speaker = dialogue.get("speaker", "Unknown")
+                content = dialogue.get("dialogue", "")
+                action = dialogue.get("action", "")
+                
+                lines.append(f"{j+1}. {speaker}: {content}")
+                if action:
+                    lines.append(f"   [{action}]")
+                lines.append("")
+        else:
+            lines.append("   (No dialogue content)")
+            lines.append("")
+        
+        lines.append("")
+    
+    # Behavior statistics
+    behavior_timeline = dialogue_data.get("behavior_timeline", [])
+    if behavior_timeline:
+        lines.append("Character Behavior Statistics")
+        lines.append("-" * 20)
+        
+        # Group statistics by character
+        character_behaviors = {}
+        for item in behavior_timeline:
+            char = item.get("character", "Unknown")
+            behavior = item.get("behavior", "")
+            if char not in character_behaviors:
+                character_behaviors[char] = []
+            if behavior not in character_behaviors[char]:
+                character_behaviors[char].append(behavior)
+        
+        for char, behaviors in character_behaviors.items():
+            lines.append(f"{char}: {', '.join(behaviors)}")
+        
+        lines.append("")
+    
+    return "\n".join(lines)
+
+# ==================== Story Enhancement Features ====================
+
+def save_enhancement_to_history(action_name, old_enhancement_data=None):
+    """Save story enhancement data to history"""
+    try:
+        if old_enhancement_data is None:
+            old_enhancement_data = copy.deepcopy(st.session_state.enhanced_story_data) if st.session_state.enhanced_story_data else {}
+        
+        # Create history record entry
+        history_entry = {
+            "timestamp": datetime.datetime.now().isoformat(),
+            "action": action_name,
+            "enhancement_data": old_enhancement_data,
+            "data_size": len(str(old_enhancement_data)) if old_enhancement_data else 0
+        }
+        
+        # If not at the end of history records, delete subsequent records
+        if st.session_state.enhancement_history_index < len(st.session_state.enhancement_history) - 1:
+            st.session_state.enhancement_history = st.session_state.enhancement_history[:st.session_state.enhancement_history_index + 1]
+        
+        # Add new record
+        st.session_state.enhancement_history.append(history_entry)
+        st.session_state.enhancement_history_index = len(st.session_state.enhancement_history) - 1
+        
+        # Limit number of history records
+        max_history = 20
+        if len(st.session_state.enhancement_history) > max_history:
+            st.session_state.enhancement_history = st.session_state.enhancement_history[-max_history:]
+            st.session_state.enhancement_history_index = len(st.session_state.enhancement_history) - 1
+        
+        print(f"💾 [Enhancement History] Save operation: {action_name}, current index: {st.session_state.enhancement_history_index}")
+        
+    except Exception as e:
+        print(f"❌ [Enhancement History] Save failed: {str(e)}")
+
+def undo_enhancement_action():
+    """Undo story enhancement operation"""
+    if st.session_state.enhancement_history_index > 0:
+        st.session_state.enhancement_history_index -= 1
+        history_entry = st.session_state.enhancement_history[st.session_state.enhancement_history_index]
+        st.session_state.enhanced_story_data = copy.deepcopy(history_entry["enhancement_data"])
+        st.success(f"↩️ Undid operation: {history_entry['action']}")
+        st.rerun()
+    else:
+        st.warning("⚠️ No actions to undo")
+
+def redo_enhancement_action():
+    """Redo story enhancement operation"""
+    if st.session_state.enhancement_history_index < len(st.session_state.enhancement_history) - 1:
+        st.session_state.enhancement_history_index += 1
+        history_entry = st.session_state.enhancement_history[st.session_state.enhancement_history_index]
+        st.session_state.enhanced_story_data = copy.deepcopy(history_entry["enhancement_data"])
+        st.success(f"↪️ Redid operation: {history_entry['action']}")
+        st.rerun()
+    else:
+        st.warning("⚠️ No actions to redo")
+
+def show_story_enhancement_interface():
+    """Display story enhancement interface - as main process step"""
+    st.header("✨ Step 5: Story Enhancement")
+    
+    # Check prerequisites
+    if not st.session_state.outline_data:
+        st.error("❌ Please complete Step 1 first: Generate Story Outline")
+        return
+    
+    if not st.session_state.characters_data:
+        st.error("❌ Please complete Step 2 first: Generate Characters")
+        return
+    
+    if not st.session_state.get('story_data'):
+        st.error("❌ Please complete Step 3 first: Generate Story Content")
+        return
+    
+    if not st.session_state.get('dialogue_data'):
+        st.error("❌ Please complete Step 4 first: Generate Dialogue Content")
+        return
+    
+    # Check if story enhancement feature is available
+    if not story_enhancement_available:
+        st.error("❌ Story enhancement feature unavailable, please check backend module import")
+        return
+    
+    # Display dialogue-based story enhancement interface
+    show_story_enhancement_mode()
+
+def show_story_enhancement_mode():
+    """Story enhancement mode selection"""
+    st.markdown("### ✨ Story Enhancement Options")
+    
+    # Create tabs
+    tab1, tab2, tab3, tab4 = st.tabs(["✨ Generate Enhanced", "📜 Enhanced Preview", "✏️ Edit Enhancement", "📁 File Management"])
+    
+    with tab1:
+        show_enhancement_generation_options()
+    
+    with tab2:
+        show_enhancement_display()
+    
+    with tab3:
+        show_enhancement_edit_mode()
+    
+    with tab4:
+        show_enhancement_file_management()
+
+def show_enhancement_generation_options():
+    """Story enhancement generation options"""
+    st.markdown("#### ✨ Generate Enhanced Story")
+    
+    # Enhancement parameter configuration
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("##### 📝 Enhancement Options")
+        enable_transitions = st.checkbox("Add Chapter Transitions", value=True, help="Add natural transition sentences between chapters", key="gen_transitions_checkbox")
+        enable_polish = st.checkbox("Polish Dialogue", value=True, help="Naturally integrate dialogue into narrative", key="gen_polish_checkbox")
+        auto_save = st.checkbox("Auto Save", value=True, help="Automatically save to project directory after generation", key="gen_auto_save_checkbox")
+    
+    with col2:
+        st.markdown("##### 🔧 Generation Parameters")
+        use_cache = st.checkbox("Use Cache", value=True, help="Whether to use cache if enhanced data already exists", key="gen_use_cache_checkbox")
+        
+        # Display current status
+        if st.session_state.get('enhanced_story_data'):
+            st.info("📄 Enhanced version available")
+        else:
+            st.info("📄 Enhanced version not generated yet")
+    
+    st.markdown("---")
+    
+    # Generation buttons
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        if st.button("✨ Generate Enhanced Story", type="primary", use_container_width=True):
+            generate_enhanced_story(
+                enable_transitions=enable_transitions,
+                enable_polish=enable_polish,
+                use_cache=use_cache,
+                auto_save=auto_save
+            )
+    
+    with col2:
+        if st.button("🔄 Regenerate", use_container_width=True):
+            regenerate_enhanced_story(
+                enable_transitions=enable_transitions,
+                enable_polish=enable_polish
+            )
+    
+    with col3:
+        if st.button("📁 Load Existing Enhancement", use_container_width=True):
+            st.session_state.show_enhancement_loader = True
+            st.rerun()
+    
+    # Display enhancement loader
+    if st.session_state.get('show_enhancement_loader', False):
+        load_existing_enhancement("generation_options")
+
+def generate_enhanced_story(enable_transitions=True, enable_polish=True, use_cache=True, auto_save=True):
+    """Generate enhanced story"""
+    try:
+        print(f"✨✨✨ [Story Enhancement] ===== Starting to generate enhanced story =====")
+        print(f"✨ [Story Enhancement] Add transitions: {enable_transitions}")
+        print(f"✨ [Story Enhancement] Polish dialogue: {enable_polish}")
+        print(f"✨ [Story Enhancement] Use cache: {use_cache}")
+        print(f"✨ [Story Enhancement] Auto save: {auto_save}")
+        
+        # Save current state to history
+        save_enhancement_to_history("Before generating enhanced story")
+        
+        with st.spinner("✨ Generating enhanced story..."):
+            start_time = time.time()
+            
+            # Prepare temporary file to simulate backend call
+            temp_version = f"temp_enhance_{int(time.time())}"
+            
+            # Create temporary directory and file
+            temp_dir = f"data/output/{temp_version}"
+            os.makedirs(temp_dir, exist_ok=True)
+            
+            # Save necessary data to temporary directory
+            save_json(st.session_state.outline_data, temp_version, "test_reorder_outline.json")
+            save_json(st.session_state.story_data, temp_version, "story_updated.json")
+            save_json(st.session_state.characters_data, temp_version, "characters.json")
+            
+            # Save dialogue data
+            dialogue_data = st.session_state.dialogue_data
+            if isinstance(dialogue_data, dict):
+                sentence_dialogues = dialogue_data.get("sentence_dialogues", [])
+            else:
+                sentence_dialogues = dialogue_data
+            
+            save_json(sentence_dialogues, temp_version, "dialogue_updated.json")
+            
+            enhanced_content = ""
+            polished_content = ""
+            
+            # Step 1: Add chapter transitions
+            if enable_transitions:
+                print("✨ [Story Enhancement] Starting to add chapter transitions...")
+                enhance_story_with_transitions(task_name=temp_version, input_story_file="story_updated.json")
+                
+                # Read enhanced result
+                enhanced_path = f"data/output/{temp_version}/enhanced_story_updated.md"
+                if os.path.exists(enhanced_path):
+                    with open(enhanced_path, 'r', encoding='utf-8') as f:
+                        enhanced_content = f.read()
+                    print("✨ [Story Enhancement] Chapter transition addition completed")
+                else:
+                    st.warning("⚠️ Chapter transition generation failed, will use original content")
+                    enhanced_content = compile_enhanced_story_manually()
+            else:
+                enhanced_content = compile_enhanced_story_manually()
+            
+            # Step 2: Polish dialogue
+            if enable_polish and enhanced_content:
+                print("✨ [Story Enhancement] Starting to polish dialogue...")
+                
+                # Write enhanced content to temporary file for polishing
+                with open(f"data/output/{temp_version}/enhanced_story_updated.md", 'w', encoding='utf-8') as f:
+                    f.write(enhanced_content)
+                
+                polish_dialogues_in_story(task_name=temp_version, input_dialogue_file="dialogue_updated.json")
+                
+                # Read polishing result
+                polished_path = f"data/output/{temp_version}/enhanced_story_dialogue_updated.md"
+                if os.path.exists(polished_path):
+                    with open(polished_path, 'r', encoding='utf-8') as f:
+                        polished_content = f.read()
+                    print("✨ [Story Enhancement] Dialogue polishing completed")
+                else:
+                    st.warning("⚠️ Dialogue polishing failed, will use transition version")
+                    polished_content = enhanced_content
+            else:
+                polished_content = enhanced_content
+            
+            end_time = time.time()
+            
+            # Save enhancement result
+            st.session_state.enhanced_story_data = {
+                "enhanced_content": enhanced_content,
+                "polished_content": polished_content,
+                "final_content": polished_content or enhanced_content,
+                "generation_params": {
+                    "enable_transitions": enable_transitions,
+                    "enable_polish": enable_polish,
+                    "timestamp": datetime.datetime.now().isoformat(),
+                    "processing_time": end_time - start_time
+                },
+                "temp_version": temp_version
+            }
+            
+            # Clean temporary files
+            try:
+                import shutil
+                shutil.rmtree(temp_dir)
+                print(f"✨ [Story Enhancement] Cleaned temporary directory: {temp_dir}")
+            except Exception as e:
+                print(f"❌ [Story Enhancement] Temporary directory cleanup failed: {e}")
+            
+            # Log operation
+            log_backend_operation(
+                "Story Enhancement", 
+                {
+                    "enable_transitions": enable_transitions,
+                    "enable_polish": enable_polish,
+                    "story_chapters": len(st.session_state.story_data),
+                    "dialogue_sentences": len(sentence_dialogues)
+                },
+                start_time, end_time, 
+                {
+                    "enhanced_content_length": len(enhanced_content),
+                    "polished_content_length": len(polished_content),
+                    "final_content_length": len(polished_content or enhanced_content)
+                }
+            )
+            
+            print(f"✨ [Story Enhancement] Enhanced content length: {len(enhanced_content)}")
+            print(f"✨ [Story Enhancement] Polished content length: {len(polished_content)}")
+            print(f"✨✨✨ [Story Enhancement] ===== Enhancement completed =====")
+            
+            st.success(f"✅ Story enhancement completed! Generated {len(polished_content or enhanced_content)} characters of enhanced story")
+            
+            # Display enhancement statistics
+            with st.expander("📈 Enhancement Statistics", expanded=True):
+                col1, col2, col3 = st.columns(3)
+                with col1:
+                    st.metric("Processing Time", f"{end_time - start_time:.1f} seconds")
+                with col2:
+                    st.metric("Final Content Length", f"{len(polished_content or enhanced_content):,} characters")
+                with col3:
+                    enhancement_features = []
+                    if enable_transitions:
+                        enhancement_features.append("Chapter Transitions")
+                    if enable_polish:
+                        enhancement_features.append("Dialogue Polish")
+                    st.metric("Enhancement Features", " + ".join(enhancement_features) if enhancement_features else "None")
+            
+            # Auto save
+            if auto_save:
+                save_enhancement_to_project("auto_save")
+            
+            # Save operation to history
+            save_enhancement_to_history("Enhanced story generation completed")
+            
+    except Exception as e:
+        error_msg = f"Story enhancement failed: {str(e)}"
+        print(f"❌ [Story Enhancement] {error_msg}")
+        st.error(f" {error_msg}")
+        
+        # Log error
+        log_backend_operation(
+            "Story Enhancement Failed", 
+            {"error": str(e)},
+            time.time(), time.time(), None, e
+        )
+
+def compile_enhanced_story_manually():
+    """Manually compile enhanced story (as fallback option)"""
+    try:
+        print("📝 [Story Enhancement] Using manual compilation method...")
+        
+        # Use existing compilation functionality
+        dialogue_data = st.session_state.dialogue_data
+        if isinstance(dialogue_data, dict):
+            sentence_dialogues = dialogue_data.get("sentence_dialogues", [])
+        else:
+            sentence_dialogues = dialogue_data
+        
+        compiled_content = compile_full_story_by_sentence(st.session_state.story_data, sentence_dialogues)
+        return compiled_content
+        
+    except Exception as e:
+        print(f"❌ [Story Enhancement] Manual compilation failed: {e}")
+        return "Manual compilation failed, please check data format"
+
+def regenerate_enhanced_story(enable_transitions=True, enable_polish=True):
+    """Regenerate enhanced story"""
+    # Clear existing enhancement data and force regeneration
+    if st.session_state.get('enhanced_story_data'):
+        save_enhancement_to_history("Before Regeneration")
+        st.session_state.enhanced_story_data = {}
+    
+    generate_enhanced_story(
+        enable_transitions=enable_transitions,
+        enable_polish=enable_polish,
+        use_cache=False,
+        auto_save=True
+    )
+
+def show_enhancement_display():
+    """Display enhanced story content"""
+    if not st.session_state.get('enhanced_story_data'):
+        st.info("📝 No enhanced story available, please generate first")
+        return
+    
+    st.markdown("#### 📜 Enhanced Story Preview")
+    
+    enhanced_data = st.session_state.enhanced_story_data
+    
+    # Display enhancement information
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        params = enhanced_data.get('generation_params', {})
+        st.info(f"📅 Generation Time: {params.get('timestamp', 'Unknown')[:19].replace('T', ' ')}")
+    
+    with col2:
+        processing_time = enhanced_data.get('generation_params', {}).get('processing_time', 0)
+        st.info(f"⏱️ Processing Time: {processing_time:.1f} seconds")
+    
+    with col3:
+        final_content = enhanced_data.get('final_content', '')
+        st.info(f"📄 Content Length: {len(final_content):,} characters")
+    
+    # Display enhancement features
+    params = enhanced_data.get('generation_params', {})
+    enhancement_features = []
+    if params.get('enable_transitions'):
+        enhancement_features.append("✨ Chapter Transitions")
+    if params.get('enable_polish'):
+        enhancement_features.append("💬 Dialogue Polish")
+    
+    if enhancement_features:
+        st.success(f"✅ Enabled features: {' + '.join(enhancement_features)}")
+    
+    st.markdown("---")
+    
+    # Create display tabs
+    tab1, tab2, tab3 = st.tabs(["📖 Final Version", "✨ Chapter Transitions", "💬 Dialogue Polish"])
+    
+    with tab1:
+        st.markdown("##### 📖 Final Enhanced Version")
+        final_content = enhanced_data.get('final_content', '')
+        if final_content:
+            st.text_area("Final Enhanced Content", final_content, height=600, key="final_enhanced_content")
+            
+            # Download button
+            if st.download_button(
+                "📥 Download Final Version",
+                final_content,
+                file_name=f"enhanced_story_final_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.md",
+                mime="text/markdown",
+                use_container_width=True
+            ):
+                st.success(" File download started")
+        else:
+            st.info("📝 No Final Version content")
+    
+    with tab2:
+        st.markdown("##### ✨ Chapter Transitions Version")
+        enhanced_content = enhanced_data.get('enhanced_content', '')
+        if enhanced_content:
+            st.text_area("Chapter Transition Content", enhanced_content, height=600, key="transition_enhanced_content")
+            
+            if st.download_button(
+                "📥 Download Transitions Version",
+                enhanced_content,
+                file_name=f"enhanced_story_transitions_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.md",
+                mime="text/markdown",
+                use_container_width=True
+            ):
+                st.success(" File download started")
+        else:
+            st.info("📝 No Chapter Transitions version content")
+    
+    with tab3:
+        st.markdown("##### 💬 Dialogue Polish Version")
+        polished_content = enhanced_data.get('polished_content', '')
+        if polished_content:
+            st.text_area("Dialogue Polish Content", polished_content, height=600, key="polished_enhanced_content")
+            
+            if st.download_button(
+                "📥 Download Polish Version",
+                polished_content,
+                file_name=f"enhanced_story_polished_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.md",
+                mime="text/markdown",
+                use_container_width=True
+            ):
+                st.success(" File download started")
+        else:
+            st.info("📝 No Dialogue Polish version content")
+
+def show_enhancement_edit_mode():
+    """Enhanced story edit mode"""
+    if not st.session_state.get('enhanced_story_data'):
+        st.info("📝 No enhanced story available, please generate first")
+        return
+    
+    st.markdown("#### ✏️ Edit Enhanced Story")
+    
+    # Create edit tabs
+    tab1, tab2, tab3 = st.tabs(["🔄 Regenerate", "✏️ Manual Edit", "📋 History"])
+    
+    with tab1:
+        show_enhancement_regeneration_options()
+    
+    with tab2:
+        show_enhancement_manual_edit()
+    
+    with tab3:
+        show_enhancement_history_panel()
+
+def show_enhancement_regeneration_options():
+    """Enhanced story regeneration options"""
+    st.markdown("##### 🔄 Regenerate Enhanced Version")
+    
+    # Regeneration options
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("** Regeneration Scope**")
+        regen_scope = st.radio(
+            "Select Regeneration Scope",
+            ["Complete Regeneration", "Chapter Transitions Only", "Dialogue Polish Only"],
+            key="enhancement_regen_scope"
+        )
+    
+    with col2:
+        st.markdown("**Generation Parameters**")
+        enable_transitions = st.checkbox("Add Chapter Transitions", value=True, key="regen_transitions")
+        enable_polish = st.checkbox("Polish Dialogue", value=True, key="regen_polish")
+    
+    st.markdown("---")
+    
+    # Regeneration buttons
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        if st.button("🔄 Complete Regeneration", type="primary", use_container_width=True):
+            regenerate_enhanced_story(enable_transitions, enable_polish)
+    
+    with col2:
+        if st.button("✨ Regenerate Transitions Only", use_container_width=True):
+            regenerate_enhanced_story(True, False)
+    
+    with col3:
+        if st.button("💎 Polish Dialogue Only", use_container_width=True):
+            regenerate_enhanced_story(False, True)
+
+def show_enhancement_manual_edit():
+    """Manual edit enhanced content"""
+    st.markdown("##### ✏️ Manual Edit Enhanced Content")
+    
+    enhanced_data = st.session_state.enhanced_story_data
+    current_content = enhanced_data.get('final_content', '')
+    
+    # Edit area
+    edited_content = st.text_area(
+        "Edit Enhanced Content",
+        current_content,
+        height=500,
+        key="manual_edit_enhancement",
+        help="Manually edit enhanced story content here"
+    )
+    
+    # Edit operation buttons
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        if st.button("💾 Save Edit", type="primary", use_container_width=True):
+            save_manual_enhancement_edit(edited_content)
+    
+    with col2:
+        if st.button("🔄 Reset Content", use_container_width=True):
+            st.session_state['manual_edit_enhancement'] = current_content
+            st.rerun()
+    
+    with col3:
+        if st.button("🔍 Preview Changes", use_container_width=True):
+            show_enhancement_edit_preview(current_content, edited_content)
+
+def save_manual_enhancement_edit(edited_content):
+    """Save manually edited enhanced content"""
+    try:
+        # Save state before edit to history
+        save_enhancement_to_history("Before Manual Edit")
+        
+        # Update enhanced data
+        st.session_state.enhanced_story_data['final_content'] = edited_content
+        st.session_state.enhanced_story_data['manual_edited'] = True
+        st.session_state.enhanced_story_data['edit_timestamp'] = datetime.datetime.now().isoformat()
+        
+        # Save state after edit to history
+        save_enhancement_to_history("Manual Edit Completed")
+        
+        st.success("✅ Enhanced content has been saved")
+        
+        # Log operation
+        print(f"✅ [Story Enhancement] Manual edit saved successfully, content length: {len(edited_content)}")
+        
+    except Exception as e:
+        error_msg = f"Save edit failed: {str(e)}"
+        print(f"❌ [Story Enhancement] {error_msg}")
+        st.error(f" {error_msg}")
+
+def show_enhancement_edit_preview(original_content, edited_content):
+    """Show edit preview comparison"""
+    st.markdown("##### 📝 Edit Changes Preview")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("**Original Content**")
+        st.text_area("Original", original_content[:1000] + "..." if len(original_content) > 1000 else original_content, height=300, disabled=True)
+        st.info(f"Original length: {len(original_content):,} characters")
+    
+    with col2:
+        st.markdown("**Edited Content**")
+        st.text_area("Edited", edited_content[:1000] + "..." if len(edited_content) > 1000 else edited_content, height=300, disabled=True)
+        st.info(f"Edited length: {len(edited_content):,} characters")
+    
+    # Change statistics
+    length_change = len(edited_content) - len(original_content)
+    if length_change > 0:
+        st.success(f"📈 Content increased by {length_change:,} characters")
+    elif length_change < 0:
+        st.warning(f"📉 Content decreased by {abs(length_change):,} characters")
+    else:
+        st.info("📏 Content length unchanged")
+
+def show_enhancement_history_panel():
+    """Show enhancement history panel"""
+    st.markdown("##### 📜 Enhancement History")
+    
+    if not st.session_state.enhancement_history:
+        st.info("📝 No history records")
+        return
+    
+    # History operation controls
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        if st.button("↩️ Undo", use_container_width=True):
+            undo_enhancement_action()
+    
+    with col2:
+        if st.button("↪️ Redo", use_container_width=True):
+            redo_enhancement_action()
+    
+    with col3:
+        current_index = st.session_state.enhancement_history_index
+        total_history = len(st.session_state.enhancement_history)
+        st.info(f"📍 Position: {current_index + 1}/{total_history}")
+    
+    st.markdown("---")
+    
+    # History list
+    st.markdown("**📜 History Operation Records**")
+    
+    for i, entry in enumerate(reversed(st.session_state.enhancement_history)):
+        actual_index = len(st.session_state.enhancement_history) - 1 - i
+        is_current = actual_index == st.session_state.enhancement_history_index
+        
+        with st.expander(
+            f"{'🔸' if is_current else ''} {entry['action']} - {entry['timestamp'][:19].replace('T', ' ')}",
+            expanded=is_current
+        ):
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.markdown(f"**Operation**: {entry['action']}")
+                st.markdown(f"**Time**: {entry['timestamp'][:19].replace('T', ' ')}")
+            
+            with col2:
+                st.markdown(f"**Data Size**: {entry['data_size']:,} characters")
+                if st.button(f"📍 Jump to This Version", key=f"jump_to_{actual_index}"):
+                    st.session_state.enhancement_history_index = actual_index
+                    if actual_index < len(st.session_state.enhancement_history):
+                        history_entry = st.session_state.enhancement_history[actual_index]
+                        st.session_state.enhanced_story_data = copy.deepcopy(history_entry["enhancement_data"])
+                        st.success(f"✅ Jumped to: {history_entry['action']}")
+                        st.rerun()
+
+def show_enhancement_file_management():
+    """Enhanced Story File Management"""
+    st.markdown("#### 📁 Enhanced Story File Management")
+    
+    # File operation tabs
+    tab1, tab2, tab3 = st.tabs(["💾 Save Files", "📁 Load Files", "📤 Export Files"])
+    
+    with tab1:
+        save_enhancement_to_project("file_management")
+    
+    with tab2:
+        load_existing_enhancement("file_management")
+    
+    with tab3:
+        export_enhancement_files()
+
+def save_enhancement_to_project(context="default"):
+    """Save Enhanced Story to Project directory"""
+    if not st.session_state.get('enhanced_story_data'):
+        st.info("📝 No enhancement data available to save")
+        return
+    
+    st.markdown("##### 💾 Save Enhanced Story to Project")
+    
+    try:
+        # Get current version information
+        current_version = get_current_version()
+        if not current_version:
+            st.error("❌ Unable to determine current project version")
+            return
+        
+        enhanced_data = st.session_state.enhanced_story_data
+        
+        # Save options
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            save_final = st.checkbox("Save Final Version", value=True, key=f"save_final_checkbox_{context}")
+            save_transitions = st.checkbox("Save Chapter Transitions", value=False, key=f"save_transitions_checkbox_{context}")
+        
+        with col2:
+            save_polished = st.checkbox("Save Dialogue Polish", value=False, key=f"save_polished_checkbox_{context}")
+            save_metadata = st.checkbox("Save Metadata", value=True, key=f"save_metadata_checkbox_{context}")
+        
+        if st.button("💾 Execute Save", type="primary", use_container_width=True, key=f"save_execute_btn_{context}"):
+            saved_files = []
+            
+            # Save Final Version
+            if save_final and enhanced_data.get('final_content'):
+                final_path = f"data/output/{current_version}/enhanced_story_final.md"
+                with open(final_path, 'w', encoding='utf-8') as f:
+                    f.write(enhanced_data['final_content'])
+                saved_files.append("enhanced_story_final.md")
+            
+            # Save Chapter Transitions
+            if save_transitions and enhanced_data.get('enhanced_content'):
+                transitions_path = f"data/output/{current_version}/enhanced_story_transitions.md"
+                with open(transitions_path, 'w', encoding='utf-8') as f:
+                    f.write(enhanced_data['enhanced_content'])
+                saved_files.append("enhanced_story_transitions.md")
+            
+            # Save Dialogue Polish version
+            if save_polished and enhanced_data.get('polished_content'):
+                polished_path = f"data/output/{current_version}/enhanced_story_polished.md"
+                with open(polished_path, 'w', encoding='utf-8') as f:
+                    f.write(enhanced_data['polished_content'])
+                saved_files.append("enhanced_story_polished.md")
+            
+            # Save metadata
+            if save_metadata:
+                metadata = {
+                    "generation_params": enhanced_data.get('generation_params', {}),
+                    "manual_edited": enhanced_data.get('manual_edited', False),
+                    "edit_timestamp": enhanced_data.get('edit_timestamp'),
+                    "save_timestamp": datetime.datetime.now().isoformat(),
+                    "content_lengths": {
+                        "final": len(enhanced_data.get('final_content', '')),
+                        "enhanced": len(enhanced_data.get('enhanced_content', '')),
+                        "polished": len(enhanced_data.get('polished_content', ''))
+                    }
+                }
+                metadata_path = f"data/output/{current_version}/enhanced_story_metadata.json"
+                save_json(metadata, current_version, "enhanced_story_metadata.json")
+                saved_files.append("enhanced_story_metadata.json")
+            
+            st.success(f"✅ Saved {len(saved_files)} files to data/output/{current_version}/")
+            for file in saved_files:
+                st.info(f"📄 {file}")
+            
+            print(f"✅ [Story Enhancement] Save files to project: {saved_files}")
+    
+    except Exception as e:
+        error_msg = f"Save files failed: {str(e)}"
+        print(f"❌ [Story Enhancement] {error_msg}")
+        st.error(f" {error_msg}")
+
+def load_existing_enhancement(context="default"):
+    """Load existing enhancement files"""
+    st.markdown("##### 📁 Load Existing Enhancement")
+    
+    # Add session state to prevent duplicate uploader after successful upload
+    upload_flag_key = f'enhancement_file_uploaded_{context}'
+    if st.session_state.get(upload_flag_key, False):
+        st.success("✅ File uploaded successfully! The page will refresh automatically.")
+        # Reset flag after display
+        st.session_state[upload_flag_key] = False
+        return
+    
+    uploaded_file = st.file_uploader(
+        "Select Enhancement File",
+        type=['md', 'json'],
+        help="Supports .md files (story content) or .json files (with metadata)",
+        key=f"enhancement_file_uploader_{context}"
+    )
+    
+    if uploaded_file is not None:
+        try:
+            # Read file content
+            uploaded_file.seek(0)
+            
+            if uploaded_file.name.endswith('.md'):
+                # Markdown file
+                content = uploaded_file.read().decode('utf-8')
+                
+                # Save state before loading
+                save_enhancement_to_history("Before Loading Files")
+                
+                # Create enhancement data
+                st.session_state.enhanced_story_data = {
+                    "final_content": content,
+                    "enhanced_content": content,
+                    "polished_content": content,
+                    "generation_params": {
+                        "loaded_from_file": True,
+                        "filename": uploaded_file.name,
+                        "timestamp": datetime.datetime.now().isoformat()
+                    }
+                }
+                
+                st.success(f"✅ Loaded enhanced file: {uploaded_file.name}")
+                st.info(f"📄 Content length: {len(content):,} characters")
+                
+            elif uploaded_file.name.endswith('.json'):
+                # JSON metadata file
+                import json
+                data = json.loads(uploaded_file.read().decode('utf-8'))
+                
+                if 'final_content' in data or 'enhanced_content' in data:
+                    save_enhancement_to_history("Before loading JSON file")
+                    st.session_state.enhanced_story_data = data
+                    st.success(f"✅ Loaded enhanced data: {uploaded_file.name}")
+                else:
+                    st.error("❌ JSON file format incorrect, missing required content fields")
+            
+            # Save state after loading
+            save_enhancement_to_history("File loading completed")
+            
+            print(f"📁 [Story Enhancement] Load file success: {uploaded_file.name}")
+            
+            # Set flag to prevent duplicate uploader
+            st.session_state[upload_flag_key] = True
+            st.rerun()
+            
+        except Exception as e:
+            error_msg = f"Load file failed: {str(e)}"
+            print(f"❌ [Story Enhancement] {error_msg}")
+            st.error(f" {error_msg}")
+
+def export_enhancement_files():
+    """Export enhanced files"""
+    if not st.session_state.get('enhanced_story_data'):
+        st.info("📝 No enhanced data available for export")
+        return
+    
+    st.markdown("##### 📤 Export Enhanced Files")
+    
+    enhanced_data = st.session_state.enhanced_story_data
+    
+    # Export options
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("**📄 Content Export**")
+        
+        # Final Version download
+        if enhanced_data.get('final_content'):
+            st.download_button(
+                "📥 Download Final Version (.md)",
+                enhanced_data['final_content'],
+                file_name=f"enhanced_story_final_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.md",
+                mime="text/markdown",
+                use_container_width=True
+            )
+        
+        # Chapter Transitions version download
+        if enhanced_data.get('enhanced_content'):
+            st.download_button(
+                "📥 Download Transitions Version (.md)",
+                enhanced_data['enhanced_content'],
+                file_name=f"enhanced_story_transitions_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.md",
+                mime="text/markdown",
+                use_container_width=True
+            )
+    
+    with col2:
+        st.markdown("**📊 Data Export**")
+        
+        # Complete data export
+        import json
+        complete_data = json.dumps(enhanced_data, ensure_ascii=False, indent=2)
+        st.download_button(
+            "📥 Download Complete Data (.json)",
+            complete_data,
+            file_name=f"enhanced_story_complete_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
+            mime="application/json",
+            use_container_width=True
+        )
+        
+        # Metadata export
+        metadata = {
+            "generation_params": enhanced_data.get('generation_params', {}),
+            "content_lengths": {
+                "final": len(enhanced_data.get('final_content', '')),
+                "enhanced": len(enhanced_data.get('enhanced_content', '')),
+                "polished": len(enhanced_data.get('polished_content', ''))
+            },
+            "export_timestamp": datetime.datetime.now().isoformat()
+        }
+        metadata_json = json.dumps(metadata, ensure_ascii=False, indent=2)
+        st.download_button(
+            "📥 Download Metadata (.json)",
+            metadata_json,
+            file_name=f"enhanced_story_metadata_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
+            mime="application/json",
+            use_container_width=True
+        )
+
+# ================================
+#  Performance Analysis Interface
+# ================================
+
+def show_performance_analysis_interface():
+    """Display performance analysis interface"""
+    st.header(" Performance Analysis Center")
+    st.markdown("---")
+    
+    # Top operation bar
+    col1, col2, col3 = st.columns([2, 1, 1])
+    
+    with col1:
+        st.markdown("###  Computational Complexity Analysis & Performance Monitoring")
+    
+    with col2:
+        if st.button("🔄 Refresh Data", use_container_width=True):
+            st.rerun()
+    
+    with col3:
+        if st.button("← Return to Main", use_container_width=True):
+            st.session_state.show_performance_analysis = False
+            st.rerun()
+    
+    # Tab interface
+    tab1, tab2, tab3, tab4 = st.tabs(["📈 Single Analysis", "🔄 Comparative Analysis", "⚡ Real-time Monitoring", "📊 Historical Reports"])
+    
+    with tab1:
+        show_single_performance_analysis()
+    
+    with tab2:
+        show_comparative_performance_analysis()
+    
+    with tab3:
+        show_real_time_performance_monitor()
+        
+    with tab4:
+        show_performance_history()
+
+
+def show_single_performance_analysis():
+    """Display single performance analysis"""
+    st.markdown("#### 🔍 Single Execution Performance Analysis")
+    
+    # Load performance reports
+    performance_reports = load_available_performance_reports()
+    
+    if not performance_reports:
+        st.warning("📝 No performance analysis reports available. Please run the story generation process first to collect performance data.")
+        
+        # Provide quick start example options
+        with st.expander("🚀 Quick Start"):
+            st.markdown("""
+            **How to generate performance data:**
+            1. Return to main interface, create or load a story outline
+            2. Complete steps such as character generation, story expansion, etc.
+            3. After running the complete process, the system will automatically generate performance analysis reports
+            4. Return to this interface to view detailed performance analysis
+            """)
+        return
+    
+    # Select report to analyze
+    report_options = {f"{report['metadata']['task_name']} ({report['metadata']['analysis_timestamp'][:19]})": report 
+                     for report in performance_reports}
+    selected_report_name = st.selectbox(
+        "📂 Select Report to Analyze",
+        options=list(report_options.keys()),
+        help="Select a performance report for detailed analysis"
+    )
+    
+    if selected_report_name:
+        selected_report = report_options[selected_report_name]
+        
+        # Display basic information
+        display_performance_basic_info(selected_report)
+        
+        st.markdown("---")
+        
+        # Analysis details
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            display_stage_performance_breakdown(selected_report)
+            
+        with col2:
+            display_complexity_analysis_results(selected_report)
+        
+        st.markdown("---")
+        
+        # Text features analysis
+        display_text_features_analysis(selected_report)
+        
+        st.markdown("---")
+        
+        # Memory and API cost detailed analysis
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            display_memory_analysis(selected_report)
+            
+        with col2:
+            display_api_cost_analysis(selected_report)
+
+
+def show_comparative_performance_analysis():
+    """Display comparative performance analysis"""
+    st.markdown("#### 🔄 Multi-Execution Comparative Analysis")
+    
+    performance_reports = load_available_performance_reports()
+    
+    if len(performance_reports) < 2:
+        st.warning("📝 At least 2 performance reports are required for Comparative Analysis.")
+        return
+    
+    # Select reports to compare
+    report_options = {f"{report['metadata']['task_name']} ({report['metadata']['analysis_timestamp'][:19]})": report 
+                     for report in performance_reports}
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        selected_reports_1 = st.multiselect(
+            "📂 Select reports to compare (Baseline Group)",
+            options=list(report_options.keys()),
+            max_selections=5,
+            help="Select performance reports as baseline"
+        )
+    
+    with col2:
+        selected_reports_2 = st.multiselect(
+            "📂 Select reports to compare (Comparison Group)",
+            options=list(report_options.keys()),
+            max_selections=5,
+            help="Select performance reports to compare against baseline"
+        )
+    
+    if selected_reports_1 and selected_reports_2:
+        reports_1 = [report_options[name] for name in selected_reports_1]
+        reports_2 = [report_options[name] for name in selected_reports_2]
+        
+        # Perform Comparative Analysis
+        comparison_result = perform_comparative_analysis(reports_1, reports_2)
+        display_comparison_results(comparison_result)
+
+
+def show_real_time_performance_monitor():
+    """Show real-time performance monitoring"""
+    st.markdown("#### ⚡ Real-time Performance Monitoring")
+    
+    st.info(" This feature will provide real-time performance monitoring while running the story generation process")
+    
+    # If there is a running task, display Real-time Monitoring
+    if st.session_state.get('running_task'):
+        display_real_time_monitor()
+    else:
+        st.markdown("""
+        **Real-time Monitoring Features:**
+        - 🕐 Real-time display of execution time for each stage
+        - 📈 Text generation speed curve
+        - 💾 Real-time computation of complexity metrics
+        - 🚨 Performance anomaly alerts
+        
+        **Usage:**
+        1. Start story generation process from main interface
+        2. Switch to this tab during generation
+        3. View real-time performance data
+        """)
+
+
+def show_performance_history():
+    """Show performance history"""
+    st.markdown("####  Historical Performance Reports")
+    
+    performance_reports = load_available_performance_reports()
+    
+    if not performance_reports:
+        st.info("📝 No historical performance reports")
+        return
+    
+    # Sort by time
+    sorted_reports = sorted(performance_reports, 
+                           key=lambda x: x['metadata']['analysis_timestamp'], 
+                           reverse=True)
+    
+    # Display Historical Reports list
+    for i, report in enumerate(sorted_reports[:20]):  # Only display the last 20
+        with st.expander(f" {report['metadata']['task_name']} - {report['metadata']['analysis_timestamp'][:19]}"):
+            col1, col2, col3, col4 = st.columns(4)
+            
+            with col1:
+                st.metric("Total Time", f"{report['metadata']['total_execution_time']:.2f} seconds")
+            
+            with col2:
+                text_features = report.get('text_features', {})
+                st.metric("Generated Words", f"{text_features.get('total_word_count', 0)} words")
+            
+            with col3:
+                complexity = report.get('complexity_analysis', {})
+                efficiency = complexity.get('efficiency_metrics', {})
+                st.metric("Generation Efficiency", f"{efficiency.get('words_per_second', 0):.2f} words/second")
+            
+            with col4:
+                summary = report.get('performance_summary', {})
+                st.metric("Efficiency Rating", summary.get('efficiency_rating', 'Unknown'))
+            
+            # Detailed button
+            if st.button(f"View Details #{i+1}", key=f"detail_{i}"):
+                st.session_state.selected_detail_report = report
+                st.rerun()
+
+
+def load_available_performance_reports():
+    """Load available performance analysis reports"""
+    import os
+    import json
+    
+    reports = []
+    output_dir = "data/output"
+    
+    if not os.path.exists(output_dir):
+        return reports
+    
+    try:
+        # Traverse all subdirectories to find performance reports
+        for root, dirs, files in os.walk(output_dir):
+            for file in files:
+                if file.startswith("performance_analysis_") and file.endswith(".json"):
+                    filepath = os.path.join(root, file)
+                    try:
+                        with open(filepath, 'r', encoding='utf-8') as f:
+                            report = json.load(f)
+                        reports.append(report)
+                    except Exception as e:
+                        st.warning(f"Cannot load report {file}: {e}")
+    except Exception as e:
+        st.error(f"Error loading report: {e}")
+    
+    return reports
+
+
+def display_performance_basic_info(report):
+    """Display performance report basic information"""
+    metadata = report.get('metadata', {})
+    summary = report.get('performance_summary', {})
+    
+    # First row: time, words, efficiency, rating
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        st.metric(
+            "Total Execution Time",
+            summary.get('total_time_formatted', f"{metadata.get('total_execution_time', 0):.2f} seconds"),
+            help="Total execution time of the complete story generation process"
+        )
+    
+    with col2:
+        text_features = report.get('text_features', {})
+        st.metric(
+            "Generated Words",
+            f"{text_features.get('total_word_count', 0)} words",
+            help="Total number of Chinese characters generated"
+        )
+    
+    with col3:
+        complexity = report.get('complexity_analysis', {})
+        efficiency = complexity.get('efficiency_metrics', {})
+        st.metric(
+            "Generation Efficiency",
+            f"{efficiency.get('words_per_second', 0):.2f} words/second",
+            help="Average number of words generated per second"
+        )
+    
+    with col4:
+        st.metric(
+            "Efficiency Rating",
+            summary.get('efficiency_rating', 'Unknown'),
+            help="Overall rating based on generation efficiency"
+        )
+    
+    # Second row: memory, API cost, token, character
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        peak_memory = metadata.get('peak_memory_usage_mb', 0)
+        st.metric(
+            "Peak Memory",
+            f"{peak_memory:.2f} MB",
+            help="Peak memory usage during generation"
+        )
+    
+    with col2:
+        total_cost = metadata.get('total_api_cost', 0)
+        st.metric(
+            "API Cost",
+            f"${total_cost:.4f}",
+            help="Total API call cost (USD)"
+        )
+    
+    with col3:
+        total_tokens = metadata.get('total_tokens', 0)
+        st.metric(
+            "Token Consumption",
+            f"{total_tokens:,}",
+            help="Total token consumption"
+        )
+    
+    with col4:
+        # Display character-related information
+        character_features = text_features.get('character_features', {})
+        character_count = character_features.get('character_count', 0)
+        memory_per_char = peak_memory / character_count if character_count > 0 else 0
+        st.metric(
+            "Memory/Character",
+            f"{memory_per_char:.2f} MB",
+            help="Average memory per character"
+        )
+
+
+def display_stage_performance_breakdown(report):
+    """Display stage performance breakdown"""
+    st.markdown("##### ⏱️ Stage Performance Breakdown")
+    
+    stage_performance = report.get('stage_performance', {})
+    stage_times = stage_performance.get('stage_times', {})
+    stage_percentages = stage_performance.get('stage_breakdown_percentage', {})
+    
+    if not stage_times:
+        st.info("No stage performance data")
+        return
+    
+    # Create stage performance table
+    import pandas as pd
+    
+    stage_data = []
+    stage_name_mapping = {
+        'outline_generation': ' Outline Generation',
+        'chapter_reorder': '🔄 Chapter Reorder',
+        'character_generation': '👥 Character Generation', 
+        'story_expansion': '📝 Story Expansion',
+        'dialogue_generation': '💬 Dialogue Generation',
+        'story_enhancement': '✨ Story Enhancement'
+    }
+    
+    for stage, duration in stage_times.items():
+        stage_data.append({
+            'Stage': stage_name_mapping.get(stage, stage),
+            'Duration(seconds)': f"{duration:.3f}",
+            'Percentage(%)': f"{stage_percentages.get(stage, 0):.1f}%"
+        })
+    
+    df = pd.DataFrame(stage_data)
+    st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    # Slowest stage hint
+    if stage_times:
+        slowest_stage = max(stage_times.items(), key=lambda x: x[1])
+        slowest_name = stage_name_mapping.get(slowest_stage[0], slowest_stage[0])
+        st.info(f"🐌 Slowest stage: {slowest_name} ({slowest_stage[1]:.3f} seconds)")
+
+
+def display_complexity_analysis_results(report):
+    """Display complexity analysis results"""
+    st.markdown("##### 🧮 Complexity Analysis")
+    
+    complexity = report.get('complexity_analysis', {})
+    complexity_indicators = complexity.get('complexity_indicators', {})
+    
+    if not complexity_indicators:
+        st.info("No complexity analysis data")
+        return
+    
+    # Display complexity indicators
+    with st.container():
+        st.markdown("**Time Complexity Indicators:**")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            if 'linear_indicator' in complexity_indicators:
+                st.metric(
+                    "Linear Indicator T(n)/n", 
+                    f"{complexity_indicators['linear_indicator']:.6f}",
+                    help="If close to constant, it means the time complexity is close to linear"
+                )
+        
+        with col2:
+            if 'sqrt_n_indicator' in complexity_indicators:
+                st.metric(
+                    "Square Root Indicator T(n)/√n", 
+                    f"{complexity_indicators['sqrt_n_indicator']:.6f}",
+                    help="Used to analyze whether it is square root complexity"
+                )
+        
+        # Complexity estimation
+        summary = report.get('performance_summary', {})
+        estimated_class = summary.get('estimated_complexity_class', 'More data analysis needed')
+        
+        st.markdown(f"**📈 Estimated Complexity Class:** {estimated_class}")
+
+
+def display_text_features_analysis(report):
+    """Display text feature analysis"""
+    st.markdown("#####  Text Feature Analysis")
+    
+    text_features = report.get('text_features', {})
+    
+    if not text_features:
+        st.info("No text feature data")
+        return
+    
+    # Basic statistics
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        st.metric("Chapter Count", text_features.get('chapter_count', 0))
+    
+    with col2:
+        st.metric("Total Sentence Count", text_features.get('total_sentence_count', 0))
+    
+    with col3:
+        st.metric("Average Chapter Length", f"{text_features.get('avg_chapter_length', 0):.0f} words")
+    
+    with col4:
+        st.metric("Average Sentence Length", f"{text_features.get('avg_sentence_length', 0):.1f} words")
+    
+    # Dialogue features (if any)
+    dialogue_features = text_features.get('dialogue_features', {})
+    if dialogue_features and dialogue_features.get('total_dialogue_count', 0) > 0:
+        st.markdown("**💬 Dialogue Features:**")
+        
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("Dialogue Count", dialogue_features.get('total_dialogue_count', 0))
+        with col2:
+            st.metric("Character Count", dialogue_features.get('unique_speakers', 0))
+        with col3:
+            st.metric("Average Dialogue Length", f"{dialogue_features.get('avg_dialogue_length', 0):.1f} words")
+
+
+def display_memory_analysis(report):
+    """Display memory analysis"""
+    st.markdown("#####  Memory Usage Analysis")
+    
+    memory_data = report.get('memory_complexity_data', {})
+    
+    if not memory_data or memory_data.get('peak_memory_usage_mb', 0) == 0:
+        st.info("No memory monitoring data")
+        return
+    
+    # Basic memory indicators
+    peak_memory = memory_data.get('peak_memory_usage_mb', 0)
+    memory_per_character = memory_data.get('memory_per_character', 0)
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.metric("Peak Memory", f"{peak_memory:.2f} MB")
+    
+    with col2:
+        st.metric("Memory/Character", f"{memory_per_character:.2f} MB")
+    
+    # Each stage memory growth
+    stage_memory = memory_data.get('stage_memory_usage', {})
+    if stage_memory:
+        st.markdown("**Each stage memory growth:**")
+        
+        # Create memory growth table
+        import pandas as pd
+        
+        memory_increases = []
+        stage_name_mapping = {
+            'character_generation_increase': '👥 Character Generation',
+            'story_expansion_increase': '📝 Story Expansion',
+            'dialogue_generation_increase': '💬 Dialogue Generation',
+            'story_enhancement_increase': '✨ Story Enhancement'
+        }
+        
+        for stage, increase in stage_memory.items():
+            if stage.endswith('_increase') and increase > 0:
+                stage_name = stage_name_mapping.get(stage, stage.replace('_increase', ''))
+                memory_increases.append({
+                    'Stage': stage_name,
+                    'Memory Growth(MB)': f"{increase:.2f}",
+                    'Growth Percentage': f"{(increase/peak_memory*100):.1f}%" if peak_memory > 0 else "0%"
+                })
+        
+        if memory_increases:
+            df = pd.DataFrame(memory_increases)
+            st.dataframe(df, use_container_width=True, hide_index=True)
+        
+        # Memory timeline chart (if any data)
+        memory_timeline = memory_data.get('memory_timeline', [])
+        if memory_timeline and len(memory_timeline) > 5:
+            try:
+                import matplotlib.pyplot as plt
+                import numpy as np
+                
+                # Prepare data
+                timestamps = [point['timestamp'] for point in memory_timeline]
+                memory_values = [point['memory_mb'] for point in memory_timeline]
+                
+                # Create chart
+                fig, ax = plt.subplots(figsize=(10, 4))
+                ax.plot(timestamps, memory_values, linewidth=2, color='#1f77b4')
+                ax.set_xlabel('Time (seconds)')
+                ax.set_ylabel('Memory Usage (MB)')
+                ax.set_title('Memory Usage Timeline')
+                ax.grid(True, alpha=0.3)
+                
+                st.pyplot(fig)
+                plt.close(fig)
+            except Exception as e:
+                st.warning(f"Memory timeline chart generation failed: {e}")
+    
+    # Character complexity vs memory
+    story_features = memory_data.get('story_features', {})
+    if story_features:
+        st.markdown("**Character Complexity Analysis:**")
+        
+        col1, col2 = st.columns(2)
+        with col1:
+            st.metric("Character Count", story_features.get('character_count', 0))
+        with col2:
+            complexity_score = story_features.get('character_complexity_score', 0)
+            st.metric("Complexity Score", f"{complexity_score:.1f}")
+
+
+def display_api_cost_analysis(report):
+    """Display API cost analysis"""
+    st.markdown("##### 💰 API Cost Analysis")
+    
+    api_breakdown = report.get('api_cost_breakdown', {})
+    
+    if not api_breakdown or api_breakdown.get('total_cost', 0) == 0:
+        st.info("No API cost data")
+        return
+    
+    # Overall cost indicators
+    total_cost = api_breakdown.get('total_cost', 0)
+    total_tokens = api_breakdown.get('total_tokens', 0)
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.metric("Total Cost", f"${total_cost:.6f}")
+    
+    with col2:
+        st.metric("Total Tokens", f"{total_tokens:,}")
+    
+    # Each stage cost decomposition
+    cost_per_stage = api_breakdown.get('cost_per_stage', {})
+    if cost_per_stage:
+        st.markdown("**Each stage cost decomposition:**")
+        
+        import pandas as pd
+        
+        cost_data = []
+        stage_name_mapping = {
+            'outline_generation': ' Outline Generation',
+            'character_generation': '👥 Character Generation',
+            'story_expansion': '📝 Story Expansion', 
+            'dialogue_generation': '💬 Dialogue Generation',
+            'story_enhancement': '✨ Story Enhancement'
+        }
+        
+        for stage, tokens_info in cost_per_stage.items():
+            stage_name = stage_name_mapping.get(stage, stage)
+            cost = tokens_info.get('total_cost', 0)
+            tokens = tokens_info.get('total_tokens', 0)
+            api_calls = tokens_info.get('api_calls', 0)
+            
+            cost_data.append({
+                'Stage': stage_name,
+                'Cost($)': f"{cost:.6f}",
+                'Tokens': f"{tokens:,}",
+                'API Calls': api_calls,
+                'Cost Percentage': f"{(cost/total_cost*100):.1f}%" if total_cost > 0 else "0%"
+            })
+        
+        df = pd.DataFrame(cost_data)
+        st.dataframe(df, use_container_width=True, hide_index=True)
+        
+        # Cost distribution pie chart
+        if len(cost_data) > 1:
+            try:
+                import matplotlib.pyplot as plt
+                
+                # Prepare data
+                stages = [item['Stage'] for item in cost_data]
+                costs = [float(item['Cost($)']) for item in cost_data]
+                
+                # Create pie chart
+                fig, ax = plt.subplots(figsize=(8, 6))
+                ax.pie(costs, labels=stages, autopct='%1.1f%%', startangle=90)
+                ax.set_title('Each stage API cost distribution')
+                
+                st.pyplot(fig)
+                plt.close(fig)
+            except Exception as e:
+                st.warning(f"Cost distribution chart generation failed: {e}")
+    
+    # Efficiency indicators
+    if total_tokens > 0 and total_cost > 0:
+        st.markdown("**Cost efficiency indicators:**")
+        
+        text_features = report.get('text_features', {})
+        total_words = text_features.get('total_word_count', 0)
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            cost_per_token = total_cost / total_tokens if total_tokens > 0 else 0
+            st.metric("Cost/Token", f"${cost_per_token:.6f}")
+        
+        with col2:
+            cost_per_word = total_cost / total_words if total_words > 0 else 0
+            st.metric("Cost/Word", f"${cost_per_word:.6f}")
+
+
+def perform_comparative_analysis(reports_1, reports_2):
+    """Perform Comparative Analysis"""
+    # Here implement Comparative Analysis logic
+    # Extract key metrics for comparison
+    
+    def extract_metrics(reports):
+        total_times = [r['metadata']['total_execution_time'] for r in reports]
+        word_counts = [r.get('text_features', {}).get('total_word_count', 0) for r in reports]
+        efficiencies = [r.get('complexity_analysis', {}).get('efficiency_metrics', {}).get('words_per_second', 0) for r in reports]
+        
+        return {
+            'avg_time': sum(total_times) / len(total_times),
+            'avg_words': sum(word_counts) / len(word_counts), 
+            'avg_efficiency': sum(efficiencies) / len(efficiencies),
+            'count': len(reports)
+        }
+    
+    metrics_1 = extract_metrics(reports_1)
+    metrics_2 = extract_metrics(reports_2)
+    
+    return {
+        'group_1': metrics_1,
+        'group_2': metrics_2,
+        'comparison': {
+            'time_diff': metrics_2['avg_time'] - metrics_1['avg_time'],
+            'efficiency_diff': metrics_2['avg_efficiency'] - metrics_1['avg_efficiency'],
+            'time_improvement': ((metrics_1['avg_time'] - metrics_2['avg_time']) / metrics_1['avg_time'] * 100) if metrics_1['avg_time'] > 0 else 0
+        }
+    }
+
+
+def display_comparison_results(comparison):
+    """Display comparison results"""
+    st.markdown("####  Comparative Analysis results")
+    
+    col1, col2, col3 = st.columns(3)
+    
+    group_1 = comparison['group_1']
+    group_2 = comparison['group_2']
+    comp = comparison['comparison']
+    
+    with col1:
+        st.metric(
+            f"Baseline group average time (n={group_1['count']})",
+            f"{group_1['avg_time']:.2f} seconds"
+        )
+        st.metric(
+            f"Comparison group average time (n={group_2['count']})",
+            f"{group_2['avg_time']:.2f} seconds",
+            delta=f"{comp['time_diff']:+.2f} seconds"
+        )
+    
+    with col2:
+        st.metric(
+            "Baseline group average efficiency",
+            f"{group_1['avg_efficiency']:.2f} words/second"
+        )
+        st.metric(
+            "Comparison group average efficiency", 
+            f"{group_2['avg_efficiency']:.2f} words/second",
+            delta=f"{comp['efficiency_diff']:+.2f} words/second"
+        )
+    
+    with col3:
+        st.metric(
+            "Time improvement",
+            f"{comp['time_improvement']:+.1f}%",
+            help="Negative value means time increase, positive value means time decrease"
+        )
+
+
+def display_real_time_monitor():
+    """Display Real-time Monitoring interface"""
+    st.markdown("#### ⚡ Real-time Performance Monitoring")
+    
+    # Create placeholder for real-time update
+    time_placeholder = st.empty()
+    progress_placeholder = st.empty()
+    stage_placeholder = st.empty()
+    
+    # Here can implement the real-time Monitoring logic
+    # Now show simulated data
+    
+    with time_placeholder.container():
+        st.metric("Current execution time", "127.5 seconds")
+    
+    with progress_placeholder.container():
+        st.progress(0.75)
+        st.text("Current stage: Dialogue Generation (75%)")
+    
+    with stage_placeholder.container():
+        st.json({
+            "Outline Generation": " 15.3 seconds",
+            "Character Generation": " 23.1 seconds", 
+            "Story Expansion": " 89.1 seconds",
+            "Dialogue Generation": "🔄 In progress...",
+            "Story Enhancement": " Waiting"
+        })
+
+
+if __name__ == "__main__":
+    main()

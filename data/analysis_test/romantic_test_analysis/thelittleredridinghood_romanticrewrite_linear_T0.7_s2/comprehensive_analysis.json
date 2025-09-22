@@ -1,0 +1,1637 @@
+{
+  "folder_name": "thelittleredridinghood_romanticrewrite_linear_T0.7_s2",
+  "file_path": "/Users/haha/Story/data/output/romantic_test/thelittleredridinghood_romanticrewrite_linear_T0.7_s2/enhanced_story_dialogue_updated.md",
+  "analysis_timestamp": null,
+  "emotional_arc_analysis": {
+    "metadata": {
+      "total_chapters": 7,
+      "primary_method": "RoBERTa",
+      "validation_method": "LabMT-en-v1",
+      "analysis_timestamp": "2025-09-09T18:52:24.173589"
+    },
+    "chapter_analysis": [
+      {
+        "chapter_num": 1,
+        "title": "Red Receives a Mission from Her Mother",
+        "roberta_score": 0.3696,
+        "labmt_score": 0.3373,
+        "content_length": 5821
+      },
+      {
+        "chapter_num": 2,
+        "title": "Red Encounters the Wolf on the Forest Path",
+        "roberta_score": 0.0585,
+        "labmt_score": 0.2619,
+        "content_length": 22368
+      },
+      {
+        "chapter_num": 3,
+        "title": "Wolf Races Ahead to Grandmother’s Cottage",
+        "roberta_score": 0.7811,
+        "labmt_score": 0.2751,
+        "content_length": 3395
+      },
+      {
+        "chapter_num": 4,
+        "title": "Red Arrives and Uncovers the Wolf's Ruse",
+        "roberta_score": -0.0673,
+        "labmt_score": 0.1886,
+        "content_length": 40205
+      },
+      {
+        "chapter_num": 5,
+        "title": "Grandmother Escapes and Confronts the Wolf",
+        "roberta_score": 0.2665,
+        "labmt_score": 0.1944,
+        "content_length": 6412
+      },
+      {
+        "chapter_num": 6,
+        "title": "Red Makes a Decision and Faces Her Admirer",
+        "roberta_score": 0.2136,
+        "labmt_score": 0.2169,
+        "content_length": 10015
+      },
+      {
+        "chapter_num": 7,
+        "title": "Red Chooses Her Path Forward",
+        "roberta_score": 0.6033,
+        "labmt_score": 0.2013,
+        "content_length": 12935
+      }
+    ],
+    "primary_analysis": {
+      "method": "RoBERTa",
+      "scores": [
+        0.36957544485727944,
+        0.058536712328592935,
+        0.7810993671417237,
+        -0.06733229955037436,
+        0.2665366530418396,
+        0.21360665559768677,
+        0.6032768328984578
+      ],
+      "reagan_classification": {
+        "method": "RoBERTa",
+        "best_match": "Rags to riches",
+        "confidence": 0.569,
+        "all_similarities": {
+          "Rags to riches": 0.569,
+          "Tragedy": 0.4435,
+          "Man in a hole": 0.0498,
+          "Icarus": 0,
+          "Cinderella": 0,
+          "Oedipus": 0.2935
+        },
+        "reagan_category": "RR"
+      }
+    },
+    "validation_analysis": {
+      "method": "LabMT",
+      "scores": [
+        0.33734555984556036,
+        0.26193396226414944,
+        0.2751229508196722,
+        0.18861329521086545,
+        0.19439163498098733,
+        0.216851032448377,
+        0.20131104033969827
+      ],
+      "reagan_classification": {
+        "method": "LabMT",
+        "best_match": "Tragedy",
+        "confidence": 0.7801,
+        "all_similarities": {
+          "Rags to riches": 0.5288,
+          "Tragedy": 0.7801,
+          "Man in a hole": 0,
+          "Icarus": 0.1664,
+          "Cinderella": 0,
+          "Oedipus": 0.274
+        },
+        "reagan_category": "TR"
+      }
+    },
+    "correlation_analysis": {
+      "pearson_correlation": {
+        "r": 0.2993,
+        "p_value": 0.5144,
+        "significance": "Not Significant"
+      },
+      "spearman_correlation": {
+        "r": 0.5,
+        "p_value": 0.2532
+      },
+      "direction_consistency": 0.6667,
+      "consistency_level": "Low",
+      "interpretation": "RoBERTa and LabMT correlation coefficient is 0.299, belongs to weak correlation"
+    },
+    "comparison_analysis": {
+      "disagreement_points": [
+        {
+          "chapter": 3,
+          "roberta_score": 0.7810993671417237,
+          "labmt_score": 0.2751229508196722,
+          "difference": 0.506
+        },
+        {
+          "chapter": 7,
+          "roberta_score": 0.6032768328984578,
+          "labmt_score": 0.20131104033969827,
+          "difference": 0.402
+        }
+      ],
+      "method_advantages": {
+        "RoBERTa": {
+          "strengths": [
+            "Deep learning model with better contextual understanding",
+            "Suitable for modern text and dialogue",
+            "High sensitivity to sci-fi and technical texts"
+          ],
+          "classification": "Rags to riches",
+          "confidence": 0.569
+        },
+        "LabMT": {
+          "strengths": [
+            "Fully consistent with Reagan's original method",
+            "Based on large-scale human annotation",
+            "Suitable for traditional literary analysis"
+          ],
+          "classification": "Tragedy",
+          "confidence": 0.7801
+        }
+      },
+      "consistency_assessment": {
+        "classification_agreement": false,
+        "major_disagreements": 2,
+        "recommendation": "Classification differs slightly but overall consistent, recommend using RoBERTa as primary and LabMT for validation, demonstrating the advantages of modern deep learning models"
+      }
+    },
+    "final_conclusion": "RoBERTa + LabMT Dual-Method Analysis Conclusion:\n\nCorrelation Analysis:\n- Pearson correlation coefficient: r = 0.299 (Low)\n- Consistency level: RoBERTa and LabMT correlation coefficient is 0.299, belongs to weak correlation\n\nClassification Results:\n- RoBERTa (primary): Rags to riches\n- LabMT (validation): Tragedy\n\nMethodological Notes:\nThis study uses RoBERTa as the primary analysis method (modern deep learning model),\nwith LabMT for cross-validation (consistent with Reagan et al. 2016).\nThe correlation coefficient is 0.299, showing low consistency between the two methods.\n\nRecommendation: Use RoBERTa results as primary, with LabMT as academic benchmark validation.",
+    "output_files": {
+      "analysis_json": "/Users/haha/Story/data/romantic_test_analysis/thelittleredridinghood_romanticrewrite_linear_T0.7_s2/roberta_labmt_analysis_20250909_185224.json"
+    }
+  },
+  "hred_coherence_analysis": {
+    "HRED_coherence_evaluation": {
+      "model_name": "all-mpnet-base-v2",
+      "analysis_method": "Original sentence coherence",
+      "total_sentences": 911,
+      "adjacent_pairs": 910,
+      "average_coherence": 0.4201,
+      "objective_description": {
+        "score": 0.4201,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "detailed_analysis": {
+      "basic_statistics": {
+        "average_coherence": 0.42009947631344363,
+        "coherence_std": 0.17725118883079788,
+        "max_coherence": 0.9455052614212036,
+        "min_coherence": -0.020920971408486366,
+        "coherence_median": 0.3908853679895401
+      },
+      "coherence_breakpoints": [
+        {
+          "position": 4,
+          "sentence_pair": "\"Red, look—the sun's already r... → You must hurry now, and take t...",
+          "similarity": 0.207
+        },
+        {
+          "position": 5,
+          "sentence_pair": "You must hurry now, and take t... → Don't dawdle or wander off the...",
+          "similarity": 0.231
+        },
+        {
+          "position": 8,
+          "sentence_pair": "Remember, go quickly and come ... → Red tightens her grip on the b...",
+          "similarity": 0.199
+        },
+        {
+          "position": 21,
+          "sentence_pair": "” She lifted her gaze, searchi... → “I heard it’s quicker, and the...",
+          "similarity": 0.121
+        },
+        {
+          "position": 22,
+          "sentence_pair": "“I heard it’s quicker, and the... → Red's MotherShe gently places ...",
+          "similarity": 0.167
+        },
+        {
+          "position": 23,
+          "sentence_pair": "Red's MotherShe gently places ... → \"The northern path may be quic...",
+          "similarity": 0.173
+        },
+        {
+          "position": 24,
+          "sentence_pair": "\"The northern path may be quic... → Her mother, comforted but stil...",
+          "similarity": 0.148
+        },
+        {
+          "position": 27,
+          "sentence_pair": "\"Red, listen to me carefully.... → Stay on the sunlit path—don’t ...",
+          "similarity": 0.206
+        },
+        {
+          "position": 30,
+          "sentence_pair": "Promise me you’ll be careful.... → Red nods, squeezing her mother...",
+          "similarity": 0.151
+        },
+        {
+          "position": 47,
+          "sentence_pair": "Red's MotherShe smooths Red's ... → \"That's my good girl—remember,...",
+          "similarity": 0.187
+        },
+        {
+          "position": 48,
+          "sentence_pair": "\"That's my good girl—remember,... → With her mother's warnings sti...",
+          "similarity": 0.212
+        },
+        {
+          "position": 56,
+          "sentence_pair": "Out bright and early, I see.... → The Wolf steps from the shadow...",
+          "similarity": 0.087
+        },
+        {
+          "position": 61,
+          "sentence_pair": "“Out bright and early, I see.... → ” He glanced around, feigning ...",
+          "similarity": 0.224
+        },
+        {
+          "position": 63,
+          "sentence_pair": "“You know,” he added softly, a... → ” His tail flicked, betraying ...",
+          "similarity": 0.243
+        },
+        {
+          "position": 64,
+          "sentence_pair": "” His tail flicked, betraying ... → “Mind if I walk with you a whi...",
+          "similarity": 0.166
+        },
+        {
+          "position": 72,
+          "sentence_pair": "The filtered sunlight dappled ... → “Of course, Red;...",
+          "similarity": 0.222
+        },
+        {
+          "position": 74,
+          "sentence_pair": "I wouldn’t dare stray from you... → ” There was a subtle ache bene...",
+          "similarity": 0.212
+        },
+        {
+          "position": 75,
+          "sentence_pair": "” There was a subtle ache bene... → Red glances sideways at the Wo...",
+          "similarity": 0.235
+        },
+        {
+          "position": 83,
+          "sentence_pair": "There was a glimmer in his eye... → “Ah, but sometimes the most in...",
+          "similarity": 0.227
+        },
+        {
+          "position": 90,
+          "sentence_pair": "” The words hung in the cool m... → The woods seem quieter with yo...",
+          "similarity": 0.198
+        },
+        {
+          "position": 93,
+          "sentence_pair": "His eyes glint with mischief, ... → The trees seem to lean in, lis...",
+          "similarity": 0.174
+        },
+        {
+          "position": 97,
+          "sentence_pair": "Around them, the trees seemed ... → “You feel it too, don’t you?...",
+          "similarity": 0.235
+        },
+        {
+          "position": 121,
+          "sentence_pair": "” The words slipped out, threa... → Mind if I walk with you a whil...",
+          "similarity": 0.142
+        },
+        {
+          "position": 125,
+          "sentence_pair": "Red tugged her hood a little t... → Her gaze stayed fixed on the w...",
+          "similarity": 0.228
+        },
+        {
+          "position": 134,
+          "sentence_pair": "His voice, silk wrapped around... → “The usual path, you say?...",
+          "similarity": 0.128
+        },
+        {
+          "position": 137,
+          "sentence_pair": "“Funny, not many choose it aft... → ” The words hung in the cool a...",
+          "similarity": 0.147
+        },
+        {
+          "position": 155,
+          "sentence_pair": "His voice was low and velvet s... → “Is that so?...",
+          "similarity": 0.161
+        },
+        {
+          "position": 162,
+          "sentence_pair": "For a heartbeat, the cool hush... → But she refused to let him see...",
+          "similarity": 0.114
+        },
+        {
+          "position": 163,
+          "sentence_pair": "But she refused to let him see... → \"Maybe I've just learned,\" she...",
+          "similarity": 0.241
+        },
+        {
+          "position": 184,
+          "sentence_pair": "“The main road’s busy—full of ... → ” He took a careful step close...",
+          "similarity": 0.228
+        },
+        {
+          "position": 186,
+          "sentence_pair": "“Let me guide you through the ... → we’ll be at Grandmother’s befo...",
+          "similarity": 0.235
+        },
+        {
+          "position": 187,
+          "sentence_pair": "we’ll be at Grandmother’s befo... → Red tightens her grip on her b...",
+          "similarity": 0.155
+        },
+        {
+          "position": 196,
+          "sentence_pair": "He leaned a little closer, sha... → “If I wanted you gone, Red, I ...",
+          "similarity": 0.19
+        },
+        {
+          "position": 232,
+          "sentence_pair": "\"Ah, but the woods change with... → \" His words lingered in the ai...",
+          "similarity": 0.198
+        },
+        {
+          "position": 233,
+          "sentence_pair": "\" His words lingered in the ai... → Red straightens her basket on ...",
+          "similarity": 0.211
+        },
+        {
+          "position": 251,
+          "sentence_pair": "As the forest closes in behind... → A new plan stirs within him, u...",
+          "similarity": 0.183
+        },
+        {
+          "position": 260,
+          "sentence_pair": "With a glance back, his tail f... → Are you sure you know the way?...",
+          "similarity": 0.139
+        },
+        {
+          "position": 261,
+          "sentence_pair": "Are you sure you know the way?... → The Wolf tilts his head, a sly...",
+          "similarity": 0.082
+        },
+        {
+          "position": 274,
+          "sentence_pair": "“Every twisted root, every hid... → ” Without waiting for a respon...",
+          "similarity": 0.141
+        },
+        {
+          "position": 276,
+          "sentence_pair": "“So unless you want to get los... → ' Branches snap as the Wolf le...",
+          "similarity": 0.23
+        },
+        {
+          "position": 283,
+          "sentence_pair": "Red steps onto the mossy porch... → The Wolf, disguised in Grandmo...",
+          "similarity": 0.216
+        },
+        {
+          "position": 289,
+          "sentence_pair": "Red paused at the edge of her ... → Something about them seemed di...",
+          "similarity": 0.216
+        },
+        {
+          "position": 293,
+          "sentence_pair": "“Tell me, Grandmother,” she ve... → You always ask for it when I v...",
+          "similarity": 0.167
+        },
+        {
+          "position": 294,
+          "sentence_pair": "You always ask for it when I v... → ” The question lingered in the...",
+          "similarity": 0.191
+        },
+        {
+          "position": 301,
+          "sentence_pair": "” The words rolled off his ton... → Red narrows her eyes and leans...",
+          "similarity": 0.217
+        },
+        {
+          "position": 305,
+          "sentence_pair": "She hesitated, her tone gentle... → You always told me you liked c...",
+          "similarity": 0.178
+        },
+        {
+          "position": 306,
+          "sentence_pair": "You always told me you liked c... → ” The words slipped out softly...",
+          "similarity": 0.192
+        },
+        {
+          "position": 314,
+          "sentence_pair": "He let out a soft, nervous lau... → “But perhaps my memory is play...",
+          "similarity": 0.236
+        },
+        {
+          "position": 315,
+          "sentence_pair": "“But perhaps my memory is play... → Red leans closer, her eyes nar...",
+          "similarity": 0.139
+        },
+        {
+          "position": 317,
+          "sentence_pair": "Red leaned in, her curiosity s... → Something wasn’t right....",
+          "similarity": 0.166
+        },
+        {
+          "position": 318,
+          "sentence_pair": "Something wasn’t right.... → She squinted, searching his fa...",
+          "similarity": 0.147
+        },
+        {
+          "position": 319,
+          "sentence_pair": "She squinted, searching his fa... → “You never forget your favorit...",
+          "similarity": 0.155
+        },
+        {
+          "position": 320,
+          "sentence_pair": "“You never forget your favorit... → Red watched for a flicker of r...",
+          "similarity": 0.219
+        },
+        {
+          "position": 330,
+          "sentence_pair": "His voice, oddly strained and ... → Moving a step closer, Red tilt...",
+          "similarity": 0.189
+        },
+        {
+          "position": 331,
+          "sentence_pair": "Moving a step closer, Red tilt... → You know, the one you say brin...",
+          "similarity": 0.15
+        },
+        {
+          "position": 332,
+          "sentence_pair": "You know, the one you say brin... → ” As she spoke, she watched th...",
+          "similarity": 0.09
+        },
+        {
+          "position": 345,
+          "sentence_pair": "And you always say blue remind... → ” The words came out softer th...",
+          "similarity": 0.168
+        },
+        {
+          "position": 346,
+          "sentence_pair": "” The words came out softer th... → The Wolf shifts nervously unde...",
+          "similarity": 0.203
+        },
+        {
+          "position": 369,
+          "sentence_pair": "’ Are you sure you’re feeling ... → The Wolf shifts uneasily benea...",
+          "similarity": 0.104
+        },
+        {
+          "position": 380,
+          "sentence_pair": "\"I'll only do as you ask,\" she... → I've noticed you never share t...",
+          "similarity": 0.202
+        },
+        {
+          "position": 381,
+          "sentence_pair": "I've noticed you never share t... → The Wolf shifts uncomfortably ...",
+          "similarity": 0.026
+        },
+        {
+          "position": 384,
+          "sentence_pair": "He cleared his throat, attempt... → \"Er, well, I suppose it's... a...",
+          "similarity": 0.233
+        },
+        {
+          "position": 392,
+          "sentence_pair": "“It’s a drop of vanilla you ad... → ” Red’s words blended memory w...",
+          "similarity": 0.168
+        },
+        {
+          "position": 397,
+          "sentence_pair": "He forced a breezy chuckle, ho... → “Ah, yes, vanilla!...",
+          "similarity": 0.227
+        },
+        {
+          "position": 398,
+          "sentence_pair": "“Ah, yes, vanilla!... → Silly me—these old memories do...",
+          "similarity": 0.189
+        },
+        {
+          "position": 400,
+          "sentence_pair": "” The words tumbled out with p... → The Wolf tries to bluff, but R...",
+          "similarity": 0.192
+        },
+        {
+          "position": 407,
+          "sentence_pair": "” The words slipped out with p... → Red leans forward, her eyes na...",
+          "similarity": 0.235
+        },
+        {
+          "position": 433,
+          "sentence_pair": "But in his haste, the tip slip... → “Grandmother, your scarf looks...",
+          "similarity": 0.215
+        },
+        {
+          "position": 445,
+          "sentence_pair": "” she asked, careful to keep h... → The Wolf nervously tucks his t...",
+          "similarity": 0.233
+        },
+        {
+          "position": 465,
+          "sentence_pair": "Red paused in the doorway, her... → Something was different....",
+          "similarity": 0.201
+        },
+        {
+          "position": 474,
+          "sentence_pair": "His tail, traitorous as ever, ... → Still, he managed a disarming ...",
+          "similarity": 0.24
+        },
+        {
+          "position": 506,
+          "sentence_pair": "Compassion warred with unease ... → “Your hands— they look like pa...",
+          "similarity": 0.24
+        },
+        {
+          "position": 516,
+          "sentence_pair": "Red edged back, wary, her gaze... → Something wasn’t right....",
+          "similarity": 0.151
+        },
+        {
+          "position": 517,
+          "sentence_pair": "Something wasn’t right.... → She hesitated, the words catch...",
+          "similarity": 0.227
+        },
+        {
+          "position": 520,
+          "sentence_pair": "Are you sure you’re not… someo... → The Wolf tries to tuck his tai...",
+          "similarity": 0.071
+        },
+        {
+          "position": 525,
+          "sentence_pair": "” His voice danced between pla... → Unlike in the original plot, R...",
+          "similarity": 0.184
+        },
+        {
+          "position": 534,
+          "sentence_pair": "“I don’t care what you’re plan... → ” The words tumbled out, fierc...",
+          "similarity": 0.237
+        },
+        {
+          "position": 543,
+          "sentence_pair": "When the creature lifted his p... → “Explain?...",
+          "similarity": 0.169
+        },
+        {
+          "position": 546,
+          "sentence_pair": "“After what you did to my gran... → The Wolf lowers his gaze, his ...",
+          "similarity": 0.18
+        },
+        {
+          "position": 561,
+          "sentence_pair": "“I’m not moving—see?... → ” His voice was soft but urgen...",
+          "similarity": 0.205
+        },
+        {
+          "position": 576,
+          "sentence_pair": "“But if you silence me now, yo... → Red tightens her grip, her eye...",
+          "similarity": 0.243
+        },
+        {
+          "position": 595,
+          "sentence_pair": "“I see you,” she pressed on, h... → Something isn’t right and I wo...",
+          "similarity": 0.23
+        },
+        {
+          "position": 596,
+          "sentence_pair": "Something isn’t right and I wo... → ” The truth hung between them,...",
+          "similarity": 0.167
+        },
+        {
+          "position": 615,
+          "sentence_pair": "“Show me that truth, Wolf,” sh... → “Drop the mask....",
+          "similarity": 0.242
+        },
+        {
+          "position": 616,
+          "sentence_pair": "“Drop the mask.... → Let me see who you are—not jus...",
+          "similarity": 0.242
+        },
+        {
+          "position": 617,
+          "sentence_pair": "Let me see who you are—not jus... → ” The demand hung between them...",
+          "similarity": 0.209
+        },
+        {
+          "position": 641,
+          "sentence_pair": "Grandmother steps into his pat... → 'Oh, don’t you think I see wha...",
+          "similarity": 0.148
+        },
+        {
+          "position": 642,
+          "sentence_pair": "'Oh, don’t you think I see wha... → Grandmother narrows her eyes, ...",
+          "similarity": 0.134
+        },
+        {
+          "position": 645,
+          "sentence_pair": "She blocked the path, her stan... → “Oh, don’t you think I see wha...",
+          "similarity": 0.114
+        },
+        {
+          "position": 650,
+          "sentence_pair": "A wry smile flickered at her l... → “I’ve seen more tricks than yo...",
+          "similarity": 0.241
+        },
+        {
+          "position": 651,
+          "sentence_pair": "“I’ve seen more tricks than yo... → You can’t just walk in here wi...",
+          "similarity": 0.196
+        },
+        {
+          "position": 652,
+          "sentence_pair": "You can’t just walk in here wi... → I’ve seen more tricks than you...",
+          "similarity": 0.173
+        },
+        {
+          "position": 653,
+          "sentence_pair": "I’ve seen more tricks than you... → The Wolf pauses in his circlin...",
+          "similarity": -0.021
+        },
+        {
+          "position": 658,
+          "sentence_pair": "“My business is with Red alone... → I only want to talk....",
+          "similarity": 0.191
+        },
+        {
+          "position": 659,
+          "sentence_pair": "I only want to talk.... → ” The admission hung between t...",
+          "similarity": 0.15
+        },
+        {
+          "position": 660,
+          "sentence_pair": "” The admission hung between t... → ' she snaps, her eyes sharp....",
+          "similarity": 0.224
+        },
+        {
+          "position": 666,
+          "sentence_pair": "“I insist—there are matters on... → ” A flicker of vulnerability c...",
+          "similarity": 0.18
+        },
+        {
+          "position": 667,
+          "sentence_pair": "” A flicker of vulnerability c... → “It would be unwise to stand i...",
+          "similarity": 0.205
+        },
+        {
+          "position": 675,
+          "sentence_pair": "” The words hung in the air, h... → My business is with Red alone—...",
+          "similarity": 0.111
+        },
+        {
+          "position": 676,
+          "sentence_pair": "My business is with Red alone—... → The Wolf bows his head even fu...",
+          "similarity": 0.181
+        },
+        {
+          "position": 679,
+          "sentence_pair": "His voice, when it came, was s... → “Please....",
+          "similarity": 0.146
+        },
+        {
+          "position": 680,
+          "sentence_pair": "“Please.... → Just a moment, Red....",
+          "similarity": 0.223
+        },
+        {
+          "position": 681,
+          "sentence_pair": "Just a moment, Red.... → ” He lowered himself, pressing...",
+          "similarity": 0.204
+        },
+        {
+          "position": 691,
+          "sentence_pair": "“If you send me off, I’ll go,”... → I only want to talk....",
+          "similarity": 0.238
+        },
+        {
+          "position": 692,
+          "sentence_pair": "I only want to talk.... → ' Grandmother jabs the poker a...",
+          "similarity": 0.054
+        },
+        {
+          "position": 693,
+          "sentence_pair": "' Grandmother jabs the poker a... → You'll speak to no one in this...",
+          "similarity": 0.198
+        },
+        {
+          "position": 695,
+          "sentence_pair": "I won't have strangers crossin... → ' The Wolf, driven by his long...",
+          "similarity": 0.158
+        },
+        {
+          "position": 697,
+          "sentence_pair": "just a moment, Red.... → I know what I am—teeth and sha...",
+          "similarity": 0.161
+        },
+        {
+          "position": 700,
+          "sentence_pair": "I don't ask for forgiveness, o... → I can't—won't—turn away, not w...",
+          "similarity": 0.199
+        },
+        {
+          "position": 718,
+          "sentence_pair": "“It’s funny, isn’t it,” he wen... → ” His confession hung between ...",
+          "similarity": 0.239
+        },
+        {
+          "position": 721,
+          "sentence_pair": "” The words slipped out softer... → “You make it awfully difficult...",
+          "similarity": 0.233
+        },
+        {
+          "position": 726,
+          "sentence_pair": "For a moment, she hesitated, c... → \"And you make it awfully diffi...",
+          "similarity": 0.221
+        },
+        {
+          "position": 737,
+          "sentence_pair": "The truth trembled between the... → Red tilts her chin up, meeting...",
+          "similarity": 0.188
+        },
+        {
+          "position": 744,
+          "sentence_pair": "The exchange is more verbal an... → Red does not immediately offer...",
+          "similarity": 0.213
+        },
+        {
+          "position": 753,
+          "sentence_pair": "\"Every time I turn around, you... → \" The words spilled out, anger...",
+          "similarity": 0.173
+        },
+        {
+          "position": 755,
+          "sentence_pair": "\"What do you want from me?... → The Wolf steps from the shadow...",
+          "similarity": 0.198
+        },
+        {
+          "position": 761,
+          "sentence_pair": "“Though I suppose it’s hard to... → Red tightens her grip on her b...",
+          "similarity": 0.227
+        },
+        {
+          "position": 770,
+          "sentence_pair": "The Wolf stepped out from behi... → His gaze didn't waver as he sl...",
+          "similarity": 0.2
+        },
+        {
+          "position": 774,
+          "sentence_pair": "\" The words lingered between t... → Red tightens her grip on the b...",
+          "similarity": 0.213
+        },
+        {
+          "position": 783,
+          "sentence_pair": "He held Red’s gaze, as if dari... → His voice, low and persuasive,...",
+          "similarity": 0.215
+        },
+        {
+          "position": 786,
+          "sentence_pair": "” The question lingered, edged... → Red tightens her grip on her b...",
+          "similarity": 0.241
+        },
+        {
+          "position": 805,
+          "sentence_pair": "She kept her gaze unwavering, ... → “You know, I don’t believe in ...",
+          "similarity": 0.224
+        },
+        {
+          "position": 838,
+          "sentence_pair": "He let the words linger betwee... → “Perhaps I only wish to know i...",
+          "similarity": 0.199
+        },
+        {
+          "position": 842,
+          "sentence_pair": "Rain pattered down through the... → He sat back on his haunches, l...",
+          "similarity": 0.18
+        },
+        {
+          "position": 849,
+          "sentence_pair": "I want to show you who I reall... → Red narrows her eyes, clutchin...",
+          "similarity": 0.203
+        },
+        {
+          "position": 861,
+          "sentence_pair": "The hood of her crimson cloak ... → She studied the Wolf, searchin...",
+          "similarity": 0.239
+        },
+        {
+          "position": 884,
+          "sentence_pair": "The Wolf swears, by tooth and ... → The tension softens as Red con...",
+          "similarity": 0.224
+        },
+        {
+          "position": 897,
+          "sentence_pair": "will you keep watch through th... → ” The question lingered betwee...",
+          "similarity": 0.231
+        },
+        {
+          "position": 906,
+          "sentence_pair": "The hush that settled in the c... → Then, with a quiet intensity t...",
+          "similarity": 0.194
+        }
+      ],
+      "high_coherence_segments": [
+        {
+          "start_sentence": 1,
+          "end_sentence": 3,
+          "length": 3,
+          "average_similarity": 0.592
+        },
+        {
+          "start_sentence": 15,
+          "end_sentence": 17,
+          "length": 3,
+          "average_similarity": 0.647
+        },
+        {
+          "start_sentence": 25,
+          "end_sentence": 27,
+          "length": 3,
+          "average_similarity": 0.596
+        },
+        {
+          "start_sentence": 49,
+          "end_sentence": 51,
+          "length": 3,
+          "average_similarity": 0.583
+        },
+        {
+          "start_sentence": 69,
+          "end_sentence": 71,
+          "length": 3,
+          "average_similarity": 0.666
+        },
+        {
+          "start_sentence": 123,
+          "end_sentence": 125,
+          "length": 3,
+          "average_similarity": 0.577
+        },
+        {
+          "start_sentence": 179,
+          "end_sentence": 181,
+          "length": 3,
+          "average_similarity": 0.818
+        },
+        {
+          "start_sentence": 219,
+          "end_sentence": 223,
+          "length": 5,
+          "average_similarity": 0.766
+        },
+        {
+          "start_sentence": 257,
+          "end_sentence": 260,
+          "length": 4,
+          "average_similarity": 0.674
+        },
+        {
+          "start_sentence": 262,
+          "end_sentence": 265,
+          "length": 4,
+          "average_similarity": 0.66
+        },
+        {
+          "start_sentence": 269,
+          "end_sentence": 271,
+          "length": 3,
+          "average_similarity": 0.688
+        },
+        {
+          "start_sentence": 280,
+          "end_sentence": 282,
+          "length": 3,
+          "average_similarity": 0.604
+        },
+        {
+          "start_sentence": 287,
+          "end_sentence": 289,
+          "length": 3,
+          "average_similarity": 0.632
+        },
+        {
+          "start_sentence": 333,
+          "end_sentence": 335,
+          "length": 3,
+          "average_similarity": 0.603
+        },
+        {
+          "start_sentence": 402,
+          "end_sentence": 405,
+          "length": 4,
+          "average_similarity": 0.637
+        },
+        {
+          "start_sentence": 435,
+          "end_sentence": 437,
+          "length": 3,
+          "average_similarity": 0.676
+        },
+        {
+          "start_sentence": 446,
+          "end_sentence": 448,
+          "length": 3,
+          "average_similarity": 0.649
+        },
+        {
+          "start_sentence": 454,
+          "end_sentence": 456,
+          "length": 3,
+          "average_similarity": 0.577
+        },
+        {
+          "start_sentence": 457,
+          "end_sentence": 459,
+          "length": 3,
+          "average_similarity": 0.732
+        },
+        {
+          "start_sentence": 471,
+          "end_sentence": 474,
+          "length": 4,
+          "average_similarity": 0.61
+        },
+        {
+          "start_sentence": 491,
+          "end_sentence": 493,
+          "length": 3,
+          "average_similarity": 0.705
+        },
+        {
+          "start_sentence": 504,
+          "end_sentence": 506,
+          "length": 3,
+          "average_similarity": 0.584
+        },
+        {
+          "start_sentence": 551,
+          "end_sentence": 553,
+          "length": 3,
+          "average_similarity": 0.794
+        },
+        {
+          "start_sentence": 566,
+          "end_sentence": 569,
+          "length": 4,
+          "average_similarity": 0.597
+        },
+        {
+          "start_sentence": 587,
+          "end_sentence": 590,
+          "length": 4,
+          "average_similarity": 0.662
+        },
+        {
+          "start_sentence": 610,
+          "end_sentence": 613,
+          "length": 4,
+          "average_similarity": 0.6
+        },
+        {
+          "start_sentence": 619,
+          "end_sentence": 621,
+          "length": 3,
+          "average_similarity": 0.625
+        },
+        {
+          "start_sentence": 632,
+          "end_sentence": 638,
+          "length": 7,
+          "average_similarity": 0.63
+        },
+        {
+          "start_sentence": 670,
+          "end_sentence": 672,
+          "length": 3,
+          "average_similarity": 0.666
+        },
+        {
+          "start_sentence": 703,
+          "end_sentence": 705,
+          "length": 3,
+          "average_similarity": 0.61
+        },
+        {
+          "start_sentence": 711,
+          "end_sentence": 714,
+          "length": 4,
+          "average_similarity": 0.73
+        },
+        {
+          "start_sentence": 741,
+          "end_sentence": 743,
+          "length": 3,
+          "average_similarity": 0.553
+        },
+        {
+          "start_sentence": 745,
+          "end_sentence": 747,
+          "length": 3,
+          "average_similarity": 0.698
+        },
+        {
+          "start_sentence": 799,
+          "end_sentence": 801,
+          "length": 3,
+          "average_similarity": 0.6
+        },
+        {
+          "start_sentence": 819,
+          "end_sentence": 821,
+          "length": 3,
+          "average_similarity": 0.557
+        },
+        {
+          "start_sentence": 824,
+          "end_sentence": 826,
+          "length": 3,
+          "average_similarity": 0.615
+        },
+        {
+          "start_sentence": 853,
+          "end_sentence": 855,
+          "length": 3,
+          "average_similarity": 0.641
+        },
+        {
+          "start_sentence": 867,
+          "end_sentence": 869,
+          "length": 3,
+          "average_similarity": 0.721
+        },
+        {
+          "start_sentence": 885,
+          "end_sentence": 887,
+          "length": 3,
+          "average_similarity": 0.604
+        },
+        {
+          "start_sentence": 893,
+          "end_sentence": 895,
+          "length": 3,
+          "average_similarity": 0.776
+        }
+      ],
+      "objective_description": {
+        "score": 0.4201,
+        "range": "0-1 (1 means completely similar)",
+        "explanation": "Mean semantic similarity of adjacent sentences computed by sentence-transformers model",
+        "reference": "Recommend comparing with other texts rather than absolute rating"
+      }
+    },
+    "pairwise_similarity_examples": [
+      {
+        "sentence_pair": "Sentence 1 → Sentence 2",
+        "sentence_1": "Red’s mother, noticing the rising sun, hurriedly u...",
+        "sentence_2": "When Red asks about the northern path, her mother,...",
+        "similarity": 0.6186
+      },
+      {
+        "sentence_pair": "Sentence 2 → Sentence 3",
+        "sentence_1": "When Red asks about the northern path, her mother,...",
+        "sentence_2": "Red's MotherShe presses the basket into Red's hand...",
+        "similarity": 0.5655
+      },
+      {
+        "sentence_pair": "Sentence 3 → Sentence 4",
+        "sentence_1": "Red's MotherShe presses the basket into Red's hand...",
+        "sentence_2": "\"Red, look—the sun's already rising.",
+        "similarity": 0.4297
+      },
+      {
+        "sentence_pair": "Sentence 4 → Sentence 5",
+        "sentence_1": "\"Red, look—the sun's already rising.",
+        "sentence_2": "You must hurry now, and take this basket straight ...",
+        "similarity": 0.2073
+      },
+      {
+        "sentence_pair": "Sentence 5 → Sentence 6",
+        "sentence_1": "You must hurry now, and take this basket straight ...",
+        "sentence_2": "Don't dawdle or wander off the path, do you hear m...",
+        "similarity": 0.2309
+      },
+      {
+        "sentence_pair": "Sentence 6 → Sentence 7",
+        "sentence_1": "Don't dawdle or wander off the path, do you hear m...",
+        "sentence_2": "The forest can be dangerous, and your grandmother ...",
+        "similarity": 0.2866
+      },
+      {
+        "sentence_pair": "Sentence 7 → Sentence 8",
+        "sentence_1": "The forest can be dangerous, and your grandmother ...",
+        "sentence_2": "Remember, go quickly and come back before nightfal...",
+        "similarity": 0.288
+      },
+      {
+        "sentence_pair": "Sentence 8 → Sentence 9",
+        "sentence_1": "Remember, go quickly and come back before nightfal...",
+        "sentence_2": "Red tightens her grip on the basket and glances an...",
+        "similarity": 0.1994
+      },
+      {
+        "sentence_pair": "Sentence 9 → Sentence 10",
+        "sentence_1": "Red tightens her grip on the basket and glances an...",
+        "sentence_2": "Red tightened her grip on the basket, its woven ha...",
+        "similarity": 0.9152
+      },
+      {
+        "sentence_pair": "Sentence 10 → Sentence 11",
+        "sentence_1": "Red tightened her grip on the basket, its woven ha...",
+        "sentence_2": "The pale morning sky offered little comfort, and h...",
+        "similarity": 0.4078
+      },
+      {
+        "sentence_pair": "Sentence 11 → Sentence 12",
+        "sentence_1": "The pale morning sky offered little comfort, and h...",
+        "sentence_2": "Red nodded, swallowing her unease, and gestured to...",
+        "similarity": 0.3562
+      },
+      {
+        "sentence_pair": "Sentence 12 → Sentence 13",
+        "sentence_1": "Red nodded, swallowing her unease, and gestured to...",
+        "sentence_2": "“I understand, Mother,” she said, her voice steady...",
+        "similarity": 0.4248
+      },
+      {
+        "sentence_pair": "Sentence 13 → Sentence 14",
+        "sentence_1": "“I understand, Mother,” she said, her voice steady...",
+        "sentence_2": "“I’ll go straight there and promise not to stray f...",
+        "similarity": 0.3127
+      },
+      {
+        "sentence_pair": "Sentence 14 → Sentence 15",
+        "sentence_1": "“I’ll go straight there and promise not to stray f...",
+        "sentence_2": "Red reassures her mother multiple times, vowing no...",
+        "similarity": 0.4928
+      },
+      {
+        "sentence_pair": "Sentence 15 → Sentence 16",
+        "sentence_1": "Red reassures her mother multiple times, vowing no...",
+        "sentence_2": "Red adjusts her red cloak around her shoulders, he...",
+        "similarity": 0.6818
+      },
+      {
+        "sentence_pair": "Sentence 16 → Sentence 17",
+        "sentence_1": "Red adjusts her red cloak around her shoulders, he...",
+        "sentence_2": "Red drew her crimson cloak closer around her shoul...",
+        "similarity": 0.6118
+      },
+      {
+        "sentence_pair": "Sentence 17 → Sentence 18",
+        "sentence_1": "Red drew her crimson cloak closer around her shoul...",
+        "sentence_2": "She hesitated, her fingers toying with the edge of...",
+        "similarity": 0.3886
+      },
+      {
+        "sentence_pair": "Sentence 18 → Sentence 19",
+        "sentence_1": "She hesitated, her fingers toying with the edge of...",
+        "sentence_2": "The woods beyond their cottage called to her—myste...",
+        "similarity": 0.3339
+      },
+      {
+        "sentence_pair": "Sentence 19 → Sentence 20",
+        "sentence_1": "The woods beyond their cottage called to her—myste...",
+        "sentence_2": "Red’s voice was gentle but edged with hope as she ...",
+        "similarity": 0.4514
+      },
+      {
+        "sentence_pair": "Sentence 20 → Sentence 21",
+        "sentence_1": "Red’s voice was gentle but edged with hope as she ...",
+        "sentence_2": "” She lifted her gaze, searching her mother’s face...",
+        "similarity": 0.5561
+      },
+      {
+        "note": "Only showing first 20 pairs, total of 910 adjacent sentence pairs"
+      }
+    ]
+  },
+  "story_structure_analysis": {
+    "evaluation_mode": "default mode",
+    "event_list": [
+      {
+        "event": "Red’s mother urges Red to deliver bread and cordial to Grandmother, warning her to stay on the path and avoid strangers.",
+        "source": "Red’s mother, noticing the rising sun, hurriedly urges Red to deliver a basket of warm bread and elderberry cordial to Grandmother, emphasizing the importance of staying on the path and not speaking to strangers.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red asks about taking the northern path; her mother, though wary, permits it with strict instructions to keep to the trail.",
+        "source": "When Red asks about the northern path, her mother, though wary, allows her to take it as long as she promises to keep to the trail and avoid shaded areas.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red reassures her mother she will go directly to Grandmother’s cottage and promises not to stray from the path.",
+        "source": "“I’ll go straight there and promise not to stray from the path.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red takes the basket, hugs her mother, and sets off toward the forest, determined to be responsible and careful.",
+        "source": "She gives her mother a quick hug, then steps out the door, the sounds of the village morning swirling around her as she heads toward the edge of the forest.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red steps into the forest, her mother’s warnings echoing in her mind as she begins her journey.",
+        "source": "With her mother's warnings still echoing in her mind, Red stepped into the cool shade of the forest, the basket swinging lightly from her arm.",
+        "chapter": "Chapter 1",
+        "confidence": "high"
+      },
+      {
+        "event": "Red steps around a mud puddle and adjusts her cloak as The Wolf emerges from a thicket and greets her.",
+        "source": "Suddenly, The Wolf emerges from a thicket, his fur spiked with dew, tail twitching.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf asks to walk with Red; she allows it as long as he stays on the path beside her.",
+        "source": "“Good morning, Wolf—I suppose I don’t mind, as long as you keep to the path beside me,” she said, her voice even but edged with a caution she couldn’t quite hide.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and The Wolf walk deeper into the woods, exchanging cautious and challenging conversation.",
+        "source": "The Wolf matches Red’s pace, his gaze steady but unreadable, as the two move deeper into the shaded woods.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf suggests alternative routes and hints at dangers, but Red insists on following her familiar path, citing Grandmother's advice.",
+        "source": "The Wolf subtly suggests alternative routes, hinting at the dangers and the allure of the unknown, but Red remains steadfast, citing her Grandmother's advice and her own growing confidence in the woods.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red thanks The Wolf for his concern but chooses to stay on her route; The Wolf walks with her a while before letting her go on alone.",
+        "source": "In the end, Red thanks The Wolf for his concern but chooses to stay on her route, and The Wolf walks with her for a time, trying to earn her trust step by step, before letting her continue on her own.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf lingers to watch Red disappear among the shadows, then slips through the underbrush, intent on reaching Grandmother’s cottage first.",
+        "source": "As the forest closes in behind them and Red continues along the familiar path, the Wolf lingers just long enough to watch her disappear among the shadows.",
+        "chapter": "Chapter 2",
+        "confidence": "high"
+      },
+      {
+        "event": "Red moves carefully through the woods as The Wolf darts ahead, both vying to reach Grandmother’s cottage first.",
+        "source": "The Wolf, fur bristling with moisture, darts ahead on the trail, nose twitching as he sniffs for signs of Grandmother's cottage.",
+        "chapter": "Chapter 3",
+        "confidence": "medium"
+      },
+      {
+        "event": "The Wolf taunts Red, promising she cannot outrun him, and tries to convince her to trust his guidance.",
+        "source": "With a glance back, his tail flicking in silent challenge, he called out over his shoulder—voice smooth and low, threaded with both playful threat and longing, \"Run as fast as you like, little Red—every path through these woods ends with me at your heels.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red asserts her own knowledge of the woods and presses onward, determined to care for her grandmother and wary of the Wolf.",
+        "source": "“I know these woods better than you think,” she called out, her voice edged with challenge and a touch of pride.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf rushes ahead to Grandmother’s cottage and settles into his disguise, preparing for Red’s arrival.",
+        "source": "Meanwhile, the Wolf settles into his disguise, every detail calculated, listening for the telltale crunch of Red’s footsteps approaching the door.",
+        "chapter": "Chapter 3",
+        "confidence": "high"
+      },
+      {
+        "event": "Red knocks on the cottage door and enters, placing her basket on the table while scrutinizing 'Grandmother'.",
+        "source": "As Red enters, she places her basket on the table and begins to unpack, all while scrutinizing the Wolf.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red asks a series of detailed questions about Grandmother’s habits, catching the Wolf in contradictions and deepening her suspicion.",
+        "source": "She probes 'Grandmother' with a series of increasingly detailed questions about her favorite tea, special cup, and lullaby—each time catching the Wolf in a contradiction.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red challenges the Wolf about physical discrepancies like his tail, teeth, and eyes, watching his disguise unravel.",
+        "source": "As suspicions mount, Red grows bolder, challenging the Wolf about his twitching tail, sharp teeth, and wild eyes.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red grabs a candlestick in self-defense as the Wolf’s disguise falters, demanding that he explain himself.",
+        "source": "Red’s knuckles whitened around the heavy candlestick, her arms quivering but resolute as she faced the Wolf.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf pleads for a chance to explain, lowering himself in surrender while Red holds him at bay with the candlestick.",
+        "source": "The Wolf instinctively took a step back, lowering his voice as he faced the glint of the heavy candlestick in Red’s trembling hands.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red, conflicted but resolute, allows the Wolf to speak under threat, demanding to know his true intentions.",
+        "source": "Red, conflicted but resolute, allows him to speak under threat, demanding to know his true intentions.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf confesses his loneliness and longing for connection, hoping Red might see past his fearsome exterior.",
+        "source": "The Wolf confesses his loneliness, longing for connection, and hopes that Red might see past his fearsome exterior.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red, still wary but compassionate, asks the Wolf to prove his sincerity, showing willingness to understand rather than flee or fight.",
+        "source": "Red, still wary but compassionate, asks the Wolf to prove his sincerity by revealing his true self, showing a willingness to understand rather than simply fight or flee.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Red prepares to act, intent on reuniting with Grandmother and testing the fragile trust forming between her and the Wolf.",
+        "source": "With both caution and hope guiding her, Red prepares to act, determined to reunite with Grandmother and seek clarity amidst the confusion.",
+        "chapter": "Chapter 4",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother edges from her bed, clutching an iron poker, and quietly unlatches the window for fresh air.",
+        "source": "Grandmother, clutching a heavy iron poker, edges from her bed and quietly unlatches the creaking window, letting in a gust of pine-laden air.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf stalks into the cottage, sniffing for Red’s scent, and is blocked by Grandmother wielding the iron poker.",
+        "source": "Grandmother steps into his path and brandishes the poker, blocking his advance.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother confronts the Wolf, refusing to let him pass or speak to Red without explaining his intentions.",
+        "source": "“You’ll speak to no one in this house unless you can show me what sort of business you bring here.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf pleads for a moment to talk to Red, expressing vulnerability and longing, but Grandmother remains protective.",
+        "source": "“Please.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Grandmother’s stern resolve softens, allowing Red to step forward and address the Wolf directly.",
+        "source": "As the tension in the room ebbs, Grandmother’s stern resolve softens just enough for Red to step forward, the weight of choice pressing on her chest.",
+        "chapter": "Chapter 5",
+        "confidence": "high"
+      },
+      {
+        "event": "Red steps out of the cottage, scanning the woods as The Wolf emerges and approaches cautiously.",
+        "source": "The Wolf emerges from behind a birch, his fur bristling with dew, head lowered in a show of cautious approach.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red challenges The Wolf’s motives, refusing to trust or share food; The Wolf responds with vulnerability, wanting companionship.",
+        "source": "Red challenges The Wolf's motives, refusing to easily trust or share her food, and The Wolf responds with vulnerability, expressing his desire for companionship and recognition, rather than aggression.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and The Wolf exchange emotionally charged words, each testing the boundaries of trust and intent.",
+        "source": "Their conversation is tense and layered, with both Red and The Wolf openly acknowledging the risks and ambiguities of trust between them.",
+        "chapter": "Chapter 6",
+        "confidence": "medium"
+      },
+      {
+        "event": "Red warns The Wolf to keep his distance, probing his intentions and expressing unresolved suspicion.",
+        "source": "\"I'd rather you keep your distance,\" she said, her voice steady but low, \"because intentions aren't always as visible as hands, and I can't decide if I'm safer with you beside me or behind me.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf offers to walk beside Red openly, but she insists on caution and maintaining space.",
+        "source": "\"Then perhaps you'd rather I walk beside you,\" he murmured, voice low and persuasive, \"where my intentions—and my hands—are in plain sight.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Their fragile trust progresses through dialogue and mutual challenge, not through sharing food or gestures.",
+        "source": "Both characters remain wary, and their fragile trust is built through dialogue and mutual challenge rather than silent sharing.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and The Wolf’s negotiation leaves trust an ongoing question as they continue toward the cottage together.",
+        "source": "The chapter ends with a sense that their relationship is progressing through careful negotiation, with trust as an ongoing question rather than a gesture of food.",
+        "chapter": "Chapter 6",
+        "confidence": "high"
+      },
+      {
+        "event": "Red encounters The Wolf again in the woods and directly confronts him about his true intentions.",
+        "source": "Their encounter is tense and charged: Red, suspicious and unyielding, directly confronts The Wolf about his true intentions in following her through the woods.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf admits to curiosity and a desire to be seen for who he is, not just as a villain.",
+        "source": "The Wolf, vulnerable and earnest, admits to his curiosity and desire to be seen for who he truly is—not merely the villain of old tales.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red challenges the Wolf further, insisting he prove his sincerity; the Wolf vows to earn her trust.",
+        "source": "Their conversation is probing and emotional, with Red challenging The Wolf to prove his sincerity and the Wolf vowing to earn her trust.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "The Wolf promises, by tooth and tail, to protect both Red and Grandmother day and night.",
+        "source": "Then, with a quiet intensity that lingered in the beams of fading sunlight, he vowed, “By tooth and tail, my loyalty endures beyond the sun’s last light.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red and Grandmother voice doubts about trusting the Wolf, especially at night, but the Wolf swears loyalty.",
+        "source": "\"It’s a comfort to hear, Wolf,\" she said, her voice thin but steady, \"but the night is when old fears prowl—can we truly trust your word when darkness falls?",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      },
+      {
+        "event": "Red tentatively acknowledges the Wolf’s promise, and together with Grandmother, they continue toward the cottage, forging a new understanding.",
+        "source": "And so, beneath the hush of rain and the watchful eyes of the woods, Red chose her path forward—not alone, but in the company of trust newly forged, where old stories faded into the promise of something braver than fear.",
+        "chapter": "Chapter 7",
+        "confidence": "high"
+      }
+    ],
+    "Papalampidi_detailed_results": {
+      "turning_points": {
+        "TP1": "Red’s mother urges Red to deliver bread and cordial to Grandmother, warning her to stay on the path and avoid strangers.",
+        "TP2": "Red thanks The Wolf for his concern but chooses to stay on her route; The Wolf walks with her a while before letting her go on alone.",
+        "TP3": "Red challenges the Wolf about physical discrepancies like his tail, teeth, and eyes, watching his disguise unravel.",
+        "TP4": "Grandmother confronts the Wolf, refusing to let him pass or speak to Red without explaining his intentions.",
+        "TP5": "Red tentatively acknowledges the Wolf’s promise, and together with Grandmother, they continue toward the cottage, forging a new understanding."
+      },
+      "stage_division": {
+        "Setup": [
+          "Red’s mother urges Red to deliver bread and cordial to Grandmother, warning her to stay on the path and avoid strangers.",
+          "Red asks about taking the northern path; her mother, though wary, permits it with strict instructions to keep to the trail.",
+          "Red reassures her mother she will go directly to Grandmother’s cottage and promises not to stray from the path.",
+          "Red takes the basket, hugs her mother, and sets off toward the forest, determined to be responsible and careful."
+        ],
+        "New Situation": [
+          "Red steps into the forest, her mother’s warnings echoing in her mind as she begins her journey.",
+          "Red steps around a mud puddle and adjusts her cloak as The Wolf emerges from a thicket and greets her.",
+          "The Wolf asks to walk with Red; she allows it as long as he stays on the path beside her."
+        ],
+        "Progress": [
+          "Red and The Wolf walk deeper into the woods, exchanging cautious and challenging conversation.",
+          "The Wolf suggests alternative routes and hints at dangers, but Red insists on following her familiar path, citing Grandmother's advice.",
+          "Red thanks The Wolf for his concern but chooses to stay on her route; The Wolf walks with her a while before letting her go on alone.",
+          "The Wolf lingers to watch Red disappear among the shadows, then slips through the underbrush, intent on reaching Grandmother’s cottage first.",
+          "Red moves carefully through the woods as The Wolf darts ahead, both vying to reach Grandmother’s cottage first.",
+          "The Wolf taunts Red, promising she cannot outrun him, and tries to convince her to trust his guidance.",
+          "Red asserts her own knowledge of the woods and presses onward, determined to care for her grandmother and wary of the Wolf."
+        ],
+        "Complications": [
+          "The Wolf rushes ahead to Grandmother’s cottage and settles into his disguise, preparing for Red’s arrival.",
+          "Red knocks on the cottage door and enters, placing her basket on the table while scrutinizing 'Grandmother'.",
+          "Red asks a series of detailed questions about Grandmother’s habits, catching the Wolf in contradictions and deepening her suspicion.",
+          "Red challenges the Wolf about physical discrepancies like his tail, teeth, and eyes, watching his disguise unravel.",
+          "Red grabs a candlestick in self-defense as the Wolf’s disguise falters, demanding that he explain himself.",
+          "The Wolf pleads for a chance to explain, lowering himself in surrender while Red holds him at bay with the candlestick.",
+          "Red, conflicted but resolute, allows the Wolf to speak under threat, demanding to know his true intentions.",
+          "The Wolf confesses his loneliness and longing for connection, hoping Red might see past his fearsome exterior.",
+          "Red, still wary but compassionate, asks the Wolf to prove his sincerity, showing willingness to understand rather than flee or fight.",
+          "Red prepares to act, intent on reuniting with Grandmother and testing the fragile trust forming between her and the Wolf."
+        ],
+        "Final Push": [
+          "Grandmother edges from her bed, clutching an iron poker, and quietly unlatches the window for fresh air.",
+          "The Wolf stalks into the cottage, sniffing for Red’s scent, and is blocked by Grandmother wielding the iron poker.",
+          "Grandmother confronts the Wolf, refusing to let him pass or speak to Red without explaining his intentions.",
+          "The Wolf pleads for a moment to talk to Red, expressing vulnerability and longing, but Grandmother remains protective.",
+          "Grandmother’s stern resolve softens, allowing Red to step forward and address the Wolf directly.",
+          "Red steps out of the cottage, scanning the woods as The Wolf emerges and approaches cautiously.",
+          "Red challenges The Wolf’s motives, refusing to trust or share food; The Wolf responds with vulnerability, wanting companionship.",
+          "Red and The Wolf exchange emotionally charged words, each testing the boundaries of trust and intent.",
+          "Red warns The Wolf to keep his distance, probing his intentions and expressing unresolved suspicion.",
+          "The Wolf offers to walk beside Red openly, but she insists on caution and maintaining space.",
+          "Their fragile trust progresses through dialogue and mutual challenge, not through sharing food or gestures.",
+          "Red and The Wolf’s negotiation leaves trust an ongoing question as they continue toward the cottage together.",
+          "Red encounters The Wolf again in the woods and directly confronts him about his true intentions.",
+          "The Wolf admits to curiosity and a desire to be seen for who he is, not just as a villain.",
+          "Red challenges the Wolf further, insisting he prove his sincerity; the Wolf vows to earn her trust.",
+          "The Wolf promises, by tooth and tail, to protect both Red and Grandmother day and night.",
+          "Red and Grandmother voice doubts about trusting the Wolf, especially at night, but the Wolf swears loyalty."
+        ],
+        "Aftermath": [
+          "Red tentatively acknowledges the Wolf’s promise, and together with Grandmother, they continue toward the cottage, forging a new understanding."
+        ]
+      }
+    },
+    "Li_detailed_results": {
+      "Red’s mother urges Red to deliver bread and cordial to Grandmother, warning her to stay on the path and avoid strangers.": "Orientation",
+      "Red asks about taking the northern path; her mother, though wary, permits it with strict instructions to keep to the trail.": "Complicating Action",
+      "Red reassures her mother she will go directly to Grandmother’s cottage and promises not to stray from the path.": "Minor Resolution",
+      "Red takes the basket, hugs her mother, and sets off toward the forest, determined to be responsible and careful.": "Abstract",
+      "Red steps into the forest, her mother’s warnings echoing in her mind as she begins her journey.": "Orientation",
+      "Red steps around a mud puddle and adjusts her cloak as The Wolf emerges from a thicket and greets her.": "Complicating Action",
+      "The Wolf asks to walk with Red; she allows it as long as he stays on the path beside her.": "Complicating Action",
+      "Red and The Wolf walk deeper into the woods, exchanging cautious and challenging conversation.": "Complicating Action",
+      "The Wolf suggests alternative routes and hints at dangers, but Red insists on following her familiar path, citing Grandmother's advice.": "Minor Resolution",
+      "Red thanks The Wolf for his concern but chooses to stay on her route; The Wolf walks with her a while before letting her go on alone.": "Minor Resolution",
+      "The Wolf lingers to watch Red disappear among the shadows, then slips through the underbrush, intent on reaching Grandmother’s cottage first.": "Return of MRE",
+      "Red moves carefully through the woods as The Wolf darts ahead, both vying to reach Grandmother’s cottage first.": "MRE",
+      "The Wolf taunts Red, promising she cannot outrun him, and tries to convince her to trust his guidance.": "Complicating Action",
+      "Red asserts her own knowledge of the woods and presses onward, determined to care for her grandmother and wary of the Wolf.": "Minor Resolution",
+      "The Wolf rushes ahead to Grandmother’s cottage and settles into his disguise, preparing for Red’s arrival.": "Complicating Action",
+      "Red knocks on the cottage door and enters, placing her basket on the table while scrutinizing 'Grandmother'.": "Complicating Action",
+      "Red asks a series of detailed questions about Grandmother’s habits, catching the Wolf in contradictions and deepening her suspicion.": "Complicating Action",
+      "Red challenges the Wolf about physical discrepancies like his tail, teeth, and eyes, watching his disguise unravel.": "Complicating Action",
+      "Red grabs a candlestick in self-defense as the Wolf’s disguise falters, demanding that he explain himself.": "MRE",
+      "The Wolf pleads for a chance to explain, lowering himself in surrender while Red holds him at bay with the candlestick.": "Minor Resolution",
+      "Red, conflicted but resolute, allows the Wolf to speak under threat, demanding to know his true intentions.": "Minor Resolution",
+      "The Wolf confesses his loneliness and longing for connection, hoping Red might see past his fearsome exterior.": "Resolution",
+      "Red, still wary but compassionate, asks the Wolf to prove his sincerity, showing willingness to understand rather than flee or fight.": "Minor Resolution",
+      "Red prepares to act, intent on reuniting with Grandmother and testing the fragile trust forming between her and the Wolf.": "Abstract",
+      "Grandmother edges from her bed, clutching an iron poker, and quietly unlatches the window for fresh air.": "Orientation",
+      "The Wolf stalks into the cottage, sniffing for Red’s scent, and is blocked by Grandmother wielding the iron poker.": "Complicating Action",
+      "Grandmother confronts the Wolf, refusing to let him pass or speak to Red without explaining his intentions.": "Complicating Action",
+      "The Wolf pleads for a moment to talk to Red, expressing vulnerability and longing, but Grandmother remains protective.": "Complicating Action",
+      "Grandmother’s stern resolve softens, allowing Red to step forward and address the Wolf directly.": "Minor Resolution",
+      "Red steps out of the cottage, scanning the woods as The Wolf emerges and approaches cautiously.": "Orientation",
+      "Red challenges The Wolf’s motives, refusing to trust or share food; The Wolf responds with vulnerability, wanting companionship.": "Complicating Action",
+      "Red and The Wolf exchange emotionally charged words, each testing the boundaries of trust and intent.": "Complicating Action",
+      "Red warns The Wolf to keep his distance, probing his intentions and expressing unresolved suspicion.": "Minor Resolution",
+      "The Wolf offers to walk beside Red openly, but she insists on caution and maintaining space.": "Minor Resolution",
+      "Their fragile trust progresses through dialogue and mutual challenge, not through sharing food or gestures.": "Evaluation",
+      "Red and The Wolf’s negotiation leaves trust an ongoing question as they continue toward the cottage together.": "Aftermath",
+      "Red encounters The Wolf again in the woods and directly confronts him about his true intentions.": "Return of MRE",
+      "The Wolf admits to curiosity and a desire to be seen for who he is, not just as a villain.": "Resolution",
+      "Red challenges the Wolf further, insisting he prove his sincerity; the Wolf vows to earn her trust.": "Minor Resolution",
+      "The Wolf promises, by tooth and tail, to protect both Red and Grandmother day and night.": "Resolution",
+      "Red and Grandmother voice doubts about trusting the Wolf, especially at night, but the Wolf swears loyalty.": "Minor Resolution",
+      "Red tentatively acknowledges the Wolf’s promise, and together with Grandmother, they continue toward the cottage, forging a new understanding.": "Aftermath"
+    },
+    "structure_analysis": {
+      "basic_info": {
+        "total_events": 42,
+        "analysis_mode": "default",
+        "analysis_time": null
+      },
+      "Papalampidi_structure_analysis": {
+        "turning_point_integrity": {
+          "identified_tps": [
+            "TP1",
+            "TP2",
+            "TP3",
+            "TP4",
+            "TP5"
+          ],
+          "missing_tps": [],
+          "TP_coverage": "5/5"
+        },
+        "stage_integrity": {
+          "identified_stages": [
+            "Setup",
+            "New Situation",
+            "Progress",
+            "Complications",
+            "Final Push",
+            "Aftermath"
+          ],
+          "missing_stages": [],
+          "stage_coverage": "6/6"
+        }
+      },
+      "Li_function_analysis": {
+        "core_function_check": {
+          "Orientation": "exists",
+          "Complicating Action": "exists",
+          "MRE": "exists",
+          "Resolution": "exists"
+        },
+        "function_distribution": {
+          "Orientation": 4,
+          "Complicating Action": 14,
+          "Minor Resolution": 12,
+          "Abstract": 2,
+          "Return of MRE": 2,
+          "MRE": 2,
+          "Resolution": 3,
+          "Evaluation": 1,
+          "Aftermath": 2
+        },
+        "function_diversity": 9
+      }
+    }
+  }
+}
